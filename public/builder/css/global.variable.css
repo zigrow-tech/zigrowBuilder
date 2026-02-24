@@ -224,6 +224,14 @@
   animation: linkModalZoom 0.26s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
+
+#link-popup .vvv-link-modal__dialog{
+  top: 20%;
+}
+
+#link-popup .vvv-link-modal__dialog.is-button-mode{
+  top: 8%;
+}
 .vvv-form-modal__dialog {
   position: absolute;
   top: 50%;
