@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Zigrow Dashboard</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ $profile->name }}</h1>
+        <p>Email: {{ $profile->email }}</p>
+        <p>{{ $profile->bio }}</p>
+        @if($profile->avatar)
+            <img src="{{ asset('storage/' . $profile->avatar) }}" alt="Profile Image" width="100">
+        @endif
+    </div>
+</body>
+</html>
