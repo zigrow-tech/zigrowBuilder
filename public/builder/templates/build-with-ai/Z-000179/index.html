@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorem ipsum text generator  - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #2a324a;
+      --border-radius-btn: 28px 36px 12px 24px / 18px 28px 12px 24px;
+      --box-radius: 5% 8% 5% 8% / 8% 5% 8% 5%;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FF914D;
+      --secondary-colors: #2B2B2B;
+      --territory-colors: #FF4D6D;
+      --theme-3: #fff;
+      --theme-4: #000000;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 8px 18px rgba(17,24,39,.12);
+      --btn-box-shadow-hover: 0 12px 26px rgba(17,24,39,.16);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,.05), 0 8px 18px rgba(17,24,39,.10), 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent), 0 0 48px 12px color-mix(in srgb, var(--tertiary-color) 22%, transparent);
+      --shadow-section-hover: 0 2px 2px rgba(17,24,39,.06), 0 12px 26px rgba(17,24,39,.12), 0 0 0 8px color-mix(in srgb, var(--primary-colors) 22%, transparent), 0 0 64px 16px color-mix(in srgb, var(--tertiary-color) 28%, transparent);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 18px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 20px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #2B2B2B ;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Poppins ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #2B2B2B;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold " href="#">
+          Lorem ipsum text generator 
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">Faq</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-colors);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+    <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row align-custom-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image  position-relative img-wrapper-center">
+  <img src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MHx8fHwxNzY3NjMzOTUxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@hdbernd?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Bernd 📷 Dittrich
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-custom-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-custom-3">
+            About Our Tool
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted font-body mb-custom-4">
+            At Lorem Ipsum Text Generator, we provide a seamless solution for creating placeholder text. Our tool is designed to help developers and designers focus on their projects without distraction.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Easy to Use</h6>
+                <p class="mb-custom-0  para-muted font-body">Our intuitive interface allows anyone to generate lorem ipsum text in seconds, streamlining your creative process.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Fast Generation</h6>
+                <p class="mb-custom-0  para-muted font-body">Get your placeholder text instantly, helping you maintain momentum in your design and development projects.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Reliable Output</h6>
+                <p class="mb-custom-0  para-muted font-body">Count on us for consistent and accurate lorem ipsum text, ensuring your projects look professional and polished.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Free to Use</h6>
+                <p class="mb-custom-0  para-muted font-body">Enjoy our text generation tool at no cost, making it accessible for everyone, from freelancers to large teams.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: var(--box-radius) ;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.4s ease;
+}
+.survey-image:hover{
+  box-shadow: var(--shadow-section-hover);
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--secondary-colors);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: none;
+}
+
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>   <!-- ===== Services (White background + theme variables + icons from card.icon) ===== -->
+<section id="services" data-section="services" class="service-zigrow-section_7 section-padding">
+  <div class="container text-custom-center mb-custom-5">
+    <div class="eyebrow text-custom-uppercase mb-custom-2">
+      <span>Our Services</span>
+    </div>
+    <h2 class="main-heading">
+      Our Services
+    </h2>
+    
+      <p class="col-md-8 mx-custom-auto para-muted font-subheading">
+        Perfect for designers, developers, and marketers needing high-quality dummy text for their projects.
+      </p>
+    
+  </div>
+
+  <div class="container">
+    <div class="row g-4 g-lg-5 align-custom-stretch">
+      
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="svc-card is-featured h-custom-100 fade-in-on-scroll"
+          >
+            <div class="svc-icon">
+              
+                <i class=" bi-file-earmark-text"></i>
+              
+            </div>
+            <h3 class="svc-title">Instant Text Generation</h3>
+            <p class="svc-text">Generate high-quality lorem ipsum text instantly to enhance your design and development projects without the hassle of writing placeholder content.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="svc-card  h-custom-100 fade-in-on-scroll"
+          >
+            <div class="svc-icon">
+              
+                <i class=" bi-sliders"></i>
+              
+            </div>
+            <h3 class="svc-title">Customizable Options</h3>
+            <p class="svc-text">Tailor the length and format of your lorem ipsum text to suit your specific project needs, ensuring a perfect fit every time.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="svc-card  h-custom-100 fade-in-on-scroll"
+          >
+            <div class="svc-icon">
+              
+                <i class=" bi-layout-text-sidebar"></i>
+              
+            </div>
+            <h3 class="svc-title">User-Friendly Interface</h3>
+            <p class="svc-text">Enjoy a seamless experience with our intuitive interface designed for users of all skill levels, making text generation a breeze.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="svc-card  h-custom-100 fade-in-on-scroll"
+          >
+            <div class="svc-icon">
+              
+                <i class=" bi-speedometer"></i>
+              
+            </div>
+            <h3 class="svc-title">Fast and Reliable</h3>
+            <p class="svc-text">Count on our tool to deliver fast and reliable lorem ipsum text generation, helping you meet tight deadlines without compromising quality.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="svc-card  h-custom-100 fade-in-on-scroll"
+          >
+            <div class="svc-icon">
+              
+                <i class=" bi-search"></i>
+              
+            </div>
+            <h3 class="svc-title">SEO-Friendly Text</h3>
+            <p class="svc-text">Use our lorem ipsum text to create SEO-friendly dummy content that helps you visualize your website layout without the filler.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="svc-card  h-custom-100 fade-in-on-scroll"
+          >
+            <div class="svc-icon">
+              
+                <i class=" bi-globe"></i>
+              
+            </div>
+            <h3 class="svc-title">Multi-Language Support</h3>
+            <p class="svc-text">Access lorem ipsum text in multiple languages, allowing you to cater to diverse audiences and enhance your global projects.</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-zigrow-section_7 {
+    background: #fff;
+    overflow: hidden;
+  
+  .eyebrow {
+    letter-spacing: .22em;
+    font-weight: 600;
+    color: #6c757d;
+    font-size: .85rem;
+  }
+
+  /* Card */
+  .svc-card {
+    background: #fff;
+    border-radius: var(--box-radius);
+    padding: 2.2rem 2rem;
+    border: 1px solid var(--border-muted);
+    box-shadow: var(--shadow-section);
+    height: 100%;
+    text-align: center;
+    position: relative;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease;
+  }
+  .svc-card:is(:hover, :focus-within) {
+    transform: translateY(-6px);
+    border-color: var(--primary-colors);
+    box-shadow: var(--shadow-section-hover);
+  }
+  .svc-card.is-featured {
+    background: color-mix(in srgb, var(--primary-colors) 6%, #fff);
+  }
+
+  /* Icon circle */
+  .svc-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    background: var(--primary-colors);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent);
+  }
+  .svc-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .svc-title {
+    font-weight: 700;
+    font-size: var(--fs-body);
+    margin: .35rem 0;
+    color: var(--secondary-colors);
+  }
+  .svc-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body-sm);
+    line-height: 1.65;
+    margin: 0;
+    padding: 0 .25rem;
+  }
+
+  /* reveal animation */
+  .fade-in-on-scroll { opacity: 0; transform: translateY(30px); transition: all .6s ease-out; }
+  .fade-in-on-scroll.visible { opacity: 1; transform: none; }
+
+  @media(max-width:991.98px) {
+    .svc-card { padding: 2rem 1.6rem; }
+    .svc-title { font-size: 1.25rem; }
+  }}
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          en.target.classList.add("visible");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll(".fade-in-on-scroll").forEach(el => io.observe(el));
+  });
+</script>
+     <!-- Travel-Driven Shipping Section -->
+<!-- Why Choose Us (same grid as Travel-Driven Shipping) -->
+<section class="whyChooseUs-zigrow-section_7  section-padding"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container">
+    <div class="row align-custom-center gy-5">
+      
+      <!-- ▸ Left column: heading, copy, buttons -->
+      <div class="col-lg-4">
+        <div class="text-custom-start">
+          <span class="tag">Lorem ipsum text generator </span>   <!-- keep style; text is up to you -->
+          
+          <h2 class="main-heading mt-custom-3 ">Why Choose Us</h2>
+          <p class="section-subtitle fw-custom-normal mt-custom-2 ">Your go-to solution for generating placeholder text effortlessly.</p>
+          <p class="section-description mt-custom-3 ">Our lorem ipsum text generator saves you time and enhances your projects with high-quality dummy text tailored to your needs.</p>
+
+         
+        </div>
+      </div>
+
+      <div class="col-lg-1 d-lg-block d-none"></div> <!-- spacer stays -->
+
+      <!-- ▸ Right column: feature cards -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <h5 class="feature-title">Easy to Use</h5>
+                <p class="feature-text">Our user-friendly interface allows you to generate lorem ipsum text quickly, so you can focus on what matters most—your project.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <h5 class="feature-title">Time-Saving</h5>
+                <p class="feature-text">Generate high-quality placeholder text in seconds, freeing up your valuable time for more important tasks and creative work.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-shield-lock"></i>
+                </div>
+                <h5 class="feature-title">Secure and Reliable</h5>
+                <p class="feature-text">We prioritize your data security, ensuring that your information remains safe while you generate text for your projects.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h5 class="feature-title">Supportive Community</h5>
+                <p class="feature-text">Join a community of users who benefit from our tool, sharing tips and best practices to enhance your experience with lorem ipsum text.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>.whyChooseUs-zigrow-section_7 {
+  background-color: #ffffff;
+
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #444;
+  background: #f5f5f5;
+  padding: 6px 14px;
+ border-radius: var(--box-radius);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+ color: var(--lead-custom-color-mute);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  margin-bottom: 8px;
+
+}
+
+.section-description {
+  font-size: var(--fs-body);
+   color: var(--para-muted);
+  max-width: 90%;
+}
+
+.feature-card {
+  background-color: #f9f9f9;
+ border-radius: var(--box-radius);
+  padding: 25px 20px;
+  box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+.icon-box {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--lead-custom-color-mute);
+  margin-bottom: 6px;
+}
+
+.feature-text {
+  font-size: var(--fs-body-sm);
+   color: var(--para-muted);
+  line-height: 1.45;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+}}
+</style>     <!-- ▰ Client Testimonial Showcase -->
+<section class="testimonial-zigrow-section_6 section-padding"id="testimonials"  data-section="testimonials">
+  <div class="container">
+
+    <!-- top heading -->
+    <div class="row g-4 align-custom-stretch">
+
+      <!-- ◼︎ Left Visual Panel -->
+      <div class="col-lg-6">
+        <div class="left-panel h-custom-100 d-flex flex-column justify-custom-between">
+
+          <div class="left-heading">
+            <h2 class="mb-custom-4 main-heading">
+              What Our Users Say<br>
+              <small class="fw-custom-normal para-muted">Discover how our tool has transformed the way people create dummy text.</small>
+              <span> ♥</span>
+            </h2>
+
+            <div class="testimonial-img ">
+              <div class="col-12 img-wrapper-center"><img  src="https://i.postimg.cc/mDsh0w2K/1.png" alt="Client" class="img-fluid rounded-4 " /></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ◼︎ Right Testimonial Cards -->
+      <div class="col-lg-6">
+        <div class="d-flex flex-column h-custom-100 justify-custom-between gap-4">
+
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <p class="quote">“The Lorem Ipsum text generator has streamlined my workflow. It&#39;s easy to use and saves me so much time!”</p>
+
+            <div class="author d-flex align-custom-center mt-custom-3  img-wrapper-center">
+              <img  src="https://i.postimg.cc/Kv4g4kN0/1.png" alt="Jane Doe" class="author-img">
+              <div class="ms-custom-2">
+                <h6 class="mb-custom-0 ">Jane Doe</h6>
+                <small>Web Designer</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★☆
+            </div>
+
+            <p class="quote">“I love how simple and effective this tool is. It provides the perfect placeholder text for my projects.”</p>
+
+            <div class="author d-flex align-custom-center mt-custom-3  img-wrapper-center">
+              <img  src="https://i.postimg.cc/fWqV4WNm/10.png" alt="John Smith" class="author-img">
+              <div class="ms-custom-2">
+                <h6 class="mb-custom-0 ">John Smith</h6>
+                <small>Content Creator</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <p class="quote">“This generator is a game changer! It allows me to focus on design without worrying about text.”</p>
+
+            <div class="author d-flex align-custom-center mt-custom-3  img-wrapper-center">
+              <img  src="https://i.postimg.cc/gk5Lhztm/2.png" alt="Emily Johnson" class="author-img">
+              <div class="ms-custom-2">
+                <h6 class="mb-custom-0 ">Emily Johnson</h6>
+                <small>Marketing Specialist</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+</section>
+
+
+<style>
+/* ▰ Base Layout */
+.testimonial-zigrow-section_6 {
+  background-color: #f7f5f5;
+  color: var(--para-muted);
+
+.left-panel h2 {
+  /* font-size: clamp(1.6rem, 2.4vw, 2.5rem); */
+  font-weight: 600;
+  line-height: 1.3;
+}
+.left-panel h2 span {
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: var(--para-muted);
+}
+.testimonial-img img {
+  border-radius: var(--box-radius);
+  object-fit: cover;
+   box-shadow: var(--shadow-section);
+}
+
+
+/* ▰ Testimonial Cards */
+.testimonial-card {
+  border-radius: var(--box-radius);
+  padding: 1.5rem;
+  position: relative;
+   box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+}
+.bg-green {
+  background-color: var(--primary-colors);
+  color: #fff;
+}
+.bg-custom-white {
+  background-color: #fff;
+  color: #111;
+}
+.rating {
+  font-size: 1.1rem;
+  color: #ffcc33;
+}
+.quote {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+.author-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.arrow-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #f3f3f3;
+  color: var(--secondary-colors);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.25s ease;
+}
+
+.testimonial-card:hover{
+background-color: var(--primary-colors);
+  color: #fff;
+}
+.testimonial-card:hover .arrow-btn {
+  background: #111;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ▰ CTA Box */
+.cta-box {
+  background-color: #759472;
+  color: #fff;
+  padding: 1.5rem 2rem;
+     border-radius: var(--box-radius);
+
+  margin-top: 2rem;
+}}
+
+/* make columns equal height */
+.testimonial-zigrow-section_6 .row.align-custom-stretch {
+  align-items: stretch ;
+}
+
+/* left column structure */
+.testimonial-zigrow-section_6 .left-panel{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* heading + image occupy full height */
+.testimonial-zigrow-section_6 .left-heading{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* image wrapper grows to fill remaining space so bottoms match */
+.testimonial-zigrow-section_6 .left-heading .testimonial-img{
+  margin-top: auto;          /* push image to bottom */
+  flex: 1 1 auto;            /* take all leftover */
+  min-height: 260px;         /* keep a sensible minimum */
+  display: flex;             /* so the img can stretch */
+}
+
+/* image fills wrapper and crops nicely */
+.testimonial-zigrow-section_6 .left-heading .testimonial-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--box-radius);
+  box-shadow: var(--shadow-section);
+}
+
+/* right column already h-custom-100; ensure inner stack uses full height */
+.testimonial-zigrow-section_6 .col-lg-6 > .d-flex.h-100{
+  min-height: 100%;
+}
+
+</style>
+    <footer class="footer-zigrow-section_6" id="footer" data-section="footer">
+  <div class="container py-custom-4">
+
+    <div class="row justify-custom-between align-custom-center mb-custom-3">
+      
+      <!-- Social Icons -->
+      <div class="col-12 col-md-6 d-flex justify-custom-center justify-md-custom-start gap-3 footer-social">
+        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="col-12 col-md-6 d-flex justify-custom-center justify-md-custom-end footer-links gap-3 mt-custom-3  mt-md-0">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-custom-center small-custom pt-custom-3 border-top">
+        © 2025. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<style>
+    .footer-zigrow-section_6 {
+    background-color: var(--theme-4);
+  font-size: 0.92rem;
+    color: var(--theme-3);
+  position: relative;
+
+
+
+
+/* Social Links */
+ .footer-social a {
+  color: var(--theme-3);
+  font-size: 1.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: var(--theme-3);
+}
+
+/* Footer text links */
+.footer-links a {
+  color: var(--para-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--theme-3);
+  border-bottom: 1px solid var(--theme-3);
+}
+
+/* Bottom copyright section */
+ .text-custom-center {
+  color: var(--theme-3);
+}
+
+@media (max-width: 575.98px) {
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .d-flex {
+    /* flex-direction: column; */
+    text-align: center;
+  }
+}
+}
+</style>   <section class="cta-zigrow-section_4 section-padding" id="cta" data-section="cta">
+  <div class="container">
+    <div class="row align-custom-center g-4 g-lg-5">
+      
+      <!-- Text Content -->
+      <div class="col-lg-6 col-md-7 col-12">
+        <div class="content-wrap text-custom-white">
+          <h2 class="fw-custom-bold mb-custom-3">Generate Dummy Text Now</h2>
+          <p class="mb-custom-5 font-body">Create high-quality lorem ipsum text in seconds. Simplify your design process and focus on what matters most—your creativity!</p>
+          <a href="#" class="white-btn ">Start Generating</a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 col-md-5 col-12 text-custom-center">
+        <div class="image-stack img-wrapper-center">
+          <img src="https://images.unsplash.com/photo-1699040309386-11c615ed64d5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYWxsJTIwdG8lMjBhY3Rpb24lMjBidXR0b24lMjBkZXNpZ258ZW58MHx8fHwxNzY3NjMzOTUzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="CTA Image" class="img-fluid main-img"/>
+          
+            <span class="img-credit">
+              Photo by 
+              <a href="https://unsplash.com/@joshuaryanphoto?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                Joshua Reddekopp
+              </a> 
+              on 
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </span>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-zigrow-section_4 {
+
+  /* max-width: 1120px; */
+  width:100%;
+  overflow: hidden;
+  position: relative;
+
+
+&::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.05);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1120px; /* now applied to container */
+  /* margin: 0 auto; */
+    background: linear-gradient(135deg, var(--territory-colors),var(--primary-colors));
+  border-radius: var(--box-radius);
+  border-bottom-right-radius: 6rem;
+  padding: 3rem 2.5rem;
+  margin: 3rem auto;
+}
+
+.content-wrap {
+  max-width: 500px;
+}
+
+.content-wrap h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.content-wrap p {
+  color: #f0f0f0;
+}
+
+
+.image-stack {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.image-stack .main-img {
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-section);
+  border: 4px solid #fff;
+  transition: transform .35s ease;
+}
+.image-stack:hover .main-img {
+  transform: scale(1.03);
+}
+
+.img-credit {
+  font-size: .75rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+}}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-zigrow-section_4 {
+    text-align: center;
+    border-bottom-right-radius: 3rem;
+    padding: 2rem 1.25rem;
+  }
+  .content-wrap {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .content-wrap h2 { font-size: 1.6rem; }
+}
+</style>
+   <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 section-padding" id="contact" data-section="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid overflow-hidden">
+      <div class="row g-0">
+        <!-- ◼︎ Left: Contact Info -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="cta-info p-custom-5 h-custom-100">
+            <h2 class="fw-custom-bold mb-custom-4" style="color: var(--secondary-colors);">Get in touch</h2>
+
+            <ul class="contact-list list-unstyled mb-custom-0 ">
+              <li>
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h6>Address</h6>
+                  <p>123 Business St, City</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <h6>Email</h6>
+                  <p>contact@example.com</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h6>Phone</h6>
+                  <p>+91 00000 00000</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ◼︎ Right: Hero / CTA -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="cta-hero d-flex flex-column justify-custom-center align-custom-center text-custom-center h-custom-100">
+            <div class="content px-custom-4 px-lg-custom-5">
+              <h3 class="fw-custom-bold mb-custom-4 col-md-8 mx-custom-auto">Feel Free to Contact Us Anytime</h3>
+              <a href="#" class="primary-btn text-custom-truncate">Click here for location</a>
+
+              <!-- socials -->
+              <div class="social-wrap d-flex justify-custom-center gap-3 mt-custom-5  mx-custom-auto">
+                <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /row -->
+    </div><!-- /cta-grid -->
+
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+  :root {
+    --primary-colors-txt: var(--theme-3);
+    --surface: #ffffff;
+    --surface-dark: #111;
+    --stroke: rgba(0,0,0,.06);
+    --bg-section: #f8f9fa;
+  }
+
+  /* ===================  SECTION  =================== */
+  .contact-zigrow-section_3 {
+    background: var(--bg-section);
+  
+
+  /* ---------- grid wrapper ---------- */
+  .cta-grid {
+    background: var(--surface);
+    box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+  }
+
+  /* ---------- left panel ---------- */
+  .cta-info {
+    background: var(--surface);
+  }
+
+  .cta-info h2 {
+    font-size: 2.1rem;
+  }
+
+  .contact-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-list .icon {
+    color: var(--accent);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-list h6 {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    font-weight: 700;
+    margin-bottom: .25rem;
+    color: var(--accent);
+  }
+
+  .contact-list p {
+    margin: 0;
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+  }
+
+  /* ---------- hero panel ---------- */
+  .cta-hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80')
+      center / cover no-repeat;
+    min-height: 420px;
+    overflow: hidden;
+  }
+
+  .cta-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,.45);
+  }
+
+  .cta-hero .content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .cta-hero h3 {
+    font-size: 1.9rem;
+    line-height: 1.35;
+  }
+
+  /* ---------- socials ---------- */
+  .social-btn {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.4);
+    transition: background .3s ease, transform .3s ease;
+    text-decoration: none;
+  }
+
+  .social-btn:hover {
+    background: rgba(255,255,255,.15);
+    transform: translateY(-3px);
+    color: #fff;
+  }
+
+  /* ===================  RESPONSIVE TWEAKS  =================== */
+  @media (max-width: 575.98px) {
+    .cta-info h2 {
+      font-size: 1.8rem;
+    }
+
+    .cta-hero h3 {
+      font-size: 1.6rem;
+    }
+
+    .btn-cta {
+      width: 100%;
+    }
+  }}
+</style>
+   <footer class="footer-zigrow-section_6" id="footer" data-section="footer">
+  <div class="container py-custom-4">
+
+    <div class="row justify-custom-between align-custom-center mb-custom-3">
+      
+      <!-- Social Icons -->
+      <div class="col-12 col-md-6 d-flex justify-custom-center justify-md-custom-start gap-3 footer-social">
+        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="col-12 col-md-6 d-flex justify-custom-center justify-md-custom-end footer-links gap-3 mt-custom-3  mt-md-0">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-custom-center small-custom pt-custom-3 border-top">
+        © 2025. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<style>
+    .footer-zigrow-section_6 {
+    background-color: var(--theme-4);
+  font-size: 0.92rem;
+    color: var(--theme-3);
+  position: relative;
+
+
+
+
+/* Social Links */
+ .footer-social a {
+  color: var(--theme-3);
+  font-size: 1.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: var(--theme-3);
+}
+
+/* Footer text links */
+.footer-links a {
+  color: var(--para-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--theme-3);
+  border-bottom: 1px solid var(--theme-3);
+}
+
+/* Bottom copyright section */
+ .text-custom-center {
+  color: var(--theme-3);
+}
+
+@media (max-width: 575.98px) {
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .d-flex {
+    /* flex-direction: column; */
+    text-align: center;
+  }
+}
+}
+</style> 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

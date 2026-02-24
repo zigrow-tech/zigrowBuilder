@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUSHIII STYLE - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #3D5A80;
+      --secondary-colors: #111111;
+      --territory-colors: #98C1D9;
+      --theme-3: #ffffff;
+      --theme-4: #000000;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 !important;
+      font-family: Calibri;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Merriweather !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      SUSHIII STYLE
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#products">Products</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#portfolio">Portfolio</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="primary-btn">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #3D5A80;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #3D5A80;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Professional -->
+<section class=" hero-zigrow-section_10 d-flex align-items-center justify-content-center" id="hero">
+  <!-- INNER BOX -->
+  <div class="hero-inner-box container position-relative text-center">
+    
+    <!-- Decorative Badge -->
+    <img src="https://i.postimg.cc/SN3P9rtB/3.png" alt="badge" class="hero-badge">
+
+    <!-- Decorative Stars -->
+    <img src="https://i.postimg.cc/SsbqG41p/2.png" class="decor-star star-green" alt="star" />
+    <img src="https://i.postimg.cc/NFNWZvDF/5.png" class="decor-arrow " alt="star" />
+    <img src="https://i.postimg.cc/VNnPvTfZ/4.png" class="decor-star star-blue" alt="arrow" />
+
+    <!-- Headline -->
+    <h1 class="hero-title">
+      Express Your Individuality Through Fashion Today
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext">
+       Discover modern, stylish, and comfortable outfits for every occasion that showcase your unique personality and flair.
+    </p>
+
+    <!-- Buttons -->
+    <div class="hero-buttons d-flex justify-content-center gap-3 mt-4 flex-wrap">
+      <a href="#" class="primary-btn">Get Started →</a>
+      <a href="#" class="white-btn">Blog →</a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+
+/* Outer wrapper with border effect */
+.hero-zigrow-section_10 {
+  background-color: var(--primary-colors); /* soft purple */
+  padding: 16px;
+  min-height: 95vh;
+
+
+/* Inner box */
+.hero-inner-box {
+  background-color:black;
+     border-radius: var(--box-radius);
+  padding: 80px 20px;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-width: 98vw;
+}
+
+/* Headline */
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: white;
+  max-width: 900px;
+  margin: 4% auto;
+  line-height: 1.3;
+}
+
+.hero-title .hero-invest {
+  background: var(--blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .hero-invest::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 6px;
+  background: url('underline.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.05rem;
+  color: white;
+  max-width: 700px;
+  margin: 1.2rem auto 0;
+  line-height: 1.8;
+}
+
+
+
+/* Badge */
+.hero-badge {
+    position: absolute;
+    top: 26%;
+    left: 16%;
+    width: 62px;
+    z-index: 2;
+}
+
+/* Decorative Stars */
+.decor-star {
+  position: absolute;
+  width: 40px;
+}
+
+.star-green {
+    top: 60%;
+    left: 20%;
+}
+
+.star-blue {
+     top: 12%;
+    right: 23%;
+}
+
+/* Arrow */
+.decor-arrow {
+position: absolute;
+
+   top: 72%;
+        right: 32%;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge {
+    top: -25px;
+    left: 20px;
+    width: 60px;
+  }
+
+  .decor-star {
+    width: 24px;
+  }
+
+  .decor-arrow {
+    width: 40px;
+  }
+}}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-lg-5">
+      
+      <!-- ◀ Hero Image -->
+      <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+        <div class="hero-img-wrap rounded-4 overflow-hidden position-relative shadow">
+  <img
+    src="https://images.unsplash.com/photo-1626383137804-ff908d2753a2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbiUyMGludGVyaW9yfGVufDB8fHx8MTc2MDY4NDA2Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    alt="Happy mother and child"
+    class="w-100 h-100 object-fit-cover"
+  />
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@giorgiotrovato?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Giorgio Trovato
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+      </div>
+
+      <!-- ▶ Content + Features -->
+      <div class="col-12 col-lg-7">
+        <div class="content-box rounded-4 p-4 p-lg-5 shadow-sm">
+          <h2 class="section-title main-heading mb-3 text-lg-start text-center">
+            About SUSHIII STYLE
+          </h2>
+
+          <p class="para-muted mb-4 text-lg-start text-center font-body">
+            At SUSHIII STYLE, we believe that fashion is a powerful form of self-expression. Our mission is to help individuals showcase their unique style through carefully curated outfits that are both modern and comfortable. We offer a wide range of fashion apparel and accessories, along with personalized styling advice and trend guides. Our goal is to empower you to look and feel your best, no matter the occasion.
+          </p>
+
+      
+
+          <div class="row g-4">
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-4 h-100">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="fw-semibold mb-2 card-title">Fashion Forward</h6>
+                <p class="para-muted mb-0 font-body-sm">Stay ahead of the trends with our curated selections that reflect the latest in fashion.</p>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-4 h-100">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi-person"></i>
+                </div>
+                <h6 class="fw-semibold mb-2 card-title">Personal Styling</h6>
+                <p class="para-muted mb-0 font-body-sm">Receive personalized styling advice tailored to your unique preferences and body type.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 🎨 Solace Modern UI */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: #222;
+
+
+/* --- Hero Image --- */
+.hero-img-wrap {
+  aspect-ratio: 4/4.8;
+  border-radius: var(--box-radius);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.hero-img-wrap:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section);
+}
+
+/* --- Content Card --- */
+.content-box {
+  background: #f7f9fc;
+  border-radius: var(--box-radius);
+}
+
+/* --- Headline --- */
+.section-title {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 2.8rem);
+  font-weight: 700;
+}
+
+.card-title{
+  color: var(--secondary-colors);
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-left-color: #fff;
+  transition: transform 0.25s ease;
+}
+.cta-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --- Feature Tile --- */
+.feature-tile {
+  background: #ffffff;
+  border: 1px solid #e2e6ea;
+   border-radius: var(--box-radius);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-section);
+}
+.feature-tile:hover {
+  box-shadow: var(--shadow-section-hover);
+  transform: translateY(-4px);
+}
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(76, 107, 255, 0.1);
+  color:var(--para-muted);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 575.98px) {
+  .hero-img-wrap {
+    aspect-ratio: 16/9;
+  }
+  .content-box {
+    padding: 2rem 1.25rem;
+  }
+}}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="py-6 service-zigrow-section_1" id="services"> 
+
+  <div class="container text-center mb-5">
+    <h2 class="main-heading">
+      What We Offer
+    </h2>
+
+    <p class="col-md-8 mx-auto para-muted font-subheading">
+      Our curated services blend expert technique with natural beauty care.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row g-5"><!-- g-5 → larger gaps -->
+      
+    </div>
+  </div>
+
+  <style>
+    /* section backdrop (theme fallback) + extra breathing room */
+    .service-zigrow-section_1 {
+      background: #fff;
+    
+
+    /* card */
+    .service-block_1 {
+      background: #fff !important;
+      border: 1px solid #eee;
+      box-shadow:var(--shadow-section);
+      padding: 2.75rem 2rem;
+      /* ⬅️ deeper padding for a bolder feel */
+      transition: transform .3s ease, box-shadow .3s ease;
+      min-height: 290px;
+      border-radius: var(--box-radius);
+      @media (max-width: 768px) {
+        padding: 1rem;
+      }
+    }
+
+    .service-block:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .service-card {
+      h5 {
+        color: var(--lead-color-mute);
+      }
+      p{
+         color: var(   --para-muted);
+      }
+    }
+
+    /* icon – slightly larger */
+    .service-icon {
+      width: 310px;
+      height: 200px;
+      object-fit: cover;
+    border-radius: var(--box-radius);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+    }
+
+    /* reveal animation (unchanged) */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all .6s ease-out;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* responsive heading tweak */
+    @media(max-width:768px) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+  }
+  </style>
+
+  <script>
+    /* intersection-observer reveal (unchanged) */
+    document.addEventListener('DOMContentLoaded', () => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.fade-in-on-scroll').forEach(el => io.observe(el));
+    });
+  </script>
+</section>    <!-- ✅ Certified Excellence Section -->
+<section class="product-zigrow-section_3 py-6" id="products">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-7">
+        <p class="sub-heading"> Products We Offer</p>
+        <h2 class=" lh-sm mb-3 main-heading" ">Explore Our Fashion Collection</h2>
+      </div>
+      <div class=" col-md-5 text-md-end">
+          <p class="para-muted font-body-sm mb-2">
+            Stylish Apparel and Accessories <br>
+              Discover our range of comfortable and stylish casual outfits perfect for everyday wear.
+          </p>
+          <div class="link-group">
+            <a href="#" class="link-red ms-4">
+              Shop Now <span>&rarr;</span>
+            </a>
+          </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card -->
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1613803745799-ba6c10aace85?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMHByb2R1Y3RzfGVufDB8fHx8MTc2MDY4NDA2Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@msbirgith?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Birgith Roosipuu
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title ">
+                    Casual Wear
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <!-- Repeat cards with different content -->
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1569388330292-79cc1ec67270?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzYwNjg0MDY2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@harpersunday?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Harper Sunday
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Evening Dresses
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1758738880475-dac2ab1c92d4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBjb2xsZWN0aW9ufGVufDB8fHx8MTc2MDY4NDA2Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@aalolens?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Aalo Lens
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Accessories
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1591375462355-a219af30bf16?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBjb3NtZXRpY3N8ZW58MHx8fHwxNzYwNjg0MDY2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@laurachouette?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Laura Chouette
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Footwear
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1740979142180-c7aba7a038f4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0cmVuZHklMjBjbG90aGluZ3xlbnwwfHx8fDE3NjA2ODQwNjZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@rashed_moslem" target="_blank">
+                  Rashed Moslem
+                </a>
+                on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+              </span>
+              
+                <div class="service-info">
+                  <span class="service-title">
+                    Activewear
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+  .product-zigrow-section_3 {
+    background-color: #fefefe;
+
+    .sub-heading {
+      font-size: 0.9rem;
+      color: var(--para-muted);
+      letter-spacing: .03em;
+      margin-bottom: 0.3rem;
+    }
+
+    .link-group a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #3D5A80;
+      transition: all 0.3s ease;
+    }
+
+    .link-group a:hover {
+      text-decoration: underline;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+       border-radius: var(--box-radius);
+      background: #000;
+      transition: transform .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-img {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.8);
+      transition: filter .3s ease, transform .3s ease;
+    }
+
+    .service-card:hover .service-img {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.05);
+    }
+
+    .service-card:hover {
+      .service-title {
+        color: #fff;
+      }
+
+      .icon-circle {
+        background: #3D5A80;
+      }
+    }
+
+    .service-info {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      /* font-size: 0.95rem; */
+       font-size: var(--fs-body);
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .icon-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow {
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+
+    /* Responsive col fix for 5 cards */
+    @media (min-width: 992px) {
+      .col-lg-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+      }
+    }
+  }
+</style>   <section class=" whyChooseUs-zigrow-section_6 py-6"id="whyChooseUs">
+  <div class="container h-100">
+    <div class="row align-items-center gx-lg-5 gy-5 h-100">
+
+      <!-- Left Column -->
+      <div class="col-lg-5">
+        <div class="section-header">
+          <span class="section-path">/ Why SUSHIII STYLE</span>
+          <h2 class=" main-heading">Why Choose SUSHIII STYLE</h2>
+          <p class="section-subtitle">Your Fashion Destination for Individuality</p>
+          <p class="section-desc">At SUSHIII STYLE, we prioritize your unique style and comfort. Our curated collections and personalized styling tips ensure that you always look and feel your best, no matter the occasion.</p>
+
+        
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-7">
+        <div class="feature-box-grid">
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Curated Collections</h5>
+                <p class="feature-text">We handpick the latest trends and styles to ensure you have access to the best fashion choices.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-person"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Personalized Experience</h5>
+                <p class="feature-text">Our team is dedicated to providing tailored styling advice that suits your individual preferences and needs.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-check-circle"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Quality Assurance</h5>
+                <p class="feature-text">We guarantee high-quality materials and craftsmanship in every piece we offer, ensuring long-lasting wear.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Community Engagement</h5>
+                <p class="feature-text">Join a vibrant community of fashion lovers who share your passion for style and creativity.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .whyChooseUs-zigrow-section_6 {
+  background: #ffffff;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+
+
+.section-path {
+  font-size: 0.85rem;
+  color:#111111;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  color: var(--para-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  max-width: 90%;
+  line-height: 1.7;
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.cta-link {
+  color:#111111;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s ease;
+}
+
+.cta-link:hover {
+  color:#111111;
+}
+
+.feature-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon-circle {
+  font-size: 1.3rem;
+  color: #111111;
+  background: #f3f2fb;
+  padding: 14px;
+ border-radius: var(--box-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--lead-para-muted);
+}
+
+.feature-text {
+  font-size: var(--fs-body-sm);
+ color: var(--para-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .razor-difference-section {
+    padding: 60px 0;
+    min-height: unset;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .feature-box-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  }
+</style>    <section class="portfolio-zigrow-section_2 py-6" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title main-heading">
+        Our Fashion Portfolio
+      </h2>
+    </div>
+
+    <div class="row justify-content-center g-3">
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1704208316515-a32f81e373ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzYwNjg0MDY3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Casual Styles"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Casual Styles <br />
+              Everyday Looks
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@yemi_w?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Yemi Wallington
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1627921522614-86d4b431bd21?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3RyeXxlbnwwfHx8fDE3NjA2ODQwNjd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Evening Glam"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Evening Glam <br />
+              Dress to Impress
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@vimarco?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Vince Mariel Conlu
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1592231752639-4a7ffcbc1505?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxsaWZlc3R5bGUlMjBzaG9vdHN8ZW58MHx8fHwxNzYwNjg0MDY3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Chic Accessories"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Chic Accessories <br />
+              Complete Your Look
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@apothecary87?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Apothecary 87
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1650092058245-659227057eb3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsb29rYm9vayUyMHBob3Rvc3xlbnwwfHx8fDE3NjA2ODQwNjd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Trendy Footwear"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Trendy Footwear <br />
+              Step in Style
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@abusaied?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Abu Saied
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1560869713-bf165a9cfac1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoYWlyJTIwc3R5bGluZ3xlbnwwfHx8fDE3NjA2ODQwNjd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Active Fashion"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Active Fashion <br />
+              Work Out in Style
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@bayleejadegramling?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Baylee Gramling
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1704208316515-a32f81e373ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzYwNjg0MDY3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Seasonal Outerwear"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Seasonal Outerwear <br />
+              Stay Warm
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@yemi_w?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Yemi Wallington
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1627921522614-86d4b431bd21?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3RyeXxlbnwwfHx8fDE3NjA2ODQwNjd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Stylish Bags"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Stylish Bags <br />
+              Functional Fashion
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@vimarco?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Vince Mariel Conlu
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1592231752639-4a7ffcbc1505?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxsaWZlc3R5bGUlMjBzaG9vdHN8ZW58MHx8fHwxNzYwNjg0MDY3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Elegant Jewelry"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Elegant Jewelry <br />
+              Accessorize
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@apothecary87?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Apothecary 87
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+  }
+
+  .offer-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+
+  .offer-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    aspect-ratio: 3/4;
+  }
+
+  .offer-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .rounded-top-only img {
+    border-top-left-radius: 50% 30%;
+    border-top-right-radius: 50% 30%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .rounded-bottom-only img {
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .offer-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1.5rem 1.95rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+  }
+
+  .rounded-top-only .offer-label {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  }
+
+  .rounded-bottom-only .offer-label {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  }
+</style>
+   <section class="testimonial-zigrow-section_9 py-6"id="testimonials">
+  <div class="container">
+    <h2 class="text-center  main-heading mb-2">What Our Customers Say</h2>
+     <p class="para-muted text-center font-subheading mb-5">Hear from our satisfied clients</p>
+    <div class="row justify-content-center g-4">
+
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/Kv4g4kN0/1.png" class="client-img mb-3" alt="Emily Smith">
+
+            <h5 class="fw-bold mb-2">Emily Smith</h5>
+            <p class="para-muted font-body-sm">
+              SUSHIII STYLE has transformed my wardrobe! I love how their outfits make me feel confident and stylish every day.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/fWqV4WNm/10.png" class="client-img mb-3" alt="Jessica Brown">
+
+            <h5 class="fw-bold mb-2">Jessica Brown</h5>
+            <p class="para-muted font-body-sm">
+              The personalized styling tips I received were a game changer. I now know how to mix and match like a pro!
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/gk5Lhztm/2.png" class="client-img mb-3" alt="Liam Johnson">
+
+            <h5 class="fw-bold mb-2">Liam Johnson</h5>
+            <p class="para-muted font-body-sm">
+              I appreciate the quality of the clothing. Every piece I bought has exceeded my expectations in style and comfort.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/TPjKBrd3/3.png" class="client-img mb-3" alt="Sophia Davis">
+
+            <h5 class="fw-bold mb-2">Sophia Davis</h5>
+            <p class="para-muted font-body-sm">
+              Their collection is always on-trend. I find something new and exciting every time I visit the site!
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/JhCyTTWF/4.png" class="client-img mb-3" alt="Mia Wilson">
+
+            <h5 class="fw-bold mb-2">Mia Wilson</h5>
+            <p class="para-muted font-body-sm">
+              SUSHIII STYLE has the best accessories! They complete my outfits perfectly and add that extra flair I love.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/RZH6Qk2f/5.png" class="client-img mb-3" alt="Noah Martinez">
+
+            <h5 class="fw-bold mb-2">Noah Martinez</h5>
+            <p class="para-muted font-body-sm">
+              I can&#39;t recommend SUSHIII STYLE enough! Their outfits make me feel unique and express my individuality.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .testimonial-zigrow-section_9 {
+  background-color: #ffffff;
+
+.client-card {
+  background: #fff;
+   border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h5{
+    color: var(--secondary-colors);
+
+  }
+  p{
+    color: var(  --para-muted);
+  }
+}
+.client-card:hover {
+  transform: translateY(-6px);
+       box-shadow: var(--shadow-section-hover);
+}
+
+/* Image Styling */
+.client-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+   border-radius: var(--box-radius);
+     box-shadow: var(--shadow-section);
+  transition: transform 0.3s;
+}
+.client-card:hover .client-img {
+  transform: scale(1.05);
+}
+
+/* Star rating */
+.star-rating i {
+  color: var(--primary-colors);
+  font-size: 1.2rem;
+}
+
+/* Responsive text alignment fix for small screens */
+@media(max-width: 575.98px){
+  .client-card {
+    padding: 2rem 1.5rem;
+  }
+}}
+
+</style>     <section class="cta-zigrow-section_1 position-relative text-white">
+  <div class="container h-100 d-flex align-items-center justify-content-center text-center" id="cta">
+    <div class="hero-content">
+      <h1 class="display-4 fw-bold mb-3">Join Our Fashion Community</h1>
+      <p class="lead mb-3">Stay Updated with Trends</p>
+      <p class="mb-4 text-light font-body">Subscribe to our newsletter for the latest fashion tips, exclusive offers, and updates on new arrivals. Don&#39;t miss out on looking your best!</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="primary-btn ">Learn More</a>
+      </div>
+    </div>
+  </div>
+   <p class="img-credit text-white small position-absolute" style="bottom: 10px; right: 10px; z-index: 3;">
+  Photo by 
+  <a 
+        href="https://unsplash.com/@brett_jordan?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Brett Jordan
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</p>
+
+</section>
+
+<style>
+  .cta-zigrow-section_1 {
+  background: url('https://images.unsplash.com/photo-1607000975411-8b704cff63fc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYWxsJTIwdG8lMjBhY3Rpb258ZW58MHx8fHwxNzYwNjg0MDY3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') center/cover no-repeat;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  text-align: center;
+
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-content p.lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hero-content p.small {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-rescue {
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p.lead {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.small {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+  }
+</style>   <section class="contact-zigrow-section_6 py-6"id="contact">
+  <div class="container">
+    <div class="row align-items-center gx-5">
+      
+      <!-- Left: Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png"
+             alt="Team Discussion"
+             class="img-fluid  contact-img" />
+      </div>
+
+      <!-- Right: Text + Info -->
+      <div class="col-lg-6">
+        <h2 class="main-heading mb-4">Let's start a<br>conversation</h2>
+        
+        <div class="row gy-4 mb-5 contact-grid">
+          <div class="col-sm-6">
+            <h6 class="label">Phone</h6>
+            <p class="value">08340612849</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Email</h6>
+            <p class="value">jhasuruchi8@gmail.com</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Address</h6>
+            <p class="value">Sariput nagar , seepz , andheri East, Shiv ganga building</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Social Media</h6>
+            <p class="value">@reallygreatsite</p>
+          </div>
+        </div>
+
+        <a href="#" class="primary-btn">Click here for location</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .contact-zigrow-section_6 {
+  background-color: #ffffff;
+  color: #333;
+
+
+.contact-img{
+   box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+}
+
+.contact-grid .label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.contact-grid .value {
+  margin: 0;
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+}
+
+
+
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-grid {
+    text-align: center;
+  }
+}}
+
+</style>   
+<footer class="footer-zigrow-section_2 py-6">
+  <div class="container">
+    <div class="row gy-4 justify-content-between align-items-start">
+
+      <!-- Logo & Tagline -->
+      <div class="col-md-3">
+       <h4>SUSHIII STYLE</h4>
+        <p class="footer-tagline">Discover modern, stylish, and comfortable outfits for every occasion that showcase your unique personality and flair.</p>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-md-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="footer-heading">Navigation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Why Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="footer-heading">Contact</h6>
+        <ul class="list-unstyled contact-info">
+          <li><i class="bi bi-envelope"></i> jhasuruchi8@gmail.com</li>
+          <li><i class="bi bi-telephone"></i> 08340612849</li>
+          <li><i class="bi bi-geo-alt"></i> Sariput nagar , seepz , andheri East, Shiv ganga building</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Bar -->
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 small para-muted">&copy; 2025. All rights reserved.</div>
+      <div class="col-md-6 text-md-end small bottom-bar-links">
+        <a href="#" class="me-3 text-decoration-none">Terms & Conditions</a>
+        <a href="#" class="me-3 text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-decoration-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<style>
+  .footer-zigrow-section_2 {
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Inter', sans-serif;
+  
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+  }
+
+  .footer-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--secondary-colors);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--para-muted);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover, .bottom-bar-links a:hover {
+    color:  #3D5A80;
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info i {
+    color: #3D5A80;
+    margin-right: 0.5rem;
+  }
+
+  hr {
+    border-color: var(--border-muted);
+    height: .02rem;
+  }
+
+  @media (max-width: 767px) {
+    .footer-logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer-tagline {
+      text-align: left;
+    }
+
+    .custom-footer .text-md-end {
+      text-align: left !important;
+      margin-top: 1rem;
+    }
+  }}
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

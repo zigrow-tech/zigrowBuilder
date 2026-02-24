@@ -1,0 +1,2943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mAT - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #7B2C3B;
+      --secondary-colors: #0F0F0F;
+      --territory-colors: #F2C94C;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #0F0F0F ;
+      font-family: Open Sans;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Lora ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #0F0F0F;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold " href="#">
+          mAT
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-colors);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Professional -->
+<section class=" hero-zigrow-section_10 d-flex align-custom-center justify-custom-center" id="hero" data-section="hero">
+  <!-- INNER BOX -->
+  <div class="hero-inner-box container position-relative text-custom-center pointer-custom-none">
+    
+    <!-- Decorative Badge -->
+    <img src="https://i.postimg.cc/SN3P9rtB/3.png" alt="badge" class="hero-badge">
+
+    <!-- Decorative Stars -->
+    <img src="https://i.postimg.cc/SsbqG41p/2.png" class="decor-star star-green" alt="star" />
+    <img src="https://i.postimg.cc/NFNWZvDF/5.png" class="decor-arrow " alt="star" />
+    <img src="https://i.postimg.cc/VNnPvTfZ/4.png" class="decor-star star-blue" alt="arrow" />
+
+    <!-- Headline -->
+    <h1 class="hero-title">
+      Boost Your Harvest with Modern Tools
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext">
+       Discover affordable agricultural tools designed to increase your yields. Empower your farming with innovative solutions that work for you.
+    </p>
+
+    <!-- Buttons -->
+    <div class="hero-buttons d-flex justify-custom-center gap-3 mt-custom-4  flex-wrap">
+      <a href="#" class="primary-btn">Get Started →</a>
+      <a href="#" class="white-btn">Blog →</a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+
+/* Outer wrapper with border effect */
+.hero-zigrow-section_10 {
+  background-color: var(--primary-colors); /* soft purple */
+  padding: 16px;
+  min-height: 95vh;
+
+
+/* Inner box */
+.hero-inner-box {
+  background-color:black;
+     border-radius: var(--box-radius);
+  padding: 80px 20px;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-width: 98vw;
+}
+
+/* Headline */
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: white;
+  max-width: 900px;
+  margin: 4% auto;
+  line-height: 1.3;
+}
+
+.hero-title .hero-invest {
+  background: var(--blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .hero-invest::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 6px;
+  background: url('underline.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.05rem;
+  color: white;
+  max-width: 700px;
+  margin: 1.2rem auto 0;
+  line-height: 1.8;
+}
+
+
+
+/* Badge */
+.hero-badge {
+    position: absolute;
+    top: 26%;
+    left: 16%;
+    width: 62px;
+    z-index: 2;
+}
+
+/* Decorative Stars */
+.decor-star {
+  position: absolute;
+  width: 40px;
+}
+
+.star-green {
+    top: 60%;
+    left: 20%;
+}
+
+.star-blue {
+     top: 12%;
+    right: 23%;
+}
+
+/* Arrow */
+.decor-arrow {
+position: absolute;
+
+   top: 72%;
+        right: 32%;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge {
+    top: -25px;
+    left: 20px;
+    width: 60px;
+  }
+
+  .decor-star {
+    width: 24px;
+  }
+
+  .decor-arrow {
+    width: 40px;
+  }
+}}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_7 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row align-custom-center g-lg-5">
+      
+      <!-- ◀ Hero Image -->
+      <div class="col-12 col-lg-5 mb-custom-4 mb-lg-0">
+        <div class="hero-img-wrap rounded-4 overflow-hidden position-relative shadow img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1744230673231-865d54a0aba4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyZSUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzY3Njc4MTYwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    alt="Happy mother and child"
+    class="w-custom-100 h-custom-100 object-fit-cover"
+  />
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@waqa231?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Waqar Mujahid
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+      </div>
+
+      <!-- ▶ Content + Features -->
+      <div class="col-12 col-lg-7">
+        <div class="content-box rounded-4 p-custom-4 p-lg-custom-5 shadow-sm">
+          <h2 class="section-title main-heading mb-custom-3 text-custom-lg-start text-custom-center">
+            Empowering Farmers Together
+          </h2>
+
+          <p class="para-muted mb-custom-4 text-custom-lg-start text-custom-center font-body">
+            At mAT, we believe in equipping farmers with modern tools that enhance productivity while keeping costs low. Our mission is to support sustainable farming practices. We offer a range of high-quality agricultural tools designed to boost yields and simplify farming tasks. Join us in transforming agriculture for a better future.
+          </p>
+
+      
+
+          <div class="row g-4">
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-custom-4 h-custom-100">
+                <div class="icon-circle mb-custom-3">
+                  <i class="bi bi-cash"></i>
+                </div>
+                <h6 class="fw-custom-semibold mb-custom-2 card-title">Cost-Effective Solutions</h6>
+                <p class="para-muted mb-custom-0  font-body-sm">Our tools are designed to maximize efficiency without breaking the bank, ensuring farmers get the best value.</p>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-custom-4 h-custom-100">
+                <div class="icon-circle mb-custom-3">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <h6 class="fw-custom-semibold mb-custom-2 card-title">Innovative Technology</h6>
+                <p class="para-muted mb-custom-0  font-body-sm">We provide cutting-edge tools that simplify farming, making it easier for farmers to achieve higher yields.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 🎨 Solace Modern UI */
+.about-zigrow-section_7 {
+  background: #ffffff;
+  color: #222;
+
+
+/* --- Hero Image --- */
+.hero-img-wrap {
+  aspect-ratio: 4/4.8;
+  border-radius: var(--box-radius);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.hero-img-wrap:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section);
+}
+
+/* --- Content Card --- */
+.content-box {
+  background: #f7f9fc;
+  border-radius: var(--box-radius);
+}
+
+/* --- Headline --- */
+.section-title {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 2.8rem);
+  font-weight: 700;
+}
+
+.card-title{
+  color: var(--secondary-colors);
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-left-color: #fff;
+  transition: transform 0.25s ease;
+}
+.cta-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --- Feature Tile --- */
+.feature-tile {
+  background: #ffffff;
+  border: 1px solid #e2e6ea;
+   border-radius: var(--box-radius);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-section);
+}
+.feature-tile:hover {
+  box-shadow: var(--shadow-section-hover);
+  transform: translateY(-4px);
+}
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(76, 107, 255, 0.1);
+  color:var(--para-muted);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 575.98px) {
+  .hero-img-wrap {
+    aspect-ratio: 16/9;
+  }
+  .content-box {
+    padding: 2rem 1.25rem;
+  }
+}}
+
+</style>   <!-- ========== Services ZigRow (service-zigrow-section_9) ========== -->
+<section class="service-zigrow-section_9 section-padding " id="services" data-section="services">
+  <div class="container">
+    <div class="text-custom-center mb-custom-4 mb-lg-5">
+      <h2 class="main-heading mb-custom-2">Our Services</h2>
+      <p class="para-muted font-subheading mb-custom-0 ">
+        Designed for farmers seeking efficient tools to enhance productivity and reduce costs.
+      </p>
+    </div>
+
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center "
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcmVjaXNpb24lMjBhZ3JpY3VsdHVyZXxlbnwwfHx8fDE3Njc2NzgxNjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Innovative Tools"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@no_one_cares?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">no one cares</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Innovative Tools</h3>
+          <p class="para-muted sz9-desc">Explore our range of cutting-edge agricultural tools that boost efficiency and help farmers achieve higher yields without breaking the bank.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center flex-row-reverse"
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1696441567861-6761b9e503a6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXJtJTIwZXF1aXBtZW50fGVufDB8fHx8MTc2NzU5MDE2OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Cost-Effective Solutions"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@hannahsue24?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Hannah Shedrow</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Cost-Effective Solutions</h3>
+          <p class="para-muted sz9-desc">Discover affordable agricultural solutions tailored to meet the needs of every farmer, ensuring maximum productivity at minimal costs.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center "
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1690986469727-1ed8bcdf6384?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZ3Jvbm9taWMlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3Njc2NzgxNjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Expert Guidance"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@hannahsue24?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Hannah Shedrow</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Expert Guidance</h3>
+          <p class="para-muted sz9-desc">Our team provides expert advice on selecting the right tools and techniques to enhance your farming practices and increase your yield.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center flex-row-reverse"
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1582794496242-8165eed32971?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcm9wJTIwY29uc3VsdGluZ3xlbnwwfHx8fDE3Njc2NzgxNjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Sustainable Practices"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@hfranke?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Henrik Hjortshøj</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Sustainable Practices</h3>
+          <p class="para-muted sz9-desc">We promote sustainable farming practices that not only improve yields but also protect the environment for future generations.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center "
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzb2lsJTIwdGVzdGluZ3xlbnwwfHx8fDE3Njc2NzgxNjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Training Workshops"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@gabrielj_photography?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Gabriel Jimenez</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Training Workshops</h3>
+          <p class="para-muted sz9-desc">Join our workshops to learn the latest techniques and best practices in modern agriculture, empowering you to maximize your farm&#39;s potential.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center flex-row-reverse"
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcmVjaXNpb24lMjBhZ3JpY3VsdHVyZXxlbnwwfHx8fDE3Njc2NzgxNjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Customer Support"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@no_one_cares?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">no one cares</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Customer Support</h3>
+          <p class="para-muted sz9-desc">Our dedicated support team is here to assist you with any inquiries, ensuring you get the most out of your agricultural tools.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_9 (scoped) ===== */
+  .service-zigrow-section_9 {
+    background: #fff;
+  }
+
+  /* Row wrapper with pill container */
+  .service-zigrow-section_9 .sz9-feature {
+    position: relative;
+    isolation: isolate;
+    border-radius: 30rem;
+    max-width: 1120px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    padding: clamp(1.25rem, 1.5vw + 0.5rem, 2rem);
+    overflow: visible;
+  }
+
+  /* Blob wrapper: keep height to row only */
+  .service-zigrow-section_9 .sz9-blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 30rem; /* pill-like */
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  /* 🔖 Unsplash credit badge for sz9 */
+.service-zigrow-section_9 .img-credit {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: -0.5rem;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  padding: .25rem .5rem;
+  border-radius: .35rem;
+  font-size: .7rem;
+  line-height: 1;
+  z-index: 2; /* circle image se upar */
+}
+.service-zigrow-section_9 .img-credit a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+  /* Blob fill using theme primary (very light) */
+  .service-zigrow-section_9 .sz9-blob::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    /* start from image side; super soft primary tint */
+    background: radial-gradient(
+        800px 400px at 16% 55%,
+        color-mix(in srgb, var(--primary-colors) 18%, transparent) 0%,
+        color-mix(in srgb, var(--primary-colors) 10%, transparent) 26%,
+        color-mix(in srgb, var(--primary-colors) 6%, transparent) 42%,
+        rgba(255, 255, 255, 0) 80%
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--primary-colors) 8%, transparent),
+        rgba(255, 255, 255, 0) 60%
+      );
+    box-shadow: inset 0 0 0 1px
+      color-mix(in srgb, var(--primary-colors) 6%, transparent);
+    filter: saturate(110%);
+  }
+
+  /* Mirror gradient when image is on right */
+  .service-zigrow-section_9 .flex-row-reverse .sz9-blob::before {
+    background: radial-gradient(
+        800px 400px at 84% 55%,
+        color-mix(in srgb, var(--primary-colors) 18%, transparent) 0%,
+        color-mix(in srgb, var(--primary-colors) 10%, transparent) 26%,
+        color-mix(in srgb, var(--primary-colors) 6%, transparent) 42%,
+        rgba(255, 255, 255, 0) 80%
+      ),
+      linear-gradient(
+        270deg,
+        color-mix(in srgb, var(--primary-colors) 8%, transparent),
+        rgba(255, 255, 255, 0) 60%
+      );
+  }
+
+  /* Image circle + soft ring */
+  .service-zigrow-section_9 .sz9-media {
+    width: clamp(260px, 33vw, 380px);
+    aspect-ratio: 1/1;
+    margin-inline: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  .service-zigrow-section_9 .sz9-img {
+    width: 86%;
+    height: 86%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    background: #fff;
+    border: 10px solid #fff;
+     box-shadow: var(--shadow-section);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Typography */
+  .service-zigrow-section_9 .sz9-title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.2px;
+    color: var(--secondary-colors);
+  }
+  .service-zigrow-section_9 .sz9-desc {
+    line-height: 1.7;
+    font-size: var(--fs-body);
+    max-width: 56ch;
+  }
+
+  /* CTA: use your global primary-btn with safe fallbacks for size */
+  .service-zigrow-section_9 .sz9-cta {
+    font-size: var(--btn-font-size-sm, 1rem);
+    padding: var(--btn-padding, 0.7rem 1.25rem);
+  }
+
+  /* Hover micro interactions */
+  .service-zigrow-section_9 .sz9-media:hover .sz9-img {
+    transform: translateY(-2px) scale(1.01);
+    transition: transform 0.25s ease;
+  }
+  .service-zigrow-section_9 .sz9-feature:hover .sz9-blob::before {
+    filter: saturate(120%) brightness(1.02);
+  }
+
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_9 .sz9-feature {
+      padding: 1.25rem;
+    }
+    .service-zigrow-section_9 .sz9-desc {
+      max-width: 100%;
+    }
+  }
+</style>
+   <section class="logo-zigrow-section_2 section-padding" id="logos" data-section="logos">
+  <div class="container text-custom-center">
+
+    <!-- Heading -->
+    <h2 class=" mb-custom-1 main-heading">Our Esteemed Clients</h2>
+    <div class="heading-underline mx-custom-auto my-custom-3"></div>
+    <p class="para-muted font-subheading mb-custom-5">Proud to be trusted by world-class brands and innovators.</p>
+
+    <!-- Carousel -->
+    <div id="clientsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-3">
+              <div class="client-card">
+                <div class="logo-item"><img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo 1"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="client-card">
+     <div class="logo-item"><img src="https://uitbuilds.com/wp-content/uploads/2021/06/LOGOIPSUM-03.png" alt="logo 2"></div>
+              </div>
+            </div>
+           <div class="col-6 col-md-3">
+              <div class="client-card">
+                <div class="logo-item"><img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo 1"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="client-card">
+     <div class="logo-item"><img src="https://uitbuilds.com/wp-content/uploads/2021/06/LOGOIPSUM-03.png" alt="logo 2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center g-4">
+             <div class="col-6 col-md-3">
+              <div class="client-card">
+                <div class="logo-item">
+                  <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo 1">
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="client-card">
+     <div class="logo-item"><img src="https://uitbuilds.com/wp-content/uploads/2021/06/LOGOIPSUM-03.png" alt="logo 2"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="client-card">
+                <div class="logo-item"><img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo 1"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="client-card">
+     <div class="logo-item"><img src="https://uitbuilds.com/wp-content/uploads/2021/06/LOGOIPSUM-03.png" alt="logo 2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  <!-- Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#clientsCarousel" data-bs-slide="prev">
+  <span class="arrow-icon"><i class="fa-solid fa-angle-left"></i></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#clientsCarousel" data-bs-slide="next">
+  <span class="arrow-icon"><i class="fa-solid fa-angle-right"></i></span>
+</button>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+  <style>
+.logo-zigrow-section_2 {
+  background: linear-gradient(to bottom right, #f9f9f9, #ffffff);
+
+
+/* Heading underline */
+.heading-underline {
+  width: 90px;
+  height: 4px;
+  background: var(--primary-colors);
+  border-radius: 2px;
+}
+
+/* Client Cards */
+.client-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section);
+}
+
+/* Logos */
+.client-logo {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.3s ease;
+}
+.client-logo:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+/* Arrows */
+.arrow-icon {
+  color: #333;
+  font-size: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-section);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.arrow-icon:hover {
+  background: var(--primary-colors);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  opacity: 1;
+}
+
+/* Desktop / default: thoda bahar side pe */
+.carousel-control-prev {
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+}
+.carousel-control-next {
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+}
+
+/* 🔁 Mobile: arrows bilkul side se, 0px left/right */
+@media (max-width: 576px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}}
+
+</style>
+    <!-- Why Choose Us -->
+<section class="whyChooseUs-zigrow-section_8 section-padding"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container">
+    <!-- ▸ Heading -->
+    <div class="text-custom-start ">
+      <span class="section-label mb-custom-3 ">WHY CHOOSE US</span>
+
+      
+      <h2 class="section-title">
+        Why
+        <span class="highlight">Choose Us</span>
+      </h2>
+    </div>
+
+    <div class="row g-4">
+      <!-- ▸ Left-side info cards (first 3) -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+          
+            <div class="col-md-6 ">
+              <div class="info-card">
+                <div class="icon-circle"><i class="bi bi-tools"></i></div>
+                <h5 class="info-title">Quality Tools</h5>
+                <p class="info-text">Our tools are crafted with precision and durability in mind, ensuring they withstand the rigors of farming while delivering exceptional performance in the field.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6 ">
+              <div class="info-card">
+                <div class="icon-circle"><i class="bi bi-currency-dollar"></i></div>
+                <h5 class="info-title">Affordable Pricing</h5>
+                <p class="info-text">We believe in making modern agriculture accessible. Our competitive pricing allows farmers to invest in quality tools without breaking the bank.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6 col-12">
+              <div class="info-card">
+                <div class="icon-circle"><i class="bi bi-check-circle"></i></div>
+                <h5 class="info-title">Proven Results</h5>
+                <p class="info-text">Farmers who use our tools report increased yields and efficiency. Join the community of successful farmers who trust mAT for their agricultural needs.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- ▸ Right-side highlight card (4th card) -->
+      <div class="col-lg-4">
+        
+        <div class="highlight-card">
+          <div class="icon-circle-light mb-custom-3">
+            <i class="bi bi-person-check"></i>
+          </div>
+          <h5 class="highlight-title">Expert Support</h5>
+
+          <!-- main paragraph + card-specific text -->
+          <p class="highlight-text">At mAT, we provide innovative agricultural tools designed to enhance productivity while minimizing costs, ensuring every farmer can thrive.</p>
+          <p class="highlight-text">Our knowledgeable team is here to assist you. From product selection to after-sales support, we ensure you have the guidance you need to succeed.</p>
+
+          <!-- primary CTA -->
+          <a href="#" class="cta-button">
+            Shop Now <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .whyChooseUs-zigrow-section_8 {
+  background-color: #fff;
+  color: #111;
+
+
+.section-label {
+  font-size: 0.70rem;
+  text-transform: uppercase;
+  color: #424242;
+  background: transparent;
+  border: 1px solid #888;
+  font-weight: 600;
+  padding: .3rem .5rem;
+border-radius: var(--box-radius);
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--secondary-colors);
+}
+
+.section-title .highlight {
+  color: var(--primary-colors);
+  font-weight: 600;
+}
+
+.info-card {
+  background-color: #f7f8fa;
+border-radius: var(--box-radius);
+  padding: 30px 20px;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid #c0c1c4;
+}
+
+.info-card:hover {
+  background-color: #eef2f6;
+  box-shadow: var(--shadow-section-hover);
+  transform: translateY(-4px);
+}
+
+.icon-circle {
+  background-color: #f1f6fc;
+  color:#0F0F0F;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.info-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--lead-custom-color-mute);
+}
+
+.info-text {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  line-height: 1.5;
+}
+
+/* Right Highlight Card */
+.highlight-card {
+  background: linear-gradient(145deg, var(--primary-colors), var(--territory-colors));
+  color: #fff;
+border-radius: var(--box-radius);
+  padding: 35px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.highlight-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  font-size: var(--fs-body-sm);
+  color: #dcdcdc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.icon-circle-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  display: inline;
+  width: 50px;
+  color: #fff;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #fff;
+  color: black;
+  padding: 10px 18px;
+  border-radius: var(--border-radius-btn);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.cta-button:hover {
+   background: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .highlight-card {
+    text-align: center;
+  }
+}}
+
+</style>     
+
+<section class="testimonial-zigrow-section_4"id="testimonials"  data-section="testimonials">
+  <div class="container-fluid px-custom-0">
+    <div class="row g-0 align-custom-stretch">
+      <!-- Left Image Column -->
+      <div class="col-md-6 testimonial-img-col img-wrapper-center">
+        <img
+           src="https://i.postimg.cc/mDsh0w2K/1.png"
+        
+          class="img-fluid h-custom-100 w-custom-100 object-fit-cover"
+          alt="Happy team"
+          style="aspect-ratio: 3/2"
+        />
+      </div>
+
+      <!-- Right Swiper Column -->
+      <div
+        class="col-md-6 testimonial-content-col d-flex align-custom-center"
+      >
+        <div class="swiper  w-custom-100 px-custom-4 py-custom-5" id="testimonial-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-slide">
+                <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                <div class="stars mb-custom-3">  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i></div>
+                <p class="quote-text">
+                    mAT&#39;s tools have revolutionized my farming. I&#39;ve seen a significant increase in my crop yields at a lower cost.
+                </p>
+                <div class="author-info d-flex align-custom-center mt-custom-4  ">
+                  <img
+                   src="https://i.postimg.cc/fWqV4WNm/10.png"
+                    alt="Mona Kamal"
+                  />
+                  <div class="ms-custom-3">
+                    <h6 class="mb-custom-0 ">John Smith</h6>
+                    <small class="para-muted">Local Farmer</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-slide">
+                <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                <div class="stars mb-custom-3">  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i></div>
+                <p class="quote-text">
+                    The quality of mAT&#39;s products is outstanding. They truly help farmers maximize their productivity without breaking the bank.
+                </p>
+                <div class="author-info d-flex align-custom-center mt-custom-4 ">
+                  <img
+                   src="https://i.postimg.cc/gk5Lhztm/2.png"
+                    alt="Rahul Dev"
+                  />
+                  <div class="ms-custom-3">
+                    <h6 class="mb-custom-0 ">Emily Johnson</h6>
+                    <small class="text-custom-muted "> Agricultural Consultant</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-slide">
+                <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                <div class="stars mb-custom-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="quote-text">
+                      Using mAT&#39;s tools has made my work easier and more efficient. I highly recommend them to fellow farmers!
+                </p>
+                <div class="author-info d-flex align-custom-center mt-custom-4 ">
+                  <img
+                     src="https://i.postimg.cc/TPjKBrd3/3.png"
+                    alt="Anika Sharma"
+                  />
+                  <div class="ms-custom-3">
+                    <h6 class="mb-custom-0 ">Carlos Ruiz</h6>
+                    <small class="text-custom-muted ">Smallholder Farmer</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-custom-4 "></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper("#testimonial-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+<style>
+  .testimonial-zigrow-section_4 {
+
+  
+
+  .testimonial-img-col img {
+    object-fit: cover;
+    height: 100%;
+    min-height: 350px;
+    border-top-right-radius: var(--box-radius);
+    border-bottom-right-radius: var(--box-radius);
+
+  }
+
+  .testimonial-content-col {
+    background-color: #fff;
+    color: #000000;
+  }
+
+  .testimonial-slide {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .quote-icon {
+    font-size: 48px;
+    color:var(--theme-3);
+    font-weight: bold;
+  }
+
+  .quote-text {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+
+    color:var(--theme-3);
+  }
+
+  .stars {
+    font-size: 20px;
+    color: #f5b443;
+    letter-spacing: 3px;
+  }
+
+  .author-info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+
+  /* Default state of pagination dots */
+  .swiper-pagination-bullet {
+    background-color: #888 ; /* Change this to your desired default color */
+    opacity: 1;
+  }
+
+  /* Active dot */
+  .swiper-pagination-bullet-active {
+    background-color: var(--primary-colors) ; /* Example: Indigo color for active dot */
+  }}
+</style>
+   <section class="pricing-zigrow-section_3 section-padding" id="pricing" data-section="pricing">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-custom-center mb-custom-5">
+      <span class="badge bg-custom-light border px-custom-3 py-custom-1 text-custom-dark fw-custom-normal mb-custom-3 text-custom-uppercase font-body">
+        Our Pricing 🪄
+      </span>
+      <h2 class="fw-custom-bold display-custom-6">Access Our Private Beta</h2>
+      <p class="para-muted font-subheading mt-custom-2 ">
+
+        Get essential tools for everyday farming needs.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 justify-custom-center">
+
+      <!-- Free Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-custom-100">
+          <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+          <h5 class="fw-custom-semibold">Pay-as-you-go</h5>
+          <p class="para-muted font-body-sm mb-custom-3">  Get essential tools for everyday farming needs.</p>
+          <div class="price-label">
+            <span class="display-custom-6 fw-custom-bold">₹0</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-custom-100 mt-custom-3 ">Build agent now →</a>
+          <ul class="features list-unstyled mt-custom-4 ">
+    
+            <li>
+              Durable and reliable tools
+            </li>
+            
+            <li>
+              Easy to use and maintain
+            </li>
+            
+            <li>
+              Designed for various crops
+            </li>
+            
+            <li>
+              Affordable monthly subscription
+            </li>
+            
+            <li>
+              Expert customer support
+            </li>
+            
+            <li>
+              Flexible cancellation policy
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby Plan (Highlighted) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card featured h-custom-100 position-relative">
+          <div class="highlight-tag text-custom-center fw-custom-semibold font-body">
+            Our Recommendation ✨
+          </div>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h5 class="fw-custom-semibold">Hobby</h5>
+          <p class="para-muted font-body-sm mb-custom-3"> Upgrade your toolkit for better yields.</p>
+          <div class="price-label">
+            <span class="display-custom-6 fw-custom-bold">₹19</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-custom-100 mt-custom-3 ">Build agent now →</a>
+          <ul class="features list-unstyled mt-custom-4 ">
+            
+            <li>
+              Advanced agricultural tools
+            </li>
+            
+            <li>
+              Increased efficiency and yield
+            </li>
+            
+            <li>
+              Customizable tool options
+            </li>
+            
+            <li>
+              Monthly tool delivery
+            </li>
+            
+            <li>
+              Dedicated support team
+            </li>
+            
+            <li>
+              Exclusive member discounts
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-custom-100">
+          <div class="icon-circle"><i class="fa-regular fa-gem"></i></div>
+          <h5 class="fw-custom-semibold">Premium</h5>
+          <p class="para-muted font-body-sm mb-custom-3"> Comprehensive package for serious farmers.</p>
+          <div class="price-label">
+            <span class="display-custom-6 fw-custom-bold">₹79</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-custom-100 mt-custom-3 ">Build agent now →</a>
+          <ul class="features list-unstyled mt-custom-4 ">
+           
+            <li>
+              Premium quality tools
+            </li>
+            
+            <li>
+              Expert farming resources
+            </li>
+            
+            <li>
+              Personalized farming advice
+            </li>
+            
+            <li>
+              Priority customer service
+            </li>
+            
+            <li>
+              Free shipping on all orders
+            </li>
+            
+            <li>
+              Access to exclusive webinars
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.pricing-zigrow-section_3 {
+  background: #fff;
+  color: black;
+
+.btn{
+ border-radius: var(--border-radius-btn);
+}
+/* ===== Card Base ===== */
+.plan-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+     border-radius: var(--box-radius);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+     box-shadow: var(--shadow-section);
+}
+.plan-card h5 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.plan-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.plan-card .price-label {
+  margin-top: 1rem;
+}
+.plan-card .features {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+.plan-card .features li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.plan-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== Featured Plan ===== */
+.featured {
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+     box-shadow: var(--shadow-section);
+}
+.highlight-tag {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: var(--box-radius);
+  border-top-right-radius: var(--box-radius);
+}
+
+/* ===== Buttons ===== */
+.plan-card .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+ border-radius: var(--border-radius-btn);
+  transition: all 0.25s ease;
+}
+.plan-card .btn:hover {
+  transform: translateY(-2px);
+  
+     box-shadow: var(--shadow-section-hover);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 575.98px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+  .plan-card .features {
+    font-size: 0.8rem;
+  }
+}}
+</style>
+   <section class="faq-zigrow-section_2 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="main-heading fw-custom-bold text-custom-uppercase">
+        <span>Commonly Asked Questions</span>
+      </h2>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              <span>What products do you offer?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>We offer a range of modern agricultural tools designed to boost farming efficiency and increase yields.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              <span>How can I place an order?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>You can place an order directly through our website or contact our sales team for assistance.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              <span>What is your return policy?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>We accept returns within 30 days of purchase if the product is unused and in original packaging.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              <span>Do you offer bulk discounts?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Yes, we provide bulk discounts for large orders. Please contact us for more details.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              <span>How do you ensure product quality?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>We source our tools from trusted manufacturers and conduct rigorous quality checks before delivery.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              <span>What payment methods do you accept?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>We accept various payment methods, including credit cards, bank transfers, and online payment platforms.</p>
+            </div>
+          </div>
+
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent ;
+  color: #555 ;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none ;
+  border: 0 ;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none ;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none ;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none ;
+  box-shadow: none ;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none ;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>    <section class="contact-zigrow-section_6 section-padding"id="contact" data-section="contact">
+  <div class="container">
+    <div class="row align-custom-center gx-5">
+      
+      <!-- Left: Image -->
+      <div class="col-lg-6 mb-custom-4 mb-lg-0 img-wrapper-center">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png"
+             alt="Team Discussion"
+             class="img-fluid  contact-img" />
+      </div>
+
+      <!-- Right: Text + Info -->
+      <div class="col-lg-6">
+        <h2 class="main-heading mb-custom-4">Let's start a<br>conversation</h2>
+        
+        <div class="row gy-4 mb-custom-5 contact-grid">
+          <div class="col-sm-6">
+            <h6 class="label">Phone</h6>
+            <p class="value">+91 00000 00000</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Email</h6>
+            <p class="value">contact@example.com</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Address</h6>
+            <p class="value">123 Business St, City</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Social Media</h6>
+            <p class="value">@reallygreatsite</p>
+          </div>
+        </div>
+
+        <a href="#" class="primary-btn">Click here for location</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .contact-zigrow-section_6 {
+  background-color: #ffffff;
+  color: #333;
+
+
+.contact-img{
+   box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+}
+
+.contact-grid .label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.contact-grid .value {
+  margin: 0;
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+}
+
+
+
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-grid {
+    text-align: center;
+  }
+}}
+
+</style>  
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

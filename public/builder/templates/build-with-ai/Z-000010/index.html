@@ -1,0 +1,2813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fly Aviation - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #3D5A80;
+      --secondary-colors: #111111;
+      --territory-colors: #98C1D9;
+      --theme-3: #ffffff;
+      --theme-4: #000000;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 !important;
+      font-family: Calibri;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Merriweather !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Fly Aviation
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#team">Team</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="primary-btn">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #3D5A80;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #3D5A80;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Professional -->
+
+<section class="hero-zigrow-section_11" id="hero">
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white">
+        <h1 class="hero-heading">Become a Pilot with Fly Aviation Today</h1>
+        <p class="hero-subtext">
+      Join our premier aviation school in India to achieve your dreams of becoming a commercial or private pilot with world-class training programs.
+        </p>
+        <a href="#" class="primary-btn ">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <span class="img-credit">
+  Photo by 
+  <a 
+        href="https://unsplash.com/@comparefibre?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Compare Fibre
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</span>
+<div class="stats-cards-wrapper">
+   <div class="row g-0">
+  <!-- Card 1: Finance & Trades -->
+<!-- Example: Finance & Trades -->
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi-person-check"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-2">Successful Graduates</h6>
+      <p>Trained in last decade</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi-person"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-2">Experienced Instructors</h6>
+      <p>With global expertise</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi-book"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-2">Training Programs</h6>
+      <p>Tailored for all levels</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi-check-circle"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-2">Pass Rate</h6>
+      <p>For our students</p>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+</div>
+</section>
+<!-- Overlapping Cards -->
+
+
+
+<style>
+  /* ───────── Hero: structure + overlay (fix brace issues) ───────── */
+.hero-zigrow-section_11 {
+  background: url('https://images.unsplash.com/photo-1610484826967-09c5720778c7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZ3xlbnwwfHx8fDE3NjUxNzg4Mzh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center / cover;
+  padding-top: 140px;
+  padding-bottom: 240px; /* overlap space */
+  color: #fff;
+  position: relative;
+  margin-bottom: 180px;
+}
+@media (width < 768px) {
+  .hero-zigrow-section_11 {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.hero-zigrow-section_11 .hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+  
+  @media (width <= 768px) {
+    background: rgba(0,0,0,0.05);
+    
+  }
+}
+.hero-zigrow-section_11 .container {
+  position: relative; z-index: 2;
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem; /* 👈 spacing increased */
+}
+
+.hero-subtext {
+  font-size: var(--fs-body);
+  color: #eee;
+  margin-top: 0;         /* 👈 remove top margin */
+  margin-bottom: 2.2rem; /* 👈 consistent gap below */
+  line-height: 1.6;      /* 👌 readability */
+}
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+    margin-bottom: 1.2rem; /* slightly tighter on mobile */
+  }
+
+  .hero-subtext {
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* ───────── Overlapping Stats: polished UI ───────── */
+.stats-cards-wrapper {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1200px, 85%);
+  z-index: 5;
+
+  /* card container look */
+  background: linear-gradient(180deg, #ffffff 0%, #fcfcff 100%);
+  border: 1px solid rgba(0,0,0,0.06);
+
+      border-radius: var(--box-radius);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 2px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+
+  /* nice top accent using primary color */
+  position: absolute;
+}
+.stats-cards-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -4px; left: 16px; right: 16px;
+  height: 4px;
+ 
+      border-radius: var(--box-radius);
+  background: linear-gradient(90deg, var(--primary-colors), color-mix(in srgb, var(--primary-colors) 80%, #fff));
+}
+
+/* grid feel even with bootstrap columns */
+.stats-cards-wrapper .row {
+  --card-gap: 8px;
+  row-gap: var(--card-gap);
+}
+
+/* single card */
+.stats-card {
+  background: #fff;
+ 
+      border-radius: var(--box-radius);
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+  position: relative;
+  isolation: isolate; /* for inner glow */
+}
+
+/* subtle divider on large screens */
+@media (min-width: 992px) {
+  .stats-card {
+    border-right: 1px dashed rgba(0,0,0,0.06);
+  }
+  .stats-card:last-child {
+    border-right: none;
+  }
+}
+
+/* icon pill */
+.stats-card .icon-left {
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+
+      border-radius: var(--box-radius);
+  background: color-mix(in srgb, var(--primary-colors) 14%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--primary-colors) 30%, #ffffff);
+}
+.stats-card i {
+  font-size: 1.6rem;
+  color: var(--primary-colors);
+  margin: 0;
+}
+
+/* text */
+.stats-card h6 {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  font-weight: 700;
+  margin: 0 0 2px;
+  letter-spacing: .6px;
+}
+.stats-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.35;
+}
+
+/* hover/focus = primary fill (same behavior) */
+.stats-card:hover, .stats-card:focus-within {
+  background: var(--primary-colors);
+  border-color: color-mix(in srgb, var(--primary-colors) 80%, #000);
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+    0 6px 18px rgba(0,0,0,0.12);
+}
+.stats-card:hover .icon-left, .stats-card:focus-within .icon-left {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+}
+.stats-card:hover i,
+.stats-card:hover h6,
+.stats-card:hover p,
+.stats-card:focus-within i,
+.stats-card:focus-within h6,
+.stats-card:focus-within p {
+  color: #fff;
+}
+
+/* keyboard focus ring */
+.stats-card:focus-within::after {
+  content: "";
+  position: absolute; inset: -2px;
+
+      border-radius: var(--box-radius);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-colors) 60%, #fff);
+  pointer-events: none;
+}
+
+/* responsive stack */
+@media (max-width: 768px) {
+  .stats-cards-wrapper {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 18px;
+    padding: 6px;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  .stats-cards-wrapper::before { display: none; }
+
+  .stats-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px;
+    gap: 12px;
+  }
+  .stats-card + .stats-card { margin-top: 10px; }
+}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_3 py-6" id="about">
+  <div class="container">
+    <div class="row g-0 align-items-center">
+
+      <!-- Left: Image with overlay -->
+      <div class="col-lg-6 img-holder">
+        <div class="img-layer">
+        <div class="img-bg">
+
+
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2NTE3ODk3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="About us image" />
+            <span class="img-overlay"></span>
+            <span class="img-credit">
+              Photo by  <a 
+        href="https://unsplash.com/@marvelous?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Marvin Meyer
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 d-flex justify-content-center align-items-center">
+        <div class="content p-4 p-lg-5">
+          <h1 class="display-title mb-4">
+            <span>About Fly Aviation</span>
+          </h1>
+
+          <p class="mb-3 para-muted font-body">Fly Aviation is a leading aviation school in India dedicated to training aspiring pilots for commercial and private licenses. Our modern facilities and expert instructors ensure a premium learning experience.</p>
+          <p class="mb-4 para-muted font-body">We focus on safety, professionalism, and global standards in aviation training. Our comprehensive programs include aviation theory and practical flying lessons, preparing students for successful careers in aviation.</p>
+
+          <a href="#contact" class="primary-btn">Discover More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --hero-primary: #3D5A80;
+      --hero-bg: #fff;
+      --hero-text: #111111;
+    }
+
+    .about-zigrow-section_3 {
+      background: var(--hero-bg);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    
+
+    .img-holder {
+      position: relative;
+      min-height: 600px;
+      height: 100%;
+    }
+
+    .img-layer{
+      height: 100%;
+      overflow: visible;
+    }
+
+    .img-bg {
+      position: relative;
+      width: 100%;
+      
+      height: 100%;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .img-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .img-holder:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .img-overlay {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: background 0.4s ease;
+    }
+
+    .img-holder:hover .img-overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      color: var(--hero-text);
+      max-width: 640px;
+      animation: fadeSlideIn 0.85s ease both;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .display-title span {
+      display: inline-block;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(to right, var(--territory-colors), var(--hero-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content p {
+      line-height: 1.8;
+    }
+
+  
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 991.98px) {
+      .img-holder {
+        order: -1;
+        min-height: 300px;
+      }
+
+      .img-bg img {
+        filter: grayscale(0);
+      }
+
+      .content {
+        padding-top: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  </style>
+</section>
+   <!-- ========== Services Switcher (service-zigrow-section_10) ========== -->
+<section class="service-zigrow-section_10 py-6" id="services">
+  <div class="container">
+    <div class="row g-4 g-lg-5 align-items-start">
+      <!-- LEFT: Heading + Tab List -->
+      <div class="col-lg-4">
+        <p class="svc-eyebrow mb-2">(Our Service)</p>
+        <h2 class="main-heading mb-3">Our Aviation Training Services</h2>
+        <p class="svc-subtext mb-4">We focus on safety, professionalism, and global standards in aviation training. Our comprehensive programs include aviation theory and practical flying lessons, preparing students for successful careers in aviation.</p>
+
+        <div class="svc-tablist" role="tablist" aria-label="Services">
+          
+          <label
+            class="svc-tab is-active"
+            for="svc-tab-0"
+            role="tab"
+            aria-controls="svc-panel-0"
+          >
+            <span>Commercial License</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-1"
+            role="tab"
+            aria-controls="svc-panel-1"
+          >
+            <span>Private License</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-2"
+            role="tab"
+            aria-controls="svc-panel-2"
+          >
+            <span>Aviation Theory</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-3"
+            role="tab"
+            aria-controls="svc-panel-3"
+          >
+            <span>Flight Simulator</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-4"
+            role="tab"
+            aria-controls="svc-panel-4"
+          >
+            <span>Ground School</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-5"
+            role="tab"
+            aria-controls="svc-panel-5"
+          >
+            <span>Advanced Training</span>
+          </label>
+          
+        </div>
+      </div>
+
+      <!-- RIGHT: Image + Content (pure CSS tabs using radios) -->
+      <div class="col-lg-8">
+        <div class="svc-panels">
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-0" checked />
+          <!-- panel -->
+         <article
+  id="svc-panel-0"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-0"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1588912914074-b93851ff14b8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxlLWxlYXJuaW5nJTIwcGxhdGZvcm18ZW58MHx8fHwxNzY1MTg0NDkyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Commercial License"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@skillscouter?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Lewis Keegan</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Commercial License</h3>
+    <p class="svc-panel-text">Our commercial pilot license program prepares students for a successful career in aviation, covering all necessary skills and knowledge required to fly professionally.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-1"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-1"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-1"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1575889774394-353117afffd7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb25hbCUyMHJlc291cmNlc3xlbnwwfHx8fDE3NjUxODQ3NDR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Private License"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@sam_williams?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Sam Williams</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Private License</h3>
+    <p class="svc-panel-text">The private pilot license program offers personalized training for those who wish to fly privately, focusing on essential flying skills and safety protocols.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-2"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-2"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-2"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1679917091004-2ea175a51988?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwY3VycmljdWx1bXxlbnwwfHx8fDE3NjUxODQ4OTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Aviation Theory"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@amir2118?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Amirhosein Soleymani Fard</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Aviation Theory</h3>
+    <p class="svc-panel-text">Our aviation theory programs cover essential topics such as navigation, meteorology, and regulations, providing a solid foundation for all aspiring pilots.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-3"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-3"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-3"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1762329352849-f4d0c9e7696a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwc3VwcG9ydCUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NTE4NDc0NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Flight Simulator"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Zulfugar Karimov</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Flight Simulator</h3>
+    <p class="svc-panel-text">Experience realistic flight training with our advanced flight simulators, designed to enhance your skills and confidence before actual flying.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-4"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-4"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-4"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzY1MTg0ODk3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Ground School"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@climatereality?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">The Climate Reality Project</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Ground School</h3>
+    <p class="svc-panel-text">Our ground school program provides crucial knowledge about aviation principles, aircraft systems, and regulations, essential for all pilot candidates.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-5"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-5"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-5"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1588912914074-b93851ff14b8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxlLWxlYXJuaW5nJTIwcGxhdGZvcm18ZW58MHx8fHwxNzY1MTg0NDkyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Advanced Training"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@skillscouter?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Lewis Keegan</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Advanced Training</h3>
+    <p class="svc-panel-text">We offer advanced training programs for experienced pilots looking to enhance their skills and knowledge in specific areas of aviation.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_10 (scoped) ===== */
+  .service-zigrow-section_10 {
+    --svc-text: #0f0f0f;
+  
+    color: var(--svc-text);
+    background: #fff;
+  }
+
+  .py-lg-6 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  /* Headings */
+  .service-zigrow-section_10 .svc-eyebrow {
+    color: var(--svc-muted);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.25px;
+  }
+  .service-zigrow-section_10 .svc-heading {
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.05;
+    font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
+    margin: 0 0 0.4rem;
+  }
+  .service-zigrow-section_10 .svc-subtext {
+    color: var(--para-muted);
+    max-width: 42ch;
+      line-height: var(--lh-body);
+    font-size: var(--fs-body);
+    margin: 0;
+  }
+
+  /* ================= LEFT — Tablist ================= */
+  .service-zigrow-section_10 .svc-tablist {
+    --rowH: 56px;
+    position: relative;
+    margin-top: 1.25rem;
+    padding: 0.35rem;
+  border-radius: var(--box-radius);
+    background: #fff;
+    border: 1px solid #eef0f3;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* sliding highlight */
+  .service-zigrow-section_10 .svc-tablist::before {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 0.35rem;
+    width: calc(100% - 0.7rem);
+    height: var(--rowH);
+    border-radius: var(--box-radius);
+    /* fallback + preferred */
+    background: #f1f5f9;
+    background: color-mix(in srgb, var(--primary-colors) 8%, #f4f6f9);
+    box-shadow: inset 0 0 0 1px
+      color-mix(in srgb, var(--primary-colors) 12%, transparent);
+    transform: translateY(calc(var(--active, 0) * var(--rowH)));
+    transition: transform 0.25s ease, background 0.25s ease,
+      box-shadow 0.25s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-tab {
+    position: relative;
+    z-index: 1; /* above slider */
+    display: flex;
+    align-items: center;
+    height: var(--rowH);
+    padding: 0 14px 0 22px;
+    border-radius: var(--box-radius);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #8a919c;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease, transform 0.15s ease;
+    background: transparent;
+  }
+  .service-zigrow-section_10 .svc-tab:hover {
+    color: #1b1f23;
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_10 .svc-tab.is-active {
+    color: #0f0f0f;
+  }
+
+  /* Left indicator bar on all; primary on active */
+  .service-zigrow-section_10 .svc-tab::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 4px;
+    height: 22px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background: #e2e8f0;
+    transition: background 0.25s ease;
+  }
+  .service-zigrow-section_10 .svc-tab.is-active::after {
+    background: var(--primary-colors);
+  }
+
+  /* Sync active state via :has() (progressive enhancement) */
+  @supports (selector(:has(*))) {
+    .service-zigrow-section_10:has(#svc-tab-0:checked) .svc-tablist::before {
+      transform: translateY(calc(0 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-1:checked) .svc-tablist::before {
+      transform: translateY(calc(1 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-2:checked) .svc-tablist::before {
+      transform: translateY(calc(2 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-3:checked) .svc-tablist::before {
+      transform: translateY(calc(3 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-4:checked) .svc-tablist::before {
+      transform: translateY(calc(4 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-5:checked) .svc-tablist::before {
+      transform: translateY(calc(5 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-6:checked) .svc-tablist::before {
+      transform: translateY(calc(6 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-7:checked) .svc-tablist::before {
+      transform: translateY(calc(7 * var(--rowH)));
+    }
+
+    /* text + left bar primary on active */
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1),
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2),
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3),
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4),
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5),
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6),
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7),
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8) {
+      color: #0f0f0f;
+    }
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1)::after,
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2)::after,
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3)::after,
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4)::after,
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5)::after,
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6)::after,
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7)::after,
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8)::after {
+      background: var(--primary-colors);
+    }
+  }
+
+  /* ================= RIGHT — Panels ================= */
+  .service-zigrow-section_10 .svc-panels {
+    position: relative;
+    padding: 1.6rem;
+   border-radius: var(--box-radius);
+    background: #fff;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* take radios off-screen so label click won't scroll */
+  .service-zigrow-section_10 .svc-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-radio + .svc-panel {
+    display: none;
+  }
+  .service-zigrow-section_10 .svc-radio:checked + .svc-panel {
+    display: block;
+    animation: svcFade 0.45s ease both;
+  }
+  @keyframes svcFade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .service-zigrow-section_10 .svc-figure {
+    margin: 0 0 1.25rem;
+ border-radius: var(--box-radius);
+    overflow: hidden;
+    background: #f6f7f9;
+    box-shadow: var(--shadow-section-hover);
+  }
+  .service-zigrow-section_10 .svc-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .service-zigrow-section_10 .svc-figure:hover .svc-image {
+    transform: scale(1.035);
+  }
+
+  .service-zigrow-section_10 .svc-panel-title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin: 0.25rem 0 0.6rem;
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.9rem);
+  }
+  .service-zigrow-section_10 .svc-panel-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    max-width: 92%;
+    margin-bottom: 1.2rem;
+  }
+
+
+
+
+  /* ================= Responsive ================= */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_10 .svc-tablist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.35rem;
+      --rowH: 52px;
+    }
+    .service-zigrow-section_10 .svc-tablist::before {
+      display: none;
+    } /* slider off on grid */
+    .service-zigrow-section_10 .svc-tab {
+      justify-content: center;
+      border: 1px solid #eef0f3;
+      color: #50555c;
+      background: #fff;
+    }
+    .service-zigrow-section_10 .svc-tab.is-active {
+      background: color-mix(in srgb, var(--primary-colors) 10%, #fff);
+      color: #0f0f0f;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    }
+    .service-zigrow-section_10 .svc-tab.is-active::after {
+      background: var(--primary-colors);
+    }
+    .service-zigrow-section_10 .svc-panel-text {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+(function(){
+  const sec = document.querySelector('.service-zigrow-section_10');
+  if(!sec) return;
+
+  const tablist = sec.querySelector('.svc-tablist');
+  const labels  = Array.from(tablist.querySelectorAll('.svc-tab'));
+  const radios  = Array.from(sec.querySelectorAll('.svc-radio'));
+
+  function syncActive(idx){
+    // toggle active class on labels
+    labels.forEach((lb,i)=> lb.classList.toggle('is-active', i===idx));
+    // move slider via CSS var
+    tablist.style.setProperty('--active', idx);
+    // ensure right panel is shown
+    if (radios[idx]) radios[idx].checked = true;
+  }
+
+  // init from checked radio (fallback to 0)
+  let initial = radios.findIndex(r => r.checked);
+  if (initial < 0) initial = 0;
+  syncActive(initial);
+
+  // label clicks
+  labels.forEach((lb, i) => {
+    lb.addEventListener('click', (e) => {
+      e.preventDefault(); // avoid any accidental scrolling
+      syncActive(i);
+    });
+  });
+})();
+</script>
+     <section class=" whyChooseUs-zigrow-section_6 py-6"id="whyChooseUs">
+  <div class="container h-100">
+    <div class="row align-items-center gx-lg-5 gy-5 h-100">
+
+      <!-- Left Column -->
+      <div class="col-lg-5">
+        <div class="section-header">
+          <span class="section-path">/ Why Fly Aviation</span>
+          <h2 class=" main-heading">Why Choose Fly Aviation</h2>
+          <p class="section-subtitle">Your trusted partner in aviation training.</p>
+          <p class="section-desc">At Fly Aviation, we prioritize safety, quality, and student success. Our experienced instructors, modern facilities, and comprehensive training programs ensure that you receive the best education possible. Join us and take the first step towards your aviation career.</p>
+
+        
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-7">
+        <div class="feature-box-grid">
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-shield"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Safety Focused</h5>
+                <p class="feature-text">We adhere to the highest safety standards in aviation training, ensuring a secure learning environment for all students.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-globe"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Global Recognition</h5>
+                <p class="feature-text">Our training programs are recognized internationally, giving our graduates a competitive edge in the global aviation market.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-person-lines-fill"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Experienced Team</h5>
+                <p class="feature-text">Our instructors are seasoned professionals with extensive experience in the aviation industry, dedicated to your success.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-book-fill"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Comprehensive Curriculum</h5>
+                <p class="feature-text">We offer a well-rounded curriculum that covers all aspects of aviation, from theory to practical flying skills.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .whyChooseUs-zigrow-section_6 {
+  background: #ffffff;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+
+
+.section-path {
+  font-size: 0.85rem;
+  color:#111111;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  color: var(--para-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  max-width: 90%;
+  line-height: 1.7;
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.cta-link {
+  color:#111111;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s ease;
+}
+
+.cta-link:hover {
+  color:#111111;
+}
+
+.feature-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon-circle {
+  font-size: 1.3rem;
+  color: #111111;
+  background: #f3f2fb;
+  padding: 14px;
+ border-radius: var(--box-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--lead-para-muted);
+}
+
+.feature-text {
+  font-size: var(--fs-body-sm);
+ color: var(--para-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .razor-difference-section {
+    padding: 60px 0;
+    min-height: unset;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .feature-box-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  }
+</style>   
+<section class=" team-zigrow-section_2 py-6" id="team">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <small class="section-subtitle text-uppercase fw-semibold">Our Team</small>
+      <h2 class="fw-bold display-6 mt-2 main-heading">   Meet Our Team</h2>
+      <p class="para-muted mt-3 col-md-8 mx-auto font-subheading">
+   Our team consists of highly qualified instructors and support staff committed to providing the best training experience for our students. 
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/Kv4g4kN0/1.png" class="team-img mb-3" alt="Ahmed Kamal">
+          <h6 class="fw-bold mb-0 font-body-sm"> John Doe</h6>
+          <p class="para-muted font-body mb-0">Chief Instructor</p>
+          
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/fWqV4WNm/10.png" class="team-img mb-3" alt="Mona Zaghloul">
+          <h6 class="fw-bold font-body-sm mb-0"> Jane Smith</h6>
+          <p class="para-muted font-body mb-0">Senior Instructor</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/gk5Lhztm/2.png" class="team-img mb-3" alt="Ali Anoer">
+           <h6 class="fw-bold font-body-sm mb-0"> Mike Johnson</h6>
+          <p class="para-muted font-body mb-0">Flight Instructor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-zigrow-section_2 {
+    background-color: #fff;
+  
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .team-card {
+    background-color: #fff;
+      border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+    transition: all 0.3s ease;
+    h6{
+      color: #111111;
+    }
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+         border-radius: var(--box-radius);
+    transition: 0.3s ease;
+  }
+
+  .team-card:hover .team-img {
+    filter: brightness(1.05);
+  }
+
+  h2 {
+    color: #111111;
+  }
+
+  @media (max-width: 768px) {
+    .team-img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .team-img {
+      height: 250px;
+    }
+  }}
+</style>
+    <!-- ▰ Testimonials Section -->
+<section class="testimonial-zigrow-section_8 py-6" id="testimonials">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold main-heading">Student Feedback</h2>
+      <p class="para-muted  font-subheading">Hear from our successful graduates.</p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 h-100   bg-white d-flex flex-column justify-content-between">
+            <div class="mb-3">
+              <p class="para-muted font-body-sm ">“Fly Aviation provided me with the best training experience. The instructors were knowledgeable, and the facilities were top-notch. I felt prepared for my career as a pilot.”</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/60?img=40" class="avatar me-3" alt="Alex Brown">
+              <div>
+                <h6 class="mb-0 fw-semibold para-muted">Alex Brown</h6>
+                <small class="para-muted">Commercial Pilot</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 h-100   bg-white d-flex flex-column justify-content-between">
+            <div class="mb-3">
+              <p class="para-muted font-body-sm ">“I highly recommend Fly Aviation! The training was thorough, and I gained confidence in my flying skills. The team was supportive throughout my journey.”</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/60?img=41" class="avatar me-3" alt="Sarah Wilson">
+              <div>
+                <h6 class="mb-0 fw-semibold para-muted">Sarah Wilson</h6>
+                <small class="para-muted">Private Pilot</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 h-100   bg-white d-flex flex-column justify-content-between">
+            <div class="mb-3">
+              <p class="para-muted font-body-sm ">“The aviation theory program was incredibly informative. It laid a strong foundation for my practical training. I am grateful for the guidance I received.”</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/60?img=42" class="avatar me-3" alt="David Lee">
+              <div>
+                <h6 class="mb-0 fw-semibold para-muted">David Lee</h6>
+                <small class="para-muted">Student</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 h-100   bg-white d-flex flex-column justify-content-between">
+            <div class="mb-3">
+              <p class="para-muted font-body-sm ">“Fly Aviation exceeded my expectations. The instructors were patient and experienced, making learning enjoyable. I am now a proud licensed pilot!”</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/60?img=43" class="avatar me-3" alt="Emily Clark">
+              <div>
+                <h6 class="mb-0 fw-semibold para-muted">Emily Clark</h6>
+                <small class="para-muted">Commercial Pilot</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 h-100   bg-white d-flex flex-column justify-content-between">
+            <div class="mb-3">
+              <p class="para-muted font-body-sm ">“The advanced training program helped me refine my skills significantly. I appreciate the personalized attention and feedback from the instructors.”</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/60?img=44" class="avatar me-3" alt="Michael Green">
+              <div>
+                <h6 class="mb-0 fw-semibold para-muted">Michael Green</h6>
+                <small class="para-muted">Experienced Pilot</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 h-100   bg-white d-flex flex-column justify-content-between">
+            <div class="mb-3">
+              <p class="para-muted font-body-sm ">“I loved my time at Fly Aviation! The community was welcoming, and the training was rigorous yet rewarding. I feel ready for my flying career.”</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/60?img=45" class="avatar me-3" alt="Jessica White">
+              <div>
+                <h6 class="mb-0 fw-semibold para-muted">Jessica White</h6>
+                <small class="para-muted">Private Pilot</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.testimonial-zigrow-section_8 {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+
+.testimonials-section {
+  background-color: #f9fafb;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow-section); /* ➕ add subtle base shadow */
+    border-radius: var(--box-radius);
+
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/*** headline tweaks ***/
+ .text-accent{
+  color:#5f6f7f;
+}
+ .badge-pill{
+  letter-spacing:.04em;
+}
+.line-tip{
+  content:"";
+  position:absolute;
+  bottom:-6px;left:50%;
+  width:34px;height:2px;
+  background:#ff5b57;
+  transform:translateX(-50%) rotate(3deg);
+  border-radius:2px;
+}
+
+/*** cards ***/
+.t-card{
+  background:#fff;
+  border:0;
+border-radius: var(--box-radius);
+   box-shadow: var(--shadow-section);
+  transition:transform .25s ease, box-shadow .25s ease;
+  position:relative;
+}
+.t-card:hover{
+  transform:translateY(-6px);
+     box-shadow: var(--shadow-section-hover);
+}
+.t-dark{
+  background:#0f0f0f;
+  color:#f0f0f0;
+}
+.t-metric{
+  font-size:3.5rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.04em;
+  display:block;
+  color:#000;
+  margin-bottom:.25rem;
+}
+
+/*** avatar + brand ***/
+.avatar{
+  width:48px;height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.brand-logo{
+  width:24px;opacity:.7;
+}
+
+/*** button hover ***/
+.btn-outline-dark:hover i{
+  transform:translateX(4px);
+  transition:transform .25s;
+}
+
+/*** dark-card text-tone ***/
+.text-white-80{color:rgba(255,255,255,.8)!important;}
+
+/*** responsiveness ***/
+@media(max-width:991.98px){
+  .t-metric{font-size:2.8rem;}
+}
+@media(max-width:575.98px){
+  .results-testimonials .btn{width:100%;}
+  .line-tip{display:none;}
+}}
+</style>   <section class="pricing-zigrow-section_3 py-6" id="pricing">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <span class="badge bg-light border px-3 py-1 text-dark fw-medium mb-3 text-uppercase font-body">
+        Our Pricing 🪄
+      </span>
+      <h2 class="fw-bold display-6">Access Our Private Beta</h2>
+      <p class="para-muted font-subheading mt-2">
+
+        Basic access to theory materials and resources for aspiring pilots.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Free Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+          <h5 class="fw-semibold">Pay-as-you-go</h5>
+          <p class="para-muted font-body-sm mb-3">  Basic access to theory materials and resources for aspiring pilots.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹0</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+    
+            <li>
+              Access to online theory courses
+            </li>
+            
+            <li>
+              Study materials and resources
+            </li>
+            
+            <li>
+              Monthly webinars with instructors
+            </li>
+            
+            <li>
+              Community forum access
+            </li>
+            
+            <li>
+              Progress tracking tools
+            </li>
+            
+            <li>
+              Email support
+            </li>
+            
+            <li>
+              Discounts on future courses
+            </li>
+            
+            <li>
+              Certification upon completion
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby Plan (Highlighted) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card featured h-100 position-relative">
+          <div class="highlight-tag text-center fw-semibold font-body">
+            Our Recommendation ✨
+          </div>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h5 class="fw-semibold">Hobby</h5>
+          <p class="para-muted font-body-sm mb-3"> Comprehensive training package including practical lessons and theory.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹19</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+            
+            <li>
+              All basic plan features
+            </li>
+            
+            <li>
+              10 hours of flight training
+            </li>
+            
+            <li>
+              Personalized instructor feedback
+            </li>
+            
+            <li>
+              Access to flight simulators
+            </li>
+            
+            <li>
+              Group study sessions
+            </li>
+            
+            <li>
+              Career counseling services
+            </li>
+            
+            <li>
+              Networking opportunities
+            </li>
+            
+            <li>
+              Certification upon completion
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-gem"></i></div>
+          <h5 class="fw-semibold">Premium</h5>
+          <p class="para-muted font-body-sm mb-3"> Premium package with extensive training and resources for serious students.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹79</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+           
+            <li>
+              All comprehensive plan features
+            </li>
+            
+            <li>
+              Unlimited flight training hours
+            </li>
+            
+            <li>
+              One-on-one mentorship
+            </li>
+            
+            <li>
+              Advanced simulation training
+            </li>
+            
+            <li>
+              Access to exclusive workshops
+            </li>
+            
+            <li>
+              Job placement assistance
+            </li>
+            
+            <li>
+              Lifetime alumni network access
+            </li>
+            
+            <li>
+              Certification upon completion
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.pricing-zigrow-section_3 {
+  background: #fff;
+  color: black;
+
+.btn{
+ border-radius: var(--border-radius-btn);
+}
+/* ===== Card Base ===== */
+.plan-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+     border-radius: var(--box-radius);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+     box-shadow: var(--shadow-section);
+}
+.plan-card h5 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.plan-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.plan-card .price-label {
+  margin-top: 1rem;
+}
+.plan-card .features {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+.plan-card .features li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.plan-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== Featured Plan ===== */
+.featured {
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+     box-shadow: var(--shadow-section);
+}
+.highlight-tag {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: var(--box-radius);
+  border-top-right-radius: var(--box-radius);
+}
+
+/* ===== Buttons ===== */
+.plan-card .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+ border-radius: var(--border-radius-btn);
+  transition: all 0.25s ease;
+}
+.plan-card .btn:hover {
+  transform: translateY(-2px);
+  
+     box-shadow: var(--shadow-section-hover);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 575.98px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+  .plan-card .features {
+    font-size: 0.8rem;
+  }
+}}
+</style>
+   <section class=" faq-zigrow-section_1 py-6 bg-light" id="faq">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Left Heading -->
+      <div class="col-lg-5 mb-4 mb-md-0">
+        <h2 class="faq-heading">Frequently<br>asked questions</h2>
+        <hr class="faq-divider mt-3" />
+      </div>
+
+      <!-- Right Questions -->
+      <div class="col-lg-7">
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">What are the requirements to enroll?</h6>
+            <p class="faq-answer">To enroll in our programs, you need to be at least 17 years old and have completed your secondary education.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">How long does the training take?</h6>
+            <p class="faq-answer">The duration of training varies by program, but typically ranges from six months to two years, depending on the license.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Do you offer financial aid?</h6>
+            <p class="faq-answer">Yes, we provide various financing options and scholarships to help students manage their tuition costs.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">What is the pass rate for students?</h6>
+            <p class="faq-answer">Our students have a 99% pass rate for both theoretical and practical examinations, reflecting our commitment to quality training.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Can I train part-time?</h6>
+            <p class="faq-answer">Yes, we offer flexible training schedules to accommodate students who wish to pursue their education part-time.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Are there any age limits for training?</h6>
+            <p class="faq-answer">There are no upper age limits for training; however, students must meet the minimum age requirement for each program.</p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_1 {
+    background-color: #fdfbf7;
+    color: #444;
+  
+
+  .faq-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--secondary-colors);
+    line-height: 1.3;
+    
+  }
+
+  .faq-divider {
+    border: 0;
+    height: 2px !important;
+    background-color: #aaa;
+    width: 90%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-answer {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--para-muted);
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .faq-divider {
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+    }
+  }}
+</style>
+    <!-- 📮 Minimal Split Contact -->
+<section class="contact-zigrow-section_4 py-6" id="contact">
+  <div class="container-xl">
+    <div class="contact-grid  overflow-hidden">
+
+      <!-- ◼︎ Info -->
+      <div class="info p-5">
+        <h2 class=" main-heading mb-4">Get in touch</h2>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Mailing address</h6>
+              <p>123 Business St, City</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>contact@example.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 00000 00000</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Image -->
+      <div class="hero"></div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ========== TOKENS ========== */
+  :root {
+    --stroke: rgba(0, 0, 0, .07);
+  }
+
+  /* ========== WRAPPER ========== */
+  .contact-zigrow-section_4 {
+    background: #fdfdfd
+  }  
+
+ 
+    /* grid wrapper */
+    .contact-zigrow-section_4 .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--bg);
+         box-shadow: var(--shadow-section);
+    }
+
+    @media (max-width:991.98px) {
+      .contact-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+   
+
+    /* list layout */
+    .contact-zigrow-section_4 .info ul li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+   .contact-zigrow-section_4  .info .icon {
+      color: var(--primary-colors);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-zigrow-section_4 .info h6 {
+      font-size: .8rem;
+      letter-spacing: .05em;
+      font-weight: 700;
+      color: var(--primary-colors);
+      margin-bottom: .25rem;
+    }
+
+   .contact-zigrow-section_4  .info p {
+      margin: 0;
+      font-size: var(--fs-body-sm);
+      color: var(--para-muted);
+    }
+
+    /* ========== HERO IMAGE ========== */
+    .contact-zigrow-section_4 .hero {
+      background: url('https://i.postimg.cc/XJCcgx1h/3.png') center/cover no-repeat;
+      min-height: 420px;
+    }
+
+    @media (max-width:767.98px) {
+       .contact-zigrow-section_4.info {
+        padding: 2.5rem 2rem;
+        text-align: center
+      }
+
+       .contact-zigrow-section_4 .hero {
+        min-height: 300px
+      }
+    }
+
+</style>   
+<footer class="footer-zigrow-section_4 text-white pt-5">
+  <div class="container pb-4">
+    <div class="row gy-5">
+      <!-- Left Section -->
+      <div class="col-md-4">
+        <div class="d-flex align-items-center mb-3">
+         
+          <h5 class="mb-0 fw-bold footer-main_title">Fly Aviation</h5>
+        </div>
+        <p class="para-muted  mb-3">
+         Become a Pilot with Fly Aviation Today
+        </p>
+
+        <!-- Status Badge -->
+        <div class="system-status mt-2">
+          <span class=" bg-success"></span>
+        Connect with us
+        </div>
+        <!-- Social Icons -->
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="footer-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-md-8">
+        <div class="row">
+      <!-- Product -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Product</h6>
+  <ul class="footer-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Integrations</a></li>
+    <li><a href="#">Updates</a></li>
+  </ul>
+</div>
+        <!-- Company -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Company</h6>
+  <ul class="footer-links">
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+          <!-- Resources -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Resources</h6>
+  <ul class="footer-links">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Help Center</a></li>
+    <li><a href="#">Tutorials</a></li>
+    <li><a href="#">Case Studies</a></li>
+  </ul>
+</div>
+
+<!-- Legal -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Legal</h6>
+  <ul class="footer-links">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Cookie Policy</a></li>
+    <li><a href="#">Security</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar with Dark Background -->
+  <div class="footer-bottom py-4">
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between align-items-center small para-muted"
+    >
+      <div>    &copy; 2025. All rights reserved.</div>
+      <div class="mt-2 mt-md-0">
+        <a href="#" class="para-muted me-3">Privacy Policy</a>
+        <a href="#" class="para-muted me-3">Terms</a>
+        <a href="#" class="para-muted">Code of conduct</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+
+  .footer-zigrow-section_4 {
+    background-color: var(--theme-4);
+    border-top: 1px solid var(--border-muted);
+    .footer-main_title{
+      color: var(--theme-3);
+    }
+  
+
+  .footer-bottom {
+    background-color: var(--theme-4);
+    border-top: 1px solid var(--border-muted);
+    color: var(--theme-3) !important;
+
+    a {
+      color: var(--theme-3) !important;
+      text-decoration: none;
+    }
+  }
+
+  .para-muted{
+  color: var(--theme-3) !important;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+     color: var(--theme-3) !important;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+   color: var(--theme-3) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+  color: var(--theme-3) !important;
+  }
+
+  .footer-icon {
+  color: var(--theme-3) !important;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-icon:hover {
+     color: var(--theme-3) !important;
+  }
+
+  .system-status {
+    font-size: 1.05rem;
+  color: var(--theme-3) !important;
+    background-color: transparent;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+ 
+
+  @media (max-width: 768px) {
+    .footer-links {
+      padding-left: 0;
+    }
+  }}
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<script>
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+  const isInsideBuilder = window.self !== window.top; // 👈 iframe check
+
+  if (!isFromDashboard && !isInsideBuilder) {
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("selectstart", e => e.preventDefault());
+    document.addEventListener("keydown", e => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key === "I")
+      ) {
+        e.preventDefault();
+      }
+    });
+  }
+</script>
+
+</html>

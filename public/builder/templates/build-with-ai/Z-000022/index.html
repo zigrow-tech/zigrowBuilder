@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Experia Events - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #d1374a;
+      --secondary-colors: #1A1A1D;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Manrope;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #d1374a;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #d1374a;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Plus Jakarta Sans !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #1A1A1D !important;
+      font-family: Manrope !important;
+      border: 1px solid #1A1A1D !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #1A1A1D;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Experia Events
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#portfolio">Portfolio</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#team">Team</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="btn primary-btn py-2 px-4">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #d1374a;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d1374a;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+      
+         <!-- Bold -->
+<section class="hero-zigrow-section_17  position-relative mb-section-buffer" id="hero">
+  <div class="container text-center py-5 z-2 position-relative">
+    
+    <!-- Glowing Background Shape -->
+    <div class="hero-glow"></div>
+
+    <!-- Tagline Badge -->
+    <span class="badge-glass mb-4">
+       Experience the Difference
+    </span>
+
+    <!-- Heading -->
+    <h1 class="fw-bold display-4 display-md-3 text-dark mb-4 col-md-8 mx-auto">
+      Creating Unforgettable Experiences for Every Occasion
+    </h1>
+
+    <!-- Subheading -->
+    <p class="lead para-muted mb-4 col-md-6 mx-auto">
+      Experia Events specializes in experiential marketing and event management to elevate your brand and engage your audience effectively.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#" class="btn primary-btn px-6 py-3 fw-semibold ">
+       Get Started
+    </a>
+  </div>
+
+  <!-- Overlapping Mockup -->
+<div class="mockup-img-wrapper">
+  <img src="https://images.unsplash.com/photo-1643335622043-22b119a1f87e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwbGlnaHRzfGVufDB8fHx8MTc1NDgxOTc0MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Messaging Dashboard" class="img-fluid mockup-img" />
+<span class="img-credit">
+  Photo by 
+  <a href="https://unsplash.com/@onthesearchforpineapples?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+    Colin Lloyd
+  </a> on 
+  <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+</span>
+
+</div>
+
+</section>
+
+<style>
+  .mb-section-buffer {
+    margin-bottom: 350px !important;
+    @media (max-width: 768px) {}
+margin-bottom: 120px;
+  }
+  /* 🌄 Modern Hero Section */
+  :root {
+  --primary-color: var(--primary-color);
+  --primary-rgb: 151, 7, 71; /* RGB version of #970747 */
+}
+
+.hero-zigrow-section_17{
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #f9f9f9 0%,
+    rgba(var(--primary-rgb), 0.05) 20%,
+    rgba(var(--primary-rgb), 0.15) 50%,
+    rgba(var(--primary-rgb), 0.3) 80%,
+    rgba(var(--primary-rgb), 0.6) 100%
+  );
+  padding-top: 50px;
+  padding-bottom: 240px;
+  z-index: 0;
+  overflow: visible;
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0H0V40' fill='none' stroke='%23ffffff' stroke-opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+
+
+.hero-glow {
+  z-index: 1;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.12), transparent 70%);
+  filter: blur(80px);
+}
+
+
+/* 🔖 Soft Glass Badge */
+.badge-glass {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+/* ✨ Button Styling */
+.modern-btn {
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.modern-btn:hover {
+  background-color: #0043a8;
+  transform: translateY(-2px);
+}
+
+/* 🖼️ Mockup Image Styling */
+.mockup-img-wrapper {
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1020px;
+  z-index: 2;
+}
+
+.mockup-img {
+  border-radius: 32px;
+  width: 100%;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mockup-img:hover {
+  transform: scale(1.015);
+}
+
+/* 🧱 Section bottom margin */
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+   
+    padding-top: 60px;
+    padding-bottom: 140px;
+  
+
+  .mockup-img-wrapper {
+    bottom: -60px;
+    max-width: 95%;
+  }
+
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero-glow {
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
+    top: -40px;
+  }
+}}
+
+</style>
+            
+               <!-- BOLD -->
+
+<section class="about-zigrow-section_5 py-6" id="about">
+  <div class="container">
+    <div class="row g-xl-5 align-items-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxldmVudCUyMHBsYW5uaW5nfGVufDB8fHx8MTc1NDc0ODU1MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@chuttersnap?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      CHUTTERSNAP
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1748958342433-62a2e656ba9d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxldmVudCUyMGNyb3dkfGVufDB8fHx8MTc1NDgxOTc0MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@luisgherasim?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Luis Gherasim
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1643335622043-22b119a1f87e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwbGlnaHRzfGVufDB8fHx8MTc1NDgxOTc0MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@onthesearchforpineapples?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Colin Lloyd
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1619229667009-e7e51684e8e6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmZXN0aXZhbCUyMHN0YWdlfGVufDB8fHx8MTc1NDgxOTk5Mnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@onthesearchforpineapples?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Colin Lloyd
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 order-1 order-xl-2">
+        <div class="content-block">
+          <small class="label">Our Goals</small>
+          <h2 class="section-heading mb-4 main-heading">
+            Who We Are
+          </h2>
+          <p class=" para-muted mb-4 font-body">
+            Experia Events is a leading experiential events marketing agency based in Delhi, dedicated to crafting unique and memorable experiences that resonate with audiences. Our team of passionate professionals brings creativity, innovation, and expertise to every project, ensuring that each event not only meets but exceeds client expectations. We provide cutting-edge solutions tailored to your needs, ensuring your event stands out in a competitive market.
+          </p>
+
+          <ul class=" feature-bullets mb-5">
+              
+                <li><span class="checkmark"></span class="para-muted ">
+                  We provide cutting-edge solutions tailored to your needs, ensuring your event stands out in a competitive market.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted ">
+                  Our experienced team is committed to delivering exceptional service and ensuring the success of your event from start to finish.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted ">
+                  We prioritize our clients&#39; needs, working closely with you to understand your vision and bring it to life.
+                </li>
+                
+                  </ul>
+
+                  <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: #d1374a;
+    --clr-accent: #1A1A1D;
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    border-top: 1px solid var(--border-muted);
+    border-bottom: 1px solid var(--border-muted);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+      border-radius: 3px;
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-bullets li {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: var(--para-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .checkmark {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--clr-primary);
+      border-radius: 50%;
+      margin-right: 10px;
+      position: relative;
+
+    }
+
+    .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      width: 5px;
+      height: 10px;
+      border: solid var(--clr-primary);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .media-grid-modern {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>
+                  
+                     <section class=" container py-6 service-zigrow-section_6" id="services">
+  <div class="main-grid">
+    <!-- Left side: Logo + Vertical Card -->
+    <div class="left-side">
+      <div class="brand-logo main-heading">Services</div>
+      <div class="vertical-card">
+        <div>Event Management</div>
+        <div class="arrow-icon">→</div>
+        <span>+</span>
+      </div>
+    </div>
+
+    <!-- Right Grid: 3x2 cards -->
+    <div class="right-grid">
+      <div class="grid-item grid-black">
+      Pavilion Building
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-purple">
+       Gifts &amp; Giveaways
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-black">
+       Experience Events
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-yellow">
+        Annual Report
+        <span class="plus-yellow-icon plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-black">
+        New Services
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-yellow">
+        Company Culture
+        <span class="plus-yellow-icon plus-icon">+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .service-zigrow-section_6{
+
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .brand-logo {
+    font-weight: 600;
+font-size: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .vertical-card {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-colors);
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .vertical-card span,
+  .grid-item span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.4rem;
+  }
+
+  .arrow-icon {
+    font-size: 1.9rem;
+    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.2rem 0.8rem;
+    &:hover {
+      background: white;
+      color: #b266ff;
+    }
+  }
+
+  .right-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-item {
+    position: relative;
+    padding: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 180px;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:hover,
+  .vertical-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .grid-purple {
+   background-color: var(--primary-colors);
+  }
+
+  .grid-yellow {
+    background-color: #fff;
+    border: 2px solid black;
+    color: black;
+  }
+
+  .grid-black {
+    background-color: #000;
+  }
+
+  .plus-icon {
+    background: white;
+    color: #000;
+    padding: 0.1rem 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid black;
+      color: white;
+    }
+  }
+
+  .plus-yellow-icon {
+    color: #fff  !important;
+    background: #000;
+
+    &:hover {
+      color: black !important;
+      border: 1px solid black;
+      background: transparent !important;
+    }
+  }
+  @media (max-width: 992px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .right-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .vertical-card {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .right-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+      height: 160px;
+    }
+  }}
+</style>
+
+                        
+                           <!-- 🤍 Our Clients Grid -->
+<section class="logo-zigrow-section_5 py-6" id="logos">
+  <div class="container text-center">
+
+    <!-- Heading -->
+    <h2 class="fw-bold display-5 mb-3 main-heading">Our Dear Clients</h2>
+    <p class="lead para-muted mb-5 px-lg-5 col-md-10 mx-auto">
+     A showcase of trusted partners and brands we've collaborated with—highlighting the strength, diversity, and credibility behind our network.
+    </p>
+
+    <!-- Logo table -->
+    <div class="row gx-0 gy-0 border-grid">
+
+      <!-- Repeat for 8 logos -->
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-6 col-lg-3 cell p-5">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.logo-zigrow-section_5{
+  background:#fff;
+
+
+/* Grid borders (uses :before on .cell) */
+.border-grid .cell{
+  position:relative;
+}
+.border-grid .cell::before,
+.border-grid .cell::after{
+  content:'';
+  position:absolute;
+  background:#e7e7e7;
+}
+.border-grid .cell::before{ /* horizontal */
+  height:1px;left:0;right:0;bottom:0;
+}
+.border-grid .cell::after{  /* vertical */
+  width:1px;top:0;bottom:0;right:0;
+}
+/* Remove outer table borders */
+.border-grid .cell:nth-child(1)::before,
+.border-grid .cell:nth-child(2)::before,
+.border-grid .cell:nth-child(3)::before,
+.border-grid .cell:nth-child(4)::before{display:none;}
+.border-grid .cell:nth-child(4n)::after{display:none;} /* 4th,8th etc */
+
+/* Logo style */
+.logo{
+  max-width:170px;
+  width:100%;
+  object-fit:contain;
+  filter:grayscale(100%) opacity(.8);
+  transition:filter .3s ease;
+}
+.logo:hover{filter:grayscale(0%);}
+
+/* Responsive tweaks */
+@media (max-width:767.98px){
+  .border-grid .cell:nth-child(odd)::after{display:none;} /* 2-col layout vertical lines */
+}
+@media (max-width:575.98px){
+  .logo{max-width:140px;}
+}}
+</style>
+
+                              
+                                
+                                       <section class=" whyChooseUs-zigrow-section_3 py-6"id="whyChooseUs">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <div class="section-tag">★ Why Choose Us</div>
+      <h2 class="why-title main-heading">Why Choose Us</h2>
+      <p class="why-subtitle">Your trusted partner in event management.</p>
+      <p class="why-paragraph mx-auto">At Experia Events, we pride ourselves on delivering exceptional service and innovative solutions tailored to meet your unique needs. Our commitment to excellence ensures that your event is a resounding success.</p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="row align-items-center justify-content-between g-4">
+
+      <!-- Image Column -->
+      <div class="col-lg-6">
+        <div class="img-container">
+          
+<div class="img-container position-relative">
+  <img
+    src="https://images.unsplash.com/photo-1643335622043-22b119a1f87e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwbGlnaHRzfGVufDB8fHx8MTc1NDgxOTc0MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid rounded-custom w-100"
+    alt="Why Choose Us Image"
+  />
+
+  
+  <span class="img-credit">
+    Photo by 
+    <a href="https://unsplash.com/@onthesearchforpineapples?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener">
+      Colin Lloyd
+    </a> on 
+    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>
+  </span>
+
+
+
+</div>
+
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="col-lg-6">
+        <div class="row g-4">
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-check2-circle"></i>
+              </div>
+              <h5 class="mt-3">Tailored Solutions</h5>
+              <p class="feature-para">We customize our services to fit your specific requirements, ensuring a unique experience for every client.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-person-check"></i>
+              </div>
+              <h5 class="mt-3">Experienced Professionals</h5>
+              <p class="feature-para">Our team consists of experienced professionals who are dedicated to making your event a success.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h5 class="mt-3">Innovative Ideas</h5>
+              <p class="feature-para">We bring fresh and innovative ideas to the table, ensuring your event stands out from the rest.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+              <h5 class="mt-3">Client Satisfaction</h5>
+              <p class="feature-para">Our primary goal is client satisfaction, and we strive to exceed expectations with every project we undertake.</p>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- CTA Buttons -->
+        <!-- <div class="d-flex gap-3 mt-3 justify-content-center ">
+          <a href="#" class="primary-btn">Get a Quote</a>
+        </div> -->
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .whyChooseUs-zigrow-section_3 {
+  background: #ffffff;
+
+
+.section-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d1374a;
+  background: #f0efff;
+  padding: 5px 14px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.why-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.why-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.why-paragraph {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.img-container img {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  aspect-ratio: 12/9;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
+}
+
+.feature-card {
+  background: #f8f9fc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-circle {
+  background-color: #e9e9ff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #d1374a;
+}
+
+.feature-card h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 14px;
+  color: #111;
+}
+
+.feature-para {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.btn-cta {
+  background-color: #d1374a;
+  color: white;
+  padding: 10px 22px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  background-color: #4f47d0;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .why-title {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .why-subtitle,
+  .why-paragraph {
+    text-align: center;
+  }
+
+  .btn-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+
+  .icon-circle {
+    margin: 0 auto;
+  }}
+}
+
+</style>
+                                          
+                                             
+<section class=" team-zigrow-section_2 py-6" id="team">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <small class="section-subtitle text-uppercase fw-semibold">Our Team</small>
+      <h2 class="fw-bold display-6 mt-2 main-heading">   Meet Our Team</h2>
+      <p class="para-muted mt-3 col-md-8 mx-auto">
+   Our team consists of talented individuals who are passionate about creating memorable events. Each member brings unique skills and expertise to the table. 
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/yx8tdM89/1.png" class="team-img mb-3" alt="Ahmed Kamal">
+          <h6 class="fw-bold mb-0"> Ravi Sharma</h6>
+          <p class="text-muted mb-0">Event Manager</p>
+          
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/Qt0YRfJM/10.png" class="team-img mb-3" alt="Mona Zaghloul">
+          <h6 class="fw-bold mb-0"> Neha Gupta</h6>
+          <p class="text-muted mb-0">Creative Director</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/Y2dTVCdx/2.png" class="team-img mb-3" alt="Ali Anoer">
+           <h6 class="fw-bold mb-0"> Amit Verma</h6>
+          <p class="text-muted mb-0">Logistics Head</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-zigrow-section_2 {
+    background-color: #fff;
+  
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .team-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    h6{
+      color: #1A1A1D;
+    }
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+  }
+
+  .team-card:hover .team-img {
+    filter: brightness(1.05);
+  }
+
+  h2 {
+    color: #1A1A1D;
+  }
+
+  @media (max-width: 768px) {
+    .team-img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .team-img {
+      height: 250px;
+    }
+  }}
+</style>
+
+                                                
+                                                   <section class="portfolio-zigrow-section_2 py-6" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title main-heading">
+        Our Work
+      </h2>
+    </div>
+
+    <div class="row justify-content-center g-3">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only">
+          <img
+            src="https://images.unsplash.com/photo-1712903276145-df36556f4ed0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxldmVudCUyMGhpZ2hsaWdodHN8ZW58MHx8fHwxNzU0ODE5OTkzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Storage & Seating"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Corporate Gala <br />
+            Elegant Evening
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small mt-4 text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@walls_io?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Walls.io
+          </a>
+          on
+          <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only">
+          <img
+            src="https://images.unsplash.com/photo-1507259933535-56d751a038ce?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwc2V0dXB8ZW58MHx8fHwxNzU0ODE5OTkzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Tables & Desks"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Product Launch <br />
+            Innovative Reveal
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@morganrovang?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Morgan Rovang
+          </a>
+          on
+      <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a>
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only">
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBldmVudHxlbnwwfHx8fDE3NTQ3NDg1NTB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Lighting & Decor"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Trade Show <br />
+            Industry Showcase
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+           <a
+            href="https://unsplash.com/@headwayio?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Headway
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only">
+          <img
+            src="https://images.unsplash.com/photo-1720700449251-0e874f42c00a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwYXJ0eSUyMGVudGVydGFpbm1lbnR8ZW58MHx8fHwxNzU0ODE5OTkzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Office Accessories"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Wedding Celebration <br />
+            Memorable Moments
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+            <a
+            href="https://unsplash.com/@baksitki?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Aziz Sıtkı Eskin
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+
+    .offer-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .offer-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+      aspect-ratio: 3/4;
+    }
+
+    /* On hover, zoom the image */
+    .offer-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Rounded shapes */
+    .rounded-top-only img {
+      border-top-left-radius: 50% 30%;
+      border-top-right-radius: 50% 30%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .rounded-bottom-only img {
+      border-bottom-left-radius: 50% 30%;
+      border-bottom-right-radius: 50% 30%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .offer-label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1.5rem 1.95rem;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+    }
+
+    /* Overlay background for bottom label */
+    .rounded-top-only .offer-label {
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    /* Overlay background for top label */
+    .rounded-bottom-only .offer-label {
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+    }
+  }
+</style>
+
+                                                      
+                                                         <section class="testimonial-zigrow-section_3 py-6"id="testimonials">
+  <div class="container">
+    <h2 class="text-center feedback-title mb-5">
+      Client Feedback
+    </h2>
+    <div class="row gx-4 gy-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="feedback-card">
+          <p>" Experia Events transformed our corporate gala into a spectacular evening. Their attention to detail and creativity were unmatched. Highly recommend!"</p>
+          <span>- Rajesh Kumar</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+       <div class="feedback-card">
+          <p>" The team at Experia Events made our product launch a huge success. Their professionalism and innovative ideas truly set them apart."</p>
+          <span>- Anita Sharma</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="feedback-card">
+          <p>" I was impressed by the level of service and creativity provided by Experia Events. They exceeded our expectations at every turn."</p>
+          <span>- Vikram Singh</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_3 {
+    background-color: #1A1A1D; /* soft beige tone */
+    color: #2b2b2b;
+  
+  .feedback-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .feedback-card {
+    background-color:  #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .feedback-card p {
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .feedback-card span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #111;
+  }
+
+  .feedback-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    background-color: #fdfcfc;
+  }}
+</style>
+
+                                                            
+                                                              
+                                                                    
+                                                                           <section class=" cta-zigrow-section_3 text-white" id="cta">
+  <div class="container px-lg-5">
+    <div
+      class="row align-items-lg-end align-items-center text-lg-start text-center"
+    >
+      <!-- Left Content -->
+      <div
+        class="col-lg-6 mb-5 mb-lg-0 ps-lg-5 text-center text-lg-start"
+        style="padding-bottom: 5rem"
+      >
+        <h1 class="display-5 fw-semibold mb-4 col-md-8">
+          Let&#39;s Get Started!
+        </h1>
+        <p class="lead mb-4">Contact us today to discuss your event requirements and let our team help you create an unforgettable experience.</p>
+        <a href="#" class="custom-btn btn btn-hover">
+          Request a Callback
+          <span class="ms-2">→</span>
+        </a>
+      </div>
+
+      <!-- Right Image -->
+   <div class="col-lg-6">
+  <div class="img-layer-static">
+    <img
+      src="https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxjYWxsJTIwdG8lMjBhY3Rpb258ZW58MHx8fHwxNzU0NzQ4NTUwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Recovery Help"
+      class="img-fluid"
+    />
+<span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@alex_andrews?utm_source=zigrow&utm_medium=referral"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Alexander Andrews
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-zigrow-section_3 {
+    background-color: var(--theme-3);
+    padding-top: 5rem !important;
+    color: var(--theme-4);
+    border-top: 1px solid var(--border-muted);
+    border-bottom: 1px solid var(--border-muted);
+  
+
+    .img-layer-static {
+  position: relative; /* not absolute */
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+}
+
+  h1 {
+    font-size: 2.75rem;
+    line-height: 1.3;
+    color: var(--theme-4);
+  }
+  .lead {
+    color: var(--theme-4);
+  }
+  .custom-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    border-width: 2px;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+    border-color: var(--theme-4);
+    color:  var(--theme-4);
+    background-color: transparent;
+  }
+
+  .custom-btn:hover {
+    background-color: #1A1A1D;
+    border-color: #1A1A1D;
+    color: #fff;
+  }
+
+  @media (max-width: 767.98px) {
+   h1 {
+      font-size: 2rem;
+    }
+
+    .custom-btn {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }}
+</style>
+
+                                                                              
+                                                                                
+                                                                                      
+                                                                                        <footer class="py-6 footer-zigrow-section_1" style="background-color: #fff; color: #000000;" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold">Experia Events</h5>
+        <p class="subtext">Experia Events specializes in experiential marketing and event management to elevate your brand and engage your audience effectively.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 contact-links">
+        <h6 class="fw-bold">Contact Us</h6>
+        <p>Email: anjali.sehrawat90@gmail.com</p>
+        <p>Phone: 9891082051</p>
+      </div>
+    </div>
+
+    <hr style="border-color: #000000;" />
+
+    <p class="text-center mt-3 mb-0" style="">
+      &copy; 2025 Experia Events. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--lead-color-mute)
+    }
+    .links{
+      a{
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+
+    .contact-links{
+      p {
+             color: #000000
+      }
+    }
+  }
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

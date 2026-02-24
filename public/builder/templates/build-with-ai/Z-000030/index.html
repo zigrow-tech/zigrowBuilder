@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finkart - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #8338EC;
+      --secondary-colors: #000000;
+      --territory-colors: #FF006E;
+      --theme-3: #000000;
+      --theme-4: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #000000 !important;
+      font-family: Helvetica Neue;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Anton !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #000000;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      Finkart
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #8338EC;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Bold -->
+
+<section class=" hero-zigrow-section_18 py-5" id="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-6">
+        <span class="badge-pill px-4 py-2  mb-3 d-inline-block transform-badge"
+          ><span>
+📈
+          </span>Your financial partner.</span
+        >
+
+        
+
+        <h1 class="display-4 fw-bold">
+          <span class="highlighted-word">
+            Simplifying
+            <svg
+              viewBox="0 0 200 20"
+              class="highlight-underline"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2,15 C50,5 150,25 198,10"
+                stroke="#fff"
+                stroke-width="4"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+           Financial Solutions for Everyone Today
+        </h1>
+
+        <p class="hero-subtext mb-4">
+          Finkart delivers innovative digital financial solutions for individuals and businesses, making money management easier and more efficient than ever before.
+        </p>
+
+      <div class="d-flex flex-wrap gap-3">
+  <a href="#" class=" white-btn ">
+    Learn More
+  </a>
+  <a href="#" class=" white-outline-btn ">
+    Contact Us
+  </a>
+</div>
+
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 d-none d-lg-block">
+        <img
+          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbmZlcmVuY2V8ZW58MHx8fHwxNzU4MzY0MDQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+          alt="Coaching"
+          class="hero-image img-fluid position-absolute"
+        />
+          <span class="img-credit">
+    Photo by 
+  <a href="https://unsplash.com/@headwayio?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+      Headway
+    </a> on 
+    <<a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+  </span>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-zigrow-section_18 {
+    background-color: var(--primary-colors);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh; /* Ensure space for image */
+    display: flex;
+    align-items: center;
+  
+
+   .container,
+  .row {
+    height: 100%;
+  }
+
+  .highlighted-word {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight-underline {
+    position: absolute;
+    bottom: -25px; /* adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 1.2em;
+    pointer-events: none;
+  }
+
+  .hero-image {
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 120px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    aspect-ratio: 14/13;
+  }
+
+  .transform-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: 500;
+   border-radius: var(--box-radius);
+    font-size: 0.95rem;
+  }
+
+  .hero-subtext {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 500px;
+  }
+
+ 
+
+  @media (max-width: 991.98px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .hero-image {
+      position: static;
+      margin-top: 2rem;
+      border-radius: 0;
+      padding-right: 0;
+    }
+  }}
+</style>
+   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 py-6" id="about">
+  <div class="container">
+    <div class="row g-xl-5 align-items-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBtZWV0aW5nfGVufDB8fHx8MTc1ODM2NDA0Mnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@getrodeo?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Rodeo Project Management Software
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1659824297493-b847196704a7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBjaXR5c2NhcGV8ZW58MHx8fHwxNzU4MzY0MDQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@mayertawfik?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Mayer Tawfik
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbmZlcmVuY2V8ZW58MHx8fHwxNzU4MzY0MDQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@headwayio?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Headway
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBvZmZpY2V8ZW58MHx8fHwxNzU4MzY0MDQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@israelandrxde?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Israel Andrade
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <div class="label">Our Goals</div>
+          <h2 class="section-heading mb-4 main-heading">
+            About Finkart
+          </h2>
+          <p class=" para-muted mb-4 font-body">
+            Finkart is a fintech startup dedicated to providing innovative digital financial solutions for individuals and businesses. Our mission is to simplify money management through secure and user-friendly platforms. We focus on streamlining payments, savings, and investment processes, making financial services more accessible and efficient. Our advanced technology and customer-first strategies ensure transparency and reliability in all our offerings. We develop cutting-edge financial solutions tailored to meet the needs of our clients, ensuring a seamless experience.
+          </p>
+
+          <ul class=" feature-bullets mb-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  We develop cutting-edge financial solutions tailored to meet the needs of our clients, ensuring a seamless experience.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our platforms prioritize security, utilizing advanced encryption and protocols to protect your financial data.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our dedicated support team is available 24/7 to assist you with any inquiries or issues you may have.
+                </li>
+                
+                  </ul>
+
+                  <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ====================== service-zigrow-section_11 : START ====================== -->
+<section id="services" class="py-6 service-zigrow-section_11">
+  <div class="container px-3 px-md-4">
+
+ 
+
+
+    <!-- Header -->
+    <div class="row align-items-center g-4 mb-3 mb-md-5">
+      <div class="col-lg-8">
+        <div class="d-inline-flex align-items-center gap-2 badge-chip mb-3">
+          <span>Services</span>
+        </div>
+        <h2 class="mb-2 main-heading">Our Financial Services</h2>
+        <p class="font-subheading para-muted mb-0">Explore our range of innovative financial solutions designed for you.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="#!" class="primary-btn">
+          Explore More <span class="ms-2 arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Category tabs -->
+    <div class="tabs-row d-flex flex-wrap align-items-center gap-3 mb-4">
+      
+      <button type="button" class="tab-chip active" data-idx="0">
+        <span class="tab-dot">
+          <i class="bi-cash"></i>
+        </span>
+        <span class="tab-text">Small Business Loans</span>
+      </button>
+      
+      <button type="button" class="tab-chip " data-idx="1">
+        <span class="tab-dot">
+          <i class="bi-bank"></i>
+        </span>
+        <span class="tab-text">Savings Accounts</span>
+      </button>
+      
+      <button type="button" class="tab-chip " data-idx="2">
+        <span class="tab-dot">
+          <i class="bi-graph-up"></i>
+        </span>
+        <span class="tab-text">Investment Solutions</span>
+      </button>
+      
+      <button type="button" class="tab-chip " data-idx="3">
+        <span class="tab-dot">
+          <i class="bi-credit-card"></i>
+        </span>
+        <span class="tab-text">Payment Processing</span>
+      </button>
+      
+      <button type="button" class="tab-chip " data-idx="4">
+        <span class="tab-dot">
+          <i class="bi-calendar"></i>
+        </span>
+        <span class="tab-text">Financial Planning</span>
+      </button>
+      
+    </div>
+
+    <!-- Feature card (dynamic content container) -->
+    <div class="feature-wrap rounded-4" id="serviceFeature">
+      <div class="row g-0 align-items-center">
+        <!-- Left content -->
+        <div class="col-lg-7">
+          <div class="p-4 p-md-5">
+            <div class="mini-badge mb-3"><span class="mini-dot"></span>business </div>
+            <h3 class="card-title mb-3" id="f-title">Small Business Loans</h3>
+            <p class="mb-4 card-desc" id="f-paragraph">Our small business loans are designed to provide quick and easy access to funds, helping you grow your business without hassle. Flexible terms and competitive rates available.</p>
+            <div class="d-flex flex-wrap gap-2 mb-4" id="f-tags">
+              
+              <span class="badge tag-chip">business</span>
+              
+              <span class="badge tag-chip">finance</span>
+              
+              <span class="badge tag-chip">loans</span>
+              
+            </div>
+            <a href="#!" class="white-btn" id="f-btn">
+              <span class="me-2">Apply Now</span>
+            </a>
+          </div>
+        </div>
+        <!-- Right image -->
+        <div class="col-lg-5">
+          <div class="feature-media h-100 d-flex align-items-center justify-content-center p-4">
+           <div class="media-card">
+  <img
+    id="f-img"
+    src="https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NTgzNjQwNDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    alt="Small Business Loans"
+    loading="lazy"
+  >
+
+  
+
+  <!-- ✅ Credit badge (initial state) -->
+  <span id="f-credit" class="img-credit ">
+    
+      Photo by
+      <a href="https://unsplash.com/@micheile?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">micheile henderson</a>
+      on
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+    
+  </span>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- ====================== service-zigrow-section_11 : END ====================== -->
+
+<style>
+  /* =============== White Theme – Modern, crisp, interactive =============== */
+  .service-zigrow-section_11 {
+    background: #ffffff;
+  }
+
+  .service-zigrow-section_11 .title-oversized {
+    letter-spacing: -.5px;
+  }
+
+  /* badge at top */
+  .service-zigrow-section_11 .badge-chip {
+    padding: .4rem .75rem;
+    border: 1px solid #e8ebf2;
+      border-radius: var(--box-radius);
+    background: #fff;
+ box-shadow: var(--shadow-section);
+    color: #111;
+    font-weight: 600;
+    font-size: .85rem;
+  }
+
+  .service-zigrow-section_11 .badge-chip .chip-icon {
+    font-size: 1rem;
+    line-height: 1
+  }
+
+
+
+ 
+  .service-zigrow-section_11 .primary-btn:hover .arrow {
+    transform: translateX(3px);
+  }
+  .service-zigrow-section_11 .card-title {
+    color: var(--secondary-colors);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+  }
+  .service-zigrow-section_11 .card-desc {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+
+
+
+  /* tabs row */
+  .service-zigrow-section_11 .tabs-row {
+    border-bottom: 1px solid #eef1f6;
+  }
+
+  .service-zigrow-section_11 .tab-chip {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .75rem 1rem;
+       border-radius: var(--box-radius);
+    background: #fff;
+    border: 1px solid #e9eef4;
+    color: #111;
+    text-decoration: none;
+   box-shadow: var(--shadow-section);
+    transition: background .25s ease, border-color .25s ease, transform .2s ease;
+  }
+
+  .service-zigrow-section_11 .tab-chip .tab-dot {
+ 
+    border-radius: 50%;
+    display: inline-block;
+    opacity: .8;
+  }
+
+  .service-zigrow-section_11 .tab-chip .tab-text {
+    font-weight: 700;
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    line-height: var(--lh-body);
+  }
+
+  .service-zigrow-section_11 .tab-chip:hover {
+    transform: translateY(-2px);
+    border-color: #dfe6ef;
+  }
+
+  .service-zigrow-section_11 .tab-chip.active {
+    background: #ffffff;
+    border-color: var(--primary-colors);
+
+    color: var(--primary-colors) ;
+    .tab-text{
+
+        color: var(--primary-colors) ;
+    }
+  }
+
+  /* feature area */
+  .service-zigrow-section_11 .feature-wrap {
+    background: #ffffff;
+    border: 1px solid #e9edf4;
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section-hover);
+    overflow: hidden;
+  }
+
+  .service-zigrow-section_11 .mini-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 600;
+    color: #111;
+    font-size: .85rem;
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: var(--box-radius);
+    padding: .3rem .65rem;
+  }
+
+  .service-zigrow-section_11 .mini-badge .mini-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #111;
+    display: inline-block;
+  }
+
+  /* CTA button */
+  .service-zigrow-section_11 .cta-btn {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+    box-shadow: var(--shadow-section);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  .service-zigrow-section_11 .cta-btn:hover {
+    transform: translateY(-2px);
+     box-shadow: var(--shadow-section-hover);
+  }
+
+  .service-zigrow-section_11 .cta-btn .cta-ico {
+    display: inline-block;
+    transform: translateY(1px);
+  }
+
+  /* right media card with grid overlay */
+  .service-zigrow-section_11 .feature-media {
+    background: linear-gradient(180deg, #fafbff, #ffffff);
+  }
+
+  .service-zigrow-section_11 .media-card {
+    position: relative;
+    border-radius: var(--box-radius);
+    overflow: hidden;
+    border: 1px solid #e9edf4;
+     box-shadow: var(--shadow-section);
+    background: #fff;
+  }
+
+  .service-zigrow-section_11 .media-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    filter: saturate(1.02) contrast(1.03);
+    transition: transform .6s ease;
+  }
+
+  .service-zigrow-section_11 .media-card:hover img {
+    transform: scale(1.04);
+  }
+
+  .service-zigrow-section_11 .media-card .grid-line {
+    position: absolute;
+    background: rgba(255, 255, 255, .85);
+    mix-blend: soft-light;
+  }
+
+  .service-zigrow-section_11 .media-card .v1 {
+    top: 0;
+    bottom: 0;
+    left: 33.333%;
+    width: 2px;
+  }
+
+  .service-zigrow-section_11 .media-card .v2 {
+    top: 0;
+    bottom: 0;
+    left: 66.666%;
+    width: 2px;
+  }
+
+  .service-zigrow-section_11 .media-card .h1 {
+    left: 0;
+    right: 0;
+    top: 33.333%;
+    height: 2px;
+  }
+
+  .service-zigrow-section_11 .media-card .h2 {
+    left: 0;
+    right: 0;
+    top: 66.666%;
+    height: 2px;
+  }
+
+  /* small tweaks */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_11 .feature-media {
+      padding-top: 0;
+      padding-bottom: 1.25rem;
+    }
+  }
+</style>
+
+<script>
+  // Server se aayi images ko global bana do
+  window.serviceImgUrls = [{"imageUrl":"https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NTgzNjQwNDN8MA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"micheile henderson","photographerUrl":"https://unsplash.com/@micheile","photographerUsername":"micheile"},{"imageUrl":"https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxpbnZlc3RtZW50JTIwYW5hbHlzaXN8ZW58MHx8fHwxNzU4MzY0MDQzfDA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"Stephen Dawson","photographerUrl":"https://unsplash.com/@dawson2406","photographerUsername":"dawson2406"},{"imageUrl":"https://images.unsplash.com/photo-1711185898083-e1f04ff38300?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxpbnN1cmFuY2UlMjBjb25zdWx0YXRpb258ZW58MHx8fHwxNzU4MzY0MDQzfDA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"Elin Melaas","photographerUrl":"https://unsplash.com/@elin_mel","photographerUsername":"elin_mel"},{"imageUrl":"https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc1ODM2NDA0M3ww&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"Startaê Team","photographerUrl":"https://unsplash.com/@startaeteam","photographerUsername":"startaeteam"},{"imageUrl":"https://images.unsplash.com/photo-1726138388546-30955e45aaec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmaW50ZWNoJTIwc29sdXRpb25zfGVufDB8fHx8MTc1ODM2NDA0Mnww&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"SumUp","photographerUrl":"https://unsplash.com/@sumup","photographerUsername":"sumup"},{"imageUrl":"https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NTgzNjQwNDN8MA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"micheile henderson","photographerUrl":"https://unsplash.com/@micheile","photographerUsername":"micheile"}];
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const data = [{"title":"Small Business Loans","paragraph":"Our small business loans are designed to provide quick and easy access to funds, helping you grow your business without hassle. Flexible terms and competitive rates available.","button":"Apply Now","tags":["business","finance","loans"],"icon":"bi-cash"},{"title":"Savings Accounts","paragraph":"Open a savings account with us and enjoy competitive interest rates, no hidden fees, and easy online management to help you reach your financial goals.","button":"Open Account","tags":["savings","finance","accounts"],"icon":"bi-bank"},{"title":"Investment Solutions","paragraph":"Explore our investment solutions tailored to your risk appetite and financial goals. Our experts will guide you through the process to maximize your returns.","button":"Start Investing","tags":["investments","finance","growth"],"icon":"bi-graph-up"},{"title":"Payment Processing","paragraph":"Streamline your payment processes with our secure and efficient payment processing solutions, designed to handle transactions seamlessly and quickly.","button":"Learn More","tags":["payments","finance","processing"],"icon":"bi-credit-card"},{"title":"Financial Planning","paragraph":"Get personalized financial planning services to help you manage your finances effectively and achieve your long-term goals with confidence.","button":"Get Started","tags":["planning","finance","advice"],"icon":"bi-calendar"}]; // EJS pass data as JSON
+    const stock = ["https://images.unsplash.com/photo-1556228453-efd1e3f234b7?q=80&w=1500&auto=format&fit=crop","https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1500&auto=format&fit=crop","https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1500&auto=format&fit=crop","https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1500&auto=format&fit=crop","https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1500&auto=format&fit=crop"];
+
+   function getImg(i){
+  const arr = Array.isArray(window.serviceImgUrls) ? window.serviceImgUrls : [];
+  const item = arr[i];                // exact index -> exact card
+  return (item && item.imageUrl) ? item.imageUrl : '';
+}
+
+
+    const tabs = document.querySelectorAll(".service-zigrow-section_11 .tab-chip");
+    const title = document.getElementById("f-title");
+    const para = document.getElementById("f-paragraph");
+    const tags = document.getElementById("f-tags");
+    const btn = document.getElementById("f-btn");
+    const img = document.getElementById("f-img");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const idx = parseInt(tab.getAttribute("data-idx"));
+        const c = data[idx];
+        if (!c) return;
+
+        // update content
+        title.textContent = c.title || "";
+        para.textContent = c.paragraph || "";
+        btn.querySelector("span").textContent = c.button || "Learn More";
+
+        // update tags
+        tags.innerHTML = "";
+        if (c.tags && c.tags.length) {
+          c.tags.forEach(t => {
+            const sp = document.createElement("span");
+            sp.className = "badge tag-chip";
+            sp.textContent = t;
+            tags.appendChild(sp);
+          });
+        }
+
+        // update image
+        img.src = getImg(idx);
+        img.alt = c.title || "Service";
+      });
+    });
+  });
+</script>      <!-- ◈ Team Showcase -->
+<section class=" py-6 team-zigrow-section_6" id="team">
+  <div class="container-lg text-center">
+
+    <!-- top label -->
+    <span class="staff-eyebrow d-inline-block mb-2">OUR TEAM</span>
+
+    <!-- dynamic title -->
+    <h2 class="staff-title fw-bold mb-3 main-heading">
+      Meet Our Team
+    </h2>
+
+    <!-- dynamic subtitle -->
+    <p class="staff-sub para-muted font-subheading mx-auto mb-5 col-lg-8">
+      Our team consists of experienced professionals passionate about making financial services accessible and efficient for everyone. We work tirelessly to ensure our clients receive the best support.
+      Dedicated professionals at your service.
+    </p>
+
+    <div class="row g-4 justify-content-center">
+      
+        <div class="col-12 col-md-6 col-lg-4">
+          <figure class="staff-card">
+            <img
+              src="https://i.postimg.cc/Kv4g4kN0/1.png"
+              alt="Alice Green"
+              class="w-100 h-100 object-fit-cover">
+          </figure>
+          <h5 class="staff-name mt-3 mb-1">Alice Green</h5>
+          <p class="staff-role para-muted font-body-sm mb-0">CEO</p>
+        </div>
+      
+        <div class="col-12 col-md-6 col-lg-4">
+          <figure class="staff-card">
+            <img
+              src="https://i.postimg.cc/fWqV4WNm/10.png"
+              alt="Bob White"
+              class="w-100 h-100 object-fit-cover">
+          </figure>
+          <h5 class="staff-name mt-3 mb-1">Bob White</h5>
+          <p class="staff-role para-muted font-body-sm mb-0">CTO</p>
+        </div>
+      
+        <div class="col-12 col-md-6 col-lg-4">
+          <figure class="staff-card">
+            <img
+              src="https://i.postimg.cc/gk5Lhztm/2.png"
+              alt="Cathy Black"
+              class="w-100 h-100 object-fit-cover">
+          </figure>
+          <h5 class="staff-name mt-3 mb-1">Cathy Black</h5>
+          <p class="staff-role para-muted font-body-sm mb-0">Customer Support Head</p>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+/* =====  Typography + palette  ===== */
+.team-zigrow-section_6{
+  background:#fff;
+
+.staff-eyebrow{
+  font-size:.75rem;
+  letter-spacing:.12em;
+  font-weight:600;
+  color:#61637a;
+}
+.staff-title{
+  font-size:clamp(1.8rem,3vw+1rem,2.4rem);
+  line-height:1.25;
+}
+.staff-sub{
+}
+
+/* =====  Card & image  ===== */
+.staff-card{
+  aspect-ratio: 4/3;
+   border-radius: var(--box-radius);
+  overflow:hidden;
+  margin:0;           /* reset <figure> default */
+box-shadow: var(--shadow-section);
+  transition:.4s transform,.4s box-shadow;
+}
+.staff-card:hover{
+  transform:translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+/* =====  Name & role  ===== */
+.staff-name{
+  font-size:1.05rem;
+  font-weight:600;
+ color: #474747;
+}
+.staff-role{
+}
+
+/* =====  Responsive tweaks  ===== */
+@media(max-width:767.98px){
+  .staff-card{aspect-ratio:1/1; border-radius:var(--box-radius);}
+}}
+</style>
+    <section class="testimonial-zigrow-section_1  py-6" id="testimonials">
+  <div class="container">
+    <h2 class="text-center  main-heading mb-5">Client Feedback </h2>
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+            src="https://i.postimg.cc/Kv4g4kN0/1.png"
+            alt="Client 1"
+          />
+          <h5 class="client-name">John Doe</h5>
+          <p class="client-text">
+       Finkart has transformed the way I manage my finances. Their small business loan helped me expand my operations significantly. Highly recommended!
+          </p>
+               <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+           src="https://i.postimg.cc/fWqV4WNm/10.png"
+            alt="Client 2"
+          />
+         <h5 class="client-name">Jane Smith</h5>
+          <p class="client-text">
+       The customer service at Finkart is outstanding. They guided me through the loan application process with ease and professionalism.
+          </p>
+              <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+           src="https://i.postimg.cc/gk5Lhztm/2.png"
+            alt="Client 3"
+          />
+           <h5 class="client-name">Emily Johnson</h5>
+          <p class="client-text">
+       I love the user-friendly interface of their platform. It makes managing my savings and investments so much easier!
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_1 {
+    background-color: #fff;
+    color: #222;
+  
+
+
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+border-radius: var(--box-radius);
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+
+  /* Smooth, elevated shadow */
+     box-shadow: var(--shadow-section);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  /* Slightly deeper shadow on hover */
+    box-shadow: var(--shadow-section-hover);
+}
+
+
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+   border-radius: var(--box-radius);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .client-text {
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .stars {
+    color: rgb(255, 196, 0); /* Custom star color (orange-ish), change as needed */
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .stars i {
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover .stars i {
+    transform: scale(1.2);
+  }}
+</style>
+    <section class=" faq-zigrow-section_2 py-6"id="faq">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading fw-bold text-uppercase">Commonly Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              What services does Finkart offer?
+            </button>
+          </h2>
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Finkart offers a range of financial services including small business loans, savings accounts, investment solutions, and payment processing.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              How can I apply for a loan?
+            </button>
+          </h2>
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              You can apply for a loan directly through our website by filling out the application form and submitting the required documents.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              Is my financial data secure?
+            </button>
+          </h2>
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, we prioritize your security and use advanced encryption methods to protect your financial information.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              What are the eligibility criteria for loans?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Eligibility criteria vary based on the type of loan. Generally, we require proof of income, credit history, and business documentation.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              Can I manage my account online?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Absolutely! Our platform allows you to manage your account, view transactions, and apply for services online.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              What should I do if I have issues?
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              You can contact our customer support team via email or phone for assistance with any issues you may encounter.
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent !important;
+  color: #555 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none !important;
+  border: 0 !important;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none !important;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>    <section class="contact-zigrow-section_5 py-6" id="contact">
+  <div class="container">
+    
+    <!-- Top Images -->
+    <div class="row g-3 mb-5 image-row">
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/g05HR1s8/2.png" class="img-fluid  " alt="Room 1">
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png" class="img-fluid  " alt="Room 2">
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/8cgdXWqC/4.png" class="img-fluid  " style="width: 600px;" alt="Room 3">
+      </div>
+    </div>
+
+    <!-- Bottom Contact Info -->
+    <div class="row align-items-start text-section">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="fw-bold main-heading">Partner with us</h2>
+      </div>
+      <div class="col-md-6 contact-details">
+        <div class="mb-4">
+          <h6 class="text-uppercase contact-label">Mailing Address</h6>
+          <p>123 Business St, City</p>
+        </div>
+        <div class="mb-4">
+          <h6 class="text-uppercase contact-label">Email Address</h6>
+          <p>fincart@gmail.com</p>
+        </div>
+        <div>
+          <h6 class="text-uppercase contact-label">Phone Number</h6>
+          <p>998899899</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .contact-zigrow-section_5 {
+  background-color: #fff;
+
+
+.image-row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+
+.image-row img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+
+.contact-details .contact-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary-colors);
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+  }
+}
+    }
+</style>   <footer class="py-6 footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h5 class="fw-bold link-title">Finkart</h5>
+        <p class="subtext">Finkart delivers innovative digital financial solutions for individuals and businesses, making money management easier and more efficient than ever before.</p>
+      </div>
+
+      <div class="col-md-1"></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="fw-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-bold link-title">Contact Us</h6>
+        <p>Email: fincart@gmail.com</p>
+        <p>Phone: 998899899</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-center mt-3 mb-0" style="color: #2a2a2a;">
+      &copy; 2025 Finkart. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) !important;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

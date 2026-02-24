@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Your Lifestyle  - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #e4ba4f;
+      --secondary-colors: #1E201E;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Barlow,Roboto,sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #e4ba4f;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #e4ba4f;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Sora,DM Sans,Inter !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #1E201E !important;
+      font-family: Space Grotesk,Manrope,Inter !important;
+      border: 1px solid #1E201E !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #1E201E;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      Your Lifestyle 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #e4ba4f;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+
+      
+         <!-- Creative -->
+
+<section class=" hero-zigrow-section_20 position-relative text-white py-5" id="hero">
+  <div class="container position-relative z-2">
+   
+    <!-- Headline -->
+    <h1 class="section-heading fw-bold lh-sm mb-4">
+       Style Meets Comfort
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext col-md-7">
+       Discover a collection that blends elegance with modern trends for every occasion, from work to casual outings.
+    </p>
+
+    <!-- CTA Row -->
+    <div class="d-flex align-items-center gap-4 mt-4 flex-wrap">
+      <a href="#" class="btn primary-btn d-inline-flex align-items-center">
+        Learn more <span class="ms-2 arrow">↗</span>
+      </a>
+
+     
+    </div>
+  </div>
+
+<!-- Floating image grid -->
+<div class="floating-images">
+  <div class="img-box img-1 position-relative">
+    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8fHwxNzU0ODExOTU2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Team Work" />
+    <span class="img-credit">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@domjewel?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Dom Hill
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="img-box img-2 position-relative">
+    <img src="https://images.unsplash.com/photo-1567169102475-a4a93aa6d71a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBiZWF1dHl8ZW58MHx8fHwxNzU0ODExOTU2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Consulting" />
+    <span class="img-credit">
+      Photo by 
+      <a 
+        href="https://unsplash.com/@harpersunday?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Harper Sunday
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="img-box img-3 position-relative">
+    <img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzU0ODExOTU2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Workshop" />
+    <span class="img-credit">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@lotusdnp?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Lotus Design N Print
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="img-box img-4 position-relative">
+    <img src="https://images.unsplash.com/photo-1623220768351-36401f85ed5e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzU0ODExOTU2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Office" />
+    <span class="img-credit">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@danny_lincoln?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Daniel Lincoln
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+</div>
+
+
+
+
+  <!-- Dashed Line SVG -->
+<svg class="hero-path" viewBox="0 0 1440 400" preserveAspectRatio="none">
+  <path
+    class="hero-path-line"
+    d="M0,220 
+       C200,160 300,280 500,220 
+       S800,160 1000,240 
+       S1200,300 1440,220"
+  />
+</svg>
+
+
+
+</section>
+
+<style>
+    .hero-zigrow-section_20  {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+
+
+.world-class-tag {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  transform: rotate(-10deg);
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.section-heading {
+  font-size: 7rem;
+  width: 100%;             
+  display: block;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+
+.hero-subtext {
+  font-size: 1.4rem;
+  max-width: 650px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 2;
+}
+
+
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+.avatar-group {
+  display: flex;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-left: -10px;
+  object-fit: cover;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+/* Floating images */
+.floating-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 200px;
+  z-index: 2;
+  width: 450px;
+}
+
+/* Image box styles */
+.img-box {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom positioning to stagger layout */
+.img-1 {
+  border-top-left-radius: 30px;
+}
+
+.img-2 {
+  border-top-right-radius: 30px;
+}
+
+.img-3 {
+  /* margin-top: -60px; Move slightly upward */
+  border-bottom-left-radius: 30px;
+}
+
+.img-4 {
+  /* margin-top: -30px; Move slightly downward */
+  border-bottom-right-radius: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .floating-images {
+    position: static;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 2rem;
+  }
+
+  .img-box {
+    width: 140px;
+    height: 140px;
+  }
+
+  .img-3 {
+    margin-top: 0;
+  }
+
+  .img-4 {
+    margin-top: 0;
+  }
+}
+
+
+/* Dashed path */
+.hero-path {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transform: translateY(-50%) skewY(14deg);
+  width: 100%;
+  height: 400px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-path-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 2;
+  stroke-dasharray: 10 12;
+  stroke-linecap: round;
+  animation: dashwave 12s linear infinite;
+}
+
+@keyframes dashwave {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1200;
+  }
+}
+
+/* Circle CTA */
+.circle-cta {
+  position: absolute;
+  top: 120px;
+  right: 80px;
+  width: 100px;
+  height: 100px;
+  background: #f18664;
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.circle-text {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  font-size: 0.6rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  animation: spin 10s linear infinite;
+}
+
+.circle-arrow {
+  background: #fcd53f;
+  color: black;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    padding: 3rem 1rem;
+  
+
+  .section-heading {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.9rem;
+  }
+
+  .floating-images {
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .circle-cta {
+    top: auto;
+    bottom: 100px;
+    right: 20px;
+  }
+
+  .world-class-tag {
+    top: 20px;
+    left: 20px;
+  }
+
+  .hero-path{
+    display: none;
+  }}
+}
+
+</style>
+            
+               <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image shadow-lg position-relative">
+  <img src="https://images.unsplash.com/photo-1723390926441-5840f12432fc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwZXJzb25hbCUyMHN0eWxlfGVufDB8fHx8MTc1NDgxMTk1Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+      href="https://unsplash.com/@bergvadi?utm_source=zigrow&utm_medium=referral" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Vadim Berg
+    </a> on 
+    <a 
+      href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Unsplash
+    </a>
+  </div>
+
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-3">
+            About Our Brand
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted mb-4">
+            Your Lifestyle is a fashion-forward brand dedicated to empowering women through stylish, comfortable, and versatile clothing that fits every occasion.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Quality Materials</h6>
+                <p class="mb-0 para-muted font-body">We use only the finest fabrics to ensure comfort and durability in every piece.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Fashion Forward</h6>
+                <p class="mb-0 para-muted font-body">Stay ahead of trends with our curated collections that reflect the latest styles.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Versatile Styles</h6>
+                <p class="mb-0 para-muted font-body">Our outfits are designed to transition seamlessly from day to night, work to play.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Empowering Women</h6>
+                <p class="mb-0 para-muted font-body">We believe in empowering women through fashion that enhances their confidence and individuality.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: 2rem 0 2rem 2rem;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  transition: transform 0.4s ease;
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #1E201E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: "✓";
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>
+                  
+                    
+                           <section class="logo-zigrow-section_6 py-6" id="logos">
+  <div class="container text-center">
+
+    <!-- Heading -->
+    <h2 class="main-heading lh-sm mb-3">
+      Meet the teams using<br class="d-none d-md-block">
+      QuickBites to grow smarter
+    </h2>
+    <p class="lead para-muted mb-5">
+      Trusted by teams obsessed with building better products.
+    </p>
+
+    <!-- Logos -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 gap-lg-5">
+
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Styles -->
+<style>
+.logo-zigrow-section_6{
+ background: #fafafa;
+
+
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.25rem;
+  min-width:120px;
+}
+.logo-wrap img{
+  max-height:78px;
+  object-fit:contain;
+}
+.logo-wrap span{
+  margin-top:.15rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  font-size:1rem;
+  color:#000;
+  white-space:nowrap;
+}
+
+@media(max-width:575.98px){
+  .logo-wrap{min-width:100px;}
+  .logo-wrap span{font-size:.9rem;}
+}}
+</style>
+
+                              
+                                 <!-- Full-page background wrapper -->
+<section class=" py-6 product-zigrow-section_1" id="products">
+    <div class="container">
+        <!-- White rounded card -->
+        <div class="featured-products p-4 p-md-5 shadow-sm">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <div>
+                    <h5 class="fw-bold mb-1" style="color: #1E201E;">
+                        Explore Our Collection
+                    </h5>
+                    <p class="text-muted mb-0">
+                        Fashion for Every Occasion
+                    </p>
+                </div>
+                <a href="#" class="primary-btn">
+                    New Arrivals →
+                </a>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1608979048467-6194dabc6a3d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBwcm9kdWN0JTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzU0ODExOTU2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                       <a 
+        href="https://unsplash.com/@johannepoldjacobsen?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Johanne Pold Jacobsen
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+                                    </span>
+                                    
+                            </div>
+
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Stylish Dresses
+                                </h6>
+                                <p class="text-muted small mb-1">
+                                    Discover our range of dresses perfect for any occasion, from casual to formal.
+                                </p>
+                                <p class="fw-bold mb-0">$99.99</p>
+                            </div>
+                    </div>
+
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1724318497004-084cece3e7ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwYWNjZXNzb3JpZXMlMjBmbGF0JTIwbGF5fGVufDB8fHx8MTc1NDgxMTk1Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                        <a 
+        href="https://unsplash.com/@oldyouth?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Old Youth
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+                                    </span>
+                                    
+                            </div>
+
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Chic Tops
+                                </h6>
+                                <p class="text-muted small mb-1">
+                                    Find the perfect top to pair with your favorite bottoms for a complete look.
+                                </p>
+                                <p class="fw-bold mb-0">$99.99</p>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1739979054787-719a848cd684?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBza2luY2FyZSUyMGNvbGxlY3Rpb258ZW58MHx8fHwxNzU0ODExOTU3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                       <a 
+        href="https://unsplash.com/@wowcontly?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Aleksandrs Karevs
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+                                    </span>
+                                    
+                            </div>
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Elegant Skirts
+                                </h6>
+                                <p class="text-muted small mb-1">
+                                    Our skirts offer a blend of comfort and style for every woman.
+                                </p>
+                                <p class="fw-bold mb-0">$99.99</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .product-zigrow-section_1 {
+        background: #fafafa;
+
+
+        .featured-products {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card {
+            height: 100%;
+            border-radius: 16px;
+            background-color: #f9f9f9;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-radius: 12px;
+            margin: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .featured-products {
+            background-color: #f8f9fb;
+            border-radius: 16px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            h6 {
+                color: #e4ba4f;
+            }
+
+            img {
+                aspect-ratio: 1/1 !important;
+            }
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+    }
+</style>
+                                    
+                                       <section class="why-choose-section whyChooseUs-zigrow-section_2"id="whyChooseUs">
+  <div class="container">
+    <div class="text-center text-md-start col-md-8 m-auto">
+      <div class="section-tag">★ Why Choose Us</div>
+      <h2 class="section-title main-heading">Why Choose Us</h2>
+      <p class="section-desc">
+        Fashion that Empowers and Inspires<br>
+        At Your Lifestyle, we believe in providing clothing that not only looks good but also makes you feel good. Our commitment to quality and style ensures that every woman can express her individuality through fashion.
+      </p>
+    </div>
+
+    <div class="row align-items-center mt-5 gx-5">
+      <div class="col-md-10 col-lg-6 m-auto">
+        <div class="image-box">
+         
+<div class="image-box position-relative">
+  <img src="https://images.unsplash.com/photo-1567169102475-a4a93aa6d71a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBiZWF1dHl8ZW58MHx8fHwxNzU0ODExOTU2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Happy Collaboration" class="img-fluid w-100">
+
+  
+    <span class="img-credit">
+      Photo by
+    <a 
+        href="https://unsplash.com/@harpersunday?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Harper Sunday
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+        </div>
+      </div>
+
+      <div class="col-md-10 col-lg-6 m-auto">
+        <div class="text-start">
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi bi-clock me-2 "></i> Timeless Elegance</h5>
+              <p class="mb-0 section-text">Our designs are crafted to stand the test of time, blending classic styles with modern touches.</p>
+            </div>
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi bi-leaf me-2 "></i> Sustainable Practices</h5>
+              <p class="mb-0 section-text">We prioritize sustainability in our production processes, ensuring a positive impact on the environment.</p>
+            </div>
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi bi-person-fill me-2 "></i> Inclusive Sizing</h5>
+              <p class="mb-0 section-text">Our collection caters to all body types, celebrating diversity and inclusivity in fashion.</p>
+            </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+
+
+.whyChooseUs-zigrow-section_2 {
+  padding: 80px 20px;
+  background: #fff;
+  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 1200px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.09);
+
+
+.section-tag {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e4ba4f;
+  background: #eff2f7;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+   color: #6b7280;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.image-box {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover {
+  transform: scale(1.015);
+}
+
+.section-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.why-point h5 {
+  color: #222;
+  font-size: 1.05rem;
+}
+
+.btn-custom {
+  background: #e4ba4f;
+  color: #fff;
+  padding: 12px 26px;
+  font-weight: 600;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-custom:hover {
+  background: #222;
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .section-desc, .section-text, .why-point h5 {
+    text-align: center;
+  }
+
+  .btn-custom {
+    display: block;
+    margin: 20px auto 0;
+  }
+  }}
+
+</style>
+                                          
+                                            
+                                                   <section class="portfolio-zigrow-section_1 py-6" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title main-heading">Our Work</h2>
+      <p class="section-subtitle">
+        Latest Trends
+      </p>
+    </div>
+
+    <div class="row g-0">
+      <!-- Area Card -->
+    <div class="col-6 col-md-4 col-lg-3">
+  <div class="area-card position-relative">
+    <img
+      src="https://images.unsplash.com/photo-1593528625646-d705402054ba?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxoaWdoJTIwZmFzaGlvbiUyMHBob3RvZ3JhcGh5fGVufDB8fHx8MTc1NDgxMTk1N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Fashion Show"
+    />
+    <div class="area-name">
+      Fashion Show
+    </div>
+    <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@naeimj?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        naeim jafari
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="col-6 col-md-4 col-lg-3">
+  <div class="area-card position-relative">
+    <img
+      src="https://images.unsplash.com/photo-1612378483767-ae631525de90?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzaG90c3xlbnwwfHx8fDE3NTQ4MTE5NTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Photoshoot"
+    />
+    <div class="area-name">
+      Photoshoot
+    </div>
+   <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@gamanalice3012?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Gaman Alice
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-6 col-md-4 col-lg-3">
+  <div class="area-card position-relative">
+    <img
+      src="https://images.unsplash.com/photo-1610658089070-8bb4c5faac39?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsaWZlc3R5bGUlMjBwaG90b2dyYXBoeXxlbnwwfHx8fDE3NTQ4MTE5NTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Lookbook"
+    />
+    <div class="area-name">
+      Lookbook
+    </div>
+    <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@davidprspctive?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        David Suarez
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+   <div class="col-6 col-md-4 col-lg-3">
+  <div class="area-card position-relative">
+    <img
+      src="https://images.unsplash.com/photo-1612135842459-c831e0ddaf36?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwc3RyZWV0JTIwc3R5bGV8ZW58MHx8fHwxNzU0ODExOTU3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Collaborations"
+    />
+    <div class="area-name">
+      Collaborations
+    </div>
+   <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@elliehauser?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Ellie Hauser
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  
+
+
+
+  .section-subtitle {
+    color: var( --lead-color-mute);
+    font-size: 1rem;
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }}
+</style>
+
+                                                      
+                                                         <section class="testimonial-zigrow-section_5 py-6"id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading mb-2">What Our Customers Say</h2>
+      <p class="section-subtitle">Real feedback from real women</p>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=40" alt="Emily Smith">
+          </div>
+          <h5 class="para-muted mb-1">Emily Smith</h5>
+          <small class="para-muted d-block mb-2">Fashion Blogger</small>
+          <p class="testimonial-text mb-0">"Your Lifestyle has transformed my wardrobe! The outfits are stylish and comfortable, perfect for my busy lifestyle. Highly recommend!"</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=41" alt="Sarah Johnson">
+          </div>
+          <h5 class="para-muted mb-1">Sarah Johnson</h5>
+          <small class="para-muted d-block mb-2">Entrepreneur</small>
+          <p class="testimonial-text mb-0">"I love the versatility of the clothing! I can wear the same outfit to work and then out with friends. It&#39;s a game changer!"</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=42" alt="Jessica Lee">
+          </div>
+          <h5 class="para-muted mb-1">Jessica Lee</h5>
+          <small class="para-muted d-block mb-2">Designer</small>
+          <p class="testimonial-text mb-0">"The quality of the fabrics is outstanding. I feel confident and beautiful in every piece I own from Your Lifestyle."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=43" alt="Laura Brown">
+          </div>
+          <h5 class="para-muted mb-1">Laura Brown</h5>
+          <small class="para-muted d-block mb-2">Stylist</small>
+          <p class="testimonial-text mb-0">"Shopping here is always a pleasure. The staff is friendly, and the styles are always on point!"</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_5 {
+  background: #fff;
+  position: relative;
+
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--para-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+}
+
+.testimonial-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 4px var(--primary-colors);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar img {
+  transform: scale(1.05);
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+    color: #6b7280;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .testimonial-avatar img {
+    width: 56px;
+    height: 56px;
+  }
+}}
+
+</style>
+                                                            
+                                                              
+                                                                     <section class=" faq-zigrow-section_1 py-6 bg-light" id="faq">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Left Heading -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h2 class="faq-heading">Frequently<br>asked questions</h2>
+        <hr class="faq-divider mt-3" />
+      </div>
+
+      <!-- Right Questions -->
+      <div class="col-md-7">
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">What sizes do you offer?</h6>
+            <p class="faq-answer">We offer a wide range of sizes from XS to XXL to cater to all body types.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">How can I track my order?</h6>
+            <p class="faq-answer">Once your order is shipped, you will receive a tracking number via email to monitor its progress.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">What is your return policy?</h6>
+            <p class="faq-answer">We accept returns within 30 days of purchase, provided the items are unworn and in original condition.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Do you offer international shipping?</h6>
+            <p class="faq-answer">Yes, we ship internationally. Shipping costs will be calculated at checkout based on your location.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">How can I contact customer support?</h6>
+            <p class="faq-answer">You can reach our customer support team via email or through our contact form on the website.</p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_1 {
+    background-color: #fdfbf7;
+    color: #444;
+  
+
+  .faq-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #444444;
+    line-height: 1.3;
+    
+  }
+
+  .faq-divider {
+    border: 0;
+    height: 2px !important;
+    background-color: #aaa;
+    width: 90%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-answer {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .faq-divider {
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+    }
+  }}
+</style>
+
+                                                                        
+                                                                          
+                                                                                 <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 py-6"id="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid rounded shadow-sm overflow-hidden">
+
+      <!-- ◼︎ Left: Contact Info -->
+      <div class="cta-info p-5">
+        <h2 class="fw-bold mb-4" style="color: #1E201E; ">Get in touch</h2>
+
+        <ul class="contact-list list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Address</h6>
+              <p>Sariput Nagar , Seepz Gate No-03 , Andheri East , Mumbai 400093</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>jhasuruchi8@gmail.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>8340612849</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Right: Hero / CTA -->
+      <div class="cta-hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="content px-4 px-lg-5">
+          <h3 class="fw-bold mb-4 col-md-8 mx-auto">Feel Free to Contact Us Anytime</h3>
+          <a href="#" class="primary-btn">Click here for location</a>
+
+          <!-- socials -->
+          <div class="social-wrap d-flex justify-content-center gap-3 mt-5 mx-auto">
+            <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+:root{
+  --accent:  #e4ba4f;  /* primary brand */
+  --accent-txt: #000000;
+  --surface: #ffffff;
+  --surface-dark: #111;
+  --stroke: rgba(0,0,0,.06);
+  --bg-section: #f8f9fa;
+}
+
+/* ===================  SECTION  =================== */
+.contact-zigrow-section_3{
+  background: var(--bg-section);
+
+
+/* ---------- grid wrapper ---------- */
+.cta-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+}
+@media (max-width: 991.98px){
+  .cta-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- left panel ---------- */
+.cta-info{
+  background: var(--surface);
+}
+.cta-info h2{font-size:2.1rem}
+.contact-list li{
+  display:flex;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.contact-list .icon{
+  color:var(--accent);
+  font-size:1.2rem;
+  flex-shrink:0;
+}
+.contact-list h6{
+  font-size:.8rem;
+  letter-spacing:.05em;
+  font-weight:700;
+  margin-bottom:.25rem;
+  color:var(--accent);
+}
+.contact-list p{
+  margin:0;
+  font-size:1rem;
+  color:var(--surface-dark);
+}
+
+/* ---------- hero panel ---------- */
+.cta-hero{
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80') center / cover no-repeat;
+  min-height:420px;
+  overflow:hidden;
+}
+.cta-hero::before{
+  content:"";
+  position:absolute;inset:0;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.45);
+}
+.cta-hero .content{position:relative;z-index:1;color:#fff}
+.cta-hero h3{font-size:1.9rem;line-height:1.35}
+
+/* ---------- primary CTA button ---------- */
+.btn-cta{
+  display:inline-block;
+  padding:.85rem 2.25rem;
+  font-weight:600;
+  font-size:.9rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--accent-txt);
+  background:var(--accent);
+  border-radius:6px;
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:none;
+  text-decoration:none;
+}
+.btn-cta:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* ---------- socials ---------- */
+.social-btn{
+  width:44px;height:44px;
+  display:grid;place-content:center;
+  border-radius:50%;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.4);
+  transition:background .3s ease, transform .3s ease;
+  text-decoration: none;
+}
+.social-btn:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-3px);
+  color: white;
+}
+
+/* ===================  RESPONSIVE TWEAKS  =================== */
+@media (max-width:575.98px){
+  .cta-info h2{font-size:1.8rem}
+  .cta-hero h3{font-size:1.6rem}
+  .btn-cta{width:100%}
+}}
+
+</style>
+                                                                                    
+                                                                                      
+                                                                                        <footer class="footer-zigrow-section_6 " id="footer">
+  <div class="container py-4">
+    <!-- Top Section: Social Links -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
+      
+      <!-- Left: Social Icons -->
+      <div class="footer-social d-flex gap-3">
+        <a href="#" class="social-link" aria-label="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="YouTube">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+
+      <!-- Right: Footer Links -->
+      <div class="footer-links d-flex gap-3 mt-3 mt-md-0">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Copyright -->
+    <div class="text-center small pt-3 border-top">
+      © 2025. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<style>
+    .footer-zigrow-section_6 {
+    background-color: var(--theme-4);
+  font-size: 0.92rem;
+    color: var(--theme-3);
+  position: relative;
+
+
+
+
+/* Social Links */
+ .footer-social a {
+  color: var(--theme-3);
+  font-size: 1.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: var(--theme-3);
+}
+
+/* Footer text links */
+.footer-links a {
+  color: var(--theme-3);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--theme-3);
+  border-bottom: 1px solid var(--theme-3);
+}
+
+/* Bottom copyright section */
+ .text-center {
+  color: var(--theme-3);
+}
+
+@media (max-width: 575.98px) {
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+}
+</style>
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

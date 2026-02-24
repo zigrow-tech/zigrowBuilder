@@ -1,0 +1,2506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOOTZ MART. IN - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #5F0F40;
+      --secondary-colors: #1A1A1A;
+      --territory-colors: #E36414;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #1A1A1A ;
+      font-family: Source Sans Pro;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Playfair Display ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #1A1A1A;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top custom-navbar">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold" href="#">
+          FOOTZ MART. IN
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav align-lg-custom-center -center">
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#products">Products</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#portfolio">Portfolio</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+            </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="primary-btn">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-colors);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small-custom shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <section class="hero-zigrow-section_5" id="hero" data-section="hero">
+  <div class="overlay pointer-custom-none"></div>
+
+  <div class="container">
+    <div class="row justify-custom-start">
+      <div class="col-lg-6 col-md-8 col-12">
+
+        <div class="hero-content text-custom-white">
+          <h1>Step Into Comfort and Style</h1>
+          <p>Discover trendy shoes and comfy slippers for the whole family. Quality, style, and affordability for every occasion await you.</p>
+
+          <a href="#" class="white-btn btn-hover">
+            Explore Collection
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p class="img-credit text-custom-white small-custom position-absolute">
+    Photo by
+    <a 
+      href="https://unsplash.com/@wowcontly?utm_source=zigrow&utm_medium=referral"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Aleksandrs Karevs
+    </a> 
+    on 
+    <a 
+      href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Unsplash</a>
+  </p>
+</section>
+
+<style>
+  .hero-zigrow-section_5 {
+    background: url(https://images.unsplash.com/photo-1739980737820-b6bb1a9b8456?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBza2luY2FyZXxlbnwwfHx8fDE3Njc2NDY0MjF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080) center center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: var(--box-radius);
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  }}
+</style>
+   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_3 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-0 row-vcenter">
+
+      <!-- Left: Image with overlay -->
+      <div class="col-lg-6 img-holder">
+        <div class="img-layer">
+        <div class="img-bg img-wrapper-center">
+
+
+            <img src="https://images.unsplash.com/photo-1522108098940-de49801b5b40?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBpbmZsdWVuY2VyfGVufDB8fHx8MTc2NzY0NjQyMXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="About us image" />
+            <span class="img-overlay"></span>
+            <span class="img-credit">
+              Photo by  <a 
+        href="https://unsplash.com/@kxvn_lx?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        kevin laminto
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 d-flex justify-custom-center align-custom-center">
+        <div class="content p-custom-4 p-lg-custom-5">
+          <h1 class="display-title mb-custom-4">
+            <span>About Footz Mart</span>
+          </h1>
+
+          <p class="mb-custom-3 para-muted font-body">At Footz Mart, we believe every step should be taken in comfort and style. Our trendy shoes and cozy slippers cater to men, women, and kids alike.</p>
+          <p class="mb-custom-4 para-muted font-body">With high-quality materials and stylish designs at affordable prices, we ensure that every occasion is perfect. Experience fast delivery and a best quality guarantee today!</p>
+
+          <a href="#contact" class="primary-btn">Explore Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --hero-primary: var(--primary-colors);
+      --hero-bg: var(--theme-bg);
+      --hero-text: var(--secondary-colors);
+    }
+
+    .about-zigrow-section_3 {
+      background: var(--hero-bg);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    
+
+    .img-holder {
+      position: relative;
+      min-height: 600px;
+      height: 100%;
+    }
+
+    .img-layer{
+      height: 100%;
+      overflow: visible;
+    }
+
+    .img-bg {
+      position: relative;
+      width: 100%;
+      
+      height: 100%;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .img-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .img-holder:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .img-overlay {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: background 0.4s ease;
+    }
+
+    .img-holder:hover .img-overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      color: var(--hero-text);
+      max-width: 640px;
+      animation: fadeSlideIn 0.85s ease both;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .display-title span {
+      display: inline-block;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(to right, var(--territory-colors), var(--hero-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content p {
+      line-height: 1.8;
+    }
+
+  
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 991.98px) {
+      .img-holder {
+        order: -1;
+        min-height: 300px;
+      }
+
+      .img-bg img {
+        filter: grayscale(0);
+      }
+
+      .content {
+        padding-top: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  </style>
+</section>
+   <!-- PROFESSIONAL -->
+
+<section class="section-padding service-zigrow-section_1" id="services" data-section="services"> 
+
+  <div class="container text-custom-center mb-custom-5">
+    <h2 class="main-heading">
+      Our Services
+    </h2>
+
+    <p class="col-md-8 mx-custom-auto para-muted font-subheading">
+      Discover stylish and comfortable footwear for every occasion, tailored for men, women, and kids.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row g-5"><!-- g-5 → larger gaps -->
+      
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll service-card" style="transition-delay:0.1s">
+       <div class="service-block_1 text-custom-center rounded-4 h-custom-100">
+  <div class="position-relative img-wrapper-center">
+    <img 
+      src="https://images.unsplash.com/photo-1767249632858-cd74bfdcc396?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwzfHxwZXJzb25hbCUyMHN0eWxpbmd8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+      class="service-icon mb-custom-3"
+      alt="Trendy Shoes icon">
+    
+      <span class="img-credit">
+        Photo by 
+        <a 
+        href="https://unsplash.com/@madness_leahcim_?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Michael Kyule
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+  </div>
+
+  <h5 class="fw-custom-semibold mb-custom-2">
+    Trendy Shoes
+  </h5>
+  <p class="para-muted font-body-sm mb-custom-0 ">
+    Step out in style with our latest collection of trendy shoes that combine fashion and comfort for every occasion.
+  </p>
+</div>
+
+        </div>
+        
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll service-card" style="transition-delay:0.2s">
+       <div class="service-block_1 text-custom-center rounded-4 h-custom-100">
+  <div class="position-relative img-wrapper-center">
+    <img 
+      src="https://images.unsplash.com/photo-1722505292825-abf98118c226?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxtYWtldXAlMjBhcHBsaWNhdGlvbnxlbnwwfHx8fDE3Njc2NDY0MjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+      class="service-icon mb-custom-3"
+      alt="Comfortable Slippers icon">
+    
+      <span class="img-credit">
+        Photo by 
+        <a 
+        href="https://unsplash.com/@anevans?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Anna Evans
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+  </div>
+
+  <h5 class="fw-custom-semibold mb-custom-2">
+    Comfortable Slippers
+  </h5>
+  <p class="para-muted font-body-sm mb-custom-0 ">
+    Relax at home with our range of comfortable slippers designed for ultimate ease, perfect for daily wear.
+  </p>
+</div>
+
+        </div>
+        
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll service-card" style="transition-delay:0.30000000000000004s">
+       <div class="service-block_1 text-custom-center rounded-4 h-custom-100">
+  <div class="position-relative img-wrapper-center">
+    <img 
+      src="https://images.unsplash.com/photo-1554881070-b818fe59eff3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwzfHxiZWF1dHklMjB3b3Jrc2hvcHN8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+      class="service-icon mb-custom-3"
+      alt="Fast Delivery icon">
+    
+      <span class="img-credit">
+        Photo by 
+        <a 
+        href="https://unsplash.com/@radenprasetya?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Raden Prasetya
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+  </div>
+
+  <h5 class="fw-custom-semibold mb-custom-2">
+    Fast Delivery
+  </h5>
+  <p class="para-muted font-body-sm mb-custom-0 ">
+    Enjoy quick and reliable delivery service that ensures your new footwear arrives at your doorstep in no time.
+  </p>
+</div>
+
+        </div>
+        
+    </div>
+  </div>
+
+  <style>
+    /* section backdrop (theme fallback) + extra breathing room */
+    .service-zigrow-section_1 {
+      background: #fff;
+    
+
+    /* card */
+    .service-block_1 {
+      background: #fff ;
+      border: 1px solid #eee;
+      box-shadow:var(--shadow-section);
+      padding: 2.75rem 2rem;
+      /* ⬅️ deeper padding for a bolder feel */
+      transition: transform .3s ease, box-shadow .3s ease;
+      min-height: 290px;
+      border-radius: var(--box-radius);
+      @media (max-width: 768px) {
+        padding: 1rem;
+      }
+    }
+
+    .service-block:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .service-card {
+      h5 {
+        color: var(--lead-custom-color-mute);
+      }
+      p{
+         color: var(   --para-muted);
+      }
+    }
+
+    /* icon – slightly larger */
+    .service-icon {
+      width: 310px;
+      height: 200px;
+      object-fit: cover;
+    border-radius: var(--box-radius);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+    }
+
+    /* reveal animation (unchanged) */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all .6s ease-out;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* responsive heading tweak */
+    @media(max-width:768px) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+  }
+  </style>
+
+  <script>
+    /* intersection-observer reveal (unchanged) */
+    document.addEventListener('DOMContentLoaded', () => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.fade-in-on-scroll').forEach(el => io.observe(el));
+    });
+  </script>
+</section>    <section id="products" class="section-padding product-zigrow-section_5" data-section="products">
+  <div class="container text-custom-center">
+
+    <!-- Dynamic heading + subtitle -->
+    <h2 class="mb-custom-2 main-heading">
+      Trendy Footwear Collection
+      <br class="d-none d-md-block">
+      <p class="lead-custom para-muted font-subheading mb-custom-4 mt-custom-2 ">Step into style and comfort for every occasion.</p>
+    </h2>
+
+    <!-- CTA -->
+    <a href="#!" class="primary-btn">
+      See more
+    </a>
+
+    <!-- Cards -->
+    <div class="row g-4 mt-custom-5 ">
+      
+        
+        <div class="col-12 col-md-4">
+          <div class="program-card">
+            <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1765852549902-bd9c79d01afb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3NtZXRpYyUyMGRpc3BsYXl8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+            
+              <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+                Photo by 
+                <a 
+                  href="https://unsplash.com/@hoianphotographer?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Hoi An and Da Nang Photographer
+                </a> 
+                on 
+                <a 
+                  href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+
+            <div class="card-overlay">
+              <h3 class="card-title">Men&#39;s Casual Sneakers</h3>
+              <p class="card-desc font-body-sm mb-custom-0 ">Stylish and comfortable sneakers perfect for everyday wear and casual outings.</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="col-12 col-md-4">
+          <div class="program-card">
+            <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwY29sbGVjdGlvbnxlbnwwfHx8fDE3Njc2NDY0MjF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+            
+              <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+                Photo by 
+                <a 
+                  href="https://unsplash.com/@markuswinkler?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Markus Winkler
+                </a> 
+                on 
+                <a 
+                  href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+
+            <div class="card-overlay">
+              <h3 class="card-title">Women&#39;s Stylish Sandals</h3>
+              <p class="card-desc font-body-sm mb-custom-0 ">Chic sandals that blend comfort and elegance for any summer outing.</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="col-12 col-md-4">
+          <div class="program-card">
+            <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1643168343047-f1056f97e555?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoaWdoLWVuZCUyMHNraW5jYXJlJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzY3NjQ2NDIxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+            
+              <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+                Photo by 
+                <a 
+                  href="https://unsplash.com/@aleriosmtz?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Alejandra Ríos
+                </a> 
+                on 
+                <a 
+                  href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+
+            <div class="card-overlay">
+              <h3 class="card-title">Kids&#39; Fun Slippers</h3>
+              <p class="card-desc font-body-sm mb-custom-0 ">Colorful and cozy slippers designed for playful comfort at home.</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="col-12 col-md-4">
+          <div class="program-card">
+            <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1562505208-0b9bad881640?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzdHlsaXNoJTIwY2xvdGhpbmclMjByYWNrc3xlbnwwfHx8fDE3Njc2NDY0MjF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+            
+              <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+                Photo by 
+                <a 
+                  href="https://unsplash.com/@belart84?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Artem Beliaikin
+                </a> 
+                on 
+                <a 
+                  href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+
+            <div class="card-overlay">
+              <h3 class="card-title">Formal Dress Shoes</h3>
+              <p class="card-desc font-body-sm mb-custom-0 ">Elevate your formal look with our sleek and comfortable dress shoes.</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="col-12 col-md-4">
+          <div class="program-card">
+            <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1655062406432-8f5a8f8499ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob21lJTIwZGVjb3IlMjBmb3IlMjBiZWF1dHl8ZW58MHx8fHwxNzY3NjQ2NDIxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+            
+              <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+                Photo by 
+                <a 
+                  href="https://unsplash.com/@raspopovamarisha?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Raspopova Marina
+                </a> 
+                on 
+                <a 
+                  href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+
+            <div class="card-overlay">
+              <h3 class="card-title">Lightweight Running Shoes</h3>
+              <p class="card-desc font-body-sm mb-custom-0 ">Boost your performance with our lightweight and supportive running shoes.</p>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="col-12 col-md-4">
+          <div class="program-card">
+            <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1765852549902-bd9c79d01afb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3NtZXRpYyUyMGRpc3BsYXl8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+            
+              <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+                Photo by 
+                <a 
+                  href="https://unsplash.com/@hoianphotographer?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Hoi An and Da Nang Photographer
+                </a> 
+                on 
+                <a 
+                  href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+
+            <div class="card-overlay">
+              <h3 class="card-title">Comfortable Flip Flops</h3>
+              <p class="card-desc font-body-sm mb-custom-0 ">Relax and unwind with our easy-to-wear flip flops for casual days.</p>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+    :root{
+  --brand: var(--primary-colors);
+  --brand-tint: color-mix(in srgb, var(--brand) 15%, #fff);
+}
+
+.product-zigrow-section_5{
+  background: radial-gradient(
+              ellipse at 1% 5%,
+              var(--brand-tint) 0%,
+              #ffffff 35%);
+
+
+.program-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--box-radius);
+  min-height: 420px;
+  box-shadow: var(--shadow-section);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.program-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-section-hover);
+}
+.program-card .card-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform .45s ease;
+}
+.program-card:hover .card-img {
+  transform: scale(1.08) rotate(.5deg);
+}
+.program-card .card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.5rem 1.75rem;
+  background: linear-gradient(180deg,
+              rgba(0,0,0,0) 10%,
+              rgba(0,0,0,.55) 70%);
+  color: #fff;
+  transition: background .35s ease;
+}
+.program-card:hover .card-overlay {
+  background: linear-gradient(180deg,
+              rgba(0,0,0,0) 0%,
+              rgba(0,0,0,.65) 75%);
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  line-height: 1.35;
+  text-shadow: 0 2px 4px rgba(0,0,0,.4);
+}
+.card-desc {
+  line-height: 1.4;
+  opacity: .85;
+}
+@media (min-width: 1400px) {
+  .program-card { min-height: 500px; }
+}
+@media (max-width: 575.98px) {
+  .card-title { font-size: 1.15rem; }
+  .card-desc  { font-size: .85rem; }
+}
+}
+</style>     <section class="portfolio-zigrow-section_2 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">
+        Our Stylish Collection
+      </h2>
+    </div>
+
+    <div class="row justify-custom-center g-3">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1704208316515-a32f81e373ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Storage & Seating"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            <span>
+              Trendy Sneakers <br />
+              Daily Wear
+            </span>
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@yemi_w?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Yemi Wallington
+          </a>
+          on
+          <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1624819581070-7868475f038c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBlZGl0b3JpYWx8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Tables & Desks"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Elegant Heels <br />
+            Party Wear
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@aogpixels?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Olamide Gabriel
+          </a>
+          on
+      <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a>
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1632979676233-fa62116edc09?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsaWZlc3R5bGUlMjBzaG9vdHN8ZW58MHx8fHwxNzY3NjQ2NDIyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Lighting & Decor"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Casual Loafers <br />
+            Casual
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+           <a
+            href="https://unsplash.com/@joshduke10?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Josh Duke
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1627921522614-86d4b431bd21?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3RyeXxlbnwwfHx8fDE3Njc2NDY0MjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Office Accessories"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Formal Oxfords <br />
+            Formal
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+            <a
+            href="https://unsplash.com/@vimarco?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Vince Mariel Conlu
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+
+    .offer-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .offer-card img {
+      width: 100%;
+      height: auto;
+      /* display: block; */
+      transition: transform 0.3s ease;
+      aspect-ratio: 3/4;
+    }
+
+    /* On hover, zoom the image */
+    .offer-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Rounded shapes */
+    .rounded-top-only img {
+      border-top-left-radius: 50% 30%;
+      border-top-right-radius: 50% 30%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .rounded-bottom-only img {
+      border-bottom-left-radius: 50% 30%;
+      border-bottom-right-radius: 50% 30%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .offer-label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1.5rem 1.95rem;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+    }
+
+    /* Overlay background for bottom label */
+    .rounded-top-only .offer-label {
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    /* Overlay background for top label */
+    .rounded-bottom-only .offer-label {
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+    }
+  }
+</style>
+   <section class="testimonial-zigrow-section_1  section-padding" id="testimonials"  data-section="testimonials">
+  <div class="container">
+    <h2 class="text-custom-center  main-heading mb-custom-5">What Our Customers Say </h2>
+    <div class="row justify-custom-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-custom-4">
+        <div class="testimonial-card">
+          <div class="img-wrapper-center">
+            <img
+              src="https://i.postimg.cc/Kv4g4kN0/1.png"
+              alt="Client 1"
+            />
+          </div>
+          <h5 class="client-name">Rajesh Kumar</h5>
+          <p class="client-text">
+       FOOTZ MART offers the best shoes! Stylish, comfortable, and perfect for any occasion. Highly recommended!
+          </p>
+               <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-custom-4">
+        <div class="testimonial-card">
+          <div class="img-wrapper-center">
+            <img
+             src="https://i.postimg.cc/fWqV4WNm/10.png"
+              alt="Client 2"
+            />
+          </div>
+         <h5 class="client-name">Anita Sharma</h5>
+          <p class="client-text">
+       I love my new slippers from FOOTZ MART! They are so comfortable and look great. Will shop again!
+          </p>
+              <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-custom-4">
+        <div class="testimonial-card">
+          <div class="img-wrapper-center">
+            <img
+             src="https://i.postimg.cc/gk5Lhztm/2.png"
+              alt="Client 3"
+            />
+          </div>
+           <h5 class="client-name">Vikram Singh</h5>
+          <p class="client-text">
+       The quality of the shoes is outstanding! Fast delivery and excellent customer service make shopping a breeze.
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_1 {
+    background-color: #fff;
+    color: #222;
+  
+
+
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+border-radius: var(--box-radius);
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+
+  /* Smooth, elevated shadow */
+     box-shadow: var(--shadow-section);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  /* Slightly deeper shadow on hover */
+    box-shadow: var(--shadow-section-hover);
+}
+
+
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+   border-radius: var(--box-radius);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .client-text {
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .stars {
+    color: rgb(255, 196, 0); /* Custom star color (orange-ish), change as needed */
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .stars i {
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover .stars i {
+    transform: scale(1.2);
+  }}
+</style>
+    <section class="faq-zigrow-section_1 section-padding bg-custom-light" id="faq" data-section="faq">
+  <div class="container">
+    <div class="row align-custom-start">
+
+      <!-- Left Heading -->
+      <div class="col-lg-5 mb-custom-4 mb-md-0">
+        <h2 class="faq-heading">
+          <span>Frequently</span><br>
+          <span>asked questions</span>
+        </h2>
+        <hr class="faq-divider mt-custom-3" />
+      </div>
+
+      <!-- Right Questions -->
+      <div class="col-lg-7">
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>What types of footwear do you offer?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              We offer trendy shoes and comfortable slippers for men, women, and kids.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>How is the quality of your products?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Our products are made from high-quality materials ensuring durability and comfort.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>What payment methods do you accept?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              We accept easy and secure payment methods for your convenience.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Do you offer fast delivery?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Yes, we provide fast delivery to ensure you receive your order promptly.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Is there a quality guarantee?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Absolutely! We guarantee the best quality for all our footwear.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Can I return an item?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Yes, we have a return policy for items that meet our return criteria.
+            </p>
+
+          </div>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  .faq-zigrow-section_1 {
+    background-color: #fdfbf7;
+    color: #444;
+  
+
+  .faq-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--secondary-colors);
+    line-height: 1.3;
+    
+  }
+
+  .faq-divider {
+    border: 0;
+    height: 2px ;
+    background-color: #aaa;
+    width: 90%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-answer {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--para-muted);
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .faq-divider {
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+    }
+  }}
+</style>
+    <!-- 📮 Minimal Split Contact -->
+<section class="contact-zigrow-section_4 section-padding" id="contact" data-section="contact">
+  <div class="container-xl">
+    <div class="contact-grid overflow-hidden">
+      <div class="row g-0">
+        <!-- ◼︎ Info -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="info p-custom-5 h-custom-100">
+            <h2 class="main-heading mb-custom-4">Get in touch</h2>
+
+            <ul class="list-unstyled mb-custom-0 ">
+              <li>
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h6>Mailing address</h6>
+                  <p>Chickpete majestic near hindutan hotel footz shop</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <h6>Email</h6>
+                  <p>yal789288@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h6>Phone</h6>
+                  <p>9373363965</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ◼︎ Image -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="hero h-custom-100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /* ========== TOKENS ========== */
+  :root {
+    --stroke: rgba(0, 0, 0, .07);
+  }
+
+  /* ========== WRAPPER ========== */
+  .contact-zigrow-section_4 {
+    background: #fdfdfd;
+  
+
+  /* outer card */
+  .contact-zigrow-section_4 .contact-grid {
+    background: var(--bg, #ffffff);
+    box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+  }
+
+  /* list layout */
+  .contact-zigrow-section_4 .info ul li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-zigrow-section_4 .info .icon {
+    color: var(--primary-colors);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-zigrow-section_4 .info h6 {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    font-weight: 700;
+    color: var(--primary-colors);
+    margin-bottom: .25rem;
+  }
+
+  .contact-zigrow-section_4 .info p {
+    margin: 0;
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+  }
+
+  /* ========== HERO IMAGE ========== */
+  .hero {
+    background: url('https://i.postimg.cc/XJCcgx1h/3.png') center/cover no-repeat;
+    min-height: 420px;
+  }
+
+  @media (max-width: 767.98px) {
+    .contact-zigrow-section_4 .info {
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .contact-zigrow-section_4 .hero {
+      min-height: 300px;
+    }
+
+    .contact-zigrow-section_4 .info ul li {
+      justify-content: center;
+      text-align: left;
+    }
+  }}
+</style>
+  
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

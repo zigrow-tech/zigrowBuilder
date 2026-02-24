@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aotomobile - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #8338EC;
+      --secondary-colors: #000000;
+      --territory-colors: #FF006E;
+      --theme-3: #000000;
+      --theme-4: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #000000 !important;
+      font-family: Source Sans Pro;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Bebas Neue !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #000000;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      aotomobile
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #8338EC;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Bold -->
+
+<section class="hero-zigrow-section_14 text-white text-center" id="hero">
+  <div class="overlay"></div>
+
+  <div class="container z-2 position-relative">
+    <h1 class="hero-heading fw-bold mb-5 col-md-10 mx-auto">
+      Your trusted automobile partner
+    </h1>
+
+   
+  </div>
+   <div class="row justify-content-center gx-4 gy-3 stat-card-group">
+     <div class="col-10 col-sm-6 col-md-4">
+  <div class="stat-card d-flex align-items-center gap-3">
+    <div class="icon-wrap">
+      <i class="bi bi-person-check"></i>
+    </div>
+    <div>
+      <h2 class="stat-value mb-1">1200+</h2>
+      <p class="stat-label mb-0">Happy Customers</p>
+    </div>
+  </div>
+</div>
+     <div class="col-10 col-sm-6 col-md-4">
+  <div class="stat-card d-flex align-items-center gap-3">
+    <div class="icon-wrap">
+      <i class="bi bi-person-check"></i>
+    </div>
+    <div>
+      <h2 class="stat-value mb-1">500+</h2>
+      <p class="stat-label mb-0">Vehicles Sold</p>
+    </div>
+  </div>
+</div>
+     <div class="col-10 col-sm-6 col-md-4">
+  <div class="stat-card d-flex align-items-center gap-3">
+    <div class="icon-wrap">
+      <i class="bi bi-person-check"></i>
+    </div>
+    <div>
+      <h2 class="stat-value mb-1">300+</h2>
+      <p class="stat-label mb-0">Services Offered</p>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+   <span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@vicfurtuna?utm_source=zigrow&utm_medium=referral"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Victor Furtuna
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+
+
+</section>
+
+<style>
+  .hero-zigrow-section_14{
+  background: url('https://images.unsplash.com/photo-1618418721668-0d1f72aa4bab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXJzfGVufDB8fHx8MTc1ODU0NTU2NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center/cover;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-top: 100px;
+
+ .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.05));
+  z-index: 1;
+}
+
+ .container {
+  z-index: 2;
+  position: relative;
+}
+
+.hero-heading {
+  font-size: 5.8rem;
+  word-spacing: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 3;
+}
+
+/* ✅ Fixed Position at Bottom of Section */
+.stat-card-group {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  z-index: 3;
+}
+
+/* Card Styling */
+.stat-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+     border-radius: var(--box-radius);
+  padding: 20px 24px;
+  color: #fff;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.stat-card .icon-wrap {
+  font-size: 2.8rem;
+  color: white;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.stat-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: #e8e8e8;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .overlay{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+  }
+  .stat-card-group {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .stat-value{
+    font-size: 2rem;
+  }
+}}
+
+</style>   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 py-6" id="about">
+  <div class="container">
+    <div class="row g-xl-5 align-items-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1592891024301-bf7948cee673?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYXIlMjBzYWxlcyUyMHRlYW18ZW58MHx8fHwxNzU4NTQ1NTY0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Erik Mclean
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1618418721668-0d1f72aa4bab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXJzfGVufDB8fHx8MTc1ODU0NTU2NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@vicfurtuna?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Victor Furtuna
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1574023240744-64c47c8c0676?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZWFsZXJzaGlwfGVufDB8fHx8MTc1ODU0NTU2NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Erik Mclean
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1692133229539-97c25af179f4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhdXRvbW9iaWxlc3xlbnwwfHx8fDE3NTg1NDU1NjR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@brianwangenheim?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Brian Wangenheim
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <div class="label">Our Goals</div>
+          <h2 class="section-heading mb-4 main-heading">
+            About Aotomobile
+          </h2>
+          <p class=" para-muted mb-4 font-body">
+            Aotomobile has been a pioneer in the automobile industry, providing exceptional sales and services for centuries. Our commitment to quality and customer satisfaction is unmatched. We pride ourselves on our extensive knowledge and expertise in the automobile sector. Our team is dedicated to helping you find the perfect vehicle and providing top-notch services. Our team consists of highly trained professionals ready to assist you with all your automobile needs.
+          </p>
+
+          <ul class=" feature-bullets mb-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our team consists of highly trained professionals ready to assist you with all your automobile needs.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  We ensure that every vehicle meets our high standards of quality and performance before it reaches you.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Your satisfaction is our priority. We tailor our services to meet your unique needs and preferences.
+                </li>
+                
+                  </ul>
+
+                  <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ========== Services List (service-zigrow-section_11) ========== -->
+<section class="service-zigrow-section_11 py-6 " id="services">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center mb-4 mb-lg-5">
+      <h2 class="main-heading mb-2">Our Comprehensive Services</h2>
+      <p class="svc11-subtitle mb-0">Explore the wide range of services we offer to meet all your automobile needs.</p>
+    </div>
+    <!-- Rows (pure-CSS accordion with radios) -->
+    <div class="svc11-list">
+      
+      <!-- controller -->
+      <input class="svc11-radio" type="radio" name="svc11" id="svc11-0"  />
+      <!-- row -->
+      <label class="svc11-row" for="svc11-0">
+        <!-- index -->
+        <div class="svc11-idx">
+          <span>01</span>
+        </div>
+
+        <!-- content -->
+        <div class="svc11-content">
+          <h3 class="svc11-title">Sales Services</h3>
+
+          <!-- expanded body -->
+          <div class="svc11-body">
+            <p class="svc11-desc">We offer a diverse selection of vehicles for sale, ensuring you find the perfect match for your needs and preferences. Our team is here to guide you through every step of the process.</p>
+            <div class="svc11-tags">
+              <!-- demo tags (optional) -->
+
+
+            <div class="svc11-tags">
+  
+    <span class="svc11-tag">sales</span>
+  
+    <span class="svc11-tag">vehicles</span>
+  
+    <span class="svc11-tag">guidance</span>
+  
+</div>
+
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- action -->
+        <div class="svc11-action">
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc11-radio" type="radio" name="svc11" id="svc11-1" checked />
+      <!-- row -->
+      <label class="svc11-row" for="svc11-1">
+        <!-- index -->
+        <div class="svc11-idx">
+          <span>02</span>
+        </div>
+
+        <!-- content -->
+        <div class="svc11-content">
+          <h3 class="svc11-title">Maintenance Services</h3>
+
+          <!-- expanded body -->
+          <div class="svc11-body">
+            <p class="svc11-desc">Our maintenance services are designed to keep your vehicle in top condition. From routine check-ups to major repairs, our skilled technicians are here to help you.</p>
+            <div class="svc11-tags">
+              <!-- demo tags (optional) -->
+
+
+            <div class="svc11-tags">
+  
+    <span class="svc11-tag">maintenance</span>
+  
+    <span class="svc11-tag">repairs</span>
+  
+    <span class="svc11-tag">technicians</span>
+  
+</div>
+
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- action -->
+        <div class="svc11-action">
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc11-radio" type="radio" name="svc11" id="svc11-2"  />
+      <!-- row -->
+      <label class="svc11-row" for="svc11-2">
+        <!-- index -->
+        <div class="svc11-idx">
+          <span>03</span>
+        </div>
+
+        <!-- content -->
+        <div class="svc11-content">
+          <h3 class="svc11-title">Financing Options</h3>
+
+          <!-- expanded body -->
+          <div class="svc11-body">
+            <p class="svc11-desc">We provide flexible financing options to make your vehicle purchase easier. Our financial advisors will help you find the best plan that suits your budget.</p>
+            <div class="svc11-tags">
+              <!-- demo tags (optional) -->
+
+
+            <div class="svc11-tags">
+  
+    <span class="svc11-tag">financing</span>
+  
+    <span class="svc11-tag">budget</span>
+  
+    <span class="svc11-tag">advisors</span>
+  
+</div>
+
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- action -->
+        <div class="svc11-action">
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc11-radio" type="radio" name="svc11" id="svc11-3"  />
+      <!-- row -->
+      <label class="svc11-row" for="svc11-3">
+        <!-- index -->
+        <div class="svc11-idx">
+          <span>04</span>
+        </div>
+
+        <!-- content -->
+        <div class="svc11-content">
+          <h3 class="svc11-title">Insurance Assistance</h3>
+
+          <!-- expanded body -->
+          <div class="svc11-body">
+            <p class="svc11-desc">Navigating insurance can be challenging. We offer assistance in finding the right insurance coverage for your vehicle, ensuring peace of mind on the road.</p>
+            <div class="svc11-tags">
+              <!-- demo tags (optional) -->
+
+
+            <div class="svc11-tags">
+  
+    <span class="svc11-tag">insurance</span>
+  
+    <span class="svc11-tag">coverage</span>
+  
+    <span class="svc11-tag">assistance</span>
+  
+</div>
+
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- action -->
+        <div class="svc11-action">
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc11-radio" type="radio" name="svc11" id="svc11-4"  />
+      <!-- row -->
+      <label class="svc11-row" for="svc11-4">
+        <!-- index -->
+        <div class="svc11-idx">
+          <span>05</span>
+        </div>
+
+        <!-- content -->
+        <div class="svc11-content">
+          <h3 class="svc11-title">Trade-In Services</h3>
+
+          <!-- expanded body -->
+          <div class="svc11-body">
+            <p class="svc11-desc">Looking to upgrade? Our trade-in services allow you to exchange your old vehicle for a new one, making the transition smooth and beneficial.</p>
+            <div class="svc11-tags">
+              <!-- demo tags (optional) -->
+
+
+            <div class="svc11-tags">
+  
+    <span class="svc11-tag">trade-in</span>
+  
+    <span class="svc11-tag">upgrade</span>
+  
+    <span class="svc11-tag">smooth</span>
+  
+</div>
+
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- action -->
+        <div class="svc11-action">
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc11-radio" type="radio" name="svc11" id="svc11-5"  />
+      <!-- row -->
+      <label class="svc11-row" for="svc11-5">
+        <!-- index -->
+        <div class="svc11-idx">
+          <span>06</span>
+        </div>
+
+        <!-- content -->
+        <div class="svc11-content">
+          <h3 class="svc11-title">Emergency Services</h3>
+
+          <!-- expanded body -->
+          <div class="svc11-body">
+            <p class="svc11-desc">In case of emergencies, our team is ready to assist you 24/7. We provide roadside assistance and support to ensure your safety.</p>
+            <div class="svc11-tags">
+              <!-- demo tags (optional) -->
+
+
+            <div class="svc11-tags">
+  
+    <span class="svc11-tag">emergency</span>
+  
+    <span class="svc11-tag">roadside</span>
+  
+    <span class="svc11-tag">assistance</span>
+  
+</div>
+
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- action -->
+        <div class="svc11-action">
+          <i class="bi bi-arrow-up-right"></i>
+        </div>
+      </label>
+      
+    </div>
+
+    
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_11 (white theme, Bootstrap 5 friendly) ===== */
+  .service-zigrow-section_11 {
+    --svc11-bg: #ffffff;
+   
+    --svc11-border: #e5e7eb;
+    --svc11-soft: #f8fafc;
+    --svc11-ring: color-mix(in srgb, var(--primary-colors) 16%, transparent);
+    background: var(--svc11-bg);
+    color: var(--para-muted);
+  }
+
+
+  /* Header */
+  .service-zigrow-section_11 .svc11-heading {
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    font-size: clamp(1.8rem, 1.2rem + 2vw, 2.4rem);
+  }
+
+  .service-zigrow-section_11 .svc11-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--para-muted);
+    line-height: 1.7;
+    font-size: var(--fs-sub);
+  }
+
+  /* List wrapper */
+  .service-zigrow-section_11 .svc11-list {
+    border-top: 1px solid var(--svc11-border);
+  }
+
+  /* Radios kept off-screen to avoid scroll jump */
+  .service-zigrow-section_11 .svc11-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Row */
+  .service-zigrow-section_11 .svc11-row {
+    display: grid;
+    grid-template-columns: 72px 1fr 56px;
+    align-items: start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--svc11-border);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .service-zigrow-section_11 .svc11-row:hover {
+    background: var(--svc11-soft);
+  }
+
+  /* left index */
+  .service-zigrow-section_11 .svc11-idx span {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--svc11-muted);
+  }
+
+  /* middle content */
+  .service-zigrow-section_11 .svc11-title {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    font-size: var(--fs-sub);
+    color: var(--secondary-colors);
+    /* text-gray-900 */
+  }
+
+  .service-zigrow-section_11 .svc11-body {
+    display: none;
+    margin-top: 0.35rem;
+  }
+
+  .service-zigrow-section_11 .svc11-desc {
+    color: var(--para-muted);
+    margin: 0.35rem 0 0.8rem;
+    line-height:var(--lh-body);
+    max-width: 72ch;
+    font-size: var(--fs-body);
+  }
+
+  .service-zigrow-section_11 .svc11-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .service-zigrow-section_11 .svc11-tag {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
+    border-radius: var(--box-radius);
+    border: 1px solid var(--svc11-border);
+    background: #fff;
+    color: #334155;
+  }
+
+  /* right circular action */
+  .service-zigrow-section_11 .svc11-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #fafbfe;
+    color: var(--primary-colors);
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+      background 0.18s ease, color 0.18s ease;
+    box-shadow: 0 6px 16px var(--svc11-ring);
+  }
+
+  .service-zigrow-section_11 .svc11-row:hover .svc11-action {
+    transform: translateY(-2px);
+    background: var(--primary-colors);
+    color: #fff;
+  }
+
+
+
+  
+  .service-zigrow-section_11 .svc11-more-btn:hover {
+    transform: translateY(-2px);
+    background: color-mix(in srgb, var(--primary-colors) 18%, #ffffff);
+  }
+
+  /* ===== Active state (pure CSS via radio) ===== */
+   .service-zigrow-section_11 #svc11-0:checked + label .svc11-title {
+        color:#0f172a;
+      }
+
+      .service-zigrow-section_11 #svc11-0:checked + label .svc11-body {
+        display:block;
+      }
+
+      .service-zigrow-section_11 #svc11-0:checked + label .svc11-idx span {
+        color: var(--primary-colors);
+      }
+
+      .service-zigrow-section_11 #svc11-0:checked + label .svc11-action {
+        background: var(--primary-colors); color:#fff; transform:none;
+      }
+
+       .service-zigrow-section_11 #svc11-1:checked + label .svc11-title {
+        color:#0f172a;
+      }
+
+      .service-zigrow-section_11 #svc11-1:checked + label .svc11-body {
+        display:block;
+      }
+
+      .service-zigrow-section_11 #svc11-1:checked + label .svc11-idx span {
+        color: var(--primary-colors);
+      }
+
+      .service-zigrow-section_11 #svc11-1:checked + label .svc11-action {
+        background: var(--primary-colors); color:#fff; transform:none;
+      }
+
+       .service-zigrow-section_11 #svc11-2:checked + label .svc11-title {
+        color:#0f172a;
+      }
+
+      .service-zigrow-section_11 #svc11-2:checked + label .svc11-body {
+        display:block;
+      }
+
+      .service-zigrow-section_11 #svc11-2:checked + label .svc11-idx span {
+        color: var(--primary-colors);
+      }
+
+      .service-zigrow-section_11 #svc11-2:checked + label .svc11-action {
+        background: var(--primary-colors); color:#fff; transform:none;
+      }
+
+       .service-zigrow-section_11 #svc11-3:checked + label .svc11-title {
+        color:#0f172a;
+      }
+
+      .service-zigrow-section_11 #svc11-3:checked + label .svc11-body {
+        display:block;
+      }
+
+      .service-zigrow-section_11 #svc11-3:checked + label .svc11-idx span {
+        color: var(--primary-colors);
+      }
+
+      .service-zigrow-section_11 #svc11-3:checked + label .svc11-action {
+        background: var(--primary-colors); color:#fff; transform:none;
+      }
+
+       .service-zigrow-section_11 #svc11-4:checked + label .svc11-title {
+        color:#0f172a;
+      }
+
+      .service-zigrow-section_11 #svc11-4:checked + label .svc11-body {
+        display:block;
+      }
+
+      .service-zigrow-section_11 #svc11-4:checked + label .svc11-idx span {
+        color: var(--primary-colors);
+      }
+
+      .service-zigrow-section_11 #svc11-4:checked + label .svc11-action {
+        background: var(--primary-colors); color:#fff; transform:none;
+      }
+
+       .service-zigrow-section_11 #svc11-5:checked + label .svc11-title {
+        color:#0f172a;
+      }
+
+      .service-zigrow-section_11 #svc11-5:checked + label .svc11-body {
+        display:block;
+      }
+
+      .service-zigrow-section_11 #svc11-5:checked + label .svc11-idx span {
+        color: var(--primary-colors);
+      }
+
+      .service-zigrow-section_11 #svc11-5:checked + label .svc11-action {
+        background: var(--primary-colors); color:#fff; transform:none;
+      }
+
+      
+
+  /* Responsive */
+  @media (max-width: 575.98px) {
+    .service-zigrow-section_11 .svc11-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>        <section class="testimonial-zigrow-section_3 py-6" id="testimonials">
+  <div class="container">
+    <h2 class="text-center feedback-title mb-5">
+      Customer Feedback
+    </h2>
+
+    <!-- 1 col (xs) / 2 col (md) / 3 col (lg) with nice gaps -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+      
+        <div class="col">
+          <div class="feedback-card h-100">
+            <p>“ Aotomobile provided me with an exceptional car buying experience. Their team was knowledgeable and attentive, making the process smooth and enjoyable. ”</p>
+            <span>— John Doe</span>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="feedback-card h-100">
+            <p>“ The maintenance service I received was top-notch. My car runs better than ever, thanks to their skilled technicians and quality service. ”</p>
+            <span>— Jane Smith</span>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="feedback-card h-100">
+            <p>“ I appreciate the financing options offered by Aotomobile. They helped me find a plan that fit my budget perfectly. ”</p>
+            <span>— Emily Johnson</span>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="feedback-card h-100">
+            <p>“ The trade-in process was seamless. I got a great deal on my new car, and the staff was incredibly helpful. ”</p>
+            <span>— Michael Brown</span>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="feedback-card h-100">
+            <p>“ Their emergency services saved me during a breakdown. Quick response and professional help made all the difference. ”</p>
+            <span>— Sarah Davis</span>
+          </div>
+        </div>
+      
+        <div class="col">
+          <div class="feedback-card h-100">
+            <p>“ I highly recommend Aotomobile for anyone looking for quality vehicles and services. They truly care about their customers. ”</p>
+            <span>— David Wilson</span>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_3 {
+  background-color: var(--secondary-colors);
+  color: #2b2b2b;
+}
+
+.testimonial-zigrow-section_3 .feedback-title{
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.testimonial-zigrow-section_3 .feedback-card{
+  background-color:#fff;
+  padding:30px 25px;
+  border-radius:var(--box-radius);
+  box-shadow:var(--shadow-section);
+  transition:transform .3s ease, box-shadow .3s ease;
+  text-align:center;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.testimonial-zigrow-section_3 .feedback-card p{
+  font-size:var(--fs-body);
+  line-height:1.8;
+  margin-bottom:18px;
+  color:var(--para-muted);
+}
+
+.testimonial-zigrow-section_3 .feedback-card span{
+  font-weight:600;
+  font-size:0.95rem;
+  color:#111;
+}
+
+.testimonial-zigrow-section_3 .feedback-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-section-hover);
+  background-color:#fdfcfc;
+}
+
+</style>   <section class="pricing-zigrow-section_3 py-6" id="pricing">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <span class="badge bg-light border px-3 py-1 text-dark fw-medium mb-3 text-uppercase font-body">
+        Our Pricing 🪄
+      </span>
+      <h2 class="fw-bold display-6">Access Our Private Beta</h2>
+      <p class="para-muted font-subheading mt-2">
+
+        Great value for basic services. Perfect for those who need minimal support.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Free Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+          <h5 class="fw-semibold">Pay-as-you-go</h5>
+          <p class="para-muted font-body-sm mb-3">  Great value for basic services. Perfect for those who need minimal support.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹0</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+    
+            <li>
+              Basic maintenance services included
+            </li>
+            
+            <li>
+              Access to exclusive deals
+            </li>
+            
+            <li>
+              24/7 customer support available
+            </li>
+            
+            <li>
+              Free consultation on services
+            </li>
+            
+            <li>
+              Discounts on future purchases
+            </li>
+            
+            <li>
+              Monthly newsletter updates
+            </li>
+            
+            <li>
+              Access to online resources
+            </li>
+            
+            <li>
+              Priority booking for services
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby Plan (Highlighted) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card featured h-100 position-relative">
+          <div class="highlight-tag text-center fw-semibold font-body">
+            Our Recommendation ✨
+          </div>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h5 class="fw-semibold">Hobby</h5>
+          <p class="para-muted font-body-sm mb-3"> Ideal for regular users who need comprehensive support and services.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹19</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+            
+            <li>
+              All basic features included
+            </li>
+            
+            <li>
+              Extended maintenance services
+            </li>
+            
+            <li>
+              Personalized service recommendations
+            </li>
+            
+            <li>
+              Priority customer support
+            </li>
+            
+            <li>
+              Access to loyalty rewards
+            </li>
+            
+            <li>
+              Monthly vehicle health check
+            </li>
+            
+            <li>
+              Discounts on insurance plans
+            </li>
+            
+            <li>
+              Free roadside assistance
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-gem"></i></div>
+          <h5 class="fw-semibold">Premium</h5>
+          <p class="para-muted font-body-sm mb-3"> Best for frequent users needing extensive services and benefits.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹79</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+           
+            <li>
+              All features included
+            </li>
+            
+            <li>
+              Unlimited maintenance services
+            </li>
+            
+            <li>
+              Dedicated service advisor
+            </li>
+            
+            <li>
+              Exclusive access to events
+            </li>
+            
+            <li>
+              Free vehicle upgrades
+            </li>
+            
+            <li>
+              Comprehensive insurance assistance
+            </li>
+            
+            <li>
+              Emergency support included
+            </li>
+            
+            <li>
+              Monthly performance reports
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.pricing-zigrow-section_3 {
+  background: #fff;
+  color: black;
+
+.btn{
+ border-radius: var(--border-radius-btn);
+}
+/* ===== Card Base ===== */
+.plan-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+     border-radius: var(--box-radius);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+     box-shadow: var(--shadow-section);
+}
+.plan-card h5 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.plan-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.plan-card .price-label {
+  margin-top: 1rem;
+}
+.plan-card .features {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+.plan-card .features li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.plan-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== Featured Plan ===== */
+.featured {
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+     box-shadow: var(--shadow-section);
+}
+.highlight-tag {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: var(--box-radius);
+  border-top-right-radius: var(--box-radius);
+}
+
+/* ===== Buttons ===== */
+.plan-card .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+ border-radius: var(--border-radius-btn);
+  transition: all 0.25s ease;
+}
+.plan-card .btn:hover {
+  transform: translateY(-2px);
+  
+     box-shadow: var(--shadow-section-hover);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 575.98px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+  .plan-card .features {
+    font-size: 0.8rem;
+  }
+}}
+</style>
+     <section class="contact-zigrow-section_2 py-6" id="contact">
+  <div class="container">
+    <div class="row text-center mb-4 contact-info-boxes">
+      <div class="col-md-3 mb-4 contact-box fade-in-up">
+        <i class="bi bi-geo-alt-fill contact-icon"></i>
+        <h6 class="contact-title">Address</h6>
+        <p class="contact-text">123 Business St, City</p>
+      </div>
+      <div class="col-md-3 mb-4 contact-box fade-in-up delay-1">
+        <i class="bi bi-telephone-fill contact-icon"></i>
+        <h6 class="contact-title">Call Us</h6>
+        <p class="contact-text">+91 00000 00000</p>
+      </div>
+      <div class="col-md-3 mb-4 contact-box fade-in-up delay-2">
+        <i class="bi bi-envelope-fill contact-icon"></i>
+        <h6 class="contact-title">General Enquiries</h6>
+        <p class="contact-text">contact@example.com</p>
+      </div>
+      <div class="col-md-3 mb-4 contact-box fade-in-up delay-3">
+        <i class="bi bi-clock-fill contact-icon"></i>
+        <h6 class="contact-title">Our Timings</h6>
+        <p class="contact-text">Mon - Sun: 10:00 AM - 07:00 PM</p>
+      </div>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div class="map-wrapper fade-in-up delay-4">
+      <div class="position-relative">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.046059763201!2d77.64095771532417!3d12.9126393908928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b1a5c9ebd9%3A0x6f21b3c24ecfb7!2sHSR%20Layout%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1647084892854!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <a href="https://maps.google.com" target="_blank" class="btn primary-btn map-btn">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .contact-zigrow-section_2 {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .contact-zigrow-section_2 .contact-box {
+    padding: 20px;
+    transition: all 0.4s ease;
+  }
+
+  .contact-zigrow-section_2 .contact-box:hover {
+    transform: translateY(-5px);
+    background-color: #f9f9f9;
+    border-radius: var(--box-radius);
+  }
+
+  .contact-zigrow-section_2 .contact-icon {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-zigrow-section_2 .contact-box:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .contact-zigrow-section_2 .contact-title {
+    font-weight: 600;
+    margin-top: 10px;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-zigrow-section_2 .contact-text {
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+    margin-top: 5px;
+  }
+
+  .contact-zigrow-section_2 .map-wrapper {
+    border-radius: var(--box-radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-section);
+  }
+
+  .contact-zigrow-section_2 .map-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    border: none;
+    padding: 8px 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .contact-zigrow-section_2 .map-btn:hover {
+    opacity: 0.9;
+
+
+    transform: translateY(-2px);
+  }
+
+  /* Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards ease-in-out;
+  }
+
+  .fade-in-up.delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .fade-in-up.delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  .fade-in-up.delay-3 {
+    animation-delay: 0.6s;
+  }
+
+  .fade-in-up.delay-4 {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>   <footer class="py-6 footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h5 class="fw-bold link-title">aotomobile</h5>
+        <p class="subtext">Explore our extensive range of vehicles and services tailored to meet your needs, ensuring satisfaction and quality at every turn.</p>
+      </div>
+
+      <div class="col-md-1"></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="fw-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-bold link-title">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-center mt-3 mb-0" style="color: #2a2a2a;">
+      &copy; 2025 aotomobile. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) !important;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

@@ -1,0 +1,2511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astrology and puja pandit  - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #2a324a;
+      --border-radius-btn: 28px 36px 12px 24px / 18px 28px 12px 24px;
+      --box-radius: 5% 8% 5% 8% / 8% 5% 8% 5%;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FF914D;
+      --secondary-colors: #2B2B2B;
+      --territory-colors: #FF4D6D;
+      --theme-3: #fff;
+      --theme-4: #000000;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 8px 18px rgba(17,24,39,.12);
+      --btn-box-shadow-hover: 0 12px 26px rgba(17,24,39,.16);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,.05), 0 8px 18px rgba(17,24,39,.10), 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent), 0 0 48px 12px color-mix(in srgb, var(--tertiary-color) 22%, transparent);
+      --shadow-section-hover: 0 2px 2px rgba(17,24,39,.06), 0 12px 26px rgba(17,24,39,.12), 0 0 0 8px color-mix(in srgb, var(--primary-colors) 22%, transparent), 0 0 64px 16px color-mix(in srgb, var(--tertiary-color) 28%, transparent);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 18px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 20px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #2B2B2B !important;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Poppins !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #2B2B2B;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      Astrology and puja pandit 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">Faq</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #FF914D;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Creative -->
+
+<section
+  class="hero-zigrow-section_20 position-relative text-white py-6"
+  id="hero"
+>
+  <div class="container position-relative z-2">
+    <!-- Headline -->
+    <h1 class="section-heading hero-heading-20 fw-bold lh-sm mb-4">
+      Your future awaits!
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext col-md-7">We provide expert astrology consultations and spiritual guidance for a fulfilling life. Explore our premium products and services tailored just for you.</p>
+
+    <!-- CTA Row -->
+    <div class="d-flex align-items-center gap-4 mt-4 flex-wrap">
+      <a href="#" class="primary-btn d-inline-flex align-items-center">
+        Learn more <span class="ms-2 arrow">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating image grid -->
+  <div class="floating-images">
+    <div class="img-box img-1 position-relative">
+      <img src="https://images.unsplash.com/photo-1709715357520-5e1047a2b691?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBtZWV0aW5nfGVufDB8fHx8MTc2MDg2Mzc3OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Team Work" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@seogalaxy?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SEO Galaxy
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+
+    <div class="img-box img-2 position-relative">
+      <img src="https://images.unsplash.com/photo-1729371568794-fb9c66ab09cf?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWxzJTIwd29ya2luZyUyMHRvZ2V0aGVyfGVufDB8fHx8MTc2MDg2Mzc3OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Consulting" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@lreverchuk?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Lyubomyr (Lou) Reverchuk
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+
+    <div class="img-box img-3 position-relative">
+      <img src="https://images.unsplash.com/photo-1630283017802-785b7aff9aac?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MHx8fHwxNzYwODYzNzc5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Workshop" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@lanceanderson?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Lance Anderson
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+
+    <div class="img-box img-4 position-relative">
+      <img src="https://images.unsplash.com/photo-1758518729908-d4220a678d81?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBjb25zdWx0YXRpb258ZW58MHx8fHwxNzYwODYzNzc5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Office" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@silverkblack?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Vitaly Gariev
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <!-- Dashed Line SVG -->
+  <svg class="hero-path" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path
+      class="hero-path-line"
+      d="M0,220 
+       C200,160 300,280 500,220 
+       S800,160 1000,240 
+       S1200,300 1440,220"
+    />
+  </svg>
+</section>
+
+<style>
+  .hero-zigrow-section_20 {
+    background: #000;
+    min-height: 110vh;
+    position: relative;
+.hero-heading-20{
+  text-transform: capitalize;
+}
+    .world-class-tag {
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      transform: rotate(-10deg);
+      border-radius: 4px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-heading {
+      font-size: 7rem;
+      width: 100%;
+      display: block;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-subtext {
+      font-size: 1.4rem;
+      max-width: 650px;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 2;
+    }
+
+    .arrow {
+      font-size: 1.2rem;
+    }
+
+    .avatar-group {
+      display: flex;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      margin-left: -10px;
+      object-fit: cover;
+    }
+
+    .avatar:first-child {
+      margin-left: 0;
+    }
+
+    /* Floating images */
+    .floating-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      position: absolute;
+      bottom: 10%;
+      right: 180px;
+      z-index: 2;
+      width: 450px;
+    }
+
+    /* Image box styles */
+    .img-box {
+      width: 220px;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Custom positioning to stagger layout */
+    .img-1 {
+      border-top-left-radius: 30px;
+    }
+
+    .img-2 {
+      border-top-right-radius: 30px;
+    }
+
+    .img-3 {
+      /* margin-top: -60px; Move slightly upward */
+      border-bottom-left-radius: 30px;
+    }
+
+    .img-4 {
+      /* margin-top: -30px; Move slightly downward */
+      border-bottom-right-radius: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .floating-images {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 2rem;
+      }
+
+      .img-box {
+        width: 170px;
+        height: 170px;
+      }
+
+      .img-3 {
+        margin-top: 0;
+      }
+
+      .img-4 {
+        margin-top: 0;
+      }
+    }
+
+    /* Dashed path */
+    .hero-path {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      transform: translateY(-50%) skewY(14deg);
+      width: 100%;
+      height: 400px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-path-line {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.5);
+      stroke-width: 2;
+      stroke-dasharray: 10 12;
+      stroke-linecap: round;
+      animation: dashwave 12s linear infinite;
+    }
+
+    @keyframes dashwave {
+      from {
+        stroke-dashoffset: 0;
+      }
+      to {
+        stroke-dashoffset: -1200;
+      }
+    }
+
+    /* Circle CTA */
+    .circle-cta {
+      position: absolute;
+      top: 120px;
+      right: 80px;
+      width: 100px;
+      height: 100px;
+      background: #f18664;
+      border-radius: 50%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .circle-text {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      font-size: 0.6rem;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      animation: spin 10s linear infinite;
+    }
+
+    .circle-arrow {
+      background: #fcd53f;
+      color: black;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      padding: 3rem 1rem;
+
+      .section-heading {
+        font-size: 2.2rem;
+      }
+
+      .hero-subtext {
+        font-size: 0.9rem;
+      }
+
+      .floating-images {
+        position: static;
+        width: 100%;
+        margin-top: 2rem;
+        justify-content: center;
+      }
+
+      .circle-cta {
+        top: auto;
+        bottom: 100px;
+        right: 20px;
+      }
+
+      .world-class-tag {
+        top: 20px;
+        left: 20px;
+      }
+
+      .hero-path {
+        display: none;
+      }
+    }
+  }
+</style>
+   <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image  position-relative">
+  <img src="https://images.unsplash.com/photo-1758696654710-bd61aa76c8a7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzZXJ2aWNlcyUyMG9mZmljZXxlbnwwfHx8fDE3NjA4NjM3Nzh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@brother_yoon?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Brother Yoon
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-3">
+            About Our Services
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted font-body mb-4">
+            Astrology and Puja Pandit is dedicated to guiding individuals through life&#39;s challenges using astrology and spiritual practices. Our expert astrologers provide personalized consultations.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Expert Guidance</h6>
+                <p class="mb-0 para-muted font-body">Our experienced astrologers provide insights that help you navigate life&#39;s complexities with confidence and clarity.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Spiritual Products</h6>
+                <p class="mb-0 para-muted font-body">We offer a selection of premium astrology and spiritual products designed to enhance your spiritual journey.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Personalized Services</h6>
+                <p class="mb-0 para-muted font-body">Each service is tailored to meet your unique needs, ensuring a personalized experience that resonates with you.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Community Focused</h6>
+                <p class="mb-0 para-muted font-body">We believe in building a supportive community that fosters growth, understanding, and spiritual development.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: var(--box-radius) ;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.4s ease;
+}
+.survey-image:hover{
+  box-shadow: var(--shadow-section-hover);
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #2B2B2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: "✓";
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>   <!-- ========== Services List (service-zigrow-section_12) ========== -->
+<section class="service-zigrow-section_12 py-6" id="services">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-4 mb-lg-5">
+      <h2 class="main-heading mb-2">
+        <span class="d-block "
+          >Our Astrology Services</span
+        >
+      </h2>
+      <p class=" svc12-sub mx-auto mb-0">
+        Explore our range of professional astrology services tailored for you.
+      </p>
+    </div>
+    <!-- Rows (click to feature) -->
+    <div class="svc12-list">
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-0" checked />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-0">
+        <!-- number -->
+        <div class="svc12-no">01</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Astrology Consultation</h3>
+          <p class="svc12-item-desc mb-0">Get personalized astrology consultations that provide insights into your life path, relationships, and future opportunities. Our expert astrologers are here to guide you.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo">
+          <img
+            src="https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjA4NjM3Nzl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Astrology Consultation"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-1"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-1">
+        <!-- number -->
+        <div class="svc12-no">02</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Puja Path</h3>
+          <p class="svc12-item-desc mb-0">Experience the transformative power of puja path. We conduct rituals that help in spiritual cleansing and attracting positive energies into your life.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo">
+          <img
+            src="https://images.unsplash.com/photo-1758518727613-00192aed759b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBhZHZpc29yeSUyMG1lZXRpbmd8ZW58MHx8fHwxNzYwODYzNzc5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Puja Path"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-2"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-2">
+        <!-- number -->
+        <div class="svc12-no">03</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Anushthan</h3>
+          <p class="svc12-item-desc mb-0">Participate in anushthan ceremonies that are designed to fulfill your spiritual needs and enhance your life&#39;s purpose through dedicated rituals.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo">
+          <img
+            src="https://images.unsplash.com/photo-1620479589423-0abc990883cb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBzdHJhdGVneSUyMHNlc3Npb258ZW58MHx8fHwxNzYwODYzNzc5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Anushthan"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-3"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-3">
+        <!-- number -->
+        <div class="svc12-no">04</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Astrology Products</h3>
+          <p class="svc12-item-desc mb-0">Browse our premium range of astrology products, including gemstones, yantras, and spiritual books that support your journey.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo">
+          <img
+            src="https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxsZWdhbCUyMHNlcnZpY2VzJTIwY29uc3VsdGF0aW9ufGVufDB8fHx8MTc2MDg2Mzc3OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Astrology Products"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-4"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-4">
+        <!-- number -->
+        <div class="svc12-no">05</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Workshops</h3>
+          <p class="svc12-item-desc mb-0">Join our workshops to learn about astrology, spirituality, and personal development. Enhance your skills and knowledge in a supportive environment.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo">
+          <img
+            src="https://images.unsplash.com/photo-1760420940953-3958ad9f6287?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wbWVudCUyMHdvcmtzaG9wc3xlbnwwfHx8fDE3NjA4NjM3Nzl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Workshops"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-5"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-5">
+        <!-- number -->
+        <div class="svc12-no">06</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Personalized Rituals</h3>
+          <p class="svc12-item-desc mb-0">We offer customized rituals based on your specific needs and desires, ensuring a unique and meaningful experience.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo">
+          <img
+            src="https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjA4NjM3Nzl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Personalized Rituals"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+    </div>
+
+    
+  </div>
+</section>
+<style>
+  /* ===== service-zigrow-section_12 (scoped) ===== */
+  .service-zigrow-section_12 {
+    background: #fff;
+    color: #0f0f0f;
+  }
+  .service-zigrow-section_12 .svc12-title {
+    line-height: 1.1;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.6rem);
+  }
+  .service-zigrow-section_12 .svc12-title-italic {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .service-zigrow-section_12 .svc12-sub {
+    max-width: 820px;
+    color: var(--para-muted);
+    line-height: var(--lh-body);
+    font-size: var(--fs-sub);
+  } /* List wrapper */
+  .service-zigrow-section_12 .svc12-list {
+    margin-top: 1.25rem;
+    position: relative;
+  } /* Radios off-screen */
+  .service-zigrow-section_12 .svc12-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  } /* Row */
+  .service-zigrow-section_12 .svc12-item {
+    position: relative;
+    display: flex;
+    align-items: xcenter;
+    gap: 1.25rem;
+    padding: 24px 28px;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: var(--box-radius);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    background: #fff;
+    color: var(--secondary-colors);
+
+    @media (max-width: 435px) {
+      flex-direction: column;
+    }
+  }
+  .service-zigrow-section_12 .svc12-item:first-of-type {
+    margin-top: 0.25rem;
+  }
+  .service-zigrow-section_12 .svc12-item:hover {
+    transform: translateY(-2px);
+  } /* Number */
+  .service-zigrow-section_12 .svc12-no {
+    min-width: 56px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #9aa0a6;
+    font-size: 1.05rem;
+  } /* Main content */
+  .service-zigrow-section_12 .svc12-main {
+    flex: 1 1 auto;
+    max-width: 820px;
+  }
+  .service-zigrow-section_12 .svc12-item-title {
+    margin: 0 0 0.35rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    font-size: clamp(1.15rem, 1.04rem + 0.6vw, 1.6rem);
+    text-transform: capitalize;
+  }
+  .service-zigrow-section_12 .svc12-item-desc {
+    color: var(--para-muted);
+    line-height: 1.75;
+    font-size: var(--fs-body);
+  } /* Arrow circle */
+  .service-zigrow-section_12 .svc12-go {
+    margin-left: auto;
+
+    @media (max-width: 435px) {
+        margin: auto;
+    }
+  }
+  .service-zigrow-section_12 .svc12-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 2px solid #1d1f23;
+    color: #1d1f23;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .service-zigrow-section_12 .svc12-circle .bi {
+    font-size: 1.25rem;
+  }
+  .service-zigrow-section_12 .svc12-item:hover .svc12-circle {
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_12 .svc12-item:not(.is-active):hover .svc12-circle {
+    background: #0f0f0f;
+    color: #fff;
+    border-color: #0f0f0f;
+  } /* Floating image (hidden by default) */
+  .service-zigrow-section_12 .svc12-photo {
+    position: absolute;
+    right: 110px;
+    top: -22px;
+    width: 180px;
+    height: 130px;
+  border-radius: var(--box-radius);
+    overflow: hidden;
+    transform: rotate(-6deg);
+    box-shadow: var(--shadow-section-hover);
+    display: none;
+  }
+  .service-zigrow-section_12 .svc12-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  
+  /* 1) image taps ko block na kare */
+.service-zigrow-section_12 .svc12-photo {
+  pointer-events: none;          /* image par tap/click pass-through */
+}
+
+/* 2) kabhi-kabhi absolute image se horizontal scroll aata hai */
+.service-zigrow-section_12 .container {
+  overflow-x: clip;              /* or hidden; clip is safer for iOS bounce */
+}
+
+/* 3) predictable sizing (CLS kam) */
+.service-zigrow-section_12 .svc12-photo {
+  aspect-ratio: 18 / 13;         /* 180x130 ka ratio maintain */
+}
+.service-zigrow-section_12 .svc12-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4) tablet range (<=1200) par image ko zyada right na dhakelna */
+@media (max-width: 1199.98px) {
+  .service-zigrow-section_12 .svc12-photo {
+    right: 48px;                 /* pehle 84px tha; thoda safe margin */
+  }
+}
+
+/* 5) mobile par waise bhi hide hi rakhna (aapke code mein already hai) */
+@media (max-width: 991.98px) {
+  .service-zigrow-section_12 .svc12-photo {
+    display: none !important;    /* ensure specificity wins */
+  }
+}
+/* ====== ACTIVE STATE (when its radio is checked) ====== */
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item {
+    background: #0f0f0f;
+    color: #fff;
+    border: none;
+     box-shadow: var(--shadow-section);
+
+    margin: 18px 0;
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-no {
+    color: #dfe3ea;
+  }
+  .service-zigrow-section_12
+    .svc12-radio:checked
+    + .svc12-item
+    .svc12-item-desc {
+    color: #cfd3da;
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-circle {
+    background: #fff;
+    border-color: #fff;
+    color: #0f0f0f;
+     box-shadow: var(--shadow-section);
+
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-photo {
+    display: block;
+  } /* Divider line after featured */
+  .service-zigrow-section_12
+    .svc12-radio:checked
+    + .svc12-item
+    + .svc12-radio
+    + .svc12-item {
+    border-top: 1px solid #eee;
+  } /* CTA */
+
+</style>
+    <!-- ✅ Certified Excellence Section -->
+<section class="product-zigrow-section_3 py-6" id="products">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-7">
+        <p class="sub-heading"> Products We Offer</p>
+        <h2 class=" lh-sm mb-3 main-heading" ">Explore Our Astrology Products</h2>
+      </div>
+      <div class=" col-md-5 text-md-end">
+          <p class="para-muted font-body-sm mb-2">
+            Premium spiritual products for your journey. <br>
+              Discover our collection of authentic gemstones that enhance your energy and bring positive vibrations.
+          </p>
+          <div class="link-group">
+            <a href="#" class="link-red ms-4">
+              View More <span>&rarr;</span>
+            </a>
+          </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card -->
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1728044849321-4cbffc50cc1d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNvZnR3YXJlJTIwc29sdXRpb25zfGVufDB8fHx8MTc2MDg2Mzc4MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@sumup?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  SumUp
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title ">
+                    Gemstones
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <!-- Repeat cards with different content -->
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1735052709801-a50f077dec7c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzZXJ2aWNlcyUyMHBhY2thZ2VzfGVufDB8fHx8MTc2MDg2Mzc4MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@ikshanaproductions?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  iKshana Productions
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Yantras
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1696452941955-0708c9ede972?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25zdWx0aW5nJTIwcHJvZHVjdHMlMjBkaXNwbGF5fGVufDB8fHx8MTc2MDg2Mzc4MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@santesson89?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Andrea De Santis
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Spiritual Books
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwc2VydmljZSUyMG9mZmVyaW5nc3xlbnwwfHx8fDE3NjA4NjM3ODB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Erik Mclean
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Puja Kits
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+          
+            <img src="https://images.unsplash.com/photo-1733503711060-1df31554390f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBidXNpbmVzcyUyMHRvb2xzfGVufDB8fHx8MTc2MDg2Mzc4MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@sumup" target="_blank">
+                  SumUp
+                </a>
+                on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+              </span>
+              
+                <div class="service-info">
+                  <span class="service-title">
+                    Meditation Tools
+                  </span>
+                  <div class="icon-circle bg-dark text-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+  .product-zigrow-section_3 {
+    background-color: #fefefe;
+
+    .sub-heading {
+      font-size: 0.9rem;
+      color: var(--para-muted);
+      letter-spacing: .03em;
+      margin-bottom: 0.3rem;
+    }
+
+    .link-group a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #FF914D;
+      transition: all 0.3s ease;
+    }
+
+    .link-group a:hover {
+      text-decoration: underline;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+       border-radius: var(--box-radius);
+      background: #000;
+      transition: transform .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-img {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.8);
+      transition: filter .3s ease, transform .3s ease;
+    }
+
+    .service-card:hover .service-img {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.05);
+    }
+
+    .service-card:hover {
+      .service-title {
+        color: #fff;
+      }
+
+      .icon-circle {
+        background: #FF914D;
+      }
+    }
+
+    .service-info {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      /* font-size: 0.95rem; */
+       font-size: var(--fs-body);
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .icon-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow {
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+
+    /* Responsive col fix for 5 cards */
+    @media (min-width: 992px) {
+      .col-lg-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+      }
+    }
+  }
+</style>   <section class="why-choose-section whyChooseUs-zigrow-section_2"id="whyChooseUs">
+  <div class="container">
+    <div class="text-center col-md-8 m-auto">
+      <div class="section-tag">★ Why Choose Us</div>
+      <h2 class="section-title main-heading">Why Choose Us</h2>
+      <p class="section-desc">
+        Your trusted partner in spiritual growth.<br>
+      </p>
+    </div>
+
+    <div class="row align-items-center mt-5 gx-5">
+      <div class="col-md-10 col-lg-6 mx-auto mb-lg-0 mb-5">
+        <div class="image-box">
+         
+<div class="image-box position-relative">
+  <img src="https://images.unsplash.com/photo-1729371568794-fb9c66ab09cf?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWxzJTIwd29ya2luZyUyMHRvZ2V0aGVyfGVufDB8fHx8MTc2MDg2Mzc3OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Happy Collaboration" class="img-fluid w-100">
+
+  
+    <span class="img-credit">
+      Photo by
+    <a 
+        href="https://unsplash.com/@lreverchuk?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Lyubomyr (Lou) Reverchuk
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+        </div>
+      </div>
+
+      <div class="col-md-10 col-lg-6 m-auto">
+        <div class="text-start">
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi-star me-2 "></i> Experienced Astrologers</h5>
+              <p class="mb-0 section-text">Our team consists of highly skilled astrologers with years of experience in providing accurate readings and guidance.</p>
+            </div>
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi-gem me-2 "></i> Quality Products</h5>
+              <p class="mb-0 section-text">We offer only the best quality astrology and spiritual products to ensure you receive the utmost benefit.</p>
+            </div>
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi-person me-2 "></i> Personalized Services</h5>
+              <p class="mb-0 section-text">Every service is tailored to meet your unique needs, ensuring a meaningful and impactful experience.</p>
+            </div>
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi-people me-2 "></i> Community Support</h5>
+              <p class="mb-0 section-text">We foster a supportive community where individuals can share their experiences and grow together spiritually.</p>
+            </div>
+          
+            <div class="why-point mb-4">
+              <h5 class="fw-semibold mb-1"><i class="bi bi-heart me-2 "></i> Holistic Approach</h5>
+              <p class="mb-0 section-text">Our holistic approach combines astrology, spirituality, and personal development for comprehensive guidance.</p>
+            </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+
+
+.whyChooseUs-zigrow-section_2 {
+  padding: 80px 20px;
+  background: #fff;
+ 
+  /* margin: 50px auto; */
+  /* max-width: 1200px; */
+  /* box-shadow: var(--shadow-section); */
+
+
+.section-tag {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF914D;
+  background: #eff2f7;
+  display: inline-block;
+  padding: 6px 14px;
+border-radius: var(--box-radius);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+   color: var(--para-muted);
+  font-size: var(--fs-sub);
+  margin-bottom: 30px;
+}
+
+.image-box {
+ border-radius: var(--box-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  aspect-ratio: 2/2;
+}
+
+.image-box:hover {
+  transform: scale(1.015);
+}
+
+.section-text {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  line-height: 1.7;
+}
+
+.why-point h5 {
+  color: #222;
+  font-size: 1.05rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .section-desc, .section-text, .why-point h5 {
+    text-align: center;
+  }
+
+  .btn-custom {
+    display: block;
+    margin: 20px auto 0;
+  }
+  }}
+
+</style>    <section class="portfolio-zigrow-section_1 py-6" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title main-heading">Our Portfolio</h2>
+      <p class="section-subtitle">Learning Experience</p>
+    </div>
+
+    
+
+    <div class="row g-4">
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://images.unsplash.com/photo-1712903911017-7c10a3c4b3e5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzdWNjZXNzZnVsJTIwcHJvamVjdHMlMjBkaXNwbGF5fGVufDB8fHx8MTc2MDg2Mzc4MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Astrology Workshop" />
+            <div class="area-name">Astrology Workshop</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@walls_io?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Walls.io</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://via.placeholder.com/800x400?text=Image+Unavailable" alt="Puja Ceremony" />
+            <div class="area-name">Puja Ceremony</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@unknown?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Unknown</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://images.unsplash.com/photo-1740313498441-68da0e01df37?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwzfHxjbGllbnQlMjBzdWNjZXNzJTIwc3Rvcmllc3xlbnwwfHx8fDE3NjA4NjM3ODB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Anushthan Ritual" />
+            <div class="area-name">Anushthan Ritual</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@markuswinkler?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Markus Winkler</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://images.unsplash.com/photo-1743385779313-ac03bb0f997b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2plY3QlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzYwODYzNzgwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Spiritual Retreat" />
+            <div class="area-name">Spiritual Retreat</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@kellysikkema?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Kelly Sikkema</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://images.unsplash.com/photo-1758518731049-84eef34d8ba2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhY2NvbXBsaXNobWVudHN8ZW58MHx8fHwxNzYwODYzNzgwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Astrology Fair" />
+            <div class="area-name">Astrology Fair</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@silverkblack?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Vitaly Gariev</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://images.unsplash.com/photo-1712903911017-7c10a3c4b3e5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzdWNjZXNzZnVsJTIwcHJvamVjdHMlMjBkaXNwbGF5fGVufDB8fHx8MTc2MDg2Mzc4MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Meditation Session" />
+            <div class="area-name">Meditation Session</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@walls_io?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Walls.io</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://via.placeholder.com/800x400?text=Image+Unavailable" alt="Gemstone Exhibition" />
+            <div class="area-name">Gemstone Exhibition</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@unknown?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Unknown</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative">
+            <img src="https://images.unsplash.com/photo-1740313498441-68da0e01df37?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwzfHxjbGllbnQlMjBzdWNjZXNzJTIwc3Rvcmllc3xlbnwwfHx8fDE3NjA4NjM3ODB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Spiritual Talk" />
+            <div class="area-name">Spiritual Talk</div>
+
+            
+              <div class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@markuswinkler?utm_source=zigrow&utm_medium=referral"
+                   target="_blank" rel="noopener noreferrer">Markus Winkler</a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </div>
+            
+          </div>
+        </div>
+      
+    </div>
+
+    
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  }
+
+  .section-subtitle {
+    color: var(--lead-color-mute);
+    font-size: var(--fs-sub);
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }
+</style>
+   <!-- ▰ Client Testimonial Showcase -->
+<section class="testimonial-zigrow-section_6 py-6"id="testimonials">
+  <div class="container">
+
+    <!-- top heading -->
+    <div class="row g-4 align-items-stretch">
+
+      <!-- ◼︎ Left Visual Panel -->
+      <div class="col-lg-6">
+        <div class="left-panel h-100 d-flex flex-column justify-content-between">
+
+          <div class="left-heading">
+            <h2 class="mb-4 main-heading">
+              Client Testimonials<br>
+              <small class="fw-normal para-muted">Hear from our satisfied clients who transformed their lives.</small>
+              <span> ♥</span>
+            </h2>
+
+            <div class="testimonial-img ">
+              <img  src="https://i.postimg.cc/mDsh0w2K/1.png" alt="Client" class="img-fluid rounded-4 " />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ◼︎ Right Testimonial Cards -->
+      <div class="col-lg-6">
+        <div class="d-flex flex-column h-100 justify-content-between gap-4">
+
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <p class="quote">“The astrology consultation I received was incredibly insightful. It helped me understand my life&#39;s path and make better decisions. Highly recommend!”</p>
+
+            <div class="author d-flex align-items-center mt-3">
+              <img  src="https://i.postimg.cc/Kv4g4kN0/1.png" alt="Aditi Sharma" class="author-img">
+              <div class="ms-2">
+                <h6 class="mb-0">Aditi Sharma</h6>
+                <small>Satisfied Client</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★☆
+            </div>
+
+            <p class="quote">“The puja path conducted by the team brought peace and positivity into my home. I felt a significant change in my life after the rituals.”</p>
+
+            <div class="author d-flex align-items-center mt-3">
+              <img  src="https://i.postimg.cc/fWqV4WNm/10.png" alt="Rajesh Kumar" class="author-img">
+              <div class="ms-2">
+                <h6 class="mb-0">Rajesh Kumar</h6>
+                <small>Happy Customer</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <p class="quote">“I purchased astrology products from their shop, and they are of premium quality. They have truly enhanced my spiritual journey.”</p>
+
+            <div class="author d-flex align-items-center mt-3">
+              <img  src="https://i.postimg.cc/gk5Lhztm/2.png" alt="Sneha Verma" class="author-img">
+              <div class="ms-2">
+                <h6 class="mb-0">Sneha Verma</h6>
+                <small>Regular Buyer</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+</section>
+
+
+<style>
+/* ▰ Base Layout */
+.testimonial-zigrow-section_6 {
+  background-color: #f7f5f5;
+  color: var(--para-muted);
+
+.left-panel h2 {
+  /* font-size: clamp(1.6rem, 2.4vw, 2.5rem); */
+  font-weight: 600;
+  line-height: 1.3;
+}
+.left-panel h2 span {
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: var(--para-muted);
+}
+.testimonial-img img {
+  border-radius: var(--box-radius);
+  object-fit: cover;
+   box-shadow: var(--shadow-section);
+}
+
+
+/* ▰ Testimonial Cards */
+.testimonial-card {
+  border-radius: var(--box-radius);
+  padding: 1.5rem;
+  position: relative;
+   box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+}
+.bg-green {
+  background-color: var(--primary-colors);
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+  color: #111;
+}
+.rating {
+  font-size: 1.1rem;
+  color: #ffcc33;
+}
+.quote {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+.author-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.arrow-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #f3f3f3;
+  color: var(--secondary-colors);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.25s ease;
+}
+
+.testimonial-card:hover{
+background-color: var(--primary-colors);
+  color: #fff;
+}
+.testimonial-card:hover .arrow-btn {
+  background: #111;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ▰ CTA Box */
+.cta-box {
+  background-color: #759472;
+  color: #fff;
+  padding: 1.5rem 2rem;
+     border-radius: var(--box-radius);
+
+  margin-top: 2rem;
+}}
+
+/* make columns equal height */
+.testimonial-zigrow-section_6 .row.align-items-stretch {
+  align-items: stretch !important;
+}
+
+/* left column structure */
+.testimonial-zigrow-section_6 .left-panel{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* heading + image occupy full height */
+.testimonial-zigrow-section_6 .left-heading{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* image wrapper grows to fill remaining space so bottoms match */
+.testimonial-zigrow-section_6 .left-heading .testimonial-img{
+  margin-top: auto;          /* push image to bottom */
+  flex: 1 1 auto;            /* take all leftover */
+  min-height: 260px;         /* keep a sensible minimum */
+  display: flex;             /* so the img can stretch */
+}
+
+/* image fills wrapper and crops nicely */
+.testimonial-zigrow-section_6 .left-heading .testimonial-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--box-radius);
+  box-shadow: var(--shadow-section);
+}
+
+/* right column already h-100; ensure inner stack uses full height */
+.testimonial-zigrow-section_6 .col-lg-6 > .d-flex.h-100{
+  min-height: 100%;
+}
+
+</style>
+    <section class=" faq-zigrow-section_1 py-6 bg-light" id="faq">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Left Heading -->
+      <div class="col-lg-5 mb-4 mb-md-0">
+        <h2 class="faq-heading">Frequently<br>asked questions</h2>
+        <hr class="faq-divider mt-3" />
+      </div>
+
+      <!-- Right Questions -->
+      <div class="col-lg-7">
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">What types of astrology services do you offer?</h6>
+            <p class="faq-answer">We offer a variety of services including astrology consultations, puja path, anushthan, and a range of astrology products.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">How can I book a consultation?</h6>
+            <p class="faq-answer">You can book a consultation through our website by selecting the service you need and filling out the booking form.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Are your products of high quality?</h6>
+            <p class="faq-answer">Yes, we ensure that all our astrology products are of premium quality and sourced from trusted suppliers.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Can I customize my rituals?</h6>
+            <p class="faq-answer">Absolutely! We offer personalized rituals tailored to your specific needs and spiritual goals.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">Do you conduct online consultations?</h6>
+            <p class="faq-answer">Yes, we provide online consultations for clients who prefer remote guidance and support.</p>
+          </div>
+        
+          <div class="faq-item mb-5">
+            <h6 class="faq-question">How do I contact customer support?</h6>
+            <p class="faq-answer">You can reach our customer support via email or through the contact form on our website.</p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_1 {
+    background-color: #fdfbf7;
+    color: #444;
+  
+
+  .faq-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--secondary-colors);
+    line-height: 1.3;
+    
+  }
+
+  .faq-divider {
+    border: 0;
+    height: 2px !important;
+    background-color: #aaa;
+    width: 90%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-answer {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--para-muted);
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .faq-divider {
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+    }
+  }}
+</style>
+    <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 py-6"id="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid   overflow-hidden">
+
+      <!-- ◼︎ Left: Contact Info -->
+      <div class="cta-info p-5">
+        <h2 class="fw-bold mb-4" style="color: #2B2B2B; ">Get in touch</h2>
+
+        <ul class="contact-list list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Address</h6>
+              <p>123 Business St, City</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>contact@example.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 00000 00000</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Right: Hero / CTA -->
+      <div class="cta-hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="content px-4 px-lg-5">
+          <h3 class="fw-bold mb-4 col-md-8 mx-auto">Feel Free to Contact Us Anytime</h3>
+          <a href="#" class="primary-btn text-truncate">Click here for location</a>
+
+          <!-- socials -->
+          <div class="social-wrap d-flex justify-content-center gap-3 mt-5 mx-auto">
+            <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+:root{
+ --primary-colors-txt: #fff;
+  --surface: #ffffff;
+  --surface-dark: #111;
+  --stroke: rgba(0,0,0,.06);
+  --bg-section: #f8f9fa;
+}
+
+/* ===================  SECTION  =================== */
+.contact-zigrow-section_3{
+  background: var(--bg-section);
+
+
+/* ---------- grid wrapper ---------- */
+.cta-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+@media (max-width: 991.98px){
+  .cta-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- left panel ---------- */
+.cta-info{
+  background: var(--surface);
+}
+.cta-info h2{font-size:2.1rem}
+.contact-list li{
+  display:flex;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.contact-list .icon{
+  color:var(--accent);
+  font-size:1.2rem;
+  flex-shrink:0;
+}
+.contact-list h6{
+  font-size:.8rem;
+  letter-spacing:.05em;
+  font-weight:700;
+  margin-bottom:.25rem;
+  color:var(--accent);
+}
+.contact-list p{
+  margin:0;
+  font-size:var(--fs-body);
+  color:var(--para-muted);
+}
+
+/* ---------- hero panel ---------- */
+.cta-hero{
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80') center / cover no-repeat;
+  min-height:420px;
+  overflow:hidden;
+}
+.cta-hero::before{
+  content:"";
+  position:absolute;inset:0;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.45);
+}
+.cta-hero .content{position:relative;z-index:1;color:#fff}
+.cta-hero h3{font-size:1.9rem;line-height:1.35}
+
+
+
+/* ---------- socials ---------- */
+.social-btn{
+  width:44px;height:44px;
+  display:grid;place-content:center;
+  border-radius:50%;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.4);
+  transition:background .3s ease, transform .3s ease;
+  text-decoration: none;
+}
+.social-btn:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-3px);
+  color: white;
+}
+
+/* ===================  RESPONSIVE TWEAKS  =================== */
+@media (max-width:575.98px){
+  .cta-info h2{font-size:1.8rem}
+  .cta-hero h3{font-size:1.6rem}
+  .btn-cta{width:100%}
+}}
+
+</style>  
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

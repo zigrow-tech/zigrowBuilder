@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Phoyo - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #7e3964;
+      --secondary-colors: #1A120B;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #7e3964;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #7e3964;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: sans-serif !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #1A120B !important;
+      font-family: sans-serif !important;
+      border: 1px solid #1A120B !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #1A120B;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Phoyo
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#team">Team</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="btn primary-btn py-2 px-4">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #7e3964;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #7e3964;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+      
+         <!-- Professional -->
+
+<section class="hero-zigrow-section_11" id="hero">
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white">
+        <h1 class="hero-heading">Welcome to Phoyo, Your Health Partner</h1>
+        <p class="hero-subtext">
+      Discover innovative healthcare solutions tailored to your wellness needs and experience a new level of medical services and support.
+        </p>
+        <a href="#" class="btn-readmore mt-4">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <span class="img-credit">
+  Photo by 
+  <a 
+        href="https://unsplash.com/@lcma1028?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Luis Melendez
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</span>
+</section>
+<!-- Overlapping Cards -->
+<div class="stats-cards-wrapper">
+   <div class="row g-0">
+  <!-- Card 1: Finance & Trades -->
+<!-- Example: Finance & Trades -->
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi bi-person-check"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-4">Happy Patients</h6>
+      <p>Trusted by many</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi bi-person-badge"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-4">Expert Staff</h6>
+      <p>Qualified professionals</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi bi-briefcase"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-4">Services Offered</h6>
+      <p>Comprehensive care</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-content-center align-items-center h-100">
+    <div class="icon-left me-3">
+      <i class="bi bi bi-star"></i>
+    </div>
+    <div class="text-right">
+      <h6 class="mb-4">Satisfaction Rate</h6>
+      <p>Client focused</p>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<style>
+/* Hero Section */
+.hero-zigrow-section_11 {
+  background: url('https://images.unsplash.com/photo-1516841273335-e39b37888115?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NTUwODE0NzR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 240px; /* 👈 Increased for overlap space */
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  @media (width < 768px) {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+
+
+/* Overlay only on hero background */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45); /* adjust darkness here */
+  z-index: 1;
+}
+
+/* Place content above overlay */
+ .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  color: #eee;
+  margin-top: 15px;
+}
+
+.btn-readmore {
+  padding: 10px 24px;
+  border: 2px solid var(--primary-colors);
+  color: #fff;
+  border-radius: 30px;
+  background: transparent;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-readmore:hover {
+  background-color: var(--primary-colors);
+  color: #fff;
+}
+}
+/* Overlapping Stats Cards */
+/* ========== Stats Card Modern Redesign ========== */
+.stats-cards-wrapper {
+  background: #fff;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 0px 0;
+  z-index: 5;
+}
+
+.stats-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid #e4e2e2;
+}
+
+.stats-card i {
+  font-size: 2.8rem;
+  color: var(--primary-colors);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.stats-card h6 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.stats-card p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Hover interaction */
+.stats-card:hover {
+  background: var(--primary-colors);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.stats-card:hover i,
+.stats-card:hover h6,
+.stats-card:hover p {
+  color: #fff;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .stats-cards-wrapper {
+    position: static;
+    transform: none;
+    margin-top: 40px;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .stats-card {
+    flex-direction: row;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+  }
+
+  .stats-card:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .stats-cards-wrapper {
+    position: static;
+    transform: none;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .stats-card {
+    padding: 20px;
+  }}
+
+</style>
+
+            
+               <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-lg-5">
+      
+      <!-- ◀ Hero Image -->
+      <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+        <div class="hero-img-wrap rounded-4 overflow-hidden position-relative shadow">
+  <img
+    src="https://images.unsplash.com/photo-1516841273335-e39b37888115?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwd29ya2Vyc3xlbnwwfHx8fDE3NTUwODE0NzV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    alt="Happy mother and child"
+    class="w-100 h-100 object-fit-cover"
+  />
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@lcma1028?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Luis Melendez
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+      </div>
+
+      <!-- ▶ Content + Features -->
+      <div class="col-12 col-lg-7">
+        <div class="content-box rounded-4 p-4 p-lg-5 shadow-sm">
+          <h2 class="section-title main-heading mb-3 text-lg-start text-center">
+            About Phoyo
+          </h2>
+
+          <p class="lead para-muted mb-4 text-lg-start text-center font-body">
+            Phoyo is dedicated to providing exceptional healthcare and wellness services to our community. Our team is committed to improving your health and well-being. With a focus on patient-centered care, we offer a wide range of medical services tailored to meet your individual needs. Our experienced professionals are here to support you.
+          </p>
+
+      
+
+          <div class="row g-4">
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-4 h-100">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi bi-heart"></i>
+                </div>
+                <h6 class="fw-semibold mb-2">Quality Care</h6>
+                <p class="text-muted mb-0 font-body-sm">We prioritize quality in every aspect of our services, ensuring you receive the best possible care.</p>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-4 h-100">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi bi-person"></i>
+                </div>
+                <h6 class="fw-semibold mb-2">Experienced Team</h6>
+                <p class="text-muted mb-0 font-body-sm">Our team consists of highly trained professionals dedicated to your health and wellness.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 🎨 Solace Modern UI */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: #222;
+
+
+/* --- Hero Image --- */
+.hero-img-wrap {
+  aspect-ratio: 4/5;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.hero-img-wrap:hover {
+  transform: scale(1.02);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* --- Content Card --- */
+.content-box {
+  background: #f7f9fc;
+  border-radius: 1.25rem;
+}
+
+/* --- Headline --- */
+.section-title {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 2.8rem);
+  font-weight: 700;
+}
+
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-left-color: #fff;
+  transition: transform 0.25s ease;
+}
+.cta-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --- Feature Tile --- */
+.feature-tile {
+  background: #ffffff;
+  border: 1px solid #e2e6ea;
+  border-radius: 0.85rem;
+  transition: all 0.3s ease;
+}
+.feature-tile:hover {
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(76, 107, 255, 0.1);
+  color:var(--theme-3);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 575.98px) {
+  .hero-img-wrap {
+    aspect-ratio: 16/9;
+  }
+  .content-box {
+    padding: 2rem 1.25rem;
+  }
+}}
+
+</style>
+                  
+                     <!-- ░░ SERVICES – Modern Gradient Card Grid ░░ -->
+<section  class="py-6 position-relative overflow-hidden service-zigrow-section_4" id="services">
+
+  <div class="container">
+    <!-- ▸ Section heading ◂ -->
+    <div class="text-center mb-5">
+      <h2 class="main-heading" >
+        Our Healthcare Services
+      </h2>
+      <p class="para-muted col-md-8 mx-auto">
+        Explore a range of services designed to enhance your health and wellness.
+      </p>
+    </div>
+
+    <!-- ▸ Dynamic nav-tabs ◂ -->
+    <ul class="nav nav-pills justify-content-center gap-3 mb-4 glow-nav" role="tablist">
+      
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-btn-0" data-bs-toggle="tab"
+            data-bs-target="#tab-0" type="button" role="tab" aria-controls="tab-0"
+            aria-selected="true">
+            Consultation
+          </button>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+          <button class="nav-link " id="tab-btn-1" data-bs-toggle="tab"
+            data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1"
+            aria-selected="false">
+            Therapies
+          </button>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+          <button class="nav-link " id="tab-btn-2" data-bs-toggle="tab"
+            data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2"
+            aria-selected="false">
+            Wellness Programs
+          </button>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+          <button class="nav-link " id="tab-btn-3" data-bs-toggle="tab"
+            data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3"
+            aria-selected="false">
+            Emergency Care
+          </button>
+        </li>
+        
+        <li class="nav-item" role="presentation">
+          <button class="nav-link " id="tab-btn-4" data-bs-toggle="tab"
+            data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4"
+            aria-selected="false">
+            Health Screenings
+          </button>
+        </li>
+        
+    </ul>
+
+    <!-- ▸ Tab panes ◂ -->
+    <div class="tab-content">
+      
+        <div class="tab-pane fade show active" id="tab-0" role="tabpanel"
+          aria-labelledby="tab-btn-0">
+          <div class="row align-items-center gy-4">
+            <!-- image -->
+            <div class="col-md-5 text-center mb-3 mb-md-0">
+             
+<div class="text-center">
+  <div class="glass-circle mx-auto mb-2">
+    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxtZWRpY2FsJTIwc2VydmljZXN8ZW58MHx8fHwxNzU1MDgxNDc1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Consultation" class="img-fluid rounded-circle" />
+  </div>
+  
+    <span class="unsplash-credit d-block" style="font-size: 0.65rem; color: #6c757d;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@hush52?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hush Naidoo Jade Photography
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            </div>
+
+            <!-- copy -->
+            <div class="col-md-7">
+              <h4 class="fw-semibold mb-2" style="color: var(--lead-color-mute);">
+                Consultation
+              </h4>
+              <p class="para-muted mb-4">
+                Our expert consultations provide personalized health assessments and recommendations tailored to your needs. We ensure you receive the best advice for your health.
+              </p>
+              <a href="#learn1" class="btn-border-primary_dark rounded-pill px-4 ">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade " id="tab-1" role="tabpanel"
+          aria-labelledby="tab-btn-1">
+          <div class="row align-items-center gy-4">
+            <!-- image -->
+            <div class="col-md-5 text-center mb-3 mb-md-0">
+             
+<div class="text-center">
+  <div class="glass-circle mx-auto mb-2">
+    <img src="https://images.unsplash.com/photo-1554424518-336ec861b705?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHRoZXJhcGllc3xlbnwwfHx8fDE3NTUwODE0NzV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Therapies" class="img-fluid rounded-circle" />
+  </div>
+  
+    <span class="unsplash-credit d-block" style="font-size: 0.65rem; color: #6c757d;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@loganstonefilms?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Logan Stone
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            </div>
+
+            <!-- copy -->
+            <div class="col-md-7">
+              <h4 class="fw-semibold mb-2" style="color: var(--lead-color-mute);">
+                Therapies
+              </h4>
+              <p class="para-muted mb-4">
+                We offer a variety of therapies aimed at improving your physical and mental well-being. Our therapies are designed to promote healing and recovery.
+              </p>
+              <a href="#learn2" class="btn-border-primary_dark rounded-pill px-4 ">
+                Explore Therapies
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade " id="tab-2" role="tabpanel"
+          aria-labelledby="tab-btn-2">
+          <div class="row align-items-center gy-4">
+            <!-- image -->
+            <div class="col-md-5 text-center mb-3 mb-md-0">
+             
+<div class="text-center">
+  <div class="glass-circle mx-auto mb-2">
+    <img src="https://images.unsplash.com/photo-1615461066159-fea0960485d5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBjaGVja3VwfGVufDB8fHx8MTc1NTA4MTQ3NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Wellness Programs" class="img-fluid rounded-circle" />
+  </div>
+  
+    <span class="unsplash-credit d-block" style="font-size: 0.65rem; color: #6c757d;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@hieptltb97?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nguyễn Hiệp
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            </div>
+
+            <!-- copy -->
+            <div class="col-md-7">
+              <h4 class="fw-semibold mb-2" style="color: var(--lead-color-mute);">
+                Wellness Programs
+              </h4>
+              <p class="para-muted mb-4">
+                Join our wellness programs that focus on preventive care and healthy living. We provide tools and resources to help you achieve your health goals.
+              </p>
+              <a href="#learn3" class="btn-border-primary_dark rounded-pill px-4 ">
+                Join Now
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade " id="tab-3" role="tabpanel"
+          aria-labelledby="tab-btn-3">
+          <div class="row align-items-center gy-4">
+            <!-- image -->
+            <div class="col-md-5 text-center mb-3 mb-md-0">
+             
+<div class="text-center">
+  <div class="glass-circle mx-auto mb-2">
+    <img src="https://images.unsplash.com/photo-1728138240695-54ebc33215f2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxyZWhhYmlsaXRhdGlvbiUyMGNlbnRlcnxlbnwwfHx8fDE3NTUwODE0NzV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Emergency Care" class="img-fluid rounded-circle" />
+  </div>
+  
+    <span class="unsplash-credit d-block" style="font-size: 0.65rem; color: #6c757d;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@gazianteprehabilitasyon?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Birleşim Özel Eğitim Rehabilitasyon Merkezi
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            </div>
+
+            <!-- copy -->
+            <div class="col-md-7">
+              <h4 class="fw-semibold mb-2" style="color: var(--lead-color-mute);">
+                Emergency Care
+              </h4>
+              <p class="para-muted mb-4">
+                Our emergency care services are available 24/7 to address urgent health issues. We prioritize quick and effective treatment for all patients.
+              </p>
+              <a href="#learn4" class="btn-border-primary_dark rounded-pill px-4 ">
+                Get Help
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade " id="tab-4" role="tabpanel"
+          aria-labelledby="tab-btn-4">
+          <div class="row align-items-center gy-4">
+            <!-- image -->
+            <div class="col-md-5 text-center mb-3 mb-md-0">
+             
+<div class="text-center">
+  <div class="glass-circle mx-auto mb-2">
+    <img src="https://images.unsplash.com/photo-1590779033823-2aa50ccf7292?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxudXRyaXRpb24lMjBjb3Vuc2VsaW5nfGVufDB8fHx8MTc1NTA4MTQ3NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Health Screenings" class="img-fluid rounded-circle" />
+  </div>
+  
+    <span class="unsplash-credit d-block" style="font-size: 0.65rem; color: #6c757d;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@nate_dumlao?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nathan Dumlao
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            </div>
+
+            <!-- copy -->
+            <div class="col-md-7">
+              <h4 class="fw-semibold mb-2" style="color: var(--lead-color-mute);">
+                Health Screenings
+              </h4>
+              <p class="para-muted mb-4">
+                Regular health screenings are essential for early detection and prevention. We offer comprehensive screening services for various health conditions.
+              </p>
+              <a href="#learn5" class="btn-border-primary_dark rounded-pill px-4 ">
+                Schedule Screening
+              </a>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+
+  <!-- floating deco blobs -->
+  <span class="blob blob-1" aria-hidden="true"></span>
+  <span class="blob blob-2" aria-hidden="true"></span>
+</section>
+
+<style>
+  /* ─── Palette & helpers ─── */
+  :root {
+    --accent1: #7e3964;
+    --accent2: #1A120B;
+    --btn-bg: #7d5fff;
+    --btn-text: #fff;
+  }
+
+  /* ─── Section backdrop ─── */
+ .service-zigrow-section_4 {
+    background: linear-gradient(155deg, #ffffff 0%, #fbfbfb 100%);
+    isolation: isolate;
+  
+.unsplash-credit {
+  font-size: 0.65rem;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.unsplash-credit a {
+  color: #6c757d;
+  text-decoration: underline;
+}
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .25;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .blob-1 {
+    width: 380px;
+    height: 380px;
+    background: var(--accent1);
+    top: -120px;
+    left: -140px;
+  }
+
+  .blob-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent2);
+    bottom: -120px;
+    right: -100px;
+  }
+
+
+
+  /* ─── Nav-pills styling ─── */
+  .glow-nav .nav-link {
+    border: none;
+    font-weight: 500;
+    padding: .55rem 1.6rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .55);
+    color: #555;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+    transition: all .3s ease;
+  }
+
+  .glow-nav .nav-link.active {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .06);
+  }
+
+  .glow-nav .nav-link:hover:not(.active) {
+    transform: translateY(-2px);
+  }
+
+  /* ─── Tab animation ─── */
+  .tab-pane {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .55s ease;
+  }
+
+  .tab-pane.show.active {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ─── Glass circle ─── */
+  .glass-circle {
+    --size: 290px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+    transition: transform .45s ease, box-shadow .45s ease;
+    position: relative;
+  }
+
+  .glass-circle::before {
+    /* animated ring */
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 3px;
+    background: conic-gradient(from 0deg, var(--accent1), var(--accent2), var(--accent1));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: spin 6s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .glass-circle img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/3;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .glass-circle:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+  }
+
+  /* ─── Button ─── */
+  .btn-primary {
+    border-color: var(--btn-bg);
+    background: transparent;
+    border: none;
+    color: var(--btn-text);
+    transition: filter .25s;
+  }
+
+  .btn-primary:hover {
+    filter: brightness(90%);
+  }
+
+  /* ─── Responsive tweaks ─── */
+  @media(max-width:768px) {
+    .glass-circle {
+      --size: 150px;
+    }
+
+    .tab-pane h4 {
+      font-size: 1.35rem;
+    }}
+  }
+</style>
+                        
+                          
+                                
+                                      
+                                             
+<section class=" team-zigrow-section_2 py-6" id="team">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <small class="section-subtitle text-uppercase fw-semibold">Our Team</small>
+      <h2 class="fw-bold display-6 mt-2 main-heading">   Meet Our Team</h2>
+      <p class="para-muted mt-3 col-md-8 mx-auto">
+   Our team of healthcare professionals is committed to providing you with the highest quality of care. Each member brings unique expertise to support your health. 
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/yx8tdM89/1.png" class="team-img mb-3" alt="Ahmed Kamal">
+          <h6 class="fw-bold mb-0"> Dr. John</h6>
+          <p class="text-muted mb-0">Physician</p>
+          
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/Qt0YRfJM/10.png" class="team-img mb-3" alt="Mona Zaghloul">
+          <h6 class="fw-bold mb-0"> Nurse Anna</h6>
+          <p class="text-muted mb-0">Nurse</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4">
+        <div class="team-card text-center p-3">
+          <img   src="https://i.postimg.cc/Y2dTVCdx/2.png" class="team-img mb-3" alt="Ali Anoer">
+           <h6 class="fw-bold mb-0"> Dr. Smith</h6>
+          <p class="text-muted mb-0">Specialist</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-zigrow-section_2 {
+    background-color: #fff;
+  
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .team-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    h6{
+      color: #1A120B;
+    }
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+  }
+
+  .team-card:hover .team-img {
+    filter: brightness(1.05);
+  }
+
+  h2 {
+    color: #1A120B;
+  }
+
+  @media (max-width: 768px) {
+    .team-img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .team-img {
+      height: 250px;
+    }
+  }}
+</style>
+
+                                                
+                                                   <section class="portfolio-zigrow-section_2 py-6" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title main-heading">
+        Our Work
+      </h2>
+    </div>
+
+    <div class="row justify-content-center g-3">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only">
+          <img
+            src="https://images.unsplash.com/photo-1518235461080-01779c3c1167?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwcHJvamVjdHN8ZW58MHx8fHwxNzU1MDgxNDc1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Storage & Seating"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Health Initiative <br />
+            Community Focus
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small mt-4 text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@ibankstory?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Worapong Kaewtong
+          </a>
+          on
+          <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only">
+          <img
+            src="https://images.unsplash.com/photo-1605050825461-9820eed81ece?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMGluaXRpYXRpdmVzfGVufDB8fHx8MTc1NTA4MTQ3NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Tables & Desks"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Wellness Program <br />
+            Holistic Approach
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@munbaik_cycling?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Munbaik Cycling Clothing
+          </a>
+          on
+      <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a>
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only">
+          <img
+            src="https://images.unsplash.com/photo-1657028310103-f53dd49a856a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY2FzZSUyMHN0dWRpZXN8ZW58MHx8fHwxNzU1MDgxNDc1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Lighting & Decor"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Emergency Response <br />
+            Quick Care
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+           <a
+            href="https://unsplash.com/@markusspiske?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Markus Spiske
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only">
+          <img
+            src="https://images.unsplash.com/photo-1522946740781-7b3606f35cfc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZGVzaWdufGVufDB8fHx8MTc1NTA4MTQ3NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Office Accessories"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Patient Education <br />
+            Informed Choices
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small text-muted mb-0"
+          style="font-size: 0.65rem"
+        >
+          Photo by
+            <a
+            href="https://unsplash.com/@hikendal?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+          >
+            Kendal
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+
+    .offer-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .offer-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+      aspect-ratio: 3/4;
+    }
+
+    /* On hover, zoom the image */
+    .offer-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Rounded shapes */
+    .rounded-top-only img {
+      border-top-left-radius: 50% 30%;
+      border-top-right-radius: 50% 30%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .rounded-bottom-only img {
+      border-bottom-left-radius: 50% 30%;
+      border-bottom-right-radius: 50% 30%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .offer-label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1.5rem 1.95rem;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+    }
+
+    /* Overlay background for bottom label */
+    .rounded-top-only .offer-label {
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    /* Overlay background for top label */
+    .rounded-bottom-only .offer-label {
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+    }
+  }
+</style>
+
+                                                      
+                                                         <section class="testimonial-zigrow-section_5 py-6"id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading mb-2">Client Feedback</h2>
+      <p class="section-subtitle">Hear from our satisfied clients about their experiences.</p>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=40" alt="Alice">
+          </div>
+          <h5 class="para-muted mb-1">Alice</h5>
+          <small class="para-muted d-block mb-2">Patient</small>
+          <p class="testimonial-text mb-0">"Phoyo has transformed my health journey. The staff is incredibly supportive and knowledgeable, making every visit a positive experience."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=41" alt="Bob">
+          </div>
+          <h5 class="para-muted mb-1">Bob</h5>
+          <small class="para-muted d-block mb-2">Patient</small>
+          <p class="testimonial-text mb-0">"I appreciate the personalized care I received at Phoyo. The team truly listens and addresses all my concerns."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=42" alt="Catherine">
+          </div>
+          <h5 class="para-muted mb-1">Catherine</h5>
+          <small class="para-muted d-block mb-2">Patient</small>
+          <p class="testimonial-text mb-0">"The wellness programs at Phoyo have significantly improved my quality of life. I highly recommend their services!"</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=43" alt="David">
+          </div>
+          <h5 class="para-muted mb-1">David</h5>
+          <small class="para-muted d-block mb-2">Patient</small>
+          <p class="testimonial-text mb-0">"Phoyo&#39;s emergency care saved my life. The quick response and professional care were outstanding."</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_5 {
+  background: #fff;
+  position: relative;
+
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--para-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+}
+
+.testimonial-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 4px var(--primary-colors);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar img {
+  transform: scale(1.05);
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+    color: #6b7280;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .testimonial-avatar img {
+    width: 56px;
+    height: 56px;
+  }
+}}
+
+</style>
+                                                            
+                                                              
+                                                                     <section class="faq-zigrow-section_3 py-6"id="faq">
+  <div class="container">
+    <div class="text-start mb-5">
+      <h2 class="faq-heading">Explore Common Questions</h2>
+      <p class="faq-subtext">Get instant answers to your common questions</p>
+    </div>
+
+    <div class="accordion" id="faqAccordion2">
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern0">
+          <button
+            class="accordion-button "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern0"
+            aria-expanded="true"
+            aria-controls="collapseModern0"
+          >
+            What services does Phoyo offer?
+          </button>
+        </h2>
+        <div
+          id="collapseModern0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingModern0"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Phoyo offers a wide range of healthcare services including consultations, therapies, wellness programs, emergency care, and health screenings.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern1">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern1"
+            aria-expanded="false"
+            aria-controls="collapseModern1"
+          >
+            How can I book an appointment?
+          </button>
+        </h2>
+        <div
+          id="collapseModern1"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern1"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">You can book an appointment through our website or by calling our office directly. We are here to assist you.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern2">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern2"
+            aria-expanded="false"
+            aria-controls="collapseModern2"
+          >
+            Is Phoyo accepting new patients?
+          </button>
+        </h2>
+        <div
+          id="collapseModern2"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern2"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Yes, we are currently accepting new patients. We welcome you to join our healthcare family.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern3">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern3"
+            aria-expanded="false"
+            aria-controls="collapseModern3"
+          >
+            What insurance plans do you accept?
+          </button>
+        </h2>
+        <div
+          id="collapseModern3"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern3"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Phoyo accepts various insurance plans. Please contact our office for specific details regarding your insurance coverage.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern4">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern4"
+            aria-expanded="false"
+            aria-controls="collapseModern4"
+          >
+            What are your office hours?
+          </button>
+        </h2>
+        <div
+          id="collapseModern4"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern4"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Our office hours are Monday to Friday from 9 AM to 5 PM. We also offer emergency services 24/7.</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-zigrow-section_3 {
+    background-color: #fff;
+  
+
+  .faq-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .faq-subtext {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+
+  /* Accordion Clean Style */
+  .accordion-button {
+    font-size: 1.2rem !important;
+    color: #45505e !important;
+    font-weight: 400 !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #45505e !important;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 !important;
+  }
+
+  .accordion-button {
+    background-color: transparent !important;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: none !important;
+    padding: 1.25rem 0;
+  }
+
+  .accordion-body {
+    font-size: 0.95rem;
+    color: #45505e;
+    padding: 0 0 1rem;
+  }
+
+  .accordion-button::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #666;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E"); /* same gray icon */
+    border: 1px solid #666;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.5rem;
+    }
+
+    .accordion-button {
+      font-size: 0.95rem;
+    }}
+  }
+</style>
+
+                                                                        
+                                                                          
+                                                                                 <!-- 📮 Minimal Split Contact -->
+<section class="contact-zigrow-section_4 py-6" id="contact">
+  <div class="container-xl">
+    <div class="contact-grid shadow-sm rounded overflow-hidden">
+
+      <!-- ◼︎ Info -->
+      <div class="info p-5">
+        <h2 class="title mb-4">Get in touch</h2>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Mailing address</h6>
+              <p>123 Business St, City</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>contact@example.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 00000 00000</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Image -->
+      <div class="hero"></div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ========== TOKENS ========== */
+  :root {
+    --stroke: rgba(0, 0, 0, .07);
+  }
+
+  /* ========== WRAPPER ========== */
+  .contact-zigrow-section_4 {
+    background: #fdfdfd
+  }
+    /* grid wrapper */
+    .contact-zigrow-section_4 .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--bg);
+    }
+
+    @media (max-width:991.98px) {
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ========== INFO SIDE ========== */
+    .contact-zigrow-section_4 .info .title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--secondary-colors);
+    }
+
+    /* list layout */
+    .contact-zigrow-section_4 .info ul li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+   .contact-zigrow-section_4  .info .icon {
+      color: var(--primary-colors);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-zigrow-section_4 .info h6 {
+      font-size: .8rem;
+      letter-spacing: .05em;
+      font-weight: 700;
+      color: var(--primary-colors);
+      margin-bottom: .25rem;
+    }
+
+   .contact-zigrow-section_4  .info p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--para-muted);
+    }
+
+    /* ========== HERO IMAGE ========== */
+    .contact-zigrow-section_4 .hero {
+      background: url('https://i.postimg.cc/XJCcgx1h/3.png') center/cover no-repeat;
+      min-height: 420px;
+    }
+
+    @media (max-width:767.98px) {
+       .contact-zigrow-section_4.info {
+        padding: 2.5rem 2rem;
+        text-align: center
+      }
+
+       .contact-zigrow-section_4 .hero {
+        min-height: 300px
+      }
+    }
+
+</style>
+                                                                                    
+                                                                                      
+                                                                                        
+<footer class="footer-zigrow-section_4 text-white pt-5">
+  <div class="container pb-4">
+    <div class="row gy-5">
+      <!-- Left Section -->
+      <div class="col-md-4">
+        <div class="d-flex align-items-center mb-3">
+         
+          <h5 class="mb-0 fw-bold footer-main_title">Phoyo</h5>
+        </div>
+        <p class="para-muted small mb-3">
+         Welcome to Phoyo, Your Health Partner
+        </p>
+
+        <!-- Status Badge -->
+        <div class="system-status mt-2">
+          <span class=" bg-success"></span>
+        Connect with us
+        </div>
+        <!-- Social Icons -->
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="footer-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-md-8">
+        <div class="row">
+      <!-- Product -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Product</h6>
+  <ul class="footer-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Integrations</a></li>
+    <li><a href="#">Updates</a></li>
+  </ul>
+</div>
+        <!-- Company -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Company</h6>
+  <ul class="footer-links">
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+          <!-- Resources -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Resources</h6>
+  <ul class="footer-links">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Help Center</a></li>
+    <li><a href="#">Tutorials</a></li>
+    <li><a href="#">Case Studies</a></li>
+  </ul>
+</div>
+
+<!-- Legal -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Legal</h6>
+  <ul class="footer-links">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Cookie Policy</a></li>
+    <li><a href="#">Security</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar with Dark Background -->
+  <div class="footer-bottom py-4">
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between align-items-center small para-muted"
+    >
+      <div>    &copy; 2025. All rights reserved.</div>
+      <div class="mt-2 mt-md-0">
+        <a href="#" class="para-muted me-3">Privacy Policy</a>
+        <a href="#" class="para-muted me-3">Terms</a>
+        <a href="#" class="para-muted">Code of conduct</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+
+  .footer-zigrow-section_4 {
+    background-color: var(--theme-4);
+    border-top: 1px solid #1c1d20;
+    .footer-main_title{
+      color: var(--theme-3);
+    }
+  
+
+  .footer-bottom {
+    background-color: var(--theme-4);
+    border-top: 1px solid #1c1d20;
+    color: var(--theme-3) !important;
+
+    a {
+      color: var(--theme-3) !important;
+      text-decoration: none;
+    }
+  }
+
+  .para-muted{
+  color: var(--theme-3) !important;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+     color: var(--theme-3) !important;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+   color: var(--theme-3) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+  color: var(--theme-3) !important;
+  }
+
+  .footer-icon {
+  color: var(--theme-3) !important;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-icon:hover {
+     color: var(--theme-3) !important;
+  }
+
+  .system-status {
+    font-size: 1.05rem;
+  color: var(--theme-3) !important;
+    background-color: transparent;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+ 
+
+  @media (max-width: 768px) {
+    .footer-links {
+      padding-left: 0;
+    }
+  }}
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

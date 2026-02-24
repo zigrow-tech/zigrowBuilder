@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Site Nav -->
+    <header id="site-nav" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-bar">
+          <!-- Brand -->
+          <a href="#" class="brand" aria-label="Analyx Home">
+            <span class="logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="54" height="54">
+                <defs>
+                  <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8b5cf6" />
+                    <stop offset="1" stop-color="#6e56ef" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M6 26L16 6l10 20h-4l-2.4-5H12.4L10 26H6Zm8.4-8h3.2L16 13l-1.6 5Z"
+                  fill="url(#gA)"
+                />
+              </svg>
+            </span>
+            <span class="word">Analyx</span>
+          </a>
+
+          <!-- Mobile toggle -->
+          <input
+            id="nav-toggle"
+            class="nav-toggle"
+            type="checkbox"
+            aria-hidden="true"
+          />
+          <label
+            for="nav-toggle"
+            class="menu-btn"
+            aria-label="Toggle navigation"
+            aria-controls="nav-primary"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </label>
+
+          <!-- Links -->
+          <nav id="nav-primary" class="links" aria-label="Main">
+            <ul class="list">
+              <li><a class="is-active" href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Pricing</a></li>
+
+              <!-- Dropdown: Page -->
+              <li class="has-sub">
+                <!-- checkbox = mobile-friendly toggle -->
+                <input
+                  type="checkbox"
+                  id="sub-pages"
+                  class="sub-toggle"
+                  aria-hidden="true"
+                />
+                <label for="sub-pages" class="link-with-caret">
+                  Page <span class="chev" aria-hidden="true"></span>
+                </label>
+
+                <ul class="sub" aria-label="Page submenu">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Changelog</a></li>
+                  <li><a href="#">404 Page</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Right CTA (hidden on small, shown on desktop) -->
+          <a href="#" class="cta cta-desktop">Contact Us</a>
+        </div>
+      </div>
+    </header>
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <!-- Social Hero -->
+    <section id="social-hero" aria-label="Analytx Social Media Hero">
+      <div class="container">
+        <div class="arrow-img">
+          <img src="assets/images/arrow.webp" alt="" />
+        </div>
+        <div class="arrow-img-2">
+          <img src="assets/images/arrow.webp" alt="" />
+        </div>
+        <!-- Headline block -->
+        <div class="hero-head">
+          <span class="label"
+            ><i aria-hidden="true">✎</i> Welcome To Analyx</span
+          >
+
+          <h1 class="title">
+            Social Media
+            <span id="hero-typer" class="typer" aria-live="polite"></span>
+            <span class="caret" aria-hidden="true"></span>
+          </h1>
+
+          <p class="sub">
+            Gain deeper social insights. Unlock growth opportunities, optimize
+            strategies & connect with your audience like never before.
+          </p>
+
+          <a href="#" class="cta"
+            >Start Free Trial <span aria-hidden="true">➜</span></a
+          >
+        </div>
+
+        <!-- Visual grid -->
+        <div class="visual-grid">
+          <!-- Left: small dashboard card -->
+          <article class="card stats">
+            <header class="card-head">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </header>
+            <div class="inner-card">
+              <h6 class="title-head">Insights Overview</h6>
+              <div class="profile">
+                <img src="assets/image/testimonial-2.png" alt="" />
+                <div>
+                  <strong>Sebo Studio</strong>
+                  <small>@sebostudio</small>
+                </div>
+              </div>
+
+              <dl class="numbers">
+                <div>
+                  <dt>Posts</dt>
+                  <dd>230</dd>
+                </div>
+                <div>
+                  <dt>Followers</dt>
+                  <dd>2,648</dd>
+                </div>
+                <div>
+                  <dt>Following</dt>
+                  <dd>768</dd>
+                </div>
+              </dl>
+
+              <footer class="best">
+                <span>Best performance</span>
+                <span class="up">+ 83.7%</span>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Center: person -->
+          <figure class="person">
+            <img
+              src="assets/images/social-tech-hero.webp"
+              alt="Smiling man holding a laptop"
+            />
+          </figure>
+
+          <!-- Right: bar chart card -->
+          <article class="card chart">
+            <header class="card-bar">
+              <div class="left">
+                <strong>Post Insight</strong>
+              </div>
+              <button class="pill" type="button" aria-label="Change week">
+                Week 1
+              </button>
+            </header>
+
+            <!-- NEW progress bars -->
+            <div class="bars" role="img" aria-label="Weekly bar chart">
+              <div class="bar h-78">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">S</span>
+              </div>
+              <div class="bar h-62">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">M</span>
+              </div>
+              <div class="bar h-48">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">T</span>
+              </div>
+              <div class="bar h-28">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">W</span>
+              </div>
+              <div class="bar h-58">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">T</span>
+              </div>
+              <div class="bar h-42">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">F</span>
+              </div>
+              <div class="bar h-72">
+                <span class="track"><span class="fill"></span></span
+                ><span class="day">S</span>
+              </div>
+            </div>
+
+            <footer class="legend">
+              <span>Best performance</span>
+              <span>Sunday</span>
+              <span class="value">7.6k</span>
+            </footer>
+          </article>
+
+          <!-- Floating bell (decorative) -->
+          <div class="icon" aria-hidden="true">
+            <i class="fa-solid fa-bell"></i>
+            <span class="badge">95</span>
+          </div>
+          <div class="icon-2" aria-hidden="true">
+            <i class="fa-solid fa-bell"></i>
+            <span class="badge">50</span>
+          </div>
+
+          <!-- Followers tile -->
+          <div class="tile followers">
+            <div class="meta">
+              <span>Followers</span>
+              <strong>2.648</strong>
+            </div>
+            <span class="chip up">+ 6.2%</span>
+          </div>
+
+          <!-- Right bottom: social icons -->
+          <ul class="socials-icon" aria-label="Social networks">
+            <li>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter/X"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Behance"
+                ><i class="fa-brands fa-square-behance"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- trusted brands -->
+    <section id="trusted-brands" class="py-5">
+      <div class="container">
+        <div class="trusted-wrapper">
+          <p class="trusted-text">
+            Trusted by world’s <span>leading brand</span>
+          </p>
+
+          <div class="brands-grid">
+            <div class="brand-item">
+              <img src="assets/images/brand-logo.png" alt="Rise" />
+            </div>
+            <div class="brand-item">
+              <img src="assets/images/brand-logo.png" alt="Vertigo" />
+            </div>
+            <div class="brand-item">
+              <img src="assets/images/brand-logo.png" alt="Minty" />
+            </div>
+            <div class="brand-item">
+              <img src="assets/images/brand-logo.png" alt="Glossy" />
+            </div>
+            <div class="brand-item">
+              <img src="assets/images/brand-logo.png" alt="Rise 2" />
+            </div>
+            <div class="brand-item">
+              <img src="assets/images/brand-logo.png" alt="Waveless" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- service section -->
+    <section id="services" aria-label="Our Services">
+      <div class="container">
+        <!-- Head -->
+        <div class="services-head">
+          <span class="label">
+            <i aria-hidden="true">💻</i>
+            Our Services
+          </span>
+
+          <h2 class="title">
+            Empowering social media <span class="hi">insights</span>
+          </h2>
+
+          <p class="lead">
+            Cras fermentum consectetur risus, id lacinia dui posuere quis sed
+            veh.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+          <!-- Card 1 -->
+          <article class="svc-card is-post">
+            <figure class="media window">
+              <img
+                src="assets/images/social-tech-service-1.webp"
+                alt="Social post preview"
+              />
+            </figure>
+            <h3 class="svc-title">Social Media Monitoring</h3>
+            <p class="svc-desc">
+              Cras fermentum consectetur risus se lacinia dui posuere quis. Sed
+              vehiculi.
+            </p>
+          </article>
+
+          <!-- Card 2 (highlight) -->
+          <article class="svc-card is-hero">
+            <figure class="media dotted">
+              <img
+                class="float"
+                src="assets/images/social-tech-service-2.webp"
+                alt="Dashboard on a laptop"
+              />
+            </figure>
+            <h3 class="svc-title">Audience Analysis</h3>
+            <p class="svc-desc">
+              Cras fermentum consectetur risus se lacinia dui posuere quis. Sed
+              vehiculi.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="svc-card is-chart">
+            <figure class="media">
+              <div class="chart-header">
+                <strong>Statistics</strong>
+                <span class="pill">7 Days</span>
+              </div>
+              <div class="chart-bars" aria-hidden="true">
+                <span style="--h: 65%"></span>
+                <span style="--h: 48%"></span>
+                <span style="--h: 72%"></span>
+                <span style="--h: 38%"></span>
+                <span style="--h: 88%"></span>
+                <span style="--h: 44%"></span>
+                <span style="--h: 70%"></span>
+              </div>
+            </figure>
+            <h3 class="svc-title">Performance Analytics</h3>
+            <p class="svc-desc">
+              Cras fermentum consectetur risus se lacinia dui posuere quis. Sed
+              vehiculi.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- history -->
+    <section id="history" aria-label="Our History">
+      <div class="container">
+        <div class="arrow-img">
+          <img src="assets/image/arrow-2.png" alt="" />
+        </div>
+        <div class="history-grid">
+          <!-- Left rail + CTA -->
+          <aside class="left-rail">
+            <div class="rail">
+              <span class="rail-icon" aria-hidden="true">▣</span>
+              <span class="chip">Our History</span>
+            </div>
+
+            <a href="#" class="cta-xl">
+              <span>More About Us</span>
+              <i class="fa-solid fa-greater-than"></i>
+            </a>
+          </aside>
+
+          <!-- Right copy -->
+          <div class="copy">
+            <h2 class="title">
+              Unleash social <span class="hi">potential</span>
+            </h2>
+
+            <div class="text">
+              <p>
+                Suspendisse eu quam lacinia, vestibulum massa sit amet,
+                convallis nulla. Interdum et malesuada fames ac ante ipsum
+                primis in faucibus. Sed id pulvinar nibh, ut laoreet.
+              </p>
+              <p>
+                Mauris congue maximus venenatis. Pellentesque turpis turpis,
+                aliquam in lorem nec, congue faucibus massa. Quisque ac nunc
+                aliquam, molestie massa vitae, gravida elit. Sed suspendisse
+                dictum pellentesque, sem a bibendum dolorem sed lorem utam
+                pharetra eget purus eget mais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- insight-demo -->
+    <section id="insight-demo" aria-label="Profile growth & engagement">
+      <div class="container">
+        <div class="stage">
+          <!-- Bubbles (networks) -->
+          <i class="fa-brands fa-twitter tw"></i>
+          <i class="fa-brands fa-tiktok tt"></i>
+
+          <!-- Left: person -->
+          <figure class="person">
+            <img
+              src="assets/images/social-tech-history.webp"
+              alt="Creator using laptop"
+            />
+          </figure>
+
+          <!-- Right: chart mock inside lavender plate -->
+          <div class="plate">
+            <article class="chart-card" aria-label="Profile growth & discovery">
+              <header class="chart-head">
+                <strong>Profile growth & discovery</strong>
+                <span class="pill">Impressions</span>
+              </header>
+
+              <div class="stats-row">
+                <span class="green">+8.23%</span>
+                <span>2,090 <small>Impressions</small></span>
+                <span>1,820 <small>Reach</small></span>
+                <span>2.38% <small>Growth Rate</small></span>
+              </div>
+
+              <div
+                class="bars"
+                role="img"
+                aria-label="Bar chart for Mar 21–Apr 21"
+              >
+                <span style="--h: 65%"></span>
+                <span style="--h: 40%"></span>
+                <span style="--h: 74%"></span>
+                <span style="--h: 52%"></span>
+                <span style="--h: 80%"></span>
+                <span style="--h: 58%"></span>
+                <span style="--h: 70%"></span>
+                <span style="--h: 60%"></span>
+                <span style="--h: 84%"></span>
+                <span style="--h: 66%"></span>
+              </div>
+
+              <footer class="axis">
+                <span>Mar 21</span><span>Mar 26</span><span>Mar 31</span>
+                <span>Apr 5</span><span>Apr 10</span><span>Apr 21</span>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Floating KPI card -->
+          <aside class="kpi" aria-label="Engagement">
+            <div class="kpi-head">
+              <strong>Engagement</strong>
+              <button class="dots" aria-label="More options">⋯</button>
+            </div>
+            <div class="kpi-main">
+              <span class="value">82.6%</span>
+              <span class="chip up">▲ 0.2%</span>
+            </div>
+          </aside>
+        </div>
+
+        <p class="tiny-note">Roloid lacinia dui posuere quis sed veh.</p>
+      </div>
+    </section>
+    <!-- reach -->
+    <section id="reach" aria-label="Boost Social Reach">
+      <div class="container">
+        <div class="arrow-img">
+          <img src="assets/images/arrow.webp" alt="" />
+        </div>
+        <!-- Head -->
+        <div class="reach-head">
+          <span class="label">
+            <i aria-hidden="true">🛈</i>
+            Boost Social Reach
+          </span>
+
+          <h2 class="title">
+            Maximizing reach and
+            <span class="accent">sourcing fresh content</span>
+            for you.
+          </h2>
+
+          <p class="sub">
+            Cras fermentum consectetur risus, id lacinia dui posuere quis sed
+            veh.
+          </p>
+        </div>
+
+        <!-- Features 2x2 -->
+        <div class="features">
+          <article class="f-card">
+            <span class="badge">100% Guaranteed</span>
+            <div class="icon"><i class="fa-solid fa-bell"></i></div>
+            <div class="description">
+              <h3 class="f-title">Get Creative Inspiration</h3>
+              <p class="f-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incid.
+              </p>
+            </div>
+          </article>
+
+          <article class="f-card">
+            <div class="icon"><i class="fa-solid fa-image"></i></div>
+            <div class="description">
+              <h3 class="f-title">Make Every Post Pop</h3>
+              <p class="f-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incid.
+              </p>
+            </div>
+          </article>
+
+          <article class="f-card">
+            <div class="icon"><i class="fa-solid fa-message"></i></div>
+            <div class="description">
+              <h3 class="f-title">Exceptional Customer Service</h3>
+              <p class="f-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incid.
+              </p>
+            </div>
+          </article>
+
+          <article class="f-card">
+            <div class="icon"><i class="fa-solid fa-square-check"></i></div>
+            <div class="description">
+              <h3 class="f-title">Keep Brand Aesthetics On Point</h3>
+              <p class="f-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incid.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Bottom stage: testimonial + person -->
+        <div class="stage">
+          <div class="plate">
+            <article class="quote-card" aria-label="Client testimonial">
+              <span class="chip">Our Client’s Testimonials</span>
+              <blockquote>
+                “Their analytics helped us uncover valuable insights, leading to
+                a significant boost in engagement and conversions.”
+              </blockquote>
+
+              <footer class="byline">
+                <img src="assets/images/testimonial-2.png" alt="" />
+                <div>
+                  <strong>Rohit raj</strong>
+                  <small>Entrepreneur</small>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <figure class="person">
+            <img
+              src="assets/images/social-tech-reach.webp"
+              alt="Smiling marketer in purple jacket"
+            />
+            <i class="fa-brands fa-instagram ig"></i>
+            <i class="fa-brands fa-facebook fb"></i>
+          </figure>
+        </div>
+
+        <p class="tiny-note">Roloid lacinia dui posuere quis sed veh.</p>
+      </div>
+    </section>
+    <!-- faq section -->
+    <section id="faq" aria-label="Help Center FAQs">
+      <div class="container">
+        <!-- Top label + heading -->
+        <div class="faq-head">
+          <span class="label"><i aria-hidden="true">❔</i> Help Center</span>
+          <h2 class="title">
+            Answers to your analytics <span>questions</span>
+          </h2>
+          <p class="sub">
+            Cras fermentum consectetur risus, id lacinia dui posuere quis sed
+            veh.
+          </p>
+        </div>
+
+        <!-- FAQ list -->
+        <div class="faq-list">
+          <!-- Item 1 -->
+          <details class="faq">
+            <summary>
+              <span>What is social media analytics and its benefits?</span>
+            </summary>
+            <div class="answer">
+              <div>
+                <p>
+                  Integer mollis felis risus, ut convallis justo rhoncus nec.
+                  Duis scelerisque vitae purus a fringilla. Curabitur ut leo
+                  vitae est rutrum ornare ut et efficitur urna.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Item 2 (open) -->
+          <details class="faq" open>
+            <summary>
+              <span>How can social media analytics help my business?</span>
+            </summary>
+            <div class="answer">
+              <div>
+                <p>
+                  Integer mollis felis risus, ut convallis justo rhoncus nec.
+                  Duis scelerisque vitae purus a fringilla. Curabitur ut leo
+                  vitae est rutrum ornare ut et efficitur urna. Interdum et
+                  malesuada fames ac ante ipsum primis in faucibus. Ut nunc
+                  diam, ullamcorper sed dolor bibendum, pharetra aliquam magna.
+                  Praesent porttitor dapibus neque a fermentum.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Item 3 -->
+          <details class="faq">
+            <summary>
+              <span>Which social media platforms can be analyzed?</span>
+            </summary>
+            <div class="answer">
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean luctus nibh id urna placerat, vitae tempus neque
+                  tempus.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Item 4 -->
+          <details class="faq">
+            <summary>
+              <span
+                >Is my personal information secure during data analysis?</span
+              >
+            </summary>
+            <div class="answer">
+              <div>
+                <p>
+                  Sed venenatis nisi et lectus rutrum, vitae ultrices nisi
+                  dignissim. Nulla facilisi. Quisque placerat, mauris non
+                  condimentum aliquet, lectus nulla luctus quam.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <section id="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <!-- LEFT: brand + newsletter -->
+          <div class="footer-left">
+            <a href="#" class="brand" aria-label="Analyx home">
+              <span class="logo" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="54" height="54">
+                  <defs>
+                    <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#8b5cf6" />
+                      <stop offset="1" stop-color="#6e56ef" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M6 26L16 6l10 20h-4l-2.4-5H12.4L10 26H6Zm8.4-8h3.2L16 13l-1.6 5Z"
+                    fill="url(#gA)"
+                  />
+                </svg>
+              </span>
+              <strong class="name">Analyx</strong>
+            </a>
+
+            <section class="newsletter" aria-label="Subscribe">
+              <h4 class="h">Subscribe Our Newsletter</h4>
+              <form class="form" action="#" method="post">
+                <label for="f-email" class="sr-only">Email address</label>
+                <input
+                  id="f-email"
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email"
+                />
+                <button type="submit" class="btn">Send</button>
+              </form>
+              <p class="desc">
+                Lorem ipsum dolor consectetur seduteten, consectetur dolfacilisi
+                amet.
+              </p>
+            </section>
+          </div>
+
+          <!-- RIGHT: heading + columns -->
+          <div class="footer-right">
+            <div class="heading">
+              <span class="label"
+                ><i aria-hidden="true">✉</i> Gain Competitive Edge</span
+              >
+              <h2 class="title">Boost Insights!</h2>
+            </div>
+
+            <div class="cols">
+              <nav class="links" aria-label="Quick Links">
+                <h4 class="h">Quick Links</h4>
+                <ul class="list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </nav>
+
+              <section class="contact" aria-label="Contact & Support">
+                <h4 class="h">Contact &amp; Support</h4>
+                <ul class="table">
+                  <li>+91-9123456789</li>
+                  <li>+91-9123456789</li>
+                  <li>yourname@domainname.com</li>
+                  <li>E-123, ABC Plaza, XYZ Street, New Delhi - 110077</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM STRIP -->
+        <div class="foot-bottom">
+          <p class="copy">Copyright © 2023 Jegtheme. All rights reserved.</p>
+          <ul class="socials" aria-label="Social media">
+            <li>
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

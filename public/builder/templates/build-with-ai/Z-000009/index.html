@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Yash coching centre  - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #3272b8;
+      --secondary-colors: #070F2B;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Barlow,Roboto,sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #3272b8;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #3272b8;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Sora,DM Sans,Inter !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #070F2B !important;
+      font-family: Space Grotesk,Manrope,Inter !important;
+      border: 1px solid #070F2B !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #070F2B;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Yash coching centre 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#contact">Contact</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#products">Products</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="btn primary-btn py-2 px-4">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #3272b8;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #3272b8;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+      
+         <!-- Creative -->
+
+<section class=" hero-zigrow-section_7 d-flex align-items-center">
+  <div class="hero-gradient-circle"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-6 text-content position-relative">
+        <span class="agency-badge"><i class="bi bi-star-fill me-1"></i> Yash coching centre </span>
+
+      <h1 class="main-heading">
+  
+  Achieve Academic Success with Yash <span class=" gradient-text">Coaching Centre</span>
+</h1>
+
+
+   
+
+        <p class="desc mt-3">
+         Join our supportive learning environment to enhance your knowledge, clarify doubts, and strengthen your academic skills with expert guidance.
+        </p>
+
+        <div class="cta-buttons d-flex align-items-center gap-3 mt-4">
+          <a href="#" class="btn primary-btn px-5 py-3 fw-semibold d-inline-flex align-items-center">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Read More
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Image Grid -->
+      <div class="col-lg-6 position-relative">
+    <div class="image-grid">
+  <div class="position-relative">
+    <img src="https://images.unsplash.com/photo-1519662978799-2f05096d3636?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzU1ODYyNDE3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-tall" />
+    <span class="img-credit">
+      Photo by <a 
+        href="https://unsplash.com/@martenbjork?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Marten Bjork
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="position-relative">
+    <img src="https://images.unsplash.com/photo-1528262004378-a108d795029c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGVzaWdufGVufDB8fHx8MTc1NTg2MjA0MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-square" />
+    <span class="img-credit">
+      Photo by  <a 
+        href="https://unsplash.com/@jasonwong23?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jason W
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="position-relative">
+    <img src="https://images.unsplash.com/photo-1643155316516-690b5d913c49?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NTU4NjI0MTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-square" />
+    <span class="img-credit">
+      Photo by <a 
+        href="https://unsplash.com/@imperioame?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mario Amé
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="position-relative">
+    <img src="https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzU1ODYyNDE3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-tall" />
+    <span class="img-credit">
+      Photo by <a 
+        href="https://unsplash.com/@getrodeo?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Rodeo Project Management Software
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-zigrow-section_7 {
+  background: #fefefe;
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+
+
+.hero-gradient-circle {
+  position: absolute;
+  top: -100px;
+  right: -180px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle,  var(--primary-colors) ,var(--secondary-colors)); /* replace with your colors */
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.8; /* optional: for a subtle effect */
+  pointer-events: none;
+}
+
+.agency-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.main-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-line {
+  margin-top: 0.5rem;
+}
+
+.gradient-text {
+  font-size: 4.1rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary-colors) ,var(--secondary-colors));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.curved-arrow {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin-top: 20px;
+  color: #444;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  margin-top: 20px;
+}
+
+.img-tall {
+  /* height: 320px; */
+  aspect-ratio: 11/14;
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.img-square {
+  /* height: 180px; */
+  aspect-ratio: 11/14;
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.image-grid img:nth-child(2),
+.image-grid img:nth-child(4) {
+  margin-top: -90px; /* Adjust this value as needed */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .gradient-text {
+    font-size: 2.2rem;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 2rem;
+  }
+
+  .image-grid img:nth-child(2),
+.image-grid img:nth-child(4) {
+  margin-top: 0px; /* Adjust this value as needed */
+}
+
+.hero-gradient-circle{
+  display: none;
+}
+}}
+
+</style>
+            
+               <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image shadow-lg position-relative">
+  <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NTU4NjIwNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+      href="https://unsplash.com/@jasongoodman_youxventures?utm_source=zigrow&utm_medium=referral" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Jason Goodman
+    </a> on 
+    <a 
+      href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Unsplash
+    </a>
+  </div>
+
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-3">
+            About Us
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted mb-4">
+            At Yash Coaching Centre, we provide a focused environment for students to excel academically. Our experienced teachers offer personalized attention to ensure every learner&#39;s needs are met.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Personalized Attention</h6>
+                <p class="mb-0 para-muted font-body">Every student receives tailored guidance to address their unique learning needs and challenges.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Expert Teachers</h6>
+                <p class="mb-0 para-muted font-body">Our experienced educators are committed to providing high-quality instruction and support.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Structured Sessions</h6>
+                <p class="mb-0 para-muted font-body">We offer well-organized study sessions that enhance learning and retention of knowledge.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Supportive Environment</h6>
+                <p class="mb-0 para-muted font-body">Our center promotes a positive atmosphere where students feel encouraged to ask questions and engage.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: 2rem 0 2rem 2rem;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  transition: transform 0.4s ease;
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #070F2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: "✓";
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>
+                  
+                     <!-- CREATIVE -->
+
+<section  class="py-6 service-zigrow-section_2" id="services">
+
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="main-heading">
+        Our Educational Services
+      </h2>
+      <p class="col-md-8 mx-auto para-muted">
+        Explore the various services we offer to enhance your learning experience.
+      </p>
+    </div>
+
+    <!-- Services list -->
+    <div class="service-list">
+      
+        
+
+          <!-- single item -->
+          <div class="service-item fade-left d-flex align-items-center mb-5"
+            style="transition-delay:0.1s">
+           
+<div class="text-center me-4">
+  <img 
+    src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NTU4NjIwNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    class="service-icon mb-1" 
+    alt="Tutoring icon">
+  
+  
+    <span class="unsplash-credit d-block mt-1">
+      Photo by 
+     <a 
+        href="https://unsplash.com/@linkedinsalesnavigator?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn Sales Solutions
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+
+            <div>
+              <h5 class="fw-semibold mb-1 fs-5 para-muted">
+                Tutoring
+              </h5>
+              <p class="para-muted mb-0">
+                Our one-on-one tutoring sessions are designed to provide personalized support in various subjects, ensuring students grasp complex concepts and excel in their studies.
+              </p>
+            </div>
+          </div>
+
+          
+            <div class="accent-line mb-5"></div>
+            
+
+              
+
+          <!-- single item -->
+          <div class="service-item fade-left d-flex align-items-center mb-5"
+            style="transition-delay:0.2s">
+           
+<div class="text-center me-4">
+  <img 
+    src="https://images.unsplash.com/photo-1551135049-8a33b5883817?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25zdWx0aW5nJTIwZmlybXxlbnwwfHx8fDE3NTU4NjI0MTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    class="service-icon mb-1" 
+    alt="Group Classes icon">
+  
+  
+    <span class="unsplash-credit d-block mt-1">
+      Photo by 
+     <a 
+        href="https://unsplash.com/@officestock?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Sebastian Herrmann
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+
+            <div>
+              <h5 class="fw-semibold mb-1 fs-5 para-muted">
+                Group Classes
+              </h5>
+              <p class="para-muted mb-0">
+                Join our interactive group classes that foster collaboration and peer learning, making education engaging and effective for all students.
+              </p>
+            </div>
+          </div>
+
+          
+            <div class="accent-line mb-5"></div>
+            
+
+              
+
+          <!-- single item -->
+          <div class="service-item fade-left d-flex align-items-center mb-5"
+            style="transition-delay:0.30000000000000004s">
+           
+<div class="text-center me-4">
+  <img 
+    src="https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc1NTg2MjQxN3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    class="service-icon mb-1" 
+    alt="Test Preparation icon">
+  
+  
+    <span class="unsplash-credit d-block mt-1">
+      Photo by 
+     <a 
+        href="https://unsplash.com/@startaeteam?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Startaê Team
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+
+            <div>
+              <h5 class="fw-semibold mb-1 fs-5 para-muted">
+                Test Preparation
+              </h5>
+              <p class="para-muted mb-0">
+                We offer specialized test preparation courses to help students perform their best in exams, with strategies and practice materials tailored to their needs.
+              </p>
+            </div>
+          </div>
+
+          
+            <div class="accent-line mb-5"></div>
+            
+
+              
+
+          <!-- single item -->
+          <div class="service-item fade-left d-flex align-items-center mb-5"
+            style="transition-delay:0.4s">
+           
+<div class="text-center me-4">
+  <img 
+    src="https://images.unsplash.com/photo-1605152276897-4f618f831968?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzZXJ2aWNlJTIwYmVzdCUyMHByYWN0aWNlc3xlbnwwfHx8fDE3NTU4NjI0MTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    class="service-icon mb-1" 
+    alt="Homework Help icon">
+  
+  
+    <span class="unsplash-credit d-block mt-1">
+      Photo by 
+     <a 
+        href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Erik Mclean
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+
+            <div>
+              <h5 class="fw-semibold mb-1 fs-5 para-muted">
+                Homework Help
+              </h5>
+              <p class="para-muted mb-0">
+                Our homework assistance service ensures students receive the support they need to complete assignments accurately and on time, boosting their confidence.
+              </p>
+            </div>
+          </div>
+
+          
+            <div class="accent-line mb-5"></div>
+            
+
+              
+
+          <!-- single item -->
+          <div class="service-item fade-left d-flex align-items-center mb-5"
+            style="transition-delay:0.5s">
+           
+<div class="text-center me-4">
+  <img 
+    src="https://images.unsplash.com/photo-1677078610588-aed2834ad968?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxwcm9qZWN0JTIwbWFuYWdlbWVudHxlbnwwfHx8fDE3NTU4NjI0MTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    class="service-icon mb-1" 
+    alt="Skill Development icon">
+  
+  
+    <span class="unsplash-credit d-block mt-1">
+      Photo by 
+     <a 
+        href="https://unsplash.com/@paymo?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Paymo
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+
+            <div>
+              <h5 class="fw-semibold mb-1 fs-5 para-muted">
+                Skill Development
+              </h5>
+              <p class="para-muted mb-0">
+                We focus on developing essential academic skills such as critical thinking, problem-solving, and effective study habits to prepare students for future challenges.
+              </p>
+            </div>
+          </div>
+
+          
+
+              
+    </div>
+  </div>
+
+  <!-- ░░ STYLE ░░ -->
+  <style>
+    /* section backdrop (theme-aware) */
+   .service-zigrow-section_2 {
+      background-color: '#f5f5f5';
+    
+.unsplash-credit {
+  font-size: 0.65rem;
+  margin-top: 0.2rem;
+  color: #6c757d;
+}
+
+    .service-icon {
+      width: 156px;
+      height: 156px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+      flex-shrink: 0;
+    }
+
+    /* animated accent divider */
+    .accent-line {
+      height: 1px;
+      width: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg,
+          #3272b8,
+          #070F2B);
+      background-size: 200% 100%;
+      animation: slideLine 6s linear infinite;
+    }
+
+   . .service-item {
+      h5 {
+        color: var(--lead-color-mute);
+      }
+
+      p {
+        color: var(--para-muted);
+      }
+    }
+
+    @keyframes slideLine {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    /* reveal animation */
+    .fade-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: all .6s ease-out;
+    }
+
+    .fade-left.visible {
+      opacity: 1;
+      transform: none;
+    }}
+  </style>
+
+  <!-- ░░ JS: Reveal on scroll ░░ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('visible');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.fade-left').forEach(el => io.observe(el));
+    });
+  </script>
+</section>
+                        
+                           <section class="logo-zigrow-section_6 py-6" id="logos">
+  <div class="container text-center">
+
+    <!-- Heading -->
+    <h2 class="main-heading lh-sm mb-3">
+      Meet the teams using<br class="d-none d-md-block">
+      QuickBites to grow smarter
+    </h2>
+    <p class="lead para-muted mb-5">
+      Trusted by teams obsessed with building better products.
+    </p>
+
+    <!-- Logos -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 gap-lg-5">
+
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Styles -->
+<style>
+.logo-zigrow-section_6{
+ background: #fafafa;
+
+
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.25rem;
+  min-width:120px;
+}
+.logo-wrap img{
+  max-height:78px;
+  object-fit:contain;
+}
+.logo-wrap span{
+  margin-top:.15rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  font-size:1rem;
+  color:#000;
+  white-space:nowrap;
+}
+
+@media(max-width:575.98px){
+  .logo-wrap{min-width:100px;}
+  .logo-wrap span{font-size:.9rem;}
+}}
+</style>
+
+                              
+                                 <!-- Full-page background wrapper -->
+<section class=" py-6 product-zigrow-section_1" id="products">
+    <div class="container">
+        <!-- White rounded card -->
+        <div class="featured-products p-4 p-md-5 shadow-sm">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <div>
+                    <h5 class="fw-bold mb-1" style="color: #070F2B;">
+                        Our Study Products
+                    </h5>
+                    <p class="text-muted mb-0">
+                        Explore our educational offerings.
+                    </p>
+                </div>
+                <a href="#" class="primary-btn">
+                    Top Rated →
+                </a>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1620987278429-ab178d6eb547?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzU1ODYyMDQzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                       <a 
+        href="https://unsplash.com/@frostroomhead?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Rodion Kutsaiev
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+                                    </span>
+                                    
+                            </div>
+
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Study Materials
+                                </h6>
+                                <p class="text-muted small mb-1">
+                                    Comprehensive study materials designed to enhance understanding and retention of key concepts.
+                                </p>
+                                <p class="fw-bold mb-0">$99.99</p>
+                            </div>
+                    </div>
+
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1696452941955-0708c9ede972?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxlY29tbWVyY2UlMjBkaXNwbGF5fGVufDB8fHx8MTc1NTg2MjQxOHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                        <a 
+        href="https://unsplash.com/@santesson89?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Andrea De Santis
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+                                    </span>
+                                    
+                            </div>
+
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Online Resources
+                                </h6>
+                                <p class="text-muted small mb-1">
+                                    Access a wealth of online resources including videos, quizzes, and interactive content to support your learning.
+                                </p>
+                                <p class="fw-bold mb-0">$99.99</p>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1534243909760-a5009d375b0f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBkZXZpY2VzfGVufDB8fHx8MTc1NTg2MjQxOHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                       <a 
+        href="https://unsplash.com/@by_syeoni?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Suhyeon Choi
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+                                    </span>
+                                    
+                            </div>
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Practice Tests
+                                </h6>
+                                <p class="text-muted small mb-1">
+                                    Take advantage of our practice tests to gauge your understanding and prepare effectively for exams.
+                                </p>
+                                <p class="fw-bold mb-0">$99.99</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .product-zigrow-section_1 {
+        background: #fafafa;
+
+
+        .featured-products {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card {
+            height: 100%;
+            border-radius: 16px;
+            background-color: #f9f9f9;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-radius: 12px;
+            margin: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .featured-products {
+            background-color: #f8f9fb;
+            border-radius: 16px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            h6 {
+                color: #3272b8;
+            }
+
+            img {
+                aspect-ratio: 1/1 !important;
+            }
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+    }
+</style>
+                                    
+                                       <!-- Travel-Driven Shipping Section -->
+<!-- Why Choose Us (same grid as Travel-Driven Shipping) -->
+<section class="whyChooseUs-zigrow-section_7  py-6"id="whyChooseUs">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      
+      <!-- ▸ Left column: heading, copy, buttons -->
+      <div class="col-lg-4">
+        <div class="text-start">
+          <span class="tag">Yash coching centre </span>   <!-- keep style; text is up to you -->
+          
+          <h2 class="section-heading main-heading mt-3">Why Choose Us</h2>
+          <p class="section-subtitle fw-medium mt-2">Discover the benefits of learning with Yash Coaching Centre.</p>
+          <p class="section-description mt-3">At Yash Coaching Centre, we prioritize student success through personalized attention, experienced educators, and a supportive learning environment. Our commitment to excellence ensures that every learner achieves their academic goals confidently.</p>
+
+         
+        </div>
+      </div>
+
+      <div class="col-lg-1 d-lg-block d-none"></div> <!-- spacer stays -->
+
+      <!-- ▸ Right column: feature cards -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          
+            <div class="col-md-6">
+              <div class="feature-card h-100">
+                <div class="icon-box">
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <h5 class="feature-title">Tailored Learning</h5>
+                <p class="feature-text">We customize our teaching methods to fit the unique needs of each student, ensuring effective learning.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-100">
+                <div class="icon-box">
+                  <i class="bi bi-trophy"></i>
+                </div>
+                <h5 class="feature-title">Proven Success</h5>
+                <p class="feature-text">Our students consistently achieve high grades and excel in their academic pursuits, thanks to our effective teaching strategies.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-100">
+                <div class="icon-box">
+                  <i class="bi bi-chat-left"></i>
+                </div>
+                <h5 class="feature-title">Engaging Environment</h5>
+                <p class="feature-text">We create an engaging and interactive learning atmosphere that motivates students to participate and excel.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-100">
+                <div class="icon-box">
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h5 class="feature-title">Continuous Support</h5>
+                <p class="feature-text">Our team is dedicated to providing ongoing support to students, helping them overcome challenges and succeed.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>.whyChooseUs-zigrow-section_7 {
+  background-color: #ffffff;
+
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #444;
+  background: #f5f5f5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+ color: #070F2B;
+}
+
+.section-description {
+  font-size: 1rem;
+   color: var(--para-muted);
+  max-width: 90%;
+}
+
+.feature-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.icon-box {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+   color: #6b7280;
+  line-height: 1.45;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+}}
+</style>
+                                          
+                                             <section class="py-6 team-zigrow-section_4" id="team">
+  <div class="container-xl">
+    
+    <!-- First Row (cards 0 to 2) -->
+    <div class="team-row">
+
+      
+      
+        <article class="team-card-modern bg-glass-yellow">
+          <div class="team-content">
+            <h5 class="team-name">John Doe</h5>
+            <p class="team-role">Lead Teacher</p>
+            <p class="team-bio small">An experienced educator with over 10 years of teaching in various subjects, dedicated to student success.</p>
+          </div>
+          <img src="https://i.postimg.cc/yx8tdM89/1.png" alt="John Doe">
+        </article>
+      
+        <article class="team-card-modern bg-glass-lilac">
+          <div class="team-content">
+            <h5 class="team-name">Jane Smith</h5>
+            <p class="team-role">Math Tutor</p>
+            <p class="team-bio small">A passionate tutor specializing in mathematics, committed to making learning enjoyable and effective for students.</p>
+          </div>
+          <img src="https://i.postimg.cc/Qt0YRfJM/10.png" alt="Jane Smith">
+        </article>
+      
+        <article class="team-card-modern bg-glass-green">
+          <div class="team-content">
+            <h5 class="team-name">Emily Johnson</h5>
+            <p class="team-role">Science Tutor</p>
+            <p class="team-bio small">An expert in science education with a knack for simplifying complex concepts for better understanding.</p>
+          </div>
+          <img src="https://i.postimg.cc/Y2dTVCdx/2.png" alt="Emily Johnson">
+        </article>
+      
+    </div>
+
+    <!-- Second Row (cards 3 to 5) -->
+    <div class="team-row">
+      
+        <article class="team-card-modern bg-glass-coral">
+          <div class="team-content">
+            <h5 class="team-name">Michael Brown</h5>
+            <p class="team-role">Language Tutor</p>
+            <p class="team-bio small">A dedicated language instructor focused on enhancing communication skills and fostering a love for languages.</p>
+          </div>
+          <img src="https://i.postimg.cc/pXy3tM7M/4.png" alt="Michael Brown">
+        </article>
+      
+        <article class="team-card-modern bg-glass-cyan">
+          <div class="team-content">
+            <h5 class="team-name">John Doe</h5>
+            <p class="team-role">Lead Teacher</p>
+            <p class="team-bio small">An experienced educator with over 10 years of teaching in various subjects, dedicated to student success.</p>
+          </div>
+          <img src="https://i.postimg.cc/yx8tdM89/1.png" alt="John Doe">
+        </article>
+      
+        <article class="team-card-modern bg-glass-peach">
+          <div class="team-content">
+            <h5 class="team-name">Jane Smith</h5>
+            <p class="team-role">Math Tutor</p>
+            <p class="team-bio small">A passionate tutor specializing in mathematics, committed to making learning enjoyable and effective for students.</p>
+          </div>
+          <img src="https://i.postimg.cc/Qt0YRfJM/10.png" alt="Jane Smith">
+        </article>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+  /* ==== Glass BG Colors ==== */
+.bg-glass-yellow { background: rgba(255, 237, 163, 0.65); }
+.bg-glass-lilac  { background: rgba(221, 190, 255, 0.65); }
+.bg-glass-green  { background: rgba(198, 255, 198, 0.65); }
+.bg-glass-coral  { background: rgba(255, 176, 176, 0.65); }
+.bg-glass-cyan   { background: rgba(188, 246, 255, 0.65); }
+.bg-glass-peach  { background: rgba(255, 224, 187, 0.65); }
+.team-zigrow-section_4{
+
+
+
+.team-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .team-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575.98px) {
+  .team-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==== Grid Layout ==== */
+.team-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  backdrop-filter: blur(6px);
+}
+
+/* ==== Card Styling ==== */
+.team-card-modern {
+  border-radius: 1.5rem;
+  padding: 1.8rem 1.5rem 5.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.team-card-modern:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+/* ==== Text ==== */
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+.team-role {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+.team-bio {
+  font-size: 0.92rem;
+  color: #555;
+  max-width: 180px;
+  margin-top: 0.75rem;
+}
+
+/* ==== Avatar ==== */
+.team-card-modern img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 58%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1.25rem;
+  transition: transform 0.4s ease;
+}
+.team-card-modern:hover img {
+  transform: scale(1.07);
+}
+
+/* ==== Responsive Tweaks ==== */
+@media (max-width: 767.98px) {
+  .team-card-modern {
+    padding: 1.5rem 1.2rem 5rem;
+  }
+  .team-card-modern img {
+    width: 52%;
+    height: 60%;
+  }
+}
+}
+</style>
+                                                
+                                                  
+                                                        
+                                                               <section class="pricing-zigrow-section_3 py-6" id="pricing">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <span class="badge bg-light border px-3 py-1 text-dark fw-medium mb-3 text-uppercase small">
+        Our Pricing 🪄
+      </span>
+      <h2 class="fw-bold display-6">Access Our Private Beta</h2>
+      <p class="para-muted small mt-2">
+        Ideal for students looking for basic support in their studies with access to essential resources.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Free Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+          <h5 class="fw-semibold">Pay-as-you-go</h5>
+          <p class="para-muted small mb-3">  Ideal for students looking for basic support in their studies with access to essential resources.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹0</span>
+            <span class="para-muted small">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+    
+            <li>
+              Access to study materials
+            </li>
+            
+            <li>
+              Weekly group classes
+            </li>
+            
+            <li>
+              Homework assistance
+            </li>
+            
+            <li>
+              Monthly progress reports
+            </li>
+            
+            <li>
+              Online resources
+            </li>
+            
+            <li>
+              Dedicated support
+            </li>
+            
+            <li>
+              Flexible scheduling
+            </li>
+            
+            <li>
+              Interactive learning
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby Plan (Highlighted) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card featured h-100 position-relative">
+          <div class="highlight-tag text-center fw-semibold small">
+            Our Recommendation ✨
+          </div>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h5 class="fw-semibold">Hobby</h5>
+          <p class="para-muted small mb-3"> Best for students who want comprehensive support with personalized tutoring and additional resources.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹19</span>
+            <span class="para-muted small">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+            
+            <li>
+              All basic plan features
+            </li>
+            
+            <li>
+              One-on-one tutoring sessions
+            </li>
+            
+            <li>
+              Test preparation assistance
+            </li>
+            
+            <li>
+              Skill development workshops
+            </li>
+            
+            <li>
+              Practice tests
+            </li>
+            
+            <li>
+              Priority support
+            </li>
+            
+            <li>
+              Custom study plans
+            </li>
+            
+            <li>
+              Progress tracking
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-gem"></i></div>
+          <h5 class="fw-semibold">Premium</h5>
+          <p class="para-muted small mb-3"> Perfect for students aiming for excellence with extensive resources and personalized guidance.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹79</span>
+            <span class="para-muted small">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+           
+            <li>
+              All premium plan features
+            </li>
+            
+            <li>
+              Unlimited access to workshops
+            </li>
+            
+            <li>
+              Advanced study materials
+            </li>
+            
+            <li>
+              Personalized coaching
+            </li>
+            
+            <li>
+              Flexible learning options
+            </li>
+            
+            <li>
+              Expert guidance
+            </li>
+            
+            <li>
+              Comprehensive progress tracking
+            </li>
+            
+            <li>
+              Career counseling
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.pricing-zigrow-section_3 {
+  background: #fff;
+  color: black;
+
+
+/* ===== Card Base ===== */
+.plan-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+  border-radius: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+}
+.plan-card h5 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.plan-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.plan-card .price-label {
+  margin-top: 1rem;
+}
+.plan-card .features {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+.plan-card .features li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.plan-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== Featured Plan ===== */
+.featured {
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+.highlight-tag {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ===== Buttons ===== */
+.plan-card .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+.plan-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 575.98px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+  .plan-card .features {
+    font-size: 0.8rem;
+  }
+}}
+</style>
+
+                                                                  
+                                                                    
+                                                                          
+                                                                                 <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 py-6"id="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid rounded shadow-sm overflow-hidden">
+
+      <!-- ◼︎ Left: Contact Info -->
+      <div class="cta-info p-5">
+        <h2 class="fw-bold mb-4" style="color: #070F2B; ">Get in touch</h2>
+
+        <ul class="contact-list list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Address</h6>
+              <p>123 Business St, City</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>contact@example.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 00000 00000</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Right: Hero / CTA -->
+      <div class="cta-hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="content px-4 px-lg-5">
+          <h3 class="fw-bold mb-4 col-md-8 mx-auto">Feel Free to Contact Us Anytime</h3>
+          <a href="#" class="primary-btn">Click here for location</a>
+
+          <!-- socials -->
+          <div class="social-wrap d-flex justify-content-center gap-3 mt-5 mx-auto">
+            <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+:root{
+  --accent:  #3272b8;  /* primary brand */
+  --accent-txt: #000000;
+  --surface: #ffffff;
+  --surface-dark: #111;
+  --stroke: rgba(0,0,0,.06);
+  --bg-section: #f8f9fa;
+}
+
+/* ===================  SECTION  =================== */
+.contact-zigrow-section_3{
+  background: var(--bg-section);
+
+
+/* ---------- grid wrapper ---------- */
+.cta-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+}
+@media (max-width: 991.98px){
+  .cta-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- left panel ---------- */
+.cta-info{
+  background: var(--surface);
+}
+.cta-info h2{font-size:2.1rem}
+.contact-list li{
+  display:flex;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.contact-list .icon{
+  color:var(--accent);
+  font-size:1.2rem;
+  flex-shrink:0;
+}
+.contact-list h6{
+  font-size:.8rem;
+  letter-spacing:.05em;
+  font-weight:700;
+  margin-bottom:.25rem;
+  color:var(--accent);
+}
+.contact-list p{
+  margin:0;
+  font-size:1rem;
+  color:var(--surface-dark);
+}
+
+/* ---------- hero panel ---------- */
+.cta-hero{
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80') center / cover no-repeat;
+  min-height:420px;
+  overflow:hidden;
+}
+.cta-hero::before{
+  content:"";
+  position:absolute;inset:0;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.45);
+}
+.cta-hero .content{position:relative;z-index:1;color:#fff}
+.cta-hero h3{font-size:1.9rem;line-height:1.35}
+
+/* ---------- primary CTA button ---------- */
+.btn-cta{
+  display:inline-block;
+  padding:.85rem 2.25rem;
+  font-weight:600;
+  font-size:.9rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--accent-txt);
+  background:var(--accent);
+  border-radius:6px;
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:none;
+  text-decoration:none;
+}
+.btn-cta:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* ---------- socials ---------- */
+.social-btn{
+  width:44px;height:44px;
+  display:grid;place-content:center;
+  border-radius:50%;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.4);
+  transition:background .3s ease, transform .3s ease;
+  text-decoration: none;
+}
+.social-btn:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-3px);
+  color: white;
+}
+
+/* ===================  RESPONSIVE TWEAKS  =================== */
+@media (max-width:575.98px){
+  .cta-info h2{font-size:1.8rem}
+  .cta-hero h3{font-size:1.6rem}
+  .btn-cta{width:100%}
+}}
+
+</style>
+                                                                                    
+                                                                                      
+                                                                                        
+<footer class="footer-zigrow-section_3 py-6">
+  <div class="container">
+    <!-- Logo & Tagline Top Row -->
+    <div class="row mb-4 align-items-center justify-content-between">
+      <div class="col-md-6 mb-3 mb-md-0">
+      <h4>Yash coching centre </h4>
+   
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="footer-tagline mb-0">
+           <p class="footer-tagline">Achieve Academic Success with Yash Coaching Centre</p>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Middle Content Grid -->
+    <div class="row gy-4 justify-content-between">
+      <!-- Company -->
+      <div class="col-6 col-md-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="footer-heading">Navigation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Why Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="footer-heading">Contact</h6>
+        <ul class="list-unstyled contact-info">
+          <li><i class="bi bi-envelope"></i> contact@example.com</li>
+          <li><i class="bi bi-telephone"></i> +91 00000 00000</li>
+          <li><i class="bi bi-geo-alt"></i> 123 Business St, City</li>
+        </ul>
+      </div>
+
+      <!-- Language + Social -->
+      <div
+        class="col-md-3 d-flex flex-column align-items-md-end align-items-start gap-3"
+      >
+        <div class="social-icons d-flex gap-2">
+          <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Bottom Bar -->
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 small text-muted">
+        &copy; 2025. All rights reserved.
+      </div>
+      <div class="col-md-6 text-md-end small bottom-bar-links">
+        <a href="#" class="me-3 text-decoration-none">Terms & Conditions</a>
+        <a href="#" class="me-3 text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-decoration-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-zigrow-section_3 {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    border-radius: 5%;
+  
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .footer-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover , .bottom-bar-links a:hover {
+    color: #3272b8;
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info i {
+    color: #3272b8;
+    margin-right: 0.5rem;
+  }
+
+  .language-select select {
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .social-icons .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .social-icons .social-btn:hover {
+    background-color: #3272b8;
+    color: #fff;
+    border-color: #3272b8;
+  }
+
+  @media (max-width: 767px) {
+    .footer-tagline,
+    .custom-footer .text-md-end {
+      text-align: left !important;
+    }
+
+    .language-select {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }}
+  }
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

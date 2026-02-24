@@ -1,0 +1,3929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>makemytripvala - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #2a324a;
+      --border-radius-btn: 28px 36px 12px 24px / 18px 28px 12px 24px;
+      --box-radius: 5% 8% 5% 8% / 8% 5% 8% 5%;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FF6B6B;
+      --secondary-colors: #1A1A1A;
+      --territory-colors: #FFD93D;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 8px 18px rgba(17,24,39,.12);
+      --btn-box-shadow-hover: 0 12px 26px rgba(17,24,39,.16);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,.05), 0 8px 18px rgba(17,24,39,.10), 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent), 0 0 48px 12px color-mix(in srgb, var(--tertiary-color) 22%, transparent);
+      --shadow-section-hover: 0 2px 2px rgba(17,24,39,.06), 0 12px 26px rgba(17,24,39,.12), 0 0 0 8px color-mix(in srgb, var(--primary-colors) 22%, transparent), 0 0 64px 16px color-mix(in srgb, var(--tertiary-color) 28%, transparent);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 18px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 20px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #1A1A1A ;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Poppins ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #1A1A1A;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold " href="#">
+          makemytripvala
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-colors);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Creative -->
+
+<section
+  class="hero-zigrow-section_20 position-relative text-custom-white section-padding"
+  id="hero"
+  data-section="hero"
+>
+  <div class="container position-relative z-2">
+    <!-- Headline -->
+    <h1 class="section-heading hero-heading-20 fw-custom-bold lh-custom-sm mb-custom-4">
+      Travel Made Simple
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext col-md-7">Easily book flights, hotels, buses, and cabs. Explore exciting tour packages tailored just for you.</p>
+
+    <!-- CTA Row -->
+    <div class="d-flex align-custom-center gap-4 mt-custom-4  flex-wrap">
+      <a href="#" class="primary-btn d-inline-flex align-custom-center">
+        Learn more <span class="ms-custom-2 arrow">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating image grid -->
+  <div class="floating-images">
+    <div class="img-box img-1 position-relative img-wrapper-center">
+      <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbHxlbnwwfHx8fDE3Njc1NjU4NjF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Team Work" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@rpnickson?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Roberto Nickson
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+
+    <div class="img-box img-2 position-relative img-wrapper-center">
+      <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMHJlc29ydHxlbnwwfHx8fDE3Njc1NjU4NjF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Consulting" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@akaunas?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sasha Kaunas
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+
+    <div class="img-box img-3 position-relative img-wrapper-center">
+      <img src="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3Njc0MzgzODd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Workshop" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@jbrown1276?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jeff Brown
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+
+    <div class="img-box img-4 position-relative img-wrapper-center">
+      <img src="https://images.unsplash.com/photo-1691433317101-fe4daf64b522?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJldHJlYXR8ZW58MHx8fHwxNzY3NTY1ODYxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Office" />
+      <span class="img-credit">
+        Photo by
+        <a
+          href="https://unsplash.com/@timonreinhard?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Timon Reinhard
+        </a>
+        on
+        <a
+          href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <!-- Dashed Line SVG -->
+  <svg class="hero-path" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path
+      class="hero-path-line"
+      d="M0,220 
+       C200,160 300,280 500,220 
+       S800,160 1000,240 
+       S1200,300 1440,220"
+    />
+  </svg>
+</section>
+
+<style>
+  .hero-zigrow-section_20 {
+    background: #000;
+    min-height: 110vh;
+    position: relative;
+.hero-heading-20{
+  text-transform: capitalize;
+}
+    .world-class-tag {
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      transform: rotate(-10deg);
+      border-radius: 4px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-heading {
+      font-size: 7rem;
+      width: 100%;
+      display: block;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-subtext {
+      font-size: 1.4rem;
+      max-width: 650px;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 2;
+    }
+
+    .arrow {
+      font-size: 1.2rem;
+    }
+
+    .avatar-group {
+      display: flex;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      margin-left: -10px;
+      object-fit: cover;
+    }
+
+    .avatar:first-child {
+      margin-left: 0;
+    }
+
+    /* Floating images */
+    .floating-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      position: absolute;
+      bottom: 10%;
+      right: 180px;
+      z-index: 2;
+      width: 450px;
+    }
+
+    /* Image box styles */
+    .img-box {
+      width: 220px;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Custom positioning to stagger layout */
+    .img-1 {
+      border-top-left-radius: 30px;
+    }
+
+    .img-2 {
+      border-top-right-radius: 30px;
+    }
+
+    .img-3 {
+      /* margin-top: -60px; Move slightly upward */
+      border-bottom-left-radius: 30px;
+    }
+
+    .img-4 {
+      /* margin-top: -30px; Move slightly downward */
+      border-bottom-right-radius: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .floating-images {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 2rem;
+      }
+
+      .img-box {
+        width: 170px;
+        height: 170px;
+      }
+
+      .img-3 {
+        margin-top: 0;
+      }
+
+      .img-4 {
+        margin-top: 0;
+      }
+    }
+
+    /* Dashed path */
+    .hero-path {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      transform: translateY(-50%) skewY(14deg);
+      width: 100%;
+      height: 400px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-path-line {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.5);
+      stroke-width: 2;
+      stroke-dasharray: 10 12;
+      stroke-linecap: round;
+      animation: dashwave 12s linear infinite;
+    }
+
+    @keyframes dashwave {
+      from {
+        stroke-dashoffset: 0;
+      }
+      to {
+        stroke-dashoffset: -1200;
+      }
+    }
+
+    /* Circle CTA */
+    .circle-cta {
+      position: absolute;
+      top: 120px;
+      right: 80px;
+      width: 100px;
+      height: 100px;
+      background: #f18664;
+      border-radius: 50%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .circle-text {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      font-size: 0.6rem;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      animation: spin 10s linear infinite;
+    }
+
+    .circle-arrow {
+      background: #fcd53f;
+      color: black;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      padding: 3rem 1rem;
+
+      .section-heading {
+        font-size: 2.2rem;
+      }
+
+      .hero-subtext {
+        font-size: 0.9rem;
+      }
+
+      .floating-images {
+        position: static;
+        width: 100%;
+        margin-top: 2rem;
+        justify-content: center;
+      }
+
+      .circle-cta {
+        top: auto;
+        bottom: 100px;
+        right: 20px;
+      }
+
+      .world-class-tag {
+        top: 20px;
+        left: 20px;
+      }
+
+      .hero-path {
+        display: none;
+      }
+    }
+  }
+</style>
+   <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row align-custom-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image  position-relative img-wrapper-center">
+  <img src="https://images.unsplash.com/photo-1661574844002-996e722b6b52?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob3NwaXRhbGl0eSUyMGV4cGVyaWVuY2V8ZW58MHx8fHwxNzY3NTY1ODYxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@flint_mcburbank?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Tobias Schulz
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-custom-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-custom-3">
+            About makemytripvala
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted font-body mb-custom-4">
+            At makemytripvala, we simplify your travel experience with seamless flight, hotel, bus, and cab bookings, all in one place. Explore exciting tour packages tailored just for you.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">All-in-One Booking</h6>
+                <p class="mb-custom-0  para-muted font-body">Book flights, hotels, buses, and cabs effortlessly from a single platform.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Personalized Packages</h6>
+                <p class="mb-custom-0  para-muted font-body">Discover customized tour packages that cater to your unique travel preferences.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">24/7 Support</h6>
+                <p class="mb-custom-0  para-muted font-body">Enjoy round-the-clock customer support to assist you at any stage of your journey.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Secure Transactions</h6>
+                <p class="mb-custom-0  para-muted font-body">Experience safe and secure payment options for a worry-free booking process.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: var(--box-radius) ;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.4s ease;
+}
+.survey-image:hover{
+  box-shadow: var(--shadow-section-hover);
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--secondary-colors);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: none;
+}
+
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>   <!-- ========== Services List (service-zigrow-section_12) ========== -->
+<section class="service-zigrow-section_12 section-padding" id="services" data-section="services">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-4 mb-lg-5">
+      <h2 class="main-heading mb-custom-2">
+        <span class="d-block "
+          >Our Services</span
+        >
+      </h2>
+      <p class=" svc12-sub mx-custom-auto mb-custom-0 ">
+        Explore a range of travel solutions designed for seamless booking experiences for all your travel needs.
+      </p>
+    </div>
+    <!-- Rows (click to feature) -->
+    <div class="svc12-list">
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-0" checked />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-0">
+        <!-- number -->
+        <div class="svc12-no">01</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Flight Booking</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Easily search and book flights to your favorite destinations. Enjoy competitive prices and flexible options tailored to your travel plans.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxyb29tJTIwc2VydmljZXxlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Flight Booking"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-1"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-1">
+        <!-- number -->
+        <div class="svc12-no">02</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Hotel Booking</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Find the perfect stay with our extensive selection of hotels. Enjoy great deals and instant confirmation for a hassle-free experience.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxldmVudCUyMG1hbmFnZW1lbnR8ZW58MHx8fHwxNzY3NTY1ODYyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Hotel Booking"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-2"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-2">
+        <!-- number -->
+        <div class="svc12-no">03</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Bus Booking</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Travel conveniently with our bus booking service. Choose from various routes and schedules to suit your journey needs.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1600714480856-dc99b28892eb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxndWlkZWQlMjB0b3Vyc3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Bus Booking"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-3"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-3">
+        <!-- number -->
+        <div class="svc12-no">04</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Cab Booking</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Get around easily with our reliable cab booking service. Enjoy safe rides at competitive rates, available 24/7.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzcGElMjB0cmVhdG1lbnRzfGVufDB8fHx8MTc2NzU2NTg2Mnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Cab Booking"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-4"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-4">
+        <!-- number -->
+        <div class="svc12-no">05</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Tour Packages</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Discover exciting tour packages tailored to your interests. Explore new destinations with convenience and expert guidance.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1759038085950-1234ca8f5fed?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25jaWVyZ2UlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Tour Packages"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-5"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-5">
+        <!-- number -->
+        <div class="svc12-no">06</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Travel Insurance</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Protect your journey with our travel insurance options. Enjoy peace of mind knowing you&#39;re covered for unexpected events.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxyb29tJTIwc2VydmljZXxlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Travel Insurance"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+    </div>
+
+    
+  </div>
+</section>
+<style>
+  /* ===== service-zigrow-section_12 (scoped) ===== */
+  .service-zigrow-section_12 {
+    background: #fff;
+    color: #0f0f0f;
+  }
+  .service-zigrow-section_12 .svc12-title {
+    line-height: 1.1;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.6rem);
+  }
+  .service-zigrow-section_12 .svc12-title-italic {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .service-zigrow-section_12 .svc12-sub {
+    max-width: 820px;
+    color: var(--para-muted);
+    line-height: var(--lh-body);
+    font-size: var(--fs-sub);
+  } /* List wrapper */
+  .service-zigrow-section_12 .svc12-list {
+    margin-top: 1.25rem;
+    position: relative;
+  } /* Radios off-screen */
+  .service-zigrow-section_12 .svc12-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  } /* Row */
+  .service-zigrow-section_12 .svc12-item {
+    position: relative;
+    display: flex;
+    align-items: xcenter;
+    gap: 1.25rem;
+    padding: 24px 28px;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: var(--box-radius);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    background: #fff;
+    color: var(--secondary-colors);
+
+    @media (max-width: 435px) {
+      flex-direction: column;
+    }
+  }
+  .service-zigrow-section_12 .svc12-item:first-of-type {
+    margin-top: 0.25rem;
+  }
+  .service-zigrow-section_12 .svc12-item:hover {
+    transform: translateY(-2px);
+  } /* Number */
+  .service-zigrow-section_12 .svc12-no {
+    min-width: 56px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #9aa0a6;
+    font-size: 1.05rem;
+  } /* Main content */
+  .service-zigrow-section_12 .svc12-main {
+    flex: 1 1 auto;
+    max-width: 820px;
+  }
+  .service-zigrow-section_12 .svc12-item-title {
+    margin: 0 0 0.35rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    font-size: clamp(1.15rem, 1.04rem + 0.6vw, 1.6rem);
+    text-transform: capitalize;
+  }
+  .service-zigrow-section_12 .svc12-item-desc {
+    color: var(--para-muted);
+    line-height: 1.75;
+    font-size: var(--fs-body);
+  } /* Arrow circle */
+  .service-zigrow-section_12 .svc12-go {
+    margin-left: auto;
+
+    @media (max-width: 435px) {
+        margin: auto;
+    }
+  }
+  .service-zigrow-section_12 .svc12-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 2px solid #1d1f23;
+    color: #1d1f23;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .service-zigrow-section_12 .svc12-circle .bi {
+    font-size: 1.25rem;
+  }
+  .service-zigrow-section_12 .svc12-item:hover .svc12-circle {
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_12 .svc12-item:not(.is-active):hover .svc12-circle {
+    background: #0f0f0f;
+    color: #fff;
+    border-color: #0f0f0f;
+  } /* Floating image (hidden by default) */
+  .service-zigrow-section_12 .svc12-photo {
+    position: absolute;
+    right: 110px;
+    top: -22px;
+    width: 180px;
+    height: 130px;
+  border-radius: var(--box-radius);
+    overflow: hidden;
+    transform: rotate(-6deg);
+    box-shadow: var(--shadow-section-hover);
+    display: none;
+  }
+  .service-zigrow-section_12 .svc12-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  
+  /* 1) image taps ko block na kare */
+.service-zigrow-section_12 .svc12-photo {
+  pointer-events: none;          /* image par tap/click pass-through */
+}
+
+/* 2) kabhi-kabhi absolute image se horizontal scroll aata hai */
+.service-zigrow-section_12 .container {
+  overflow-x: clip;              /* or hidden; clip is safer for iOS bounce */
+}
+
+/* 3) predictable sizing (CLS kam) */
+.service-zigrow-section_12 .svc12-photo {
+  aspect-ratio: 18 / 13;         /* 180x130 ka ratio maintain */
+}
+.service-zigrow-section_12 .svc12-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4) tablet range (<=1200) par image ko zyada right na dhakelna */
+@media (max-width: 1199.98px) {
+  .service-zigrow-section_12 .svc12-photo {
+    right: 48px;                 /* pehle 84px tha; thoda safe margin */
+  }
+}
+
+/* 5) mobile par waise bhi hide hi rakhna (aapke code mein already hai) */
+@media (max-width: 991.98px) {
+  .service-zigrow-section_12 .svc12-photo {
+    display: none ;    /* ensure specificity wins */
+  }
+}
+/* ====== ACTIVE STATE (when its radio is checked) ====== */
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item {
+    background: #0f0f0f;
+    color: #fff;
+    border: none;
+     box-shadow: var(--shadow-section);
+
+    margin: 18px 0;
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-no {
+    color: #dfe3ea;
+  }
+  .service-zigrow-section_12
+    .svc12-radio:checked
+    + .svc12-item
+    .svc12-item-desc {
+    color: #cfd3da;
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-circle {
+    background: #fff;
+    border-color: #fff;
+    color: #0f0f0f;
+     box-shadow: var(--shadow-section);
+
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-photo {
+    display: block;
+  } /* Divider line after featured */
+  .service-zigrow-section_12
+    .svc12-radio:checked
+    + .svc12-item
+    + .svc12-radio
+    + .svc12-item {
+    border-top: 1px solid #eee;
+  } /* CTA */
+
+</style>
+   <section class="logo-zigrow-section_6 section-padding" id="logos" data-section="logos">
+  <div class="container text-custom-center">
+
+    <div class="row">
+      <div class="col-12">
+        <h2 class="main-heading lh-custom-sm mb-custom-3">
+          Meet the teams using <br class="d-none d-md-block">
+          QuickBites to grow smarter
+        </h2>
+        <p class="lead-custom para-muted font-subheading mb-custom-5">
+          Trusted by teams obsessed with building better products.
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-custom-center g-4">
+
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 🎨 Styles -->
+<style>
+.logo-zigrow-section_6{
+ background: #fafafa;
+
+
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.25rem;
+  min-width:120px;
+}
+.logo-wrap img{
+  height:78px;
+  object-fit:cover;
+}
+.logo-wrap span{
+  margin-top:.15rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  font-size:1rem;
+  color:#000;
+  white-space:nowrap;
+}
+
+@media(max-width:575.98px){
+  .logo-wrap{min-width:100px;}
+  .logo-wrap span{font-size:.9rem;}
+}}
+</style>
+   <!-- Full-page background wrapper -->
+<section class="section-padding product-zigrow-section_4" id="products" data-section="products">
+  <div class="container">
+    <!-- White rounded card -->
+    <div class="featured-products p-custom-4 p-md-custom-5">
+      <!-- Header -->
+      <div class="d-flex justify-custom-between align-custom-center mb-custom-4 flex-wrap gap-3">
+        <div>
+          <h5 class="fw-custom-bold mb-custom-1" style="color: var(--secondary-colors);">
+            Explore Our Travel Services
+          </h5>
+          <p class="para-muted mb-custom-0 ">Convenient bookings for all your travel needs</p>
+        </div>
+
+        <!-- Updated button: new text + WhatsApp icon -->
+        <a href="https://wa.me/911234567890" target="_blank"
+           class="primary-btn d-inline-flex align-custom-center gap-2">
+          <i class="bi bi-whatsapp"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Product Grid: now 6 cards with perfect spacing -->
+      <div class="row g-4">
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1710378439817-6159c79bda03?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob3RlbCUyMGFtZW5pdGllc3xlbnwwfHx8fDE3Njc1NjU4NjN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Flight Booking"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@mas_wibi?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Samuel Wibisono</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Flight Booking</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Find the best flight deals and book your journey effortlessly.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1759563871411-a7a4a926e58a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxleGNsdXNpdmUlMjBvZmZlcnN8ZW58MHx8fHwxNzY3NTY1ODYzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Hotel Booking"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@laurachouette?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Laura Chouette</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Hotel Booking</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Choose from a wide range of hotels to suit your stay.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1515711660811-48832a4c6f69?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxnaWZ0JTIwc2hvcHxlbnwwfHx8fDE3Njc1NjU4NjN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Bus Booking"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@ellentanner?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Ellen Tanner</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Bus Booking</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Book comfortable bus rides for your travel adventures.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1661260518151-114b0c165416?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsb2NhbCUyMHByb2R1Y3RzfGVufDB8fHx8MTc2NzU2NTg2M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Cab Booking"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@zyteng?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Kelvin Zyteng</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Cab Booking</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Get reliable cab services for your local transportation needs.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1522199710521-72d69614c702?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBlc3NlbnRpYWxzfGVufDB8fHx8MTc2NzU2NTg2M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Tour Packages"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@anete_lusina?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Anete Lūsiņa</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Tour Packages</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Explore curated tour packages for unforgettable experiences.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1710378439817-6159c79bda03?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob3RlbCUyMGFtZW5pdGllc3xlbnwwfHx8fDE3Njc1NjU4NjN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Group Bookings"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@mas_wibi?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Samuel Wibisono</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Group Bookings</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Easily manage bookings for large groups with special rates.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .product-zigrow-section_4 {
+    background: #fafafa;
+  }
+
+  .product-zigrow-section_4 .featured-products {
+    background-color: #ffffff;
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+  }
+
+  .product-zigrow-section_4 .product-card {
+    height: 100%;
+    border-radius: var(--box-radius);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-zigrow-section_4 .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .product-zigrow-section_4 .product-card img {
+    width: 100%;
+    height: 100%;
+    height:255px;
+    object-fit: cover;
+    border-radius: var(--box-radius);
+    aspect-ratio: 1/1 ; /* square thumbs for clean grid */
+  }
+
+  ..product-zigrow-section_4 .card-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-radius: var(--box-radius);
+    margin: 1rem;
+    box-shadow: var(--shadow-section);
+  }
+
+  /* small-custom tweak so overlay doesn't overflow on tiny screens */
+  @media (max-width: 575.98px) {
+    .product-zigrow-section_4 .card-overlay { margin: .75rem; }
+  }
+
+  /* WhatsApp icon spacing inside button */
+  .primary-btn .bi { line-height: 1; }
+
+  /* Optional: make the primary button pop a bit */
+  .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+  }
+
+  /* Unsplash credit badge style (if you want it subtle) */
+  .img-credit {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    font-size: .65rem;
+    padding: .2rem .4rem;
+    border-radius: .25rem;
+  }
+</style>
+   <!-- Travel-Driven Shipping Section -->
+<!-- Why Choose Us (same grid as Travel-Driven Shipping) -->
+<section class="whyChooseUs-zigrow-section_7  section-padding"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container">
+    <div class="row align-custom-center gy-5">
+      
+      <!-- ▸ Left column: heading, copy, buttons -->
+      <div class="col-lg-4">
+        <div class="text-custom-start">
+          <span class="tag">makemytripvala</span>   <!-- keep style; text is up to you -->
+          
+          <h2 class="main-heading mt-custom-3 ">Why Choose Us</h2>
+          <p class="section-subtitle fw-custom-normal mt-custom-2 ">Experience seamless travel planning with our comprehensive booking solutions.</p>
+          <p class="section-description mt-custom-3 ">At makemytripvala, we simplify your travel experience with easy-to-use booking services for flights, hotels, buses, and more.</p>
+
+         
+        </div>
+      </div>
+
+      <div class="col-lg-1 d-lg-block d-none"></div> <!-- spacer stays -->
+
+      <!-- ▸ Right column: feature cards -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-airplane-engines"></i>
+                </div>
+                <h5 class="feature-title">Easy Flight Booking</h5>
+                <p class="feature-text">Book your flights effortlessly with our user-friendly platform, ensuring you find the best deals and convenient schedules for your travels.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-house"></i>
+                </div>
+                <h5 class="feature-title">Comfortable Hotels</h5>
+                <p class="feature-text">Choose from a wide range of hotels that cater to every budget, ensuring a comfortable stay wherever your journey takes you.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-bus-front"></i>
+                </div>
+                <h5 class="feature-title">Reliable Bus Services</h5>
+                <p class="feature-text">Travel conveniently with our reliable bus booking options, offering various routes and schedules to fit your travel plans.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <h5 class="feature-title">Convenient Cab Booking</h5>
+                <p class="feature-text">Enjoy hassle-free cab bookings with just a few clicks, ensuring you have reliable transportation at your fingertips during your trip.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>.whyChooseUs-zigrow-section_7 {
+  background-color: #ffffff;
+
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #444;
+  background: #f5f5f5;
+  padding: 6px 14px;
+ border-radius: var(--box-radius);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+ color: var(--lead-custom-color-mute);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  margin-bottom: 8px;
+
+}
+
+.section-description {
+  font-size: var(--fs-body);
+   color: var(--para-muted);
+  max-width: 90%;
+}
+
+.feature-card {
+  background-color: #f9f9f9;
+ border-radius: var(--box-radius);
+  padding: 25px 20px;
+  box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+.icon-box {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--lead-custom-color-mute);
+  margin-bottom: 6px;
+}
+
+.feature-text {
+  font-size: var(--fs-body-sm);
+   color: var(--para-muted);
+  line-height: 1.45;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+}}
+</style>   
+<section class=" team-zigrow-section_2 section-padding" id="team" data-section="team">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-custom-center mb-custom-5">
+      <small class="section-subtitle text-custom-uppercase fw-custom-semibold">Our Team</small>
+      <h2 class="fw-custom-bold display-custom-6 mt-custom-2  main-heading">   Meet Our Team</h2>
+      <p class="para-muted mt-custom-3  col-md-8 mx-custom-auto font-subheading">
+   Our team is passionate about making your travel plans seamless and enjoyable, ensuring you have the best experience possible. 
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/Kv4g4kN0/1.png" class="team-img mb-custom-3" alt="Ahmed Kamal">
+          <h6 class="fw-custom-bold mb-custom-0  font-body-sm"> Aditi Sharma</h6>
+          <p class="para-muted font-body mb-custom-0 ">CEO &amp; Founder</p>
+          
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/fWqV4WNm/10.png" class="team-img mb-custom-3" alt="Mona Zaghloul">
+          <h6 class="fw-custom-bold font-body-sm mb-custom-0 "> Rajiv Mehta</h6>
+          <p class="para-muted font-body mb-custom-0 ">Operations Manager</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/gk5Lhztm/2.png" class="team-img mb-custom-3" alt="Ali Anoer">
+           <h6 class="fw-custom-bold font-body-sm mb-custom-0 "> Nisha Patel</h6>
+          <p class="para-muted font-body mb-custom-0 ">Customer Support Head</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-zigrow-section_2 {
+    background-color: var(--theme-bg);
+  
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .team-card {
+    background-color: #fff;
+      border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+    transition: all 0.3s ease;
+    h6{
+      color: var(--secondary-colors);
+    }
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+         border-radius: var(--box-radius);
+    transition: 0.3s ease;
+  }
+
+  .team-card:hover .team-img {
+    filter: brightness(1.05);
+  }
+
+  h2 {
+    color: var(--secondary-colors);
+  }
+
+  @media (max-width: 768px) {
+    .team-img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .team-img {
+      height: 250px;
+    }
+  }}
+</style>
+   <section class="portfolio-zigrow-section_1 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">Our Exciting Projects</h2>
+      <p class="section-subtitle">Air Travel</p>
+    </div>
+
+    <!-- gy-4 => vertical spacing between rows, gx-0 => no horizontal gap (same as pehle) -->
+    <div class="row  g-4">
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1660662735785-6e7c067d6cd0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob3RlbCUyMGludGVyaW9yc3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Flight Booking System"
+            />
+            <div class="area-name"><span>Flight Booking System</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@peek_a_boo_who?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Tao Yuan
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjByZXN0YXVyYW50fGVufDB8fHx8MTc2NzU2NTg2Mnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Hotel Reservation Platform"
+            />
+            <div class="area-name"><span>Hotel Reservation Platform</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@ninjason?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Jason Leung
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1702338584425-45800ec02b9d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzY2VuaWMlMjB2aWV3c3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Bus Ticket Service"
+            />
+            <div class="area-name"><span>Bus Ticket Service</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@seth_the_linux_nut?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Seth Wickham
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1730367795513-7c588b217f93?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxldmVudCUyMHNwYWNlc3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Cab Booking App"
+            />
+            <div class="area-name"><span>Cab Booking App</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@dark_ace_07?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Dark Ace Studios
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1751814584570-0e42f485c237?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHx0b3VyaXN0JTIwYXR0cmFjdGlvbnN8ZW58MHx8fHwxNzY3NTY1ODYyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Tour Package Deals"
+            />
+            <div class="area-name"><span>Tour Package Deals</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@chocolate_milk_denmark?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                GWANGJIN GO
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1660662735785-6e7c067d6cd0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob3RlbCUyMGludGVyaW9yc3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Travel Itinerary Planner"
+            />
+            <div class="area-name"><span>Travel Itinerary Planner</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@peek_a_boo_who?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Tao Yuan
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjByZXN0YXVyYW50fGVufDB8fHx8MTc2NzU2NTg2Mnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Customer Review Portal"
+            />
+            <div class="area-name"><span>Customer Review Portal</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@ninjason?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Jason Leung
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1702338584425-45800ec02b9d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzY2VuaWMlMjB2aWV3c3xlbnwwfHx8fDE3Njc1NjU4NjJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Special Offers Section"
+            />
+            <div class="area-name"><span>Special Offers Section</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@seth_the_linux_nut?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Seth Wickham
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  }
+
+  .section-subtitle {
+    color: var(--lead-custom-color-mute);
+    font-size: var(--fs-sub);
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }
+</style>
+   <section class="testimonial-zigrow-section_9 section-padding"id="testimonials"  data-section="testimonials">
+  <div class="container">
+    <h2 class="text-custom-center  main-heading mb-custom-2">What Our Clients Say</h2>
+     <p class="para-muted text-custom-center font-subheading mb-custom-5">Hear from our satisfied travelers about their experiences with us.</p>
+    <div class="row justify-custom-center g-4">
+
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/Kv4g4kN0/1.png" class="client-img mb-custom-3" alt="Anita Sharma"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Anita Sharma</h5>
+            <p class="para-muted font-body-sm">
+              MakeMyTripVala made my travel planning effortless. Their service was quick, and I found the best deals!
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/fWqV4WNm/10.png" class="client-img mb-custom-3" alt="Raj Patel"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Raj Patel</h5>
+            <p class="para-muted font-body-sm">
+              I booked a last-minute flight and hotel. The process was seamless, and I saved a lot of money!
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/gk5Lhztm/2.png" class="client-img mb-custom-3" alt="Sita Verma"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Sita Verma</h5>
+            <p class="para-muted font-body-sm">
+              Our family trip was amazing! The cab service was prompt, and the hotel was perfect for us.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/TPjKBrd3/3.png" class="client-img mb-custom-3" alt="Karan Mehta"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Karan Mehta</h5>
+            <p class="para-muted font-body-sm">
+              I loved the tour packages offered. Everything was well-organized, and I had a fantastic experience!
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/JhCyTTWF/4.png" class="client-img mb-custom-3" alt="Neha Joshi"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Neha Joshi</h5>
+            <p class="para-muted font-body-sm">
+              As a solo traveler, I felt safe and well taken care of. Highly recommend their services!
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/RZH6Qk2f/5.png" class="client-img mb-custom-3" alt="Vikram Singh"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Vikram Singh</h5>
+            <p class="para-muted font-body-sm">
+              MakeMyTripVala exceeded my expectations! Their customer support was outstanding, making my trip unforgettable.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .testimonial-zigrow-section_9 {
+  background-color: #ffffff;
+
+.client-card {
+  background: #fff;
+   border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h5{
+    color: var(--secondary-colors);
+
+  }
+  p{
+    color: var(  --para-muted);
+  }
+}
+.client-card:hover {
+  transform: translateY(-6px);
+       box-shadow: var(--shadow-section-hover);
+}
+
+/* Image Styling */
+.client-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+   border-radius: var(--box-radius);
+     box-shadow: var(--shadow-section);
+  transition: transform 0.3s;
+}
+.client-card:hover .client-img {
+  transform: scale(1.05);
+}
+
+/* Star rating */
+.star-rating i {
+  color: var(--primary-colors);
+  font-size: 1.2rem;
+}
+
+/* Responsive text alignment fix for small-custom screens */
+@media(max-width: 575.98px){
+  .client-card {
+    padding: 2rem 1.5rem;
+  }
+}}
+
+</style>   <section class="pricing-zigrow-section_2 section-padding" id="pricing" data-section="pricing">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="main-heading mb-custom-2">Affordable Pricing Plans</h2>
+      <p class="lead-custom para-muted font-subheading">Choose the best plan for your travel needs.</p>
+    </div>
+
+    <!-- Plans -->
+    <div class="row justify-custom-center g-4">
+      
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="plan-card 
+                      bg-custom-light-blue 
+                       
+                       
+                      h-custom-100">
+            
+            <div class="plan-header">
+              <span class="plan-icon">
+                🔆
+              </span>
+              <h5 class="fw-custom-semibold">
+                Basic Plan
+                
+              </h5>
+              <p class="plan-sub ">Ideal for occasional travelers seeking flexibility.</p>
+              <h3 class=" mt-custom-2  price">₹499/month</h3>
+            </div>
+
+            <div class="plan-body">
+              
+                <a href="#" class="btn 
+                                btn-outline-dark 
+                                w-custom-100 mb-custom-3">
+                  Get Started
+                </a>
+              
+
+              <ul class="plan-features list-unstyled">
+                
+                  <li class="">Access to flight booking</li>
+                
+                  <li class="">Hotel booking discounts</li>
+                
+                  <li class="">Bus booking options</li>
+                
+                  <li class="">Cab booking services</li>
+                
+                  <li class="">Exclusive tour packages</li>
+                
+                  <li class="">24/7 customer support</li>
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="plan-card 
+                       
+                      pro-plan position-relative shadow-lg text-custom-white 
+                       
+                      h-custom-100">
+            
+            <div class="plan-header">
+              <span class="plan-icon">
+                ⭐
+              </span>
+              <h5 class="fw-custom-semibold">
+                Pro Plan
+                
+                  <span class="badge para-muted ms-custom-2" style="background: var(--theme-bg);">Most Popular</span>
+                
+              </h5>
+              <p class="plan-sub text-custom-white">Perfect for frequent travelers wanting more perks.</p>
+              <h3 class=" mt-custom-2  highlight-price">₹999/month</h3>
+            </div>
+
+            <div class="plan-body">
+              
+                <a href="#" class="btn 
+                                btn-light  fw-custom-semibold 
+                                w-custom-100 mb-custom-3">
+                  Sign Up Now
+                </a>
+              
+
+              <ul class="plan-features list-unstyled">
+                
+                  <li class="text-custom-white">All features from Basic Plan</li>
+                
+                  <li class="text-custom-white">Priority customer service</li>
+                
+                  <li class="text-custom-white">Loyalty rewards program</li>
+                
+                  <li class="text-custom-white">Exclusive deals on hotels</li>
+                
+                  <li class="text-custom-white">Free cab rides on weekends</li>
+                
+                  <li class="text-custom-white">Access to premium tour packages</li>
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="plan-card 
+                       
+                       
+                      bg-cream 
+                      h-custom-100">
+            
+            <div class="plan-header">
+              <span class="plan-icon">
+                💎
+              </span>
+              <h5 class="fw-custom-semibold">
+                Enterprise Plan
+                
+              </h5>
+              <p class="plan-sub ">Best value for travel enthusiasts with comprehensive options.</p>
+              <h3 class=" mt-custom-2  price">₹1499/month</h3>
+            </div>
+
+            <div class="plan-body">
+              
+                <a href="#" class="btn 
+                                btn-outline-dark 
+                                w-custom-100 mb-custom-3">
+                  Join Today
+                </a>
+              
+
+              <ul class="plan-features list-unstyled">
+                
+                  <li class="">All features from Premium Plan</li>
+                
+                  <li class="">Personal travel consultant</li>
+                
+                  <li class="">Early access to deals</li>
+                
+                  <li class="">Family package discounts</li>
+                
+                  <li class="">Free cancellations on bookings</li>
+                
+                  <li class="">Customized travel itineraries</li>
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --light-blue: #ebf4f4;
+    --primary: var(--primary-colors);
+    --cream: #fdf9f0;
+    --text: #1a1a1a;
+    --btn-hover-color: #3498db;
+  }
+
+  /* ====== Section Styling ====== */
+  .pricing-zigrow-section_2 {
+    background-color: #f4f4f4;
+    color: var(--text);
+    border-top-left-radius: var(--box-radius);
+    border-top-right-radius: var(--box-radius);
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+  }
+
+  /* ====== Plan Card ====== */
+  .plan-card {
+        border-radius: var(--box-radius);
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-section);
+  }
+
+  .plan-card:hover {
+    transform: translateY(-8px);
+     box-shadow: var(--shadow-section-hover);
+  }
+
+  /* ====== Plan Header ====== */
+  .plan-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-icon {
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .plan-sub {
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 1rem;
+  }
+  .highlight-price{
+     font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 1rem;
+  }
+
+  /* ====== Feature List ====== */
+  .plan-features li {
+    font-size: var(--fs-body);
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: .6rem;
+    font-weight: 400;
+    color: #444;
+  }
+
+  .plan-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* ====== Colors ====== */
+  .bg-custom-light-blue {
+    /* background-color: var(--light-blue); */
+     background: linear-gradient(90deg,  color-mix(in srgb, var(--primary-colors) 10%, #fff));
+  }
+
+  .bg-cream {
+     background: linear-gradient(90deg,  color-mix(in srgb, var(--primary-colors) 10%, #fff));
+  }
+
+  .pro-plan {
+    background-color: var(--primary);
+      border-radius: var(--box-radius);
+    color: #fff;
+    box-shadow: var(--shadow-section);
+  }
+
+  .pro-plan:hover {
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  /* ====== Button Styles ====== */
+  .btn {
+    border-radius: var(--border-radius-btn);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.85rem 2.2rem;
+  }
+
+  .btn-outline-dark {
+    border: 2px solid #333;
+    color: #333;
+    background-color: transparent;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .btn-light {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .btn-light:hover {
+    background-color: #fff;  /* White background for Pro Plan button on hover */
+    color: black ;  /* Text remains primary color */
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  /* ====== Responsive ====== */
+  @media (max-width: 575.98px) {
+    .plan-header h5 {
+      font-size: 1.15rem;
+    }
+    .plan-sub {
+      font-size: 0.85rem;
+    }
+    .price {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+   <section class="faq-zigrow-section_1 section-padding bg-custom-light" id="faq" data-section="faq">
+  <div class="container">
+    <div class="row align-custom-start">
+
+      <!-- Left Heading -->
+      <div class="col-lg-5 mb-custom-4 mb-md-0">
+        <h2 class="faq-heading">
+          <span>Frequently</span><br>
+          <span>asked questions</span>
+        </h2>
+        <hr class="faq-divider mt-custom-3" />
+      </div>
+
+      <!-- Right Questions -->
+      <div class="col-lg-7">
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>What services do you offer?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              We provide flight, hotel, bus, cab bookings, and tour packages.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>How can I book a flight?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Simply visit our website, select your flight, and complete the booking process.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Can I cancel my booking?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Yes, you can cancel your booking according to our cancellation policy.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Do you offer customer support?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Absolutely! Our customer support team is available 24/7 to assist you.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Are there any hidden fees?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              No, we believe in transparency; all fees are clearly stated during booking.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>How do I change my booking?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Log in to your account and follow the prompts to modify your booking.
+            </p>
+
+          </div>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  .faq-zigrow-section_1 {
+    background-color: #fdfbf7;
+    color: #444;
+  
+
+  .faq-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--secondary-colors);
+    line-height: 1.3;
+    
+  }
+
+  .faq-divider {
+    border: 0;
+    height: 2px ;
+    background-color: #aaa;
+    width: 90%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-answer {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--para-muted);
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .faq-divider {
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+    }
+  }}
+</style>
+   <section class="cta-zigrow-section_4 section-padding" id="cta" data-section="cta">
+  <div class="container">
+    <div class="row align-custom-center g-4 g-lg-5">
+      
+      <!-- Text Content -->
+      <div class="col-lg-6 col-md-7 col-12">
+        <div class="content-wrap text-custom-white">
+          <h2 class="fw-custom-bold mb-custom-3">Book Your Next Adventure</h2>
+          <p class="mb-custom-5 font-body">Start planning your perfect getaway today! Discover unbeatable deals on flights, hotels, and tour packages tailored just for you. Your dream trip is just a click away!</p>
+          <a href="#" class="white-btn ">Start Booking Now</a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 col-md-5 col-12 text-custom-center">
+        <div class="image-stack img-wrapper-center">
+          <img src="https://images.unsplash.com/photo-1586800535250-5a53afa3948c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxib29rJTIweW91ciUyMHN0YXl8ZW58MHx8fHwxNzY3NTY1ODYzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="CTA Image" class="img-fluid main-img"/>
+          
+            <span class="img-credit">
+              Photo by 
+              <a href="https://unsplash.com/@jon_cast2?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                Jonathan J. Castellon
+              </a> 
+              on 
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </span>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-zigrow-section_4 {
+
+  /* max-width: 1120px; */
+  width:100%;
+  overflow: hidden;
+  position: relative;
+
+
+&::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.05);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1120px; /* now applied to container */
+  /* margin: 0 auto; */
+    background: linear-gradient(135deg, var(--territory-colors),var(--primary-colors));
+  border-radius: var(--box-radius);
+  border-bottom-right-radius: 6rem;
+  padding: 3rem 2.5rem;
+  margin: 3rem auto;
+}
+
+.content-wrap {
+  max-width: 500px;
+}
+
+.content-wrap h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.content-wrap p {
+  color: #f0f0f0;
+}
+
+
+.image-stack {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.image-stack .main-img {
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-section);
+  border: 4px solid #fff;
+  transition: transform .35s ease;
+}
+.image-stack:hover .main-img {
+  transform: scale(1.03);
+}
+
+.img-credit {
+  font-size: .75rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+}}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-zigrow-section_4 {
+    text-align: center;
+    border-bottom-right-radius: 3rem;
+    padding: 2rem 1.25rem;
+  }
+  .content-wrap {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .content-wrap h2 { font-size: 1.6rem; }
+}
+</style>
+   <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 section-padding" id="contact" data-section="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid overflow-hidden">
+      <div class="row g-0">
+        <!-- ◼︎ Left: Contact Info -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="cta-info p-custom-5 h-custom-100">
+            <h2 class="fw-custom-bold mb-custom-4" style="color: var(--secondary-colors);">Get in touch</h2>
+
+            <ul class="contact-list list-unstyled mb-custom-0 ">
+              <li>
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h6>Address</h6>
+                  <p>7 Vrundavan Complex, Radhanpur Road</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <h6>Email</h6>
+                  <p>dipak.cab24x7@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h6>Phone</h6>
+                  <p>09909427189</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ◼︎ Right: Hero / CTA -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="cta-hero d-flex flex-column justify-custom-center align-custom-center text-custom-center h-custom-100">
+            <div class="content px-custom-4 px-lg-custom-5">
+              <h3 class="fw-custom-bold mb-custom-4 col-md-8 mx-custom-auto">Feel Free to Contact Us Anytime</h3>
+              <a href="#" class="primary-btn text-custom-truncate">Click here for location</a>
+
+              <!-- socials -->
+              <div class="social-wrap d-flex justify-custom-center gap-3 mt-custom-5  mx-custom-auto">
+                <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /row -->
+    </div><!-- /cta-grid -->
+
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+  :root {
+    --primary-colors-txt: var(--theme-3);
+    --surface: #ffffff;
+    --surface-dark: #111;
+    --stroke: rgba(0,0,0,.06);
+    --bg-section: #f8f9fa;
+  }
+
+  /* ===================  SECTION  =================== */
+  .contact-zigrow-section_3 {
+    background: var(--bg-section);
+  
+
+  /* ---------- grid wrapper ---------- */
+  .cta-grid {
+    background: var(--surface);
+    box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+  }
+
+  /* ---------- left panel ---------- */
+  .cta-info {
+    background: var(--surface);
+  }
+
+  .cta-info h2 {
+    font-size: 2.1rem;
+  }
+
+  .contact-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-list .icon {
+    color: var(--accent);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-list h6 {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    font-weight: 700;
+    margin-bottom: .25rem;
+    color: var(--accent);
+  }
+
+  .contact-list p {
+    margin: 0;
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+  }
+
+  /* ---------- hero panel ---------- */
+  .cta-hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80')
+      center / cover no-repeat;
+    min-height: 420px;
+    overflow: hidden;
+  }
+
+  .cta-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,.45);
+  }
+
+  .cta-hero .content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .cta-hero h3 {
+    font-size: 1.9rem;
+    line-height: 1.35;
+  }
+
+  /* ---------- socials ---------- */
+  .social-btn {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.4);
+    transition: background .3s ease, transform .3s ease;
+    text-decoration: none;
+  }
+
+  .social-btn:hover {
+    background: rgba(255,255,255,.15);
+    transform: translateY(-3px);
+    color: #fff;
+  }
+
+  /* ===================  RESPONSIVE TWEAKS  =================== */
+  @media (max-width: 575.98px) {
+    .cta-info h2 {
+      font-size: 1.8rem;
+    }
+
+    .cta-hero h3 {
+      font-size: 1.6rem;
+    }
+
+    .btn-cta {
+      width: 100%;
+    }
+  }}
+</style>
+   <footer class="footer-zigrow-section_6" id="footer" data-section="footer">
+  <div class="container py-custom-4">
+
+    <div class="row justify-custom-between align-custom-center mb-custom-3">
+      
+      <!-- Social Icons -->
+      <div class="col-12 col-md-6 d-flex justify-custom-center justify-md-custom-start gap-3 footer-social">
+        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="col-12 col-md-6 d-flex justify-custom-center justify-md-custom-end footer-links gap-3 mt-custom-3  mt-md-0">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-custom-center small-custom pt-custom-3 border-top">
+        © 2025. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<style>
+    .footer-zigrow-section_6 {
+    background-color: var(--theme-4);
+  font-size: 0.92rem;
+    color: var(--theme-3);
+  position: relative;
+
+
+
+
+/* Social Links */
+ .footer-social a {
+  color: var(--theme-3);
+  font-size: 1.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: var(--theme-3);
+}
+
+/* Footer text links */
+.footer-links a {
+  color: var(--para-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--theme-3);
+  border-bottom: 1px solid var(--theme-3);
+}
+
+/* Bottom copyright section */
+ .text-custom-center {
+  color: var(--theme-3);
+}
+
+@media (max-width: 575.98px) {
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .d-flex {
+    /* flex-direction: column; */
+    text-align: center;
+  }
+}
+}
+</style> 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

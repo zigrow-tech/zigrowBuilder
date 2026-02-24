@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>edtech - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #8338EC;
+      --secondary-colors: #000000;
+      --territory-colors: #FF006E;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #000000 ;
+      font-family: Helvetica Neue;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Anton ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #000000;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold " href="#">
+          edtech
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-colors);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Bold -->
+<section class="hero-zigrow-section_12 d-flex align-custom-center position-relative" id="hero" data-section="hero">
+  <!-- 🔮 Optional Glass Background Blur -->
+  <div class="hero-overlay pointer-custom-none"></div>
+
+  <div class="container">
+    <div class="row justify-custom-start">
+      <div class="col-lg-7 col-md-9 col-12">
+        <div class="hero-slider">
+          <div class="slide-content p-custom-5 p-md-custom-5">
+            <h1 class="fw-custom-bold mb-custom-3 display-custom-5 display-md-4 text-custom-dark">
+              Transform Learning with Innovative EdTech Solutions
+            </h1>
+
+            <div class="gradient-line mb-custom-4"></div>
+
+            <p class="lead-custom text-custom-muted  mb-custom-4">
+              Empower students and educators with engaging tools that enhance the learning experience. Discover how our platform can make education more accessible and effective.
+            </p>
+
+            <a href="#" class="primary-btn">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span class="img-credit">
+    Photo by
+    <a
+      href="https://unsplash.com/@nci?utm_source=zigrow&utm_medium=referral"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      National Cancer Institute
+    </a>
+    on
+    <a
+      href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Unsplash
+    </a>
+  </span>
+</section>
+
+<style>
+  /* 🔳 Hero Wrapper */
+  .hero-zigrow-section_12 {
+    background: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzY3MDI5NDU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center / cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #222;
+    z-index: 1;
+  
+
+  /* 🌫 Optional: subtle blurred overlay */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+  }
+
+  /* 📦 Slide Content */
+  .slide-content {
+    max-width: 640px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: var(--box-radius);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    padding: 3rem 2.5rem;
+    z-index: 2;
+    position: relative;
+    backdrop-filter: blur(4px);
+  }
+
+  /* 🌈 Gradient Line */
+  .gradient-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-colors), var(--territory-colors));
+    border-radius: var(--box-radius);
+  }
+
+  /* ✨ Button Styling (optional, if you use .modern-btn somewhere) */
+  .modern-btn {
+    background-color: var(--primary-colors);
+    color: white;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .modern-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--primary-colors);
+    color: #fff;
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .slide-content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero-zigrow-section_12 {
+      min-height: auto;
+      padding: 80px 0;
+    }
+
+    .hero-overlay {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(2px);
+    }}
+  }
+</style>
+   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-xl-5 align-custom-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1651608670845-e124df680a27?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBjb25mZXJlbmNlfGVufDB8fHx8MTc2NzAzMDc2OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@jjenglert?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Jj Englert
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzY3MDI5NDU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@nci?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      National Cancer Institute
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzY3MDMwNzY4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@nickmorrison?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Nick Morrison
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHN0dWR5aW5nfGVufDB8fHx8MTc2NzAzMDc2OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@anniespratt?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Annie Spratt
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <p class="label">Our Goals</p>
+          <h2 class="section-heading mb-custom-4 main-heading">
+            About EdTech
+          </h2>
+          <p class=" para-muted mb-custom-4 font-body">
+            At EdTech, we are dedicated to transforming education through innovative technology. Our mission is to empower learners and educators with tools that enhance the learning experience. With a focus on accessibility and engagement, our solutions cater to diverse learning needs. Join us in shaping the future of education, one student at a time. We offer cutting-edge tools that make learning interactive and effective for all students.
+          </p>
+
+          <ul class=" feature-bullets mb-custom-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  We offer cutting-edge tools that make learning interactive and effective for all students.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our team of educators and tech experts is here to guide you every step of the way.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our platform adapts to various learning styles, ensuring everyone can thrive.
+                </li>
+                
+                  </ul>
+
+         <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ====================== service-zigrow-section_13 : START ====================== -->
+<section id="services" data-section="services" class="section-padding  service-zigrow-section_13">
+  <div class="container px-custom-3 px-md-custom-4">
+
+    
+
+    <!-- Top header row -->
+    <div class="row align-custom-end g-4">
+      <div class="col-lg-8">
+
+        <h2 class="main-heading mb-custom-2">Our Services</h2>
+        <p class="font-subheading para-muted mb-custom-0 ">Designed for educators and learners seeking innovative solutions to enhance the educational experience.</p>
+
+        <div class="d-flex align-custom-center gap-2 mt-custom-3 ">
+          <a href="#!" class="primary-btn ms-custom-1">Explore more</a>
+        </div>
+      </div>
+
+      <!-- KPI block -->
+      <div class="col-lg-4 text-lg-end">
+        <div class="service-zigrow-kpi text-lg-end">
+          <div class="service-zigrow-kpi-number">6</div>
+          <div class="small para-muted mt-custom-1 ">Services</div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- Cards grid -->
+    <div class="row g-4 g-xl-5 mt-custom-1 mt-md-4">
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="service-zigrow-card h-custom-100 position-relative overflow-hidden rounded-4">
+          <figure class="service-zigrow-figure m-0 position-relative img-wrapper-center">
+            
+
+            <img 
+              src="https://images.unsplash.com/photo-1762329388386-22bf162a9368?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlLWxlYXJuaW5nJTIwdG9vbHN8ZW58MHx8fHwxNzY3MDMwNzY5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+              alt="Online Courses" 
+              class="service-zigrow-img" 
+              loading="lazy"
+            >
+
+            <span class="service-zigrow-gradient pointer-custom-none"></span>
+            <span class="service-zigrow-shine pointer-custom-none"></span>
+
+            
+              <span class="img-credit small-custom">
+                Photo by 
+                <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Zulfugar Karimov
+                </a> on 
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+          </figure>
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-custom-semibold card-title mb-custom-2">Online Courses</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-custom-3">Engage with interactive online courses tailored to your learning style. Gain knowledge at your own pace and enhance your skills effectively.</p>
+
+            <div class="mb-custom-3 d-flex flex-wrap gap-2">
+              
+                <span class="badge service-zigrow-chip">online</span>
+              
+                <span class="badge service-zigrow-chip">courses</span>
+              
+                <span class="badge service-zigrow-chip">education</span>
+              
+            </div>
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </div> <!-- ✅ yahan div close -->
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="service-zigrow-card h-custom-100 position-relative overflow-hidden rounded-4">
+          <figure class="service-zigrow-figure m-0 position-relative img-wrapper-center">
+            
+
+            <img 
+              src="https://images.unsplash.com/photo-1761039808597-5639866bab8a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wbWVudCUyMHRyYWluaW5nfGVufDB8fHx8MTc2NzAzMDc2OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+              alt="Tutoring Services" 
+              class="service-zigrow-img" 
+              loading="lazy"
+            >
+
+            <span class="service-zigrow-gradient pointer-custom-none"></span>
+            <span class="service-zigrow-shine pointer-custom-none"></span>
+
+            
+              <span class="img-credit small-custom">
+                Photo by 
+                <a href="https://unsplash.com/@valdhy_mbemba?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Valdhy Mbemba
+                </a> on 
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+          </figure>
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-custom-semibold card-title mb-custom-2">Tutoring Services</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-custom-3">Receive personalized tutoring that focuses on your unique learning needs. Our experts are here to support your academic journey and boost your confidence.</p>
+
+            <div class="mb-custom-3 d-flex flex-wrap gap-2">
+              
+                <span class="badge service-zigrow-chip">tutoring</span>
+              
+                <span class="badge service-zigrow-chip">support</span>
+              
+                <span class="badge service-zigrow-chip">personalized</span>
+              
+            </div>
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </div> <!-- ✅ yahan div close -->
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="service-zigrow-card h-custom-100 position-relative overflow-hidden rounded-4">
+          <figure class="service-zigrow-figure m-0 position-relative img-wrapper-center">
+            
+
+            <img 
+              src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc2NzAyOTQ1OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+              alt="Resource Library" 
+              class="service-zigrow-img" 
+              loading="lazy"
+            >
+
+            <span class="service-zigrow-gradient pointer-custom-none"></span>
+            <span class="service-zigrow-shine pointer-custom-none"></span>
+
+            
+              <span class="img-credit small-custom">
+                Photo by 
+                <a href="https://unsplash.com/@cwmonty?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Chris Montgomery
+                </a> on 
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+          </figure>
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-custom-semibold card-title mb-custom-2">Resource Library</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-custom-3">Access a comprehensive library of educational resources. From articles to videos, find everything you need to support your learning goals.</p>
+
+            <div class="mb-custom-3 d-flex flex-wrap gap-2">
+              
+                <span class="badge service-zigrow-chip">resources</span>
+              
+                <span class="badge service-zigrow-chip">library</span>
+              
+                <span class="badge service-zigrow-chip">learning</span>
+              
+            </div>
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </div> <!-- ✅ yahan div close -->
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="service-zigrow-card h-custom-100 position-relative overflow-hidden rounded-4">
+          <figure class="service-zigrow-figure m-0 position-relative img-wrapper-center">
+            
+
+            <img 
+              src="https://images.unsplash.com/photo-1700616270774-c49913d89a3c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb25hbCUyMHdvcmtzaG9wc3xlbnwwfHx8fDE3NjcwMjk0NTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+              alt="Workshops" 
+              class="service-zigrow-img" 
+              loading="lazy"
+            >
+
+            <span class="service-zigrow-gradient pointer-custom-none"></span>
+            <span class="service-zigrow-shine pointer-custom-none"></span>
+
+            
+              <span class="img-credit small-custom">
+                Photo by 
+                <a href="https://unsplash.com/@nmv_0317?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Nem Malosi
+                </a> on 
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+          </figure>
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-custom-semibold card-title mb-custom-2">Workshops</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-custom-3">Participate in hands-on workshops that foster collaboration and creativity. Learn new skills and network with like-minded individuals in your field.</p>
+
+            <div class="mb-custom-3 d-flex flex-wrap gap-2">
+              
+                <span class="badge service-zigrow-chip">workshops</span>
+              
+                <span class="badge service-zigrow-chip">skills</span>
+              
+                <span class="badge service-zigrow-chip">networking</span>
+              
+            </div>
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </div> <!-- ✅ yahan div close -->
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="service-zigrow-card h-custom-100 position-relative overflow-hidden rounded-4">
+          <figure class="service-zigrow-figure m-0 position-relative img-wrapper-center">
+            
+
+            <img 
+              src="https://images.unsplash.com/photo-1758270705799-12efda48d4f4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwZW5nYWdlbWVudCUyMGFjdGl2aXRpZXN8ZW58MHx8fHwxNzY3MDMwNzY5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+              alt="Consulting Services" 
+              class="service-zigrow-img" 
+              loading="lazy"
+            >
+
+            <span class="service-zigrow-gradient pointer-custom-none"></span>
+            <span class="service-zigrow-shine pointer-custom-none"></span>
+
+            
+              <span class="img-credit small-custom">
+                Photo by 
+                <a href="https://unsplash.com/@silverkblack?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Vitaly Gariev
+                </a> on 
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+          </figure>
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-custom-semibold card-title mb-custom-2">Consulting Services</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-custom-3">Get expert advice tailored to your educational institution. Our consulting services help you implement effective strategies for growth and success.</p>
+
+            <div class="mb-custom-3 d-flex flex-wrap gap-2">
+              
+                <span class="badge service-zigrow-chip">consulting</span>
+              
+                <span class="badge service-zigrow-chip">expertise</span>
+              
+                <span class="badge service-zigrow-chip">strategy</span>
+              
+            </div>
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </div> <!-- ✅ yahan div close -->
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="service-zigrow-card h-custom-100 position-relative overflow-hidden rounded-4">
+          <figure class="service-zigrow-figure m-0 position-relative img-wrapper-center">
+            
+
+            <img 
+              src="https://images.unsplash.com/photo-1762329388386-22bf162a9368?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlLWxlYXJuaW5nJTIwdG9vbHN8ZW58MHx8fHwxNzY3MDMwNzY5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+              alt="Community Support" 
+              class="service-zigrow-img" 
+              loading="lazy"
+            >
+
+            <span class="service-zigrow-gradient pointer-custom-none"></span>
+            <span class="service-zigrow-shine pointer-custom-none"></span>
+
+            
+              <span class="img-credit small-custom">
+                Photo by 
+                <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Zulfugar Karimov
+                </a> on 
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Unsplash
+                </a>
+              </span>
+            
+          </figure>
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-custom-semibold card-title mb-custom-2">Community Support</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-custom-3">Join a vibrant community of learners and educators. Share experiences, ask questions, and find encouragement in your educational journey.</p>
+
+            <div class="mb-custom-3 d-flex flex-wrap gap-2">
+              
+                <span class="badge service-zigrow-chip">community</span>
+              
+                <span class="badge service-zigrow-chip">support</span>
+              
+                <span class="badge service-zigrow-chip">engagement</span>
+              
+            </div>
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </div> <!-- ✅ yahan div close -->
+      </div>
+      
+    </div>
+
+</section>
+<!-- ====================== service-zigrow-section_13 : END ====================== -->
+
+<style>
+  /* ---------- Layout helpers ---------- */
+  .service-zigrow-section_13 {
+    background: #fff;
+  }
+
+  .service-zigrow-section_13 .tracking-wider {
+    letter-spacing: .08em;
+  }
+
+  /* ---------- KPI (right header) ---------- */
+  /* --- KPI mimic like screenshot --- */
+  .service-zigrow-section_13 .service-zigrow-kpi-number {
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #111, var(--primary-colors));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-kpi .para-muted {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+
+
+  /* ---------- Card ---------- */
+  .service-zigrow-section_13 .service-zigrow-card {
+    background: #f8f9fb;
+    border: 1px solid #eceef2;
+      box-shadow: var(--shadow-section);
+ border-radius: var(--box-radius);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    isolation: isolate;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover {
+    transform: translateY(-6px);
+    border-color: #e2e5ea;
+     box-shadow: var(--shadow-section-hover);
+
+
+  }
+
+  /* image wrapper */
+  .service-zigrow-section_13 .service-zigrow-figure {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* display: block; */
+    transform: scale(1.02);
+    transition: transform .6s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-img {
+    transform: scale(1.08);
+  }
+
+  /* overlays */
+  .service-zigrow-section_13 .service-zigrow-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .18) 100%);
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-shine {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(120px 120px at var(--mx, 80%) var(--my, 20%), rgba(255, 255, 255, .65), rgba(255, 255, 255, 0) 60%);
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-shine {
+    opacity: 1;
+  }
+
+  /* body */
+  .service-zigrow-section_13 .service-zigrow-body {
+    padding: 1.1rem;
+
+    .card-title{
+        color: var(--secondary-colors);
+        font-size: var(--fs-sub);
+    }
+  }
+
+  @media (min-width:1200px) {
+    .service-zigrow-section_13 .service-zigrow-body {
+      padding: 1.25rem;
+    }
+  }
+
+  .service-zigrow-section_13 .service-zigrow-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body-sm);
+  }
+
+  /* chips */
+  .service-zigrow-section_13 .service-zigrow-chip {
+    background: #fff;
+    color: #111;
+    border: 1px solid #e7e9ee;
+  border-radius: var(--box-radius);
+    padding: .35rem .7rem;
+    font-weight: 500;
+  }
+
+  /* link + arrow */
+  .service-zigrow-section_13 .service-zigrow-link {
+    color: #111;
+    position: relative;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1.5px;
+    background: #111;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-link::after {
+    transform: scaleX(1);
+  }
+
+  .service-zigrow-section_13 .service-zigrow-arrow {
+    font-size: 1.25rem;
+    line-height: 1;
+    transform: translateX(0);
+    transition: transform .3s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-arrow {
+    transform: translateX(4px);
+  }
+
+  /* decorative ring */
+  .service-zigrow-section_13 .service-zigrow-ring {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(17, 17, 17, .06), rgba(17, 17, 17, 0) 60%);
+    filter: blur(2px);
+    pointer-events: none;
+    transition: transform .4s ease, opacity .4s ease;
+    opacity: .7;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-ring {
+    transform: translate(6px, -6px);
+    opacity: 1;
+  }
+
+  /* shine position fallback */
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-figure {
+    --mx: 70%;
+    --my: 30%;
+  }
+</style>      
+<section class=" team-zigrow-section_2 section-padding" id="team" data-section="team">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-custom-center mb-custom-5">
+      <small class="section-subtitle text-custom-uppercase fw-custom-semibold">Our Team</small>
+      <h2 class="fw-custom-bold display-custom-6 mt-custom-2  main-heading">   Meet Our Team</h2>
+      <p class="para-muted mt-custom-3  col-md-8 mx-custom-auto font-subheading">
+   Our team is a diverse group of experts passionate about transforming education through technology and creativity. 
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/Kv4g4kN0/1.png" class="team-img mb-custom-3" alt="Ahmed Kamal">
+          <h6 class="fw-custom-bold mb-custom-0  font-body-sm"> Alice Johnson</h6>
+          <p class="para-muted font-body mb-custom-0 ">CEO &amp; Founder</p>
+          
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/fWqV4WNm/10.png" class="team-img mb-custom-3" alt="Mona Zaghloul">
+          <h6 class="fw-custom-bold font-body-sm mb-custom-0 "> Mark Smith</h6>
+          <p class="para-muted font-body mb-custom-0 ">Chief Technology Officer</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/gk5Lhztm/2.png" class="team-img mb-custom-3" alt="Ali Anoer">
+           <h6 class="fw-custom-bold font-body-sm mb-custom-0 "> Sarah Lee</h6>
+          <p class="para-muted font-body mb-custom-0 ">Head of Curriculum</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-zigrow-section_2 {
+    background-color: var(--theme-bg);
+  
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .team-card {
+    background-color: #fff;
+      border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+    transition: all 0.3s ease;
+    h6{
+      color: var(--secondary-colors);
+    }
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+         border-radius: var(--box-radius);
+    transition: 0.3s ease;
+  }
+
+  .team-card:hover .team-img {
+    filter: brightness(1.05);
+  }
+
+  h2 {
+    color: var(--secondary-colors);
+  }
+
+  @media (max-width: 768px) {
+    .team-img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .team-img {
+      height: 250px;
+    }
+  }}
+</style>
+    <section class="testimonial-zigrow-section_1  section-padding" id="testimonials"  data-section="testimonials">
+  <div class="container">
+    <h2 class="text-custom-center  main-heading mb-custom-5">What Our Users Say </h2>
+    <div class="row justify-custom-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-custom-4">
+        <div class="testimonial-card">
+          <div class="img-wrapper-center">
+            <img
+              src="https://i.postimg.cc/Kv4g4kN0/1.png"
+              alt="Client 1"
+            />
+          </div>
+          <h5 class="client-name">Sarah Johnson</h5>
+          <p class="client-text">
+       EdTech has revolutionized my teaching methods. My students are more engaged and eager to learn!
+          </p>
+               <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-custom-4">
+        <div class="testimonial-card">
+          <div class="img-wrapper-center">
+            <img
+             src="https://i.postimg.cc/fWqV4WNm/10.png"
+              alt="Client 2"
+            />
+          </div>
+         <h5 class="client-name">Michael Lee</h5>
+          <p class="client-text">
+       The platform is user-friendly and has made studying so much more efficient for me.
+          </p>
+              <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-custom-4">
+        <div class="testimonial-card">
+          <div class="img-wrapper-center">
+            <img
+             src="https://i.postimg.cc/gk5Lhztm/2.png"
+              alt="Client 3"
+            />
+          </div>
+           <h5 class="client-name">Emily Davis</h5>
+          <p class="client-text">
+       I’ve seen a remarkable improvement in my child&#39;s grades since using EdTech. Highly recommend!
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_1 {
+    background-color: #fff;
+    color: #222;
+  
+
+
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+border-radius: var(--box-radius);
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+
+  /* Smooth, elevated shadow */
+     box-shadow: var(--shadow-section);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  /* Slightly deeper shadow on hover */
+    box-shadow: var(--shadow-section-hover);
+}
+
+
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+   border-radius: var(--box-radius);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .client-text {
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .stars {
+    color: rgb(255, 196, 0); /* Custom star color (orange-ish), change as needed */
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .stars i {
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover .stars i {
+    transform: scale(1.2);
+  }}
+</style>
+    <section class="faq-zigrow-section_1 section-padding bg-custom-light" id="faq" data-section="faq">
+  <div class="container">
+    <div class="row align-custom-start">
+
+      <!-- Left Heading -->
+      <div class="col-lg-5 mb-custom-4 mb-md-0">
+        <h2 class="faq-heading">
+          <span>Frequently</span><br>
+          <span>asked questions</span>
+        </h2>
+        <hr class="faq-divider mt-custom-3" />
+      </div>
+
+      <!-- Right Questions -->
+      <div class="col-lg-7">
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>What is edtech?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Edtech refers to educational technology that enhances learning experiences through innovative tools and resources.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>What services do you offer?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              We provide a range of educational tools, resources, and support to improve learning outcomes for students.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Who can benefit from edtech?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Students, teachers, and educational institutions can all benefit from our innovative solutions and resources.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>How can I get started?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Simply visit our website, explore our offerings, and sign up for the services that suit your needs.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Is there customer support available?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Yes, we offer dedicated customer support to assist you with any questions or issues you may have.
+            </p>
+
+          </div>
+        
+          <div class="faq-item mb-custom-5">
+
+            <!-- QUESTION (safe tag h6) -->
+            <h6 class="faq-question">
+              <span>Are there any free resources?</span>
+            </h6>
+
+            <!-- ANSWER (safe tag p) -->
+            <p class="faq-answer">
+              Absolutely! We provide various free resources to help educators and students enhance their learning experience.
+            </p>
+
+          </div>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  .faq-zigrow-section_1 {
+    background-color: #fdfbf7;
+    color: #444;
+  
+
+  .faq-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--secondary-colors);
+    line-height: 1.3;
+    
+  }
+
+  .faq-divider {
+    border: 0;
+    height: 2px ;
+    background-color: #aaa;
+    width: 90%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .faq-answer {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--para-muted);
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .faq-divider {
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+    }
+  }}
+</style>
+    <section class="contact-zigrow-section_5 section-padding" id="contact" data-section="contact">
+  <div class="container">
+    
+    <!-- Top Images -->
+    <div class="row g-3 mb-custom-5 image-row">
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/g05HR1s8/2.png" class="img-fluid  " alt="Room 1">
+      </div>
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png" class="img-fluid  " alt="Room 2">
+      </div>
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/8cgdXWqC/4.png" class="img-fluid  " style="width: 600px;" alt="Room 3">
+      </div>
+    </div>
+
+    <!-- Bottom Contact Info -->
+    <div class="row align-custom-start text-section">
+      <div class="col-md-6 mb-custom-4 mb-md-0">
+        <h2 class="fw-custom-bold main-heading">Partner with us</h2>
+      </div>
+      <div class="col-md-6 contact-details">
+        <div class="mb-custom-4">
+          <h6 class="text-custom-uppercase contact-label">Mailing Address</h6>
+          <p>123 Business St, City</p>
+        </div>
+        <div class="mb-custom-4">
+          <h6 class="text-custom-uppercase contact-label">Email Address</h6>
+          <p>contact@example.com</p>
+        </div>
+        <div>
+          <h6 class="text-custom-uppercase contact-label">Phone Number</h6>
+          <p>+91 00000 00000</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .contact-zigrow-section_5 {
+  background-color: #fff;
+
+
+.image-row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+
+.image-row img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+
+.contact-details .contact-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary-colors);
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+  }
+}
+    }
+</style>   <footer class="section-padding footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer" data-section="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-custom-4 mb-md-0">
+        <h5 class="fw-custom-bold link-title"><div data-logo="footer">edtech</div></h5>
+        <p class="subtext">Empower students and educators with engaging tools that enhance the learning experience. Discover how our platform can make education more accessible and effective.</p>
+      </div>
+
+      <div class="col-md-1"><span class="d-none"></span></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-custom-4 mb-md-0">
+        <h6 class="fw-custom-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-custom-bold link-title">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-custom-center mt-custom-3  mb-custom-0 " style="color: #2a2a2a;">
+      &copy; 2025 edtech. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) ;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

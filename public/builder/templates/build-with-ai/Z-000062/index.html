@@ -1,0 +1,3486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Beauty La  Razon - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FF0033;
+      --secondary-colors: #0D0D0D;
+      --territory-colors: #FF6F00;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #0D0D0D ;
+      font-family: Helvetica Neue;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Anton ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #0D0D0D;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top custom-navbar">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold" href="#">
+          La Beauty La  Razon
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav align-lg-custom-center -center">
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#products">Products</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#portfolio">Portfolio</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+            </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="primary-btn">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-colors);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small-custom shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Bold -->
+<section class=" hero-zigrow-section_15" id="hero" data-section="hero">
+  <div class="container-fluid h-custom-100 px-custom-0">
+    <div class="row g-0 align-custom-stretch min-vh-100 position-relative">
+
+      <!-- LEFT SECTION -->
+      <div class="col-md-6 bg-custom-dark text-custom-white p-custom-0">
+        <div class="content-area d-flex flex-column justify-custom-center h-custom-100 ">
+          <p class="text-custom-uppercase small-custom letter-spacing mb-custom-3 text-custom-secondary-emphasis ">Glow with Confidence</p>
+          <h1 class="fw-custom-bold hero-heading mb-custom-4 lh-custom-sm">Transform Your Skin with Radiance Serum</h1>
+          <a href="#" class="primary-btn   w-auto align-self-md-start align-custom-center">Explore Now</a>
+        </div>
+      </div>
+
+   <!-- RIGHT SECTION -->
+<div class="col-md-6 image-area position-relative">
+  <div class="col-12 img-wrapper-center">
+    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8fHwxNzY1NDU1NzU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Main Image" class="img-fluid w-custom-100 h-custom-100 object-fit-cover" />
+    
+  </div>
+  <!-- 📸 Main Image Credit -->
+<span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@domjewel?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Dom Hill
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+
+</div>
+
+
+      <!-- 🟢 VIDEO THUMBNAIL -->
+     
+
+<div class="video-thumbnail shadow-lg ">
+
+  <div class="position-relative text-custom-center">
+
+
+  <img src="https://images.unsplash.com/photo-1639635030214-39c18d63e07b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGxpZmVzdHlsZXxlbnwwfHx8fDE3NjU0NTU3NTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Video Thumbnail" class="img-fluid rounded-4 border border-white border-3">
+
+  <!-- 📸 Video Thumbnail Credit -->
+<span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@duplexuno?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Arno Retief
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+  <!-- ▶️ Play button overlay (ADD THIS) -->
+    <a class="play-button" href="#" aria-label="Play video" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+    </a>
+
+    </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-zigrow-section_15 {
+  background-color: #0f0f0f;
+  color: white;
+
+
+ .row {
+  min-height: 100vh;
+}
+
+.hero-heading{
+  font-size: 3.4rem;
+  text-transform: capitalize;
+}
+.content-area {
+  padding: 80px 60px 80px 117px;
+  background-color: #0f0f0f;
+}
+
+.content-area h1 {
+  line-height: 1.2;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+
+.btn.transition {
+  transition: all 0.3s ease;
+}
+
+.btn.transition:hover {
+  transform: translateY(-2px);
+}
+
+.image-area {
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+.image-area img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* 📽️ Video Thumbnail */
+/* 📽️ Square video thumbnail */
+.video-thumbnail {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  width: 280px;              /* desktop size */
+  aspect-ratio: 1 / 1;       /* 👈 perfect square */
+  z-index: 10;
+  /* border-radius: 16px;        keep rounded look (optional) */
+  overflow: hidden;           /* clip image edges */
+  transition: transform 0.3s ease;
+  /* border: 3px solid #fff;     move border to container */
+}
+
+/* ▶️ Play button */
+.video-thumbnail .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;                 /* credit text se upar rahe */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  outline: none;
+}
+
+.video-thumbnail .play-button:hover,
+.video-thumbnail .play-button:focus {
+  transform: translate(-50%, -50%) scale(1.06);
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.video-thumbnail .play-button svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  margin-left: 2px; /* triangle ko thoda center feel dene ke liye */
+}
+
+/* optional: small-custom screens */
+@media (max-width: 768px) {
+  .video-thumbnail .play-button {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* fill the square */
+.video-thumbnail .position-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* no distortion */
+  /* display: block; */
+  /* remove border classes on <img> or override: */
+  border: 0 ;
+  border-radius: 0 ;
+}
+
+/* credit position inside square */
+.video-thumbnail .img-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 10px;
+}
+
+/* hover */
+.video-thumbnail:hover {
+  transform: translateX(-50%) scale(1.03);
+}
+
+@media (max-width: 1024px) {
+  .hero-heading{
+    font-size: 2rem;
+  }
+}
+
+/* 📱 mobile size */
+@media (max-width: 768px) {
+  .hero-heading{
+    font-size: 1.8rem;
+  }
+  .video-thumbnail {
+    width: 240px;
+    aspect-ratio: 1 / 1;
+    bottom: 20px;
+  }
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+  .content-area {
+    padding: 50px 25px;
+    text-align: center;
+  }
+
+  .btn.transition {
+    align-self: center ;
+  }
+
+
+}}
+
+</style>   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-xl-5 align-custom-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1629726343583-d9718b3e8f3f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmYXNoaW9uJTIwZGVzaWduZXJ8ZW58MHx8fHwxNzY1NDU1NzU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@juniorreisfoto?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Junior REIS
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8fHwxNzY1NDU1NzU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@domjewel?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Dom Hill
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1639635030214-39c18d63e07b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGxpZmVzdHlsZXxlbnwwfHx8fDE3NjU0NTU3NTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@duplexuno?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Arno Retief
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1598528738936-c50861cc75a9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBwcm9kdWN0c3xlbnwwfHx8fDE3NjU0NTU3NTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@johannepoldjacobsen?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Johanne Pold Jacobsen
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <p class="label">Our Goals</p>
+          <h2 class="section-heading mb-custom-4 main-heading">
+            About La Beauty La Razon
+          </h2>
+          <p class=" para-muted mb-custom-4 font-body">
+            At La Beauty La Razon, we empower your beauty journey with AI-generated content tailored just for you. Our innovative approach ensures your website shines with engaging and relevant information. Discover our Radiance Hydrating Face Serum, crafted to nourish your skin and enhance your natural glow. Trust us to elevate your beauty experience with quality and care. Harness the power of AI to create personalized beauty content that resonates with your audience.
+          </p>
+
+          <ul class=" feature-bullets mb-custom-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Harness the power of AI to create personalized beauty content that resonates with your audience.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our Radiance Hydrating Face Serum is formulated with premium ingredients for optimal skin hydration.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  We prioritize your needs, ensuring our products and services cater to your unique beauty goals.
+                </li>
+                
+                  </ul>
+
+         <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ========== Services List (service-zigrow-section_11) ========== -->
+<section class="service-zigrow-section_11 section-padding" id="services" data-section="services">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-custom-center mb-custom-4 mb-lg-5">
+      <h2 class="main-heading mb-custom-2">
+        <span>Our Services</span>
+      </h2>
+
+      <p class="svc11-subtitle mb-custom-0">
+        <span>Discover AI-driven solutions tailored for beauty and lifestyle enthusiasts seeking radiant results.</span>
+      </p>
+    </div>
+
+    <!-- List Items as Bootstrap Accordion -->
+    <div class="svc11-list accordion" id="svc11Accordion">
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-0">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-0"
+            aria-expanded="true"
+            aria-controls="svc11-collapse-0"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>01</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Content Creation</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="svc11-heading-0"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Transform your beauty brand with engaging AI-generated content that captivates your audience and boosts your online presence.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">AI</span>
+                
+                  <span class="svc11-tag">Content</span>
+                
+                  <span class="svc11-tag">Engagement</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-1">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-1"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-1"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>02</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Social Media Boost</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-1"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-1"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Elevate your social media strategy with tailored posts that resonate with your followers and enhance brand loyalty.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">Social Media</span>
+                
+                  <span class="svc11-tag">Strategy</span>
+                
+                  <span class="svc11-tag">Branding</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-2">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-2"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-2"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>03</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>SEO Optimization</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-2"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-2"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Increase your website&#39;s visibility with AI-driven SEO strategies that attract more visitors and potential customers.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">SEO</span>
+                
+                  <span class="svc11-tag">Visibility</span>
+                
+                  <span class="svc11-tag">Traffic</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-3">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-3"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-3"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>04</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Product Descriptions</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-3"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-3"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Craft compelling product descriptions that highlight the benefits of your beauty products, driving sales and customer interest.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">Product</span>
+                
+                  <span class="svc11-tag">Sales</span>
+                
+                  <span class="svc11-tag">Descriptions</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-4">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-4"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-4"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>05</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Email Campaigns</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-4"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-4"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Engage your audience with personalized email campaigns that inform and inspire, leading to higher conversion rates.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">Email</span>
+                
+                  <span class="svc11-tag">Campaigns</span>
+                
+                  <span class="svc11-tag">Engagement</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-5">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-5"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-5"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>06</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Brand Storytelling</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-5"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-5"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Share your brand&#39;s unique story through captivating narratives that connect emotionally with your audience and build loyalty.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">Branding</span>
+                
+                  <span class="svc11-tag">Storytelling</span>
+                
+                  <span class="svc11-tag">Connection</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_11 (white theme, Bootstrap 5 friendly) ===== */
+  .service-zigrow-section_11 {
+    --svc11-bg: #ffffff;
+    --svc11-border: #e5e7eb;
+    --svc11-soft: #f8fafc;
+    --svc11-ring: color-mix(in srgb, var(--primary-colors) 16%, transparent);
+    --svc11-muted: #9ca3af;
+
+    background: var(--svc11-bg);
+    color: var(--para-muted);
+  }
+
+  /* Header */
+  .service-zigrow-section_11 .svc11-heading {
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    font-size: clamp(1.8rem, 1.2rem + 2vw, 2.4rem);
+  }
+
+  .service-zigrow-section_11 .svc11-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--para-muted);
+    line-height: 1.7;
+    font-size: var(--fs-sub);
+  }
+
+  /* List wrapper */
+  .service-zigrow-section_11 .svc11-list {
+    border-top: 1px solid var(--svc11-border);
+  }
+
+  /* Accordion base overrides */
+  .service-zigrow-section_11 .accordion-item {
+    border: 0;
+  }
+
+  .service-zigrow-section_11 .accordion-button {
+    background-color: transparent;
+    padding: 0; /* padding hum row par denge */
+    box-shadow: none;
+  }
+
+  .service-zigrow-section_11 .accordion-button::after {
+    display: none; /* default caret hatana */
+  }
+
+  .service-zigrow-section_11 .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  /* Row layout (our custom row inside accordion-button) */
+  .service-zigrow-section_11 .svc11-row {
+    display: grid;
+    grid-template-columns: 72px 1fr 56px;
+    align-items: start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--svc11-border);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.2s ease;
+    width: 100%;
+  }
+
+  .service-zigrow-section_11 .svc11-row:hover {
+    background: var(--svc11-soft);
+  }
+
+  /* left index */
+  .service-zigrow-section_11 .svc11-idx span {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--svc11-muted);
+  }
+
+  /* middle content */
+  .service-zigrow-section_11 .svc11-title {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    font-size: var(--fs-sub);
+    color: var(--secondary-colors);
+  }
+
+  .service-zigrow-section_11 .svc11-body {
+    margin-top: 0.35rem;
+  }
+
+  .service-zigrow-section_11 .svc11-desc {
+    color: var(--para-muted);
+    margin: 0.35rem 0 0.8rem;
+    line-height: var(--lh-body);
+    max-width: 72ch;
+    font-size: var(--fs-body);
+  }
+
+  .service-zigrow-section_11 .svc11-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .service-zigrow-section_11 .svc11-tag {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
+    border-radius: var(--box-radius);
+    border: 1px solid var(--svc11-border);
+    background: #fff;
+    color: #334155;
+  }
+
+  /* right circular action */
+  .service-zigrow-section_11 .svc11-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #fafbfe;
+    color: var(--primary-colors);
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      background 0.18s ease,
+      color 0.18s ease;
+    box-shadow: 0 6px 16px var(--svc11-ring);
+  }
+
+  .service-zigrow-section_11 .svc11-row:hover .svc11-action {
+    transform: translateY(-2px);
+    background: var(--primary-colors);
+    color: #fff;
+  }
+
+  /* OPEN (expanded) state – accordion-button not collapsed */
+  .service-zigrow-section_11
+    .accordion-button:not(.collapsed)
+    .svc11-title {
+    color: #0f172a;
+  }
+
+  .service-zigrow-section_11
+    .accordion-button:not(.collapsed)
+    .svc11-idx span {
+    color: var(--primary-colors);
+  }
+
+  .service-zigrow-section_11
+    .accordion-button:not(.collapsed)
+    .svc11-action {
+    background: var(--primary-colors);
+    color: #fff;
+    transform: none;
+  }
+
+  /* Responsive */
+ /* Responsive */
+@media (max-width: 575.98px) {
+  .service-zigrow-section_11 .svc11-row {
+    grid-template-columns: auto 1fr auto;  /* 3 column hi, but flexible */
+    align-items: center;
+    padding: 0.9rem 0;
+    gap: 0.75rem;
+  }
+
+  .service-zigrow-section_11 .svc11-idx span {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .service-zigrow-section_11 .svc11-title {
+    font-size: var(--fs-body); /* thoda chota on mobile */
+  }
+
+  .service-zigrow-section_11 .svc11-action {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 4px 12px var(--svc11-ring);
+  }
+}
+
+  
+</style>
+    <!-- Full-page background wrapper -->
+<section class="section-padding product-zigrow-section_4" id="products" data-section="products">
+  <div class="container">
+    <!-- White rounded card -->
+    <div class="featured-products p-custom-4 p-md-custom-5">
+      <!-- Header -->
+      <div class="d-flex justify-custom-between align-custom-center mb-custom-4 flex-wrap gap-3">
+        <div>
+          <h5 class="fw-custom-bold mb-custom-1" style="color: var(--secondary-colors);">
+            Explore Our Radiant Products
+          </h5>
+          <p class="para-muted mb-custom-0 ">Enhance your beauty routine with our premium offerings.</p>
+        </div>
+
+        <!-- Updated button: new text + WhatsApp icon -->
+        <a href="https://wa.me/911234567890" target="_blank"
+           class="primary-btn d-inline-flex align-custom-center gap-2">
+          <i class="bi bi-whatsapp"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Product Grid: now 6 cards with perfect spacing -->
+      <div class="row g-4">
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMHByb2R1Y3RzfGVufDB8fHx8MTc2NTQ1NTc1OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Radiance Hydrating Face Serum"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@valeriiamiller?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Valeriia Miller</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Radiance Hydrating Face Serum</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Achieve glowing skin with our deeply hydrating serum, perfect for all skin types.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1569388330292-79cc1ec67270?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzY1NDU1NzU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Nourishing Night Cream"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@harpersunday?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Harper Sunday</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Nourishing Night Cream</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Rejuvenate your skin overnight with our rich, restorative night cream.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1740805134242-876087bb56eb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3NtZXRpY3MlMjBkaXNwbGF5fGVufDB8fHx8MTc2NTQ1NTc1OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Brightening Eye Cream"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@zoshuacolah?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Zoshua Colah</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Brightening Eye Cream</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Reduce dark circles and puffiness with our targeted eye cream for a refreshed look.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1751552147727-e084b038e7c8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxqZXdlbHJ5JTIwY2xvc2UtdXB8ZW58MHx8fHwxNzY1NDU1NzU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Soothing Facial Mist"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@bored_mongoose?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >R. G</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Soothing Facial Mist</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Refresh and hydrate your skin anytime with our soothing facial mist.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1546333456-3e8ed81f41e2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBoYW5kYmFnc3xlbnwwfHx8fDE3NjU0NTU3NTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Revitalizing Face Mask"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@samhojati?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Sam Hojati</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Revitalizing Face Mask</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Pamper your skin with our revitalizing face mask for a radiant glow.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="product-card position-relative overflow-hidden h-custom-100">
+         <div class="position-relative img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMHByb2R1Y3RzfGVufDB8fHx8MTc2NTQ1NTc1OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid w-custom-100 h-custom-100 object-cover"
+    alt="Exfoliating Scrub"
+  >
+
+  
+    <span class="img-credit small-custom">
+      Photo by
+      <a
+        href="https://unsplash.com/@valeriiamiller?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Valeriia Miller</a> on
+      <a
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank" rel="noopener noreferrer"
+      >Unsplash</a>
+    </span>
+  
+</div>
+
+
+              <div class="card-overlay p-3">
+                <h6 class="fw-custom-semibold mb-custom-1">Exfoliating Scrub</h6>
+                <p class="para-muted font-body-sm mb-custom-1">Gently exfoliate and renew your skin with our natural scrub for a smooth finish.</p>
+                <p class="fw-custom-bold mb-custom-0 ">₹999</p>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .product-zigrow-section_4 {
+    background: #fafafa;
+  }
+
+  .product-zigrow-section_4 .featured-products {
+    background-color: #ffffff;
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+  }
+
+  .product-zigrow-section_4 .product-card {
+    height: 100%;
+    border-radius: var(--box-radius);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-zigrow-section_4 .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .product-zigrow-section_4 .product-card img {
+    width: 100%;
+    height: 100%;
+    height:255px;
+    object-fit: cover;
+    border-radius: var(--box-radius);
+    aspect-ratio: 1/1 ; /* square thumbs for clean grid */
+  }
+
+  ..product-zigrow-section_4 .card-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-radius: var(--box-radius);
+    margin: 1rem;
+    box-shadow: var(--shadow-section);
+  }
+
+  /* small-custom tweak so overlay doesn't overflow on tiny screens */
+  @media (max-width: 575.98px) {
+    .product-zigrow-section_4 .card-overlay { margin: .75rem; }
+  }
+
+  /* WhatsApp icon spacing inside button */
+  .primary-btn .bi { line-height: 1; }
+
+  /* Optional: make the primary button pop a bit */
+  .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+  }
+
+  /* Unsplash credit badge style (if you want it subtle) */
+  .img-credit {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    font-size: .65rem;
+    padding: .2rem .4rem;
+    border-radius: .25rem;
+  }
+</style>
+     <section class="portfolio-zigrow-section_1 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">Our Creative Showcase</h2>
+      <p class="section-subtitle">
+        Product Promotion
+      </p>
+    </div>
+
+    <div class="row g-0">
+      <!-- Area Card -->
+    <div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1704208316515-a32f81e373ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzY1NDU1MzYyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Radiance Serum Launch"
+    />
+    <div class="area-name">
+      <span>Radiance Serum Launch</span>
+    </div>
+    <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@yemi_w?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Yemi Wallington
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1624819581070-7868475f038c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBlZGl0b3JpYWx8ZW58MHx8fHwxNzY1NDU1NzU5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Beauty Blog Content"
+    />
+    <div class="area-name">
+      Beauty Blog Content
+    </div>
+   <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@aogpixels?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Olamide Gabriel
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1645619246991-4d1fd96acbed?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsaWZlc3R5bGUlMjBicmFuZHxlbnwwfHx8fDE3NjU0NTU3NTl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Social Media Campaign"
+    />
+    <div class="area-name">
+      Social Media Campaign
+    </div>
+    <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@pouyahajibagheri?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Pouya Hajibagheri
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+   <div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1620987278429-ab178d6eb547?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY1NDU1NzU5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Website Revamp"
+    />
+    <div class="area-name">
+      Website Revamp
+    </div>
+   <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@frostroomhead?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Rodion Kutsaiev
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  
+
+
+
+  .section-subtitle {
+    color: var( --lead-custom-color-mute);
+    font-size: var(--fs-sub);
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }}
+</style>
+   <!-- ▰ Testimonials Section -->
+<section class="testimonial-zigrow-section_8 section-padding" id="testimonials"  data-section="testimonials">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="fw-custom-bold main-heading">What Our Customers Say</h2>
+      <p class="para-muted  font-subheading">Hear how La Beauty La Razon transforms beauty routines with our products.</p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“The Radiance Hydrating Face Serum has completely transformed my skin. It feels so hydrated and looks radiant!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=40" class="avatar me-custom-3" alt="Emily Johnson"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Emily Johnson</h6>
+                <small class="para-muted">Skincare Enthusiast</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I love how lightweight the serum is! It absorbs quickly and leaves my skin feeling fresh and revitalized.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=41" class="avatar me-custom-3" alt="Michael Lee"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Michael Lee</h6>
+                <small class="para-muted">Fitness Coach</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“This serum is a game-changer! My skin has never looked better, and I get compliments all the time.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=42" class="avatar me-custom-3" alt="Sarah Patel"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Sarah Patel</h6>
+                <small class="para-muted">Beauty Blogger</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I use this serum on all my clients. It creates the perfect base for makeup and gives a beautiful glow.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=43" class="avatar me-custom-3" alt="David Kim"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">David Kim</h6>
+                <small class="para-muted">Makeup Artist</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“As a busy mom, I need quick results. This serum delivers hydration and radiance in no time!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=44" class="avatar me-custom-3" alt="Jessica Brown"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Jessica Brown</h6>
+                <small class="para-muted">Busy Mom</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I appreciate the natural ingredients in this serum. It’s effective and aligns with my healthy lifestyle.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=45" class="avatar me-custom-3" alt="Laura Smith"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Laura Smith</h6>
+                <small class="para-muted">Health Advocate</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.testimonial-zigrow-section_8 {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+
+.testimonials-section {
+  background-color: #f9fafb;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow-section); /* ➕ add subtle base shadow */
+    border-radius: var(--box-radius);
+
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/*** headline tweaks ***/
+ .text-accent{
+  color:#5f6f7f;
+}
+ .badge-pill{
+  letter-spacing:.04em;
+}
+.line-tip{
+  content:"";
+  position:absolute;
+  bottom:-6px;left:50%;
+  width:34px;height:2px;
+  background:#ff5b57;
+  transform:translateX(-50%) rotate(3deg);
+  border-radius:2px;
+}
+
+/*** cards ***/
+.t-card{
+  background:#fff;
+  border:0;
+border-radius: var(--box-radius);
+   box-shadow: var(--shadow-section);
+  transition:transform .25s ease, box-shadow .25s ease;
+  position:relative;
+}
+.t-card:hover{
+  transform:translateY(-6px);
+     box-shadow: var(--shadow-section-hover);
+}
+.t-dark{
+  background:#0f0f0f;
+  color:#f0f0f0;
+}
+.t-metric{
+  font-size:3.5rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.04em;
+  display:block;
+  color:#000;
+  margin-bottom:.25rem;
+}
+
+/*** avatar + brand ***/
+.avatar{
+  width:48px;height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.brand-logo{
+  width:24px;opacity:.7;
+}
+
+/*** button hover ***/
+.btn-outline-dark:hover i{
+  transform:translateX(4px);
+  transition:transform .25s;
+}
+
+/*** dark-card text-tone ***/
+.text-custom-white-80{color:rgba(255,255,255,.8);}
+
+/*** responsiveness ***/
+@media(max-width:991.98px){
+  .t-metric{font-size:2.8rem;}
+}
+@media(max-width:575.98px){
+  .results-testimonials .btn{width:100%;}
+  .line-tip{display:none;}
+}}
+</style>    <section class="faq-zigrow-section_3 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <div class="text-custom-start mb-custom-5">
+      <h2 class="main-heading">
+        <span>Explore Common Questions</span>
+      </h2>
+      <p class="font-subheading para-muted">
+        <span>Get instant answers to your common questions</span>
+      </p>
+    </div>
+
+    <div class="accordion" id="faqAccordion2">
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern0">
+          <button 
+            class="accordion-button "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern0"
+            aria-expanded="true"
+            aria-controls="collapseModern0"
+          >
+            <span>What is Radiance Hydrating Face Serum?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingModern0"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Radiance Hydrating Face Serum is a nourishing blend designed to hydrate and rejuvenate your skin for a radiant glow.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern1">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern1"
+            aria-expanded="false"
+            aria-controls="collapseModern1"
+          >
+            <span>How do I use the serum?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern1"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern1"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Apply a few drops to clean skin, gently massaging until fully absorbed. Use morning and night for best results.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern2">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern2"
+            aria-expanded="false"
+            aria-controls="collapseModern2"
+          >
+            <span>Is it suitable for all skin types?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern2"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern2"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes, our serum is formulated to be gentle and effective for all skin types, including sensitive skin.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern3">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern3"
+            aria-expanded="false"
+            aria-controls="collapseModern3"
+          >
+            <span>What are the key ingredients?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern3"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern3"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Key ingredients include hyaluronic acid, vitamin C, and botanical extracts that hydrate and brighten your complexion.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern4">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern4"
+            aria-expanded="false"
+            aria-controls="collapseModern4"
+          >
+            <span>Can I use it with other products?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern4"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern4"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Absolutely! It works well with moisturizers and sunscreens to enhance your skincare routine.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern5">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern5"
+            aria-expanded="false"
+            aria-controls="collapseModern5"
+          >
+            <span>How long until I see results?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern5"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern5"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Many users notice improvements in hydration and radiance within a week of consistent use.</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-zigrow-section_3 {
+    background-color: #fff;
+  
+
+  .faq-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .faq-subtext {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    margin-top: 0.3rem;
+  }
+
+  /* Accordion Clean Style */
+  .accordion-button {
+    font-size: 1.2rem ;
+    color: #45505e ;
+    font-weight: 400 ;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #45505e ;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 ;
+  }
+
+  .accordion-button {
+    background-color: transparent ;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: none ;
+    padding: 1.25rem 0;
+  }
+
+  .accordion-body {
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    padding: 0 0 1rem;
+  }
+
+  .accordion-button::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #666;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E"); /* same gray icon */
+    border: 1px solid #666;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.5rem ;
+    }
+
+    .accordion-button {
+      font-size: 0.95rem ;
+      }}
+  }
+</style>
+   <section class="cta-zigrow-section_3 text-custom-white" id="cta" data-section="cta">
+  <div class="container px-lg-custom-5">
+    <div class="row g-4 g-lg-5 align-custom-center text-custom-lg-start text-custom-center">
+      <!-- Left Content -->
+      <div class="col-lg-6">
+        <div class="copy">
+          <span class="overline">Unlock radiant skin today!</span>
+          <h2 class="display mb-custom-3">Elevate Your Beauty Routine</h2>
+          <p class="lead-custom font-body mb-custom-4">Transform your skincare with our Radiance Hydrating Face Serum. Experience the power of hydration and glow like never before. Your skin deserves the best!</p>
+
+      <div class="cta-actions d-inline-flex gap-2">
+  <a href="#" class="btn-solid primary-btn">
+    <span class="me-custom-2"><i class="bi bi-lightning-charge-fill "></i> </span>
+    Learn how we can help
+  </a>
+</div>
+
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6">
+        <div class="visual img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1762330474207-ae7280bdef66?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxqb2luJTIwbm93fGVufDB8fHx8MTc2NTQ1NTc1OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Recovery Help"
+            class="hero-img img-fluid"
+          />
+          <span class="img-credit">
+            Photo by
+            <a
+              href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Zulfugar Karimov</a
+            >
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Unsplash</a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-zigrow-section_3 {
+    --brand: var(--theme-4);
+    --bg-custom-dark: var(--theme-3);
+
+    /* New smoother gradient */
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--bg-custom-dark) 92%, #000) 0%,
+        var(--bg-custom-dark) 100%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(255, 255, 255, 0.06),
+        transparent 70%
+      );
+
+    color: var(--theme-4);
+    padding: 4.5rem 0;
+    border-top: 1px solid var(--border-muted);
+    border-bottom: 1px solid var(--border-muted);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-zigrow-section_3 .copy {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .cta-zigrow-section_3 .overline {
+    display: inline-block;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 0.35rem;
+    color: color-mix(in srgb, var(--theme-4) 85%, #fff);
+  }
+  .cta-zigrow-section_3 .display {
+    font-size: clamp(1.9rem, 1.2rem + 2vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--theme-4);
+    margin: 0;
+  }
+  .cta-zigrow-section_3 .lead-custom {
+    color: color-mix(in srgb, var(--theme-4) 85%, #fff);
+  }
+
+
+  
+  .cta-zigrow-section_3 .btn-solid {
+    background: var(--theme-4);
+    color: var(--theme-3);
+  }
+  .cta-zigrow-section_3 .btn-solid i{
+   font-size: 1.1rem;
+   line-height: 1;
+  }
+  .cta-zigrow-section_3 .btn-solid:hover {
+    transform: translateY(-2px);
+  }
+ 
+
+  /* Visual wrapper */
+  .cta-zigrow-section_3 .visual {
+    position: relative;
+    width: min(420px, 100%); /* ✅ vertical card jaisa narrow */
+    margin-inline: auto;
+  }
+
+  .cta-zigrow-section_3 .hero-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 3/4; /* ✅ portrait ratio */
+    object-fit: cover; /* crop karega image ko */
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+  }
+
+  .cta-zigrow-section_3 .img-credit {
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .cta-zigrow-section_3 .visual {
+      width: 100%;
+    }
+  }
+
+  /* Spacing + responsiveness */
+  @media (min-width: 992px) {
+    .cta-zigrow-section_3 .row {
+      align-items: center;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .cta-zigrow-section_3 {
+      padding: 3.2rem 0;
+    }
+    .cta-zigrow-section_3 .copy {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .cta-zigrow-section_3 .lead-custom {
+      font-size: 1rem;
+    }
+  }
+</style>
+   <section class="contact-zigrow-section_5 section-padding" id="contact" data-section="contact">
+  <div class="container">
+    
+    <!-- Top Images -->
+    <div class="row g-3 mb-custom-5 image-row">
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/g05HR1s8/2.png" class="img-fluid  " alt="Room 1">
+      </div>
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png" class="img-fluid  " alt="Room 2">
+      </div>
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/8cgdXWqC/4.png" class="img-fluid  " style="width: 600px;" alt="Room 3">
+      </div>
+    </div>
+
+    <!-- Bottom Contact Info -->
+    <div class="row align-custom-start text-section">
+      <div class="col-md-6 mb-custom-4 mb-md-0">
+        <h2 class="fw-custom-bold main-heading">Partner with us</h2>
+      </div>
+      <div class="col-md-6 contact-details">
+        <div class="mb-custom-4">
+          <h6 class="text-custom-uppercase contact-label">Mailing Address</h6>
+          <p>new delhi, india</p>
+        </div>
+        <div class="mb-custom-4">
+          <h6 class="text-custom-uppercase contact-label">Email Address</h6>
+          <p>jayantisharma271010@gmail.com</p>
+        </div>
+        <div>
+          <h6 class="text-custom-uppercase contact-label">Phone Number</h6>
+          <p>7827289079</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .contact-zigrow-section_5 {
+  background-color: #fff;
+
+
+.image-row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+
+.image-row img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+
+.contact-details .contact-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary-colors);
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+  }
+}
+    }
+</style>   <footer class="section-padding footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer" data-section="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-custom-4 mb-md-0">
+        <h5 class="fw-custom-bold link-title"><div data-logo="footer">La Beauty La  Razon</div></h5>
+        <p class="subtext">Experience deep hydration and a radiant glow. Our AI-generated content helps you discover the perfect beauty solutions tailored for you.</p>
+      </div>
+
+      <div class="col-md-1"><span class="d-none"></span></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-custom-4 mb-md-0">
+        <h6 class="fw-custom-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-custom-bold link-title">Contact Us</h6>
+        <p>Email: jayantisharma271010@gmail.com</p>
+        <p>Phone: 7827289079</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-custom-center mt-custom-3  mb-custom-0 " style="color: #2a2a2a;">
+      &copy; 2025 La Beauty La  Razon. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) ;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api-uat.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

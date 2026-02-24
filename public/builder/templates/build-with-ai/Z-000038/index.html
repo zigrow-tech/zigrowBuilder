@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>f&amp;c - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #06FF00;
+      --secondary-colors: #111111;
+      --territory-colors: #00F5D4;
+      --theme-3: #000000;
+      --theme-4: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 !important;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Oswald !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      f&amp;c
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#contact">Contact</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="primary-btn">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #06FF00;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #06FF00;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Bold -->
+<section class=" hero-zigrow-section_15" id="hero">
+  <div class="container-fluid h-100 px-0">
+    <div class="row g-0 align-items-stretch min-vh-100 position-relative">
+
+      <!-- LEFT SECTION -->
+      <div class="col-md-6 bg-dark text-white p-0">
+        <div class="content-area d-flex flex-column justify-content-center h-100 ">
+          <p class="text-uppercase small letter-spacing mb-3 text-secondary-emphasis">Gifts for Everyone!</p>
+          <h1 class="fw-bold hero-heading mb-4 lh-sm">Discover Unique Gifts for All Ages Today</h1>
+          <a href="#" class="primary-btn   w-auto align-self-md-start align-items-center">Explore Now</a>
+        </div>
+      </div>
+
+   <!-- RIGHT SECTION -->
+<div class="col-md-6 image-area position-relative">
+  <img src="https://images.unsplash.com/photo-1728017942601-fcfe81fab933?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NTg2MTI1NjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Main Image" class="img-fluid w-100 h-100 object-fit-cover" />
+  
+  <!-- 📸 Main Image Credit -->
+<span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@jogara_0?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Jacqueline O&#39;Gara
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+
+</div>
+
+
+      <!-- 🟢 VIDEO THUMBNAIL -->
+     
+
+<div class="video-thumbnail shadow-lg ">
+
+  <div class="position-relative">
+
+
+  <img src="https://images.unsplash.com/photo-1683248892987-7b6181dfd718?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmYXJtaW5nJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NTg2MTI1NjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Video Thumbnail" class="img-fluid rounded-4 border border-white border-3">
+
+  <!-- 📸 Video Thumbnail Credit -->
+<span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@boysinbristol_photography?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Boys in Bristol Photography
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+  <!-- ▶️ Play button overlay (ADD THIS) -->
+    <a class="play-button" href="#" aria-label="Play video" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+    </a>
+
+    </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-zigrow-section_15 {
+  background-color: #0f0f0f;
+  color: white;
+
+
+ .row {
+  min-height: 100vh;
+}
+
+.hero-heading{
+  font-size: 3.4rem;
+  text-transform: capitalize;
+}
+.content-area {
+  padding: 80px 60px 80px 117px;
+  background-color: #0f0f0f;
+}
+
+.content-area h1 {
+  line-height: 1.2;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+
+.btn.transition {
+  transition: all 0.3s ease;
+}
+
+.btn.transition:hover {
+  transform: translateY(-2px);
+}
+
+.image-area {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.image-area img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* 📽️ Video Thumbnail */
+/* 📽️ Square video thumbnail */
+.video-thumbnail {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;              /* desktop size */
+  aspect-ratio: 1 / 1;       /* 👈 perfect square */
+  z-index: 10;
+  /* border-radius: 16px;        keep rounded look (optional) */
+  overflow: hidden;           /* clip image edges */
+  transition: transform 0.3s ease;
+  /* border: 3px solid #fff;     move border to container */
+}
+
+/* ▶️ Play button */
+.video-thumbnail .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;                 /* credit text se upar rahe */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  outline: none;
+}
+
+.video-thumbnail .play-button:hover,
+.video-thumbnail .play-button:focus {
+  transform: translate(-50%, -50%) scale(1.06);
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.video-thumbnail .play-button svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  margin-left: 2px; /* triangle ko thoda center feel dene ke liye */
+}
+
+/* optional: small screens */
+@media (max-width: 768px) {
+  .video-thumbnail .play-button {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* fill the square */
+.video-thumbnail .position-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* no distortion */
+  display: block;
+  /* remove border classes on <img> or override: */
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* credit position inside square */
+.video-thumbnail .img-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 10px;
+}
+
+/* hover */
+.video-thumbnail:hover {
+  transform: translateX(-50%) scale(1.03);
+}
+
+@media (max-width: 1024px) {
+  .hero-heading{
+    font-size: 2rem;
+  }
+}
+
+/* 📱 mobile size */
+@media (max-width: 768px) {
+  .hero-heading{
+    font-size: 1.8rem;
+  }
+  .video-thumbnail {
+    width: 240px;
+    aspect-ratio: 1 / 1;
+    bottom: 20px;
+  }
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+  .content-area {
+    padding: 50px 25px;
+    text-align: center;
+  }
+
+  .btn.transition {
+    align-self: center !important;
+  }
+
+
+}}
+
+</style>   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 py-6" id="about">
+  <div class="container">
+    <div class="row g-xl-5 align-items-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1526399743290-f73cb4022f48?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXJtZXJzJTIwbWFya2V0fGVufDB8fHx8MTc1ODYxMjU2MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@kylenieber?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Kyle Nieber
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1728017942601-fcfe81fab933?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyZSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NTg2MTI1NjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@jogara_0?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Jacqueline O&#39;Gara
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1683248892987-7b6181dfd718?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmYXJtaW5nJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NTg2MTI1NjB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@boysinbristol_photography?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Boys in Bristol Photography
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1604933835804-2a67c5c596a3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXJtJTIwZmllbGQlMjBzdW5yaXNlfGVufDB8fHx8MTc1ODYxMjU2MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@daveballew?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      David Ballew
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <div class="label">Our Goals</div>
+          <h2 class="section-heading mb-4 main-heading">
+            About Our Shop
+          </h2>
+          <p class=" para-muted mb-4 font-body">
+            f&amp;c is a charming gift shop dedicated to providing exceptional gifts for kids and adults alike. Our mission is to spread joy through thoughtful presents. We believe that every occasion deserves a special gift. Our carefully curated selection includes unique toys, beautiful flowers, and convenient home delivery services to make your gifting experience delightful. Explore our extensive range of gifts that cater to all ages and preferences. We have something special for everyone.
+          </p>
+
+          <ul class=" feature-bullets mb-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Explore our extensive range of gifts that cater to all ages and preferences. We have something special for everyone.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our flower arrangements are crafted with care, ensuring freshness and beauty for every occasion. Brighten someone&#39;s day with our blooms.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Enjoy the convenience of home delivery. We ensure your gifts and flowers reach your loved ones safely and on time.
+                </li>
+                
+                  </ul>
+
+                  <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ====================== service-zigrow-section_13 : START ====================== -->
+<section id="services" class="py-6  service-zigrow-section_13">
+  <div class="container px-3 px-md-4">
+
+    
+
+    <!-- Top header row -->
+    <div class="row align-items-end g-4">
+      <div class="col-lg-8">
+
+        <h2 class="main-heading mb-2">Our Exceptional Services</h2>
+        <p class="font-subheading para-muted mb-0">Explore the variety of services we offer to enhance your gifting experience.</p>
+
+        <div class="d-flex align-items-center gap-2 mt-3">
+          <a href="#!" class="primary-btn ms-1">Explore more</a>
+        </div>
+      </div>
+
+      <!-- KPI block -->
+      <div class="col-lg-4 text-lg-end">
+        <div class="service-zigrow-kpi text-lg-end">
+          <div class="service-zigrow-kpi-number">6</div>
+          <div class="small para-muted mt-1">Services</div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- Cards grid -->
+    <div class="row g-4 g-xl-5 mt-1 mt-md-4">
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1647268772035-85a4cf15d37a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcmVjaXNpb24lMjBmYXJtaW5nfGVufDB8fHx8MTc1ODYxMjU2MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Gift Selection" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@sandorfehervari?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Sandor Fehervari
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Gift Selection</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">We offer a wide range of gifts suitable for any occasion. Whether it&#39;s a birthday, holiday, or just because, we have you covered. Our team is here to help you choose the perfect gift.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">gifts</span>
+              
+              <span class="badge service-zigrow-chip">variety</span>
+              
+              <span class="badge service-zigrow-chip">occasions</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1689081936617-c40648d9a5c3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxncmVlbmhvdXNlJTIwZGVzaWdufGVufDB8fHx8MTc1ODYxMjU2MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Flower Delivery" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@sproutpixel?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Elly M
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Flower Delivery</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Our flower delivery service ensures that your arrangements arrive fresh and on time. Choose from a variety of beautiful bouquets and arrangements for any occasion.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">flowers</span>
+              
+              <span class="badge service-zigrow-chip">delivery</span>
+              
+              <span class="badge service-zigrow-chip">fresh</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1692369584496-3216a88f94c1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxpcnJpZ2F0aW9uJTIwc3lzdGVtc3xlbnwwfHx8fDE3NTg2MTI1NjF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Personalized Service" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@lumin_osity?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Lumin Osity
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Personalized Service</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">We provide personalized assistance to help you find the perfect gift or flower arrangement. Our team is dedicated to making your shopping experience enjoyable.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">personalized</span>
+              
+              <span class="badge service-zigrow-chip">service</span>
+              
+              <span class="badge service-zigrow-chip">support</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1700977932725-bf8a069b82db?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcm9wJTIwcHJvdGVjdGlvbiUyMHN0cmF0ZWdpZXN8ZW58MHx8fHwxNzU4NjEyNTYxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Same-Day Delivery" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@kishor1176?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Ram Kishor
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Same-Day Delivery</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Need a last-minute gift? Our same-day delivery service ensures that your gifts and flowers arrive when you need them most, without compromising quality.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">same-day</span>
+              
+              <span class="badge service-zigrow-chip">delivery</span>
+              
+              <span class="badge service-zigrow-chip">urgent</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1758524052909-26de73dd9c27?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZ3Jvbm9teSUyMGNvbnN1bHRpbmd8ZW58MHx8fHwxNzU4NjEyNTYxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Gift Wrapping" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@silverkblack?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Vitaly Gariev
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Gift Wrapping</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">We offer beautiful gift wrapping services to make your presents even more special. Choose from a variety of wrapping options to suit your style.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">wrapping</span>
+              
+              <span class="badge service-zigrow-chip">special</span>
+              
+              <span class="badge service-zigrow-chip">presentation</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1647268772035-85a4cf15d37a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcmVjaXNpb24lMjBmYXJtaW5nfGVufDB8fHx8MTc1ODYxMjU2MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Corporate Gifting" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@sandorfehervari?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Sandor Fehervari
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Corporate Gifting</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Our corporate gifting solutions are perfect for businesses looking to impress clients or reward employees. We offer customized options to fit your needs.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">corporate</span>
+              
+              <span class="badge service-zigrow-chip">gifting</span>
+              
+              <span class="badge service-zigrow-chip">custom</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- ====================== service-zigrow-section_13 : END ====================== -->
+
+<style>
+  /* ---------- Layout helpers ---------- */
+  .service-zigrow-section_13 {
+    background: #fff;
+  }
+
+  .service-zigrow-section_13 .tracking-wider {
+    letter-spacing: .08em;
+  }
+
+  /* ---------- KPI (right header) ---------- */
+  /* --- KPI mimic like screenshot --- */
+  .service-zigrow-section_13 .service-zigrow-kpi-number {
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #111, var(--primary-colors));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-kpi .para-muted {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+
+
+  /* ---------- Card ---------- */
+  .service-zigrow-section_13 .service-zigrow-card {
+    background: #f8f9fb;
+    border: 1px solid #eceef2;
+      box-shadow: var(--shadow-section);
+ border-radius: var(--box-radius);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    isolation: isolate;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover {
+    transform: translateY(-6px);
+    border-color: #e2e5ea;
+     box-shadow: var(--shadow-section-hover);
+
+
+  }
+
+  /* image wrapper */
+  .service-zigrow-section_13 .service-zigrow-figure {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform .6s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-img {
+    transform: scale(1.08);
+  }
+
+  /* overlays */
+  .service-zigrow-section_13 .service-zigrow-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .18) 100%);
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-shine {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(120px 120px at var(--mx, 80%) var(--my, 20%), rgba(255, 255, 255, .65), rgba(255, 255, 255, 0) 60%);
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-shine {
+    opacity: 1;
+  }
+
+  /* body */
+  .service-zigrow-section_13 .service-zigrow-body {
+    padding: 1.1rem;
+
+    .card-title{
+        color: var(--secondary-colors);
+        font-size: var(--fs-sub);
+    }
+  }
+
+  @media (min-width:1200px) {
+    .service-zigrow-section_13 .service-zigrow-body {
+      padding: 1.25rem;
+    }
+  }
+
+  .service-zigrow-section_13 .service-zigrow-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body-sm);
+  }
+
+  /* chips */
+  .service-zigrow-section_13 .service-zigrow-chip {
+    background: #fff;
+    color: #111;
+    border: 1px solid #e7e9ee;
+  border-radius: var(--box-radius);
+    padding: .35rem .7rem;
+    font-weight: 500;
+  }
+
+  /* link + arrow */
+  .service-zigrow-section_13 .service-zigrow-link {
+    color: #111;
+    position: relative;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1.5px;
+    background: #111;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-link::after {
+    transform: scaleX(1);
+  }
+
+  .service-zigrow-section_13 .service-zigrow-arrow {
+    font-size: 1.25rem;
+    line-height: 1;
+    transform: translateX(0);
+    transition: transform .3s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-arrow {
+    transform: translateX(4px);
+  }
+
+  /* decorative ring */
+  .service-zigrow-section_13 .service-zigrow-ring {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(17, 17, 17, .06), rgba(17, 17, 17, 0) 60%);
+    filter: blur(2px);
+    pointer-events: none;
+    transition: transform .4s ease, opacity .4s ease;
+    opacity: .7;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-ring {
+    transform: translate(6px, -6px);
+    opacity: 1;
+  }
+
+  /* shine position fallback */
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-figure {
+    --mx: 70%;
+    --my: 30%;
+  }
+</style>        <section class="testimonial-zigrow-section_5 py-6"id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading mb-2">What Our Customers Say</h2>
+      <p class="section-subtitle">Hear from our satisfied customers about their experiences with f&amp;c.</p>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=40" alt="John Doe">
+          </div>
+          <h5 class="lead-para-muted mb-1">John Doe</h5>
+          <small class="para-muted d-block mb-2 font-body-sm">Happy Customer</small>
+          <p class="testimonial-text mb-0">"I absolutely loved the gift I received from f&amp;c! The selection is amazing, and the delivery was prompt. Highly recommend!"</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=41" alt="Jane Smith">
+          </div>
+          <h5 class="lead-para-muted mb-1">Jane Smith</h5>
+          <small class="para-muted d-block mb-2 font-body-sm">Flower Enthusiast</small>
+          <p class="testimonial-text mb-0">"The flowers I ordered were stunning and lasted for days. The service was exceptional, and I will definitely be back for more."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=42" alt="Emily Johnson">
+          </div>
+          <h5 class="lead-para-muted mb-1">Emily Johnson</h5>
+          <small class="para-muted d-block mb-2 font-body-sm">Satisfied Aunt</small>
+          <p class="testimonial-text mb-0">"f&amp;c has the best selection of unique gifts. I found the perfect present for my niece&#39;s birthday, and she loved it!"</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=43" alt="Michael Brown">
+          </div>
+          <h5 class="lead-para-muted mb-1">Michael Brown</h5>
+          <small class="para-muted d-block mb-2 font-body-sm">Grateful Customer</small>
+          <p class="testimonial-text mb-0">"Their same-day delivery service saved me! I was able to send a last-minute gift, and it arrived beautifully wrapped."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=44" alt="Sarah Davis">
+          </div>
+          <h5 class="lead-para-muted mb-1">Sarah Davis</h5>
+          <small class="para-muted d-block mb-2 font-body-sm">Loyal Shopper</small>
+          <p class="testimonial-text mb-0">"I appreciate the personalized service at f&amp;c. The staff helped me choose the right gift for my friend, and it was perfect."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-4 text-center h-100">
+          <div class="testimonial-avatar mb-3 mx-auto">
+            <img src="https://i.pravatar.cc/100?img=45" alt="David Wilson">
+          </div>
+          <h5 class="lead-para-muted mb-1">David Wilson</h5>
+          <small class="para-muted d-block mb-2 font-body-sm">Happy Husband</small>
+          <p class="testimonial-text mb-0">"I ordered flowers for my wife&#39;s birthday, and they were absolutely gorgeous. Thank you for making her day special!"</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_5 {
+  background: #fff;
+  position: relative;
+
+
+.section-subtitle {
+  font-size: var(--fs-sub);
+  color: var(--para-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+border-radius: var(--box-radius);
+  backdrop-filter: blur(20px);
+   box-shadow: var(--shadow-section);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+.testimonial-avatar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+   box-shadow: var(--shadow-section-primary);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar img {
+  transform: scale(1.05);
+}
+
+.testimonial-text {
+  font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .testimonial-avatar img {
+    width: 56px;
+    height: 56px;
+  }
+}}
+
+</style>      <section class="contact-zigrow-section_5 py-6" id="contact">
+  <div class="container">
+    
+    <!-- Top Images -->
+    <div class="row g-3 mb-5 image-row">
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/g05HR1s8/2.png" class="img-fluid  " alt="Room 1">
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png" class="img-fluid  " alt="Room 2">
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/8cgdXWqC/4.png" class="img-fluid  " style="width: 600px;" alt="Room 3">
+      </div>
+    </div>
+
+    <!-- Bottom Contact Info -->
+    <div class="row align-items-start text-section">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="fw-bold main-heading">Partner with us</h2>
+      </div>
+      <div class="col-md-6 contact-details">
+        <div class="mb-4">
+          <h6 class="text-uppercase contact-label">Mailing Address</h6>
+          <p>123 Business St, City</p>
+        </div>
+        <div class="mb-4">
+          <h6 class="text-uppercase contact-label">Email Address</h6>
+          <p>contact@example.com</p>
+        </div>
+        <div>
+          <h6 class="text-uppercase contact-label">Phone Number</h6>
+          <p>+91 00000 00000</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .contact-zigrow-section_5 {
+  background-color: #fff;
+
+
+.image-row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+
+.image-row img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+
+.contact-details .contact-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary-colors);
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+  }
+}
+    }
+</style>   <footer class="py-6 footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h5 class="fw-bold link-title">f&amp;c</h5>
+        <p class="subtext">At f&amp;c, we provide a delightful selection of gifts, flowers, and home delivery options for both kids and grown-ups.</p>
+      </div>
+
+      <div class="col-md-1"></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="fw-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-bold link-title">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-center mt-3 mb-0" style="color: #2a2a2a;">
+      &copy; 2025 f&amp;c. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) !important;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

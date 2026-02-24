@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIJAPEX GLOBAL - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #2a324a;
+      --border-radius-btn: 28px 36px 12px 24px / 18px 28px 12px 24px;
+      --box-radius: 5% 8% 5% 8% / 8% 5% 8% 5%;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #06D6A0;
+      --secondary-colors: #111111;
+      --territory-colors: #FFD166;
+      --theme-3: #000000;
+      --theme-4: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 8px 18px rgba(17,24,39,.12);
+      --btn-box-shadow-hover: 0 12px 26px rgba(17,24,39,.16);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,.05), 0 8px 18px rgba(17,24,39,.10), 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent), 0 0 48px 12px color-mix(in srgb, var(--tertiary-color) 22%, transparent);
+      --shadow-section-hover: 0 2px 2px rgba(17,24,39,.06), 0 12px 26px rgba(17,24,39,.12), 0 0 0 8px color-mix(in srgb, var(--primary-colors) 22%, transparent), 0 0 64px 16px color-mix(in srgb, var(--tertiary-color) 28%, transparent);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 18px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 20px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 !important;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Poppins !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      BIJAPEX GLOBAL
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#contact">Contact</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#products">Products</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class=" primary-btn">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #06D6A0;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #06D6A0;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Creative -->
+
+<section class="hero-zigrow-section_19 d-flex align-items-end text-white position-relative" id="hero">
+  <!-- 🔳 Background -->
+<div class="bg-hero position-absolute w-100 h-100">
+  <img src="https://images.unsplash.com/photo-1756154787377-1018709938ae?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNpdHlzY2FwZXxlbnwwfHx8fDE3NjA3MTM3NzJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="w-100 h-100 object-fit-cover" alt="Hero Background" />
+
+  <!-- 📸 Unsplash Credit -->
+  <span class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@francotheshooter?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Franco Debartolo
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </span>
+
+  <div class="bg-overlay"></div>
+</div>
+
+
+  <!-- 🔤 Content -->
+  <div class="container position-relative" style="z-index: 2;">
+    <!-- CTA Top Left -->
+  <div class="d-flex align-items-center gap-3 mb-4">
+          <a href="#" class="white-btn fw-semibold d-inline-flex align-items-center">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Learn More
+          </a>
+        </div>
+
+    <!-- Subtext -->
+    <p class="subtitle mb-2 font-subheading">Do more with BIJAPEX GLOBAL</p>
+
+    <!-- Headline -->
+    <h1 class="hero-heading_19 fw-bold mb-4 me-auto">
+   Join BijapeX Global Now!
+    </h1>
+
+    <!-- Stats Row -->
+    <div class="row g-4 stats-wrapper pt-4 mt-3">
+      <div class="col-6 col-md-3 stat">
+  <div class="stat-top d-flex align-items-center gap-2 mb-1">
+    <div class="stat-index">01</div>
+    <div class=" number">1200+</div>
+  </div>
+  <div class="stat-label">
+    <span class="fw-semibold">Happy Customers
+  </div>
+</div>
+      <div class="col-6 col-md-3 stat">
+  <div class="stat-top d-flex align-items-center gap-2 mb-1">
+    <div class="stat-index">02</div>
+    <div class=" number">500+</div>
+  </div>
+  <div class="stat-label">
+    <span class="fw-semibold">Products Available
+  </div>
+</div>
+      <div class="col-6 col-md-3 stat">
+  <div class="stat-top d-flex align-items-center gap-2 mb-1">
+    <div class="stat-index">03</div>
+    <div class=" number">100+</div>
+  </div>
+  <div class="stat-label">
+    <span class="fw-semibold">Service Providers
+  </div>
+</div>
+      <div class="col-6 col-md-3 stat">
+  <div class="stat-top d-flex align-items-center gap-2 mb-1">
+    <div class="stat-index">04</div>
+    <div class=" number">30%</div>
+  </div>
+  <div class="stat-label">
+    <span class="fw-semibold">Cashback Rewards
+  </div>
+</div>
+      
+    
+
+
+    </div>
+  </div>
+</section>
+<style>
+    .hero-zigrow-section_19 {
+  min-height: 100vh;
+  position: relative;
+overflow: hidden;
+
+.bg-hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+/* 👇 Subtle bottom overlay only */
+.bg-hero {
+  position: absolute; /* already hai, just being explicit */
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Bottom fade (on top of existing .bg-overlay) */
+.bg-hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 38vh; /* how tall the fade should be */
+  pointer-events: none;
+
+  /* subtle transparent-to-black fade upwards */
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55) 0%,      /* darkest at the very bottom */
+    rgba(0,0,0,0.38) 30%,
+    rgba(0,0,0,0.18) 60%,
+    rgba(0,0,0,0.00) 100%
+  );
+
+  z-index: 1; /* stays above .bg-overlay (also z-index:1), because ::after is later in paint order */
+}
+
+/* make sure content stays above overlays */
+.hero-zigrow-section_19 .container {
+  position: relative;
+  z-index: 2; /* already set inline, this just documents it */
+}
+
+/* Mobile: thoda zyada fade for readability */
+@media (max-width: 768px) {
+  .bg-hero::after {
+    height: 48vh;            /* taller fade on small screens */
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.60) 0%,
+      rgba(0,0,0,0.40) 32%,
+      rgba(0,0,0,0.20) 64%,
+      rgba(0,0,0,0.00) 100%
+    );
+  }
+}
+
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+/* Subheading */
+.subtitle {
+  margin-bottom: 0.3rem;
+}
+
+/* Heading */
+.hero-heading_19 {
+  font-size: 6.2rem;
+  text-transform: capitalize;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.hero-heading span {
+  display: block;
+}
+
+/* Stats Section */
+/* existing */
+.stats-wrapper {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 30px 0;
+  margin-top: 3rem;
+  position: relative;            /* 👈 needed for the overlay */
+}
+
+/* 👇 left start pe bright-to-normal fade */
+.stats-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 660px;                   /* start length; tweak if needed */
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.25)
+  );
+  pointer-events: none;
+}
+
+
+.stat {
+  text-align: left;
+}
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-index {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.85;
+}
+
+.stat .number {
+      font-size: 2.8rem;
+    font-weight: normal;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.9;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.stat-label .fw-semibold {
+  font-weight: 600;
+  color: #fff;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-heading_19 {
+    font-size: 2.3rem;
+  }
+
+  .cta-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .stats-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat .number {
+  font-size: .85rem;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: .80rem;
+  color: #fff;
+  opacity: 0.9;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+}}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const h = document.querySelector('.hero-zigrow-section_19 .hero-heading');
+  if (!h) return;
+
+  const original = (h.textContent || "").trim().replace(/\s+/g, ' ');
+
+  const dotted = original
+    .split(' ')
+    .filter(Boolean)
+    .map(w => w.replace(/[.]+$/,'') + '.')
+    .join(' ');
+
+  h.textContent = dotted;
+});
+</script>
+   <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image  position-relative">
+  <img src="https://images.unsplash.com/photo-1675350174784-e76296667d8b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBkZXNpZ258ZW58MHx8fHwxNzYwNzEzNzcyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@inys_photography?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Iny R.
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-3">
+            Welcome to BijapeX
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted font-body mb-4">
+            BijapeX Global is a trusted brand in FMCG, e-commerce, and digital services, dedicated to providing affordable essentials and earning opportunities for everyone.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Our Vision</h6>
+                <p class="mb-0 para-muted font-body">To create a world where shopping and earning go hand in hand, benefiting consumers and entrepreneurs alike.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Our Mission</h6>
+                <p class="mb-0 para-muted font-body">To provide affordable products and reliable services that empower individuals to achieve financial independence.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Our Values</h6>
+                <p class="mb-0 para-muted font-body">Integrity, innovation, and community are at the heart of everything we do at BijapeX Global.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Our Journey</h6>
+                <p class="mb-0 para-muted font-body">From humble beginnings to a thriving ecosystem, BijapeX Global has transformed the shopping experience for many.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: var(--box-radius) ;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.4s ease;
+}
+.survey-image:hover{
+  box-shadow: var(--shadow-section-hover);
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: "✓";
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>   <!-- ===== Our Services (Dynamic EJS + pixel-perfect) ===== -->
+<section id="services" class="service-zigrow-section_8 py-6">
+  <div class="container">
+    <div
+      class="d-flex align-items-start justify-content-between flex-wrap gap-3 mb-4 mb-lg-5"
+    >
+      <div>
+        <h2 class="main-heading mb-2">Our Services</h2>
+        
+        <p class="section-sub mb-0">
+          Discover a range of offerings tailored to your needs.Explore Our Services
+        </p>
+        
+      </div>
+
+      <a href="#" class="primary-btn align-self-start">
+         Get Started      </a>
+    </div>
+
+    <div class="row g-4 g-lg-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card featured h-100">
+          <div class="svc-icon featured">
+            
+            <i class="bi bi-cart"></i>
+            
+          </div>
+
+          <h3 class="svc-title featured">
+            FMCG Products
+          </h3>
+          <p class="svc-text featured">
+            We offer a wide variety of essential daily-use items, from grains to household goods, at competitive prices with great profit margins.
+          </p>
+
+          <a href="#" class="svc-link featured">
+            Shop Now
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-heart"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Wellness Products
+          </h3>
+          <p class="svc-text ">
+            Our wellness and nutraceuticals range includes herbal supplements and personal care items designed for modern lifestyles, promoting health and well-being.
+          </p>
+
+          <a href="#" class="svc-link ">
+            View Products
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-phone"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Digital Services
+          </h3>
+          <p class="svc-text ">
+            Enjoy the convenience of our digital services, including bill payments and recharges, all while earning cashback in Bijacoin.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-shop"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            E-Commerce Marketplace
+          </h3>
+          <p class="svc-text ">
+            Shop from our extensive e-commerce portal featuring over 50 categories, ensuring you find what you need at the best prices.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Browse Now
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-coin"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Bijacoin Rewards
+          </h3>
+          <p class="svc-text ">
+            Earn Bijacoin on every purchase, recharge, and referral, creating a unique loyalty ecosystem that benefits all members.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Join Now
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-people"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Distribution Opportunities
+          </h3>
+          <p class="svc-text ">
+            Join our structured distribution model and become a part of our growing network, earning margins as a distributor or retail partner.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Become a Distributor
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== Section wrapper ===== */
+  .py-6 {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+  }
+  .service-zigrow-section_8 {
+    background: #fefcf6;
+  }
+
+  /* ===== Subheading ===== */
+  .service-zigrow-section_8 .section-sub {
+    color: var(--para-muted);
+    max-width: 760px;
+    font-size: var(--fs-sub);
+  }
+
+  
+
+  /* ===== Cards ===== */
+  .service-zigrow-section_8 .svc-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: var(--box-radius);
+    padding: 1.6rem 1.6rem 1.2rem;
+        box-shadow: var(--shadow-section);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+  .service-zigrow-section_8 .svc-card:hover {
+    transform: translateY(-6px);
+    border-color: #e8e8e8;
+        box-shadow: var(--shadow-section-hover);
+  }
+
+  /* Featured (first card) */
+  .service-zigrow-section_8 .svc-card.featured {
+    background: #111213;
+    color: #fff;
+    border: none;
+       box-shadow: var(--shadow-section);
+  }
+  .service-zigrow-section_8 .svc-card.featured:hover {
+    transform: translateY(-8px) rotate(-1deg);
+     box-shadow: var(--shadow-section-hover);
+  }
+
+  /* ===== Icon ===== */
+  .service-zigrow-section_8 .svc-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--box-radius);
+    display: grid;
+    place-items: center;
+    background: #f4f4f4;
+    color: #1f1f1f;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+  .service-zigrow-section_8 .svc-icon.featured {
+    background: #1b1b1b;
+    color: #fff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+  }
+
+  /* ===== Titles & text ===== */
+  .service-zigrow-section_8 .svc-title {
+    font-weight: 700;
+    color: #0f0f0f;
+    font-size: var(--fs-body);
+    margin: 0.25rem 0 0.35rem;
+  }
+  .service-zigrow-section_8 .svc-card.featured .svc-title {
+    color: #fff;
+  }
+
+  .service-zigrow-section_8 .svc-text {
+    color: #797c80;
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    font-size: var(--fs-body-sm);
+  }
+  .service-zigrow-section_8 .svc-card.featured .svc-text {
+    color: rgb(191, 191, 191);
+  }
+
+  /* ===== Links ===== */
+  .service-zigrow-section_8 .svc-link {
+    display: inline-flex;
+    gap: 0.35rem;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+  .service-zigrow-section_8 .svc-link .bi {
+    font-size: 1.2rem;
+  }
+  .service-zigrow-section_8 .svc-card:hover .svc-link {
+    text-decoration: underline;
+  }
+  .service-zigrow-section_8 .svc-link.featured {
+    color: var(--primary-colors);
+  }
+  .service-zigrow-section_8 .svc-link.featured:hover {
+    opacity: 0.9;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 575.98px) {
+    .service-zigrow-section_8 .svc-card {
+      padding: 1.4rem;
+    }
+  }
+</style>
+   <section class="logo-zigrow-section_6 py-6" id="logos">
+  <div class="container text-center">
+
+    <!-- Heading -->
+    <h2 class="main-heading lh-sm mb-3">
+      Meet the teams using<br class="d-none d-md-block">
+      QuickBites to grow smarter
+    </h2>
+    <p class="lead para-muted font-subheading mb-5">
+      Trusted by teams obsessed with building better products.
+    </p>
+
+    <!-- Logos -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 gap-lg-5">
+
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+      <div class="logo-wrap">
+      <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+   
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Styles -->
+<style>
+.logo-zigrow-section_6{
+ background: #fafafa;
+
+
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.25rem;
+  min-width:120px;
+}
+.logo-wrap img{
+  max-height:78px;
+  object-fit:contain;
+}
+.logo-wrap span{
+  margin-top:.15rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  font-size:1rem;
+  color:#000;
+  white-space:nowrap;
+}
+
+@media(max-width:575.98px){
+  .logo-wrap{min-width:100px;}
+  .logo-wrap span{font-size:.9rem;}
+}}
+</style>
+   <!-- Full-page background wrapper -->
+<section class=" py-6 product-zigrow-section_1" id="products">
+    <div class="container">
+        <!-- White rounded card -->
+        <div class="featured-products p-4 p-md-5">
+
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <div>
+                    <h5 class="fw-bold mb-1" style="color: #111111;">
+                        Our Product Range
+                    </h5>
+                    <p class="para-muted mb-0">
+                        Quality essentials at great prices.
+                    </p>
+                </div>
+                <a href="#"
+           class="primary-btn d-inline-flex align-items-center gap-2">
+          <i class="bi bi-whatsapp"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1620987278429-ab178d6eb547?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzYwNzEzNzczfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                         <a href="https://unsplash.com/@frostroomhead?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                                            Rodion Kutsaiev
+                                        </a>
+                                        on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                                    </span>
+                                    
+                            </div>
+
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Grocery Items
+                                </h6>
+                                <p class="para-muted font-body-sm mb-1">
+                                    Explore our selection of grains, oils, and snacks, perfect for every household.
+                                </p>
+                                <p class="fw-bold mb-0">₹999</p>
+                            </div>
+                    </div>
+
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1678852524356-08188528aed9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwZ2FkZ2V0c3xlbnwwfHx8fDE3NjA3MTM3NzN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                       <a href="https://unsplash.com/@minimalsayan?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                                            Sayan Majhi
+                                        </a>
+                                        on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                                    </span>
+                                    
+                            </div>
+
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Wellness Products
+                                </h6>
+                                <p class="para-muted font-body-sm mb-1">
+                                    Discover our herbal supplements and personal care items designed for your health.
+                                </p>
+                                <p class="fw-bold mb-0">₹999</p>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="product-card position-relative overflow-hidden">
+                        
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1623220947698-aa5d3e1218ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzZXJ2aWNlJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2MDcxMzc3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                                    class="img-fluid w-100 h-100 object-cover" alt="Athletic Shoe">
+
+                                
+                                    <span class="img-credit">
+                                        Photo by
+                                        <a href="https://unsplash.com/@mufidpwt?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                                            Mufid Majnun
+                                        </a>
+                                        on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                                    </span>
+                                    
+                            </div>
+
+                            <div class="card-overlay p-3">
+                                <h6 class="fw-semibold mb-1">
+                                    Digital Services
+                                </h6>
+                                <p class="para-muted font-body-sm mb-1">
+                                    Utilize our digital services for bill payments and recharges with cashback rewards.
+                                </p>
+                                <p class="fw-bold mb-0">₹999</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .product-zigrow-section_1 {
+        background: #fafafa;
+
+
+        .featured-products {
+            background-color: #ffffff;
+           border-radius: var(--box-radius);
+            box-shadow: var(--shadow-section);
+        }
+
+        .product-card {
+            height: 100%;
+         border-radius: var(--box-radius);
+            background-color: #f9f9f9;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+           border-radius: var(--box-radius);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+        border-radius: var(--box-radius);
+            margin: 1rem;
+           box-shadow: var(--shadow-section);
+        }
+
+
+        .featured-products {
+            background-color: #f8f9fb;
+            border-radius: var(--box-radius);
+        }
+
+        .product-card {
+            background: #fff;
+             border-radius: var(--box-radius);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            h6 {
+                color: #06D6A0;
+            }
+
+            img {
+                aspect-ratio: 1/1 !important;
+            }
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+               box-shadow: var(--shadow-section-hover);
+        }
+    }
+</style>          <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 py-6"id="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid   overflow-hidden">
+
+      <!-- ◼︎ Left: Contact Info -->
+      <div class="cta-info p-5">
+        <h2 class="fw-bold mb-4" style="color: #111111; ">Get in touch</h2>
+
+        <ul class="contact-list list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Address</h6>
+              <p>123 Business St, City</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>info.bijapexglobal@gmail.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 00000 00000</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Right: Hero / CTA -->
+      <div class="cta-hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="content px-4 px-lg-5">
+          <h3 class="fw-bold mb-4 col-md-8 mx-auto">Feel Free to Contact Us Anytime</h3>
+          <a href="#" class="primary-btn text-truncate">Click here for location</a>
+
+          <!-- socials -->
+          <div class="social-wrap d-flex justify-content-center gap-3 mt-5 mx-auto">
+            <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+:root{
+ --primary-colors-txt: #000000;
+  --surface: #ffffff;
+  --surface-dark: #111;
+  --stroke: rgba(0,0,0,.06);
+  --bg-section: #f8f9fa;
+}
+
+/* ===================  SECTION  =================== */
+.contact-zigrow-section_3{
+  background: var(--bg-section);
+
+
+/* ---------- grid wrapper ---------- */
+.cta-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+@media (max-width: 991.98px){
+  .cta-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- left panel ---------- */
+.cta-info{
+  background: var(--surface);
+}
+.cta-info h2{font-size:2.1rem}
+.contact-list li{
+  display:flex;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.contact-list .icon{
+  color:var(--accent);
+  font-size:1.2rem;
+  flex-shrink:0;
+}
+.contact-list h6{
+  font-size:.8rem;
+  letter-spacing:.05em;
+  font-weight:700;
+  margin-bottom:.25rem;
+  color:var(--accent);
+}
+.contact-list p{
+  margin:0;
+  font-size:var(--fs-body);
+  color:var(--para-muted);
+}
+
+/* ---------- hero panel ---------- */
+.cta-hero{
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80') center / cover no-repeat;
+  min-height:420px;
+  overflow:hidden;
+}
+.cta-hero::before{
+  content:"";
+  position:absolute;inset:0;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.45);
+}
+.cta-hero .content{position:relative;z-index:1;color:#fff}
+.cta-hero h3{font-size:1.9rem;line-height:1.35}
+
+
+
+/* ---------- socials ---------- */
+.social-btn{
+  width:44px;height:44px;
+  display:grid;place-content:center;
+  border-radius:50%;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.4);
+  transition:background .3s ease, transform .3s ease;
+  text-decoration: none;
+}
+.social-btn:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-3px);
+  color: white;
+}
+
+/* ===================  RESPONSIVE TWEAKS  =================== */
+@media (max-width:575.98px){
+  .cta-info h2{font-size:1.8rem}
+  .cta-hero h3{font-size:1.6rem}
+  .btn-cta{width:100%}
+}}
+
+</style>   <footer class="footer-zigrow-section_6 " id="footer">
+  <div class="container py-4">
+    <!-- Top Section: Social Links -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
+      
+      <!-- Left: Social Icons -->
+      <div class="footer-social d-flex gap-3">
+        <a href="#" class="social-link" aria-label="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="YouTube">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+
+      <!-- Right: Footer Links -->
+      <div class="footer-links d-flex gap-3 mt-3 mt-md-0">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Copyright -->
+    <div class="text-center small pt-3 border-top">
+      © 2025. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<style>
+    .footer-zigrow-section_6 {
+    background-color: var(--theme-4);
+  font-size: 0.92rem;
+    color: var(--theme-3);
+  position: relative;
+
+
+
+
+/* Social Links */
+ .footer-social a {
+  color: var(--theme-3);
+  font-size: 1.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: var(--theme-3);
+}
+
+/* Footer text links */
+.footer-links a {
+  color: var(--para-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--theme-3);
+  border-bottom: 1px solid var(--theme-3);
+}
+
+/* Bottom copyright section */
+ .text-center {
+  color: var(--theme-3);
+}
+
+@media (max-width: 575.98px) {
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .d-flex {
+    /* flex-direction: column; */
+    text-align: center;
+  }
+}
+}
+</style> 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

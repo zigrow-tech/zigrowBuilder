@@ -1,0 +1,3407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andy&#39;s Tree Service - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #3D5A80;
+      --secondary-colors: #111111;
+      --territory-colors: #98C1D9;
+      --theme-3: #ffffff;
+      --theme-4: #000000;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 ;
+      font-family: Open Sans;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Lora ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top custom-navbar">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold" href="#">
+          Andy&#39;s Tree Service
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav align-lg-custom-center -center">
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#team">Team</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+            </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="primary-btn">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-colors);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small-custom shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <section class="hero-zigrow-section_5" id="hero" data-section="hero">
+  <div class="overlay pointer-custom-none"></div>
+
+  <div class="container">
+    <div class="row justify-custom-start">
+      <div class="col-lg-6 col-md-8 col-12">
+
+        <div class="hero-content text-custom-white">
+          <h1>Your Trusted Tree Care Experts</h1>
+          <p>For over 30 years, Andy&#39;s Tree Service has delivered top-notch tree solutions in Escondido. Experience quality, reliability, and friendly service for all your tree needs.</p>
+
+          <a href="#" class="white-btn btn-hover">
+            Contact Us Today
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p class="img-credit text-custom-white small-custom position-absolute">
+    Photo by
+    <a 
+      href="https://unsplash.com/@deliberatedirections?utm_source=zigrow&utm_medium=referral"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Deliberate Directions
+    </a> 
+    on 
+    <a 
+      href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Unsplash</a>
+  </p>
+</section>
+
+<style>
+  .hero-zigrow-section_5 {
+    background: url(https://images.unsplash.com/photo-1746021375246-7dc8ab0583f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2V8ZW58MHx8fHwxNzY3NDI0NDY5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080) center center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: var(--box-radius);
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  }}
+</style>
+   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_3 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-0 row-vcenter">
+
+      <!-- Left: Image with overlay -->
+      <div class="col-lg-6 img-holder">
+        <div class="img-layer">
+        <div class="img-bg img-wrapper-center">
+
+
+            <img src="https://images.unsplash.com/photo-1567700353413-df167131bea0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBleHBlcnRpc2V8ZW58MHx8fHwxNzY3NTE3MzEzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="About us image" />
+            <span class="img-overlay"></span>
+            <span class="img-credit">
+              Photo by  <a 
+        href="https://unsplash.com/@amutiomi?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Miguel A Amutio
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 d-flex justify-custom-center align-custom-center">
+        <div class="content p-custom-4 p-lg-custom-5">
+          <h1 class="display-title mb-custom-4">
+            <span>Why Choose Us</span>
+          </h1>
+
+          <p class="mb-custom-3 para-muted font-body">With over 30 years of experience, Andy&#39;s Tree Service is dedicated to delivering top-notch tree care in Escondido, CA. Our friendly team ensures quality workmanship at competitive prices.</p>
+          <p class="mb-custom-4 para-muted font-body">We prioritize customer satisfaction and safety, offering a range of services from tree removal to emergency care. Trust us to handle your tree needs with expertise and care.</p>
+
+          <a href="#contact" class="primary-btn">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --hero-primary: var(--primary-colors);
+      --hero-bg: var(--theme-bg);
+      --hero-text: var(--secondary-colors);
+    }
+
+    .about-zigrow-section_3 {
+      background: var(--hero-bg);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    
+
+    .img-holder {
+      position: relative;
+      min-height: 600px;
+      height: 100%;
+    }
+
+    .img-layer{
+      height: 100%;
+      overflow: visible;
+    }
+
+    .img-bg {
+      position: relative;
+      width: 100%;
+      
+      height: 100%;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .img-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .img-holder:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .img-overlay {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: background 0.4s ease;
+    }
+
+    .img-holder:hover .img-overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      color: var(--hero-text);
+      max-width: 640px;
+      animation: fadeSlideIn 0.85s ease both;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .display-title span {
+      display: inline-block;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(to right, var(--territory-colors), var(--hero-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content p {
+      line-height: 1.8;
+    }
+
+  
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 991.98px) {
+      .img-holder {
+        order: -1;
+        min-height: 300px;
+      }
+
+      .img-bg img {
+        filter: grayscale(0);
+      }
+
+      .content {
+        padding-top: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  </style>
+</section>
+   <!-- ========== Services Switcher (service-zigrow-section_10) ========== -->
+<!-- ========== Services Switcher (service-zigrow-section_10) ========== -->
+<section class="service-zigrow-section_10 section-padding" id="services" data-section="services">
+  <div class="container">
+
+    <!-- data-component-tabs wrapper -->
+    <div class="row g-4 g-lg-5 align-custom-start" data-component-tabs id="tabs-services">
+
+      <!-- LEFT: Tabs -->
+      <div class="col-lg-4">
+        <p class="svc-eyebrow mb-custom-2">(Our Service)</p>
+        <h2 class="main-heading mb-custom-3">
+          <span>Our Tree Services</span>
+        </h2>
+
+        <p class="svc-subtext mb-custom-4">
+          <span>We prioritize customer satisfaction and safety, offering a range of services from tree removal to emergency care. Trust us to handle your tree needs with expertise and care.</span>
+        </p>
+
+        <!-- Builder-friendly nav-tabs -->
+        <nav>
+          <div class="nav nav-tabs svc-tablist" role="tablist" aria-label="Services">
+            
+              <button
+                class="nav-link svc-tab active is-active"
+                id="nav-tab-services-0"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-0"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-0"
+                aria-selected="true"
+              >
+                <span>Tree Removal</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-1"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-1"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-1"
+                aria-selected="false"
+              >
+                <span>Tree Trimming</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-2"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-2"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-2"
+                aria-selected="false"
+              >
+                <span>Tree Pruning</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-3"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-3"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-3"
+                aria-selected="false"
+              >
+                <span>Palm Tree Care</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-4"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-4"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-4"
+                aria-selected="false"
+              >
+                <span>Emergency Tree Care</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-5"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-5"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-5"
+                aria-selected="false"
+              >
+                <span>Consulting Services</span>
+              </button>
+            
+          </div>
+        </nav>
+      </div>
+
+      <!-- RIGHT: Panels -->
+      <div class="col-lg-8">
+        <div class="tab-content svc-panels">
+          
+
+          <div
+            class="tab-pane p-0 show active"
+            id="nav-services-0"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-0"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NzUwNTgxNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Tree Removal"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@seanpollock?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Sean Pollock</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Tree Removal</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Safe and efficient tree removal to enhance your property’s appeal and safety. Trust our experts to handle the toughest jobs with care.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-1"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-1"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1594841061355-1fb58fb7a726?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25zdWx0aW5nJTIwc29sdXRpb25zfGVufDB8fHx8MTc2NzUxNzMxM3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Tree Trimming"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@canvastsupplyco?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Canvast Supply Co.</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Tree Trimming</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Keep your trees healthy and beautiful with our professional trimming services. We enhance growth and appearance while ensuring safety.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-2"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-2"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxzdHJhdGVnaWMlMjBwbGFubmluZ3xlbnwwfHx8fDE3Njc1MDU4MTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Tree Pruning"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@patrickperkins?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Patrick Perkins</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Tree Pruning</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Promote strong growth and remove dead branches with our precise pruning services. We help your trees flourish and look their best.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-3"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-3"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1762151717091-4e0633e0c431?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBhZHZpc29yeXxlbnwwfHx8fDE3Njc1MTczMTN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Palm Tree Care"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@annypenny?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Supannee U-prapruit</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Palm Tree Care</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Specialized palm tree trimming to maintain their unique beauty and health. Let us help your palms thrive in the California sun.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-4"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-4"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1682336869523-2c6859f781cb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBzZXJ2aWNlc3xlbnwwfHx8fDE3Njc1MTczMTN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Emergency Tree Care"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@acrelia?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Acrelia</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Emergency Tree Care</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Rapid response for storm damage and emergency tree situations. We prioritize your safety and restore your property quickly.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-5"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-5"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NzUwNTgxNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Consulting Services"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@seanpollock?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Sean Pollock</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Consulting Services</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Expert advice on tree health and maintenance. Our consulting services help you make informed decisions for your landscape.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  /* ===== service-zigrow-section_10 (scoped) ===== */
+  .service-zigrow-section_10 {
+    --svc-text: #0f0f0f;
+  
+    color: var(--svc-text);
+    background: #fff;
+  }
+
+  .py-lg-6 {
+    padding-top: 4.5rem ;
+    padding-bottom: 4.5rem ;
+  }
+
+  /* Headings */
+  .service-zigrow-section_10 .svc-eyebrow {
+    color: var(--svc-muted);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.25px;
+  }
+  .service-zigrow-section_10 .svc-heading {
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.05;
+    font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
+    margin: 0 0 0.4rem;
+  }
+  .service-zigrow-section_10 .svc-subtext {
+    color: var(--para-muted);
+    max-width: 42ch;
+      line-height: var(--lh-body);
+    font-size: var(--fs-body);
+    margin: 0;
+  }
+
+  /* ================= LEFT — Tablist ================= */
+  .service-zigrow-section_10 .svc-tablist {
+    --rowH: 56px;
+    position: relative;
+    margin-top: 1.25rem;
+    padding: 0.35rem;
+  border-radius: var(--box-radius);
+    background: #fff;
+    border: 1px solid #eef0f3;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* sliding highlight */
+  .service-zigrow-section_10 .svc-tablist::before {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 0.35rem;
+    width: calc(100% - 0.7rem);
+    height: var(--rowH);
+    border-radius: var(--box-radius);
+    /* fallback + preferred */
+    background: #f1f5f9;
+    background: color-mix(in srgb, var(--primary-colors) 8%, #f4f6f9);
+    box-shadow: inset 0 0 0 1px
+      color-mix(in srgb, var(--primary-colors) 12%, transparent);
+    transform: translateY(calc(var(--active, 0) * var(--rowH)));
+    transition: transform 0.25s ease, background 0.25s ease,
+      box-shadow 0.25s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-tab {
+    position: relative;
+    z-index: 1; /* above slider */
+    display: flex;
+    align-items: center;
+    height: var(--rowH);
+    padding: 0 14px 0 22px;
+    border-radius: var(--box-radius);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #8a919c;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease, transform 0.15s ease;
+    background: transparent;
+  }
+  .service-zigrow-section_10 .svc-tab:hover {
+    color: #1b1f23;
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_10 .svc-tab.is-active {
+    color: #0f0f0f;
+  }
+
+
+  /* Bootstrap nav-tabs override inside this section */
+.service-zigrow-section_10 .svc-tablist.nav-tabs {
+  display: block;        /* vertical stack */
+  border-bottom: 0;      /* remove BS bottom border */
+  padding: 0.35rem;      /* tumhaara padding retain */
+}
+
+/* Nav-link defaults clean up */
+.service-zigrow-section_10 .svc-tablist .nav-link {
+  border: 0;             /* BS border hatao */
+  margin-bottom: 0;      /* extra gaps avoid */
+  border-radius: var(--box-radius);
+}
+
+/* Make tabs full width inside left tablist */
+.service-zigrow-section_10 .svc-tablist .nav-link {
+  display: block;
+  width: 100%;
+  text-align: left; /* optional: left align text like your design */
+}
+
+/* Remove Bootstrap's default white background on active nav-link */
+.service-zigrow-section_10 .svc-tablist .nav-link.active {
+  background-color: transparent ;
+  color: #0f0f0f; /* tumhaare active text color ke saath match */
+  border-color: transparent ; /* BS border bhi hata do */
+}
+
+  /* Left indicator bar on all; primary on active */
+  .service-zigrow-section_10 .svc-tab::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 4px;
+    height: 22px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background: #e2e8f0;
+    transition: background 0.25s ease;
+  }
+  .service-zigrow-section_10 .svc-tab.is-active::after {
+    background: var(--primary-colors);
+  }
+
+  /* Sync active state via :has() (progressive enhancement) */
+  @supports (selector(:has(*))) {
+    .service-zigrow-section_10:has(#svc-tab-0:checked) .svc-tablist::before {
+      transform: translateY(calc(0 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-1:checked) .svc-tablist::before {
+      transform: translateY(calc(1 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-2:checked) .svc-tablist::before {
+      transform: translateY(calc(2 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-3:checked) .svc-tablist::before {
+      transform: translateY(calc(3 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-4:checked) .svc-tablist::before {
+      transform: translateY(calc(4 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-5:checked) .svc-tablist::before {
+      transform: translateY(calc(5 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-6:checked) .svc-tablist::before {
+      transform: translateY(calc(6 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-7:checked) .svc-tablist::before {
+      transform: translateY(calc(7 * var(--rowH)));
+    }
+
+    /* text + left bar primary on active */
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1),
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2),
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3),
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4),
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5),
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6),
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7),
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8) {
+      color: #0f0f0f;
+    }
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1)::after,
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2)::after,
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3)::after,
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4)::after,
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5)::after,
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6)::after,
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7)::after,
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8)::after {
+      background: var(--primary-colors);
+    }
+  }
+
+  /* ================= RIGHT — Panels ================= */
+  .service-zigrow-section_10 .svc-panels {
+    position: relative;
+    padding: 1.6rem;
+   border-radius: var(--box-radius);
+    background: #fff;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* take radios off-screen so label click won't scroll */
+  .service-zigrow-section_10 .svc-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-radio + .svc-panel {
+    display: none;
+  }
+  .service-zigrow-section_10 .svc-radio:checked + .svc-panel {
+    display: block;
+    animation: svcFade 0.45s ease both;
+  }
+  @keyframes svcFade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .service-zigrow-section_10 .svc-figure {
+    margin: 0 0 1.25rem;
+ border-radius: var(--box-radius);
+    overflow: hidden;
+    background: #f6f7f9;
+    box-shadow: var(--shadow-section-hover);
+  }
+  .service-zigrow-section_10 .svc-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .service-zigrow-section_10 .svc-figure:hover .svc-image {
+    transform: scale(1.035);
+  }
+
+  .service-zigrow-section_10 .svc-panel-title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin: 0.25rem 0 0.6rem;
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.9rem);
+  }
+  .service-zigrow-section_10 .svc-panel-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    max-width: 92%;
+    margin-bottom: 1.2rem;
+  }
+
+
+
+
+  /* ================= Responsive ================= */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_10 .svc-tablist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.35rem;
+      --rowH: 52px;
+    }
+    .service-zigrow-section_10 .svc-tablist::before {
+      display: none;
+    } /* slider off on grid */
+    .service-zigrow-section_10 .svc-tab {
+      justify-content: center;
+      border: 1px solid #eef0f3;
+      color: #50555c;
+      background: #fff;
+    }
+    .service-zigrow-section_10 .svc-tab.is-active {
+      background: color-mix(in srgb, var(--primary-colors) 10%, #fff);
+      color: #0f0f0f;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    }
+    .service-zigrow-section_10 .svc-tab.is-active::after {
+      background: var(--primary-colors);
+    }
+    .service-zigrow-section_10 .svc-panel-text {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+(function(){
+  const sec = document.querySelector('.service-zigrow-section_10');
+  if (!sec) return;
+
+  const tablist = sec.querySelector('.svc-tablist');
+  if (!tablist) return;
+
+  const tabs = Array.from(tablist.querySelectorAll('.svc-tab'));
+
+  function syncActive(idx) {
+    tabs.forEach((btn, i) => btn.classList.toggle('is-active', i === idx));
+    tablist.style.setProperty('--active', idx);
+  }
+
+  // Initial active from .active class (jo builder/Bootstrap set karega)
+  let initial = tabs.findIndex(btn => btn.classList.contains('active'));
+  if (initial < 0) initial = 0;
+  syncActive(initial);
+
+  tabs.forEach((btn, i) => {
+    // Bootstrap tab event (agar use ho raha hai)
+    btn.addEventListener('shown.bs.tab', function () {
+      syncActive(i);
+    });
+
+    // Backup – agar Bootstrap nahi ho toh click se bhi chale
+    btn.addEventListener('click', function () {
+      syncActive(i);
+    });
+  });
+})();
+</script>
+
+     <section class=" whyChooseUs-zigrow-section_6 section-padding"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container h-custom-100">
+    <div class="row align-custom-center gx-lg-5 gy-5 h-custom-100">
+
+      <!-- Left Column -->
+      <div class="col-lg-5">
+        <div class="section-header">
+          <span class="section-path">/ Why Andy&#39;s Tree Service</span>
+          <h2 class=" main-heading">Why Choose Us</h2>
+          <p class="section-subtitle">Experience and dedication you can trust for all your tree care needs.</p>
+          <p class="section-desc">With over 30 years in the industry, we deliver top-notch tree services tailored to your needs, ensuring safety and satisfaction.</p>
+
+        
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-7">
+        <div class="feature-box-grid">
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-check-circle"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Expertise You Can Trust</h5>
+                <p class="feature-text">Our skilled team brings over 30 years of experience, ensuring every job is done right the first time for your peace of mind.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Customer-Centric Service</h5>
+                <p class="feature-text">We prioritize our customers, offering personalized solutions and clear communication to make your tree care experience smooth and hassle-free.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Safety First</h5>
+                <p class="feature-text">We adhere to strict safety protocols, protecting your property and our team while performing tree services, so you can feel secure.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Emergency Response</h5>
+                <p class="feature-text">Our team is available for emergency tree care, providing quick response to storm damage and urgent situations to restore safety promptly.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .whyChooseUs-zigrow-section_6 {
+  background: #ffffff;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+
+
+.section-path {
+  font-size: 0.85rem;
+  color:var(--secondary-colors);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  color: var(--para-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  max-width: 90%;
+  line-height: 1.7;
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.cta-link {
+  color:var(--secondary-colors);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s ease;
+}
+
+.cta-link:hover {
+  color:var(--secondary-colors);
+}
+
+.feature-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon-circle {
+  font-size: 1.3rem;
+  color: var(--secondary-colors);
+  background: #f3f2fb;
+  padding: 14px;
+ border-radius: var(--box-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--lead-custom-para-muted);
+}
+
+.feature-text {
+  font-size: var(--fs-body-sm);
+ color: var(--para-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .razor-difference-section {
+    padding: 60px 0;
+    min-height: unset;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .feature-box-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  }
+</style>   <!-- 🌟 Expert Team Modern Section -->
+<section class=" section-padding team-zigrow-section_5" id="team" data-section="team">
+  <div class="container text-custom-center">
+    <!-- Section Header -->
+    <h2 class="section-title mb-custom-2 fw-custom-bold main-heading">Meet Our Team</h2>
+    <p class="section-sub mb-custom-5 para-muted font-subheading">Dedicated professionals ready to serve your tree care needs.</p>
+
+    <!-- Grid -->
+    <div class="row g-4 justify-custom-center " style="margin-top: 5rem;">
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/Kv4g4kN0/1.png" alt="Andy Johnson" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Andy Johnson</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Founder &amp; CEO</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">With over 30 years of experience, Andy leads the team with a commitment to quality and customer satisfaction.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/fWqV4WNm/10.png" alt="Sarah Lee" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Sarah Lee</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Operations Manager</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Sarah ensures smooth operations, coordinating projects and maintaining high standards of service for our clients.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/gk5Lhztm/2.png" alt="Mike Thompson" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Mike Thompson</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Lead Arborist</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Mike brings expertise in tree health and safety, providing valuable insights for effective tree care solutions.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/TPjKBrd3/3.png" alt="Emily Carter" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Emily Carter</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Customer Service Rep</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Emily is the friendly voice of our team, dedicated to assisting customers and addressing their tree service needs.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+.team-zigrow-section_5 {
+  background: linear-gradient(135deg, #fdfdfd, #f5f5f5);
+
+
+.section-title {
+  font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
+  letter-spacing: -0.3px;
+}
+.section-sub {
+  max-width: 600px;
+  margin: 0 auto ;
+
+}
+
+/* ────────── Card ────────── */
+.expert-card-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: var(--box-radius);
+  padding: 5.5rem 1rem 2.5rem;
+box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+}
+.expert-card-glass:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: var(--shadow-section-hover);
+}
+
+/* ────────── Avatar ────────── */
+.avatar-glow {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dcbfff, #f3e6ff);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-glow img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ────────── Text ────────── */
+.expert-name {
+  font-size: 1.15rem;
+  color: var(--secondary-colors);
+  font-weight: 600;
+}
+.expert-role {
+}
+.expert-bio {
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* ────────── Responsive ────────── */
+@media (max-width: 767.98px) {
+  .avatar-glow {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+  .expert-name {
+    font-size: 1rem;
+  }
+  .expert-card-glass {
+    padding: 5rem 1rem 2rem;
+  }
+}}
+</style>
+   <section class="portfolio-zigrow-section_1 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">Our Recent Projects</h2>
+      <p class="section-subtitle">Safe &amp; Efficient</p>
+    </div>
+
+    <!-- gy-4 => vertical spacing between rows, gx-0 => no horizontal gap (same as pehle) -->
+    <div class="row  g-4">
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1668606144076-8478f318a346?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY3NTE3MzE0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Oak Tree Removal"
+            />
+            <div class="area-name"><span>Oak Tree Removal</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@flipsnack?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Flipsnack
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1661956602116-aa6865609028?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBvcnRmb2xpb3xlbnwwfHx8fDE3Njc1MTczMTR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Palm Tree Trimming"
+            />
+            <div class="area-name"><span>Palm Tree Trimming</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@mailchimp?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Mailchimp
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1605152276897-4f618f831968?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzZXJ2aWNlJTIwZXhhbXBsZXN8ZW58MHx8fHwxNzY3NTE3MzE0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Crown Reduction"
+            />
+            <div class="area-name"><span>Crown Reduction</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Erik Mclean
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYXNlJTIwc3R1ZGllc3xlbnwwfHx8fDE3Njc1MTczMTR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Canopy Thinning"
+            />
+            <div class="area-name"><span>Canopy Thinning</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@charlesdeluvio?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                charlesdeluvio
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1754039984995-a91721ce1870?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxzdWNjZXNzJTIwcHJvamVjdHN8ZW58MHx8fHwxNzY3NTE3MzE0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Emergency Tree Care"
+            />
+            <div class="area-name"><span>Emergency Tree Care</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@jakubzerdzicki?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Jakub Żerdzicki
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1668606144076-8478f318a346?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY3NTE3MzE0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Tree Pruning"
+            />
+            <div class="area-name"><span>Tree Pruning</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@flipsnack?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Flipsnack
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1661956602116-aa6865609028?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBvcnRmb2xpb3xlbnwwfHx8fDE3Njc1MTczMTR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Storm Damage Cleanup"
+            />
+            <div class="area-name"><span>Storm Damage Cleanup</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@mailchimp?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Mailchimp
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1605152276897-4f618f831968?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzZXJ2aWNlJTIwZXhhbXBsZXN8ZW58MHx8fHwxNzY3NTE3MzE0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Consulting Services"
+            />
+            <div class="area-name"><span>Consulting Services</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Erik Mclean
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  }
+
+  .section-subtitle {
+    color: var(--lead-custom-color-mute);
+    font-size: var(--fs-sub);
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }
+</style>
+   <!-- ▰ Testimonials Section -->
+<section class="testimonial-zigrow-section_8 section-padding" id="testimonials"  data-section="testimonials">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="fw-custom-bold main-heading">What Our Clients Say</h2>
+      <p class="para-muted  font-subheading">Discover why our customers trust us for their tree care needs.</p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Andy&#39;s Tree Service did a fantastic job trimming our trees. They were professional, quick, and left our yard clean. Highly recommend!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=40" class="avatar me-custom-3" alt="Sarah Johnson"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Sarah Johnson</h6>
+                <small class="para-muted">Homeowner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“We rely on Andy&#39;s for all our tree care. Their team is knowledgeable and always delivers quality work on time.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=41" class="avatar me-custom-3" alt="Mike Thompson"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Mike Thompson</h6>
+                <small class="para-muted">Property Manager</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Their emergency tree care saved us after the storm. Quick response and excellent service. Thank you, Andy&#39;s!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=42" class="avatar me-custom-3" alt="Linda Garcia"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Linda Garcia</h6>
+                <small class="para-muted">Local Business Owner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I trust Andy&#39;s Tree Service for all my projects. Their expertise in tree pruning is unmatched. Always a pleasure to work with!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=43" class="avatar me-custom-3" alt="Tom Reed"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Tom Reed</h6>
+                <small class="para-muted">Landscaper</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I was impressed with their professionalism and care. They transformed my yard with their tree thinning service. Highly satisfied!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=44" class="avatar me-custom-3" alt="Jessica Lee"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Jessica Lee</h6>
+                <small class="para-muted">Homeowner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Andy&#39;s Tree Service is my go-to for tree removal. They handle everything efficiently and leave no mess behind. Great team!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=45" class="avatar me-custom-3" alt="David Kim"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">David Kim</h6>
+                <small class="para-muted">Contractor</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.testimonial-zigrow-section_8 {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+
+.testimonials-section {
+  background-color: #f9fafb;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow-section); /* ➕ add subtle base shadow */
+    border-radius: var(--box-radius);
+
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/*** headline tweaks ***/
+ .text-accent{
+  color:#5f6f7f;
+}
+ .badge-pill{
+  letter-spacing:.04em;
+}
+.line-tip{
+  content:"";
+  position:absolute;
+  bottom:-6px;left:50%;
+  width:34px;height:2px;
+  background:#ff5b57;
+  transform:translateX(-50%) rotate(3deg);
+  border-radius:2px;
+}
+
+/*** cards ***/
+.t-card{
+  background:#fff;
+  border:0;
+border-radius: var(--box-radius);
+   box-shadow: var(--shadow-section);
+  transition:transform .25s ease, box-shadow .25s ease;
+  position:relative;
+}
+.t-card:hover{
+  transform:translateY(-6px);
+     box-shadow: var(--shadow-section-hover);
+}
+.t-dark{
+  background:#0f0f0f;
+  color:#f0f0f0;
+}
+.t-metric{
+  font-size:3.5rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.04em;
+  display:block;
+  color:#000;
+  margin-bottom:.25rem;
+}
+
+/*** avatar + brand ***/
+.avatar{
+  width:48px;height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.brand-logo{
+  width:24px;opacity:.7;
+}
+
+/*** button hover ***/
+.btn-outline-dark:hover i{
+  transform:translateX(4px);
+  transition:transform .25s;
+}
+
+/*** dark-card text-tone ***/
+.text-custom-white-80{color:rgba(255,255,255,.8);}
+
+/*** responsiveness ***/
+@media(max-width:991.98px){
+  .t-metric{font-size:2.8rem;}
+}
+@media(max-width:575.98px){
+  .results-testimonials .btn{width:100%;}
+  .line-tip{display:none;}
+}}
+</style>    <section class="faq-zigrow-section_2 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="main-heading fw-custom-bold text-custom-uppercase">
+        <span>Commonly Asked Questions</span>
+      </h2>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              <span>What services do you offer?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>We provide tree removal, trimming, pruning, and emergency care services.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              <span>How long have you been in business?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Andy&#39;s Tree Service has been serving Escondido for over 30 years.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              <span>Do you offer emergency services?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Yes, we offer emergency tree care and storm damage clean-ups.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              <span>Are you licensed and insured?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Absolutely! We are fully licensed and insured for your peace of mind.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              <span>How can I get a quote?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>You can request a quote by calling us or visiting our website.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              <span>What areas do you serve?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>We proudly serve the Escondido, CA area and surrounding communities.</p>
+            </div>
+          </div>
+
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent ;
+  color: #555 ;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none ;
+  border: 0 ;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none ;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none ;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none ;
+  box-shadow: none ;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none ;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>    <!-- 📮 Minimal Split Contact -->
+<section class="contact-zigrow-section_4 section-padding" id="contact" data-section="contact">
+  <div class="container-xl">
+    <div class="contact-grid overflow-hidden">
+      <div class="row g-0">
+        <!-- ◼︎ Info -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="info p-custom-5 h-custom-100">
+            <h2 class="main-heading mb-custom-4">Get in touch</h2>
+
+            <ul class="list-unstyled mb-custom-0 ">
+              <li>
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h6>Mailing address</h6>
+                  <p>311 E Washington Ave Ste 106, Escondido CA 92025</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <h6>Email</h6>
+                  <p>contact@example.com</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h6>Phone</h6>
+                  <p>(760) 286-8563</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ◼︎ Image -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="hero h-custom-100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /* ========== TOKENS ========== */
+  :root {
+    --stroke: rgba(0, 0, 0, .07);
+  }
+
+  /* ========== WRAPPER ========== */
+  .contact-zigrow-section_4 {
+    background: #fdfdfd;
+  
+
+  /* outer card */
+  .contact-zigrow-section_4 .contact-grid {
+    background: var(--bg, #ffffff);
+    box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+  }
+
+  /* list layout */
+  .contact-zigrow-section_4 .info ul li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-zigrow-section_4 .info .icon {
+    color: var(--primary-colors);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-zigrow-section_4 .info h6 {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    font-weight: 700;
+    color: var(--primary-colors);
+    margin-bottom: .25rem;
+  }
+
+  .contact-zigrow-section_4 .info p {
+    margin: 0;
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+  }
+
+  /* ========== HERO IMAGE ========== */
+  .hero {
+    background: url('https://i.postimg.cc/XJCcgx1h/3.png') center/cover no-repeat;
+    min-height: 420px;
+  }
+
+  @media (max-width: 767.98px) {
+    .contact-zigrow-section_4 .info {
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .contact-zigrow-section_4 .hero {
+      min-height: 300px;
+    }
+
+    .contact-zigrow-section_4 .info ul li {
+      justify-content: center;
+      text-align: left;
+    }
+  }}
+</style>
+   
+<footer class="footer-zigrow-section_2 section-padding" data-section="footer" id="footer">
+  <div class="container">
+    <div class="row gy-4 justify-custom-between align-custom-start">
+
+      <!-- Logo & Tagline -->
+      <div class="col-md-3">
+      <div data-logo="footer"><h4>Andy&#39;s Tree Service</h4></div>
+        <p class="footer-tagline">For over 30 years, Andy&#39;s Tree Service has delivered top-notch tree solutions in Escondido. Experience quality, reliability, and friendly service for all your tree needs.</p>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-md-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="footer-heading">Navigation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Why Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="footer-heading">Contact</h6>
+        <ul class="list-unstyled contact-info">
+          <li><i class="bi bi-envelope"></i> contact@example.com</li>
+          <li><i class="bi bi-telephone"></i> (760) 286-8563</li>
+          <li><i class="bi bi-geo-alt"></i> 311 E Washington Ave Ste 106, Escondido CA 92025</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="my-custom-4">
+
+    <!-- Bottom Bar -->
+    <div class="row align-custom-center justify-custom-between">
+      <div class="col-md-6 small-custom para-muted"><span>&copy; 2025. All rights reserved.</span></div>
+      <div class="col-md-6 text-custom-md-end small-custom bottom-bar-links">
+        <a href="#" class="me-custom-3 text-decoration-custom-none">Terms & Conditions</a>
+        <a href="#" class="me-custom-3 text-decoration-custom-none">Privacy Policy</a>
+        <a href="#" class="text-decoration-custom-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<style>
+  .footer-zigrow-section_2 {
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Inter', sans-serif;
+  
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+  }
+
+  .footer-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--secondary-colors);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--para-muted);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover, .bottom-bar-links a:hover {
+    color:  var(--primary-colors);
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info i {
+    color: var(--primary-colors);
+    margin-right: 0.5rem;
+  }
+
+  hr {
+    border-color: var(--border-muted);
+    height: .02rem;
+  }
+
+  @media (max-width: 767px) {
+    .footer-logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer-tagline {
+      text-align: left;
+    }
+
+    .custom-footer .text-custom-md-end {
+      text-align: left ;
+      margin-top: 1rem;
+    }
+  }}
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

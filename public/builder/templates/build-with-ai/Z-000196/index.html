@@ -1,0 +1,4148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maya Bakers - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #1B998B;
+      --secondary-colors: #2E2E2E;
+      --territory-colors: #56CFE1;
+      --theme-3: #ffffff;
+      --theme-4: #000000;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #2E2E2E ;
+      font-family: Calibri;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Merriweather ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #2E2E2E;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top custom-navbar">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold" href="#">
+          Maya Bakers
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav align-lg-custom-center -center">
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#contact">Contact</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#faq">Faq</a>
+            </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="primary-btn">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-colors);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small-custom shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Professional -->
+
+<section class="hero-zigrow-section_11" id="hero">
+  <!-- Overlay -->
+  <div class="hero-overlay pointer-custom-none"></div>
+
+  <div class="container position-relative">
+    <div class="row align-custom-center">
+      <div class="col-lg-6 text-custom-white">
+        <h1 class="hero-heading">Delicious Treats for Every Occasion</h1>
+        <p class="hero-subtext">
+      At Maya Bakers, indulge in our delightful cakes, chocolates, and biscuits, crafted with love and quality ingredients. Taste the joy in every bite!
+        </p>
+        <a href="#" class="primary-btn ">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <span class="img-credit">
+  Photo by 
+  <a 
+        href="https://unsplash.com/@sunday_digital?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nastuh Abootalebi
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</span>
+<div class="stats-cards-wrapper">
+   <div class="row g-0">
+  <!-- Card 1: Finance & Trades -->
+<!-- Example: Finance & Trades -->
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-custom-center align-custom-center h-custom-100">
+    <div class="icon-left me-custom-3">
+      <i class="bi bi-people"></i>
+    </div>
+    <div class="">
+      <h6 class="mb-custom-2">Happy Customers</h6>
+      <p>Join our satisfied family</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-custom-center align-custom-center h-custom-100">
+    <div class="icon-left me-custom-3">
+      <i class="bi bi-cupcake"></i>
+    </div>
+    <div class="">
+      <h6 class="mb-custom-2">Tasty Treats</h6>
+      <p>Find your favorite today</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-custom-center align-custom-center h-custom-100">
+    <div class="icon-left me-custom-3">
+      <i class="bi bi-check-circle"></i>
+    </div>
+    <div class="">
+      <h6 class="mb-custom-2">Fresh Ingredients</h6>
+      <p>Quality you can trust</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <div class="stats-card  d-flex justify-custom-center align-custom-center h-custom-100">
+    <div class="icon-left me-custom-3">
+      <i class="bi bi-clock"></i>
+    </div>
+    <div class="">
+      <h6 class="mb-custom-2">Years of Experience</h6>
+      <p>Crafting sweet memories</p>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+</div>
+</section>
+<!-- Overlapping Cards -->
+
+
+
+<style>
+  /* ───────── Hero: structure + overlay (fix brace issues) ───────── */
+.hero-zigrow-section_11 {
+  background: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzY3Njc4MzgzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center / cover;
+  padding-top: 140px;
+  padding-bottom: 240px; /* overlap space */
+  color: #fff;
+  position: relative;
+  margin-bottom: 180px;
+}
+@media (width < 768px) {
+  .hero-zigrow-section_11 {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.hero-zigrow-section_11 .hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+  
+  @media (width <= 768px) {
+    background: rgba(0,0,0,0.05);
+    
+  }
+}
+.hero-zigrow-section_11 .container {
+  position: relative; z-index: 2;
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem; /* 👈 spacing increased */
+}
+
+.hero-subtext {
+  font-size: var(--fs-body);
+  color: #eee;
+  margin-top: 0;         /* 👈 remove top margin */
+  margin-bottom: 2.2rem; /* 👈 consistent gap below */
+  line-height: 1.6;      /* 👌 readability */
+}
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+    margin-bottom: 1.2rem; /* slightly tighter on mobile */
+  }
+
+  .hero-subtext {
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* ───────── Overlapping Stats: polished UI ───────── */
+.stats-cards-wrapper {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1200px, 85%);
+  z-index: 5;
+
+  /* card container look */
+  background: linear-gradient(180deg, #ffffff 0%, #fcfcff 100%);
+  border: 1px solid rgba(0,0,0,0.06);
+
+      border-radius: var(--box-radius);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 2px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+
+  /* nice top accent using primary color */
+  position: absolute;
+}
+.stats-cards-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -4px; left: 16px; right: 16px;
+  height: 4px;
+ 
+      border-radius: var(--box-radius);
+  background: linear-gradient(90deg, var(--primary-colors), color-mix(in srgb, var(--primary-colors) 80%, #fff));
+}
+
+/* grid feel even with bootstrap columns */
+.stats-cards-wrapper .row {
+  --card-gap: 8px;
+  row-gap: var(--card-gap);
+}
+
+/* single card */
+.stats-card {
+  background: #fff;
+ 
+      border-radius: var(--box-radius);
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+  position: relative;
+  isolation: isolate; /* for inner glow */
+}
+
+/* subtle divider on large screens */
+@media (min-width: 992px) {
+  .stats-card {
+    border-right: 1px dashed rgba(0,0,0,0.06);
+  }
+  .stats-card:last-child {
+    border-right: none;
+  }
+}
+
+/* icon pill */
+.stats-card .icon-left {
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+
+      border-radius: var(--box-radius);
+  background: color-mix(in srgb, var(--primary-colors) 14%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--primary-colors) 30%, #ffffff);
+}
+.stats-card i {
+  font-size: 1.6rem;
+  color: var(--primary-colors);
+  margin: 0;
+}
+
+/* text */
+.stats-card h6 {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  font-weight: 700;
+  margin: 0 0 2px;
+  letter-spacing: .6px;
+}
+.stats-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.35;
+}
+
+/* hover/focus = primary fill (same behavior) */
+.stats-card:hover, .stats-card:focus-within {
+  background: var(--primary-colors);
+  border-color: color-mix(in srgb, var(--primary-colors) 80%, #000);
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+    0 6px 18px rgba(0,0,0,0.12);
+}
+.stats-card:hover .icon-left, .stats-card:focus-within .icon-left {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+}
+.stats-card:hover i,
+.stats-card:hover h6,
+.stats-card:hover p,
+.stats-card:focus-within i,
+.stats-card:focus-within h6,
+.stats-card:focus-within p {
+  color: #fff;
+}
+
+/* keyboard focus ring */
+.stats-card:focus-within::after {
+  content: "";
+  position: absolute; inset: -2px;
+
+      border-radius: var(--box-radius);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-colors) 60%, #fff);
+  pointer-events: none;
+}
+
+/* responsive stack */
+@media (max-width: 768px) {
+  .stats-cards-wrapper {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 18px;
+    padding: 6px;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  .stats-cards-wrapper::before { display: none; }
+
+  .stats-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px;
+    gap: 12px;
+  }
+  .stats-card + .stats-card { margin-top: 10px; }
+}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_3 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-0 row-vcenter">
+
+      <!-- Left: Image with overlay -->
+      <div class="col-lg-6 img-holder">
+        <div class="img-layer">
+        <div class="img-bg img-wrapper-center">
+
+
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidWlsZGluZ3xlbnwwfHx8fDE3Njc2NzgzODN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="About us image" />
+            <span class="img-overlay"></span>
+            <span class="img-credit">
+              Photo by  <a 
+        href="https://unsplash.com/@seanpollock?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Sean Pollock
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 d-flex justify-custom-center align-custom-center">
+        <div class="content p-custom-4 p-lg-custom-5">
+          <h1 class="display-title mb-custom-4">
+            <span>About Maya Bakers</span>
+          </h1>
+
+          <p class="mb-custom-3 para-muted font-body">At Maya Bakers, we believe in the magic of freshly baked goods. Our bakery offers a delightful range of cakes, chocolates, and biscuits crafted with love and quality ingredients.</p>
+          <p class="mb-custom-4 para-muted font-body">With a commitment to excellence, we ensure every bite is a treat. Join us in celebrating life&#39;s moments with our delicious creations, made just for you.</p>
+
+          <a href="#contact" class="primary-btn">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --hero-primary: var(--primary-colors);
+      --hero-bg: var(--theme-bg);
+      --hero-text: var(--secondary-colors);
+    }
+
+    .about-zigrow-section_3 {
+      background: var(--hero-bg);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    
+
+    .img-holder {
+      position: relative;
+      min-height: 600px;
+      height: 100%;
+    }
+
+    .img-layer{
+      height: 100%;
+      overflow: visible;
+    }
+
+    .img-bg {
+      position: relative;
+      width: 100%;
+      
+      height: 100%;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .img-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .img-holder:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .img-overlay {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: background 0.4s ease;
+    }
+
+    .img-holder:hover .img-overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      color: var(--hero-text);
+      max-width: 640px;
+      animation: fadeSlideIn 0.85s ease both;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .display-title span {
+      display: inline-block;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(to right, var(--territory-colors), var(--hero-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content p {
+      line-height: 1.8;
+    }
+
+  
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 991.98px) {
+      .img-holder {
+        order: -1;
+        min-height: 300px;
+      }
+
+      .img-bg img {
+        filter: grayscale(0);
+      }
+
+      .content {
+        padding-top: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  </style>
+</section>
+   <!-- ========== Services Switcher (service-zigrow-section_10) ========== -->
+<!-- ========== Services Switcher (service-zigrow-section_10) ========== -->
+<section class="service-zigrow-section_10 section-padding" id="services" data-section="services">
+  <div class="container">
+
+    <!-- data-component-tabs wrapper -->
+    <div class="row g-4 g-lg-5 align-custom-start" data-component-tabs id="tabs-services">
+
+      <!-- LEFT: Tabs -->
+      <div class="col-lg-4">
+        <p class="svc-eyebrow mb-custom-2">(Our Service)</p>
+        <h2 class="main-heading mb-custom-3">
+          <span>Our Delicious Offerings</span>
+        </h2>
+
+        <p class="svc-subtext mb-custom-4">
+          <span>With a commitment to excellence, we ensure every bite is a treat. Join us in celebrating life&#39;s moments with our delicious creations, made just for you.</span>
+        </p>
+
+        <!-- Builder-friendly nav-tabs -->
+        <nav>
+          <div class="nav nav-tabs svc-tablist" role="tablist" aria-label="Services">
+            
+              <button
+                class="nav-link svc-tab active is-active"
+                id="nav-tab-services-0"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-0"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-0"
+                aria-selected="true"
+              >
+                <span>Custom Cakes</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-1"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-1"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-1"
+                aria-selected="false"
+              >
+                <span>Gourmet Chocolates</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-2"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-2"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-2"
+                aria-selected="false"
+              >
+                <span>Fresh Biscuits</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-3"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-3"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-3"
+                aria-selected="false"
+              >
+                <span>Specialty Pastries</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-4"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-4"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-4"
+                aria-selected="false"
+              >
+                <span>Seasonal Treats</span>
+              </button>
+            
+              <button
+                class="nav-link svc-tab "
+                id="nav-tab-services-5"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-services-5"
+                type="button"
+                role="tab"
+                aria-controls="nav-services-5"
+                aria-selected="false"
+              >
+                <span>Baking Classes</span>
+              </button>
+            
+          </div>
+        </nav>
+      </div>
+
+      <!-- RIGHT: Panels -->
+      <div class="col-lg-8">
+        <div class="tab-content svc-panels">
+          
+
+          <div
+            class="tab-pane p-0 show active"
+            id="nav-services-0"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-0"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NzY3ODM4M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Custom Cakes"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@seanpollock?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Sean Pollock</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Custom Cakes</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Celebrate your special moments with our custom cakes, tailored to your taste and theme. Freshly baked and beautifully decorated.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-1"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-1"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1508361727343-ca787442dcd7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2NzY3ODM4NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Gourmet Chocolates"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@tomparkes?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Tom Parkes</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Gourmet Chocolates</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Indulge in our rich and decadent chocolates, perfect for gifts or personal treats. Made with the finest ingredients for a delightful experience.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-2"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-2"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1765020553734-2c050ddb9494?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25zdWx0aW5nJTIwc2VydmljZXN8ZW58MHx8fHwxNzY3NjE3NDk2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Fresh Biscuits"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@wafiqraza?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Wafiq Raza</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Fresh Biscuits</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Savor our freshly baked biscuits, available in a variety of flavors. Perfect for snacking or pairing with your favorite beverage.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-3"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-3"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3Njc2NTU0NTZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Specialty Pastries"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@mapbox?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Mapbox</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Specialty Pastries</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Try our specialty pastries, crafted with care and filled with delightful flavors. A perfect addition to any breakfast or dessert table.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-4"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-4"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1690383922009-477ea4edc20d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBzb2x1dGlvbnN8ZW58MHx8fHwxNzY3Njc4MzgzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Seasonal Treats"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@azwedo?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Azwedo L.LC</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Seasonal Treats</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Enjoy our seasonal treats, made to celebrate the flavors of each season. A delightful surprise for your taste buds all year round.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div
+            class="tab-pane p-0 "
+            id="nav-services-5"
+            role="tabpanel"
+            aria-labelledby="nav-tab-services-5"
+            tabindex="0"
+          >
+            <!-- FIGURE (no raw text) -->
+            <figure class="svc-figure position-relative img-wrapper-center">
+              <img
+                class="svc-image"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NzY3ODM4M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                alt="Baking Classes"
+              />
+
+              
+              <small class="img-credit">
+                <span>Photo by</span>
+                <a href="https://unsplash.com/@seanpollock?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Sean Pollock</span>
+                </a>
+                <span>on</span>
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  <span>Unsplash</span>
+                </a>
+              </small>
+              
+            </figure>
+
+            <div class="svc-body">
+              <h3 class="svc-panel-title">
+                <span>Baking Classes</span>
+              </h3>
+
+              <p class="svc-panel-text">
+                <span>Join our baking classes to learn the art of baking. Perfect for beginners and enthusiasts looking to enhance their skills.</span>
+              </p>
+
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="primary-btn">
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>
+  /* ===== service-zigrow-section_10 (scoped) ===== */
+  .service-zigrow-section_10 {
+    --svc-text: #0f0f0f;
+  
+    color: var(--svc-text);
+    background: #fff;
+  }
+
+  .py-lg-6 {
+    padding-top: 4.5rem ;
+    padding-bottom: 4.5rem ;
+  }
+
+  /* Headings */
+  .service-zigrow-section_10 .svc-eyebrow {
+    color: var(--svc-muted);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.25px;
+  }
+  .service-zigrow-section_10 .svc-heading {
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.05;
+    font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
+    margin: 0 0 0.4rem;
+  }
+  .service-zigrow-section_10 .svc-subtext {
+    color: var(--para-muted);
+    max-width: 42ch;
+      line-height: var(--lh-body);
+    font-size: var(--fs-body);
+    margin: 0;
+  }
+
+  /* ================= LEFT — Tablist ================= */
+  .service-zigrow-section_10 .svc-tablist {
+    --rowH: 56px;
+    position: relative;
+    margin-top: 1.25rem;
+    padding: 0.35rem;
+  border-radius: var(--box-radius);
+    background: #fff;
+    border: 1px solid #eef0f3;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* sliding highlight */
+  .service-zigrow-section_10 .svc-tablist::before {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 0.35rem;
+    width: calc(100% - 0.7rem);
+    height: var(--rowH);
+    border-radius: var(--box-radius);
+    /* fallback + preferred */
+    background: #f1f5f9;
+    background: color-mix(in srgb, var(--primary-colors) 8%, #f4f6f9);
+    box-shadow: inset 0 0 0 1px
+      color-mix(in srgb, var(--primary-colors) 12%, transparent);
+    transform: translateY(calc(var(--active, 0) * var(--rowH)));
+    transition: transform 0.25s ease, background 0.25s ease,
+      box-shadow 0.25s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-tab {
+    position: relative;
+    z-index: 1; /* above slider */
+    display: flex;
+    align-items: center;
+    height: var(--rowH);
+    padding: 0 14px 0 22px;
+    border-radius: var(--box-radius);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #8a919c;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease, transform 0.15s ease;
+    background: transparent;
+  }
+  .service-zigrow-section_10 .svc-tab:hover {
+    color: #1b1f23;
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_10 .svc-tab.is-active {
+    color: #0f0f0f;
+  }
+
+
+  /* Bootstrap nav-tabs override inside this section */
+.service-zigrow-section_10 .svc-tablist.nav-tabs {
+  display: block;        /* vertical stack */
+  border-bottom: 0;      /* remove BS bottom border */
+  padding: 0.35rem;      /* tumhaara padding retain */
+}
+
+/* Nav-link defaults clean up */
+.service-zigrow-section_10 .svc-tablist .nav-link {
+  border: 0;             /* BS border hatao */
+  margin-bottom: 0;      /* extra gaps avoid */
+  border-radius: var(--box-radius);
+}
+
+/* Make tabs full width inside left tablist */
+.service-zigrow-section_10 .svc-tablist .nav-link {
+  display: block;
+  width: 100%;
+  text-align: left; /* optional: left align text like your design */
+}
+
+/* Remove Bootstrap's default white background on active nav-link */
+.service-zigrow-section_10 .svc-tablist .nav-link.active {
+  background-color: transparent ;
+  color: #0f0f0f; /* tumhaare active text color ke saath match */
+  border-color: transparent ; /* BS border bhi hata do */
+}
+
+  /* Left indicator bar on all; primary on active */
+  .service-zigrow-section_10 .svc-tab::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 4px;
+    height: 22px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background: #e2e8f0;
+    transition: background 0.25s ease;
+  }
+  .service-zigrow-section_10 .svc-tab.is-active::after {
+    background: var(--primary-colors);
+  }
+
+  /* Sync active state via :has() (progressive enhancement) */
+  @supports (selector(:has(*))) {
+    .service-zigrow-section_10:has(#svc-tab-0:checked) .svc-tablist::before {
+      transform: translateY(calc(0 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-1:checked) .svc-tablist::before {
+      transform: translateY(calc(1 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-2:checked) .svc-tablist::before {
+      transform: translateY(calc(2 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-3:checked) .svc-tablist::before {
+      transform: translateY(calc(3 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-4:checked) .svc-tablist::before {
+      transform: translateY(calc(4 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-5:checked) .svc-tablist::before {
+      transform: translateY(calc(5 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-6:checked) .svc-tablist::before {
+      transform: translateY(calc(6 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-7:checked) .svc-tablist::before {
+      transform: translateY(calc(7 * var(--rowH)));
+    }
+
+    /* text + left bar primary on active */
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1),
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2),
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3),
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4),
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5),
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6),
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7),
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8) {
+      color: #0f0f0f;
+    }
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1)::after,
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2)::after,
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3)::after,
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4)::after,
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5)::after,
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6)::after,
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7)::after,
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8)::after {
+      background: var(--primary-colors);
+    }
+  }
+
+  /* ================= RIGHT — Panels ================= */
+  .service-zigrow-section_10 .svc-panels {
+    position: relative;
+    padding: 1.6rem;
+   border-radius: var(--box-radius);
+    background: #fff;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* take radios off-screen so label click won't scroll */
+  .service-zigrow-section_10 .svc-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-radio + .svc-panel {
+    display: none;
+  }
+  .service-zigrow-section_10 .svc-radio:checked + .svc-panel {
+    display: block;
+    animation: svcFade 0.45s ease both;
+  }
+  @keyframes svcFade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .service-zigrow-section_10 .svc-figure {
+    margin: 0 0 1.25rem;
+ border-radius: var(--box-radius);
+    overflow: hidden;
+    background: #f6f7f9;
+    box-shadow: var(--shadow-section-hover);
+  }
+  .service-zigrow-section_10 .svc-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .service-zigrow-section_10 .svc-figure:hover .svc-image {
+    transform: scale(1.035);
+  }
+
+  .service-zigrow-section_10 .svc-panel-title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin: 0.25rem 0 0.6rem;
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.9rem);
+  }
+  .service-zigrow-section_10 .svc-panel-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    max-width: 92%;
+    margin-bottom: 1.2rem;
+  }
+
+
+
+
+  /* ================= Responsive ================= */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_10 .svc-tablist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.35rem;
+      --rowH: 52px;
+    }
+    .service-zigrow-section_10 .svc-tablist::before {
+      display: none;
+    } /* slider off on grid */
+    .service-zigrow-section_10 .svc-tab {
+      justify-content: center;
+      border: 1px solid #eef0f3;
+      color: #50555c;
+      background: #fff;
+    }
+    .service-zigrow-section_10 .svc-tab.is-active {
+      background: color-mix(in srgb, var(--primary-colors) 10%, #fff);
+      color: #0f0f0f;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    }
+    .service-zigrow-section_10 .svc-tab.is-active::after {
+      background: var(--primary-colors);
+    }
+    .service-zigrow-section_10 .svc-panel-text {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+(function(){
+  const sec = document.querySelector('.service-zigrow-section_10');
+  if (!sec) return;
+
+  const tablist = sec.querySelector('.svc-tablist');
+  if (!tablist) return;
+
+  const tabs = Array.from(tablist.querySelectorAll('.svc-tab'));
+
+  function syncActive(idx) {
+    tabs.forEach((btn, i) => btn.classList.toggle('is-active', i === idx));
+    tablist.style.setProperty('--active', idx);
+  }
+
+  // Initial active from .active class (jo builder/Bootstrap set karega)
+  let initial = tabs.findIndex(btn => btn.classList.contains('active'));
+  if (initial < 0) initial = 0;
+  syncActive(initial);
+
+  tabs.forEach((btn, i) => {
+    // Bootstrap tab event (agar use ho raha hai)
+    btn.addEventListener('shown.bs.tab', function () {
+      syncActive(i);
+    });
+
+    // Backup – agar Bootstrap nahi ho toh click se bhi chale
+    btn.addEventListener('click', function () {
+      syncActive(i);
+    });
+  });
+})();
+</script>
+
+   <!-- ✅ Trusted Companies Section -->
+<section class="logo-zigrow-section_3 section-padding" id="logos" data-section="logos">
+  <div class="container text-custom-center">
+
+    <!-- Title -->
+    <div class="trusted-box mx-custom-auto mb-custom-4">
+      <p class="trusted-title">Trusted by <span class="highlight">30,000+</span> Companies Worldwide</p>
+    </div>
+
+    <!-- Logos Row -->
+    <div class="row justify-custom-center align-custom-center g-4">
+
+      <div class="col-6 col-md-2">
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEE3QAcR7UEYeDh20wR_8wnp7eUumxWBN4Vw&s" alt="logo 1">
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEE3QAcR7UEYeDh20wR_8wnp7eUumxWBN4Vw&s" alt="logo 1">
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+       <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEE3QAcR7UEYeDh20wR_8wnp7eUumxWBN4Vw&s" alt="logo 1">
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEE3QAcR7UEYeDh20wR_8wnp7eUumxWBN4Vw&s" alt="logo 1">
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEE3QAcR7UEYeDh20wR_8wnp7eUumxWBN4Vw&s" alt="logo 1">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 Custom Styles -->
+<style>
+  .logo-zigrow-section_3 {
+    background: linear-gradient(to right, var(--primary-colors), var(--territory-colors),  var(--primary-colors));
+    color: #fff;
+    overflow: hidden;
+  
+
+  .trusted-box {
+    background: rgba(255, 255, 255, 0.05);
+   
+      border-radius: var(--box-radius);
+    padding: 16px 24px;
+    display: inline-block;
+    backdrop-filter: blur(6px);
+     box-shadow: var(--shadow-section);
+    animation: fadeInUp 0.8s ease-out both;
+  }
+
+  .trusted-title {
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+  }
+
+  .trusted-title .highlight {
+    color: var(--primary-colors);
+    font-weight: 600;
+  }
+
+  .logo-card {
+    padding: 12px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-out both;
+
+    img{
+      
+      border-radius: var(--box-radius);
+    }
+  }
+
+  .logo-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .trusted-logo {
+    max-height: 48px;
+    max-width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    filter: brightness(1) invert(0) opacity(0.6);
+    transition: all 0.3s ease;
+  }
+
+  .trusted-logo:hover {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Tweaks */
+  @media (max-width: 576px) {
+    .trusted-logo {
+      max-height: 40px;
+    }
+
+    .trusted-box {
+      padding: 12px 18px;
+    }}
+  }
+</style>   <section  id="products" class="section-padding product-zigrow-section_2" data-section="products">
+  <div class="container text-custom-center">
+
+    <!-- Dynamic heading + subtitle -->
+    <h2 class="mb-custom-2 main-heading">
+      Delicious Bakery Offerings
+      <br class="d-none d-md-block">
+      <p class="lead-custom para-muted font-subheading mb-custom-4 mt-custom-2 ">Indulge in our fresh and delightful treats</p>
+    </h2>
+
+    <!-- CTA -->
+    <a href="#!" class=" primary-btn ">
+      See more
+    </a>
+
+    <!-- Cards -->
+    <div class="row g-4 mt-custom-5 ">
+      
+        
+<div class="col-12 col-md-4">
+  <div class="program-card">
+    <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1712903276003-b814091e7770?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2R1Y3RzfGVufDB8fHx8MTc2NzY3ODM4NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+    
+      <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+        Photo by 
+      <a 
+        href="https://unsplash.com/@walls_io?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Walls.io
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+
+    <div class="card-overlay">
+      <h3 class="card-title">Decadent Chocolate Cakes</h3>
+      <p class="card-desc font-body-sm mb-custom-0 ">Savor our rich chocolate cakes, perfect for any celebration or just a sweet treat.</p>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="col-12 col-md-4">
+  <div class="program-card">
+    <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3Njc2MzgxMTF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+    
+      <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+        Photo by 
+      <a 
+        href="https://unsplash.com/@linkedinsalesnavigator?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn Sales Solutions
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+
+    <div class="card-overlay">
+      <h3 class="card-title">Freshly Baked Biscuits</h3>
+      <p class="card-desc font-body-sm mb-custom-0 ">Enjoy our crunchy and flavorful biscuits, ideal for snacking or pairing with tea.</p>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="col-12 col-md-4">
+  <div class="program-card">
+    <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1606922860379-162e24a90a2b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxpbm5vdmF0aXZlJTIwc29sdXRpb25zfGVufDB8fHx8MTc2NzY3ODM4NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080')"></div>
+
+    
+      <span class="img-credit bg-custom-dark bg-opacity-50 text-custom-white position-absolute small-custom">
+        Photo by 
+      <a 
+        href="https://unsplash.com/@sstoppo?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ROCCO STOPPOLONI
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+
+    <div class="card-overlay">
+      <h3 class="card-title">Artisan Cream Puffs</h3>
+      <p class="card-desc font-body-sm mb-custom-0 ">Delight in our light and airy cream puffs, filled with luscious cream and flavors.</p>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- 🔥 Custom Styles -->
+<style>
+:root{
+  --brand: var(--primary-colors);          /* original brand color */
+  --brand-tint: color-mix(in srgb, var(--brand) 15%, #fff); /* 25 % brand + 75 % white */
+}
+
+.product-zigrow-section_2{
+  background: radial-gradient(
+              ellipse at 1% 5%,
+              var(--brand-tint) 0%,
+              #ffffff 35%);
+
+
+
+
+/* ====== Card Container ====== */
+.program-card {
+  position: relative;
+  overflow: hidden;
+    border-radius: var(--box-radius);
+  min-height: 420px;
+ box-shadow: var(--shadow-section);
+  transition: transform .35s ease, box-shadow .35s ease;
+  backdrop-filter: blur(0);
+}
+.program-card:hover {
+  transform: translateY(-6px) scale(1.03);
+      box-shadow: var(--shadow-section-hover);
+}
+
+/* ====== Background Image ====== */
+.program-card .card-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform .45s ease;
+}
+.program-card:hover .card-img {
+  transform: scale(1.08) rotate(.5deg);
+}
+
+/* ====== Overlay ====== */
+.program-card .card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.5rem 1.75rem;
+  background: linear-gradient(180deg,
+              rgba(0,0,0,0) 10%,
+              rgba(0,0,0,.55) 70%);
+  color: #fff;
+  transition: background .35s ease;
+}
+.program-card:hover .card-overlay {
+  background: linear-gradient(180deg,
+              rgba(0,0,0,0) 0%,
+              rgba(0,0,0,.65) 75%);
+}
+
+/* ====== Text ====== */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  line-height: 1.35;
+  text-shadow: 0 2px 4px rgba(0,0,0,.4);
+}
+.card-desc {
+  line-height: 1.4;
+  opacity: .85;
+}
+
+/* ====== Responsive Tweaks ====== */
+@media (min-width: 1400px) {
+  .program-card {
+    min-height: 500px;
+  }
+}
+@media (max-width: 575.98px) {
+  .card-title { font-size: 1.15rem; }
+  .card-desc  { font-size: .85rem; }
+}}
+</style>
+   <section class=" whyChooseUs-zigrow-section_1 section-padding px-custom-3" id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container text-custom-center">
+    <h2 class=" mb-custom-3 main-heading">Why Choose Maya Bakers</h2>
+
+    <div class="row gy-4 mt-custom-4 ">
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-star"></i></div>
+          <h5>Quality Ingredients</h5>
+          <p>We use only the finest ingredients in our baked goods, ensuring exceptional taste and freshness in every product we offer.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-heart"></i></div>
+          <h5>Handcrafted Goodness</h5>
+          <p>Every item is lovingly handcrafted by our skilled bakers, guaranteeing a personal touch and unique flavors in every bite.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-clock"></i></div>
+          <h5>Timely Delivery</h5>
+          <p>We understand the importance of timing, which is why we ensure prompt delivery of your favorite treats right when you need them.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-people"></i></div>
+          <h5>Customer-Centric Service</h5>
+          <p>Our friendly team is dedicated to providing exceptional service, making your experience enjoyable from start to finish.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* === Why Choose Section - Light Theme === */
+.whyChooseUs-zigrow-section_1 {
+  background-color: #f9fafb;
+  color: #1f2937;
+
+
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Info Card */
+.info-card {
+  background: #ffffff;
+border-radius: var(--box-radius);
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  box-shadow: var(--shadow-section);
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+  border-color: var(--theme-3);
+}
+
+/* Icon Styling */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--secondary-colors);
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.info-card:hover .icon-box {
+  background: #fff;
+  color: var(--secondary-colors);
+  border: 1px solid var(--secondary-colors);
+}
+
+/* Typography */
+.info-card h5 {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--lead-custom-para-muted);
+}
+
+.info-card p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  line-height: 1.6;
+}
+}
+</style>   
+<section class=" team-zigrow-section_2 section-padding" id="team" data-section="team">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-custom-center mb-custom-5">
+      <small class="section-subtitle text-custom-uppercase fw-custom-semibold">Our Team</small>
+      <h2 class="fw-custom-bold display-custom-6 mt-custom-2  main-heading">   Meet Our Team</h2>
+      <p class="para-muted mt-custom-3  col-md-8 mx-custom-auto font-subheading">
+   Our talented team at Maya Bakers is passionate about creating delightful baked goods that bring joy to every occasion. 
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/Kv4g4kN0/1.png" class="team-img mb-custom-3" alt="Ahmed Kamal">
+          <h6 class="fw-custom-bold mb-custom-0  font-body-sm"> Maya Patel</h6>
+          <p class="para-muted font-body mb-custom-0 ">Head Baker</p>
+          
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/fWqV4WNm/10.png" class="team-img mb-custom-3" alt="Mona Zaghloul">
+          <h6 class="fw-custom-bold font-body-sm mb-custom-0 "> Raj Singh</h6>
+          <p class="para-muted font-body mb-custom-0 ">Pastry Chef</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-md-4">
+        <div class="team-card text-custom-center p-custom-3">
+          <img   src="https://i.postimg.cc/gk5Lhztm/2.png" class="team-img mb-custom-3" alt="Ali Anoer">
+           <h6 class="fw-custom-bold font-body-sm mb-custom-0 "> Anita Verma</h6>
+          <p class="para-muted font-body mb-custom-0 ">Sales Manager</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-zigrow-section_2 {
+    background-color: var(--theme-bg);
+  
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .team-card {
+    background-color: #fff;
+      border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+    transition: all 0.3s ease;
+    h6{
+      color: var(--secondary-colors);
+    }
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+         border-radius: var(--box-radius);
+    transition: 0.3s ease;
+  }
+
+  .team-card:hover .team-img {
+    filter: brightness(1.05);
+  }
+
+  h2 {
+    color: var(--secondary-colors);
+  }
+
+  @media (max-width: 768px) {
+    .team-img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    .team-img {
+      height: 250px;
+    }
+  }}
+</style>
+   <section class="portfolio-zigrow-section_2 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">
+        Our Delicious Creations
+      </h2>
+    </div>
+
+    <div class="row justify-custom-center g-3">
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1542621334-a254cf47733d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2plY3RzfGVufDB8fHx8MTc2NzY3ODM4Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Chocolate Delight"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Chocolate Delight <br />
+                Rich Chocolate
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@sxoxm?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              Sven Mieke
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1730342754687-956c90fb0db9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3b3JrJTIwc2FtcGxlc3xlbnwwfHx8fDE3Njc2NzgzODZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Vanilla Dream Cake"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Vanilla Dream Cake <br />
+                Classic Flavor
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@jpetersbydesign?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              Janay Peters
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYXNlJTIwc3R1ZGllc3xlbnwwfHx8fDE3Njc2MzgxMTJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Crunchy Biscuits"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Crunchy Biscuits <br />
+                Perfect Snack
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@charlesdeluvio?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              charlesdeluvio
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1535470142785-2b2f3ce24e5a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY3Njc4Mzg1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Fruit Tart"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Fruit Tart <br />
+                Fresh &amp; Fruity
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@ethanhjy?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              Ethan Hu
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjbGllbnQlMjB3b3JrfGVufDB8fHx8MTc2NzY3ODM4NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Creamy Cheesecake"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Creamy Cheesecake <br />
+                Decadent Treat
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@timmykp?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              Tim van der Kuip
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1542621334-a254cf47733d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2plY3RzfGVufDB8fHx8MTc2NzY3ODM4Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Brownie Bliss"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Brownie Bliss <br />
+                Fudgy Goodness
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@sxoxm?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              Sven Mieke
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1730342754687-956c90fb0db9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3b3JrJTIwc2FtcGxlc3xlbnwwfHx8fDE3Njc2NzgzODZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Nutty Cookies"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Nutty Cookies <br />
+                Homestyle Baking
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@jpetersbydesign?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              Janay Peters
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card img-wrapper-center rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYXNlJTIwc3R1ZGllc3xlbnwwfHx8fDE3Njc2MzgxMTJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Seasonal Special"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              <span>
+                Seasonal Special <br />
+                Limited Edition
+              </span>
+            </div>
+          </div>
+          <p class="unsplash-credit small-custom text-custom-muted  mb-custom-0 " style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@charlesdeluvio?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+            >
+              charlesdeluvio
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-custom-muted  text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+  }
+
+  .offer-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+
+  .offer-card img {
+    width: 100%;
+    height: auto;
+    /* display: block; */
+    transition: transform 0.3s ease;
+    aspect-ratio: 3/4;
+  }
+
+  .offer-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .rounded-top-only img {
+    border-top-left-radius: 50% 30%;
+    border-top-right-radius: 50% 30%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .rounded-bottom-only img {
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .offer-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1.5rem 1.95rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+  }
+
+  .rounded-top-only .offer-label {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  }
+
+  .rounded-bottom-only .offer-label {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  }
+</style>
+   <section class="testimonial-zigrow-section_5 section-padding"id="testimonials"  data-section="testimonials">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="main-heading mb-custom-2">What Our Customers Say</h2>
+      <p class="section-subtitle">Delightful treats that keep our customers coming back for more!</p>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=40" alt="Emily Johnson"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Emily Johnson</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Happy Customer</small>
+          <p class="testimonial-text mb-custom-0 ">"Maya Bakers has the best cakes in town! Every bite is a delight, and the service is always friendly."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=41" alt="Michael Smith"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Michael Smith</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Regular Patron</small>
+          <p class="testimonial-text mb-custom-0 ">"I love their biscuits! Perfectly crunchy and flavorful. Maya Bakers is my go-to for all things sweet."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=42" alt="Sarah Lee"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Sarah Lee</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Event Planner</small>
+          <p class="testimonial-text mb-custom-0 ">"The chocolates from Maya Bakers are a hit at every event. Beautifully crafted and delicious!"</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=43" alt="David Brown"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">David Brown</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Local Business Owner</small>
+          <p class="testimonial-text mb-custom-0 ">"Maya Bakers always exceeds my expectations. Their cakes are not just tasty but also visually stunning."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=44" alt="Jessica White"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Jessica White</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Food Blogger</small>
+          <p class="testimonial-text mb-custom-0 ">"I can&#39;t get enough of their cream-filled pastries! Always fresh and bursting with flavor."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=45" alt="Chris Green"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Chris Green</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Satisfied Customer</small>
+          <p class="testimonial-text mb-custom-0 ">"Maya Bakers is a gem! Their variety of baked goods ensures there&#39;s something for everyone."</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_5 {
+  background: #fff;
+  position: relative;
+
+
+.section-subtitle {
+  font-size: var(--fs-sub);
+  color: var(--para-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+border-radius: var(--box-radius);
+  backdrop-filter: blur(20px);
+   box-shadow: var(--shadow-section);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+.testimonial-avatar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+   box-shadow: var(--shadow-section-primary);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar img {
+  transform: scale(1.05);
+}
+
+.testimonial-text {
+  font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .testimonial-avatar img {
+    width: 56px;
+    height: 56px;
+  }
+}}
+
+</style>   <section class="pricing-zigrow-section_1 section-padding" id="pricing" data-section="pricing">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <span class="price-badge mb-custom-3"
+        >OUR PRICING <i class="bi bi-tags"></i
+      ></span>
+      <h2 class="main-heading">Delicious Pricing Options</h2>
+      <p class="para-muted font-subheading">Affordable treats for every occasion and craving.</p>
+    </div>
+
+    <div class="row g-4 justify-custom-center">
+      <!-- Pay-as-you-go -->
+      <div class="col-md-6 col-lg-4">
+        <div class="price-card h-custom-100 text-custom-start">
+          <div class="icon-circle"><i class="bi bi-heart"></i></div>
+          <h5 class="fw-custom-bold mb-custom-1">Pay-as-you-go</h5>
+          <p class="para-muted small-custom">
+            Enjoy a monthly selection of our best treats.
+          </p>
+          <div class="price-display my-custom-3">
+            <span class="display-custom-6 fw-custom-bold">
+              ₹499/month</span
+            >
+          </div>
+          <a href="#" class="btn primary-btn w-custom-100 mb-custom-3">Build agent now →</a>
+          <ul class="features-list list-unstyled text-custom-start me-custom-auto">
+            
+            <li>
+              <span class="me-custom-2 tick-icon"><i class="bi bi-check2-circle "></i> </span>Monthly cake delivery
+            </li>
+            
+            <li>
+              <span class="me-custom-2 tick-icon"><i class="bi bi-check2-circle "></i> </span>Exclusive discounts on biscuits
+            </li>
+            
+            <li>
+              <span class="me-custom-2 tick-icon"><i class="bi bi-check2-circle "></i> </span>Free chocolate samples
+            </li>
+            
+            <li>
+              <span class="me-custom-2 tick-icon"><i class="bi bi-check2-circle "></i> </span>Customizable cake options
+            </li>
+            
+            <li>
+              <span class="me-custom-2 tick-icon"><i class="bi bi-check2-circle "></i> </span>Seasonal special offers
+            </li>
+            
+            <li>
+              <span class="me-custom-2 tick-icon"><i class="bi bi-check2-circle "></i> </span>Priority customer service
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby - Recommended -->
+      <div class="col-md-6 col-lg-4">
+        <div class="price-card h-custom-100 text-custom-start recommended-card">
+          <div class="recommendation-tag">
+            Our Recommendation <i class="bi bi-lightning"></i>
+          </div>
+          <div class="icon-circle"><i class="bi bi-lightning-charge"></i></div>
+          <h5 class="fw-custom-bold mb-custom-1">Hobby</h5>
+          <p class="para-muted small-custom">
+            Perfect for sweet lovers on a budget.
+          </p>
+          <div class="price-display my-custom-3">
+            <span class="display-custom-6 fw-custom-bold">
+              ₹299/month</span
+            >
+          </div>
+          <a href="#" class="btn primary-btn w-custom-100 mb-custom-3">Build agent now →</a>
+          <ul class="features-list list-unstyled text-custom-start me-custom-auto">
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Monthly biscuit pack
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Access to member-only deals
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Free recipe book
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Surprise treats included
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Birthday cake discount
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Flexible delivery options
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium -->
+      <div class="col-md-6 col-lg-4">
+        <div class="price-card h-custom-100 text-custom-start">
+          <div class="icon-circle"><i class="bi bi-gem"></i></div>
+          <h5 class="fw-custom-bold mb-custom-1">Premium</h5>
+          <p class="para-muted small-custom">
+            Indulge in our premium selection of baked goods.
+          </p>
+          <div class="price-display my-custom-3">
+            <span class="display-custom-6 fw-custom-bold">
+              ₹999/month</span
+            >
+          </div>
+          <a href="#" class="btn primary-btn w-custom-100 mb-custom-3">Build agent now →</a>
+          <ul class="features-list list-unstyled text-custom-start me-custom-auto">
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Gourmet cake of the month
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Artisan chocolate box
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Handmade biscuit variety
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Personalized gift options
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Exclusive event invitations
+            </li>
+            
+            <li>
+              <i class="bi bi-check2-circle me-custom-2 tick-icon"></i> Free delivery on all orders
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-zigrow-section_1 {
+    background-color: #fff;
+ color: var(--secondary-colors) ;
+  
+  .price-card {
+    background-color: #fff;
+    border: 1px solid #ebeaea;
+    padding: 2rem 1.5rem;
+
+      border-radius: var(--box-radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .btn{
+    border-radius: var(--border-radius-btn);
+  }
+  .price-card:hover {
+    border-color: #ccc;
+       box-shadow: var(--shadow-section-hover);
+    transform: translateY(-8px);
+  }
+
+  .icon-circle {
+    background: #f1f1f1;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .price-badge {
+    font-size: 0.7rem ;
+    border: 1px solid #f1f1f1;
+    color: #000 ;
+    padding: 0.2rem;
+
+      border-radius: var(--box-radius);
+  }
+  .price-tag {
+    font-size: 0.7rem ;
+    border: 1px solid #f1f1f1;
+    margin-left: 1rem ;
+    vertical-align: super;
+    color: #000 ;
+    padding: 0.2rem;
+  
+      border-radius: var(--box-radius);
+  }
+
+  .recommended-card {
+    border: 2px solid #ccc;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  }
+
+  .recommendation-tag {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-colors);
+    color: #fff;
+    padding: 4px 14px;
+    font-size: 0.75rem;
+ 
+      border-radius: var(--box-radius);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .features-list {
+    max-width: 260px;
+    font-size: 0.95rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: var(--fs-body);
+      color: var(--para-muted);
+    }
+  }
+
+  .tick-icon {
+    color: #000;
+  }
+  .price-display span {
+    font-size: 1.5rem;
+  }}
+</style>
+   <section class="faq-zigrow-section_3 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <div class="text-custom-start mb-custom-5">
+      <h2 class="main-heading">
+        <span>Explore Common Questions</span>
+      </h2>
+      <p class="font-subheading para-muted">
+        <span>Get instant answers to your common questions</span>
+      </p>
+    </div>
+
+    <div class="accordion" id="faqAccordion2">
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern0">
+          <button 
+            class="accordion-button "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern0"
+            aria-expanded="true"
+            aria-controls="collapseModern0"
+          >
+            <span>What products do you offer?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingModern0"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>We offer a variety of baked goods, including cakes, chocolates, and biscuits.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern1">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern1"
+            aria-expanded="false"
+            aria-controls="collapseModern1"
+          >
+            <span>Do you accept custom orders?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern1"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern1"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes, we happily accept custom orders for cakes and special occasions.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern2">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern2"
+            aria-expanded="false"
+            aria-controls="collapseModern2"
+          >
+            <span>What are your bakery hours?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern2"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern2"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Our bakery is open from 8 AM to 6 PM, Monday to Saturday.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern3">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern3"
+            aria-expanded="false"
+            aria-controls="collapseModern3"
+          >
+            <span>Do you have gluten-free options?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern3"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern3"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes, we offer a selection of gluten-free baked goods for our customers.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern4">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern4"
+            aria-expanded="false"
+            aria-controls="collapseModern4"
+          >
+            <span>Can I place an order online?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern4"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern4"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Absolutely! You can place orders online through our website for your convenience.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern5">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern5"
+            aria-expanded="false"
+            aria-controls="collapseModern5"
+          >
+            <span>Do you offer delivery services?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern5"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern5"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes, we provide delivery services within a certain radius for your convenience.</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-zigrow-section_3 {
+    background-color: #fff;
+  
+
+  .faq-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .faq-subtext {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    margin-top: 0.3rem;
+  }
+
+  /* Accordion Clean Style */
+  .accordion-button {
+    font-size: 1.2rem ;
+    color: #45505e ;
+    font-weight: 400 ;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #45505e ;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 ;
+  }
+
+  .accordion-button {
+    background-color: transparent ;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: none ;
+    padding: 1.25rem 0;
+  }
+
+  .accordion-body {
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    padding: 0 0 1rem;
+  }
+
+  .accordion-button::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #666;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E"); /* same gray icon */
+    border: 1px solid #666;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.5rem ;
+    }
+
+    .accordion-button {
+      font-size: 0.95rem ;
+      }}
+  }
+</style>
+   <section class="cta-zigrow-section_1 position-relative text-custom-white" id="cta" data-section="cta">
+  <div class="container h-custom-100" style="z-index: 999;">
+    <div class="row h-custom-100 justify-custom-center align-custom-center text-custom-center">
+      <div class="col-12 col-lg-6">
+        <div class="hero-content">
+          <h1 class="display-custom-4 fw-custom-bold mb-custom-3">Indulge in Fresh Treats</h1>
+          <p class="lead-custom mb-custom-3">Satisfy your cravings today!</p>
+          <p class="mb-custom-4 text-custom-light font-body">Visit Maya Bakers for delightful cakes, chocolates, and biscuits. Experience the joy of fresh, quality baked goods made just for you!</p>
+
+          <div class="row justify-custom-center">
+            <div class="col-auto">
+              <a href="#" class="primary-btn">Explore Our Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="img-credit text-custom-white small-custom position-absolute" style="bottom: 10px; right: 10px; z-index: 3;">
+    Photo by 
+    <a href="https://unsplash.com/@brett_jordan?utm_source=zigrow&utm_medium=referral" target="_blank"> Brett Jordan </a>
+    on 
+    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank">Unsplash</a>
+  </p>
+</section>
+
+
+<style>
+  .cta-zigrow-section_1 {
+  background: url('https://images.unsplash.com/photo-1607000975411-8b704cff63fc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYWxsJTIwdG8lMjBhY3Rpb258ZW58MHx8fHwxNzY3NjMzNzc3fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') center/cover no-repeat;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  text-align: center;
+
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-content p.lead-custom {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hero-content p.small {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-rescue {
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p.lead-custom {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.small {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+  }
+</style>   <!-- 📮 Minimal Split Contact -->
+<section class="contact-zigrow-section_4 section-padding" id="contact" data-section="contact">
+  <div class="container-xl">
+    <div class="contact-grid overflow-hidden">
+      <div class="row g-0">
+        <!-- ◼︎ Info -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="info p-custom-5 h-custom-100">
+            <h2 class="main-heading mb-custom-4">Get in touch</h2>
+
+            <ul class="list-unstyled mb-custom-0 ">
+              <li>
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h6>Mailing address</h6>
+                  <p>Vikas puri, f block. new delhi</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <h6>Email</h6>
+                  <p>sssjayanti@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h6>Phone</h6>
+                  <p>8907896756</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ◼︎ Image -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="hero h-custom-100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /* ========== TOKENS ========== */
+  :root {
+    --stroke: rgba(0, 0, 0, .07);
+  }
+
+  /* ========== WRAPPER ========== */
+  .contact-zigrow-section_4 {
+    background: #fdfdfd;
+  
+
+  /* outer card */
+  .contact-zigrow-section_4 .contact-grid {
+    background: var(--bg, #ffffff);
+    box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+  }
+
+  /* list layout */
+  .contact-zigrow-section_4 .info ul li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-zigrow-section_4 .info .icon {
+    color: var(--primary-colors);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-zigrow-section_4 .info h6 {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    font-weight: 700;
+    color: var(--primary-colors);
+    margin-bottom: .25rem;
+  }
+
+  .contact-zigrow-section_4 .info p {
+    margin: 0;
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+  }
+
+  /* ========== HERO IMAGE ========== */
+  .hero {
+    background: url('https://i.postimg.cc/XJCcgx1h/3.png') center/cover no-repeat;
+    min-height: 420px;
+  }
+
+  @media (max-width: 767.98px) {
+    .contact-zigrow-section_4 .info {
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .contact-zigrow-section_4 .hero {
+      min-height: 300px;
+    }
+
+    .contact-zigrow-section_4 .info ul li {
+      justify-content: center;
+      text-align: left;
+    }
+  }}
+</style>
+  
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

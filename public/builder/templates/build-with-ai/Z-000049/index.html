@@ -1,0 +1,2750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suruchi Jha - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #06FF00;
+      --secondary-colors: #111111;
+      --territory-colors: #00F5D4;
+      --theme-3: #000000;
+      --theme-4: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 !important;
+      font-family: Source Sans Pro;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Bebas Neue !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      Suruchi Jha
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">Faq</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #06FF00;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Bold -->
+<section class="hero-zigrow-section_17  position-relative mb-section-buffer" id="hero">
+  <div class="container text-center py-5 z-2 position-relative">
+    
+    <!-- Glowing Background Shape -->
+    <div class="hero-glow"></div>
+
+    <!-- Tagline Badge -->
+    <span class="badge-glass mb-4">
+       Designs that Delight Users
+    </span>
+
+    <!-- Heading -->
+    <h1 class="fw-bold display-4 display-md-3 text-dark mb-4 col-md-8 mx-auto">
+      Creating User-Friendly Designs for Everyone&#39;s Needs
+    </h1>
+
+    <!-- Subheading -->
+    <p class="lead para-muted mb-sm-5 mb-3 col-md-6 mx-auto">
+      I specialize in UI/UX design, ensuring that every user interaction is intuitive and enjoyable for a seamless experience across platforms.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#" class="primary-btn">
+       Get Started
+    </a>
+  </div>
+
+  <!-- Overlapping Mockup -->
+<div class="mockup-img-wrapper d-md-block d-none">
+  <img src="https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NjA2MTM0MDV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Messaging Dashboard" class="img-fluid mockup-img" />
+<span class="img-credit">
+  Photo by 
+  <a href="https://unsplash.com/@xingchenyan?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+    Xingchen Yan
+  </a> on 
+  <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+</span>
+
+</div>
+
+</section>
+
+<style>
+  .mb-section-buffer {
+    margin-bottom: 350px !important;
+    @media (max-width: 768px) {
+      margin-bottom: 0px !important;
+    }
+  }
+  /* 🌄 Modern Hero Section */
+  :root {
+  --primary-color: var(--primary-colors);
+  --primary-rgb: 151, 7, 71; /* RGB version of #970747 */
+}
+
+.hero-zigrow-section_17{
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #f9f9f9 0%,
+    rgba(var(--primary-rgb), 0.05) 20%,
+    rgba(var(--primary-rgb), 0.15) 50%,
+    rgba(var(--primary-rgb), 0.3) 80%,
+    rgba(var(--primary-rgb), 0.6) 100%
+  );
+  padding-top: 50px;
+  padding-bottom: 240px;
+  z-index: 0;
+  overflow: visible;
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0H0V40' fill='none' stroke='%23ffffff' stroke-opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+
+
+.hero-glow {
+  z-index: 1;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.12), transparent 70%);
+  filter: blur(80px);
+}
+
+
+/* 🔖 Soft Glass Badge */
+.badge-glass {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+    border-radius: var(--box-radius);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* 🖼️ Mockup Image Styling */
+.mockup-img-wrapper {
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+ width: min(92vw, 1020px);
+   height: clamp(260px, 68vh, 520px); 
+   overflow: hidden;
+  z-index: 2;
+}
+
+.mockup-img {
+     border-radius: var(--box-radius);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mockup-img:hover {
+  transform: scale(1.015);
+}
+
+/* 🧱 Section bottom margin */
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+   
+    padding-top: 60px;
+    padding-bottom: 140px;
+  
+
+  .mockup-img-wrapper {
+    bottom: -60px;
+    max-width: 95%;
+  }
+
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero-glow {
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
+    top: -40px;
+  }
+}}
+
+</style>   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 py-6" id="about">
+  <div class="container">
+    <div class="row g-xl-5 align-items-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1598201116904-9613ee826e9a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWFtJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYwNjEzNDA1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@mannydream?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Manny Moreno
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1753789412272-e35da1f83f85?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBza3lsaW5lfGVufDB8fHx8MTc2MDYxMzQwNXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@nimbus_vulpis?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Rafael Garcin
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NjA2MTM0MDV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@xingchenyan?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Xingchen Yan
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative">
+              <img src="https://images.unsplash.com/photo-1635185481431-661b09594e6c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW13b3JrfGVufDB8fHx8MTc2MDYxMzQwNXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@2hmedia?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      2H Media
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <div class="label">Our Goals</div>
+          <h2 class="section-heading mb-4 main-heading">
+            About Me
+          </h2>
+          <p class=" para-muted mb-4 font-body">
+            I am Suruchi Jha, a passionate UI/UX designer dedicated to creating user-friendly designs that enhance user experience and engagement. With a keen eye for detail and a commitment to understanding user needs, I strive to deliver designs that are not only visually appealing but also functional and intuitive. I focus on innovative and creative design solutions that meet user needs effectively.
+          </p>
+
+          <ul class=" feature-bullets mb-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  I focus on innovative and creative design solutions that meet user needs effectively.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Conducting thorough user research to inform design decisions and enhance usability.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Creating interactive prototypes to visualize designs and gather feedback early in the process.
+                </li>
+                
+                  </ul>
+
+                  <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ====================== service-zigrow-section_13 : START ====================== -->
+<section id="services" class="py-6  service-zigrow-section_13">
+  <div class="container px-3 px-md-4">
+
+    
+
+    <!-- Top header row -->
+    <div class="row align-items-end g-4">
+      <div class="col-lg-8">
+
+        <h2 class="main-heading mb-2">My Design Services</h2>
+        <p class="font-subheading para-muted mb-0">Offering a range of UI/UX design services tailored to your needs.</p>
+
+        <div class="d-flex align-items-center gap-2 mt-3">
+          <a href="#!" class="primary-btn ms-1">Explore more</a>
+        </div>
+      </div>
+
+      <!-- KPI block -->
+      <div class="col-lg-4 text-lg-end">
+        <div class="service-zigrow-kpi text-lg-end">
+          <div class="service-zigrow-kpi-number">6</div>
+          <div class="small para-muted mt-1">Services</div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- Cards grid -->
+    <div class="row g-4 g-xl-5 mt-1 mt-md-4">
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc2MDYxMzE4NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="UI/UX Design" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@startaeteam?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Startaê Team
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">UI/UX Design</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">I create user-centered designs that enhance usability and engagement, ensuring a seamless experience across all platforms. My designs are tailored to meet the specific needs of your target audience.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">UI</span>
+              
+              <span class="badge service-zigrow-chip">UX</span>
+              
+              <span class="badge service-zigrow-chip">Design</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1758691461916-dc7894eb8f94?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25zdWx0aW5nJTIwc2VydmljZXN8ZW58MHx8fHwxNzYwNjEzMTg1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Mockups" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@silverkblack?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Vitaly Gariev
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Mockups</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">High-fidelity mockups that bring your ideas to life, providing a clear visual representation of the final product. This helps in visualizing the user journey and interface.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">Mockups</span>
+              
+              <span class="badge service-zigrow-chip">Visuals</span>
+              
+              <span class="badge service-zigrow-chip">Prototypes</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1649478680984-01586ce84ac0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxwcm9qZWN0JTIwbWFuYWdlbWVudHxlbnwwfHx8fDE3NjA2MTMxODV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Figma Designs" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@alphabag?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Alphabag
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Figma Designs</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Utilizing Figma for collaborative design processes, I create interactive prototypes that facilitate feedback and iterations, ensuring the final product aligns with your vision.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">Figma</span>
+              
+              <span class="badge service-zigrow-chip">Collaboration</span>
+              
+              <span class="badge service-zigrow-chip">Prototyping</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjA2MTMxODV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Consultation" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@micheile?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        micheile henderson
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Consultation</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Offering expert consultation services to help you refine your design strategy and improve user experience. Let&#39;s discuss how we can elevate your project together.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">Consultation</span>
+              
+              <span class="badge service-zigrow-chip">Strategy</span>
+              
+              <span class="badge service-zigrow-chip">UX</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1726138388546-30955e45aaec?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwc29sdXRpb25zfGVufDB8fHx8MTc2MDYxMzQwNXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Branding" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@sumup?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        SumUp
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Branding</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Helping you establish a strong brand identity through cohesive design elements that resonate with your audience and reflect your values.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">Branding</span>
+              
+              <span class="badge service-zigrow-chip">Identity</span>
+              
+              <span class="badge service-zigrow-chip">Design</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="service-zigrow-card h-100 position-relative overflow-hidden rounded-4">
+        <figure class="service-zigrow-figure m-0 position-relative">
+  
+
+  <img 
+    src="https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc2MDYxMzE4NHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+    alt="Responsive Design" 
+    class="service-zigrow-img" 
+    loading="lazy"
+  >
+
+  <!-- overlays (existing) -->
+  <span class="service-zigrow-gradient"></span>
+  <span class="service-zigrow-shine"></span>
+
+  <!-- ✅ Unsplash credit badge -->
+  
+    <span class="img-credit small">
+      Photo by 
+      <a href="https://unsplash.com/@startaeteam?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Startaê Team
+      </a> on 
+      <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+        Unsplash
+      </a>
+    </span>
+  
+</figure>
+
+
+          <div class="service-zigrow-body d-flex flex-column">
+            <h3 class="h5 fw-semibold card-title  mb-2">Responsive Design</h3>
+            <p class="service-zigrow-text flex-grow-1 mb-3">Ensuring your designs are responsive and adaptable to various devices, providing a consistent user experience regardless of screen size.</p>
+
+            <div class="mb-3 d-flex flex-wrap gap-2">
+              
+              <span class="badge service-zigrow-chip">Responsive</span>
+              
+              <span class="badge service-zigrow-chip">Adaptability</span>
+              
+              <span class="badge service-zigrow-chip">Design</span>
+              
+            </div>
+
+
+          </div>
+
+          <span class="service-zigrow-ring"></span>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- ====================== service-zigrow-section_13 : END ====================== -->
+
+<style>
+  /* ---------- Layout helpers ---------- */
+  .service-zigrow-section_13 {
+    background: #fff;
+  }
+
+  .service-zigrow-section_13 .tracking-wider {
+    letter-spacing: .08em;
+  }
+
+  /* ---------- KPI (right header) ---------- */
+  /* --- KPI mimic like screenshot --- */
+  .service-zigrow-section_13 .service-zigrow-kpi-number {
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #111, var(--primary-colors));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-kpi .para-muted {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+
+
+  /* ---------- Card ---------- */
+  .service-zigrow-section_13 .service-zigrow-card {
+    background: #f8f9fb;
+    border: 1px solid #eceef2;
+      box-shadow: var(--shadow-section);
+ border-radius: var(--box-radius);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    isolation: isolate;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover {
+    transform: translateY(-6px);
+    border-color: #e2e5ea;
+     box-shadow: var(--shadow-section-hover);
+
+
+  }
+
+  /* image wrapper */
+  .service-zigrow-section_13 .service-zigrow-figure {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform .6s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-img {
+    transform: scale(1.08);
+  }
+
+  /* overlays */
+  .service-zigrow-section_13 .service-zigrow-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .18) 100%);
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-shine {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(120px 120px at var(--mx, 80%) var(--my, 20%), rgba(255, 255, 255, .65), rgba(255, 255, 255, 0) 60%);
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-shine {
+    opacity: 1;
+  }
+
+  /* body */
+  .service-zigrow-section_13 .service-zigrow-body {
+    padding: 1.1rem;
+
+    .card-title{
+        color: var(--secondary-colors);
+        font-size: var(--fs-sub);
+    }
+  }
+
+  @media (min-width:1200px) {
+    .service-zigrow-section_13 .service-zigrow-body {
+      padding: 1.25rem;
+    }
+  }
+
+  .service-zigrow-section_13 .service-zigrow-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body-sm);
+  }
+
+  /* chips */
+  .service-zigrow-section_13 .service-zigrow-chip {
+    background: #fff;
+    color: #111;
+    border: 1px solid #e7e9ee;
+  border-radius: var(--box-radius);
+    padding: .35rem .7rem;
+    font-weight: 500;
+  }
+
+  /* link + arrow */
+  .service-zigrow-section_13 .service-zigrow-link {
+    color: #111;
+    position: relative;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1.5px;
+    background: #111;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-link::after {
+    transform: scaleX(1);
+  }
+
+  .service-zigrow-section_13 .service-zigrow-arrow {
+    font-size: 1.25rem;
+    line-height: 1;
+    transform: translateX(0);
+    transition: transform .3s ease;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-arrow {
+    transform: translateX(4px);
+  }
+
+  /* decorative ring */
+  .service-zigrow-section_13 .service-zigrow-ring {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(17, 17, 17, .06), rgba(17, 17, 17, 0) 60%);
+    filter: blur(2px);
+    pointer-events: none;
+    transition: transform .4s ease, opacity .4s ease;
+    opacity: .7;
+  }
+
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-ring {
+    transform: translate(6px, -6px);
+    opacity: 1;
+  }
+
+  /* shine position fallback */
+  .service-zigrow-section_13 .service-zigrow-card:hover .service-zigrow-figure {
+    --mx: 70%;
+    --my: 30%;
+  }
+</style>   <!-- 🤍 Our Clients Grid -->
+<section class="logo-zigrow-section_5 py-6" id="logos">
+  <div class="container text-center">
+
+    <!-- Heading -->
+    <h2 class="fw-bold display-5 mb-3 main-heading">Our Dear Clients</h2>
+    <p class="lead para-muted font-subheading mb-5 px-lg-5 col-md-8 mx-auto">
+     A showcase of trusted partners and brands we've collaborated with—highlighting the strength, diversity, and credibility behind our network.
+    </p>
+
+    <!-- Logo table -->
+    <div class="row gx-0 gy-0 border-grid">
+
+      <!-- Repeat for 8 logos -->
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-5 p-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+  /* SECTION WRAP */
+.logo-zigrow-section_5{
+  background:#fff;
+}
+
+/* GRID: only inner lines, no outer border */
+.logo-zigrow-section_5 .border-grid .cell{ position: relative; }
+.logo-zigrow-section_5 .border-grid .cell::before,
+.logo-zigrow-section_5 .border-grid .cell::after{
+  content:"";
+  position:absolute;
+  background: var(--grid-line, #e8e9ee); /* subtle line */
+}
+
+/* draw TOP and LEFT separators on every cell */
+.logo-zigrow-section_5 .border-grid .cell::before{ /* top line */
+  height:1px; left:0; right:0; top:0;
+}
+.logo-zigrow-section_5 .border-grid .cell::after{  /* left line */
+  width:1px; top:0; bottom:0; left:0;
+}
+
+/* ≤ LG (mobile/tablet) => 2 columns (col-6) — hide outer edges */
+@media (max-width: 991.98px){
+  /* first row (items 1–2): no top line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(-n+2)::before{ display:none; }
+  /* first column in each row (1,3,5,7): no left line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(2n+1)::after{ display:none; }
+}
+
+/* ≥ LG (desktop) => 4 columns (col-lg-3) — hide outer edges */
+@media (min-width: 992px){
+  /* first row (items 1–4): no top line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(-n+4)::before{ display:none; }
+  /* first column in each row (1,5): no left line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(4n+1)::after{ display:none; }
+}
+
+/* LOGO visuals */
+.logo-zigrow-section_5 .logo{
+  max-width:170px; width:100%; object-fit:contain;
+  filter:grayscale(100%) opacity(.8);
+  transition: filter .3s ease;
+}
+.logo-zigrow-section_5 .logo:hover{ filter:grayscale(0%); }
+
+/* small screens logo size */
+@media (max-width:575.98px){
+  .logo-zigrow-section_5 .logo{ max-width:140px; }
+}
+
+</style>
+    <section class=" whyChooseUs-zigrow-section_3 py-6"id="whyChooseUs">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <div class="section-tag">★ Why Choose Us</div>
+      <h2 class="why-title main-heading">Why Choose Me</h2>
+      <p class="why-subtitle">Your partner in design excellence.</p>
+      <p class="why-paragraph mx-auto">With a focus on user-centered design, I prioritize your needs and those of your users. My goal is to create designs that not only look good but also function seamlessly, enhancing user satisfaction and engagement.</p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="row align-items-center justify-content-between g-4">
+
+      <!-- Image Column -->
+      <div class="col-lg-6">
+        <div class="img-container">
+          
+<div class="img-container position-relative">
+  <img
+    src="https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NjA2MTM0MDV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    class="img-fluid rounded-custom w-100"
+    alt="Why Choose Us Image"
+  />
+
+  
+  <span class="img-credit">
+    Photo by 
+    <a href="https://unsplash.com/@xingchenyan?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener">
+      Xingchen Yan
+    </a> on 
+    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>
+  </span>
+
+
+
+</div>
+
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="col-lg-6">
+        <div class="row g-4">
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-person"></i>
+              </div>
+              <h5 class="mt-3">User-Centric Approach</h5>
+              <p class="feature-para">I prioritize user needs in every design decision, ensuring a seamless experience that resonates with your audience.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h5 class="mt-3">Expertise in Tools</h5>
+              <p class="feature-para">Proficient in industry-standard design tools like Figma, ensuring high-quality deliverables and efficient collaboration.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-clock"></i>
+              </div>
+              <h5 class="mt-3">Timely Delivery</h5>
+              <p class="feature-para">I adhere to deadlines and ensure timely delivery of all projects without compromising on quality.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="feature-card text-center">
+              <div class="icon-circle mx-auto">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5 class="mt-3">Collaborative Process</h5>
+              <p class="feature-para">I believe in working closely with clients to ensure their vision is realized in the final design.</p>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- CTA Buttons -->
+        <!-- <div class="d-flex gap-3 mt-3 justify-content-center ">
+          <a href="#" class="primary-btn">Learn More</a>
+        </div> -->
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .whyChooseUs-zigrow-section_3 {
+  background: #ffffff;
+
+
+.section-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #06FF00;
+  background: #f0efff;
+  padding: 5px 14px;
+ border-radius: var(--box-radius);
+  display: inline-block;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.why-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.why-subtitle {
+  font-size: var(--fs-sub);
+  color: var(--para-muted);
+  margin-bottom: 0.5rem;
+}
+
+.why-paragraph {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.img-container img {
+border-radius: var(--box-radius);
+  box-shadow: var(--shadow-section);
+  transition: transform 0.3s ease;
+  aspect-ratio: 12/9;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
+}
+
+.feature-card {
+  background: #f8f9fc;
+  padding: 20px;
+ border-radius: var(--box-radius);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-circle {
+  background-color: #f1f1f7;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #06FF00;
+}
+
+.feature-card h5 {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-top: 14px;
+  color: var(--lead-para-muted);
+}
+
+.feature-para {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 767.98px) {
+  .why-title {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .why-subtitle,
+  .why-paragraph {
+    text-align: center;
+  }
+
+  .btn-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+
+  .icon-circle {
+    margin: 0 auto;
+  }}
+}
+
+</style>    <section class="portfolio-zigrow-section_2 py-6" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title main-heading">
+        My Work
+      </h2>
+    </div>
+
+    <div class="row justify-content-center g-3">
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1572177812156-58036aae439c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzYwNjEzNDA2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="E-commerce Site"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              E-commerce Site <br />
+              Online Shopping
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@octadan?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Octavian-Dan Craciun
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1664188613064-7eea761238f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGNhc2UlMjBzdHVkaWVzfGVufDB8fHx8MTc2MDYxMzQwNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Mobile App"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Mobile App <br />
+              User Engagement
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@dtrinksrph?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              David Trinks
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://via.placeholder.com/800x400?text=Image+Unavailable"
+              alt="Landing Page"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Landing Page <br />
+              Lead Generation
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@unknown?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Unknown
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://via.placeholder.com/800x400?text=Image+Unavailable"
+              alt="Dashboard Design"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Dashboard Design <br />
+              Data Visualization
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@unknown?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Unknown
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1760071744047-5542cbfda184?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjBkaXNwbGF5fGVufDB8fHx8MTc2MDYxMzQwNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Blog Template"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Blog Template <br />
+              Content Sharing
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@rahim1845?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              abdul rahim rangrez
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://images.unsplash.com/photo-1572177812156-58036aae439c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzYwNjEzNDA2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Portfolio Website"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Portfolio Website <br />
+              Personal Branding
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@octadan?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Octavian-Dan Craciun
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-top-only">
+            <img
+              src="https://images.unsplash.com/photo-1664188613064-7eea761238f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGNhc2UlMjBzdHVkaWVzfGVufDB8fHx8MTc2MDYxMzQwNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Corporate Site"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Corporate Site <br />
+              Business Presence
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@dtrinksrph?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              David Trinks
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+        <div class="col-6 col-md-3">
+          <div class="offer-card rounded-bottom-only">
+            <img
+              src="https://via.placeholder.com/800x400?text=Image+Unavailable"
+              alt="Event App"
+              class="img-fluid"
+            />
+
+            <div class="offer-label">
+              Event App <br />
+              User Interaction
+            </div>
+          </div>
+          <p class="unsplash-credit small text-muted mb-0" style="font-size: 0.65rem">
+            Photo by
+            <a
+              href="https://unsplash.com/@unknown?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+            >
+              Unknown
+            </a>
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-muted text-decoration-underline"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+  }
+
+  .offer-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+
+  .offer-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    aspect-ratio: 3/4;
+  }
+
+  .offer-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .rounded-top-only img {
+    border-top-left-radius: 50% 30%;
+    border-top-right-radius: 50% 30%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .rounded-bottom-only img {
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .offer-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1.5rem 1.95rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+  }
+
+  .rounded-top-only .offer-label {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  }
+
+  .rounded-bottom-only .offer-label {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  }
+</style>
+   <section class="testimonial-zigrow-section_9 py-6"id="testimonials">
+  <div class="container">
+    <h2 class="text-center  main-heading mb-2">Client Feedback</h2>
+     <p class="para-muted text-center font-subheading mb-5">Hear what my clients have to say about my work.</p>
+    <div class="row justify-content-center g-4">
+
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/Kv4g4kN0/1.png" class="client-img mb-3" alt="John Doe">
+
+            <h5 class="fw-bold mb-2">John Doe</h5>
+            <p class="para-muted font-body-sm">
+              Suruchi&#39;s designs transformed our website. Her attention to detail and understanding of user needs made a significant impact on our user engagement.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/fWqV4WNm/10.png" class="client-img mb-3" alt="Jane Smith">
+
+            <h5 class="fw-bold mb-2">Jane Smith</h5>
+            <p class="para-muted font-body-sm">
+              Working with Suruchi was a pleasure. She delivered high-quality mockups that exceeded our expectations and helped us visualize our project effectively.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/gk5Lhztm/2.png" class="client-img mb-3" alt="Michael Brown">
+
+            <h5 class="fw-bold mb-2">Michael Brown</h5>
+            <p class="para-muted font-body-sm">
+              Suruchi&#39;s expertise in UI/UX design is unparalleled. She provided valuable insights that improved our product&#39;s usability and overall user experience.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/TPjKBrd3/3.png" class="client-img mb-3" alt="Emily White">
+
+            <h5 class="fw-bold mb-2">Emily White</h5>
+            <p class="para-muted font-body-sm">
+              I highly recommend Suruchi for any design project. Her creativity and professionalism made the entire process enjoyable and productive.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/JhCyTTWF/4.png" class="client-img mb-3" alt="David Green">
+
+            <h5 class="fw-bold mb-2">David Green</h5>
+            <p class="para-muted font-body-sm">
+              Suruchi&#39;s ability to understand our vision and translate it into stunning designs was impressive. She is a true professional.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/RZH6Qk2f/5.png" class="client-img mb-3" alt="Laura Black">
+
+            <h5 class="fw-bold mb-2">Laura Black</h5>
+            <p class="para-muted font-body-sm">
+              The mockups provided by Suruchi were incredibly detailed and helped us make informed decisions during the development phase.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .testimonial-zigrow-section_9 {
+  background-color: #ffffff;
+
+.client-card {
+  background: #fff;
+   border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h5{
+    color: var(--secondary-colors);
+
+  }
+  p{
+    color: var(  --para-muted);
+  }
+}
+.client-card:hover {
+  transform: translateY(-6px);
+       box-shadow: var(--shadow-section-hover);
+}
+
+/* Image Styling */
+.client-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+   border-radius: var(--box-radius);
+     box-shadow: var(--shadow-section);
+  transition: transform 0.3s;
+}
+.client-card:hover .client-img {
+  transform: scale(1.05);
+}
+
+/* Star rating */
+.star-rating i {
+  color: var(--primary-colors);
+  font-size: 1.2rem;
+}
+
+/* Responsive text alignment fix for small screens */
+@media(max-width: 575.98px){
+  .client-card {
+    padding: 2rem 1.5rem;
+  }
+}}
+
+</style>    <section class=" faq-zigrow-section_2 py-6"id="faq">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading fw-bold text-uppercase">Commonly Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              What services do you offer as a designer?
+            </button>
+          </h2>
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              I offer a range of services including UI/UX design, mockups, Figma designs, and consultation to help enhance user experience.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              How do you approach a new design project?
+            </button>
+          </h2>
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              I begin by understanding the client&#39;s needs and conducting user research to inform my design decisions, ensuring the final product meets user expectations.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              What tools do you use for design?
+            </button>
+          </h2>
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              I primarily use Figma for design and prototyping, along with other tools like Adobe XD and Sketch for various design tasks.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              Can you work on existing projects?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, I can collaborate on existing projects to enhance their design and improve user experience based on user feedback and testing.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              What is your design process like?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              My design process includes research, ideation, prototyping, user testing, and iteration to ensure the final design is user-friendly and effective.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              Do you provide ongoing support after project completion?
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, I offer ongoing support and maintenance services to ensure the designs continue to meet user needs and adapt to changes.
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent !important;
+  color: #555 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none !important;
+  border: 0 !important;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none !important;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>    <section class="contact-zigrow-section_5 py-6" id="contact">
+  <div class="container">
+    
+    <!-- Top Images -->
+    <div class="row g-3 mb-5 image-row">
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/g05HR1s8/2.png" class="img-fluid  " alt="Room 1">
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png" class="img-fluid  " alt="Room 2">
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.postimg.cc/8cgdXWqC/4.png" class="img-fluid  " style="width: 600px;" alt="Room 3">
+      </div>
+    </div>
+
+    <!-- Bottom Contact Info -->
+    <div class="row align-items-start text-section">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="fw-bold main-heading">Partner with us</h2>
+      </div>
+      <div class="col-md-6 contact-details">
+        <div class="mb-4">
+          <h6 class="text-uppercase contact-label">Mailing Address</h6>
+          <p>123 Business St, City</p>
+        </div>
+        <div class="mb-4">
+          <h6 class="text-uppercase contact-label">Email Address</h6>
+          <p>contact@example.com</p>
+        </div>
+        <div>
+          <h6 class="text-uppercase contact-label">Phone Number</h6>
+          <p>+91 00000 00000</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .contact-zigrow-section_5 {
+  background-color: #fff;
+
+
+.image-row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+
+.image-row img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+
+.contact-details .contact-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary-colors);
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+  }
+}
+    }
+</style>   <footer class="py-6 footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h5 class="fw-bold link-title">Suruchi Jha</h5>
+        <p class="subtext">I specialize in UI/UX design, ensuring that every user interaction is intuitive and enjoyable for a seamless experience across platforms.</p>
+      </div>
+
+      <div class="col-md-1"></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="fw-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-bold link-title">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-center mt-3 mb-0" style="color: #2a2a2a;">
+      &copy; 2025 Suruchi Jha. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) !important;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

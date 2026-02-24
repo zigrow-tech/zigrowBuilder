@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    myfarm - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #eb694d;
+      --secondary-colors: #212121;
+      --theme-3: #fff;
+      --theme-4: #000000;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Manrope;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #eb694d;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #eb694d;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Plus Jakarta Sans !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #212121 !important;
+      font-family: Manrope !important;
+      border: 1px solid #212121 !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #212121;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      myfarm
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #eb694d;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+
+      
+         <!-- Bold -->
+
+<section class="hero-zigrow-section_12 d-flex align-items-center position-relative" id="hero">
+  <!-- 🔮 Optional Glass Background Blur -->
+  <div class="hero-overlay"></div>
+
+  <div class="container">
+    <div class="hero-slider">
+      <div class="slide-content p-5 p-md-5">
+        <h1 class="fw-bold mb-3 display-5 display-md-4 text-dark">
+          Transforming Agriculture with Innovative Farming Techniques
+        </h1>
+
+        <div class="gradient-line mb-4"></div>
+
+        <p class="lead text-muted mb-4">
+          We provide comprehensive farming solutions for sustainable agriculture and effective farming practices that enhance productivity and environmental stewardship.
+        </p>
+
+        <a href="#" class="btn primary-btn fs-6 px-5 py-3">
+           Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+ <span class="img-credit">
+  Photo by 
+  <a 
+    href="https://unsplash.com/@hdbernd?utm_source=zigrow&utm_medium=referral"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Bernd 📷 Dittrich
+  </a> on 
+  <a 
+    href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Unsplash
+  </a>
+</span>
+
+
+</section>
+
+<style>
+  /* 🔳 Hero Wrapper */
+.hero-zigrow-section_12{
+  background: url('https://images.unsplash.com/photo-1717000127892-c8010f6f69a2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmYXJtJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc1NDgxMjcyOHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center / cover;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #222;
+  z-index: 1;
+
+/* 🌫 Optional: subtle blurred overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+/* 📦 Slide Content */
+.slide-content {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2.5rem;
+  z-index: 2;
+  position: relative;
+  backdrop-filter: blur(4px);
+}
+
+/* 🌈 Gradient Line */
+.gradient-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-colors), #ff9a9e);
+  border-radius: 4px;
+}
+
+/* ✨ Button Styling */
+.modern-btn {
+  background-color: var(--primary-colors);
+  color: white;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.modern-btn:hover {
+  transform: translateY(-2px);
+ background-color: var(--primary-colors);
+  color: #fff;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .slide-content {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .home-hero {
+    padding: 80px 0;
+    min-height: auto;
+  }
+
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2px);
+  }
+}
+}
+</style>
+            
+              
+                     <section class=" container py-6 service-zigrow-section_6" id="services">
+  <div class="main-grid">
+    <!-- Left side: Logo + Vertical Card -->
+    <div class="left-side">
+      <div class="brand-logo main-heading">Services</div>
+      <div class="vertical-card">
+        <div>Farming Techniques</div>
+        <div class="arrow-icon">→</div>
+        <span>+</span>
+      </div>
+    </div>
+
+    <!-- Right Grid: 3x2 cards -->
+    <div class="right-grid">
+      <div class="grid-item grid-black">
+      Quality Fertilizers
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-purple">
+       Premium Seeds
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-black">
+       Consultation Services
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-yellow">
+        Annual Report
+        <span class="plus-yellow-icon plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-black">
+        New Services
+        <span class="plus-icon">+</span>
+      </div>
+      <div class="grid-item grid-yellow">
+        Company Culture
+        <span class="plus-yellow-icon plus-icon">+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .service-zigrow-section_6{
+
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .brand-logo {
+    font-weight: 600;
+font-size: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .vertical-card {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-colors);
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .vertical-card span,
+  .grid-item span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.4rem;
+  }
+
+  .arrow-icon {
+    font-size: 1.9rem;
+    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.2rem 0.8rem;
+    &:hover {
+      background: white;
+      color: #b266ff;
+    }
+  }
+
+  .right-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-item {
+    position: relative;
+    padding: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 180px;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:hover,
+  .vertical-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .grid-purple {
+   background-color: var(--primary-colors);
+  }
+
+  .grid-yellow {
+    background-color: #fff;
+    border: 2px solid black;
+    color: black;
+  }
+
+  .grid-black {
+    background-color: #000;
+  }
+
+  .plus-icon {
+    background: white;
+    color: #000;
+    padding: 0.1rem 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid black;
+      color: white;
+    }
+  }
+
+  .plus-yellow-icon {
+    color: #fff  !important;
+    background: #000;
+
+    &:hover {
+      color: black !important;
+      border: 1px solid black;
+      background: transparent !important;
+    }
+  }
+  @media (max-width: 992px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .right-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .vertical-card {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .right-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+      height: 160px;
+    }
+  }}
+</style>
+
+                        
+                          
+                                
+                                      
+                                            
+                                                  
+                                                        
+                                                              
+                                                                    
+                                                                          
+                                                                                
+                                                                                      
+                                                                                        <footer class="py-6 footer-zigrow-section_1" style="background-color: #000000; color: #fff;" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold">myfarm</h5>
+        <p class="subtext">We provide comprehensive farming solutions for sustainable agriculture and effective farming practices that enhance productivity and environmental stewardship.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 contact-links">
+        <h6 class="fw-bold">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr style="border-color: #fff;" />
+
+    <p class="text-center mt-3 mb-0" style="">
+      &copy; 2025 myfarm. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--lead-color-mute)
+    }
+    .links{
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .contact-links{
+      p {
+             color: #fff
+      }
+    }
+  }
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

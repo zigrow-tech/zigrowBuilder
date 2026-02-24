@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event India - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #3D5A80;
+      --secondary-colors: #111111;
+      --territory-colors: #98C1D9;
+      --theme-3: #ffffff;
+      --theme-4: #000000;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #111111 !important;
+      font-family: Calibri;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Merriweather !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #111111;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Event India
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#whyChooseUs">Why Choose Us</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#faq">Faq</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="primary-btn">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #3D5A80;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #3D5A80;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Professional -->
+<section class=" hero-zigrow-section_10 d-flex align-items-center justify-content-center" id="hero">
+  <!-- INNER BOX -->
+  <div class="hero-inner-box container position-relative text-center">
+    
+    <!-- Decorative Badge -->
+    <img src="https://i.postimg.cc/SN3P9rtB/3.png" alt="badge" class="hero-badge">
+
+    <!-- Decorative Stars -->
+    <img src="https://i.postimg.cc/SsbqG41p/2.png" class="decor-star star-green" alt="star" />
+    <img src="https://i.postimg.cc/NFNWZvDF/5.png" class="decor-arrow " alt="star" />
+    <img src="https://i.postimg.cc/VNnPvTfZ/4.png" class="decor-star star-blue" alt="arrow" />
+
+    <!-- Headline -->
+    <h1 class="hero-title">
+      Your Premier Event Management Partner in India
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext">
+       With over a decade of experience, we specialize in corporate events, offering comprehensive support and management tailored to your needs.
+    </p>
+
+    <!-- Buttons -->
+    <div class="hero-buttons d-flex justify-content-center gap-3 mt-4 flex-wrap">
+      <a href="#" class="primary-btn">Get Started →</a>
+      <a href="#" class="white-btn">Blog →</a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+
+/* Outer wrapper with border effect */
+.hero-zigrow-section_10 {
+  background-color: var(--primary-colors); /* soft purple */
+  padding: 16px;
+  min-height: 95vh;
+
+
+/* Inner box */
+.hero-inner-box {
+  background-color:black;
+     border-radius: var(--box-radius);
+  padding: 80px 20px;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-width: 98vw;
+}
+
+/* Headline */
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: white;
+  max-width: 900px;
+  margin: 4% auto;
+  line-height: 1.3;
+}
+
+.hero-title .hero-invest {
+  background: var(--blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .hero-invest::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 6px;
+  background: url('underline.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.05rem;
+  color: white;
+  max-width: 700px;
+  margin: 1.2rem auto 0;
+  line-height: 1.8;
+}
+
+
+
+/* Badge */
+.hero-badge {
+    position: absolute;
+    top: 26%;
+    left: 16%;
+    width: 62px;
+    z-index: 2;
+}
+
+/* Decorative Stars */
+.decor-star {
+  position: absolute;
+  width: 40px;
+}
+
+.star-green {
+    top: 60%;
+    left: 20%;
+}
+
+.star-blue {
+     top: 12%;
+    right: 23%;
+}
+
+/* Arrow */
+.decor-arrow {
+position: absolute;
+
+   top: 72%;
+        right: 32%;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge {
+    top: -25px;
+    left: 20px;
+    width: 60px;
+  }
+
+  .decor-star {
+    width: 24px;
+  }
+
+  .decor-arrow {
+    width: 40px;
+  }
+}}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-lg-5">
+      
+      <!-- ◀ Hero Image -->
+      <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+        <div class="hero-img-wrap rounded-4 overflow-hidden position-relative shadow">
+  <img
+    src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxldmVudCUyMHBsYW5uaW5nfGVufDB8fHx8MTc2MDUwNzg3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    alt="Happy mother and child"
+    class="w-100 h-100 object-fit-cover"
+  />
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@shardayyy?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Shardayyy Photography
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+      </div>
+
+      <!-- ▶ Content + Features -->
+      <div class="col-12 col-lg-7">
+        <div class="content-box rounded-4 p-4 p-lg-5 shadow-sm">
+          <h2 class="section-title main-heading mb-3 text-lg-start text-center">
+            About Event India
+          </h2>
+
+          <p class="para-muted mb-4 text-lg-start text-center font-body">
+            Event India has been a leader in the event management industry for over 10 years, providing exceptional services tailored to corporate needs. Our dedicated team of professionals ensures that every event is executed flawlessly, from planning to execution, guaranteeing a memorable experience for all attendees.
+          </p>
+
+      
+
+          <div class="row g-4">
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-4 h-100">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi-person"></i>
+                </div>
+                <h6 class="fw-semibold mb-2 card-title">Expert Team</h6>
+                <p class="para-muted mb-0 font-body-sm">Our team consists of experienced professionals who are passionate about delivering outstanding events tailored to your requirements.</p>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-4 h-100">
+                <div class="icon-circle mb-3">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <h6 class="fw-semibold mb-2 card-title">Tailored Solutions</h6>
+                <p class="para-muted mb-0 font-body-sm">We offer customized event solutions to meet the unique needs of each client, ensuring a perfect fit for every occasion.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 🎨 Solace Modern UI */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: #222;
+
+
+/* --- Hero Image --- */
+.hero-img-wrap {
+  aspect-ratio: 4/4.8;
+  border-radius: var(--box-radius);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.hero-img-wrap:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section);
+}
+
+/* --- Content Card --- */
+.content-box {
+  background: #f7f9fc;
+  border-radius: var(--box-radius);
+}
+
+/* --- Headline --- */
+.section-title {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 2.8rem);
+  font-weight: 700;
+}
+
+.card-title{
+  color: var(--secondary-colors);
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-left-color: #fff;
+  transition: transform 0.25s ease;
+}
+.cta-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --- Feature Tile --- */
+.feature-tile {
+  background: #ffffff;
+  border: 1px solid #e2e6ea;
+   border-radius: var(--box-radius);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-section);
+}
+.feature-tile:hover {
+  box-shadow: var(--shadow-section-hover);
+  transform: translateY(-4px);
+}
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(76, 107, 255, 0.1);
+  color:var(--para-muted);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 575.98px) {
+  .hero-img-wrap {
+    aspect-ratio: 16/9;
+  }
+  .content-box {
+    padding: 2rem 1.25rem;
+  }
+}}
+
+</style>   <!-- ========== Services Switcher (service-zigrow-section_10) ========== -->
+<section class="service-zigrow-section_10 py-6" id="services">
+  <div class="container">
+    <div class="row g-4 g-lg-5 align-items-start">
+      <!-- LEFT: Heading + Tab List -->
+      <div class="col-lg-4">
+        <p class="svc-eyebrow mb-2">(Our Service)</p>
+        <h2 class="main-heading mb-3">Our Event Management Services</h2>
+        <p class="svc-subtext mb-4">Our dedicated team of professionals ensures that every event is executed flawlessly, from planning to execution, guaranteeing a memorable experience for all attendees.</p>
+
+        <div class="svc-tablist" role="tablist" aria-label="Services">
+          
+          <label
+            class="svc-tab is-active"
+            for="svc-tab-0"
+            role="tab"
+            aria-controls="svc-panel-0"
+          >
+            <span>Corporate Events</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-1"
+            role="tab"
+            aria-controls="svc-panel-1"
+          >
+            <span>Event Planning</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-2"
+            role="tab"
+            aria-controls="svc-panel-2"
+          >
+            <span>Event Management</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-3"
+            role="tab"
+            aria-controls="svc-panel-3"
+          >
+            <span>Venue Selection</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-4"
+            role="tab"
+            aria-controls="svc-panel-4"
+          >
+            <span>Catering Services</span>
+          </label>
+          
+          <label
+            class="svc-tab "
+            for="svc-tab-5"
+            role="tab"
+            aria-controls="svc-panel-5"
+          >
+            <span>Technical Support</span>
+          </label>
+          
+        </div>
+      </div>
+
+      <!-- RIGHT: Image + Content (pure CSS tabs using radios) -->
+      <div class="col-lg-8">
+        <div class="svc-panels">
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-0" checked />
+          <!-- panel -->
+         <article
+  id="svc-panel-0"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-0"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwZXZlbnRzfGVufDB8fHx8MTc2MDUwNzg3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Corporate Events"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@chuttersnap?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">CHUTTERSNAP</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Corporate Events</h3>
+    <p class="svc-panel-text">We specialize in organizing corporate events, including conferences, seminars, and product launches, ensuring a professional atmosphere and seamless execution.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Explore More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-1"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-1"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-1"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBldmVudHN8ZW58MHx8fHwxNzYwNTA3ODczfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Event Planning"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@headwayio?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Headway</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Event Planning</h3>
+    <p class="svc-panel-text">Our event planning services cover every detail, from venue selection to logistics, ensuring a stress-free experience for our clients.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Discover Services</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-2"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-2"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-2"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1675171155224-e70a5eeb27c3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmZXN0aXZhbCUyMHNldHVwfGVufDB8fHx8MTc2MDUwNzg3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Event Management"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@tex450?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Matthew Ball</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Event Management</h3>
+    <p class="svc-panel-text">We provide full event management services, overseeing every aspect of your event to ensure it runs smoothly and successfully.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Learn More</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-3"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-3"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-3"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1661697522426-84b53a4ce613?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcml2YXRlJTIwcGFydGllc3xlbnwwfHx8fDE3NjA1MDc4NzN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Venue Selection"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@supergios?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Jonny Gios</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Venue Selection</h3>
+    <p class="svc-panel-text">Our team assists in selecting the perfect venue for your event, considering factors like capacity, location, and ambiance.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Find Venues</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-4"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-4"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-4"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1561264819-ec6538dc260e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxsaXZlJTIwcGVyZm9ybWFuY2VzfGVufDB8fHx8MTc2MDUwNzg3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Catering Services"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@reddfrancisco?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Redd Francisco</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Catering Services</h3>
+    <p class="svc-panel-text">We offer catering services that provide delicious food and beverages, tailored to your event&#39;s theme and guest preferences.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">View Menu</a>
+    </div>
+  </div>
+</article>
+
+          
+          <!-- controller -->
+          <input class="svc-radio" type="radio" name="svc-tabs" id="svc-tab-5"  />
+          <!-- panel -->
+         <article
+  id="svc-panel-5"
+  class="svc-panel"
+  role="tabpanel"
+  aria-labelledby="svc-tab-5"
+>
+  <figure class="svc-figure position-relative">
+    
+
+    <img
+      class="svc-image"
+      src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwZXZlbnRzfGVufDB8fHx8MTc2MDUwNzg3M3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Technical Support"
+    />
+
+    
+      <span class="img-credit small">
+        Photo by
+        <a href="https://unsplash.com/@chuttersnap?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">CHUTTERSNAP</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </figure>
+
+  <div class="svc-body">
+    <h3 class="svc-panel-title">Technical Support</h3>
+    <p class="svc-panel-text">Our technical support team ensures all audio-visual equipment is set up and functioning perfectly for your event.</p>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="primary-btn">Get Support</a>
+    </div>
+  </div>
+</article>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_10 (scoped) ===== */
+  .service-zigrow-section_10 {
+    --svc-text: #0f0f0f;
+  
+    color: var(--svc-text);
+    background: #fff;
+  }
+
+  .py-lg-6 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  /* Headings */
+  .service-zigrow-section_10 .svc-eyebrow {
+    color: var(--svc-muted);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.25px;
+  }
+  .service-zigrow-section_10 .svc-heading {
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 1.05;
+    font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
+    margin: 0 0 0.4rem;
+  }
+  .service-zigrow-section_10 .svc-subtext {
+    color: var(--para-muted);
+    max-width: 42ch;
+      line-height: var(--lh-body);
+    font-size: var(--fs-body);
+    margin: 0;
+  }
+
+  /* ================= LEFT — Tablist ================= */
+  .service-zigrow-section_10 .svc-tablist {
+    --rowH: 56px;
+    position: relative;
+    margin-top: 1.25rem;
+    padding: 0.35rem;
+  border-radius: var(--box-radius);
+    background: #fff;
+    border: 1px solid #eef0f3;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* sliding highlight */
+  .service-zigrow-section_10 .svc-tablist::before {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 0.35rem;
+    width: calc(100% - 0.7rem);
+    height: var(--rowH);
+    border-radius: var(--box-radius);
+    /* fallback + preferred */
+    background: #f1f5f9;
+    background: color-mix(in srgb, var(--primary-colors) 8%, #f4f6f9);
+    box-shadow: inset 0 0 0 1px
+      color-mix(in srgb, var(--primary-colors) 12%, transparent);
+    transform: translateY(calc(var(--active, 0) * var(--rowH)));
+    transition: transform 0.25s ease, background 0.25s ease,
+      box-shadow 0.25s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-tab {
+    position: relative;
+    z-index: 1; /* above slider */
+    display: flex;
+    align-items: center;
+    height: var(--rowH);
+    padding: 0 14px 0 22px;
+    border-radius: var(--box-radius);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #8a919c;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease, transform 0.15s ease;
+    background: transparent;
+  }
+  .service-zigrow-section_10 .svc-tab:hover {
+    color: #1b1f23;
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_10 .svc-tab.is-active {
+    color: #0f0f0f;
+  }
+
+  /* Left indicator bar on all; primary on active */
+  .service-zigrow-section_10 .svc-tab::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 4px;
+    height: 22px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background: #e2e8f0;
+    transition: background 0.25s ease;
+  }
+  .service-zigrow-section_10 .svc-tab.is-active::after {
+    background: var(--primary-colors);
+  }
+
+  /* Sync active state via :has() (progressive enhancement) */
+  @supports (selector(:has(*))) {
+    .service-zigrow-section_10:has(#svc-tab-0:checked) .svc-tablist::before {
+      transform: translateY(calc(0 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-1:checked) .svc-tablist::before {
+      transform: translateY(calc(1 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-2:checked) .svc-tablist::before {
+      transform: translateY(calc(2 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-3:checked) .svc-tablist::before {
+      transform: translateY(calc(3 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-4:checked) .svc-tablist::before {
+      transform: translateY(calc(4 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-5:checked) .svc-tablist::before {
+      transform: translateY(calc(5 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-6:checked) .svc-tablist::before {
+      transform: translateY(calc(6 * var(--rowH)));
+    }
+    .service-zigrow-section_10:has(#svc-tab-7:checked) .svc-tablist::before {
+      transform: translateY(calc(7 * var(--rowH)));
+    }
+
+    /* text + left bar primary on active */
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1),
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2),
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3),
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4),
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5),
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6),
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7),
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8) {
+      color: #0f0f0f;
+    }
+    .service-zigrow-section_10:has(#svc-tab-0:checked)
+      .svc-tablist
+      label:nth-child(1)::after,
+    .service-zigrow-section_10:has(#svc-tab-1:checked)
+      .svc-tablist
+      label:nth-child(2)::after,
+    .service-zigrow-section_10:has(#svc-tab-2:checked)
+      .svc-tablist
+      label:nth-child(3)::after,
+    .service-zigrow-section_10:has(#svc-tab-3:checked)
+      .svc-tablist
+      label:nth-child(4)::after,
+    .service-zigrow-section_10:has(#svc-tab-4:checked)
+      .svc-tablist
+      label:nth-child(5)::after,
+    .service-zigrow-section_10:has(#svc-tab-5:checked)
+      .svc-tablist
+      label:nth-child(6)::after,
+    .service-zigrow-section_10:has(#svc-tab-6:checked)
+      .svc-tablist
+      label:nth-child(7)::after,
+    .service-zigrow-section_10:has(#svc-tab-7:checked)
+      .svc-tablist
+      label:nth-child(8)::after {
+      background: var(--primary-colors);
+    }
+  }
+
+  /* ================= RIGHT — Panels ================= */
+  .service-zigrow-section_10 .svc-panels {
+    position: relative;
+    padding: 1.6rem;
+   border-radius: var(--box-radius);
+    background: #fff;
+    box-shadow: var(--shadow-section);
+    overflow: hidden;
+  }
+
+  /* take radios off-screen so label click won't scroll */
+  .service-zigrow-section_10 .svc-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .service-zigrow-section_10 .svc-radio + .svc-panel {
+    display: none;
+  }
+  .service-zigrow-section_10 .svc-radio:checked + .svc-panel {
+    display: block;
+    animation: svcFade 0.45s ease both;
+  }
+  @keyframes svcFade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .service-zigrow-section_10 .svc-figure {
+    margin: 0 0 1.25rem;
+ border-radius: var(--box-radius);
+    overflow: hidden;
+    background: #f6f7f9;
+    box-shadow: var(--shadow-section-hover);
+  }
+  .service-zigrow-section_10 .svc-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .service-zigrow-section_10 .svc-figure:hover .svc-image {
+    transform: scale(1.035);
+  }
+
+  .service-zigrow-section_10 .svc-panel-title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin: 0.25rem 0 0.6rem;
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.9rem);
+  }
+  .service-zigrow-section_10 .svc-panel-text {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    max-width: 92%;
+    margin-bottom: 1.2rem;
+  }
+
+
+
+
+  /* ================= Responsive ================= */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_10 .svc-tablist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.35rem;
+      --rowH: 52px;
+    }
+    .service-zigrow-section_10 .svc-tablist::before {
+      display: none;
+    } /* slider off on grid */
+    .service-zigrow-section_10 .svc-tab {
+      justify-content: center;
+      border: 1px solid #eef0f3;
+      color: #50555c;
+      background: #fff;
+    }
+    .service-zigrow-section_10 .svc-tab.is-active {
+      background: color-mix(in srgb, var(--primary-colors) 10%, #fff);
+      color: #0f0f0f;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    }
+    .service-zigrow-section_10 .svc-tab.is-active::after {
+      background: var(--primary-colors);
+    }
+    .service-zigrow-section_10 .svc-panel-text {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+(function(){
+  const sec = document.querySelector('.service-zigrow-section_10');
+  if(!sec) return;
+
+  const tablist = sec.querySelector('.svc-tablist');
+  const labels  = Array.from(tablist.querySelectorAll('.svc-tab'));
+  const radios  = Array.from(sec.querySelectorAll('.svc-radio'));
+
+  function syncActive(idx){
+    // toggle active class on labels
+    labels.forEach((lb,i)=> lb.classList.toggle('is-active', i===idx));
+    // move slider via CSS var
+    tablist.style.setProperty('--active', idx);
+    // ensure right panel is shown
+    if (radios[idx]) radios[idx].checked = true;
+  }
+
+  // init from checked radio (fallback to 0)
+  let initial = radios.findIndex(r => r.checked);
+  if (initial < 0) initial = 0;
+  syncActive(initial);
+
+  // label clicks
+  labels.forEach((lb, i) => {
+    lb.addEventListener('click', (e) => {
+      e.preventDefault(); // avoid any accidental scrolling
+      syncActive(i);
+    });
+  });
+})();
+</script>
+     <section class=" whyChooseUs-zigrow-section_1 py-6 px-3" id="whyChooseUs">
+  <div class="container text-center">
+    <h2 class=" mb-3 main-heading">Why Choose Event India</h2>
+
+    <div class="row gy-4 mt-4">
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-award"></i></div>
+          <h5>Proven Track Record</h5>
+          <p>We have successfully managed numerous events across various industries, showcasing our expertise and reliability in the event management field.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-star"></i></div>
+          <h5>Client Satisfaction</h5>
+          <p>Our clients consistently praise our services, highlighting our commitment to their needs and our ability to deliver exceptional results.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-lightbulb"></i></div>
+          <h5>Innovative Solutions</h5>
+          <p>We stay ahead of trends and provide innovative solutions that enhance the overall experience of your event.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="info-card">
+          <div class="icon-box"><i class="bi bi-check-all"></i></div>
+          <h5>Comprehensive Services</h5>
+          <p>From planning to execution, we offer a full suite of services to cover every aspect of your event.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* === Why Choose Section - Light Theme === */
+.whyChooseUs-zigrow-section_1 {
+  background-color: #f9fafb;
+  color: #1f2937;
+
+
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Info Card */
+.info-card {
+  background: #ffffff;
+border-radius: var(--box-radius);
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  box-shadow: var(--shadow-section);
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+  border-color: #ffffff;
+}
+
+/* Icon Styling */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #111111;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.info-card:hover .icon-box {
+  background: #fff;
+  color: #111111;
+  border: 1px solid #111111;
+}
+
+/* Typography */
+.info-card h5 {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--lead-para-muted);
+}
+
+.info-card p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  line-height: 1.6;
+}
+}
+</style>       <section class="faq-zigrow-section_3 py-6"id="faq">
+  <div class="container">
+    <div class="text-start mb-5">
+      <h2 class="main-heading">Explore Common Questions</h2>
+      <p class="font-subheading para-muted">Get instant answers to your common questions</p>
+    </div>
+
+    <div class="accordion" id="faqAccordion2">
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern0">
+          <button
+            class="accordion-button "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern0"
+            aria-expanded="true"
+            aria-controls="collapseModern0"
+          >
+            What types of events do you organize?
+          </button>
+        </h2>
+        <div
+          id="collapseModern0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingModern0"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">We organize a variety of corporate events, including conferences, seminars, product launches, and team-building activities tailored to your needs.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern1">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern1"
+            aria-expanded="false"
+            aria-controls="collapseModern1"
+          >
+            How do you ensure event success?
+          </button>
+        </h2>
+        <div
+          id="collapseModern1"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern1"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">We ensure success through meticulous planning, a dedicated team, and by maintaining open communication with our clients throughout the process.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern2">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern2"
+            aria-expanded="false"
+            aria-controls="collapseModern2"
+          >
+            Can you help with venue selection?
+          </button>
+        </h2>
+        <div
+          id="collapseModern2"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern2"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Yes, we assist in selecting the perfect venue based on your event type, budget, and guest capacity.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern3">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern3"
+            aria-expanded="false"
+            aria-controls="collapseModern3"
+          >
+            What is your pricing structure?
+          </button>
+        </h2>
+        <div
+          id="collapseModern3"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern3"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Our pricing varies based on the services required and the scale of the event. We provide customized quotes tailored to your needs.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern4">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern4"
+            aria-expanded="false"
+            aria-controls="collapseModern4"
+          >
+            Do you provide catering services?
+          </button>
+        </h2>
+        <div
+          id="collapseModern4"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern4"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">Yes, we offer catering services that can be customized to fit the theme and preferences of your event.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern5">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern5"
+            aria-expanded="false"
+            aria-controls="collapseModern5"
+          >
+            How far in advance should I book?
+          </button>
+        </h2>
+        <div
+          id="collapseModern5"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern5"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">It is advisable to book at least a few months in advance to ensure availability and optimal planning.</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-zigrow-section_3 {
+    background-color: #fff;
+  
+
+  .faq-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .faq-subtext {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    margin-top: 0.3rem;
+  }
+
+  /* Accordion Clean Style */
+  .accordion-button {
+    font-size: 1.2rem !important;
+    color: #45505e !important;
+    font-weight: 400 !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #45505e !important;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 !important;
+  }
+
+  .accordion-button {
+    background-color: transparent !important;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: none !important;
+    padding: 1.25rem 0;
+  }
+
+  .accordion-body {
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    padding: 0 0 1rem;
+  }
+
+  .accordion-button::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #666;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E"); /* same gray icon */
+    border: 1px solid #666;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.5rem !important;
+    }
+
+    .accordion-button {
+      font-size: 0.95rem !important;
+      }}
+  }
+</style>
+   <section class="cta-zigrow-section_1 position-relative text-white">
+  <div class="container h-100 d-flex align-items-center justify-content-center text-center" id="cta">
+    <div class="hero-content">
+      <h1 class="display-4 fw-bold mb-3">Ready to Plan Your Event?</h1>
+      <p class="lead mb-3">Let us help you create unforgettable experiences.</p>
+      <p class="mb-4 text-light font-body">Contact us today to discuss your event requirements and discover how we can make your vision a reality.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="primary-btn ">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+   <p class="img-credit text-white small position-absolute" style="bottom: 10px; right: 10px; z-index: 3;">
+  Photo by 
+  <a 
+        href="https://unsplash.com/@micahandsammiechaffin?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Micah &amp; Sammie Chaffin
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</p>
+
+</section>
+
+<style>
+  .cta-zigrow-section_1 {
+  background: url('https://images.unsplash.com/photo-1758825178518-ca48833a6c57?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxldmVudCUyMFJTVlB8ZW58MHx8fHwxNzYwNTA3ODczfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') center/cover no-repeat;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  text-align: center;
+
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-content p.lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hero-content p.small {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-rescue {
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p.lead {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.small {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+  }
+</style>   <section class="contact-zigrow-section_6 py-6"id="contact">
+  <div class="container">
+    <div class="row align-items-center gx-5">
+      
+      <!-- Left: Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png"
+             alt="Team Discussion"
+             class="img-fluid  contact-img" />
+      </div>
+
+      <!-- Right: Text + Info -->
+      <div class="col-lg-6">
+        <h2 class="main-heading mb-4">Let's start a<br>conversation</h2>
+        
+        <div class="row gy-4 mb-5 contact-grid">
+          <div class="col-sm-6">
+            <h6 class="label">Phone</h6>
+            <p class="value">9900990099</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Email</h6>
+            <p class="value">eventindia@gmail.com</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Address</h6>
+            <p class="value">Dwarka Sector 7, Daani Plaza, ND-110077</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Social Media</h6>
+            <p class="value">@reallygreatsite</p>
+          </div>
+        </div>
+
+        <a href="#" class="primary-btn">Click here for location</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .contact-zigrow-section_6 {
+  background-color: #ffffff;
+  color: #333;
+
+
+.contact-img{
+   box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+}
+
+.contact-grid .label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.contact-grid .value {
+  margin: 0;
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+}
+
+
+
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-grid {
+    text-align: center;
+  }
+}}
+
+</style>   
+<footer class="footer-zigrow-section_2 py-6">
+  <div class="container">
+    <div class="row gy-4 justify-content-between align-items-start">
+
+      <!-- Logo & Tagline -->
+      <div class="col-md-3">
+       <h4>Event India</h4>
+        <p class="footer-tagline">With over a decade of experience, we specialize in corporate events, offering comprehensive support and management tailored to your needs.</p>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-md-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="footer-heading">Navigation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Why Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="footer-heading">Contact</h6>
+        <ul class="list-unstyled contact-info">
+          <li><i class="bi bi-envelope"></i> eventindia@gmail.com</li>
+          <li><i class="bi bi-telephone"></i> 9900990099</li>
+          <li><i class="bi bi-geo-alt"></i> Dwarka Sector 7, Daani Plaza, ND-110077</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Bar -->
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 small para-muted">&copy; 2025. All rights reserved.</div>
+      <div class="col-md-6 text-md-end small bottom-bar-links">
+        <a href="#" class="me-3 text-decoration-none">Terms & Conditions</a>
+        <a href="#" class="me-3 text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-decoration-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<style>
+  .footer-zigrow-section_2 {
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Inter', sans-serif;
+  
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+  }
+
+  .footer-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--secondary-colors);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--para-muted);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover, .bottom-bar-links a:hover {
+    color:  #3D5A80;
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info i {
+    color: #3D5A80;
+    margin-right: 0.5rem;
+  }
+
+  hr {
+    border-color: var(--border-muted);
+    height: .02rem;
+  }
+
+  @media (max-width: 767px) {
+    .footer-logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer-tagline {
+      text-align: left;
+    }
+
+    .custom-footer .text-md-end {
+      text-align: left !important;
+      margin-top: 1rem;
+    }
+  }}
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

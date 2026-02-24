@@ -1,0 +1,3584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GetSetFit with Anjali - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FFB703;
+      --secondary-colors: #121212;
+      --territory-colors: #FB5607;
+      --theme-3: #ffffff;
+      --theme-4: #000000;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #121212 ;
+      font-family: Source Sans Pro;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Bebas Neue ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #121212;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold " href="#">
+          GetSetFit with Anjali
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-colors);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Bold -->
+<section class="hero-zigrow-section_17  position-relative mb-section-buffer" id="hero" data-section="hero">
+  <div class="container text-custom-center py-custom-5 z-2 position-relative">
+    
+    <!-- Glowing Background Shape -->
+    <div class="hero-glow pointer-custom-none"></div>
+
+    <!-- Tagline Badge -->
+    <span class="badge-glass mb-custom-4">
+       Your journey to wellness
+    </span>
+
+    <!-- Heading -->
+    <h1 class="fw-custom-bold display-custom-4 display-md-3 text-custom-dark mb-custom-4 col-md-8 mx-custom-auto">
+      Transform Your Health with Anjali
+    </h1>
+
+    <!-- Subheading -->
+    <p class="lead-custom para-muted mb-sm-5 mb-custom-3 col-md-6 mx-custom-auto">
+      Join me for personalized training and delicious healthy recipes. Together, we’ll achieve your fitness goals and enhance your well-being.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#" class="primary-btn">
+       Get Started
+    </a>
+  </div>
+
+  <!-- Overlapping Mockup -->
+<div class="mockup-img-wrapper text-custom-center d-md-block d-none">
+  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2V8ZW58MHx8fHwxNzY2NzQ3NTAzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Messaging Dashboard" class="img-fluid mockup-img" />
+<span class="img-credit">
+  Photo by 
+  <a href="https://unsplash.com/@heftiba?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+    Toa Heftiba
+  </a> on 
+  <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+</span>
+
+</div>
+
+</section>
+
+<style>
+  .mb-section-buffer {
+    margin-bottom: 350px ;
+    @media (max-width: 768px) {
+      margin-bottom: 0px ;
+    }
+  }
+  /* 🌄 Modern Hero Section */
+  :root {
+  --primary-color: var(--primary-colors);
+  --primary-rgb: 151, 7, 71; /* RGB version of #970747 */
+}
+
+.hero-zigrow-section_17{
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #f9f9f9 0%,
+    rgba(var(--primary-rgb), 0.05) 20%,
+    rgba(var(--primary-rgb), 0.15) 50%,
+    rgba(var(--primary-rgb), 0.3) 80%,
+    rgba(var(--primary-rgb), 0.6) 100%
+  );
+  padding-top: 50px;
+  padding-bottom: 240px;
+  z-index: 0;
+  overflow: visible;
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0H0V40' fill='none' stroke='%23ffffff' stroke-opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+
+
+.hero-glow {
+  z-index: 1;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.12), transparent 70%);
+  filter: blur(80px);
+}
+
+
+/* 🔖 Soft Glass Badge */
+.badge-glass {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+    border-radius: var(--box-radius);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* 🖼️ Mockup Image Styling */
+.mockup-img-wrapper {
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+ width: min(92vw, 1020px);
+   height: clamp(260px, 68vh, 520px); 
+   overflow: hidden;
+  z-index: 2;
+}
+
+.mockup-img {
+     border-radius: var(--box-radius);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mockup-img:hover {
+  transform: scale(1.015);
+}
+
+/* 🧱 Section bottom margin */
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+   
+    padding-top: 60px;
+    padding-bottom: 140px;
+  
+
+  .mockup-img-wrapper {
+    bottom: -60px;
+    width: 95%;
+  }
+
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero-glow {
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
+    top: -40px;
+  }
+}}
+
+</style>   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-xl-5 align-custom-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwYnJhaW5zdG9ybWluZ3xlbnwwfHx8fDE3NjY3NDc1MDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@heymemento?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Memento Media
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1666698809123-44e998e93f23?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFnZW5jeSUyMG9mZmljZXxlbnwwfHx8fDE3NjY3NDc1MDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@labibjaffar?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Labib Jaffar
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2V8ZW58MHx8fHwxNzY2NzQ3NTAzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@heftiba?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Toa Heftiba
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwdGVhbXxlbnwwfHx8fDE3NjY3NDc1MDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@anniespratt?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Annie Spratt
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <p class="label">Our Goals</p>
+          <h2 class="section-heading mb-custom-4 main-heading">
+            Empower Your Health Journey
+          </h2>
+          <p class=" para-muted mb-custom-4 font-body">
+            At GetSetFit with Anjali, I’m dedicated to helping you achieve your fitness goals through engaging content and personalized support. Together, we’ll explore effective health tips and delicious recipes. Join me for one-on-one video training sessions and brand collaborations that inspire a healthier lifestyle. Let’s make wellness enjoyable and accessible for everyone! Receive tailored video training sessions that fit your unique fitness needs and goals.
+          </p>
+
+          <ul class=" feature-bullets mb-custom-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Receive tailored video training sessions that fit your unique fitness needs and goals.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Discover easy and delicious weight loss recipes that make healthy eating enjoyable.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Join a supportive community that motivates and encourages you on your health journey.
+                </li>
+                
+                  </ul>
+
+         <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ====================== service-zigrow-section_14 : START ====================== -->
+
+<section id="services" data-section="services" class="section-padding service-zigrow-section_14">
+  <div class="container px-custom-3 px-md-custom-4">
+
+    
+
+    <!-- Header -->
+    <div class="row align-custom-center g-4 mb-custom-3 mb-md-5">
+      <div class="col-lg-8">
+        <div class="d-inline-flex align-custom-center gap-2 badge-chip mb-custom-3">
+          <span><span>Services</span></span>
+        </div>
+
+        <h2 class="mb-custom-2 main-heading">
+          <span>Our Services</span>
+        </h2>
+
+        <p class="font-subheading para-muted mb-custom-0">
+          <span>Tailored fitness solutions for individuals seeking to enhance their health and achieve their wellness goals.</span>
+        </p>
+      </div>
+
+      <div class="col-lg-4 text-lg-end">
+        <a href="#!" class="primary-btn">
+          <span>Explore More</span> 
+          <span class="ms-custom-2 arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- =================== Tabs Wrapper (Builder Compatible) =================== -->
+    <div data-component-tabs id="services-tabs">
+      <!-- Nav Tabs -->
+      <nav>
+        <div class="nav nav-tabs tabs-row flex-wrap align-custom-center gap-3 mb-custom-4" role="tablist">
+          
+            <button
+              class="nav-link tab-chip active"
+              id="services-tab-0"
+              data-bs-toggle="tab"
+              data-bs-target="#services-pane-0"
+              type="button"
+              role="tab"
+              aria-controls="services-pane-0"
+              aria-selected="true"
+            >
+              <span class="tab-dot">
+                <i class="bi-person-fill"></i>
+              </span>
+              <span class="tab-text">
+                <span>Personal Training</span>
+              </span>
+            </button>
+          
+            <button
+              class="nav-link tab-chip "
+              id="services-tab-1"
+              data-bs-toggle="tab"
+              data-bs-target="#services-pane-1"
+              type="button"
+              role="tab"
+              aria-controls="services-pane-1"
+              aria-selected="false"
+            >
+              <span class="tab-dot">
+                <i class="bi-basket"></i>
+              </span>
+              <span class="tab-text">
+                <span>Healthy Recipes</span>
+              </span>
+            </button>
+          
+            <button
+              class="nav-link tab-chip "
+              id="services-tab-2"
+              data-bs-toggle="tab"
+              data-bs-target="#services-pane-2"
+              type="button"
+              role="tab"
+              aria-controls="services-pane-2"
+              aria-selected="false"
+            >
+              <span class="tab-dot">
+                <i class="bi-check-circle"></i>
+              </span>
+              <span class="tab-text">
+                <span>Fitness Routines</span>
+              </span>
+            </button>
+          
+            <button
+              class="nav-link tab-chip "
+              id="services-tab-3"
+              data-bs-toggle="tab"
+              data-bs-target="#services-pane-3"
+              type="button"
+              role="tab"
+              aria-controls="services-pane-3"
+              aria-selected="false"
+            >
+              <span class="tab-dot">
+                <i class="bi-people"></i>
+              </span>
+              <span class="tab-text">
+                <span>Brand Collaboration</span>
+              </span>
+            </button>
+          
+            <button
+              class="nav-link tab-chip "
+              id="services-tab-4"
+              data-bs-toggle="tab"
+              data-bs-target="#services-pane-4"
+              type="button"
+              role="tab"
+              aria-controls="services-pane-4"
+              aria-selected="false"
+            >
+              <span class="tab-dot">
+                <i class="bi-heart"></i>
+              </span>
+              <span class="tab-text">
+                <span>Wellness Coaching</span>
+              </span>
+            </button>
+          
+        </div>
+      </nav>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        
+          <div
+            class="tab-pane fade show active"
+            id="services-pane-0"
+            role="tabpanel"
+            aria-labelledby="services-tab-0"
+            tabindex="0"
+          >
+            <!-- Feature card inside each tab -->
+            <div class="feature-wrap rounded-4">
+              <div class="row g-0 align-custom-center">
+
+                <!-- Left content -->
+                <div class="col-lg-7">
+                  <div class="p-custom-4 p-md-custom-5">
+                    <div class="mini-badge mb-custom-3">
+                      <span class="mini-dot"></span>
+                      <span>personalized</span>
+                    </div>
+
+                    <h3 class="card-title mb-custom-3">
+                      <span>Personal Training</span>
+                    </h3>
+
+                    <p class="mb-custom-4 card-desc">
+                      <span>Experience one-on-one video training sessions designed to meet your unique fitness goals and boost your confidence in every workout.</span>
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-custom-4">
+                      
+                        <span class="badge tag-chip">personalized</span>
+                      
+                        <span class="badge tag-chip">fitness</span>
+                      
+                        <span class="badge tag-chip">training</span>
+                      
+                    </div>
+
+                    <a href="#!" class="white-btn">
+                      <span>Learn More</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Right image -->
+                <div class="col-lg-5">
+                  <div class="feature-media h-custom-100 d-flex align-custom-center justify-custom-center p-custom-4">
+                    <div class="media-card img-wrapper-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1687862528147-0ecb1aa4b81d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZHZlcnRpc2luZyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc2Njc0NzUwNHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                        alt="Personal Training"
+                        loading="lazy"
+                      >
+
+                      <span class="img-credit ">
+                        
+                          <span>Photo by</span>
+                          <a href="https://unsplash.com/@pockethustle?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">TheMarketingHustle.com</a>
+                          <span>on</span>
+                          <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                        
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        
+          <div
+            class="tab-pane fade "
+            id="services-pane-1"
+            role="tabpanel"
+            aria-labelledby="services-tab-1"
+            tabindex="0"
+          >
+            <!-- Feature card inside each tab -->
+            <div class="feature-wrap rounded-4">
+              <div class="row g-0 align-custom-center">
+
+                <!-- Left content -->
+                <div class="col-lg-7">
+                  <div class="p-custom-4 p-md-custom-5">
+                    <div class="mini-badge mb-custom-3">
+                      <span class="mini-dot"></span>
+                      <span>recipes</span>
+                    </div>
+
+                    <h3 class="card-title mb-custom-3">
+                      <span>Healthy Recipes</span>
+                    </h3>
+
+                    <p class="mb-custom-4 card-desc">
+                      <span>Discover delicious and nutritious weight loss recipes that make healthy eating enjoyable and sustainable for your lifestyle.</span>
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-custom-4">
+                      
+                        <span class="badge tag-chip">recipes</span>
+                      
+                        <span class="badge tag-chip">nutrition</span>
+                      
+                        <span class="badge tag-chip">healthy-eating</span>
+                      
+                    </div>
+
+                    <a href="#!" class="white-btn">
+                      <span>Learn More</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Right image -->
+                <div class="col-lg-5">
+                  <div class="feature-media h-custom-100 d-flex align-custom-center justify-custom-center p-custom-4">
+                    <div class="media-card img-wrapper-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1762340273521-4e7024554131?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwbWVkaWElMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjY3NDc1MDR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                        alt="Healthy Recipes"
+                        loading="lazy"
+                      >
+
+                      <span class="img-credit ">
+                        
+                          <span>Photo by</span>
+                          <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Zulfugar Karimov</a>
+                          <span>on</span>
+                          <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                        
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        
+          <div
+            class="tab-pane fade "
+            id="services-pane-2"
+            role="tabpanel"
+            aria-labelledby="services-tab-2"
+            tabindex="0"
+          >
+            <!-- Feature card inside each tab -->
+            <div class="feature-wrap rounded-4">
+              <div class="row g-0 align-custom-center">
+
+                <!-- Left content -->
+                <div class="col-lg-7">
+                  <div class="p-custom-4 p-md-custom-5">
+                    <div class="mini-badge mb-custom-3">
+                      <span class="mini-dot"></span>
+                      <span>workouts</span>
+                    </div>
+
+                    <h3 class="card-title mb-custom-3">
+                      <span>Fitness Routines</span>
+                    </h3>
+
+                    <p class="mb-custom-4 card-desc">
+                      <span>Follow structured training routines that fit your schedule, helping you stay motivated and achieve lasting results in your fitness journey.</span>
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-custom-4">
+                      
+                        <span class="badge tag-chip">workouts</span>
+                      
+                        <span class="badge tag-chip">exercise</span>
+                      
+                        <span class="badge tag-chip">motivation</span>
+                      
+                    </div>
+
+                    <a href="#!" class="white-btn">
+                      <span>Learn More</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Right image -->
+                <div class="col-lg-5">
+                  <div class="feature-media h-custom-100 d-flex align-custom-center justify-custom-center p-custom-4">
+                    <div class="media-card img-wrapper-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1651922118990-4017b1f29fd3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHNvbHV0aW9uc3xlbnwwfHx8fDE3NjY3NDc1MDR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                        alt="Fitness Routines"
+                        loading="lazy"
+                      >
+
+                      <span class="img-credit ">
+                        
+                          <span>Photo by</span>
+                          <a href="https://unsplash.com/@dlxmedia?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">dlxmedia.hu</a>
+                          <span>on</span>
+                          <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                        
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        
+          <div
+            class="tab-pane fade "
+            id="services-pane-3"
+            role="tabpanel"
+            aria-labelledby="services-tab-3"
+            tabindex="0"
+          >
+            <!-- Feature card inside each tab -->
+            <div class="feature-wrap rounded-4">
+              <div class="row g-0 align-custom-center">
+
+                <!-- Left content -->
+                <div class="col-lg-7">
+                  <div class="p-custom-4 p-md-custom-5">
+                    <div class="mini-badge mb-custom-3">
+                      <span class="mini-dot"></span>
+                      <span>collaboration</span>
+                    </div>
+
+                    <h3 class="card-title mb-custom-3">
+                      <span>Brand Collaboration</span>
+                    </h3>
+
+                    <p class="mb-custom-4 card-desc">
+                      <span>Partner with me for brand collaborations that promote health and wellness, reaching a dedicated audience passionate about fitness.</span>
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-custom-4">
+                      
+                        <span class="badge tag-chip">collaboration</span>
+                      
+                        <span class="badge tag-chip">brands</span>
+                      
+                        <span class="badge tag-chip">influencer</span>
+                      
+                    </div>
+
+                    <a href="#!" class="white-btn">
+                      <span>Learn More</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Right image -->
+                <div class="col-lg-5">
+                  <div class="feature-media h-custom-100 d-flex align-custom-center justify-custom-center p-custom-4">
+                    <div class="media-card img-wrapper-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1762968274962-20c12e6e8ecd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBjb25zdWx0YW5jeXxlbnwwfHx8fDE3NjY3NDc1MDR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                        alt="Brand Collaboration"
+                        loading="lazy"
+                      >
+
+                      <span class="img-credit ">
+                        
+                          <span>Photo by</span>
+                          <a href="https://unsplash.com/@carlosgil83?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Carlos Gil</a>
+                          <span>on</span>
+                          <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                        
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        
+          <div
+            class="tab-pane fade "
+            id="services-pane-4"
+            role="tabpanel"
+            aria-labelledby="services-tab-4"
+            tabindex="0"
+          >
+            <!-- Feature card inside each tab -->
+            <div class="feature-wrap rounded-4">
+              <div class="row g-0 align-custom-center">
+
+                <!-- Left content -->
+                <div class="col-lg-7">
+                  <div class="p-custom-4 p-md-custom-5">
+                    <div class="mini-badge mb-custom-3">
+                      <span class="mini-dot"></span>
+                      <span>wellness</span>
+                    </div>
+
+                    <h3 class="card-title mb-custom-3">
+                      <span>Wellness Coaching</span>
+                    </h3>
+
+                    <p class="mb-custom-4 card-desc">
+                      <span>Receive comprehensive wellness coaching that addresses both physical fitness and mental well-being, ensuring a holistic approach to your health.</span>
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-custom-4">
+                      
+                        <span class="badge tag-chip">wellness</span>
+                      
+                        <span class="badge tag-chip">coaching</span>
+                      
+                        <span class="badge tag-chip">holistic</span>
+                      
+                    </div>
+
+                    <a href="#!" class="white-btn">
+                      <span>Learn More</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Right image -->
+                <div class="col-lg-5">
+                  <div class="feature-media h-custom-100 d-flex align-custom-center justify-custom-center p-custom-4">
+                    <div class="media-card img-wrapper-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1551120239-3d20b45dcda7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxicmFuZCUyMGRldmVsb3BtZW50fGVufDB8fHx8MTc2Njc0NzUwNHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+                        alt="Wellness Coaching"
+                        loading="lazy"
+                      >
+
+                      <span class="img-credit ">
+                        
+                          <span>Photo by</span>
+                          <a href="https://unsplash.com/@john_cameron?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">John Cameron</a>
+                          <span>on</span>
+                          <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+                        
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <!-- =================== /Tabs Wrapper =================== -->
+
+  </div>
+</section>
+<!-- ====================== service-zigrow-section_14 : END ====================== -->
+
+
+<style>
+  /* =============== White Theme – Modern, crisp, interactive =============== */
+  .service-zigrow-section_14 {
+    background: #ffffff;
+  }
+
+  .service-zigrow-section_14 .title-oversized {
+    letter-spacing: -.5px;
+  }
+
+  /* badge at top */
+  .service-zigrow-section_14 .badge-chip {
+    padding: .4rem .75rem;
+    border: 1px solid #e8ebf2;
+      border-radius: var(--box-radius);
+    background: #fff;
+ box-shadow: var(--shadow-section);
+    color: #111;
+    font-weight: 600;
+    font-size: .85rem;
+  }
+
+  .service-zigrow-section_14 .badge-chip .chip-icon {
+    font-size: 1rem;
+    line-height: 1
+  }
+
+
+
+ 
+  .service-zigrow-section_14 .primary-btn:hover .arrow {
+    transform: translateX(3px);
+  }
+  .service-zigrow-section_14 .card-title {
+    color: var(--secondary-colors);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+  }
+  .service-zigrow-section_14 .card-desc {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+
+
+
+  /* tabs row */
+  .service-zigrow-section_14 .tabs-row {
+    border-bottom: 1px solid #eef1f6;
+  }
+
+  .service-zigrow-section_14 .tab-chip {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .75rem 1rem;
+       border-radius: var(--box-radius);
+    background: #fff;
+    border: 1px solid #e9eef4;
+    color: #111;
+    text-decoration: none;
+   box-shadow: var(--shadow-section);
+    transition: background .25s ease, border-color .25s ease, transform .2s ease;
+  }
+
+  .service-zigrow-section_14 .tab-chip .tab-dot {
+ 
+    border-radius: 50%;
+    display: inline-block;
+    opacity: .8;
+  }
+
+  .service-zigrow-section_14 .tab-chip .tab-text {
+    font-weight: 700;
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    line-height: var(--lh-body);
+  }
+
+  .service-zigrow-section_14 .tab-chip:hover {
+    transform: translateY(-2px);
+    border-color: #dfe6ef;
+  }
+
+  .service-zigrow-section_14 .tab-chip.active {
+    background: #ffffff;
+    border-color: var(--primary-colors);
+
+    color: var(--primary-colors) ;
+    .tab-text{
+
+        color: var(--primary-colors) ;
+    }
+  }
+
+  /* feature area */
+  .service-zigrow-section_14 .feature-wrap {
+    background: #ffffff;
+    border: 1px solid #e9edf4;
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section-hover);
+    overflow: hidden;
+  }
+
+  .service-zigrow-section_14 .mini-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 600;
+    color: #111;
+    font-size: .85rem;
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: var(--box-radius);
+    padding: .3rem .65rem;
+  }
+
+  .service-zigrow-section_14 .mini-badge .mini-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #111;
+    display: inline-block;
+  }
+
+  /* CTA button */
+  .service-zigrow-section_14 .cta-btn {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+    box-shadow: var(--shadow-section);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  .service-zigrow-section_14 .cta-btn:hover {
+    transform: translateY(-2px);
+     box-shadow: var(--shadow-section-hover);
+  }
+
+  .service-zigrow-section_14 .cta-btn .cta-ico {
+    display: inline-block;
+    transform: translateY(1px);
+  }
+
+  /* right media card with grid overlay */
+  .service-zigrow-section_14 .feature-media {
+    background: linear-gradient(180deg, #fafbff, #ffffff);
+  }
+
+  .service-zigrow-section_14 .media-card {
+    position: relative;
+    border-radius: var(--box-radius);
+    overflow: hidden;
+    border: 1px solid #e9edf4;
+     box-shadow: var(--shadow-section);
+    background: #fff;
+  }
+
+  .service-zigrow-section_14 .media-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    filter: saturate(1.02) contrast(1.03);
+    transition: transform .6s ease;
+  }
+
+  .service-zigrow-section_14 .media-card:hover img {
+    transform: scale(1.04);
+  }
+
+  .service-zigrow-section_14 .media-card .grid-line {
+    position: absolute;
+    background: rgba(255, 255, 255, .85);
+    mix-blend: soft-light;
+  }
+
+  .service-zigrow-section_14 .media-card .v1 {
+    top: 0;
+    bottom: 0;
+    left: 33.333%;
+    width: 2px;
+  }
+
+  .service-zigrow-section_14 .media-card .v2 {
+    top: 0;
+    bottom: 0;
+    left: 66.666%;
+    width: 2px;
+  }
+
+  .service-zigrow-section_14 .media-card .h1 {
+    left: 0;
+    right: 0;
+    top: 33.333%;
+    height: 2px;
+  }
+
+  .service-zigrow-section_14 .media-card .h2 {
+    left: 0;
+    right: 0;
+    top: 66.666%;
+    height: 2px;
+  }
+
+  /* small-custom tweaks */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_14 .feature-media {
+      padding-top: 0;
+      padding-bottom: 1.25rem;
+    }
+  }
+</style>
+
+<script>
+  // Server se aayi images ko global bana do
+  window.serviceImgUrls = [{"imageUrl":"https://images.unsplash.com/photo-1687862528147-0ecb1aa4b81d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZHZlcnRpc2luZyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc2Njc0NzUwNHww&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"TheMarketingHustle.com","photographerUrl":"https://unsplash.com/@pockethustle","photographerUsername":"pockethustle"},{"imageUrl":"https://images.unsplash.com/photo-1762340273521-4e7024554131?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwbWVkaWElMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjY3NDc1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"Zulfugar Karimov","photographerUrl":"https://unsplash.com/@zulfugarkarimov","photographerUsername":"zulfugarkarimov"},{"imageUrl":"https://images.unsplash.com/photo-1651922118990-4017b1f29fd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHNvbHV0aW9uc3xlbnwwfHx8fDE3NjY3NDc1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"dlxmedia.hu","photographerUrl":"https://unsplash.com/@dlxmedia","photographerUsername":"dlxmedia"},{"imageUrl":"https://images.unsplash.com/photo-1762968274962-20c12e6e8ecd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBjb25zdWx0YW5jeXxlbnwwfHx8fDE3NjY3NDc1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"Carlos Gil","photographerUrl":"https://unsplash.com/@carlosgil83","photographerUsername":"carlosgil83"},{"imageUrl":"https://images.unsplash.com/photo-1551120239-3d20b45dcda7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxicmFuZCUyMGRldmVsb3BtZW50fGVufDB8fHx8MTc2Njc0NzUwNHww&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"John Cameron","photographerUrl":"https://unsplash.com/@john_cameron","photographerUsername":"john_cameron"},{"imageUrl":"https://images.unsplash.com/photo-1687862528147-0ecb1aa4b81d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZHZlcnRpc2luZyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc2Njc0NzUwNHww&ixlib=rb-4.1.0&q=80&w=1080","photographerName":"TheMarketingHustle.com","photographerUrl":"https://unsplash.com/@pockethustle","photographerUsername":"pockethustle"}];
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const data = [{"title":"Personal Training","paragraph":"Experience one-on-one video training sessions designed to meet your unique fitness goals and boost your confidence in every workout.","button":"Learn More","tags":["personalized","fitness","training"],"icon":"bi-person-fill"},{"title":"Healthy Recipes","paragraph":"Discover delicious and nutritious weight loss recipes that make healthy eating enjoyable and sustainable for your lifestyle.","button":"Learn More","tags":["recipes","nutrition","healthy-eating"],"icon":"bi-basket"},{"title":"Fitness Routines","paragraph":"Follow structured training routines that fit your schedule, helping you stay motivated and achieve lasting results in your fitness journey.","button":"Learn More","tags":["workouts","exercise","motivation"],"icon":"bi-check-circle"},{"title":"Brand Collaboration","paragraph":"Partner with me for brand collaborations that promote health and wellness, reaching a dedicated audience passionate about fitness.","button":"Learn More","tags":["collaboration","brands","influencer"],"icon":"bi-people"},{"title":"Wellness Coaching","paragraph":"Receive comprehensive wellness coaching that addresses both physical fitness and mental well-being, ensuring a holistic approach to your health.","button":"Learn More","tags":["wellness","coaching","holistic"],"icon":"bi-heart"}];
+
+  function getImg(i) {
+    const arr = Array.isArray(window.serviceImgUrls) ? window.serviceImgUrls : [];
+    const item = arr[i];
+    return (item && item.imageUrl) ? item.imageUrl : "";
+  }
+
+  const tabs = document.querySelectorAll(".service-zigrow-section_14 .tab-chip");
+  const title = document.getElementById("f-title").querySelector("span");
+  const para = document.getElementById("f-paragraph").querySelector("span");
+  const btn = document.getElementById("f-btn").querySelector("span");
+  const img = document.getElementById("f-img");
+  const tags = document.getElementById("f-tags");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const idx = parseInt(tab.getAttribute("data-idx"));
+      const c = data[idx];
+      if (!c) return;
+
+      title.textContent = c.title || "";
+      para.textContent = c.paragraph || "";
+      btn.textContent = c.button || "Learn More";
+
+      tags.innerHTML = "";
+      if (c.tags?.length) {
+        c.tags.forEach(t => {
+          const sp = document.createElement("span");
+          sp.className = "badge tag-chip";
+          sp.textContent = t;
+          tags.appendChild(sp);
+        });
+      }
+
+      img.src = getImg(idx);
+      img.alt = c.title || "Service";
+    });
+  });
+});
+</script>
+   <!-- 🤍 Our Clients Grid -->
+<section class="logo-zigrow-section_5 section-padding" id="logos" data-section="logos">
+  <div class="container text-custom-center">
+
+    <!-- Heading -->
+    <h2 class="fw-custom-bold display-custom-5 mb-custom-3 main-heading">Our Dear Clients</h2>
+    <p class="lead-custom para-muted font-subheading mb-custom-5 px-lg-custom-5 col-md-8 mx-custom-auto">
+     A showcase of trusted partners and brands we've collaborated with—highlighting the strength, diversity, and credibility behind our network.
+    </p>
+
+    <!-- Logo table -->
+    <div class="row gx-0 gy-0 border-grid">
+
+      <!-- Repeat for 8 logos -->
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+  /* SECTION WRAP */
+.logo-zigrow-section_5{
+  background:#fff;
+}
+
+/* GRID: only inner lines, no outer border */
+.logo-zigrow-section_5 .border-grid .cell{ position: relative; }
+.logo-zigrow-section_5 .border-grid .cell::before,
+.logo-zigrow-section_5 .border-grid .cell::after{
+  content:"";
+  position:absolute;
+  background: var(--grid-line, #e8e9ee); /* subtle line */
+}
+
+/* draw TOP and LEFT separators on every cell */
+.logo-zigrow-section_5 .border-grid .cell::before{ /* top line */
+  height:1px; left:0; right:0; top:0;
+}
+.logo-zigrow-section_5 .border-grid .cell::after{  /* left line */
+  width:1px; top:0; bottom:0; left:0;
+}
+
+/* ≤ LG (mobile/tablet) => 2 columns (col-6) — hide outer edges */
+@media (max-width: 991.98px){
+  /* first row (items 1–2): no top line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(-n+2)::before{ display:none; }
+  /* first column in each row (1,3,5,7): no left line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(2n+1)::after{ display:none; }
+}
+
+/* ≥ LG (desktop) => 4 columns (col-lg-3) — hide outer edges */
+@media (min-width: 992px){
+  /* first row (items 1–4): no top line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(-n+4)::before{ display:none; }
+  /* first column in each row (1,5): no left line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(4n+1)::after{ display:none; }
+}
+
+/* LOGO visuals */
+.logo-zigrow-section_5 .logo{
+  max-width:170px; width:100%; object-fit:contain;
+  filter:grayscale(100%) opacity(.8);
+  transition: filter .3s ease;
+}
+.logo-zigrow-section_5 .logo:hover{ filter:grayscale(0%); }
+
+/* small-custom screens logo size */
+@media (max-width:575.98px){
+  .logo-zigrow-section_5 .logo{ max-width:140px; }
+}
+
+</style>
+    <!-- Travel-Driven Shipping Section -->
+<!-- Why Choose Us (same grid as Travel-Driven Shipping) -->
+<section class="whyChooseUs-zigrow-section_7  section-padding"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container">
+    <div class="row align-custom-center gy-5">
+      
+      <!-- ▸ Left column: heading, copy, buttons -->
+      <div class="col-lg-4">
+        <div class="text-custom-start">
+          <span class="tag">GetSetFit with Anjali</span>   <!-- keep style; text is up to you -->
+          
+          <h2 class="main-heading mt-custom-3 ">Why Choose GetSetFit</h2>
+          <p class="section-subtitle fw-custom-normal mt-custom-2 ">Transform your health journey with expert guidance and support.</p>
+          <p class="section-description mt-custom-3 ">Join a community dedicated to achieving fitness goals through personalized training and healthy living. Your success is our mission.</p>
+
+         
+        </div>
+      </div>
+
+      <div class="col-lg-1 d-lg-block "><span class="d-none"></span></div> <!-- spacer stays -->
+
+      <!-- ▸ Right column: feature cards -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-person"></i>
+                </div>
+                <h5 class="feature-title">Personalized Training</h5>
+                <p class="feature-text">Experience tailored video training sessions that cater to your unique fitness needs, ensuring effective workouts that fit your lifestyle.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-recipe"></i>
+                </div>
+                <h5 class="feature-title">Healthy Recipes</h5>
+                <p class="feature-text">Discover delicious, easy-to-follow weight loss recipes that make healthy eating enjoyable and sustainable for you and your family.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-chat"></i>
+                </div>
+                <h5 class="feature-title">Community Support</h5>
+                <p class="feature-text">Engage with a supportive community that motivates and inspires you, sharing tips and experiences to keep you on track towards your goals.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="feature-card h-custom-100">
+                <div class="icon-box">
+                  <i class="bi bi-lightning"></i>
+                </div>
+                <h5 class="feature-title">Brand Collaborations</h5>
+                <p class="feature-text">Partner with trusted brands that align with your health journey, bringing you exclusive offers and products to enhance your fitness experience.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<style>.whyChooseUs-zigrow-section_7 {
+  background-color: #ffffff;
+
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #444;
+  background: #f5f5f5;
+  padding: 6px 14px;
+ border-radius: var(--box-radius);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+ color: var(--lead-custom-color-mute);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  margin-bottom: 8px;
+
+}
+
+.section-description {
+  font-size: var(--fs-body);
+   color: var(--para-muted);
+  max-width: 90%;
+}
+
+.feature-card {
+  background-color: #f9f9f9;
+ border-radius: var(--box-radius);
+  padding: 25px 20px;
+  box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+.icon-box {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--lead-custom-color-mute);
+  margin-bottom: 6px;
+}
+
+.feature-text {
+  font-size: var(--fs-body-sm);
+   color: var(--para-muted);
+  line-height: 1.45;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+}}
+</style>    <section class="portfolio-zigrow-section_1 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">Our Impactful Work</h2>
+      <p class="section-subtitle">Nutrition Tips</p>
+    </div>
+
+    <!-- gy-4 => vertical spacing between rows, gx-0 => no horizontal gap (same as pehle) -->
+    <div class="row  g-4">
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1760043593615-b426cee3755e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHNob3djYXNlfGVufDB8fHx8MTc2Njc0NzUwNHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Healthy Recipe Series"
+            />
+            <div class="area-name"><span>Healthy Recipe Series</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@m_selvadass_art?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Selvadass M
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1677078610444-d5caa0eb1d69?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwcHJlc2VudGF0aW9ufGVufDB8fHx8MTc2Njc0NzUwNHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Weight Loss Challenge"
+            />
+            <div class="area-name"><span>Weight Loss Challenge</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@paymo?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Paymo
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1602333869619-f05b7f19d3c9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxtYXJrZXRpbmclMjBjYW1wYWlnbiUyMHZpc3VhbHN8ZW58MHx8fHwxNzY2NzQ3NTA0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Live Training Sessions"
+            />
+            <div class="area-name"><span>Live Training Sessions</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@arnosenoner?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Arno Senoner
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1763142165009-007b090f055f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwZGlzcGxheXxlbnwwfHx8fDE3NjY3NDc1MDR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Brand Collaborations"
+            />
+            <div class="area-name"><span>Brand Collaborations</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@robert_lens?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Robert | Visual Diary | Berlin
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1657812159077-90649115008c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBleGFtcGxlc3xlbnwwfHx8fDE3NjY3NDc1MDR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Fitness Blog Posts"
+            />
+            <div class="area-name"><span>Fitness Blog Posts</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@sixthcitysarah?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                sarah b
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1760043593615-b426cee3755e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHNob3djYXNlfGVufDB8fHx8MTc2Njc0NzUwNHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Social Media Campaigns"
+            />
+            <div class="area-name"><span>Social Media Campaigns</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@m_selvadass_art?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Selvadass M
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1677078610444-d5caa0eb1d69?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwcHJlc2VudGF0aW9ufGVufDB8fHx8MTc2Njc0NzUwNHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Workout Routines"
+            />
+            <div class="area-name"><span>Workout Routines</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@paymo?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Paymo
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="area-card position-relative img-wrapper-center">
+            <img
+              src="https://images.unsplash.com/photo-1602333869619-f05b7f19d3c9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxtYXJrZXRpbmclMjBjYW1wYWlnbiUyMHZpc3VhbHN8ZW58MHx8fHwxNzY2NzQ3NTA0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+              alt="Health Tips Videos"
+            />
+            <div class="area-name"><span>Health Tips Videos</span></div>
+
+            <div class="img-credit">
+              Photo by
+              <a href="https://unsplash.com/@arnosenoner?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">
+                Arno Senoner
+              </a> on
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+                 target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  }
+
+  .section-subtitle {
+    color: var(--lead-custom-color-mute);
+    font-size: var(--fs-sub);
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }
+</style>
+   <!-- ▰ Testimonials Section -->
+<section class="testimonial-zigrow-section_8 section-padding" id="testimonials"  data-section="testimonials">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="fw-custom-bold main-heading">What Clients Say</h2>
+      <p class="para-muted  font-subheading">Hear how GetSetFit with Anjali has transformed lives and inspired healthy habits.</p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Anjali&#39;s guidance has completely changed my approach to fitness. Her recipes are delicious and easy to follow!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=40" class="avatar me-custom-3" alt="Sarah Johnson"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Sarah Johnson</h6>
+                <small class="para-muted">Fitness Enthusiast</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I never thought I could fit workouts into my schedule. Anjali&#39;s sessions are efficient and effective!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=41" class="avatar me-custom-3" alt="Mark Lee"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Mark Lee</h6>
+                <small class="para-muted">Busy Professional</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Anjali&#39;s passion for health is contagious! Her tips have helped my clients achieve their goals.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=42" class="avatar me-custom-3" alt="Emily Davis"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Emily Davis</h6>
+                <small class="para-muted">Health Coach</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I struggled to find time for myself. Anjali&#39;s one-on-one training made it possible to prioritize my health.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=43" class="avatar me-custom-3" alt="Tom Brown"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Tom Brown</h6>
+                <small class="para-muted">New Mom</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“The healthy recipes Anjali shares are not only nutritious but also family-friendly. A game changer!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=44" class="avatar me-custom-3" alt="Jessica White"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Jessica White</h6>
+                <small class="para-muted">Nutrition Blogger</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Anjali&#39;s approach is refreshing and motivating. I&#39;ve lost weight and gained confidence thanks to her support.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=45" class="avatar me-custom-3" alt="David Smith"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">David Smith</h6>
+                <small class="para-muted">Corporate Executive</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.testimonial-zigrow-section_8 {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+
+.testimonials-section {
+  background-color: #f9fafb;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow-section); /* ➕ add subtle base shadow */
+    border-radius: var(--box-radius);
+
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/*** headline tweaks ***/
+ .text-accent{
+  color:#5f6f7f;
+}
+ .badge-pill{
+  letter-spacing:.04em;
+}
+.line-tip{
+  content:"";
+  position:absolute;
+  bottom:-6px;left:50%;
+  width:34px;height:2px;
+  background:#ff5b57;
+  transform:translateX(-50%) rotate(3deg);
+  border-radius:2px;
+}
+
+/*** cards ***/
+.t-card{
+  background:#fff;
+  border:0;
+border-radius: var(--box-radius);
+   box-shadow: var(--shadow-section);
+  transition:transform .25s ease, box-shadow .25s ease;
+  position:relative;
+}
+.t-card:hover{
+  transform:translateY(-6px);
+     box-shadow: var(--shadow-section-hover);
+}
+.t-dark{
+  background:#0f0f0f;
+  color:#f0f0f0;
+}
+.t-metric{
+  font-size:3.5rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.04em;
+  display:block;
+  color:#000;
+  margin-bottom:.25rem;
+}
+
+/*** avatar + brand ***/
+.avatar{
+  width:48px;height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.brand-logo{
+  width:24px;opacity:.7;
+}
+
+/*** button hover ***/
+.btn-outline-dark:hover i{
+  transform:translateX(4px);
+  transition:transform .25s;
+}
+
+/*** dark-card text-tone ***/
+.text-custom-white-80{color:rgba(255,255,255,.8);}
+
+/*** responsiveness ***/
+@media(max-width:991.98px){
+  .t-metric{font-size:2.8rem;}
+}
+@media(max-width:575.98px){
+  .results-testimonials .btn{width:100%;}
+  .line-tip{display:none;}
+}}
+</style>    <section class="faq-zigrow-section_2 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="main-heading fw-custom-bold text-custom-uppercase">
+        <span>Commonly Asked Questions</span>
+      </h2>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              <span>What services do you offer?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>I offer one-on-one video training, healthy recipes, and brand collaboration opportunities.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              <span>How can I join your training sessions?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>You can sign up for training sessions through my website or social media links.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              <span>Are your recipes suitable for everyone?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Yes, my recipes cater to various dietary preferences and are designed for overall health.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              <span>What can I expect from your videos?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Expect clear instructions, engaging workouts, and practical health tips to support your fitness journey.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              <span>How do you collaborate with brands?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>I collaborate with brands that align with my health values and audience interests for authentic partnerships.</p>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="accordion-item border-0 mb-custom-3">
+
+          <!-- Header -->
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              <span>Can beginners follow your routines?</span>
+            </button>
+          </h2>
+
+          <!-- Collapse Body -->
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              <p>Absolutely! My routines are designed to accommodate all fitness levels, including beginners.</p>
+            </div>
+          </div>
+
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent ;
+  color: #555 ;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none ;
+  border: 0 ;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none ;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none ;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none ;
+  box-shadow: none ;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none ;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>   <section class="cta-zigrow-section_3 text-custom-white" id="cta" data-section="cta">
+  <div class="container px-lg-custom-5">
+    <div class="row g-4 g-lg-5 align-custom-center text-custom-lg-start text-custom-center">
+      <!-- Left Content -->
+      <div class="col-lg-6">
+        <div class="copy">
+          <span class="overline">Transform your health journey now.</span>
+          <h2 class="display mb-custom-3">Join GetSetFit Today!</h2>
+          <p class="lead-custom font-body mb-custom-4">Start your path to wellness with personalized training and delicious recipes. Let&#39;s achieve your fitness goals together—one step at a time!</p>
+
+      <div class="cta-actions d-inline-flex gap-2">
+  <a href="#" class="btn-solid primary-btn">
+    <span class="me-custom-2"><i class="bi bi-lightning-charge-fill "></i> </span>
+    Learn how we can help
+  </a>
+</div>
+
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6">
+        <div class="visual img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1759758791140-7aa41eac37e7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYWxsJTIwdG8lMjBhY3Rpb24lMjBkZXNpZ258ZW58MHx8fHwxNzY2NzQ3NTA1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Recovery Help"
+            class="hero-img img-fluid"
+          />
+          <span class="img-credit">
+            Photo by
+            <a
+              href="https://unsplash.com/@steve_j?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Steve Johnson</a
+            >
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Unsplash</a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-zigrow-section_3 {
+    --brand: var(--theme-4);
+    --bg-custom-dark: var(--theme-3);
+
+    /* New smoother gradient */
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--bg-custom-dark) 92%, #000) 0%,
+        var(--bg-custom-dark) 100%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(255, 255, 255, 0.06),
+        transparent 70%
+      );
+
+    color: var(--theme-4);
+    padding: 4.5rem 0;
+    border-top: 1px solid var(--border-muted);
+    border-bottom: 1px solid var(--border-muted);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-zigrow-section_3 .copy {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .cta-zigrow-section_3 .overline {
+    display: inline-block;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 0.35rem;
+    color: color-mix(in srgb, var(--theme-4) 85%, #fff);
+  }
+  .cta-zigrow-section_3 .display {
+    font-size: clamp(1.9rem, 1.2rem + 2vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--theme-4);
+    margin: 0;
+  }
+  .cta-zigrow-section_3 .lead-custom {
+    color: color-mix(in srgb, var(--theme-4) 85%, #fff);
+  }
+
+
+  
+  .cta-zigrow-section_3 .btn-solid {
+    background: var(--theme-4);
+    color: var(--theme-3);
+  }
+  .cta-zigrow-section_3 .btn-solid i{
+   font-size: 1.1rem;
+   line-height: 1;
+  }
+  .cta-zigrow-section_3 .btn-solid:hover {
+    transform: translateY(-2px);
+  }
+ 
+
+  /* Visual wrapper */
+  .cta-zigrow-section_3 .visual {
+    position: relative;
+    width: min(420px, 100%); /* ✅ vertical card jaisa narrow */
+    margin-inline: auto;
+  }
+
+  .cta-zigrow-section_3 .hero-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 3/4; /* ✅ portrait ratio */
+    object-fit: cover; /* crop karega image ko */
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+  }
+
+  .cta-zigrow-section_3 .img-credit {
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .cta-zigrow-section_3 .visual {
+      width: 100%;
+    }
+  }
+
+  /* Spacing + responsiveness */
+  @media (min-width: 992px) {
+    .cta-zigrow-section_3 .row {
+      align-items: center;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .cta-zigrow-section_3 {
+      padding: 3.2rem 0;
+    }
+    .cta-zigrow-section_3 .copy {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .cta-zigrow-section_3 .lead-custom {
+      font-size: 1rem;
+    }
+  }
+</style>
+   <section class="contact-zigrow-section_5 section-padding" id="contact" data-section="contact">
+  <div class="container">
+    
+    <!-- Top Images -->
+    <div class="row g-3 mb-custom-5 image-row">
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/g05HR1s8/2.png" class="img-fluid  " alt="Room 1">
+      </div>
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png" class="img-fluid  " alt="Room 2">
+      </div>
+      <div class="col-md-4 img-wrapper-center">
+        <img src="https://i.postimg.cc/8cgdXWqC/4.png" class="img-fluid  " style="width: 600px;" alt="Room 3">
+      </div>
+    </div>
+
+    <!-- Bottom Contact Info -->
+    <div class="row align-custom-start text-section">
+      <div class="col-md-6 mb-custom-4 mb-md-0">
+        <h2 class="fw-custom-bold main-heading">Partner with us</h2>
+      </div>
+      <div class="col-md-6 contact-details">
+        <div class="mb-custom-4">
+          <h6 class="text-custom-uppercase contact-label">Mailing Address</h6>
+          <p>123 Business St, City</p>
+        </div>
+        <div class="mb-custom-4">
+          <h6 class="text-custom-uppercase contact-label">Email Address</h6>
+          <p>contact@example.com</p>
+        </div>
+        <div>
+          <h6 class="text-custom-uppercase contact-label">Phone Number</h6>
+          <p>+91 00000 00000</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+    .contact-zigrow-section_5 {
+  background-color: #fff;
+
+
+.image-row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+
+.image-row img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+
+.contact-details .contact-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary-colors);
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+  }
+}
+    }
+</style>   <footer class="section-padding footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer" data-section="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-custom-4 mb-md-0">
+        <h5 class="fw-custom-bold link-title"><div data-logo="footer">GetSetFit with Anjali</div></h5>
+        <p class="subtext">Join me for personalized training and delicious healthy recipes. Together, we’ll achieve your fitness goals and enhance your well-being.</p>
+      </div>
+
+      <div class="col-md-1"><span class="d-none"></span></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-custom-4 mb-md-0">
+        <h6 class="fw-custom-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-custom-bold link-title">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-custom-center mt-custom-3  mb-custom-0 " style="color: #2a2a2a;">
+      &copy; 2025 GetSetFit with Anjali. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) ;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

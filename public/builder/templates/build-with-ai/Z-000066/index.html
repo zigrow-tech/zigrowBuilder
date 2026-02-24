@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jain Child Clinic - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #2a324a;
+      --border-radius-btn: 28px 36px 12px 24px / 18px 28px 12px 24px;
+      --box-radius: 5% 8% 5% 8% / 8% 5% 8% 5%;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FF6B6B;
+      --secondary-colors: #1A1A1A;
+      --territory-colors: #FFD93D;
+      --theme-3: #000000;
+      --theme-4: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 8px 18px rgba(17,24,39,.12);
+      --btn-box-shadow-hover: 0 12px 26px rgba(17,24,39,.16);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,.05), 0 8px 18px rgba(17,24,39,.10), 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent), 0 0 48px 12px color-mix(in srgb, var(--tertiary-color) 22%, transparent);
+      --shadow-section-hover: 0 2px 2px rgba(17,24,39,.06), 0 12px 26px rgba(17,24,39,.12), 0 0 0 8px color-mix(in srgb, var(--primary-colors) 22%, transparent), 0 0 64px 16px color-mix(in srgb, var(--tertiary-color) 28%, transparent);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 18px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 20px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #1A1A1A !important;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Poppins !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #1A1A1A;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Jain Child Clinic
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#team">Team</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class=" primary-btn">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #FF6B6B;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #FF6B6B;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <section
+  id="hero"
+  class="hero-zigrow-section_2 text-white d-flex align-items-center"
+>
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <div class="container position-relative z-2">
+    <div class="row align-items-center">
+      <!-- Text Area -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <p class="hero-tagline text-uppercase mb-2">Jain Child Clinic</p>
+        <h1 class="display-4 fw-bold mb-3 hero-heading">Expert Child Care and Vaccination Services in Palam</h1>
+        <p class="lead mb-5">At Jain Child Clinic, we provide comprehensive healthcare for children from newborns to 18 years, ensuring their growth and well-being.</p>
+        <div class="d-flex flex-wrap gap-3 mt-3">
+          <a href="#contact" class="white-btn"
+            >Get Started</a
+          >
+          <a href="#" class="white-outline-btn">Explore</a>
+        </div>
+      </div>
+
+      <!-- Image Collage -->
+      <div class="col-lg-6">
+        <div class="collage-grid">
+          <div class="collage-img img-1">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlfGVufDB8fHx8MTc2MzQ2Njk4OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+            <span class="img-credit">
+              Photo by
+                 <a 
+        href="https://unsplash.com/@nci?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        National Cancer Institute
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+
+          <div class="collage-img img-2">
+            <img src="https://images.unsplash.com/photo-1655084131262-73cbdc46522b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwc2VydmljZXxlbnwwfHx8fDE3NjM0NjY5ODl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+            <span class="img-credit">
+              Photo by
+                <a 
+        href="https://unsplash.com/@cheungyin?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Cheung Yin
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+
+          <div class="collage-img img-3">
+            <img src="https://images.unsplash.com/photo-1562751362-404243c2eea3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzc3xlbnwwfHx8fDE3NjM0NjY5ODl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+            <span class="img-credit">
+              Photo by
+              <a 
+        href="https://unsplash.com/@danewett?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Dane Wetton
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+
+          <div class="collage-img img-4">
+            <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxob3NwaXRhbHxlbnwwfHx8fDE3NjM0NjY5ODl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+            <span class="img-credit">
+              Photo by
+              <a 
+        href="https://unsplash.com/@m_dominguez_marketing?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Martha Dominguez de Gouveia
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Section */
+  .hero-zigrow-section_2 {
+    min-height: 100vh;
+    background: linear-gradient(
+      135deg,
+     var(--primary-colors) ,
+     var(--territory-colors)
+    );
+    overflow: hidden;
+    padding: 4rem 0;
+    position: relative;
+
+    .img-credit {
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      font-size: 0.6rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .hero-heading{
+      text-transform: capitalize;
+    }
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .z-2 {
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Text Styling */
+    .hero-tagline {
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+   
+
+
+    /* Collage Layout */
+    .collage-grid {
+      display: grid;
+      grid-template-areas:
+        "img1 img2"
+        "img3 img4";
+      grid-gap: 15px;
+      justify-content: center;
+    }
+
+    .collage-img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.4s ease;
+    }
+
+    .collage-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      transition: transform 0.5s ease;
+    }
+
+    /* Grid Area Assignments */
+    .img-1 {
+      grid-area: img1;
+      transform: rotate(-2deg);
+    }
+    .img-2 {
+      grid-area: img2;
+      transform: rotate(2deg);
+    }
+    .img-3 {
+      grid-area: img3;
+      transform: rotate(3deg);
+    }
+    .img-4 {
+      grid-area: img4;
+      transform: rotate(-3deg);
+    }
+
+    .collage-img:hover img {
+      transform: scale(1.05);
+    }
+  }
+</style>
+   <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image  position-relative">
+  <img src="https://images.unsplash.com/photo-1631507623442-fee09e89c6a8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBjbGluaWN8ZW58MHx8fHwxNzYzNDY2OTkwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@introspectivedsgn?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Erik Mclean
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-3">
+            About Jain Clinic
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted font-body mb-4">
+            Jain Child Clinic is dedicated to providing exceptional healthcare for children. Our experienced team ensures personalized attention and care for every child.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Expert Care</h6>
+                <p class="mb-0 para-muted font-body">Our pediatricians are highly trained and experienced in child healthcare, ensuring your child receives the best treatment.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Friendly Environment</h6>
+                <p class="mb-0 para-muted font-body">We create a welcoming atmosphere where children feel comfortable and parents are informed about their child&#39;s health.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Comprehensive Services</h6>
+                <p class="mb-0 para-muted font-body">From vaccinations to nutrition advice, we provide a wide range of services tailored to meet your child&#39;s needs.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-4">
+              <div class="check-icon flex-shrink-0"></div>
+              <div>
+                <h6 class="mb-1 fw-semibold">Community Focused</h6>
+                <p class="mb-0 para-muted font-body">We are committed to serving the local community and ensuring every child has access to quality healthcare.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: var(--box-radius) ;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.4s ease;
+}
+.survey-image:hover{
+  box-shadow: var(--shadow-section-hover);
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: "✓";
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>   <!-- ===== Our Services (Dynamic EJS + pixel-perfect) ===== -->
+<section id="services" class="service-zigrow-section_8 py-6">
+  <div class="container">
+    <div
+      class="d-flex align-items-start justify-content-between flex-wrap gap-3 mb-4 mb-lg-5"
+    >
+      <div>
+        <h2 class="main-heading mb-2">Our Services</h2>
+        
+        <p class="section-sub mb-0">
+          We offer a variety of services to ensure your child&#39;s health and well-being.Our Comprehensive Services
+        </p>
+        
+      </div>
+
+      <a href="#" class="primary-btn align-self-start">
+         Get Started      </a>
+    </div>
+
+    <div class="row g-4 g-lg-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card featured h-100">
+          <div class="svc-icon featured">
+            
+            <i class="bi bi-shield-fill"></i>
+            
+          </div>
+
+          <h3 class="svc-title featured">
+            Vaccination Services
+          </h3>
+          <p class="svc-text featured">
+            Our clinic provides complete vaccination services to protect your child from various diseases, following the recommended immunization schedule for all age groups.
+          </p>
+
+          <a href="#" class="svc-link featured">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-graph-up"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Growth Monitoring
+          </h3>
+          <p class="svc-text ">
+            We track your child&#39;s growth and development through regular checkups, ensuring they meet all their developmental milestones effectively.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-basket"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Nutrition Advice
+          </h3>
+          <p class="svc-text ">
+            Our experts provide personalized nutrition advice to help your child maintain a balanced diet and healthy lifestyle as they grow.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-calendar-check"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Routine Checkups
+          </h3>
+          <p class="svc-text ">
+            Regular checkups are essential for your child&#39;s health. We provide thorough examinations to monitor their overall well-being.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-check-circle"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Development Tracking
+          </h3>
+          <p class="svc-text ">
+            We help track your child&#39;s developmental milestones, ensuring they are on the right path as they grow and learn.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <article class="svc-card  h-100">
+          <div class="svc-icon ">
+            
+            <i class="bi bi-ambulance"></i>
+            
+          </div>
+
+          <h3 class="svc-title ">
+            Emergency Care
+          </h3>
+          <p class="svc-text ">
+            In case of emergencies, our clinic is equipped to provide immediate care and support for your childs health needs.
+          </p>
+
+          <a href="#" class="svc-link ">
+            Learn More
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== Section wrapper ===== */
+  .py-6 {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+  }
+  .service-zigrow-section_8 {
+    background: #fefcf6;
+  }
+
+  /* ===== Subheading ===== */
+  .service-zigrow-section_8 .section-sub {
+    color: var(--para-muted);
+    max-width: 760px;
+    font-size: var(--fs-sub);
+  }
+
+  
+
+  /* ===== Cards ===== */
+  .service-zigrow-section_8 .svc-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: var(--box-radius);
+    padding: 1.6rem 1.6rem 1.2rem;
+        box-shadow: var(--shadow-section);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+  .service-zigrow-section_8 .svc-card:hover {
+    transform: translateY(-6px);
+    border-color: #e8e8e8;
+        box-shadow: var(--shadow-section-hover);
+  }
+
+  /* Featured (first card) */
+  .service-zigrow-section_8 .svc-card.featured {
+    background: #111213;
+    color: #fff;
+    border: none;
+       box-shadow: var(--shadow-section);
+  }
+  .service-zigrow-section_8 .svc-card.featured:hover {
+    transform: translateY(-8px) rotate(-1deg);
+     box-shadow: var(--shadow-section-hover);
+  }
+
+  /* ===== Icon ===== */
+  .service-zigrow-section_8 .svc-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--box-radius);
+    display: grid;
+    place-items: center;
+    background: #f4f4f4;
+    color: #1f1f1f;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+  .service-zigrow-section_8 .svc-icon.featured {
+    background: #1b1b1b;
+    color: #fff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+  }
+
+  /* ===== Titles & text ===== */
+  .service-zigrow-section_8 .svc-title {
+    font-weight: 700;
+    color: #0f0f0f;
+    font-size: var(--fs-body);
+    margin: 0.25rem 0 0.35rem;
+  }
+  .service-zigrow-section_8 .svc-card.featured .svc-title {
+    color: #fff;
+  }
+
+  .service-zigrow-section_8 .svc-text {
+    color: #797c80;
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    font-size: var(--fs-body-sm);
+  }
+  .service-zigrow-section_8 .svc-card.featured .svc-text {
+    color: rgb(191, 191, 191);
+  }
+
+  /* ===== Links ===== */
+  .service-zigrow-section_8 .svc-link {
+    display: inline-flex;
+    gap: 0.35rem;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+  .service-zigrow-section_8 .svc-link .bi {
+    font-size: 1.2rem;
+  }
+  .service-zigrow-section_8 .svc-card:hover .svc-link {
+    text-decoration: underline;
+  }
+  .service-zigrow-section_8 .svc-link.featured {
+    color: var(--primary-colors);
+  }
+  .service-zigrow-section_8 .svc-link.featured:hover {
+    opacity: 0.9;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 575.98px) {
+    .service-zigrow-section_8 .svc-card {
+      padding: 1.4rem;
+    }
+  }
+</style>
+      <!-- ▰ Marketing Team Showcase -->
+<section class="py-6 team-zigrow-section_7" id="team">
+  <div class="container text-center">
+    <span class="staff-label d-inline-block mb-2">MEET OUR TEAM</span>
+
+    <h2 class="staff-head fw-bold mb-5 main-heading">Meet Our Team</h2>
+
+    <!-- responsive grid: xs:1, sm:2, md:3, lg:5 -->
+    <div class="row g-4 justify-content-center">
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <article
+            class="staff-card position-relative h-100"
+            style="">
+            <img
+              src="https://i.postimg.cc/Kv4g4kN0/1.png"
+              alt="Dr. Anjali Jain — Lead Pediatrician"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Dr. Anjali Jain</h6>
+              <span class="font-body-sm para-muted">Lead Pediatrician</span>
+            </div>
+          </article>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <article
+            class="staff-card position-relative h-100"
+            style="transform: translateY(35px)">
+            <img
+              src="https://i.postimg.cc/fWqV4WNm/10.png"
+              alt="Dr. Rajesh Kumar — Nutrition Specialist"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Dr. Rajesh Kumar</h6>
+              <span class="font-body-sm para-muted">Nutrition Specialist</span>
+            </div>
+          </article>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <article
+            class="staff-card position-relative h-100"
+            style="">
+            <img
+              src="https://i.postimg.cc/gk5Lhztm/2.png"
+              alt="Nurse Priya Singh — Pediatric Nurse"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Nurse Priya Singh</h6>
+              <span class="font-body-sm para-muted">Pediatric Nurse</span>
+            </div>
+          </article>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <article
+            class="staff-card position-relative h-100"
+            style="transform: translateY(35px)">
+            <img
+              src="https://i.postimg.cc/TPjKBrd3/3.png"
+              alt="Dr. Neha Sharma — Health Educator"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Dr. Neha Sharma</h6>
+              <span class="font-body-sm para-muted">Health Educator</span>
+            </div>
+          </article>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <article
+            class="staff-card position-relative h-100"
+            style="">
+            <img
+              src="https://i.postimg.cc/JhCyTTWF/4.png"
+              alt="Dr. Anjali Jain — Lead Pediatrician"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Dr. Anjali Jain</h6>
+              <span class="font-body-sm para-muted">Lead Pediatrician</span>
+            </div>
+          </article>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ——— Section background gradient ——— */
+  .team-zigrow-section_7 {
+    --tile-w: 80%;
+    background: linear-gradient(to bottom, #fafbfd 0%, #f1f3f7 100%);
+    color: #0f1a46;
+  }
+
+  @media (min-width: 992px) {
+    /* Bootstrap lg breakpoint: custom 5-col */
+    .col-lg-20 { flex: 0 0 20%; max-width: 20%; }
+  }
+
+  /* eyebrow */
+  .team-zigrow-section_7 .staff-label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    color: #FF6B6B;
+  }
+
+  /* heading */
+  .team-zigrow-section_7 .staff-head {
+    font-size: clamp(1.8rem, 3vw + 1rem, 2.6rem);
+    line-height: 1.25;
+  }
+
+  /* ——— card shell ——— */
+  .team-zigrow-section_7 .staff-card {
+    border-radius: var(--box-radius);
+    overflow: hidden; position: relative;
+    box-shadow: var(--shadow-section);
+    transition: transform .4s ease, box-shadow .4s ease;
+    will-change: transform;
+  }
+  .team-zigrow-section_7 .staff-card:hover,
+  .team-zigrow-section_7 .staff-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .team-zigrow-section_7 .staff-card img {
+    display:block; width:100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4; /* keeps uniform height */
+  }
+
+  /* bottom info tile */
+  .team-zigrow-section_7 .info-tile {
+    position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%);
+    background: #fff; width: var(--tile-w);
+    padding: .9rem 1.1rem;
+    border-radius: var(--box-radius);
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  }
+
+  /* responsive tweaks */
+  @media (max-width: 991.98px) {
+    /* kill the stagger from inline style on small/medium screens */
+    .team-zigrow-section_7 .staff-card { transform: none !important; }
+    .team-zigrow-section_7 .staff-card:hover,
+    .team-zigrow-section_7 .staff-card:focus-within { transform: translateY(-6px) !important; }
+  }
+
+  @media (max-width: 575.98px) {
+    .team-zigrow-section_7 .info-tile { width: 85%; }
+  }
+
+  /* motion safety */
+  @media (prefers-reduced-motion: reduce){
+    .team-zigrow-section_7 .staff-card,
+    .team-zigrow-section_7 .staff-card img { transition: none !important; }
+  }
+</style>
+    <!-- ▰ Client Testimonial Showcase -->
+<section class="testimonial-zigrow-section_6 py-6"id="testimonials">
+  <div class="container">
+
+    <!-- top heading -->
+    <div class="row g-4 align-items-stretch">
+
+      <!-- ◼︎ Left Visual Panel -->
+      <div class="col-lg-6">
+        <div class="left-panel h-100 d-flex flex-column justify-content-between">
+
+          <div class="left-heading">
+            <h2 class="mb-4 main-heading">
+              What Parents Say<br>
+              <small class="fw-normal para-muted">Hear from our satisfied parents about their experiences.</small>
+              <span> ♥</span>
+            </h2>
+
+            <div class="testimonial-img ">
+              <img  src="https://i.postimg.cc/mDsh0w2K/1.png" alt="Client" class="img-fluid rounded-4 " />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ◼︎ Right Testimonial Cards -->
+      <div class="col-lg-6">
+        <div class="d-flex flex-column h-100 justify-content-between gap-4">
+
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <p class="quote">“Jain Child Clinic has been a blessing for our family. The doctors are attentive and truly care about our child&#39;s health and development.”</p>
+
+            <div class="author d-flex align-items-center mt-3">
+              <img  src="https://i.postimg.cc/Kv4g4kN0/1.png" alt="Sita Verma" class="author-img">
+              <div class="ms-2">
+                <h6 class="mb-0">Sita Verma</h6>
+                <small>Parent</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★☆
+            </div>
+
+            <p class="quote">“The vaccination process was quick and painless. The staff made my child feel comfortable and safe throughout the visit.”</p>
+
+            <div class="author d-flex align-items-center mt-3">
+              <img  src="https://i.postimg.cc/fWqV4WNm/10.png" alt="Rajesh Mehta" class="author-img">
+              <div class="ms-2">
+                <h6 class="mb-0">Rajesh Mehta</h6>
+                <small>Parent</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+          <div class="testimonial-card position-relative">
+
+            <!-- rating (★ count = index > 1 ? 4 : 5 as example) -->
+            <div class="rating">
+              ★★★★★
+            </div>
+
+            <p class="quote">“I appreciate the nutrition advice provided by the team. It has made a significant difference in my child&#39;s eating habits.”</p>
+
+            <div class="author d-flex align-items-center mt-3">
+              <img  src="https://i.postimg.cc/gk5Lhztm/2.png" alt="Anita Sharma" class="author-img">
+              <div class="ms-2">
+                <h6 class="mb-0">Anita Sharma</h6>
+                <small>Parent</small>
+              </div>
+            </div>
+
+            <span class="arrow-btn">↗</span>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+</section>
+
+
+<style>
+/* ▰ Base Layout */
+.testimonial-zigrow-section_6 {
+  background-color: #f7f5f5;
+  color: var(--para-muted);
+
+.left-panel h2 {
+  /* font-size: clamp(1.6rem, 2.4vw, 2.5rem); */
+  font-weight: 600;
+  line-height: 1.3;
+}
+.left-panel h2 span {
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: var(--para-muted);
+}
+.testimonial-img img {
+  border-radius: var(--box-radius);
+  object-fit: cover;
+   box-shadow: var(--shadow-section);
+}
+
+
+/* ▰ Testimonial Cards */
+.testimonial-card {
+  border-radius: var(--box-radius);
+  padding: 1.5rem;
+  position: relative;
+   box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+}
+.bg-green {
+  background-color: var(--primary-colors);
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+  color: #111;
+}
+.rating {
+  font-size: 1.1rem;
+  color: #ffcc33;
+}
+.quote {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+.author-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.arrow-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #f3f3f3;
+  color: var(--secondary-colors);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.25s ease;
+}
+
+.testimonial-card:hover{
+background-color: var(--primary-colors);
+  color: #fff;
+}
+.testimonial-card:hover .arrow-btn {
+  background: #111;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ▰ CTA Box */
+.cta-box {
+  background-color: #759472;
+  color: #fff;
+  padding: 1.5rem 2rem;
+     border-radius: var(--box-radius);
+
+  margin-top: 2rem;
+}}
+
+/* make columns equal height */
+.testimonial-zigrow-section_6 .row.align-items-stretch {
+  align-items: stretch !important;
+}
+
+/* left column structure */
+.testimonial-zigrow-section_6 .left-panel{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* heading + image occupy full height */
+.testimonial-zigrow-section_6 .left-heading{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* image wrapper grows to fill remaining space so bottoms match */
+.testimonial-zigrow-section_6 .left-heading .testimonial-img{
+  margin-top: auto;          /* push image to bottom */
+  flex: 1 1 auto;            /* take all leftover */
+  min-height: 260px;         /* keep a sensible minimum */
+  display: flex;             /* so the img can stretch */
+}
+
+/* image fills wrapper and crops nicely */
+.testimonial-zigrow-section_6 .left-heading .testimonial-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--box-radius);
+  box-shadow: var(--shadow-section);
+}
+
+/* right column already h-100; ensure inner stack uses full height */
+.testimonial-zigrow-section_6 .col-lg-6 > .d-flex.h-100{
+  min-height: 100%;
+}
+
+</style>
+    <section class=" faq-zigrow-section_2 py-6"id="faq">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading fw-bold text-uppercase">Commonly Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              What age groups do you cater to?
+            </button>
+          </h2>
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              We provide healthcare services for children from newborns up to 18 years of age, ensuring comprehensive care throughout their growth.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              How can I book an appointment?
+            </button>
+          </h2>
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              You can book an appointment through our website or by calling our clinic directly. We recommend scheduling in advance.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              What vaccinations do you offer?
+            </button>
+          </h2>
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              We offer a complete range of vaccinations as per the recommended immunization schedule for children of all ages.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              Are your services covered by insurance?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, many of our services are covered by insurance. Please check with your provider for specific coverage details.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              What should I bring for my child&#39;s visit?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Please bring your child&#39;s vaccination records, any relevant medical history, and a list of questions you may have.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              Do you offer emergency services?
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, we provide emergency care for children in need of immediate medical attention during clinic hours.
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent !important;
+  color: #555 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none !important;
+  border: 0 !important;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none !important;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>   <section class="cta-zigrow-section_4 py-6" id="cta">
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      
+      <!-- Text Content -->
+      <div class="col-lg-6 col-md-7 col-12">
+        <div class="content-wrap text-white">
+          <h2 class="fw-bold mb-3">Schedule Your Appointment Today</h2>
+          <p class="mb-5 font-body">At Jain Child Clinic, we prioritize your child&#39;s health and well-being. Schedule an appointment today to ensure they receive the best care possible.</p>
+          <a href="#" class="white-btn ">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 col-md-5 col-12 text-center">
+        <div class="image-stack">
+          <img src="https://images.unsplash.com/photo-1435527173128-983b87201f4d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxib29rJTIwYXBwb2ludG1lbnR8ZW58MHx8fHwxNzYzNDY2OTkxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="CTA Image" class="img-fluid main-img"/>
+          
+            <span class="img-credit">
+              Photo by 
+              <a href="https://unsplash.com/@erothermel?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                Eric Rothermel
+              </a> 
+              on 
+              <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+            </span>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-zigrow-section_4 {
+  background: linear-gradient(135deg, var(--territory-colors),var(--primary-colors));
+  border-radius: var(--box-radius);
+  border-bottom-right-radius: 6rem;
+  padding: 3rem 2.5rem;
+  margin: 3rem auto;
+  max-width: 1120px;
+  overflow: hidden;
+  position: relative;
+
+
+&::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.05);
+  pointer-events: none;
+}
+
+.content-wrap {
+  max-width: 500px;
+}
+
+.content-wrap h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.content-wrap p {
+  color: #f0f0f0;
+}
+
+
+.image-stack {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.image-stack .main-img {
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-section);
+  border: 4px solid #fff;
+  transition: transform .35s ease;
+}
+.image-stack:hover .main-img {
+  transform: scale(1.03);
+}
+
+.img-credit {
+  font-size: .75rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+}}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-zigrow-section_4 {
+    text-align: center;
+    border-bottom-right-radius: 3rem;
+    padding: 2rem 1.25rem;
+  }
+  .content-wrap {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .content-wrap h2 { font-size: 1.6rem; }
+}
+</style>
+   <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 py-6"id="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid   overflow-hidden">
+
+      <!-- ◼︎ Left: Contact Info -->
+      <div class="cta-info p-5">
+        <h2 class="fw-bold mb-4" style="color: #1A1A1A; ">Get in touch</h2>
+
+        <ul class="contact-list list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Address</h6>
+              <p>123 Business St, City</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>contact@example.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>+91 00000 00000</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Right: Hero / CTA -->
+      <div class="cta-hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="content px-4 px-lg-5">
+          <h3 class="fw-bold mb-4 col-md-8 mx-auto">Feel Free to Contact Us Anytime</h3>
+          <a href="#" class="primary-btn text-truncate">Click here for location</a>
+
+          <!-- socials -->
+          <div class="social-wrap d-flex justify-content-center gap-3 mt-5 mx-auto">
+            <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+:root{
+ --primary-colors-txt: #000000;
+  --surface: #ffffff;
+  --surface-dark: #111;
+  --stroke: rgba(0,0,0,.06);
+  --bg-section: #f8f9fa;
+}
+
+/* ===================  SECTION  =================== */
+.contact-zigrow-section_3{
+  background: var(--bg-section);
+
+
+/* ---------- grid wrapper ---------- */
+.cta-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface);
+    box-shadow: var(--shadow-section);
+     border-radius: var(--box-radius);
+}
+@media (max-width: 991.98px){
+  .cta-grid{grid-template-columns:1fr;}
+}
+
+/* ---------- left panel ---------- */
+.cta-info{
+  background: var(--surface);
+}
+.cta-info h2{font-size:2.1rem}
+.contact-list li{
+  display:flex;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+.contact-list .icon{
+  color:var(--accent);
+  font-size:1.2rem;
+  flex-shrink:0;
+}
+.contact-list h6{
+  font-size:.8rem;
+  letter-spacing:.05em;
+  font-weight:700;
+  margin-bottom:.25rem;
+  color:var(--accent);
+}
+.contact-list p{
+  margin:0;
+  font-size:var(--fs-body);
+  color:var(--para-muted);
+}
+
+/* ---------- hero panel ---------- */
+.cta-hero{
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80') center / cover no-repeat;
+  min-height:420px;
+  overflow:hidden;
+}
+.cta-hero::before{
+  content:"";
+  position:absolute;inset:0;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.45);
+}
+.cta-hero .content{position:relative;z-index:1;color:#fff}
+.cta-hero h3{font-size:1.9rem;line-height:1.35}
+
+
+
+/* ---------- socials ---------- */
+.social-btn{
+  width:44px;height:44px;
+  display:grid;place-content:center;
+  border-radius:50%;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.4);
+  transition:background .3s ease, transform .3s ease;
+  text-decoration: none;
+}
+.social-btn:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-3px);
+  color: white;
+}
+
+/* ===================  RESPONSIVE TWEAKS  =================== */
+@media (max-width:575.98px){
+  .cta-info h2{font-size:1.8rem}
+  .cta-hero h3{font-size:1.6rem}
+  .btn-cta{width:100%}
+}}
+
+</style>   
+<footer class="footer-zigrow-section_3 py-6">
+  <div class="container">
+    <!-- Logo & Tagline Top Row -->
+    <div class="row mb-4 align-items-center justify-content-between">
+      <div class="col-md-6 mb-3 mb-md-0">
+      <h4>Jain Child Clinic</h4>
+   
+      </div>
+      <div class="col-md-6 text-md-end">
+        <p class="footer-tagline mb-0">
+           <p class="footer-tagline">Expert Child Care and Vaccination Services in Palam</p>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Middle Content Grid -->
+    <div class="row gy-4 justify-content-between">
+      <!-- Company -->
+      <div class="col-6 col-md-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="footer-heading">Navigation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Why Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="footer-heading">Contact</h6>
+        <ul class="list-unstyled contact-info">
+          <li><i class="bi bi-envelope"></i> contact@example.com</li>
+          <li><i class="bi bi-telephone"></i> +91 00000 00000</li>
+          <li><i class="bi bi-geo-alt"></i> 123 Business St, City</li>
+        </ul>
+      </div>
+
+      <!-- Language + Social -->
+      <div
+        class="col-md-3 d-flex flex-column align-items-md-end align-items-start gap-3"
+      >
+        <div class="social-icons d-flex gap-2">
+          <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Bottom Bar -->
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 small para-muted">
+        &copy; 2025. All rights reserved.
+      </div>
+      <div class="col-md-6 text-md-end small bottom-bar-links">
+        <a href="#" class="me-3 text-decoration-none">Terms & Conditions</a>
+        <a href="#" class="me-3 text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-decoration-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-zigrow-section_3 {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    border-radius: 5%;
+  
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .footer-heading {
+    font-weight: 600;
+    color: var(--secondary-colors);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+ hr{
+  border: 0;                     /* remove default border */
+  height: 1px;                   /* uniform thin line */
+  background-color: var(--border-muted); /* base light color */
+  opacity: .55;                  /* make it lighter/softer */
+  margin: 1.25rem 0;             /* consistent spacing */
+  width: 100%;
+}
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--para-muted);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover , .bottom-bar-links a:hover {
+    color: #FF6B6B;
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info i {
+    color: #FF6B6B;
+    margin-right: 0.5rem;
+  }
+
+  .language-select select {
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .social-icons .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .social-icons .social-btn:hover {
+    background-color: #FF6B6B;
+    color: #fff;
+    border-color: #FF6B6B;
+  }
+
+  @media (max-width: 767px) {
+    .footer-tagline,
+    .custom-footer .text-md-end {
+      text-align: left !important;
+    }
+
+    .language-select {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }}
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<script>
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+  const isInsideBuilder = window.self !== window.top; // 👈 iframe check
+
+  if (!isFromDashboard && !isInsideBuilder) {
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("selectstart", e => e.preventDefault());
+    document.addEventListener("keydown", e => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key === "I")
+      ) {
+        e.preventDefault();
+      }
+    });
+  }
+</script>
+
+</html>

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Personal Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== Header (absolute) ===== -->
+    <header id="site-header" aria-label="Primary">
+      <div class="container">
+        <div class="nav-bar">
+          <!-- Toggle (CSS-only) -->
+          <input
+            id="nav-toggle"
+            class="nav-toggle"
+            type="checkbox"
+            aria-hidden="true"
+          />
+          <label
+            for="nav-toggle"
+            class="menu-btn"
+            aria-label="Toggle navigation"
+            aria-controls="primary-menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </label>
+
+          <!-- Left: Nav links -->
+          <nav class="nav-link" id="primary-menu" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Center: Brand -->
+          <a class="brand" href="#" aria-label="Mack Hobbs Home">Mack Hobbs</a>
+
+          <!-- Right: Socials -->
+          <div class="socials" aria-label="Social links">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.88h-2.34v6.99A10 10 0 0 0 22 12Z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M6 9H3v12h3V9Zm.5-6A1.75 1.75 0 1 0 6.5 6 1.75 1.75 0 0 0 6.5 3ZM21 21h-3v-6.5c0-3.47-4-3.2-4 0V21h-3V9h3v1.76c1.4-2.59 7-2.78 7 2.48V21Z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="Dribbble">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.86 6.5a8.16 8.16 0 0 1 1.24 4.36c-1.84-.36-3.57-.38-5.1-.12-.18-.44-.36-.86-.57-1.3 2.02-.85 3.75-2.25 4.43-2.94ZM12 3.84a8.16 8.16 0 0 1 5.04 1.75c-.58.65-2.1 2.2-4.2 3.03-1.06-1.96-2.22-3.6-2.91-4.42A8.1 8.1 0 0 1 12 3.84ZM8.34 5.2c.66.76 1.9 2.45 2.98 4.47-2.86.76-6.1.8-7.7.76a8.19 8.19 0 0 1 4.72-5.23ZM3.82 12.1c1.83.01 5.42-.04 8.22-.86.2.41.4.83.58 1.27-3.02.95-5.16 2.93-6.42 4.37a8.15 8.15 0 0 1-2.38-4.78ZM12 20.18a8.15 8.15 0 0 1-4.55-1.37c1.14-1.44 3.14-3.39 6.1-4.27.83 2.08 1.35 4.29 1.6 5.39A8.1 8.1 0 0 1 12 20.18Zm5.02-1.94c-.2-.93-.68-2.9-1.42-4.87 1.36-.2 2.93-.17 4.59.13a8.18 8.18 0 0 1-3.17 4.74Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <!-- Hero (separate section) -->
+    <section id="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="copy">
+            <div class="copy-left">
+              <p class="eyebrow">Hello There…</p>
+              <h1 class="headline">
+                I’m Mack. Your Design<br />
+                Partner For Growing<br />
+                Your Business <span class="emoji" aria-hidden="true">🏀</span>
+              </h1>
+            </div>
+            <div class="copy-right">
+              <p class="intro">
+                <span class="ping" aria-hidden="true"></span>
+                <em>A Freelance UI/UX Designer</em> based in Germany. I strive
+                to build immersive and beautiful web applications through
+                carefully crafted user-centric design.
+              </p>
+              <a href="#" class="cta"
+                >Contact Me
+                <span aria-hidden="true"
+                  ><i class="fa-solid fa-arrow-right"></i></span
+              ></a>
+            </div>
+          </div>
+
+          <div class="gallery">
+            <div class="scroll-indicator" aria-hidden="true">
+              <span>Scroll Down</span>
+              <button class="dot" type="button" tabindex="-1">
+                <i class="fa-solid fa-arrow-down"></i>
+              </button>
+            </div>
+            <div class="img-box">
+              <figure class="card notch-left">
+                <img src="assets/images/Minimal-hero-1.webp" alt="" />
+              </figure>
+              <figure class="card notch-2">
+                <img src="assets/images/Minimal-hero-2.webp" alt="" />
+              </figure>
+              <figure class="card notch-3">
+                <img src="assets/images/Minimal-hero-3.webp" alt="" />
+              </figure>
+              <figure class="card notch-right">
+                <img src="assets/images/Minimal-hero-4.webp" alt="" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Trusted Logos Section -->
+    <section id="trusted" aria-label="Trusted by logos">
+      <div class="container">
+        <p class="trusted-eyebrow">
+          A Trusted Partner For More Than 400+ Companies
+        </p>
+
+        <div class="logo-track" role="list">
+          <a class="logo" role="listitem" href="#" aria-label="Stacked Lab">
+            <img src="assets/images/logo.png" alt="Stacked Lab" />
+          </a>
+          <a class="logo" role="listitem" href="#" aria-label="Magnolia">
+            <img src="assets/images/logo.png" alt="Magnolia" />
+          </a>
+          <a class="logo" role="listitem" href="#" aria-label="Powersurge">
+            <img src="assets/images/logo.png" alt="Powersurge" />
+          </a>
+          <a class="logo" role="listitem" href="#" aria-label="Warpspeed">
+            <img src="assets/images/logo.png" alt="Warpspeed" />
+          </a>
+          <a class="logo" role="listitem" href="#" aria-label="Leapyear">
+            <img src="assets/images/logo.png" alt="Leapyear" />
+          </a>
+          <a class="logo" role="listitem" href="#" aria-label="EasyTax">
+            <img src="assets/images/logo.png" alt="EasyTax" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- About / Experience -->
+    <section id="about" aria-label="About & Experience">
+      <div class="container">
+        <!-- Header row -->
+        <div class="about-head">
+          <span class="chip">+ ABOUT ME</span>
+
+          <div class="about-head-text">
+            <h2 class="section-title">
+              I Specialize In Turning Vision
+              <span>Into Reality With My Experience</span>
+            </h2>
+
+            <!-- Tabs (visuals; left is active) -->
+            <div class="tabs" role="tablist" aria-label="Experience tabs">
+              <button class="tab is-active" role="tab" aria-selected="true">
+                Work Experience
+              </button>
+              <button class="tab" role="tab" aria-selected="false">
+                My Education
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline + Intro card -->
+        <div class="about-body">
+          <div class="timeline" aria-label="Work timeline">
+            <!-- Row 1 -->
+            <div class="t-row">
+              <div class="t-left">
+                <h3 class="company">Apple.Com</h3>
+                <p class="dates">September 2022 – Present</p>
+              </div>
+              <div class="t-right">
+                <div class="dot" aria-hidden="true"></div>
+                <h4 class="role">Sr. Product Designer</h4>
+                <p class="desc">
+                  A visual designer designs for a variety of platforms, which
+                  may include internet and intranet sites, games, movies and
+                  wearables; in short, they create concepts.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="t-row">
+              <div class="t-left">
+                <h3 class="company">Microsoft.Com</h3>
+                <p class="dates">January 2019 – July 2022</p>
+              </div>
+              <div class="t-right">
+                <div class="dot" aria-hidden="true"></div>
+                <h4 class="role">UI/UX Designer</h4>
+                <p class="desc">
+                  User Interface Engineering for machines and software, such as
+                  computers and mobile devices.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="t-row">
+              <div class="t-left">
+                <h3 class="company">Google.Com</h3>
+                <p class="dates">February 2016 – November 2018</p>
+              </div>
+              <div class="t-right">
+                <div class="dot" aria-hidden="true"></div>
+                <h4 class="role">Visual Designer</h4>
+                <p class="desc">
+                  Product photography & visual systems for campaigns; simple
+                  search & compare experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom intro card -->
+          <figure class="intro-card">
+            <img
+              src="assets/images/Minimal-about.webp"
+              alt="Self introduction cover"
+            />
+            <figcaption>
+              <p class="eyebrow">Self Introduction</p>
+              <h3 class="headline">
+                Meet A Value-Driven<br />Creative Individual
+              </h3>
+              <a href="#" class="play-btn" aria-label="Play video">
+                Play Now <span class="dot" aria-hidden="true"></span>
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+    <section id="services" aria-label="My Services">
+      <div class="container">
+        <!-- Header -->
+        <div class="services-head">
+          <span class="chip">+ My Services</span>
+          <h2 class="title">
+            Transforming Visuals With
+            <span>Cutting-Edge UX/UI Design Solution</span>
+          </h2>
+        </div>
+
+        <!-- List -->
+        <div class="service-list">
+          <!-- 01 BRANDING -->
+          <details class="service">
+            <summary>
+              <span class="num">01</span>
+              <div class="meta">
+                <h3>Branding</h3>
+                <div class="tags">
+                  <span class="tag">Logo</span>
+                  <span class="tag">Brand Guideline</span>
+                </div>
+              </div>
+              <span class="pill-btn">
+                <span class="view">View Details</span>
+                <span class="close">Collapse</span>
+                <i class="plus" aria-hidden="true"></i>
+              </span>
+            </summary>
+            <div class="panel">
+              <p class="desc">
+                Gain a deeper understanding of customer goals via interviews and
+                usability tests. I apply proven methods tailored to what we need
+                to learn from users.
+              </p>
+
+              <div class="media">
+                <img
+                  src="assets/images/Minimal-service-1.webp"
+                  alt="Mobile app screens 1"
+                />
+              </div>
+            </div>
+          </details>
+
+          <!-- 02 UX DESIGN (open in screenshot) -->
+          <details class="service" open>
+            <summary>
+              <span class="num">02</span>
+              <div class="meta">
+                <h3>UX Design</h3>
+                <div class="tags">
+                  <span class="tag">UX</span>
+                  <span class="tag">Strategy</span>
+                </div>
+              </div>
+              <span class="pill-btn">
+                <span class="view">View Details</span>
+                <span class="close">Collapse</span>
+                <i class="plus" aria-hidden="true"></i>
+              </span>
+            </summary>
+
+            <div class="panel">
+              <p class="desc">
+                Gain a deeper understanding of customer goals via interviews and
+                usability tests. I apply proven methods tailored to what we need
+                to learn from users.
+              </p>
+
+              <div class="media">
+                <img
+                  src="assets/images/Minimal-service-2.webp"
+                  alt="Mobile app screens 1"
+                />
+              </div>
+            </div>
+          </details>
+
+          <!-- 03 UI DESIGN -->
+          <details class="service">
+            <summary>
+              <span class="num">03</span>
+              <div class="meta">
+                <h3>UI Design</h3>
+                <div class="tags">
+                  <span class="tag">Visual</span>
+                  <span class="tag">Interface</span>
+                </div>
+              </div>
+              <span class="pill-btn">
+                <span class="view">View Details</span>
+                <span class="close">Collapse</span>
+                <i class="plus" aria-hidden="true"></i>
+              </span>
+            </summary>
+            <div class="panel">
+              <p class="desc">
+                Gain a deeper understanding of customer goals via interviews and
+                usability tests. I apply proven methods tailored to what we need
+                to learn from users.
+              </p>
+
+              <div class="media">
+                <img
+                  src="assets/images/Minimal-service-3.webp"
+                  alt="Mobile app screens 1"
+                />
+              </div>
+            </div>
+          </details>
+
+          <!-- 04 DESIGN SYSTEM -->
+          <details class="service">
+            <summary>
+              <span class="num">04</span>
+              <div class="meta">
+                <h3>Design System</h3>
+                <div class="tags">
+                  <span class="tag">Style Guide</span>
+                  <span class="tag">Component</span>
+                </div>
+              </div>
+              <span class="pill-btn">
+                <span class="view">View Details</span>
+                <span class="close">Collapse</span>
+                <i class="plus" aria-hidden="true"></i>
+              </span>
+            </summary>
+            <div class="panel">
+              <p class="desc">
+                Gain a deeper understanding of customer goals via interviews and
+                usability tests. I apply proven methods tailored to what we need
+                to learn from users.
+              </p>
+
+              <div class="media">
+                <img
+                  src="assets/images/Minimal-service-4.webp"
+                  alt="Mobile app screens 1"
+                />
+              </div>
+            </div>
+          </details>
+
+          <!-- 05 DEVELOPMENT -->
+          <details class="service">
+            <summary>
+              <span class="num">05</span>
+              <div class="meta">
+                <h3>Development</h3>
+                <div class="tags">
+                  <span class="tag">Custom Dev</span>
+                  <span class="tag">Low-Code Dev</span>
+                </div>
+              </div>
+              <span class="pill-btn">
+                <span class="view">View Details</span>
+                <span class="close">Collapse</span>
+                <i class="plus" aria-hidden="true"></i>
+              </span>
+            </summary>
+            <div class="panel">
+              <p class="desc">
+                Gain a deeper understanding of customer goals via interviews and
+                usability tests. I apply proven methods tailored to what we need
+                to learn from users.
+              </p>
+
+              <div class="media">
+                <img src="assets/images/Minimal-service-5.webp" alt="Mobile app screens 1" />
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- Recent Projects -->
+    <section id="projects" aria-label="Recent Projects">
+      <div class="container">
+        <!-- Header row -->
+        <div class="projects-head">
+          <span class="chip">+ MY RECENT PROJECTS</span>
+
+          <h2 class="title">
+            Discover Our Unveiling Success Stories
+            <span>From 50+ Brands</span>
+          </h2>
+        </div>
+
+        <!-- Two-up cards -->
+        <div class="case-grid">
+          <!-- LEFT: Content card -->
+          <article class="case-card case-card-1">
+            <div class="badges">
+              <p class="badge">Brand Guideline</p>
+              <p class="badge">UX Audit</p>
+              <p class="badge">Style Guide</p>
+              <p class="badge">UI Design</p>
+              <p class="badge">Development</p>
+            </div>
+
+            <p class="meta">
+              <span class="dot" aria-hidden="true"></span>
+              Project Timeline • <time datetime="2024-09-11">11/09/2024</time> –
+              <time datetime="2024-11-05">05/11/2024</time>
+            </p>
+
+            <h3 class="case-title">GRADO – Real Estate Property Booking App</h3>
+
+            <p class="case-desc">
+              In-person interviews clarify customer goals and needs, while
+              usability testing validates concepts and solutions. I use proven
+              methods to learn from our users based on what they need to teach
+              us.
+            </p>
+
+            <p class="q"><em>“Do you have a project idea in mind?”</em></p>
+
+            <a href="#" class="cta"
+              >Let’s Chat <span aria-hidden="true">➜</span></a
+            >
+          </article>
+
+          <!-- RIGHT: Visual card (image only, full height) -->
+          <figure class="case-visual">
+            <img
+              src="assets/images/Minimal-project-1.webp"
+              alt="Mobile app mockups on devices"
+            />
+          </figure>
+        </div>
+        <div class="case-grid">
+          <!-- LEFT: Content card -->
+          <article class="case-card case-card-2">
+            <div class="badges">
+              <p class="badge">Brand Guideline</p>
+              <p class="badge">UX Audit</p>
+              <p class="badge">Style Guide</p>
+              <p class="badge">UI Design</p>
+              <p class="badge">Development</p>
+            </div>
+
+            <p class="meta">
+              <span class="dot" aria-hidden="true"></span>
+              Project Timeline • <time datetime="2024-09-11">11/09/2024</time> –
+              <time datetime="2024-11-05">05/11/2024</time>
+            </p>
+
+            <h3 class="case-title">GRADO – Real Estate Property Booking App</h3>
+
+            <p class="case-desc">
+              In-person interviews clarify customer goals and needs, while
+              usability testing validates concepts and solutions. I use proven
+              methods to learn from our users based on what they need to teach
+              us.
+            </p>
+
+            <p class="q"><em>“Do you have a project idea in mind?”</em></p>
+
+            <a href="#" class="cta"
+              >Let’s Chat <span aria-hidden="true">➜</span></a
+            >
+          </article>
+
+          <!-- RIGHT: Visual card (image only, full height) -->
+          <figure class="case-visual">
+            <img
+              src="assets/images/Minimal-project-2.webp"
+              alt="Mobile app mockups on devices"
+            />
+          </figure>
+        </div>
+        <div class="case-grid">
+          <!-- LEFT: Content card -->
+          <article class="case-card case-card-3">
+            <div class="badges">
+              <p class="badge">Brand Guideline</p>
+              <p class="badge">UX Audit</p>
+              <p class="badge">Style Guide</p>
+              <p class="badge">UI Design</p>
+              <p class="badge">Development</p>
+            </div>
+
+            <p class="meta">
+              <span class="dot" aria-hidden="true"></span>
+              Project Timeline • <time datetime="2024-09-11">11/09/2024</time> –
+              <time datetime="2024-11-05">05/11/2024</time>
+            </p>
+
+            <h3 class="case-title">GRADO – Real Estate Property Booking App</h3>
+
+            <p class="case-desc">
+              In-person interviews clarify customer goals and needs, while
+              usability testing validates concepts and solutions. I use proven
+              methods to learn from our users based on what they need to teach
+              us.
+            </p>
+
+            <p class="q"><em>“Do you have a project idea in mind?”</em></p>
+
+            <a href="#" class="cta"
+              >Let’s Chat <span aria-hidden="true">➜</span></a
+            >
+          </article>
+
+          <!-- RIGHT: Visual card (image only, full height) -->
+          <figure class="case-visual">
+            <img
+              src="assets/images/Minimal-project-3.webp"
+              alt="Mobile app mockups on devices"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial -->
+    <section id="testimonials" aria-label="Clients Testimonial">
+      <div class="container">
+        <div class="t-head">
+          <span class="chip">+ Clients Testimonial</span>
+        </div>
+
+        <div class="t-body">
+          <!-- Controls -->
+          <div class="controls">
+            <button
+              class="ctrl prev"
+              type="button"
+              aria-label="Previous testimonial"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M15 18l-6-6 6-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="ctrl next"
+              type="button"
+              aria-label="Next testimonial"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Quote -->
+          <blockquote class="quote" aria-live="polite">
+            <!-- <span class="mark" aria-hidden="true">“</span> -->
+            <p class="q-bold" id="qBold">
+              They Bring Visions To Life With Our Precision-Crafted Architecture
+              And Interior Design.
+            </p>
+            <p class="q-sub" id="qSub">
+              Our Portfolio Of Innovative Best Projects That Redefine Creativity
+              And Functionality.
+            </p>
+
+            <footer class="author">
+              <img id="qAvatar" src="assets/images/testimonial-2.png" alt="" />
+              <div>
+                <div class="name" id="qName">Rakesh Singh</div>
+                <div class="title" id="qTitle">Managing Director</div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <!-- FAQs -->
+    <section id="faq" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="faq-grid">
+          <!-- Left intro -->
+          <aside class="intro">
+            <span class="chip">+ FAQs</span>
+            <h2 class="title">Frequently Asked <span>Questions</span></h2>
+            <p class="sub">
+              Everything you need to know about the product and billing. Can’t
+              find the answer you’re looking for? Please chat to our team.
+            </p>
+          </aside>
+
+          <!-- Right accordion -->
+          <div class="accordion" role="list">
+            <details class="item" open>
+              <summary>
+                <h3>Is There A Free Trial Available?</h3>
+                <i class="icon" aria-hidden="true"></i>
+              </summary>
+              <div class="panel">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </div>
+            </details>
+
+            <details class="item">
+              <summary>
+                <h3>Can I Change My Plan Later?</h3>
+                <i class="icon" aria-hidden="true"></i>
+              </summary>
+              <div class="panel">
+                Absolutely—upgrades take effect immediately and downgrades at
+                the next billing cycle.
+              </div>
+            </details>
+
+            <details class="item">
+              <summary>
+                <h3>What Is Your Cancellation Policy?</h3>
+                <i class="icon" aria-hidden="true"></i>
+              </summary>
+              <div class="panel">
+                Cancel anytime from your workspace settings. Your plan remains
+                active until the end of the current period.
+              </div>
+            </details>
+
+            <details class="item">
+              <summary>
+                <h3>Can Other Info Be Added To An Invoice?</h3>
+                <i class="icon" aria-hidden="true"></i>
+              </summary>
+              <div class="panel">
+                Yes—add company name, VAT, PO numbers and more from billing >
+                invoice settings.
+              </div>
+            </details>
+
+            <details class="item">
+              <summary>
+                <h3>How Does Billing Work?</h3>
+                <i class="icon" aria-hidden="true"></i>
+              </summary>
+              <div class="panel">
+                We bill monthly or yearly in advance. Receipts and invoices are
+                sent via email and available in your account.
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA + Footer -->
+    <section id="cta-footer" aria-label="Book a call and site footer">
+      <div class="container">
+        <!-- Tiny headline -->
+        <p class="cta-eyebrow">
+          Let’s See If We’re A Good Fit With A 15 Min Call
+          <i class="fa-solid fa-turn-down"></i>
+        </p>
+
+        <!-- Big pill marquee CTA -->
+        <a href="#contact" class="marquee-cta" aria-label="Book a call">
+          <div class="marquee-track" aria-hidden="true">
+            <span>Book A Call ✦</span>
+            <span>Book A Call ✦</span>
+            <span>Book A Call ✦</span>
+            <span>Book A Call ✦</span>
+            <span>Book A Call ✦</span>
+          </div>
+        </a>
+
+        <hr class="foot-divider" />
+
+        <!-- Links / columns -->
+        <div class="footer-grid" role="navigation" aria-label="Footer">
+          <ul class="col">
+            <li class="col-title">Home</li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">My Services</a></li>
+          </ul>
+
+          <ul class="col">
+            <li class="col-title">Recent Project</li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">404 Page</a></li>
+          </ul>
+
+          <ul class="col">
+            <li class="col-title">Style Guide</li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">License</a></li>
+          </ul>
+
+          <ul class="col">
+            <li class="col-title">Social</li>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">Dribbble</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+
+          <ul class="col contact">
+            <li class="col-title">Contact</li>
+            <li>
+              <a href="mailto:hello@mack.studio">yourname@domainname.com </a>
+            </li>
+            <li><a href="tel:+17045550127">+91-9123456789</a></li>
+          </ul>
+        </div>
+
+        <div class="legal">
+          <span>Copyrights © <a href="#">Mack Hobbs</a></span>
+          <span>Designed by <a href="#">Ufinity Studio</a></span>
+          <span class="push"></span>
+          <span>Powered by <a href="#">Webflow</a></span>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

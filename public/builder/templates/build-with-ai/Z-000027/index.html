@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edutech  - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 0px;
+      --box-radius: 0px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #ECECEC;
+      --secondary-colors: #121212;
+      --territory-colors: #C7B198;
+      --theme-3: #000000;
+      --theme-4: #ffffff;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: none;
+      --btn-box-shadow-hover: 0 4px 10px rgba(0,0,0,0.06);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #121212;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-section-hover: 0 6px 16px rgba(0,0,0,0.08);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 15.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 48px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 48px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #121212 !important;
+      font-family: Work Sans;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize !important;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff !important;
+      text-decoration: none !important;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Neue Haas Grotesk !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    
+
+    .main-heading {
+      font-weight: 700;
+      color: #121212;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      Edutech 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#team">Team</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="primary-btn ">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #ECECEC;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ECECEC;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Minimal -->
+<section class=" hero-zigrow-section_9 d-flex align-items-center justify-content-center text-center" id="hero">
+  <div class="company-overlay"></div>
+
+  <div class="container">
+    
+
+    <p class="company-caption">
+      Empowering Your Learning Journey with <span class="emphasis">Edutech Today</span>
+    </p>
+  </div>
+  <!-- 📸 Unsplash Credit -->
+<span class="img-credit">
+  Photo by 
+   <a 
+        href="https://unsplash.com/@nci?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        National Cancer Institute
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</span>
+
+</section>
+<style>
+
+
+.hero-zigrow-section_9 {
+  background: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzU4NTQxNTk2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center / cover;
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  color: #fff;
+
+
+.company-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  text-align: center;
+}
+
+.company-caption {
+  font-size: 3.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 auto;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+}
+
+.company-caption .emphasis {
+  background: linear-gradient(to right, var(--primary-colors), var(--primary-colors));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .company-caption {
+    font-size: 2.2rem;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .company-caption {
+    font-size: 1.6rem;
+  }
+
+  .company-caption .emphasis {
+    white-space: normal;
+  }
+}}
+
+</style>   <!-- ==========  MINIMAL  ✨  ========== -->
+<style>
+:root {
+  /* --accent: #fff;        for headings & stat numbers */
+  --text-base: #121212;
+  --section-bg: #ffffff;
+}
+
+/* ---------- Section wrapper ---------- */
+.about-zigrow-section_4 {
+  background: var(--section-bg);
+  /* padding: 0rem 0 0rem; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Typography ---------- */
+.about-zigrow-section_4 .headline {
+  font-size: clamp(2rem, 4vw + 1rem, 3.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color:var(--secondary-colors);
+
+  margin-bottom: 1.2rem;
+}
+
+.about-zigrow-section_4 .lead {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Skewed Image Frame ---------- */
+.about-zigrow-section_4 .skew-frame {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.about-zigrow-section_4 .skew-img {
+  width: 48%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+    border-radius: var(--box-radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.45s ease;
+}
+
+.about-zigrow-section_4 .skew-img img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.skew-img:hover {
+  transform: translateY(-6px);
+}
+
+.skew-img:hover img {
+  transform: scale(1.08);
+}
+
+/* ---------- Stats Section ---------- */
+.about-zigrow-section_4 .uniform-stats {
+  margin-top: 4rem;
+}
+
+.about-zigrow-section_4 .uniform-stats .stat {
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.about-zigrow-section_4 .uniform-stats .stat:hover {
+  transform: translateY(-5px);
+}
+
+.about-zigrow-section_4 .stat .value {
+  font-size: clamp(2rem, 5vw + 1rem, 3.4rem);
+  font-weight: 700;
+  color: var(--text-base);
+}
+
+.about-zigrow-section_4 .stat .label {
+  line-height: 1.4;
+}
+
+/* ---------- Fade-Up Animation ---------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.no-js [data-animate] {
+  opacity: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .skew-frame {
+    margin: 2.5rem 0 0;
+  }
+  .skew-img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-zigrow-section_4 {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .about-zigrow-section_4 .headline {
+    font-size: 2rem;
+  }
+
+  .about-zigrow-section_4 .skew-frame {
+    gap: 0.8rem;
+  }
+
+  .about-zigrow-section_4 .skew-img {
+    width: 46%;
+  }
+
+  .about-zigrow-section_4 .uniform-stats .stat {
+    text-align: center;
+  }
+}
+</style>
+
+<!-- ==========  ✨ SECTION  ✨  ========== -->
+<section class=" about-zigrow-section_4 py-6" id="about">
+  <div class="container">
+    <!-- Text + Images -->
+    <div class="row align-items-center g-lg-5">
+      <div class="col-lg-6" data-animate>
+        <h2 class="headline section-heading">About Edutech</h2>
+
+        <p class="para-muted font-body">Edutech is dedicated to transforming the learning process through innovative technology and engaging content. We believe in making education accessible and enjoyable for everyone.</p>
+        <p class="para-muted  font-body">Our mission is to empower learners with the tools and resources needed to succeed in their educational journey. We focus on interactive learning experiences that foster growth and development.</p>
+        <p class="para-muted  font-body">We provide cutting-edge educational tools that enhance the learning experience and promote engagement among students.</p>
+      </div>
+
+      <div class="col-lg-6" data-animate>
+        <div class="skew-frame">
+         <div class="skew-img position-relative">
+  <img src="https://images.unsplash.com/photo-1555436169-38f939820724?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb2xsYWJvcmF0aXZlJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzU4NjA5MDk0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Image 1">
+  <div class="img-credit">
+    Photo by 
+       <a 
+        href="https://unsplash.com/@josealjovin?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        jose aljovin
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+<div class="skew-img position-relative">
+  <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzU4NTQxNTk2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Image 2">
+  <div class="img-credit">
+    Photo by 
+     <a 
+        href="https://unsplash.com/@nci?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        National Cancer Institute
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="row uniform-stats gy-4 gx-md-5" data-animate>
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">100+</div>
+          <div class="label font-body-sm para-muted">We provide cutting-edge educational tools that enhance the learning experience and promote engagement among students.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">10+</div>
+          <div class="label font-body-sm para-muted">Our team of experts is always available to assist learners in overcoming challenges and achieving their educational goals.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">98%</div>
+          <div class="label font-body-sm para-muted">We foster a supportive community where learners can connect, share experiences, and grow together in their educational journey.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">30k+</div>
+          <div class="label font-body-sm para-muted">Our platform is designed to be user-friendly and accessible, ensuring that everyone can benefit from our educational resources.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <section class="py-5 position-relative overflow-hidden service-zigrow-section_3" id="services">
+  <div class="container text-center mb-5">
+    <h2 class="main-heading">Our Educational Services</h2>
+    <p class="para-muted font-subheading col-md-6 mx-auto">
+      Explore a range of services designed to enhance your learning experience.
+    </p>
+  </div>
+
+  <div class="container">
+    <!-- 1 col (xs) / 2 col (sm) / 3 col (lg) with nice gaps -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+      
+      <div class="col">
+        <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+          <div class="mb-2">
+            <div class="icon-wrapper mx-auto mb-1">
+              <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBjb3Vyc2VzfGVufDB8fHx8MTc1ODU0MTU5N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Online Courses icon" class="service-icon" />
+            </div>
+
+            
+              <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem">
+                Photo by
+                <a href="https://unsplash.com/@nickmorrison?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Nick Morrison
+                </a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </span>
+            
+          </div>
+
+          <h5 class="fw-semibold mb-2">Online Courses</h5>
+          <p class="para-muted font-body-sm mb-0">We offer a wide variety of online courses across different subjects, allowing learners to study at their own pace and convenience.</p>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+          <div class="mb-2">
+            <div class="icon-wrapper mx-auto mb-1">
+              <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaXN0YW5jZSUyMGxlYXJuaW5nfGVufDB8fHx8MTc1ODYwOTA5NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Tutoring Services icon" class="service-icon" />
+            </div>
+
+            
+              <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem">
+                Photo by
+                <a href="https://unsplash.com/@comparefibre?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Compare Fibre
+                </a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </span>
+            
+          </div>
+
+          <h5 class="fw-semibold mb-2">Tutoring Services</h5>
+          <p class="para-muted font-body-sm mb-0">Our expert tutors provide personalized support to help students understand complex topics and excel in their studies.</p>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+          <div class="mb-2">
+            <div class="icon-wrapper mx-auto mb-1">
+              <img src="https://images.unsplash.com/photo-1758206523670-67343d3b27eb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxlZHVjYXRpb25hbCUyMGNvbnN1bHRpbmd8ZW58MHx8fHwxNzU4NjA5MDk0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Workshops icon" class="service-icon" />
+            </div>
+
+            
+              <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem">
+                Photo by
+                <a href="https://unsplash.com/@navymedicine?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Navy Medicine
+                </a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </span>
+            
+          </div>
+
+          <h5 class="fw-semibold mb-2">Workshops</h5>
+          <p class="para-muted font-body-sm mb-0">Participate in interactive workshops that focus on practical skills and knowledge, enhancing your learning experience.</p>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+          <div class="mb-2">
+            <div class="icon-wrapper mx-auto mb-1">
+              <img src="https://images.unsplash.com/photo-1641189684174-16e53d9cc829?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0dXRvcmluZyUyMHNlc3Npb25zfGVufDB8fHx8MTc1ODU0MTU5N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Resource Library icon" class="service-icon" />
+            </div>
+
+            
+              <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem">
+                Photo by
+                <a href="https://unsplash.com/@kuchiiteru?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Mafatikhul Ikhsan
+                </a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </span>
+            
+          </div>
+
+          <h5 class="fw-semibold mb-2">Resource Library</h5>
+          <p class="para-muted font-body-sm mb-0">Access a comprehensive library of educational resources, including articles, videos, and study materials to aid your learning.</p>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+          <div class="mb-2">
+            <div class="icon-wrapper mx-auto mb-1">
+              <img src="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0cmFpbmluZyUyMHdvcmtzaG9wc3xlbnwwfHx8fDE3NTg2MDkwOTR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Community Forums icon" class="service-icon" />
+            </div>
+
+            
+              <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem">
+                Photo by
+                <a href="https://unsplash.com/@shotsbywolf?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Geert Pieters
+                </a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </span>
+            
+          </div>
+
+          <h5 class="fw-semibold mb-2">Community Forums</h5>
+          <p class="para-muted font-body-sm mb-0">Engage with fellow learners and educators in our community forums, where you can share ideas and seek advice.</p>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+          <div class="mb-2">
+            <div class="icon-wrapper mx-auto mb-1">
+              <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBjb3Vyc2VzfGVufDB8fHx8MTc1ODU0MTU5N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Certification Programs icon" class="service-icon" />
+            </div>
+
+            
+              <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem">
+                Photo by
+                <a href="https://unsplash.com/@nickmorrison?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                  Nick Morrison
+                </a> on
+                <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+              </span>
+            
+          </div>
+
+          <h5 class="fw-semibold mb-2">Certification Programs</h5>
+          <p class="para-muted font-body-sm mb-0">Earn recognized certifications in various fields to enhance your resume and demonstrate your skills to potential employers.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- (keep your existing styles & JS as-is) -->
+</section>
+
+  <style>
+   .service-zigrow-section_3 {
+      background: #fff;
+      position: relative;
+    
+
+      .unsplash-credit {
+  font-size: 0.65rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.unsplash-credit a {
+  color: #6c757d;
+  text-decoration: underline;
+}
+
+
+    .service-card {
+      background: #fff;
+       border-radius: var(--box-radius);
+      border: none;
+      box-shadow:var(--shadow-section);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+
+       h5 {
+        color: var(--lead-color-mute);
+      }
+
+      p {
+        color: var(--para-muted);
+      }
+    }
+
+   
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .icon-wrapper {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+      background: #fff;
+    }
+
+    .service-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 576px) {
+      .icon-wrapper {
+        width: 56px;
+        height: 56px;
+      }
+
+      .service-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* Scroll fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }}
+  </style>
+
+  <!-- ░░ JS: Scroll reveal ░░ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+
+      document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
+    });
+  </script>
+        <section class="testimonial-zigrow-section_1  py-6" id="testimonials">
+  <div class="container">
+    <h2 class="text-center  main-heading mb-5">What Our Learners Say </h2>
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+            src="https://i.postimg.cc/Kv4g4kN0/1.png"
+            alt="Client 1"
+          />
+          <h5 class="client-name">Alice Smith</h5>
+          <p class="client-text">
+       Edutech has completely changed my learning experience. The courses are engaging and the support is incredible. I feel more confident in my studies now.
+          </p>
+               <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+           src="https://i.postimg.cc/fWqV4WNm/10.png"
+            alt="Client 2"
+          />
+         <h5 class="client-name">John Doe</h5>
+          <p class="client-text">
+       The tutoring services provided by Edutech helped me grasp difficult concepts that I struggled with for years. Highly recommend!
+          </p>
+              <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+           src="https://i.postimg.cc/gk5Lhztm/2.png"
+            alt="Client 3"
+          />
+           <h5 class="client-name">Sarah Johnson</h5>
+          <p class="client-text">
+       I love the community forums! They provide a great platform for sharing ideas and getting feedback from peers and educators.
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_1 {
+    background-color: #fff;
+    color: #222;
+  
+
+
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+border-radius: var(--box-radius);
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+
+  /* Smooth, elevated shadow */
+     box-shadow: var(--shadow-section);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  /* Slightly deeper shadow on hover */
+    box-shadow: var(--shadow-section-hover);
+}
+
+
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+   border-radius: var(--box-radius);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .client-text {
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .stars {
+    color: rgb(255, 196, 0); /* Custom star color (orange-ish), change as needed */
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .stars i {
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover .stars i {
+    transform: scale(1.2);
+  }}
+</style>
+    <section class=" faq-zigrow-section_2 py-6"id="faq">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading fw-bold text-uppercase">Commonly Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              What types of courses do you offer?
+            </button>
+          </h2>
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              We offer a wide range of online courses covering various subjects, including technology, business, arts, and more.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              How can I access the courses?
+            </button>
+          </h2>
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Courses can be accessed online through our platform. Simply create an account, and you can start learning immediately.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              Are there any prerequisites for courses?
+            </button>
+          </h2>
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Most courses do not have prerequisites, but some advanced courses may require prior knowledge or experience.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              Can I get a refund if I am not satisfied?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, we offer a satisfaction guarantee. If you are not satisfied within the first 30 days, you can request a refund.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              Is there a mobile app available?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              Yes, we have a mobile app that allows you to access courses and resources on the go, making learning convenient.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading5">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse5"
+              aria-expanded="false"
+              aria-controls="collapse5"
+            >
+              How do I contact customer support?
+            </button>
+          </h2>
+          <div
+            id="collapse5"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading5"
+          >
+            <div class="accordion-body para-muted col-md-10">
+              You can reach our customer support team via email or through the contact form on our website for any inquiries.
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent !important;
+  color: #555 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none !important;
+  border: 0 !important;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none !important;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: var(--fs-body);
+  padding: 0 1rem 1rem;
+  color: var(--para-muted);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>    <!-- 🧩 Minimal Collaboration CTA -->
+<section  class="py-6 contact-zigrow-section_1" id="contact">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-start">
+
+      <!-- headline -->
+      <div class="col-12 col-lg-6">
+        <h1 class="headline lh-sm fw-semibold">
+          Let’s<br>collaborate<span class="dot">.</span>
+        </h1>
+      </div>
+
+      <!-- socials + contact -->
+      <div class="col-12 col-lg-5 ms-lg-auto">
+
+        <h6 class="social-heading mb-3">Connect</h6>
+        <div class="social-wrap d-flex gap-3 mb-5">
+          <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+          <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="contact-stack">
+          <div class="contact-block mb-4">
+            <span class="label">ADDRESS</span>
+            <p class="detail mb-0">123 Business St, City</p>
+          </div>
+          <div class="contact-block mb-4">
+            <span class="label">EMAIL</span>
+            <p class="detail mb-0">contact@example.com</p>
+          </div>
+          <div class="contact-block">
+            <span class="label">PHONE</span>
+            <p class="detail mb-0">+91 00000 00000</p>
+          </div>
+        </div>
+
+      </div><!-- /right -->
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== tokens ===== */
+:root{
+  --bg:      #ffffff;            /* canvas */
+  --text:    #121212;  /* navy-ish */
+  --stroke:  var(--border-muted);
+}
+
+/* ===== section ===== */
+.contact-zigrow-section_1{
+  background: var(--bg);
+  color: var(--text);
+
+
+/* ===== headline ===== */
+.headline{
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+.headline .dot{
+  color: var(--text);
+}
+
+/* ===== socials ===== */
+.social-btn{
+  width:48px;height:48px;display:grid;place-content:center;
+  font-size:1.15rem;
+  color:var(--text);
+  border:1px solid var(--stroke);
+  border-radius:50%;
+  text-decoration: none;
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.social-btn:hover{
+  background:black;
+  color:#fff;
+  transform:translateY(-3px);
+}
+
+/* ===== labels & copy ===== */
+.label{
+  font-size:.9rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  color: var(--para-muted);
+  margin-bottom:.3rem;
+}
+.detail{
+  font-size:.95rem;
+  line-height:1.6;
+  max-width:28ch;
+}
+.social-heading{
+  font-size:1rem;
+  font-weight:600;
+  color:var(--para-muted);
+}
+
+/* ===== responsive ===== */
+@media(max-width:991.98px){
+  .headline{font-size:clamp(2.4rem,10vw,5rem);}
+}
+}
+</style>   
+<footer class="footer-zigrow-section_5">
+  <div class="container">
+    <div class="border-top pt-3 pb-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <!-- Left -->
+      <div class="para-muted  mb-2 mb-md-0">
+        © 2025. All rights reserved.
+      </div>
+      
+      <!-- Right: Legal Links -->
+      <div class="footer-links d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-zigrow-section_5 {
+    background-color: #fff;
+    
+    font-size: 0.9rem;
+  
+
+  .simple-footer .border-top {
+    border-color: var(--border-muted) !important;
+  }
+
+  .footer-links a {
+    color: var(--para-muted);
+    text-decoration: none;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .footer-links a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+
+  @media (max-width: 575.98px) {
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .simple-footer .d-flex {
+      text-align: center;
+    }
+  }}
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script>
+
+</html>

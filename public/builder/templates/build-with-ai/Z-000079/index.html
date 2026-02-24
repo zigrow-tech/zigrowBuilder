@@ -1,0 +1,4174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextPlay Software - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #6B7280;
+      --border-radius-btn: 14px;
+      --box-radius: 12px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #FF0033;
+      --secondary-colors: #0D0D0D;
+      --territory-colors: #FF6F00;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 16px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 18px;
+      --fs-h3-base: 44px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 44px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #0D0D0D ;
+      font-family: Source Sans Pro;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Bebas Neue ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #0D0D0D;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top custom-navbar">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold" href="#">
+          NextPlay Software
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav align-lg-custom-center -center">
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#portfolio">Portfolio</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#team">Team</a>
+            </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="primary-btn">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-colors);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small-custom shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Bold -->
+
+<section class=" hero-zigrow-section_18 py-5" id="hero" data-section="hero">
+  <div class="container">
+    <div class="row align-custom-center">
+      <!-- Left Content -->
+      <div class="col-lg-6">
+        <span class="badge-pill px-4 py-2  mb-custom-3 d-inline-block transform-badge"
+          ><span>
+📈
+          </span>Game Development Made Easy</span
+        >
+
+        
+
+        <h1 class="display-custom-4 fw-custom-bold">
+          <span class="highlighted-word">
+            Elevate
+            <svg
+              viewBox="0 0 200 20"
+              class="highlight-underline"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2,15 C50,5 150,25 198,10"
+                stroke="#fff"
+                stroke-width="4"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+           Your Game Development Experience
+        </h1>
+
+        <p class="hero-subtext mb-custom-4">
+          Unlock powerful tools that enhance performance and creativity. Build stunning games faster with our reliable software solutions.
+        </p>
+
+      <div class="d-flex flex-wrap gap-3">
+  <a href="#" class=" white-btn ">
+    Learn More
+  </a>
+  <a href="#" class=" white-outline-btn ">
+    Contact Us
+  </a>
+</div>
+
+      </div>
+
+      <!-- Right Image -->
+    <div class="col-lg-6 d-none d-lg-flex hero-img-column">
+  <div class="hero-img-wrapper img-wrapper-center">
+    <img 
+      src="https://images.unsplash.com/photo-1709715357520-5e1047a2b691?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY2NzQ4MDQ5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      class="hero-img-config"
+      alt="Coaching"
+      loading="lazy"
+    />
+
+    <span class="img-credit">
+      Photo by 
+      <a href="https://unsplash.com/@seogalaxy?utm_source=zigrow&utm_medium=referral" target="_blank">
+        SEO Galaxy
+      </a> 
+      on Unsplash
+    </span>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-zigrow-section_18 {
+    background-color: var(--primary-colors);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh; /* Ensure space for image */
+    display: flex;
+    align-items: center;
+  
+
+.hero-img-column {
+  display: flex;
+  align-items: flex-end;  
+   /* Image bottom se chipak jayegi */
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+.hero-img-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Image rules (CONFIG REQUIRED) */
+.hero-img-config {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 120px;
+  aspect-ratio: 14/13;
+}
+   .container,
+  .row {
+    height: 100%;
+  }
+
+  .highlighted-word {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight-underline {
+    position: absolute;
+    bottom: -25px; /* adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 1.2em;
+    pointer-events: none;
+  }
+
+  .hero-image {
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 120px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    aspect-ratio: 14/13;
+  }
+
+  .transform-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: 500;
+   border-radius: var(--box-radius);
+    font-size: 0.95rem;
+  }
+
+  .hero-subtext {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 500px;
+  }
+
+ 
+
+  @media (max-width: 991.98px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .hero-image {
+      position: static;
+      margin-top: 2rem;
+      border-radius: 0;
+      padding-right: 0;
+    }
+  }}
+</style>
+   <!-- BOLD -->
+
+<section class="about-zigrow-section_5 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row g-xl-5 align-custom-center">
+
+      <!-- ▸▸ Media Grid -->
+      <div class="col-12 col-xl-6 order-2 order-xl-1">
+        <div class="media-grid-modern">
+          
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBvZmZpY2V8ZW58MHx8fHwxNzY2NzQ4MDQ5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 1" />
+
+              
+                <span class="play-overlay"><i></i></span>
+                
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@sunday_digital?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Nastuh Abootalebi
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1508361727343-ca787442dcd7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2Njc0ODA0OXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 2" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@tomparkes?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      Tom Parkes
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1709715357520-5e1047a2b691?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY2NzQ4MDQ5fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 3" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@seogalaxy?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      SEO Galaxy
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+            <figure class="media-card position-relative img-wrapper-center">
+              <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaW5ub3ZhdGlvbnxlbnwwfHx8fDE3NjY3NDgwNDl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Visual 4" />
+
+              
+
+
+                  <div class="img-credit">
+                    Photo by
+                    <a href="https://unsplash.com/@fabioha?utm_source=zigrow&utm_medium=referral"
+                      target="_blank" rel="noopener noreferrer">
+                      fabio
+                    </a>
+                    on
+                    <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                      rel="noopener noreferrer">
+                      Unsplash
+                    </a>
+
+                  </div>
+            </figure>
+            
+
+        </div>
+      </div>
+
+      <!-- ▸▸ Content Block -->
+      <div class="col-12 col-xl-6 content-box order-1 order-xl-2">
+        <div class="content-block">
+          <p class="label">Our Goals</p>
+          <h2 class="section-heading mb-custom-4 main-heading">
+            About NextPlay Software
+          </h2>
+          <p class=" para-muted mb-custom-4 font-body">
+            At NextPlay Software, we specialize in creating top-tier game development tools that empower developers and studios. Our commitment to quality ensures immersive gameplay and stunning graphics. We prioritize reliability and performance, enabling you to bring your game ideas to life efficiently. Join us in shaping the future of gaming with innovative solutions tailored to your needs. Our software is optimized for speed and efficiency, ensuring smooth gameplay and stunning visuals.
+          </p>
+
+          <ul class=" feature-bullets mb-custom-5">
+              
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Our software is optimized for speed and efficiency, ensuring smooth gameplay and stunning visuals.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Develop games that run seamlessly across multiple platforms, reaching a wider audience effortlessly.
+                </li>
+                
+                <li><span class="checkmark"></span class="para-muted font-body-sm">
+                  Designed for creativity, our tools simplify the development process, allowing you to focus on your vision.
+                </li>
+                
+                  </ul>
+
+         <a href="#" class="primary-btn">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .about-zigrow-section_5 {
+    --clr-primary: var(--primary-colors);
+    --clr-accent: var(--territory-colors);
+    --clr-bg: #ffffff;
+    --clr-muted: #6c757d;
+
+    background: var(--clr-bg);
+    overflow: hidden;
+    position: relative;
+
+
+    .label {
+      font-size: 0.75rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-primary);
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--clr-accent), var(--clr-primary));
+      display: block;
+      margin-top: 1rem;
+    border-radius: var(--box-radius);
+    }
+
+    /* Media grid */
+    .media-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+
+    .media-card {
+      position: relative;
+      aspect-ratio: 1 / 1;
+   border-radius: var(--box-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-section);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-section-hover);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    figure{
+      margin: 0 ;
+    }
+    /* Play icon overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-overlay i {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #fff;
+      transform: translateX(2px);
+    }
+
+    /* Features */
+    .feature-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+  /* Features */
+.feature-bullets li {
+  display: flex;
+  align-items: center;
+  /* font-weight: 500; */
+  color: var(--para-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.feature-bullets li:hover {
+  color: var(--clr-primary);
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+  animation: check-appear 0.4s ease;
+}
+
+.checkmark:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Animation for tick */
+@keyframes check-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+ @media (max-width: 425px) {  .media-grid-modern {
+        grid-template-columns: 1fr;
+      }}
+ @media (max-width: 1024px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }}
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .content-box{
+        margin-bottom: 5rem;
+      }
+    
+
+      .section-heading::after {
+        margin-inline: auto;
+      }
+
+      .content-block {
+        text-align: center;
+      }
+
+      .feature-bullets li {
+        justify-content: center;
+      }
+    }
+  }
+</style>   <!-- ========== Services List (service-zigrow-section_11) ========== -->
+<section class="service-zigrow-section_11 section-padding" id="services" data-section="services">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-custom-center mb-custom-4 mb-lg-5">
+      <h2 class="main-heading mb-custom-2">
+        <span>Our Game Development Services</span>
+      </h2>
+
+      <p class="svc11-subtitle mb-custom-0">
+        <span>Tailored solutions for developers, studios, and businesses looking to elevate their gaming projects with cutting-edge technology.</span>
+      </p>
+    </div>
+
+    <!-- List Items as Bootstrap Accordion -->
+    <div class="svc11-list accordion" id="svc11Accordion">
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-0">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-0"
+            aria-expanded="true"
+            aria-controls="svc11-collapse-0"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>01</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Performance Tools</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="svc11-heading-0"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Enhance your game’s performance with our advanced optimization tools, ensuring smooth gameplay and immersive experiences for players across all platforms.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">optimization</span>
+                
+                  <span class="svc11-tag">performance</span>
+                
+                  <span class="svc11-tag">tools</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-1">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-1"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-1"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>02</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Graphics Solutions</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-1"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-1"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Create stunning visuals with our high-quality graphics rendering solutions, designed to bring your game worlds to life with vibrant detail.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">graphics</span>
+                
+                  <span class="svc11-tag">rendering</span>
+                
+                  <span class="svc11-tag">visuals</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-2">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-2"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-2"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>03</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Cross-Platform Support</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-2"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-2"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Reach a wider audience with our cross-platform compatibility, allowing your games to run seamlessly on various devices and operating systems.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">cross-platform</span>
+                
+                  <span class="svc11-tag">compatibility</span>
+                
+                  <span class="svc11-tag">accessibility</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-3">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-3"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-3"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>04</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Development Efficiency</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-3"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-3"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Reduce your development time significantly with our streamlined tools, enabling you to focus on creativity while we handle the technical aspects.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">efficiency</span>
+                
+                  <span class="svc11-tag">development</span>
+                
+                  <span class="svc11-tag">creativity</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-4">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-4"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-4"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>05</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Security Features</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-4"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-4"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Protect your games with our robust security features, ensuring a safe environment for players and safeguarding your intellectual property.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">security</span>
+                
+                  <span class="svc11-tag">protection</span>
+                
+                  <span class="svc11-tag">safety</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="svc11-heading-5">
+          <!-- BUTTON AS ROW -->
+          <button
+            class="accordion-button svc11-row collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#svc11-collapse-5"
+            aria-expanded="false"
+            aria-controls="svc11-collapse-5"
+          >
+            <!-- LEFT INDEX -->
+            <div class="svc11-idx">
+              <span>06</span>
+            </div>
+
+            <!-- MIDDLE CONTENT -->
+            <div class="svc11-content">
+              <h3 class="svc11-title">
+                <span>Scalable Solutions</span>
+              </h3>
+            </div>
+
+            <!-- RIGHT ACTION BUTTON -->
+            <div class="svc11-action">
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+          </button>
+        </h2>
+
+        <!-- COLLAPSE BODY -->
+        <div
+          id="svc11-collapse-5"
+          class="accordion-collapse collapse "
+          aria-labelledby="svc11-heading-5"
+          data-bs-parent="#svc11Accordion"
+        >
+          <div class="accordion-body ps-custom-4">
+            <div class="svc11-body">
+              <p class="svc11-desc">
+                <span>Scale your projects effortlessly with our flexible solutions, designed to accommodate both small indie games and large studio productions.</span>
+              </p>
+
+              <div class="svc11-tags">
+                
+                  <span class="svc11-tag">scalability</span>
+                
+                  <span class="svc11-tag">flexibility</span>
+                
+                  <span class="svc11-tag">production</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_11 (white theme, Bootstrap 5 friendly) ===== */
+  .service-zigrow-section_11 {
+    --svc11-bg: #ffffff;
+    --svc11-border: #e5e7eb;
+    --svc11-soft: #f8fafc;
+    --svc11-ring: color-mix(in srgb, var(--primary-colors) 16%, transparent);
+    --svc11-muted: #9ca3af;
+
+    background: var(--svc11-bg);
+    color: var(--para-muted);
+  }
+
+  /* Header */
+  .service-zigrow-section_11 .svc11-heading {
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    font-size: clamp(1.8rem, 1.2rem + 2vw, 2.4rem);
+  }
+
+  .service-zigrow-section_11 .svc11-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--para-muted);
+    line-height: 1.7;
+    font-size: var(--fs-sub);
+  }
+
+  /* List wrapper */
+  .service-zigrow-section_11 .svc11-list {
+    border-top: 1px solid var(--svc11-border);
+  }
+
+  /* Accordion base overrides */
+  .service-zigrow-section_11 .accordion-item {
+    border: 0;
+  }
+
+  .service-zigrow-section_11 .accordion-button {
+    background-color: transparent;
+    padding: 0; /* padding hum row par denge */
+    box-shadow: none;
+  }
+
+  .service-zigrow-section_11 .accordion-button::after {
+    display: none; /* default caret hatana */
+  }
+
+  .service-zigrow-section_11 .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  /* Row layout (our custom row inside accordion-button) */
+  .service-zigrow-section_11 .svc11-row {
+    display: grid;
+    grid-template-columns: 72px 1fr 56px;
+    align-items: start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--svc11-border);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.2s ease;
+    width: 100%;
+  }
+
+  .service-zigrow-section_11 .svc11-row:hover {
+    background: var(--svc11-soft);
+  }
+
+  /* left index */
+  .service-zigrow-section_11 .svc11-idx span {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--svc11-muted);
+  }
+
+  /* middle content */
+  .service-zigrow-section_11 .svc11-title {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    font-size: var(--fs-sub);
+    color: var(--secondary-colors);
+  }
+
+  .service-zigrow-section_11 .svc11-body {
+    margin-top: 0.35rem;
+  }
+
+  .service-zigrow-section_11 .svc11-desc {
+    color: var(--para-muted);
+    margin: 0.35rem 0 0.8rem;
+    line-height: var(--lh-body);
+    max-width: 72ch;
+    font-size: var(--fs-body);
+  }
+
+  .service-zigrow-section_11 .svc11-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .service-zigrow-section_11 .svc11-tag {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.82rem;
+    border-radius: var(--box-radius);
+    border: 1px solid var(--svc11-border);
+    background: #fff;
+    color: #334155;
+  }
+
+  /* right circular action */
+  .service-zigrow-section_11 .svc11-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: #fafbfe;
+    color: var(--primary-colors);
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      background 0.18s ease,
+      color 0.18s ease;
+    box-shadow: 0 6px 16px var(--svc11-ring);
+  }
+
+  .service-zigrow-section_11 .svc11-row:hover .svc11-action {
+    transform: translateY(-2px);
+    background: var(--primary-colors);
+    color: #fff;
+  }
+
+  /* OPEN (expanded) state – accordion-button not collapsed */
+  .service-zigrow-section_11
+    .accordion-button:not(.collapsed)
+    .svc11-title {
+    color: #0f172a;
+  }
+
+  .service-zigrow-section_11
+    .accordion-button:not(.collapsed)
+    .svc11-idx span {
+    color: var(--primary-colors);
+  }
+
+  .service-zigrow-section_11
+    .accordion-button:not(.collapsed)
+    .svc11-action {
+    background: var(--primary-colors);
+    color: #fff;
+    transform: none;
+  }
+
+  /* Responsive */
+ /* Responsive */
+@media (max-width: 575.98px) {
+  .service-zigrow-section_11 .svc11-row {
+    grid-template-columns: auto 1fr auto;  /* 3 column hi, but flexible */
+    align-items: center;
+    padding: 0.9rem 0;
+    gap: 0.75rem;
+  }
+
+  .service-zigrow-section_11 .svc11-idx span {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .service-zigrow-section_11 .svc11-title {
+    font-size: var(--fs-body); /* thoda chota on mobile */
+  }
+
+  .service-zigrow-section_11 .svc11-action {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 4px 12px var(--svc11-ring);
+  }
+}
+
+  
+</style>
+   <!-- 🤍 Our Clients Grid -->
+<section class="logo-zigrow-section_5 section-padding" id="logos" data-section="logos">
+  <div class="container text-custom-center">
+
+    <!-- Heading -->
+    <h2 class="fw-custom-bold display-custom-5 mb-custom-3 main-heading">Our Dear Clients</h2>
+    <p class="lead-custom para-muted font-subheading mb-custom-5 px-lg-custom-5 col-md-8 mx-custom-auto">
+     A showcase of trusted partners and brands we've collaborated with—highlighting the strength, diversity, and credibility behind our network.
+    </p>
+
+    <!-- Logo table -->
+    <div class="row gx-0 gy-0 border-grid">
+
+      <!-- Repeat for 8 logos -->
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+      <div class="col-12 col-lg-3 cell p-md-custom-5 p-custom-3">
+        <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" class="logo" alt="logo">
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+  /* SECTION WRAP */
+.logo-zigrow-section_5{
+  background:#fff;
+}
+
+/* GRID: only inner lines, no outer border */
+.logo-zigrow-section_5 .border-grid .cell{ position: relative; }
+.logo-zigrow-section_5 .border-grid .cell::before,
+.logo-zigrow-section_5 .border-grid .cell::after{
+  content:"";
+  position:absolute;
+  background: var(--grid-line, #e8e9ee); /* subtle line */
+}
+
+/* draw TOP and LEFT separators on every cell */
+.logo-zigrow-section_5 .border-grid .cell::before{ /* top line */
+  height:1px; left:0; right:0; top:0;
+}
+.logo-zigrow-section_5 .border-grid .cell::after{  /* left line */
+  width:1px; top:0; bottom:0; left:0;
+}
+
+/* ≤ LG (mobile/tablet) => 2 columns (col-6) — hide outer edges */
+@media (max-width: 991.98px){
+  /* first row (items 1–2): no top line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(-n+2)::before{ display:none; }
+  /* first column in each row (1,3,5,7): no left line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(2n+1)::after{ display:none; }
+}
+
+/* ≥ LG (desktop) => 4 columns (col-lg-3) — hide outer edges */
+@media (min-width: 992px){
+  /* first row (items 1–4): no top line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(-n+4)::before{ display:none; }
+  /* first column in each row (1,5): no left line */
+  .logo-zigrow-section_5 .border-grid .cell:nth-child(4n+1)::after{ display:none; }
+}
+
+/* LOGO visuals */
+.logo-zigrow-section_5 .logo{
+  max-width:170px; width:100%; object-fit:contain;
+  filter:grayscale(100%) opacity(.8);
+  transition: filter .3s ease;
+}
+.logo-zigrow-section_5 .logo:hover{ filter:grayscale(0%); }
+
+/* small-custom screens logo size */
+@media (max-width:575.98px){
+  .logo-zigrow-section_5 .logo{ max-width:140px; }
+}
+
+</style>
+   <!-- ✅ Certified Excellence Section -->
+<section class="product-zigrow-section_3 section-padding" id="products" data-section="products">
+  <div class="container">
+    <div class="row align-custom-center mb-custom-5">
+      <div class="col-md-7">
+        <p class="sub-heading"> Products We Offer</p>
+        <h2 class=" lh-custom-sm mb-custom-3 main-heading" ">Innovative Game Development Tools</h2>
+      </div>
+      <div class=" col-md-5 text-custom-md-end">
+          <p class="para-muted font-body-sm mb-custom-2">
+            Empowering developers with high-performance solutions <br>
+              Achieve stunning visuals and immersive experiences with our cutting-edge graphics engine.
+          </p>
+          <div class="link-group">
+            <a href="#" class="link-red ms-custom-4">
+              View Details <span>&rarr;</span>
+            </a>
+          </div>
+      </div>
+    </div>
+      
+    <div class="row g-4">
+      <!-- Card -->
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card img-wrapper-center">
+          
+            <img src="https://images.unsplash.com/photo-1725780214598-7869e79698ea?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMHByb2R1Y3RzfGVufDB8fHx8MTc2Njc0ODA1MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@hdbernd?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Bernd 📷 Dittrich
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title ">
+                    Advanced Graphics Engine
+                  </span>
+                  <div class="icon-circle bg-custom-dark text-custom-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <!-- Repeat cards with different content -->
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card img-wrapper-center">
+          
+            <img src="https://images.unsplash.com/photo-1762163516269-3c143e04175c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwc29sdXRpb25zfGVufDB8fHx8MTc2Njc0ODA1MXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@fslfsl?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Domaintechnik Ledl.net
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Gameplay Optimization Suite
+                  </span>
+                  <div class="icon-circle bg-custom-dark text-custom-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card img-wrapper-center">
+          
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwdG9vbHN8ZW58MHx8fHwxNzY2NzQ4MDUxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@marvelous?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Marvin Meyer
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Cross-Platform Toolkit
+                  </span>
+                  <div class="icon-circle bg-custom-dark text-custom-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card img-wrapper-center">
+          
+            <img src="https://images.unsplash.com/photo-1654764450215-c37782b66dd3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxhcHBsaWNhdGlvbiUyMGludGVyZmFjZXxlbnwwfHx8fDE3NjY3NDgwNTF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+               <a href="https://unsplash.com/@lanacodes?utm_source=zigrow&utm_medium=referral"
+                  target="_blank" rel="noopener noreferrer">
+                  Lana Codes
+                </a>
+                on <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank"
+                  rel="noopener noreferrer">Unsplash</a>
+              </span>
+              
+
+                <div class="service-info">
+                  <span class="service-title">
+                    Security Framework
+                  </span>
+                  <div class="icon-circle bg-custom-dark text-custom-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-2-4">
+        <div class="service-card img-wrapper-center">
+          
+            <img src="https://images.unsplash.com/photo-1620987278429-ab178d6eb547?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY2NzQ4MDUxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+            
+              <span class="img-credit">
+                Photo by
+                <a href="https://unsplash.com/@frostroomhead" target="_blank">
+                  Rodion Kutsaiev
+                </a>
+                on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+              </span>
+              
+                <div class="service-info">
+                  <span class="service-title">
+                    Rapid Development Kit
+                  </span>
+                  <div class="icon-circle bg-custom-dark text-custom-white">
+                    <span class="arrow">&uarr;</span>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+  .product-zigrow-section_3 {
+    background-color: #fefefe;
+
+    .sub-heading {
+      font-size: 0.9rem;
+      color: var(--para-muted);
+      letter-spacing: .03em;
+      margin-bottom: 0.3rem;
+    }
+
+    .link-group a {
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--primary-colors);
+      transition: all 0.3s ease;
+    }
+
+    .link-group a:hover {
+      text-decoration: underline;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+       border-radius: var(--box-radius);
+      background: #000;
+      transition: transform .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-img {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      filter: grayscale(100%) brightness(0.8);
+      transition: filter .3s ease, transform .3s ease;
+    }
+
+    .service-card:hover .service-img {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.05);
+    }
+
+    .service-card:hover {
+      .service-title {
+        color: #fff;
+      }
+
+      .icon-circle {
+        background: var(--primary-colors);
+      }
+    }
+
+    .service-info {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      /* font-size: 0.95rem; */
+       font-size: var(--fs-body);
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .icon-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow {
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+
+    /* Responsive col fix for 5 cards */
+    @media (min-width: 992px) {
+      .col-lg-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+      }
+    }
+  }
+</style>   <!-- Why Choose Us -->
+<section class="whyChooseUs-zigrow-section_8 section-padding"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container">
+    <!-- ▸ Heading -->
+    <div class="text-custom-start ">
+      <span class="section-label mb-custom-3 ">WHY CHOOSE US</span>
+
+      
+      <h2 class="section-title">
+        Why Choose
+        <span class="highlight">NextPlay Software</span>
+      </h2>
+    </div>
+
+    <div class="row g-4">
+      <!-- ▸ Left-side info cards (first 3) -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+          
+            <div class="col-md-6 ">
+              <div class="info-card">
+                <div class="icon-circle"><i class="bi bi-star"></i></div>
+                <h5 class="info-title">High-Quality Graphics</h5>
+                <p class="info-text">Our software supports stunning graphics rendering, allowing developers to create visually immersive worlds that captivate players and enhance gameplay experiences.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6 ">
+              <div class="info-card">
+                <div class="icon-circle"><i class="bi bi-speedometer"></i></div>
+                <h5 class="info-title">Optimized Performance</h5>
+                <p class="info-text">Experience smooth gameplay with our performance-driven tools, designed to minimize lag and maximize efficiency for seamless player interactions across all platforms.</p>
+              </div>
+            </div>
+          
+            <div class="col-md-6 col-12">
+              <div class="info-card">
+                <div class="icon-circle"><i class="bi bi-device-computer"></i></div>
+                <h5 class="info-title">Cross-Platform Support</h5>
+                <p class="info-text">Develop games that reach a wider audience with our cross-platform compatibility, ensuring your creations run flawlessly on various devices and operating systems.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- ▸ Right-side highlight card (4th card) -->
+      <div class="col-lg-4">
+        
+        <div class="highlight-card">
+          <div class="icon-circle-light mb-custom-3">
+            <i class="bi bi-shield-lock"></i>
+          </div>
+          <h5 class="highlight-title">Reliable Security</h5>
+
+          <!-- main paragraph + card-specific text -->
+          <p class="highlight-text">Our commitment to quality and innovation ensures you have the best resources to create captivating games that engage players worldwide.</p>
+          <p class="highlight-text">Protect your projects with our robust security features, providing peace of mind as you focus on creativity and innovation in your game development journey.</p>
+
+          <!-- primary CTA -->
+          <a href="#" class="cta-button">
+            Learn More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .whyChooseUs-zigrow-section_8 {
+  background-color: #fff;
+  color: #111;
+
+
+.section-label {
+  font-size: 0.70rem;
+  text-transform: uppercase;
+  color: #424242;
+  background: transparent;
+  border: 1px solid #888;
+  font-weight: 600;
+  padding: .3rem .5rem;
+border-radius: var(--box-radius);
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--secondary-colors);
+}
+
+.section-title .highlight {
+  color: var(--primary-colors);
+  font-weight: 600;
+}
+
+.info-card {
+  background-color: #f7f8fa;
+border-radius: var(--box-radius);
+  padding: 30px 20px;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid #c0c1c4;
+}
+
+.info-card:hover {
+  background-color: #eef2f6;
+  box-shadow: var(--shadow-section-hover);
+  transform: translateY(-4px);
+}
+
+.icon-circle {
+  background-color: #f1f6fc;
+  color:#0D0D0D;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.info-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--lead-custom-color-mute);
+}
+
+.info-text {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  line-height: 1.5;
+}
+
+/* Right Highlight Card */
+.highlight-card {
+  background: linear-gradient(145deg, var(--primary-colors), var(--territory-colors));
+  color: #fff;
+border-radius: var(--box-radius);
+  padding: 35px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.highlight-title {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  font-size: var(--fs-body-sm);
+  color: #dcdcdc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.icon-circle-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  display: inline;
+  width: 50px;
+  color: #fff;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #fff;
+  color: black;
+  padding: 10px 18px;
+  border-radius: var(--border-radius-btn);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.cta-button:hover {
+   background: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .highlight-card {
+    text-align: center;
+  }
+}}
+
+</style>   <!-- ▰ Modern Team Showcase -->
+<section class="team-zigrow-section_8 section-padding text-custom-white" id="team" data-section="team">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <span class="team-tag">THE TEAM</span>
+      <h2 class="team-title main-heading">Meet Our Team</h2>
+      <p class="team-sub font-subheading para-muted mx-custom-auto col-lg-8">Our team combines passion and expertise to create exceptional gaming solutions. We are committed to delivering quality and supporting developers in their creative journey.</p>
+    </div>
+
+    <!-- Grid -->
+    <div class="row g-4 justify-custom-center">
+      
+      <div class="col-12 col-md-6 col-xl-6">
+        <div class="team-card gradient-1 d-flex flex-column flex-md-row align-custom-center p-custom-4">
+          <div class="flex-grow-1">
+            <h5 class="mb-custom-1">Alice Johnson</h5>
+            <p class="mb-custom-3 font-body-sm">Alice is a seasoned developer with over a decade of experience in game software engineering.</p>
+
+            <!-- (Optional) social list if you add m.socials -->
+            <div class="social-icons">
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-linkedin"></i>
+            </div>
+          </div>
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/Kv4g4kN0/1.png" alt="Alice Johnson" class="team-avatar "></div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-6">
+        <div class="team-card gradient-2 d-flex flex-column flex-md-row align-custom-center p-custom-4">
+          <div class="flex-grow-1">
+            <h5 class="mb-custom-1">Mark Thompson</h5>
+            <p class="mb-custom-3 font-body-sm">Mark brings a wealth of creativity and vision, ensuring our products are both innovative and user-friendly.</p>
+
+            <!-- (Optional) social list if you add m.socials -->
+            <div class="social-icons">
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-linkedin"></i>
+            </div>
+          </div>
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/fWqV4WNm/10.png" alt="Mark Thompson" class="team-avatar "></div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-6">
+        <div class="team-card gradient-3 d-flex flex-column flex-md-row align-custom-center p-custom-4">
+          <div class="flex-grow-1">
+            <h5 class="mb-custom-1">Sarah Lee</h5>
+            <p class="mb-custom-3 font-body-sm">Sarah excels in coordinating projects, ensuring timely delivery and alignment with market needs.</p>
+
+            <!-- (Optional) social list if you add m.socials -->
+            <div class="social-icons">
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-linkedin"></i>
+            </div>
+          </div>
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/gk5Lhztm/2.png" alt="Sarah Lee" class="team-avatar "></div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-xl-6">
+        <div class="team-card gradient-4 d-flex flex-column flex-md-row align-custom-center p-custom-4">
+          <div class="flex-grow-1">
+            <h5 class="mb-custom-1">David Kim</h5>
+            <p class="mb-custom-3 font-body-sm">David is dedicated to maintaining high standards, meticulously testing our software for optimal performance.</p>
+
+            <!-- (Optional) social list if you add m.socials -->
+            <div class="social-icons">
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-linkedin"></i>
+            </div>
+          </div>
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/TPjKBrd3/3.png" alt="David Kim" class="team-avatar "></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<style>
+/* ▰ Section Base */
+.team-zigrow-section_8 {
+  background: radial-gradient(circle at top left, #eaeaec, #f8f8fa);
+
+
+/* ▰ Heading */
+.team-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary-colors);
+}
+.team-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+}
+.team-sub {
+  max-width: 700px;
+  margin: 0.75rem auto 0;
+  line-height: 1.6;
+}
+
+/* ▰ Cards */
+.team-card {
+   border-radius: var(--box-radius);
+  overflow: hidden;
+  color: #fff;
+box-shadow: var(--shadow-section);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background-blend-mode: overlay;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+/* ▰ Avatar */
+.team-avatar {
+  /* width: 100px;
+  height: 100px; */
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #fff3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+      aspect-ratio: 2 / 2;
+    width: 140px;
+}
+.team-card:hover .team-avatar {
+  transform: scale(1.05);
+}
+
+/* ▰ Text */
+.team-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.team-card p {
+  color: #eee;
+}
+
+/* ▰ Social Icons */
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+.social-icons i {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  transition: 0.3s ease;
+  color: #fff;
+}
+.social-icons i:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+/* ▰ Gradients */
+.gradient-1 { background: linear-gradient(135deg, #a21caf, #f43f5e); }
+.gradient-2 { background: linear-gradient(135deg, #0ea5e9, #22d3ee); }
+.gradient-3 { background: linear-gradient(135deg, #4338ca, #4f46e5); }
+.gradient-4 { background: linear-gradient(135deg, #ec4899, #f59e0b); }
+
+/* ▰ Responsive Design */
+@media (max-width: 767.98px) {
+  .team-card {
+    flex-direction: column ;
+    align-items: center ;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .team-avatar {
+    margin-top: 1rem;
+  }
+  .social-icons {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}}
+</style>
+
+   <section class="portfolio-zigrow-section_1 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">Our Game Projects</h2>
+      <p class="section-subtitle">
+        Action RPG
+      </p>
+    </div>
+
+    <div class="row g-0">
+      <!-- Area Card -->
+    <div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1668606144076-8478f318a346?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY2NzQ4MDUwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Epic Adventure"
+    />
+    <div class="area-name">
+      <span>Epic Adventure</span>
+    </div>
+    <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@flipsnack?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Flipsnack
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1632210717345-fbeb22e22c4c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGFwcGxpY2F0aW9ufGVufDB8fHx8MTc2Njc0ODA1MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Puzzle Master"
+    />
+    <div class="area-name">
+      Puzzle Master
+    </div>
+   <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@visualbywahyu?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Visual Karsa
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NjY3NDgwNTB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Battle Arena"
+    />
+    <div class="area-name">
+      Battle Arena
+    </div>
+    <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@flowforfrank?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Ferenc Almasi
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+
+   <div class="col-12 col-md-4 col-lg-3">
+  <div class="area-card position-relative img-wrapper-center">
+    <img
+      src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxJVCUyMHByb2plY3R8ZW58MHx8fHwxNzY2NzQ4MDUwfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Space Explorer"
+    />
+    <div class="area-name">
+      Space Explorer
+    </div>
+   <div class="img-credit">
+      Photo by 
+     <a href="https://unsplash.com/@alvarordesign?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+
+        Alvaro Reyes
+      </a> on 
+     <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_1 {
+    background-color: #fff;
+  
+
+
+
+  .section-subtitle {
+    color: var( --lead-custom-color-mute);
+    font-size: var(--fs-sub);
+  }
+
+  .area-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .area-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .area-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .area-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+  }}
+</style>
+   <section class="testimonial-zigrow-section_9 section-padding"id="testimonials"  data-section="testimonials">
+  <div class="container">
+    <h2 class="text-custom-center  main-heading mb-custom-2">What Our Clients Say</h2>
+     <p class="para-muted text-custom-center font-subheading mb-custom-5">Discover how NextPlay Software transforms game development experiences.</p>
+    <div class="row justify-custom-center g-4">
+
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/Kv4g4kN0/1.png" class="client-img mb-custom-3" alt="Emily Carter"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Emily Carter</h5>
+            <p class="para-muted font-body-sm">
+              NextPlay Software has streamlined our development process, making it faster and more efficient. Their tools are a game-changer!
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/fWqV4WNm/10.png" class="client-img mb-custom-3" alt="James Lee"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">James Lee</h5>
+            <p class="para-muted font-body-sm">
+              The performance of NextPlay&#39;s software is outstanding. Our games run smoother than ever, and our team is thrilled.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/gk5Lhztm/2.png" class="client-img mb-custom-3" alt="Sophia Patel"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Sophia Patel</h5>
+            <p class="para-muted font-body-sm">
+              NextPlay Software&#39;s solutions are intuitive and powerful, allowing us to focus on creativity without worrying about technical issues.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/TPjKBrd3/3.png" class="client-img mb-custom-3" alt="Michael Brown"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Michael Brown</h5>
+            <p class="para-muted font-body-sm">
+              With NextPlay, we reduced our development time significantly. Their support and tools are truly top-notch.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/JhCyTTWF/4.png" class="client-img mb-custom-3" alt="Olivia Smith"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Olivia Smith</h5>
+            <p class="para-muted font-body-sm">
+              NextPlay Software has exceeded our expectations. The cross-platform capabilities have opened new opportunities for our projects.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-custom-center p-custom-4 h-custom-100">
+          <div class="img-wrapper-center"><img src="https://i.postimg.cc/RZH6Qk2f/5.png" class="client-img mb-custom-3" alt="Daniel Kim"></div>
+
+            <h5 class="fw-custom-bold mb-custom-2">Daniel Kim</h5>
+            <p class="para-muted font-body-sm">
+              The graphics rendering is incredible! NextPlay&#39;s software has elevated our game&#39;s visual quality tremendously.
+            </p>
+            <div class="star-rating mt-custom-3 ">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .testimonial-zigrow-section_9 {
+  background-color: #ffffff;
+
+.client-card {
+  background: #fff;
+   border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h5{
+    color: var(--secondary-colors);
+
+  }
+  p{
+    color: var(  --para-muted);
+  }
+}
+.client-card:hover {
+  transform: translateY(-6px);
+       box-shadow: var(--shadow-section-hover);
+}
+
+/* Image Styling */
+.client-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+   border-radius: var(--box-radius);
+     box-shadow: var(--shadow-section);
+  transition: transform 0.3s;
+}
+.client-card:hover .client-img {
+  transform: scale(1.05);
+}
+
+/* Star rating */
+.star-rating i {
+  color: var(--primary-colors);
+  font-size: 1.2rem;
+}
+
+/* Responsive text alignment fix for small-custom screens */
+@media(max-width: 575.98px){
+  .client-card {
+    padding: 2rem 1.5rem;
+  }
+}}
+
+</style>   <section class="pricing-zigrow-section_3 section-padding" id="pricing" data-section="pricing">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-custom-center mb-custom-5">
+      <span class="badge bg-custom-light border px-custom-3 py-custom-1 text-custom-dark fw-custom-normal mb-custom-3 text-custom-uppercase font-body">
+        Our Pricing 🪄
+      </span>
+      <h2 class="fw-custom-bold display-custom-6">Access Our Private Beta</h2>
+      <p class="para-muted font-subheading mt-custom-2 ">
+
+        Ideal for indie developers and small studios.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 justify-custom-center">
+
+      <!-- Free Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-custom-100">
+          <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+          <h5 class="fw-custom-semibold">Pay-as-you-go</h5>
+          <p class="para-muted font-body-sm mb-custom-3">  Ideal for indie developers and small studios.</p>
+          <div class="price-label">
+            <span class="display-custom-6 fw-custom-bold">₹0</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-custom-100 mt-custom-3 ">Build agent now →</a>
+          <ul class="features list-unstyled mt-custom-4 ">
+    
+            <li>
+              Access to basic tools
+            </li>
+            
+            <li>
+              Community support
+            </li>
+            
+            <li>
+              Regular updates
+            </li>
+            
+            <li>
+              Cross-platform compatibility
+            </li>
+            
+            <li>
+              Performance optimization
+            </li>
+            
+            <li>
+              User-friendly interface
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby Plan (Highlighted) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card featured h-custom-100 position-relative">
+          <div class="highlight-tag text-custom-center fw-custom-semibold font-body">
+            Our Recommendation ✨
+          </div>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h5 class="fw-custom-semibold">Hobby</h5>
+          <p class="para-muted font-body-sm mb-custom-3"> Perfect for growing studios and teams.</p>
+          <div class="price-label">
+            <span class="display-custom-6 fw-custom-bold">₹19</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-custom-100 mt-custom-3 ">Build agent now →</a>
+          <ul class="features list-unstyled mt-custom-4 ">
+            
+            <li>
+              Advanced development tools
+            </li>
+            
+            <li>
+              Priority support
+            </li>
+            
+            <li>
+              Enhanced graphics rendering
+            </li>
+            
+            <li>
+              Collaboration features
+            </li>
+            
+            <li>
+              Scalability options
+            </li>
+            
+            <li>
+              Customizable settings
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-custom-100">
+          <div class="icon-circle"><i class="fa-regular fa-gem"></i></div>
+          <h5 class="fw-custom-semibold">Premium</h5>
+          <p class="para-muted font-body-sm mb-custom-3"> Best for large projects and enterprises.</p>
+          <div class="price-label">
+            <span class="display-custom-6 fw-custom-bold">₹79</span>
+            <span class="para-muted font-body">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-custom-100 mt-custom-3 ">Build agent now →</a>
+          <ul class="features list-unstyled mt-custom-4 ">
+           
+            <li>
+              All-inclusive toolset
+            </li>
+            
+            <li>
+              Dedicated account manager
+            </li>
+            
+            <li>
+              Custom integrations
+            </li>
+            
+            <li>
+              Performance analytics
+            </li>
+            
+            <li>
+              Security features
+            </li>
+            
+            <li>
+              Unlimited access to resources
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.pricing-zigrow-section_3 {
+  background: #fff;
+  color: black;
+
+.btn{
+ border-radius: var(--border-radius-btn);
+}
+/* ===== Card Base ===== */
+.plan-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+     border-radius: var(--box-radius);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+     box-shadow: var(--shadow-section);
+}
+.plan-card h5 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.plan-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.plan-card .price-label {
+  margin-top: 1rem;
+}
+.plan-card .features {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+.plan-card .features li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.plan-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== Featured Plan ===== */
+.featured {
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+     box-shadow: var(--shadow-section);
+}
+.highlight-tag {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: var(--box-radius);
+  border-top-right-radius: var(--box-radius);
+}
+
+/* ===== Buttons ===== */
+.plan-card .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+ border-radius: var(--border-radius-btn);
+  transition: all 0.25s ease;
+}
+.plan-card .btn:hover {
+  transform: translateY(-2px);
+  
+     box-shadow: var(--shadow-section-hover);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 575.98px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+  .plan-card .features {
+    font-size: 0.8rem;
+  }
+}}
+</style>
+   <section class="faq-zigrow-section_3 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <div class="text-custom-start mb-custom-5">
+      <h2 class="main-heading">
+        <span>Explore Common Questions</span>
+      </h2>
+      <p class="font-subheading para-muted">
+        <span>Get instant answers to your common questions</span>
+      </p>
+    </div>
+
+    <div class="accordion" id="faqAccordion2">
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern0">
+          <button 
+            class="accordion-button "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern0"
+            aria-expanded="true"
+            aria-controls="collapseModern0"
+          >
+            <span>What does NextPlay Software offer?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingModern0"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>We provide advanced game development tools for developers and studios, focusing on performance and cross-platform compatibility.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern1">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern1"
+            aria-expanded="false"
+            aria-controls="collapseModern1"
+          >
+            <span>Who can use your software?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern1"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern1"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Our software is designed for game developers, studios, and businesses looking to create high-quality gaming experiences.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern2">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern2"
+            aria-expanded="false"
+            aria-controls="collapseModern2"
+          >
+            <span>Is your software cross-platform?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern2"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern2"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes, our solutions support cross-platform compatibility, allowing games to run smoothly on various devices.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern3">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern3"
+            aria-expanded="false"
+            aria-controls="collapseModern3"
+          >
+            <span>How does your software improve development time?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern3"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern3"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Our tools streamline the development process, enabling faster creation without sacrificing quality or stability.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern4">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern4"
+            aria-expanded="false"
+            aria-controls="collapseModern4"
+          >
+            <span>What platforms does your software support?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern4"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern4"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Our software is compatible with major platforms, including PC, consoles, and mobile devices for broad accessibility.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern5">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern5"
+            aria-expanded="false"
+            aria-controls="collapseModern5"
+          >
+            <span>Is technical support available?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern5"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern5"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes, we offer comprehensive technical support to assist users with any issues or questions regarding our software.</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-zigrow-section_3 {
+    background-color: #fff;
+  
+
+  .faq-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .faq-subtext {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    margin-top: 0.3rem;
+  }
+
+  /* Accordion Clean Style */
+  .accordion-button {
+    font-size: 1.2rem ;
+    color: #45505e ;
+    font-weight: 400 ;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #45505e ;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 ;
+  }
+
+  .accordion-button {
+    background-color: transparent ;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: none ;
+    padding: 1.25rem 0;
+  }
+
+  .accordion-body {
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    padding: 0 0 1rem;
+  }
+
+  .accordion-button::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #666;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E"); /* same gray icon */
+    border: 1px solid #666;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.5rem ;
+    }
+
+    .accordion-button {
+      font-size: 0.95rem ;
+      }}
+  }
+</style>
+   <section class="cta-zigrow-section_3 text-custom-white" id="cta" data-section="cta">
+  <div class="container px-lg-custom-5">
+    <div class="row g-4 g-lg-5 align-custom-center text-custom-lg-start text-custom-center">
+      <!-- Left Content -->
+      <div class="col-lg-6">
+        <div class="copy">
+          <span class="overline">Unlock your creative potential today!</span>
+          <h2 class="display mb-custom-3">Elevate Your Game Development</h2>
+          <p class="lead-custom font-body mb-custom-4">Join the NextPlay Software community and transform your game development experience. Discover tools that enhance performance and creativity for projects of any size.</p>
+
+      <div class="cta-actions d-inline-flex gap-2">
+  <a href="#" class="btn-solid primary-btn">
+    <span class="me-custom-2"><i class="bi bi-lightning-charge-fill "></i> </span>
+    Learn how we can help
+  </a>
+</div>
+
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6">
+        <div class="visual img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1607000975411-8b704cff63fc?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjYWxsJTIwdG8lMjBhY3Rpb258ZW58MHx8fHwxNzY2NzQ4MDUxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Recovery Help"
+            class="hero-img img-fluid"
+          />
+          <span class="img-credit">
+            Photo by
+            <a
+              href="https://unsplash.com/@brett_jordan?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Brett Jordan</a
+            >
+            on
+            <a
+              href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Unsplash</a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-zigrow-section_3 {
+    --brand: var(--theme-4);
+    --bg-custom-dark: var(--theme-3);
+
+    /* New smoother gradient */
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--bg-custom-dark) 92%, #000) 0%,
+        var(--bg-custom-dark) 100%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(255, 255, 255, 0.06),
+        transparent 70%
+      );
+
+    color: var(--theme-4);
+    padding: 4.5rem 0;
+    border-top: 1px solid var(--border-muted);
+    border-bottom: 1px solid var(--border-muted);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-zigrow-section_3 .copy {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .cta-zigrow-section_3 .overline {
+    display: inline-block;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 0.35rem;
+    color: color-mix(in srgb, var(--theme-4) 85%, #fff);
+  }
+  .cta-zigrow-section_3 .display {
+    font-size: clamp(1.9rem, 1.2rem + 2vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--theme-4);
+    margin: 0;
+  }
+  .cta-zigrow-section_3 .lead-custom {
+    color: color-mix(in srgb, var(--theme-4) 85%, #fff);
+  }
+
+
+  
+  .cta-zigrow-section_3 .btn-solid {
+    background: var(--theme-4);
+    color: var(--theme-3);
+  }
+  .cta-zigrow-section_3 .btn-solid i{
+   font-size: 1.1rem;
+   line-height: 1;
+  }
+  .cta-zigrow-section_3 .btn-solid:hover {
+    transform: translateY(-2px);
+  }
+ 
+
+  /* Visual wrapper */
+  .cta-zigrow-section_3 .visual {
+    position: relative;
+    width: min(420px, 100%); /* ✅ vertical card jaisa narrow */
+    margin-inline: auto;
+  }
+
+  .cta-zigrow-section_3 .hero-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 3/4; /* ✅ portrait ratio */
+    object-fit: cover; /* crop karega image ko */
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow-section);
+  }
+
+  .cta-zigrow-section_3 .img-credit {
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .cta-zigrow-section_3 .visual {
+      width: 100%;
+    }
+  }
+
+  /* Spacing + responsiveness */
+  @media (min-width: 992px) {
+    .cta-zigrow-section_3 .row {
+      align-items: center;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .cta-zigrow-section_3 {
+      padding: 3.2rem 0;
+    }
+    .cta-zigrow-section_3 .copy {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .cta-zigrow-section_3 .lead-custom {
+      font-size: 1rem;
+    }
+  }
+</style>
+   <section class="contact-zigrow-section_2 section-padding" id="contact" data-section="contact">
+  <div class="container">
+    <div class="row text-custom-center mb-custom-4 contact-info-boxes">
+      <div class="col-md-3 mb-custom-4 contact-box fade-in-up">
+        <div class="contact-icon"><i class="bi bi-geo-alt-fill " data-icon="geo"></i></div>
+        <h6 class="contact-title">Address</h6>
+        <p class="contact-text">123 Business St, City</p>
+      </div>
+      <div class="col-md-3 mb-custom-4 contact-box fade-in-up delay-1">
+        <div class="contact-icon"><i class="bi bi-telephone-fill " data-icon="telephone"></i></div>
+        <h6 class="contact-title">Call Us</h6>
+        <p class="contact-text">+91 00000 00000</p>
+      </div>
+      <div class="col-md-3 mb-custom-4 contact-box fade-in-up delay-2">
+        <div class="contact-icon"><i class="bi bi-envelope-fill "></i></div>
+        <h6 class="contact-title">General Enquiries</h6>
+        <p class="contact-text">contact@example.com</p>
+      </div>
+      <div class="col-md-3 mb-custom-4 contact-box fade-in-up delay-3">
+        <div class="contact-icon"><i class="bi bi-clock-fill "></i></div>
+        <h6 class="contact-title">Our Timings</h6>
+        <p class="contact-text">Mon - Sun: 10:00 AM - 07:00 PM</p>
+      </div>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div class="map-wrapper fade-in-up delay-4">
+      <div class="position-relative">
+
+
+        <div class="map-container text-center">
+  <a href="https://www.google.com/maps/search/?api=1&query=12.894370090902344%2C77.6343217148211"
+     target="_blank"
+     class="btn  primary-btn map-btn">
+    GET DIRECTIONS <i class="bi bi-arrow-right-short"></i>
+  </a>
+
+  <div data-component-maps style="width:100%; height:350px;">
+    <iframe
+      frameborder="0"
+    src="https://maps.google.com/maps?q=12.894370090902344%2C77.6343217148211&z=14&t=q&output=embed"
+      width="100%"
+      height="100%"
+      style="width:100%; height:100%; left:0"
+      loading="lazy"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .contact-zigrow-section_2 {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .contact-zigrow-section_2 .contact-box {
+    padding: 20px;
+    transition: all 0.4s ease;
+  }
+
+  .contact-zigrow-section_2 .contact-box:hover {
+    transform: translateY(-5px);
+    background-color: #f9f9f9;
+    border-radius: var(--box-radius);
+  }
+
+  .contact-zigrow-section_2 .contact-icon {
+    font-size: 2rem;
+    color: var(--secondary-colors);
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-zigrow-section_2 .contact-box:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .contact-zigrow-section_2 .contact-title {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--secondary-colors);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-zigrow-section_2 .contact-text {
+    font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+    margin-top: 5px;
+  }
+
+  .contact-zigrow-section_2 .map-wrapper {
+    border-radius: var(--box-radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-section);
+  }
+
+  .contact-zigrow-section_2 .map-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    border: none;
+    padding: 8px 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .contact-zigrow-section_2 .map-btn:hover {
+    opacity: 0.9;
+
+
+    transform: translateY(-2px);
+  }
+
+  /* Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards ease-in-out;
+  }
+
+  .fade-in-up.delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .fade-in-up.delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  .fade-in-up.delay-3 {
+    animation-delay: 0.6s;
+  }
+
+  .fade-in-up.delay-4 {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>   <footer class="section-padding footer-zigrow-section_1" style="background-color: '#ffffff';" id="footer" data-section="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-md-5 mb-custom-4 mb-md-0">
+        <h5 class="fw-custom-bold link-title"><div data-logo="footer">NextPlay Software</div></h5>
+        <p class="subtext">Unlock powerful tools that enhance performance and creativity. Build stunning games faster with our reliable software solutions.</p>
+      </div>
+
+      <div class="col-md-1"><span class="d-none"></span></div>
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-custom-4 mb-md-0">
+        <h6 class="fw-custom-bold link-title">Quick Links</h6>
+        <ul class="list-unstyled links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 contact-links">
+        <h6 class="fw-custom-bold link-title">Contact Us</h6>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+
+    <hr  />
+
+    <p class="text-custom-center mt-custom-3  mb-custom-0 " style="color: #2a2a2a;">
+      &copy; 2025 NextPlay Software. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+ .footer-zigrow-section_1{
+    .subtext{
+      color: var(--para-muted);
+      font-size: var(--fs-body);
+    }
+
+    hr{
+      border-color: var(--border-muted) ;
+      opacity: 0.15;
+    }
+    .link-title{
+      color: var(--secondary-colors);
+    }
+    .links{
+      a{
+        color: var(--para-muted);
+        text-decoration: none;
+            font-size: var(--fs-body);
+      }
+    }
+
+    .contact-links{
+      p {
+        color: var(--para-muted);
+      }
+    }
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

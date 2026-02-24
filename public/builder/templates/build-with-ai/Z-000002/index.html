@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    V Gud Enterprise  - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #76b86b;
+      --secondary-colors: #1e1e1e;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #76b86b;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #76b86b;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Manrope !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #1e1e1e !important;
+      font-family: Inter !important;
+      border: 1px solid #1e1e1e !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #1e1e1e;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      V Gud Enterprise 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #76b86b;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+
+      
+         <!-- Minimal -->
+<section class=" hero-zigrow-section_9 d-flex align-items-center justify-content-center text-center" id="hero">
+  <div class="company-overlay"></div>
+
+  <div class="container">
+    
+
+    <p class="company-caption">
+      Discover Quality Food Products at V <span class="emphasis">Gud Enterprise</span>
+    </p>
+  </div>
+  <!-- 📸 Unsplash Credit -->
+<span class="img-credit">
+  Photo by 
+   <a 
+        href="https://unsplash.com/@jbrown1276?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jeff Brown
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</span>
+
+</section>
+<style>
+
+
+.hero-zigrow-section_9 {
+  background: url('https://images.unsplash.com/photo-1493134799591-2c9eed26201a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NTQ5Mjk0MjN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') no-repeat center center / cover;
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  color: #fff;
+
+
+.company-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  text-align: center;
+}
+
+.company-caption {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 auto;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+}
+
+.company-caption .emphasis {
+  background: linear-gradient(to right, var(--primary-colors), var(--primary-colors));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .company-caption {
+    font-size: 2.2rem;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .company-caption {
+    font-size: 1.6rem;
+  }
+
+  .company-caption .emphasis {
+    white-space: normal;
+  }
+}}
+
+</style>
+            
+               <!-- ==========  MINIMAL  ✨  ========== -->
+<style>
+:root {
+  --accent: #fff;        /* for headings & stat numbers */
+  --text-muted: #6b7280;
+  --text-base: #1e1e1e;
+  --section-bg: #ffffff;
+}
+
+/* ---------- Section wrapper ---------- */
+.about-zigrow-section_4 {
+  background: var(--section-bg);
+  color: var(--text-base);
+  /* padding: 0rem 0 0rem; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Typography ---------- */
+.about-zigrow-section_4 .headline {
+  font-size: clamp(2rem, 4vw + 1rem, 3.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin-bottom: 1.2rem;
+}
+
+.about-zigrow-section_4 .lead {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Skewed Image Frame ---------- */
+.about-zigrow-section_4 .skew-frame {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.about-zigrow-section_4 .skew-img {
+  width: 48%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.45s ease;
+}
+
+.about-zigrow-section_4 .skew-img img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.skew-img:hover {
+  transform: translateY(-6px);
+}
+
+.skew-img:hover img {
+  transform: scale(1.08);
+}
+
+/* ---------- Stats Section ---------- */
+.about-zigrow-section_4 .uniform-stats {
+  margin-top: 4rem;
+}
+
+.about-zigrow-section_4 .uniform-stats .stat {
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.about-zigrow-section_4 .uniform-stats .stat:hover {
+  transform: translateY(-5px);
+}
+
+.about-zigrow-section_4 .stat .value {
+  font-size: clamp(2rem, 5vw + 1rem, 3.4rem);
+  font-weight: 700;
+  color: var(--text-base);
+}
+
+.about-zigrow-section_4 .stat .label {
+  font-size: 1rem;
+  color: var(--para-muted);
+  line-height: 1.4;
+}
+
+/* ---------- Fade-Up Animation ---------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.no-js [data-animate] {
+  opacity: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .skew-frame {
+    margin: 2.5rem 0 0;
+  }
+  .skew-img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-zigrow-section_4 {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .about-zigrow-section_4 .headline {
+    font-size: 2rem;
+  }
+
+  .about-zigrow-section_4 .skew-frame {
+    gap: 0.8rem;
+  }
+
+  .about-zigrow-section_4 .skew-img {
+    width: 46%;
+  }
+
+  .about-zigrow-section_4 .uniform-stats .stat {
+    text-align: center;
+  }
+}
+</style>
+
+<!-- ==========  ✨ SECTION  ✨  ========== -->
+<section class=" about-zigrow-section_4 py-6" id="about">
+  <div class="container">
+    <!-- Text + Images -->
+    <div class="row align-items-center g-lg-5">
+      <div class="col-lg-6" data-animate>
+        <h2 class="headline section-heading">About V Gud</h2>
+
+        <p class="para-muted lead font-body">V Gud Enterprise is a leading food products distribution company dedicated to providing high-quality FMCG items to customers. We partner with various stores to ensure accessibility.</p>
+        <p class="para-muted lead font-body">Our mission is to connect consumers with the best food products available in the market. We pride ourselves on our extensive network and commitment to quality service.</p>
+        <p class="para-muted lead font-body">We ensure that all products meet high standards of quality and safety for our customers.</p>
+      </div>
+
+      <div class="col-lg-6" data-animate>
+        <div class="skew-frame">
+         <div class="skew-img position-relative">
+  <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3b3Jrc3BhY2V8ZW58MHx8fHwxNzU0OTI5NDIzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Image 1">
+  <div class="img-credit">
+    Photo by 
+       <a 
+        href="https://unsplash.com/@remyloz?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Remy_Loz
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+<div class="skew-img position-relative">
+  <img src="https://images.unsplash.com/photo-1493134799591-2c9eed26201a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NTQ5Mjk0MjN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Image 2">
+  <div class="img-credit">
+    Photo by 
+     <a 
+        href="https://unsplash.com/@jbrown1276?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jeff Brown
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="row uniform-stats gy-4 gx-md-5" data-animate>
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">100+</div>
+          <div class="label">We ensure that all products meet high standards of quality and safety for our customers.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">10+</div>
+          <div class="label">Our product range includes various FMCG items to cater to all customer needs.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">98%</div>
+          <div class="label">We prioritize customer satisfaction and strive to meet their expectations at every level.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">30k+</div>
+          <div class="label">Timely and efficient delivery services are at the core of our operations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+                  
+                     <!-- ░░  SERVICES – Dynamic Support-List Layout ░░ -->
+<section class=" py-6 service-zigrow-section_5" id="services">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- ◂ Left: Dynamic Headline ◂ -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h2 class="display-5 fw-bold support-heading">
+          <span class="main-heading d-inline-block mb-1">
+            Our Distribution Services
+          </span>
+        </h2>
+      </div>
+
+      <!-- ◂ Right: Subtitle + Services list ◂ -->
+      <div class="col-lg-6">
+        <p class="para-muted fs-6 mb-4">
+          Reliable and efficient food product distribution
+        </p>
+
+        <ul class="list-unstyled support-list">
+          
+            <li>
+              <span class="support-link d-inline-flex align-items-center gap-2">
+                <strong>
+                  Product Sourcing
+                </strong>
+             
+              </span>
+              <p class="small para-muted mt-1 mb-3 ps-4">
+                We source high-quality food products from trusted manufacturers to ensure freshness and quality for our customers.
+              </p>
+            </li>
+            
+            <li>
+              <span class="support-link d-inline-flex align-items-center gap-2">
+                <strong>
+                  Store Partnerships
+                </strong>
+             
+              </span>
+              <p class="small para-muted mt-1 mb-3 ps-4">
+                We partner with a variety of stores to make our products easily accessible to consumers across different regions.
+              </p>
+            </li>
+            
+            <li>
+              <span class="support-link d-inline-flex align-items-center gap-2">
+                <strong>
+                  Logistics Management
+                </strong>
+             
+              </span>
+              <p class="small para-muted mt-1 mb-3 ps-4">
+                Our logistics team ensures timely delivery and efficient management of inventory to meet customer demands.
+              </p>
+            </li>
+            
+            <li>
+              <span class="support-link d-inline-flex align-items-center gap-2">
+                <strong>
+                  Customer Support
+                </strong>
+             
+              </span>
+              <p class="small para-muted mt-1 mb-3 ps-4">
+                Our dedicated support team is available 24/7 to assist customers with inquiries and product information.
+              </p>
+            </li>
+            
+            <li>
+              <span class="support-link d-inline-flex align-items-center gap-2">
+                <strong>
+                  Market Insights
+                </strong>
+             
+              </span>
+              <p class="small para-muted mt-1 mb-3 ps-4">
+                We provide valuable market insights to our partners to help them make informed decisions about product offerings.
+              </p>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Section Background */
+  .service-zigrow-section_5 {
+    background: linear-gradient(135deg, #f9f9f9 0%, #eef2f7 100%);
+    padding-block: 5.5rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  
+
+  /* Dynamic Heading */
+  .support-heading {
+    line-height: 1.25;
+  }
+
+  @media(max-width:768px) {
+    .support-heading {
+      font-size: 2rem;
+    }
+  }
+
+  /* Service List */
+  .support-list {
+    padding-left: 0;
+  }
+
+  .support-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .support-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .55rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-colors);
+    transition: all .3s ease;
+  }
+
+  .support-link {
+    color: var(--primary-colors);
+    font-weight: 600;
+    transition: color .25s;
+  }
+
+  .support-link:hover {
+    color: var(--primary-colors);
+    text-decoration: none;
+  }
+
+
+  /* Radial Glow */
+  .support-system-section::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #6fc5e7 0%, transparent 70%);
+    filter: blur(100px);
+    opacity: .25;
+    z-index: -1;
+  }}
+</style>
+                        
+                          
+                                 <!-- ✅ Certified Excellence Section -->
+<section class="product-zigrow-section_3 py-6"  id="products">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-7">
+        <p class="sub-heading"> Products We Offer</p>
+        <h2 class=" lh-sm mb-3 main-heading" ">Our Product Range</h2>
+      </div>
+      <div class="col-md-5 text-md-end">
+        <p class="para-muted small mb-2">
+         Explore our diverse FMCG offerings <br>
+         Discover a variety of delicious snacks perfect for any occasion.
+        </p>
+        <div class="link-group">
+          <a href="#" class="link-red ms-4">Explore Beverages <span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card -->
+      <div class="col-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+         
+<img src="https://images.unsplash.com/photo-1646766361123-a3103dc2eb00?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwzfHx0ZWNobm9sb2d5JTIwZ2FkZ2V0c3xlbnwwfHx8fDE3NTQ5Mjk0MjR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+
+  <span class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@allysphotos?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Alicia Christin Gerald
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </span>
+
+
+          <div class="service-info">
+            <span class="service-title">Snacks</span>
+           <div class="icon-circle bg-dark text-white">
+              <span class="arrow">&uarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat cards with different content -->
+      <div class="col-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+         
+<img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBzdXBwbGllc3xlbnwwfHx8fDE3NTQ5Mjk0MjR8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+
+  <span class="img-credit">
+    Photo by 
+     <a 
+        href="https://unsplash.com/@punttim?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Tim Gouw
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </span>
+
+
+          <div class="service-info">
+            <span class="service-title">Beverages</span>
+            <div class="icon-circle bg-dark text-white">
+              <span class="arrow">&uarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+       
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzU0OTI5NDI0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+
+  <span class="img-credit">
+    Photo by 
+      <a 
+        href="https://unsplash.com/@ka_idris?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Kam Idris
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </span>
+
+
+          <div class="service-info">
+            <span class="service-title">Dairy Products</span>
+            <div class="icon-circle bg-dark text-white">
+              <span class="arrow">&uarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+        
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwdG9vbHN8ZW58MHx8fHwxNzU0OTI5NDIzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+
+  <span class="img-credit">
+    Photo by 
+      <a 
+        href="https://unsplash.com/@marvelous?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Marvin Meyer
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </span>
+
+
+          <div class="service-info">
+            <span class="service-title">Frozen Foods</span>
+            <div class="icon-circle bg-dark text-white">
+              <span class="arrow">&uarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2-4">
+        <div class="service-card">
+        
+<img src="https://images.unsplash.com/photo-1620987278429-ab178d6eb547?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzU0OTI5NDI0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="service-img" alt="">
+
+
+  <span class="img-credit">
+    Photo by 
+      <a 
+        href="https://unsplash.com/@frostroomhead?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Rodion Kutsaiev
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </span>
+
+          <div class="service-info">
+            <span class="service-title">Condiments</span>
+            <div class="icon-circle bg-dark text-white">
+              <span class="arrow">&uarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.product-zigrow-section_3 {
+  background-color: #fefefe;
+
+.sub-heading {
+  font-size: 0.9rem;
+  color: var(--para-muted);
+  letter-spacing: .03em;
+  margin-bottom: 0.3rem;
+}
+.link-group a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #76b86b;
+  transition: all 0.3s ease;
+}
+.link-group a:hover {
+  text-decoration: underline;
+}
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+  transition: transform .3s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+}
+.service-img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.8);
+  transition: filter .3s ease, transform .3s ease;
+}
+.service-card:hover .service-img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.05);
+}
+
+.service-card:hover{
+  .service-title{
+    color: #fff;
+  }
+
+  .icon-circle{
+    background: #76b86b;
+  }
+}
+.service-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+}
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+/* Responsive col fix for 5 cards */
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}}
+</style>
+
+                                    
+                                      
+                                            
+                                                  
+                                                        
+                                                              
+                                                                    
+                                                                          
+                                                                                 <!-- 🧩 Minimal Collaboration CTA -->
+<section  class="py-6 contact-zigrow-section_1" id="contact">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-start">
+
+      <!-- headline -->
+      <div class="col-12 col-lg-6">
+        <h1 class="headline lh-sm fw-semibold">
+          Let’s<br>collaborate<span class="dot">.</span>
+        </h1>
+      </div>
+
+      <!-- socials + contact -->
+      <div class="col-12 col-lg-5 ms-lg-auto">
+
+        <h6 class="social-heading mb-3">Connect</h6>
+        <div class="social-wrap d-flex gap-3 mb-5">
+          <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+          <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="contact-stack">
+          <div class="contact-block mb-4">
+            <span class="label">ADDRESS</span>
+            <p class="detail mb-0">123 Business St, City</p>
+          </div>
+          <div class="contact-block mb-4">
+            <span class="label">EMAIL</span>
+            <p class="detail mb-0">contact@example.com</p>
+          </div>
+          <div class="contact-block">
+            <span class="label">PHONE</span>
+            <p class="detail mb-0">+91 00000 00000</p>
+          </div>
+        </div>
+
+      </div><!-- /right -->
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== tokens ===== */
+:root{
+  --bg:      #ffffff;            /* canvas */
+  --text:    #1e1e1e;  /* navy-ish */
+  --accent:  #1e1e1e;  /* brand accent */
+  --stroke:  rgba(0,0,0,.18);
+}
+
+/* ===== section ===== */
+.contact-zigrow-section_1{
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--stroke);
+
+
+/* ===== headline ===== */
+.headline{
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+.headline .dot{
+  color: var(--accent);
+}
+
+/* ===== socials ===== */
+.social-btn{
+  width:48px;height:48px;display:grid;place-content:center;
+  font-size:1.15rem;
+  color:var(--text);
+  border:1px solid var(--stroke);
+  border-radius:50%;
+  text-decoration: none;
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.social-btn:hover{
+  background:black;
+  color:#fff;
+  transform:translateY(-3px);
+}
+
+/* ===== labels & copy ===== */
+.label{
+  font-size:.9rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  color:var(--accent);
+  margin-bottom:.3rem;
+}
+.detail{
+  font-size:.95rem;
+  line-height:1.6;
+  max-width:28ch;
+}
+.social-heading{
+  font-size:1rem;
+  font-weight:600;
+  color:var(--accent);
+}
+
+/* ===== responsive ===== */
+@media(max-width:991.98px){
+  .headline{font-size:clamp(2.4rem,10vw,5rem);}
+}
+}
+</style>
+                                                                                    
+                                                                                      
+                                                                                        
+<footer class="footer-zigrow-section_5">
+  <div class="container">
+    <div class="border-top pt-3 pb-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <!-- Left -->
+      <div class="text-muted small mb-2 mb-md-0">
+        © 2025. All rights reserved.
+      </div>
+      
+      <!-- Right: Legal Links -->
+      <div class="footer-links d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-zigrow-section_5 {
+    background-color: #fff;
+    
+    font-size: 0.9rem;
+  
+
+  .simple-footer .border-top {
+    border-color: #e4e4e4 !important;
+  }
+
+  .footer-links a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .footer-links a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+
+  @media (max-width: 575.98px) {
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .simple-footer .d-flex {
+      text-align: center;
+    }
+  }}
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

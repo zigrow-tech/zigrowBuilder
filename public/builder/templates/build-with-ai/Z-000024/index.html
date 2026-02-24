@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Agro India - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #346978;
+      --secondary-colors: #3c3c3c;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #346978;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #346978;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Montserrat !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #3c3c3c !important;
+      font-family: Epilogue !important;
+      border: 1px solid #3c3c3c !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #3c3c3c;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold " href="#">
+      Agro India
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #346978;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+
+      
+         <!-- Minimal -->
+
+<section class=" hero-zigrow-section_8 text-center d-flex align-items-center justify-content-center">
+  <div class="container">
+    
+
+    <p class="intro-text">
+      Empowering Farmers with Financial Support <span class="highlight">and Resources</span>
+    </p>
+  </div>
+</section>
+<style>
+
+
+.hero-zigrow-section_8 {
+  min-height: 95vh;
+  padding: 60px 20px;
+  background: radial-gradient(ellipse at top right, #f0f0ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+
+.intro-text {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+  margin: 0 auto;
+  max-width: 820px;
+  text-wrap: balance;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  background: linear-gradient(to right, var(--primary-colors), var(--secondary-colors));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .intro-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 2rem;
+  }
+
+  .highlight {
+    white-space: normal;
+  }
+}}
+
+</style>
+            
+               <!-- ==========  MINIMAL  ✨  ========== -->
+<style>
+:root {
+  --accent: #fff;        /* for headings & stat numbers */
+  --text-muted: #6b7280;
+  --text-base: #3c3c3c;
+  --section-bg: #ffffff;
+}
+
+/* ---------- Section wrapper ---------- */
+.about-zigrow-section_4 {
+  background: var(--section-bg);
+  color: var(--text-base);
+  /* padding: 0rem 0 0rem; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Typography ---------- */
+.about-zigrow-section_4 .headline {
+  font-size: clamp(2rem, 4vw + 1rem, 3.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin-bottom: 1.2rem;
+}
+
+.about-zigrow-section_4 .lead {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Skewed Image Frame ---------- */
+.about-zigrow-section_4 .skew-frame {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.about-zigrow-section_4 .skew-img {
+  width: 48%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.45s ease;
+}
+
+.about-zigrow-section_4 .skew-img img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.skew-img:hover {
+  transform: translateY(-6px);
+}
+
+.skew-img:hover img {
+  transform: scale(1.08);
+}
+
+/* ---------- Stats Section ---------- */
+.about-zigrow-section_4 .uniform-stats {
+  margin-top: 4rem;
+}
+
+.about-zigrow-section_4 .uniform-stats .stat {
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.about-zigrow-section_4 .uniform-stats .stat:hover {
+  transform: translateY(-5px);
+}
+
+.about-zigrow-section_4 .stat .value {
+  font-size: clamp(2rem, 5vw + 1rem, 3.4rem);
+  font-weight: 700;
+  color: var(--text-base);
+}
+
+.about-zigrow-section_4 .stat .label {
+  font-size: 1rem;
+  color: var(--para-muted);
+  line-height: 1.4;
+}
+
+/* ---------- Fade-Up Animation ---------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.no-js [data-animate] {
+  opacity: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .skew-frame {
+    margin: 2.5rem 0 0;
+  }
+  .skew-img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-zigrow-section_4 {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .about-zigrow-section_4 .headline {
+    font-size: 2rem;
+  }
+
+  .about-zigrow-section_4 .skew-frame {
+    gap: 0.8rem;
+  }
+
+  .about-zigrow-section_4 .skew-img {
+    width: 46%;
+  }
+
+  .about-zigrow-section_4 .uniform-stats .stat {
+    text-align: center;
+  }
+}
+</style>
+
+<!-- ==========  ✨ SECTION  ✨  ========== -->
+<section class=" about-zigrow-section_4 py-6" id="about">
+  <div class="container">
+    <!-- Text + Images -->
+    <div class="row align-items-center g-lg-5">
+      <div class="col-lg-6" data-animate>
+        <h2 class="headline section-heading">About Agro India</h2>
+
+        <p class="para-muted lead font-body">Agro India is a dedicated farmer support company focused on providing financial assistance and agricultural machinery to enhance productivity and sustainability in farming.</p>
+        <p class="para-muted lead font-body">Our mission is to empower farmers by offering tailored financial solutions and access to modern agricultural tools, ensuring they can thrive in today&#39;s competitive market.</p>
+        <p class="para-muted lead font-body">We provide various loan options tailored to meet the diverse needs of farmers, ensuring they have the resources to grow their businesses.</p>
+      </div>
+
+      <div class="col-lg-6" data-animate>
+        <div class="skew-frame">
+         <div class="skew-img position-relative">
+  <img src="https://images.unsplash.com/photo-1744230673231-865d54a0aba4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxmYXJtJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NTQ4MTg0MzJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Image 1">
+  <div class="img-credit">
+    Photo by 
+       <a 
+        href="https://unsplash.com/@waqa231?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Waqar Mujahid
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+<div class="skew-img position-relative">
+  <img src="https://images.unsplash.com/photo-1531339094863-f764edf2eaad?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmYXJtJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1NDgxODQzMXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Image 2">
+  <div class="img-credit">
+    Photo by 
+     <a 
+        href="https://unsplash.com/@matreding?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mathias Reding
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="row uniform-stats gy-4 gx-md-5" data-animate>
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">100+</div>
+          <div class="label">We provide various loan options tailored to meet the diverse needs of farmers, ensuring they have the resources to grow their businesses.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">10+</div>
+          <div class="label">Access to modern agricultural machinery is crucial for productivity. We help farmers acquire the right tools for their needs.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">98%</div>
+          <div class="label">Our team of agricultural experts offers guidance and support to help farmers make informed decisions for their operations.</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="stat">
+          <div class="value">30k+</div>
+          <div class="label">We are committed to building a strong community of farmers, fostering collaboration and knowledge sharing among them.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+                  
+                     <section  class="py-5 position-relative overflow-hidden service-zigrow-section_3" id="services">
+
+  <div class="container text-center mb-5">
+    <h2 class="main-heading">
+      Our Comprehensive Services
+    </h2>
+    <p class="para-muted col-md-8 mx-auto">
+      Tailored solutions to support farmers in their agricultural journey.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+      
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+            
+<div class="mb-2">
+  <div class="icon-wrapper mx-auto mb-1">
+    <img
+      src="https://images.unsplash.com/photo-1710264144788-c2301607d735?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcm9wJTIwbWFuYWdlbWVudHxlbnwwfHx8fDE3NTQ4MTg0MzN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Loan Services icon"
+      class="service-icon"
+    />
+  </div>
+
+  
+    <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@hameedlodhra?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Abdul Hameed
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            <h5 class="fw-semibold mb-2">Loan Services</h5>
+            <p class="para-muted  mb-0">We offer a variety of loan options to meet the financial needs of farmers, ensuring they can invest in their agricultural ventures without financial strain.</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+            
+<div class="mb-2">
+  <div class="icon-wrapper mx-auto mb-1">
+    <img
+      src="https://images.unsplash.com/photo-1463667894739-c3fdf75bca6d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyZSUyMGNvbnN1bHRhbmN5fGVufDB8fHx8MTc1NDgxODQzMnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Machinery Leasing icon"
+      class="service-icon"
+    />
+  </div>
+
+  
+    <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@h3p?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hilthart Pedersen
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            <h5 class="fw-semibold mb-2">Machinery Leasing</h5>
+            <p class="para-muted  mb-0">Farmers can lease modern agricultural machinery from us, allowing them to enhance productivity without the burden of ownership costs.</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="service-card h-100 text-center p-4 p-lg-5 fade-in">
+            
+<div class="mb-2">
+  <div class="icon-wrapper mx-auto mb-1">
+    <img
+      src="https://images.unsplash.com/photo-1692369584496-3216a88f94c1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxpcnJpZ2F0aW9uJTIwc3lzdGVtc3xlbnwwfHx8fDE3NTQ4MTg0MzJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Consultation Services icon"
+      class="service-icon"
+    />
+  </div>
+
+  
+    <span class="unsplash-credit d-block text-muted" style="font-size: 0.65rem;">
+      Photo by 
+       <a 
+        href="https://unsplash.com/@lumin_osity?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Lumin Osity
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+            <h5 class="fw-semibold mb-2">Consultation Services</h5>
+            <p class="para-muted  mb-0">Our expert consultants provide personalized advice and strategies to help farmers optimize their operations and increase yields effectively.</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <!-- ░░ STYLES ░░ -->
+  <style>
+   .service-zigrow-section_3 {
+      background: #fff;
+      position: relative;
+    
+
+      .unsplash-credit {
+  font-size: 0.65rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.unsplash-credit a {
+  color: #6c757d;
+  text-decoration: underline;
+}
+
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      border: none;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+
+       h5 {
+        color: var(--lead-color-mute);
+      }
+
+      p {
+        color: var(--para-muted);
+      }
+    }
+
+   
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .icon-wrapper {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+      background: #fff;
+    }
+
+    .service-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 576px) {
+      .icon-wrapper {
+        width: 56px;
+        height: 56px;
+      }
+
+      .service-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* Scroll fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }}
+  </style>
+
+  <!-- ░░ JS: Scroll reveal ░░ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+
+      document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
+    });
+  </script>
+</section>
+
+                        
+                          
+                                
+                                      
+                                            
+                                                  
+                                                         <section class="testimonial-zigrow-section_1  py-6" id="testimonials">
+  <div class="container">
+    <h2 class="text-center section-title main-heading mb-5">What Our Clients Say </h2>
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+            src="https://i.postimg.cc/yx8tdM89/1.png"
+            alt="Client 1"
+          />
+          <h5 class="client-name">Rajesh Kumar</h5>
+          <p class="client-text">
+       Agro India has transformed my farming business. The financial support I received allowed me to purchase better equipment and increase my yield significantly.
+          </p>
+               <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+           src="https://i.postimg.cc/Qt0YRfJM/10.png"
+            alt="Client 2"
+          />
+         <h5 class="client-name">Sita Devi</h5>
+          <p class="client-text">
+       The consultation services provided by Agro India helped me understand the best practices for sustainable farming. I am grateful for their support.
+          </p>
+              <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="testimonial-card">
+          <img
+           src="https://i.postimg.cc/Y2dTVCdx/2.png"
+            alt="Client 3"
+          />
+           <h5 class="client-name">Anil Singh</h5>
+          <p class="client-text">
+       Thanks to Agro India, I was able to lease modern machinery that has drastically improved my productivity and efficiency on the farm.
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_1 {
+    background-color: #fff;
+    color: #222;
+  
+
+  .section-title {
+    font-weight: 700;
+  }
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+
+  /* Smooth, elevated shadow */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  /* Slightly deeper shadow on hover */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .client-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .client-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .stars {
+    color: rgb(255, 196, 0); /* Custom star color (orange-ish), change as needed */
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .stars i {
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover .stars i {
+    transform: scale(1.2);
+  }}
+</style>
+
+                                                            
+                                                              
+                                                                    
+                                                                          
+                                                                                 <!-- 🧩 Minimal Collaboration CTA -->
+<section  class="py-6 contact-zigrow-section_1" id="contact">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-start">
+
+      <!-- headline -->
+      <div class="col-12 col-lg-6">
+        <h1 class="headline lh-sm fw-semibold">
+          Let’s<br>collaborate<span class="dot">.</span>
+        </h1>
+      </div>
+
+      <!-- socials + contact -->
+      <div class="col-12 col-lg-5 ms-lg-auto">
+
+        <h6 class="social-heading mb-3">Connect</h6>
+        <div class="social-wrap d-flex gap-3 mb-5">
+          <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+          <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="contact-stack">
+          <div class="contact-block mb-4">
+            <span class="label">ADDRESS</span>
+            <p class="detail mb-0">123 Business St, City</p>
+          </div>
+          <div class="contact-block mb-4">
+            <span class="label">EMAIL</span>
+            <p class="detail mb-0">agraoindia@gmail.com</p>
+          </div>
+          <div class="contact-block">
+            <span class="label">PHONE</span>
+            <p class="detail mb-0">9900887766</p>
+          </div>
+        </div>
+
+      </div><!-- /right -->
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== tokens ===== */
+:root{
+  --bg:      #ffffff;            /* canvas */
+  --text:    #3c3c3c;  /* navy-ish */
+  --accent:  #3c3c3c;  /* brand accent */
+  --stroke:  rgba(0,0,0,.18);
+}
+
+/* ===== section ===== */
+.contact-zigrow-section_1{
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--stroke);
+
+
+/* ===== headline ===== */
+.headline{
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+.headline .dot{
+  color: var(--accent);
+}
+
+/* ===== socials ===== */
+.social-btn{
+  width:48px;height:48px;display:grid;place-content:center;
+  font-size:1.15rem;
+  color:var(--text);
+  border:1px solid var(--stroke);
+  border-radius:50%;
+  text-decoration: none;
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.social-btn:hover{
+  background:black;
+  color:#fff;
+  transform:translateY(-3px);
+}
+
+/* ===== labels & copy ===== */
+.label{
+  font-size:.9rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  color:var(--accent);
+  margin-bottom:.3rem;
+}
+.detail{
+  font-size:.95rem;
+  line-height:1.6;
+  max-width:28ch;
+}
+.social-heading{
+  font-size:1rem;
+  font-weight:600;
+  color:var(--accent);
+}
+
+/* ===== responsive ===== */
+@media(max-width:991.98px){
+  .headline{font-size:clamp(2.4rem,10vw,5rem);}
+}
+}
+</style>
+                                                                                    
+                                                                                      
+                                                                                        
+<footer class="footer-zigrow-section_5">
+  <div class="container">
+    <div class="border-top pt-3 pb-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <!-- Left -->
+      <div class="text-muted small mb-2 mb-md-0">
+        © 2025. All rights reserved.
+      </div>
+      
+      <!-- Right: Legal Links -->
+      <div class="footer-links d-flex gap-3">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-zigrow-section_5 {
+    background-color: #fff;
+    
+    font-size: 0.9rem;
+  
+
+  .simple-footer .border-top {
+    border-color: #e4e4e4 !important;
+  }
+
+  .footer-links a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .footer-links a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+
+  @media (max-width: 575.98px) {
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .simple-footer .d-flex {
+      text-align: center;
+    }
+  }}
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

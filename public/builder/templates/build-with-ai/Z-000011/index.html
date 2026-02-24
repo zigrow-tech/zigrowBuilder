@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    PranaFlow Yoga by Ankita - Website
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+      :root {
+      --para-muted: #4b5563;
+      --border-muted: #f5f5f5;
+      --lead-color-mute: #474747;
+      --primary-colors: #7e3964;
+      --secondary-colors: #1A120B;
+      --theme-3: #000000;
+      --theme-4: #fff;
+    }
+
+
+    body {
+      background-color: white;
+      color: var(--para-muted) !important;
+      font-family: Source Serif Pro;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+      /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: 16px;
+    }
+
+    .font-body-sm {
+      font-size: 14px;
+    }
+
+    .font-subheading {
+      font-size: 18px;
+    }
+
+    .font-heading {
+      font-size: 24px;
+    }
+
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .font-body {
+        font-size: 15px;
+      }
+
+      .font-subheading {
+        font-size: 17px;
+      }
+
+      .font-heading {
+        font-size: 22px;
+      }
+    }
+
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .font-body {
+        font-size: 14px;
+      }
+
+      .font-subheading {
+        font-size: 16px;
+      }
+
+      .font-heading {
+        font-size: 20px;
+      }
+    }
+
+    .primary-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: #7e3964;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #7e3964;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+         .white-btn {
+  background-color: #fff;
+  color: black; /* or your primary theme color */
+  border: 2px solid transparent;
+  padding: 0.85rem 2.2rem;
+  text-decoration: none !important;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Second button: outlined white */
+.white-outline-btn {
+  background-color: transparent;
+  color: #fff;
+   font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  padding: 0.85rem 2.2rem;
+}
+
+.white-outline-btn:hover {
+  background-color: #fff;
+  color: black; /* make it match first btn's text */
+}
+
+        .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 3rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: Source Serif Pro !important;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+
+    .btn-border-primary_dark {
+      background-color: transparent !important;
+      color: #1A120B !important;
+      font-family: Manrope !important;
+      border: 1px solid #1A120B !important;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+      outline: none !important;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .main-heading {
+      font-weight: 700;
+      color: #1A120B;
+      font-size: 2.3rem;
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+      #whatsappBtn {
+    position: fixed;
+    bottom: 90px; /* Back to top button के ऊपर */
+    right: 30px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 8px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  #whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    #whatsappBtn {
+      font-size: 1.6rem;
+      padding:6px 10px;
+      bottom: 90px;
+      right: 30px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+
+  <!-- Main content -->
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      PranaFlow Yoga by Ankita
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#about">About</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#services">Services</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#testimonials">Testimonials</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#faq">Faq</a>
+          </li>
+        
+        <li class="nav-item ms-lg-3">
+          <a href="#contact" class="btn primary-btn py-2 px-4">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #7e3964;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #7e3964;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+      
+         <section id="hero" class="hero-zigrow-section_3">
+  <div class="hero-content container">
+    <div class="hero-left col-md-6">
+      <h1 class="hero-heading">Transform Your Life with PranaFlow Yoga Classes</h1>
+      <p class="hero-subtitle">Join our beginner-friendly yoga classes focused on alignment, breathwork, pain relief, and flexibility in Vikas Puri, Delhi.</p>
+      <a href="#contact" class="btn hero-btn-primary px-4 py-2 text-center"
+        >Get Started</a
+      >
+    </div>
+    <div class="hero-right col-md-6">
+      <div class="position-relative d-inline-block">
+        <img
+          src="https://images.unsplash.com/photo-1722407348642-3319d283687a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtZWRpY2FsJTIwb2ZmaWNlfGVufDB8fHx8MTc1NTkzMTA4NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+          alt="Dream House"
+          class="img-fluid"
+        />
+        
+        <span class="img-credit">
+          Photo by
+          <a
+            href="https://unsplash.com/@adiptaagung_w?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Adiptalk
+          </a>
+          on
+          <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Unsplash
+          </a>
+        </span>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative SVG Wave -->
+  <svg class="hero-wave-svg" viewBox="0 0 1440 320">
+    <path
+      fill="#fff"
+      fill-opacity="1"
+      d="M0,224L48,202.7C96,181,192,139,288,133.3C384,128,480,160,576,160C672,160,768,128,864,128C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    ></path>
+  </svg>
+</section>
+
+<style>
+  /* Section Background */
+  .hero-zigrow-section_3 {
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      #1A120B,
+      #7e3964
+    );
+    color: white;
+    overflow: hidden;
+    padding: 4rem 2rem 20rem;
+
+    /* Flex container */
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Left Content */
+    .hero-left {
+      flex: 1 1 50%;
+      max-width: 600px;
+    }
+
+    .hero-heading {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .hero-heading span {
+      color: #7e3964;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+      color: #fff;
+    }
+
+    .hero-btn-primary {
+      background-color: #fff;
+      color: #1A120B;
+      border-radius: 30px;
+      border: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .hero-btn-primary:hover {
+      background-color: ;
+      color: ;
+      transform: scale(1.05);
+    }
+
+    /* Search Bar */
+    .hero-search {
+      display: flex;
+      background: white;
+      border-radius: 50px;
+      overflow: hidden;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Right Side Image */
+    .hero-right {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+
+    .hero-right img {
+      max-width: auto;
+      max-height: 400px;
+      border-radius: 1rem;
+      /* aspect-ratio: 5/3; */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Wave */
+    .hero-wave-svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-left,
+      .hero-right {
+        flex: 1 1 100%;
+      }
+      .hero-heading {
+        font-size: 2rem;
+      }
+    }
+  }
+</style>
+
+
+            
+               <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_3 py-6" id="about">
+  <div class="container">
+    <div class="row g-0 align-items-center">
+
+      <!-- Left: Image with overlay -->
+      <div class="col-lg-6 img-holder">
+        <div class="img-layer">
+        <div class="img-bg">
+
+
+            <img src="https://images.unsplash.com/photo-1516841273335-e39b37888115?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVhbXxlbnwwfHx8fDE3NTU5MzEwODV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="About us image" />
+            <span class="img-overlay"></span>
+            <span class="img-credit">
+              Photo by  <a 
+        href="https://unsplash.com/@lcma1028?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Luis Melendez
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+            </span>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6 d-flex justify-content-center align-items-center">
+        <div class="content p-4 p-lg-5">
+          <h1 class="display-title mb-4">
+            <span>About PranaFlow Yoga</span>
+          </h1>
+
+          <p class="mb-3 para-muted font-body">PranaFlow Yoga by Ankita is dedicated to providing a holistic approach to wellness through yoga. Our classes are designed for all levels, focusing on alignment and breath.</p>
+          <p class="mb-4 para-muted font-body">With a certified instructor, we offer personalized attention to help you achieve your wellness goals. Join us to experience the benefits of yoga in a supportive environment.</p>
+
+          <a href="#contact" class="primary-btn btn-hover">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --hero-primary: #7e3964;
+      --hero-bg: #fff;
+      --hero-text: #1A120B;
+    }
+
+    .about-zigrow-section_3 {
+      background: var(--hero-bg);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    
+
+    .img-holder {
+      position: relative;
+      min-height: 500px;
+      height: 100%;
+    }
+
+    .img-bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+
+    .img-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .img-holder:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .img-overlay {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: background 0.4s ease;
+    }
+
+    .img-holder:hover .img-overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+      color: var(--hero-text);
+      max-width: 640px;
+      animation: fadeSlideIn 0.85s ease both;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .display-title span {
+      display: inline-block;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(to right, var(--hero-text), var(--hero-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content p {
+      line-height: 1.8;
+    }
+
+    /* CTA BUTTON */
+    .cta-btn {
+      padding: 0.85rem 2.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: var(--hero-primary);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px) saturate(140%);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+      color: #fff;
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 991.98px) {
+      .img-holder {
+        order: -1;
+      }
+
+      .img-bg img {
+        filter: grayscale(0);
+      }
+
+      .content {
+        padding-top: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  </style>
+</section>
+
+                  
+                     <!-- PROFESSIONAL -->
+
+<section class="py-6 service-zigrow-section_1" id="services"> 
+
+  <div class="container text-center mb-5">
+    <h2 class="main-heading">
+      Our Yoga Services
+    </h2>
+
+    <p class="col-md-8 mx-auto para-muted">
+      Explore a variety of yoga services tailored to your needs.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="row g-5"><!-- g-5 → larger gaps -->
+      
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll service-card" style="transition-delay:0.1s">
+       <div class="service-block_1 text-center rounded-4 h-100">
+  <div class="position-relative">
+    <img 
+      src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxtZWRpY2FsJTIwc2VydmljZXN8ZW58MHx8fHwxNzU1OTMxMDg2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+      class="service-icon mb-2"
+      alt="Group Yoga icon">
+    
+      <span class="img-credit">
+        Photo by 
+        <a 
+        href="https://unsplash.com/@hush52?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hush Naidoo Jade Photography
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+  </div>
+
+  <h5 class="fw-semibold mb-3">
+    Group Yoga
+  </h5>
+  <p class="para-muted small mb-0">
+    Join our group yoga classes, available both in-studio and online. Experience the energy of a community while practicing together.
+  </p>
+</div>
+
+        </div>
+        
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll service-card" style="transition-delay:0.2s">
+       <div class="service-block_1 text-center rounded-4 h-100">
+  <div class="position-relative">
+    <img 
+      src="https://images.unsplash.com/photo-1703449481095-bb99a6928f1d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHRoZXJhcGllc3xlbnwwfHx8fDE3NTU5MzEwODZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+      class="service-icon mb-2"
+      alt="Personal Training icon">
+    
+      <span class="img-credit">
+        Photo by 
+        <a 
+        href="https://unsplash.com/@jontyson?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jon Tyson
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+  </div>
+
+  <h5 class="fw-semibold mb-3">
+    Personal Training
+  </h5>
+  <p class="para-muted small mb-0">
+    Receive one-on-one training tailored to your specific needs. Perfect for those seeking personalized guidance and support.
+  </p>
+</div>
+
+        </div>
+        
+        <div class="col-md-6 col-lg-4 fade-in-on-scroll service-card" style="transition-delay:0.30000000000000004s">
+       <div class="service-block_1 text-center rounded-4 h-100">
+  <div class="position-relative">
+    <img 
+      src="https://images.unsplash.com/photo-1636249253913-40e83d5423e9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBhc3Nlc3NtZW50fGVufDB8fHx8MTc1NTkzMTA4Nnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" 
+      class="service-icon mb-2"
+      alt="Posture Correction icon">
+    
+      <span class="img-credit">
+        Photo by 
+        <a 
+        href="https://unsplash.com/@greg_rosenke?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Greg Rosenke
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+      </span>
+    
+  </div>
+
+  <h5 class="fw-semibold mb-3">
+    Posture Correction
+  </h5>
+  <p class="para-muted small mb-0">
+    Focus on correcting your posture through specialized sessions aimed at relieving pain and improving alignment.
+  </p>
+</div>
+
+        </div>
+        
+    </div>
+  </div>
+
+  <style>
+    /* section backdrop (theme fallback) + extra breathing room */
+    .service-zigrow-section_1 {
+      background: #fff;
+    
+
+    /* card */
+    .service-block_1 {
+      background: #fff !important;
+      border: 1px solid #eee;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
+      padding: 2.75rem 2rem;
+      /* ⬅️ deeper padding for a bolder feel */
+      transition: transform .3s ease, box-shadow .3s ease;
+      min-height: 290px;
+      border-radius: 15px;
+      /* ⬅️ ensures all cards are taller */
+    }
+
+    .service-block:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .08);
+    }
+
+    .service-card {
+      h5 {
+        color: var(--lead-color-mute);
+      }
+      p{
+         color: var(   --para-muted);
+      }
+    }
+
+    /* icon – slightly larger */
+    .service-icon {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+    }
+
+    /* reveal animation (unchanged) */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all .6s ease-out;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* responsive heading tweak */
+    @media(max-width:768px) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+  }
+  </style>
+
+  <script>
+    /* intersection-observer reveal (unchanged) */
+    document.addEventListener('DOMContentLoaded', () => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.fade-in-on-scroll').forEach(el => io.observe(el));
+    });
+  </script>
+</section>
+                        
+                          
+                                
+                                       <section class=" whyChooseUs-zigrow-section_6 py-6"id="whyChooseUs">
+  <div class="container h-100">
+    <div class="row align-items-center gx-lg-5 gy-5 h-100">
+
+      <!-- Left Column -->
+      <div class="col-lg-5">
+        <div class="section-header">
+          <span class="section-path">/ Why PranaFlow Yoga by Ankita</span>
+          <h2 class="section-title main-heading">Why Choose Us</h2>
+          <p class="section-subtitle">Discover the Benefits of Practicing with Us</p>
+          <p class="section-desc">At PranaFlow Yoga, we prioritize your wellness journey. Our experienced instructors, supportive community, and tailored classes ensure you receive the best yoga experience possible.</p>
+
+          <div class="cta-links mt-4">
+            <a href="#" class="cta-link">Join Now <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-7">
+        <div class="feature-box-grid">
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi bi-lightbulb"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Expert Guidance</h5>
+                <p class="feature-text">Our certified instructors provide personalized attention to help you achieve your goals.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi bi-clock"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Flexible Scheduling</h5>
+                <p class="feature-text">Choose from various class times to fit your busy lifestyle and commitments.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi bi-people"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Community Support</h5>
+                <p class="feature-text">Join a welcoming community that motivates and inspires you on your wellness journey.</p>
+              </div>
+            </div>
+          
+            <div class="feature-box">
+              <div class="icon-circle">
+                <i class="bi bi bi-heart"></i>
+              </div>
+              <div class="feature-content">
+                <h5 class="feature-title">Holistic Approach</h5>
+                <p class="feature-text">Experience a comprehensive approach to wellness that integrates mind, body, and spirit.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .whyChooseUs-zigrow-section_6 {
+  background: #ffffff;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+
+
+.section-path {
+  font-size: 0.85rem;
+  color:#1A120B;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--para-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--para-muted);;
+  max-width: 90%;
+  line-height: 1.7;
+}
+
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.cta-link {
+  color:#1A120B;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s ease;
+}
+
+.cta-link:hover {
+  color:#1A120B;
+}
+
+.feature-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon-circle {
+  font-size: 1.3rem;
+  color: #1A120B;
+  background: #f3f2fb;
+  padding: 14px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #1a1a2e;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+ color: #6b7280;
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .razor-difference-section {
+    padding: 60px 0;
+    min-height: unset;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .feature-box-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  }
+</style>
+                                          
+                                            
+                                                  
+                                                         <section class="testimonial-zigrow-section_9 py-6"id="testimonials">
+  <div class="container">
+    <h2 class="text-center section-title main-heading mb-2">Client Reviews</h2>
+     <p class="para-muted text-center lead mb-4">Hear from our satisfied clients about their experiences.</p>
+    <div class="row justify-content-center g-4">
+
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/yx8tdM89/1.png" class="client-img mb-3" alt="Riya Sharma">
+
+            <h5 class="fw-bold mb-2">Riya Sharma</h5>
+            <p class="para-muted small">
+              Ankita&#39;s classes have transformed my life. I feel more flexible and relaxed. Highly recommend her to anyone looking to start yoga!
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/Qt0YRfJM/10.png" class="client-img mb-3" alt="Vikram Singh">
+
+            <h5 class="fw-bold mb-2">Vikram Singh</h5>
+            <p class="para-muted small">
+              The personalized attention I received during my sessions helped me immensely. Ive seen significant improvements in my posture and flexibility.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="client-card text-center p-4 h-100">
+          <img src="https://i.postimg.cc/Y2dTVCdx/2.png" class="client-img mb-3" alt="Anjali Mehta">
+
+            <h5 class="fw-bold mb-2">Anjali Mehta</h5>
+            <p class="para-muted small">
+              PranaFlow Yoga is a wonderful place to practice. The community is supportive, and the classes are well-structured and enjoyable.
+            </p>
+            <div class="star-rating mt-3">
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+                <i class="bi bi-star-fill"></i>
+              
+            </div>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .testimonial-zigrow-section_9 {
+  background-color: #ffffff;
+
+.client-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h5{
+    color: var(--secondary-colors);
+
+  }
+  p{
+    color: var(  --para-muted);
+  }
+}
+.client-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.client-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.client-card:hover .client-img {
+  transform: scale(1.05);
+}
+
+/* Star rating */
+.star-rating i {
+  color: var(--primary-colors);
+  font-size: 1.2rem;
+}
+
+/* Responsive text alignment fix for small screens */
+@media(max-width: 575.98px){
+  .client-card {
+    padding: 2rem 1.5rem;
+  }
+}}
+
+</style>
+                                                            
+                                                               <section class="pricing-zigrow-section_3 py-6" id="pricing">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <span class="badge bg-light border px-3 py-1 text-dark fw-medium mb-3 text-uppercase small">
+        Our Pricing 🪄
+      </span>
+      <h2 class="fw-bold display-6">Access Our Private Beta</h2>
+      <p class="para-muted small mt-2">
+        Best value for beginners looking to explore yoga.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Free Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-heart"></i></div>
+          <h5 class="fw-semibold">Pay-as-you-go</h5>
+          <p class="para-muted small mb-3">  Best value for beginners looking to explore yoga.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹0</span>
+            <span class="para-muted small">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+    
+            <li>
+              Access to group classes
+            </li>
+            
+            <li>
+              Free 20-minute trial
+            </li>
+            
+            <li>
+              Flexible scheduling
+            </li>
+            
+            <li>
+              Expert instructor guidance
+            </li>
+            
+            <li>
+              Community support
+            </li>
+            
+            <li>
+              Online class options
+            </li>
+            
+            <li>
+              Monthly workshops
+            </li>
+            
+            <li>
+              Personalized feedback
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobby Plan (Highlighted) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card featured h-100 position-relative">
+          <div class="highlight-tag text-center fw-semibold small">
+            Our Recommendation ✨
+          </div>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h5 class="fw-semibold">Hobby</h5>
+          <p class="para-muted small mb-3"> Ideal for those wanting more personalized attention.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹19</span>
+            <span class="para-muted small">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+            
+            <li>
+              All group class benefits
+            </li>
+            
+            <li>
+              One personal training session
+            </li>
+            
+            <li>
+              Posture assessment
+            </li>
+            
+            <li>
+              Customized yoga plan
+            </li>
+            
+            <li>
+              Access to exclusive content
+            </li>
+            
+            <li>
+              Monthly progress check-ins
+            </li>
+            
+            <li>
+              Online and studio options
+            </li>
+            
+            <li>
+              Community events
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="plan-card h-100">
+          <div class="icon-circle"><i class="fa-regular fa-gem"></i></div>
+          <h5 class="fw-semibold">Premium</h5>
+          <p class="para-muted small mb-3"> Comprehensive plan for dedicated practitioners.</p>
+          <div class="price-label">
+            <span class="display-6 fw-bold">₹79</span>
+            <span class="para-muted small">/ Month</span>
+          </div>
+          <a href="#" class="btn btn-dark w-100 mt-3">Build agent now →</a>
+          <ul class="features list-unstyled mt-4">
+           
+            <li>
+              Unlimited group classes
+            </li>
+            
+            <li>
+              Four personal training sessions
+            </li>
+            
+            <li>
+              Therapeutic sessions included
+            </li>
+            
+            <li>
+              Access to all workshops
+            </li>
+            
+            <li>
+              Priority booking
+            </li>
+            
+            <li>
+              Exclusive member events
+            </li>
+            
+            <li>
+              Online and studio options
+            </li>
+            
+            <li>
+              Personalized wellness plan
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🎨 Custom Styles -->
+<style>
+.pricing-zigrow-section_3 {
+  background: #fff;
+  color: black;
+
+
+/* ===== Card Base ===== */
+.plan-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+  border-radius: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+}
+.plan-card h5 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.plan-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.plan-card .price-label {
+  margin-top: 1rem;
+}
+.plan-card .features {
+  text-align: left;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+.plan-card .features li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.plan-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: black;
+  font-weight: 600;
+}
+
+/* ===== Featured Plan ===== */
+.featured {
+  border: 2px solid #000;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+.highlight-tag {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ===== Buttons ===== */
+.plan-card .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+.plan-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 575.98px) {
+  .plan-card {
+    padding: 1.5rem;
+  }
+  .plan-card .features {
+    font-size: 0.8rem;
+  }
+}}
+</style>
+
+                                                                  
+                                                                     <section class=" faq-zigrow-section_2 py-6"id="faq">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-heading fw-bold text-uppercase">Commonly Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading0">
+            <button
+              class="accordion-button custom-accordion-btn "
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse0"
+              aria-expanded="true"
+              aria-controls="collapse0"
+            >
+              What should I bring to class?
+            </button>
+          </h2>
+          <div
+            id="collapse0"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading0"
+          >
+            <div class="accordion-body text-muted col-md-10">
+              Please bring a yoga mat, water bottle, and any props you may need. We provide additional mats if needed.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading1">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse1"
+              aria-expanded="false"
+              aria-controls="collapse1"
+            >
+              Are classes suitable for beginners?
+            </button>
+          </h2>
+          <div
+            id="collapse1"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading1"
+          >
+            <div class="accordion-body text-muted col-md-10">
+              Yes, all our classes are designed to be beginner-friendly. We focus on alignment and provide modifications for all levels.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading2">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse2"
+              aria-expanded="false"
+              aria-controls="collapse2"
+            >
+              How do I book a session?
+            </button>
+          </h2>
+          <div
+            id="collapse2"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading2"
+          >
+            <div class="accordion-body text-muted col-md-10">
+              You can book a session through our website or contact us directly via phone or email.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading3">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse3"
+              aria-expanded="false"
+              aria-controls="collapse3"
+            >
+              What if I miss a class?
+            </button>
+          </h2>
+          <div
+            id="collapse3"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading3"
+          >
+            <div class="accordion-body text-muted col-md-10">
+              If you miss a class, you can make it up in another session within the same month. Please inform us in advance.
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item border-0 mb-3">
+          <h2 class="accordion-header" id="heading4">
+            <button
+              class="accordion-button custom-accordion-btn collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse4"
+              aria-expanded="false"
+              aria-controls="collapse4"
+            >
+              Do you offer online classes?
+            </button>
+          </h2>
+          <div
+            id="collapse4"
+            class="accordion-collapse collapse "
+            data-bs-parent="#faqAccordion"
+            aria-labelledby="heading4"
+          >
+            <div class="accordion-body text-muted col-md-10">
+              Yes, we offer both in-studio and online classes to accommodate different preferences and schedules.
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-zigrow-section_2 {
+  background-color: #fff;
+
+
+.faq-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+/* Accordion button base */
+.accordion-button {
+  background-color: transparent !important;
+  color: #555 !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 1rem;
+  box-shadow: none !important;
+  border: 0 !important;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+/* Icon replacement: "+" by default */
+.accordion-button::after {
+  content: '+'; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-image: none !important;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+/* On open: change "+" to "–" */
+.accordion-button:not(.collapsed)::after {
+  content: '–';
+  color: #555;
+}
+
+/* Remove focus ring */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Accordion item container */
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  color: #000;
+}
+
+/* Accordion body content */
+.accordion-body {
+  font-size: 0.95rem;
+  padding: 0 1rem 1rem;
+  color: #444;
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Collapse border fix */
+.accordion-collapse {
+  border-top: none !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-button::after {
+    font-size: 1.25rem;
+  }
+}
+  }
+</style>
+                                                                        
+                                                                           <section class="cta-zigrow-section_1 position-relative text-white">
+  <div class="container h-100 d-flex align-items-center justify-content-center text-center" id="cta">
+    <div class="hero-content">
+      <h1 class="display-4 fw-bold mb-3">Ready to Start Your Journey?</h1>
+      <p class="lead mb-3">Join Us Today!</p>
+      <p class="mb-4 text-light small">Experience the transformative power of yoga with PranaFlow Yoga by Ankita. Sign up for a class or a free trial today!</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="primary-btn ">Contact Us</a>
+      </div>
+    </div>
+  </div>
+   <p class="img-credit text-white small position-absolute" style="bottom: 10px; right: 10px; z-index: 3;">
+  Photo by 
+  <a 
+        href="https://unsplash.com/@cipriann?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ciocan Ciprian
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+</p>
+
+</section>
+
+<style>
+  .cta-zigrow-section_1 {
+  background: url('https://images.unsplash.com/photo-1744807868759-b0be87385602?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxib29rJTIwYSUyMGNvbnN1bHRhdGlvbnxlbnwwfHx8fDE3NTU5MzEwODZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080') center/cover no-repeat;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  text-align: center;
+
+
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-content p.lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hero-content p.small {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-rescue {
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p.lead {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.small {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+  }
+</style>
+                                                                              
+                                                                                 <!-- 📮 Minimal Split Contact -->
+<section class="contact-zigrow-section_4 py-6" id="contact">
+  <div class="container-xl">
+    <div class="contact-grid shadow-sm rounded overflow-hidden">
+
+      <!-- ◼︎ Info -->
+      <div class="info p-5">
+        <h2 class="title mb-4">Get in touch</h2>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h6>Mailing address</h6>
+              <p>A-block, Vikas puri, New delhi</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h6>Email</h6>
+              <p>ankitasharma3434@gmail.com</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h6>Phone</h6>
+              <p>9112345678</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ◼︎ Image -->
+      <div class="hero"></div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ========== TOKENS ========== */
+  :root {
+    --stroke: rgba(0, 0, 0, .07);
+  }
+
+  /* ========== WRAPPER ========== */
+  .contact-zigrow-section_4 {
+    background: #fdfdfd
+  }
+    /* grid wrapper */
+    .contact-zigrow-section_4 .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--bg);
+    }
+
+    @media (max-width:991.98px) {
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ========== INFO SIDE ========== */
+    .contact-zigrow-section_4 .info .title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--secondary-colors);
+    }
+
+    /* list layout */
+    .contact-zigrow-section_4 .info ul li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+   .contact-zigrow-section_4  .info .icon {
+      color: var(--primary-colors);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-zigrow-section_4 .info h6 {
+      font-size: .8rem;
+      letter-spacing: .05em;
+      font-weight: 700;
+      color: var(--primary-colors);
+      margin-bottom: .25rem;
+    }
+
+   .contact-zigrow-section_4  .info p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--para-muted);
+    }
+
+    /* ========== HERO IMAGE ========== */
+    .contact-zigrow-section_4 .hero {
+      background: url('https://i.postimg.cc/XJCcgx1h/3.png') center/cover no-repeat;
+      min-height: 420px;
+    }
+
+    @media (max-width:767.98px) {
+       .contact-zigrow-section_4.info {
+        padding: 2.5rem 2rem;
+        text-align: center
+      }
+
+       .contact-zigrow-section_4 .hero {
+        min-height: 300px
+      }
+    }
+
+</style>
+                                                                                    
+                                                                                      
+                                                                                        
+<footer class="footer-zigrow-section_4 text-white pt-5">
+  <div class="container pb-4">
+    <div class="row gy-5">
+      <!-- Left Section -->
+      <div class="col-md-4">
+        <div class="d-flex align-items-center mb-3">
+         
+          <h5 class="mb-0 fw-bold footer-main_title">PranaFlow Yoga by Ankita</h5>
+        </div>
+        <p class="para-muted small mb-3">
+         Transform Your Life with PranaFlow Yoga Classes
+        </p>
+
+        <!-- Status Badge -->
+        <div class="system-status mt-2">
+          <span class=" bg-success"></span>
+        Connect with us
+        </div>
+        <!-- Social Icons -->
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="footer-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-md-8">
+        <div class="row">
+      <!-- Product -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Product</h6>
+  <ul class="footer-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Integrations</a></li>
+    <li><a href="#">Updates</a></li>
+  </ul>
+</div>
+        <!-- Company -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Company</h6>
+  <ul class="footer-links">
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+          <!-- Resources -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Resources</h6>
+  <ul class="footer-links">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Help Center</a></li>
+    <li><a href="#">Tutorials</a></li>
+    <li><a href="#">Case Studies</a></li>
+  </ul>
+</div>
+
+<!-- Legal -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Legal</h6>
+  <ul class="footer-links">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Cookie Policy</a></li>
+    <li><a href="#">Security</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar with Dark Background -->
+  <div class="footer-bottom py-4">
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between align-items-center small para-muted"
+    >
+      <div>    &copy; 2025. All rights reserved.</div>
+      <div class="mt-2 mt-md-0">
+        <a href="#" class="para-muted me-3">Privacy Policy</a>
+        <a href="#" class="para-muted me-3">Terms</a>
+        <a href="#" class="para-muted">Code of conduct</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+
+  .footer-zigrow-section_4 {
+    background-color: var(--theme-4);
+    border-top: 1px solid #1c1d20;
+    .footer-main_title{
+      color: var(--theme-3);
+    }
+  
+
+  .footer-bottom {
+    background-color: var(--theme-4);
+    border-top: 1px solid #1c1d20;
+    color: var(--theme-3) !important;
+
+    a {
+      color: var(--theme-3) !important;
+      text-decoration: none;
+    }
+  }
+
+  .para-muted{
+  color: var(--theme-3) !important;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+     color: var(--theme-3) !important;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+   color: var(--theme-3) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+  color: var(--theme-3) !important;
+  }
+
+  .footer-icon {
+  color: var(--theme-3) !important;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-icon:hover {
+     color: var(--theme-3) !important;
+  }
+
+  .system-status {
+    font-size: 1.05rem;
+  color: var(--theme-3) !important;
+    background-color: transparent;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+ 
+
+  @media (max-width: 768px) {
+    .footer-links {
+      padding-left: 0;
+    }
+  }}
+</style>
+
+                                                                                          
+</body>
+
+
+
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch('https://api.zigrow.com/api/import-template', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+        } else {
+          alert('Failed to import template to builder: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(() => {
+        alert('Failed to communicate with builder server.');
+      });
+  }
+</script>
+
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>

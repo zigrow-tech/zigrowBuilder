@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTech - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #242429;
+      --border-radius-btn: 8px;
+      --box-radius: 24px;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #7B2C3B;
+      --secondary-colors: #0F0F0F;
+      --territory-colors: #F2C94C;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 8px 16px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 1px 1px rgba(17,24,39,0.03), 0 9px 18px -8px rgba(17,24,39,0.12);
+      --btn-box-shadow-hover: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.14);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,0.04), 0 12px 22px -8px rgba(17,24,39,0.18);
+      --shadow-section-hover: 0 1px 1px rgba(17,24,39,0.05), 0 16px 28px -10px rgba(17,24,39,0.20);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 17.5px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 24px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #0F0F0F ;
+      font-family: Open Sans;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Lora ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #0F0F0F;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold " href="#">
+          EduTech
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-colors);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-colors);
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+</style>
+   <!-- Professional -->
+<section class=" hero-zigrow-section_10 d-flex align-custom-center justify-custom-center" id="hero" data-section="hero">
+  <!-- INNER BOX -->
+  <div class="hero-inner-box container position-relative text-custom-center pointer-custom-none">
+    
+    <!-- Decorative Badge -->
+    <img src="https://i.postimg.cc/SN3P9rtB/3.png" alt="badge" class="hero-badge">
+
+    <!-- Decorative Stars -->
+    <img src="https://i.postimg.cc/SsbqG41p/2.png" class="decor-star star-green" alt="star" />
+    <img src="https://i.postimg.cc/NFNWZvDF/5.png" class="decor-arrow " alt="star" />
+    <img src="https://i.postimg.cc/VNnPvTfZ/4.png" class="decor-star star-blue" alt="arrow" />
+
+    <!-- Headline -->
+    <h1 class="hero-title">
+      Unlock Your Learning Potential with EduTech
+    </h1>
+
+    <!-- Subtext -->
+    <p class="hero-subtext">
+       Access essential notes tailored for your educational journey. Simplify your studies and enhance your understanding with our comprehensive resources.
+    </p>
+
+    <!-- Buttons -->
+    <div class="hero-buttons d-flex justify-custom-center gap-3 mt-custom-4  flex-wrap">
+      <a href="#" class="primary-btn">Get Started →</a>
+      <a href="#" class="white-btn">Blog →</a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+
+/* Outer wrapper with border effect */
+.hero-zigrow-section_10 {
+  background-color: var(--primary-colors); /* soft purple */
+  padding: 16px;
+  min-height: 95vh;
+
+
+/* Inner box */
+.hero-inner-box {
+  background-color:black;
+     border-radius: var(--box-radius);
+  padding: 80px 20px;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-width: 98vw;
+}
+
+/* Headline */
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: white;
+  max-width: 900px;
+  margin: 4% auto;
+  line-height: 1.3;
+}
+
+.hero-title .hero-invest {
+  background: var(--blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .hero-invest::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 6px;
+  background: url('underline.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.05rem;
+  color: white;
+  max-width: 700px;
+  margin: 1.2rem auto 0;
+  line-height: 1.8;
+}
+
+
+
+/* Badge */
+.hero-badge {
+    position: absolute;
+    top: 26%;
+    left: 16%;
+    width: 62px;
+    z-index: 2;
+}
+
+/* Decorative Stars */
+.decor-star {
+  position: absolute;
+  width: 40px;
+}
+
+.star-green {
+    top: 60%;
+    left: 20%;
+}
+
+.star-blue {
+     top: 12%;
+    right: 23%;
+}
+
+/* Arrow */
+.decor-arrow {
+position: absolute;
+
+   top: 72%;
+        right: 32%;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge {
+    top: -25px;
+    left: 20px;
+    width: 60px;
+  }
+
+  .decor-star {
+    width: 24px;
+  }
+
+  .decor-arrow {
+    width: 40px;
+  }
+}}
+
+</style>   <!-- PROFESSIONAL -->
+
+<section class="about-zigrow-section_7 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row align-custom-center g-lg-5">
+      
+      <!-- ◀ Hero Image -->
+      <div class="col-12 col-lg-5 mb-custom-4 mb-lg-0">
+        <div class="hero-img-wrap rounded-4 overflow-hidden position-relative shadow img-wrapper-center">
+  <img
+    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2NzAyOTQ1N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    alt="Happy mother and child"
+    class="w-custom-100 h-custom-100 object-fit-cover"
+  />
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@marvelous?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Marvin Meyer
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+</div>
+
+      </div>
+
+      <!-- ▶ Content + Features -->
+      <div class="col-12 col-lg-7">
+        <div class="content-box rounded-4 p-custom-4 p-lg-custom-5 shadow-sm">
+          <h2 class="section-title main-heading mb-custom-3 text-custom-lg-start text-custom-center">
+            About EduTech
+          </h2>
+
+          <p class="para-muted mb-custom-4 text-custom-lg-start text-custom-center font-body">
+            At EduTech, we understand the importance of quality educational resources. Our platform provides essential notes that help students succeed in their studies. With a focus on clarity and accessibility, EduTech is dedicated to making learning easier and more effective for everyone. Join us to enhance your educational journey.
+          </p>
+
+      
+
+          <div class="row g-4">
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-custom-4 h-custom-100">
+                <div class="icon-circle mb-custom-3">
+                  <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <h6 class="fw-custom-semibold mb-custom-2 card-title">Quality Notes</h6>
+                <p class="para-muted mb-custom-0  font-body-sm">Access expertly crafted notes that simplify complex topics and enhance your understanding.</p>
+              </div>
+            </div>
+            
+            <div class="col-12 col-md-6">
+              <div class="feature-tile p-custom-4 h-custom-100">
+                <div class="icon-circle mb-custom-3">
+                  <i class="bi bi-house"></i>
+                </div>
+                <h6 class="fw-custom-semibold mb-custom-2 card-title">User-Friendly</h6>
+                <p class="para-muted mb-custom-0  font-body-sm">Our platform is designed for easy navigation, ensuring you find what you need quickly and efficiently.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 🎨 Solace Modern UI */
+.about-zigrow-section_7 {
+  background: #ffffff;
+  color: #222;
+
+
+/* --- Hero Image --- */
+.hero-img-wrap {
+  aspect-ratio: 4/4.8;
+  border-radius: var(--box-radius);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.hero-img-wrap:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-section);
+}
+
+/* --- Content Card --- */
+.content-box {
+  background: #f7f9fc;
+  border-radius: var(--box-radius);
+}
+
+/* --- Headline --- */
+.section-title {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 2.8rem);
+  font-weight: 700;
+}
+
+.card-title{
+  color: var(--secondary-colors);
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-left-color: #fff;
+  transition: transform 0.25s ease;
+}
+.cta-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* --- Feature Tile --- */
+.feature-tile {
+  background: #ffffff;
+  border: 1px solid #e2e6ea;
+   border-radius: var(--box-radius);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-section);
+}
+.feature-tile:hover {
+  box-shadow: var(--shadow-section-hover);
+  transform: translateY(-4px);
+}
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(76, 107, 255, 0.1);
+  color:var(--para-muted);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 575.98px) {
+  .hero-img-wrap {
+    aspect-ratio: 16/9;
+  }
+  .content-box {
+    padding: 2rem 1.25rem;
+  }
+}}
+
+</style>   <!-- ========== Services ZigRow (service-zigrow-section_9) ========== -->
+<section class="service-zigrow-section_9 section-padding " id="services" data-section="services">
+  <div class="container">
+    <div class="text-custom-center mb-custom-4 mb-lg-5">
+      <h2 class="main-heading mb-custom-2">Our Services</h2>
+      <p class="para-muted font-subheading mb-custom-0 ">
+        Tailored notes and resources designed to enhance learning for students and educators alike.
+      </p>
+    </div>
+
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center "
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1762330910399-95caa55acf04?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwbGVhcm5pbmclMjB0b29sc3xlbnwwfHx8fDE3NjcwMzMwMDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Study Notes"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Zulfugar Karimov</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Study Notes</h3>
+          <p class="para-muted sz9-desc">Access comprehensive study notes that simplify complex topics, making learning easier and more efficient for students at all levels.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center flex-row-reverse"
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1762330918491-f4288a62adb8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxlLWxlYXJuaW5nJTIwcGxhdGZvcm18ZW58MHx8fHwxNzY3MDI5NDU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Revision Guides"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Zulfugar Karimov</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Revision Guides</h3>
+          <p class="para-muted sz9-desc">Our revision guides help students focus on key concepts, ensuring they are well-prepared for exams and assessments.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center "
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1700616270774-c49913d89a3c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb25hbCUyMHdvcmtzaG9wc3xlbnwwfHx8fDE3NjcwMjk0NTh8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Subject Resources"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@nmv_0317?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Nem Malosi</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Subject Resources</h3>
+          <p class="para-muted sz9-desc">Explore a wide range of subject-specific resources that cater to various learning styles and academic needs.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center flex-row-reverse"
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1762329352849-f4d0c9e7696a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMHN1cHBvcnQlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjcwMzMwMDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Custom Notes"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Zulfugar Karimov</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Custom Notes</h3>
+          <p class="para-muted sz9-desc">Get personalized notes tailored to your curriculum, ensuring you have the right materials for your studies.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center "
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1651608670845-e124df680a27?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjdXJyaWN1bHVtJTIwZGV2ZWxvcG1lbnR8ZW58MHx8fHwxNzY3MDI5NDU4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Interactive Quizzes"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@jjenglert?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Jj Englert</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Interactive Quizzes</h3>
+          <p class="para-muted sz9-desc">Engage with interactive quizzes that reinforce learning and help track your progress effectively.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="sz9-feature row g-4 align-custom-center flex-row-reverse"
+    >
+      <!-- Gradient / blob background (shared for img + content) -->
+      <div class="sz9-blob"></div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5">
+  <div class="sz9-media img-wrapper-center">
+    
+    <img
+      src="https://images.unsplash.com/photo-1762330910399-95caa55acf04?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwbGVhcm5pbmclMjB0b29sc3xlbnwwfHx8fDE3NjcwMzMwMDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+      alt="Expert Tips"
+      class="img-fluid sz9-img"
+    />
+
+    
+      <span class="img-credit small-custom">
+        Photo by
+        <a href="https://unsplash.com/@zulfugarkarimov?utm_source=zigrow&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Zulfugar Karimov</a>
+        on
+        <a href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </span>
+    
+  </div>
+</div>
+
+
+      <!-- Content -->
+      <div class="col-12 col-lg-7">
+        <div class="ps-lg-3 text-custom-lg-start text-custom-center">
+          <h3 class="sz9-title">Expert Tips</h3>
+          <p class="para-muted sz9-desc">Gain insights from educational experts with tips and strategies that enhance your study habits and academic performance.</p>
+          <a href="#" class="primary-btn sz9-cta"> Learn More </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  /* ===== service-zigrow-section_9 (scoped) ===== */
+  .service-zigrow-section_9 {
+    background: #fff;
+  }
+
+  /* Row wrapper with pill container */
+  .service-zigrow-section_9 .sz9-feature {
+    position: relative;
+    isolation: isolate;
+    border-radius: 30rem;
+    max-width: 1120px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    padding: clamp(1.25rem, 1.5vw + 0.5rem, 2rem);
+    overflow: visible;
+  }
+
+  /* Blob wrapper: keep height to row only */
+  .service-zigrow-section_9 .sz9-blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 30rem; /* pill-like */
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  /* 🔖 Unsplash credit badge for sz9 */
+.service-zigrow-section_9 .img-credit {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: -0.5rem;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  padding: .25rem .5rem;
+  border-radius: .35rem;
+  font-size: .7rem;
+  line-height: 1;
+  z-index: 2; /* circle image se upar */
+}
+.service-zigrow-section_9 .img-credit a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+  /* Blob fill using theme primary (very light) */
+  .service-zigrow-section_9 .sz9-blob::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    /* start from image side; super soft primary tint */
+    background: radial-gradient(
+        800px 400px at 16% 55%,
+        color-mix(in srgb, var(--primary-colors) 18%, transparent) 0%,
+        color-mix(in srgb, var(--primary-colors) 10%, transparent) 26%,
+        color-mix(in srgb, var(--primary-colors) 6%, transparent) 42%,
+        rgba(255, 255, 255, 0) 80%
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--primary-colors) 8%, transparent),
+        rgba(255, 255, 255, 0) 60%
+      );
+    box-shadow: inset 0 0 0 1px
+      color-mix(in srgb, var(--primary-colors) 6%, transparent);
+    filter: saturate(110%);
+  }
+
+  /* Mirror gradient when image is on right */
+  .service-zigrow-section_9 .flex-row-reverse .sz9-blob::before {
+    background: radial-gradient(
+        800px 400px at 84% 55%,
+        color-mix(in srgb, var(--primary-colors) 18%, transparent) 0%,
+        color-mix(in srgb, var(--primary-colors) 10%, transparent) 26%,
+        color-mix(in srgb, var(--primary-colors) 6%, transparent) 42%,
+        rgba(255, 255, 255, 0) 80%
+      ),
+      linear-gradient(
+        270deg,
+        color-mix(in srgb, var(--primary-colors) 8%, transparent),
+        rgba(255, 255, 255, 0) 60%
+      );
+  }
+
+  /* Image circle + soft ring */
+  .service-zigrow-section_9 .sz9-media {
+    width: clamp(260px, 33vw, 380px);
+    aspect-ratio: 1/1;
+    margin-inline: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  .service-zigrow-section_9 .sz9-img {
+    width: 86%;
+    height: 86%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    background: #fff;
+    border: 10px solid #fff;
+     box-shadow: var(--shadow-section);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Typography */
+  .service-zigrow-section_9 .sz9-title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.2px;
+    color: var(--secondary-colors);
+  }
+  .service-zigrow-section_9 .sz9-desc {
+    line-height: 1.7;
+    font-size: var(--fs-body);
+    max-width: 56ch;
+  }
+
+  /* CTA: use your global primary-btn with safe fallbacks for size */
+  .service-zigrow-section_9 .sz9-cta {
+    font-size: var(--btn-font-size-sm, 1rem);
+    padding: var(--btn-padding, 0.7rem 1.25rem);
+  }
+
+  /* Hover micro interactions */
+  .service-zigrow-section_9 .sz9-media:hover .sz9-img {
+    transform: translateY(-2px) scale(1.01);
+    transition: transform 0.25s ease;
+  }
+  .service-zigrow-section_9 .sz9-feature:hover .sz9-blob::before {
+    filter: saturate(120%) brightness(1.02);
+  }
+
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    .service-zigrow-section_9 .sz9-feature {
+      padding: 1.25rem;
+    }
+    .service-zigrow-section_9 .sz9-desc {
+      max-width: 100%;
+    }
+  }
+</style>
+      <!-- 🌟 Expert Team Modern Section -->
+<section class=" section-padding team-zigrow-section_5" id="team" data-section="team">
+  <div class="container text-custom-center">
+    <!-- Section Header -->
+    <h2 class="section-title mb-custom-2 fw-custom-bold main-heading">Meet Our Team</h2>
+    <p class="section-sub mb-custom-5 para-muted font-subheading">Dedicated professionals committed to your learning journey.</p>
+
+    <!-- Grid -->
+    <div class="row g-4 justify-custom-center " style="margin-top: 5rem;">
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/Kv4g4kN0/1.png" alt="Alice Johnson" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Alice Johnson</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">CEO &amp; Founder</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Alice is an education enthusiast with over a decade of experience in the EdTech industry.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/fWqV4WNm/10.png" alt="Mark Stevens" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Mark Stevens</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Content Manager</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Mark specializes in creating engaging and informative notes tailored to student needs.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/gk5Lhztm/2.png" alt="Sara Lee" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Sara Lee</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Tech Lead</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Sara is a tech expert dedicated to enhancing the platform&#39;s user experience and functionality.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="expert-card-glass h-custom-100">
+          <div class="avatar-glow img-wrapper-center">
+            <img src="https://i.postimg.cc/TPjKBrd3/3.png" alt="Tom Brown" />
+          </div>
+          <h5 class="expert-name mt-custom-5 ">Tom Brown</h5>
+          <p class="expert-role para-muted font-body mb-custom-1">Marketing Director</p>
+          <p class="expert-bio small-custom font-body-sm para-muted px-custom-3">Tom brings innovative marketing strategies to connect learners with valuable educational resources.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<style>
+.team-zigrow-section_5 {
+  background: linear-gradient(135deg, #fdfdfd, #f5f5f5);
+
+
+.section-title {
+  font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
+  letter-spacing: -0.3px;
+}
+.section-sub {
+  max-width: 600px;
+  margin: 0 auto ;
+
+}
+
+/* ────────── Card ────────── */
+.expert-card-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: var(--box-radius);
+  padding: 5.5rem 1rem 2.5rem;
+box-shadow: var(--shadow-section);
+  transition: all 0.3s ease;
+}
+.expert-card-glass:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: var(--shadow-section-hover);
+}
+
+/* ────────── Avatar ────────── */
+.avatar-glow {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dcbfff, #f3e6ff);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-glow img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ────────── Text ────────── */
+.expert-name {
+  font-size: 1.15rem;
+  color: var(--secondary-colors);
+  font-weight: 600;
+}
+.expert-role {
+}
+.expert-bio {
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* ────────── Responsive ────────── */
+@media (max-width: 767.98px) {
+  .avatar-glow {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+  .expert-name {
+    font-size: 1rem;
+  }
+  .expert-card-glass {
+    padding: 5rem 1rem 2rem;
+  }
+}}
+</style>
+    <!-- ▰ Testimonials Section -->
+<section class="testimonial-zigrow-section_8 section-padding" id="testimonials"  data-section="testimonials">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="fw-custom-bold main-heading">What Our Users Say</h2>
+      <p class="para-muted  font-subheading">Hear from our satisfied students and educators about their experience with EduTech.</p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“EduTech has transformed my study routine. The notes are clear, concise, and incredibly helpful for my exams.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=40" class="avatar me-custom-3" alt="Sarah Johnson"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Sarah Johnson</h6>
+                <small class="para-muted">High School Student</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“I recommend EduTech to all my students. The quality of notes is exceptional and saves them so much time.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=41" class="avatar me-custom-3" alt="Mark Thompson"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Mark Thompson</h6>
+                <small class="para-muted">College Tutor</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“Using EduTech notes made my revision process so much easier. I wish I had discovered it earlier!”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=42" class="avatar me-custom-3" alt="Emily Chen"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Emily Chen</h6>
+                <small class="para-muted">University Graduate</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“EduTech has been a game-changer for my child. The notes are engaging and easy to understand.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=43" class="avatar me-custom-3" alt="David Lee"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">David Lee</h6>
+                <small class="para-muted">Parent</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“EduTech provides excellent resources that enhance my teaching. My students love the clarity of the notes.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=44" class="avatar me-custom-3" alt="Jessica Patel"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Jessica Patel</h6>
+                <small class="para-muted">High School Teacher</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-custom-4 h-custom-100   bg-custom-white d-flex flex-column justify-custom-between">
+            <div class="mb-custom-3">
+              <p class="para-muted font-body-sm ">“The notes from EduTech are a lifesaver. They cover all key points and help me focus on what matters.”</p>
+            </div>
+            <div class="d-flex align-custom-center">
+              <div class="img-wrapper-center"><img src="https://i.pravatar.cc/60?img=45" class="avatar me-custom-3" alt="Ryan Smith"></div>
+              <div>
+                <h6 class="mb-custom-0  fw-custom-semibold para-muted">Ryan Smith</h6>
+                <small class="para-muted">Graduate Student</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.testimonial-zigrow-section_8 {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+
+.testimonials-section {
+  background-color: #f9fafb;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  box-shadow: var(--shadow-section); /* ➕ add subtle base shadow */
+    border-radius: var(--box-radius);
+
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/*** headline tweaks ***/
+ .text-accent{
+  color:#5f6f7f;
+}
+ .badge-pill{
+  letter-spacing:.04em;
+}
+.line-tip{
+  content:"";
+  position:absolute;
+  bottom:-6px;left:50%;
+  width:34px;height:2px;
+  background:#ff5b57;
+  transform:translateX(-50%) rotate(3deg);
+  border-radius:2px;
+}
+
+/*** cards ***/
+.t-card{
+  background:#fff;
+  border:0;
+border-radius: var(--box-radius);
+   box-shadow: var(--shadow-section);
+  transition:transform .25s ease, box-shadow .25s ease;
+  position:relative;
+}
+.t-card:hover{
+  transform:translateY(-6px);
+     box-shadow: var(--shadow-section-hover);
+}
+.t-dark{
+  background:#0f0f0f;
+  color:#f0f0f0;
+}
+.t-metric{
+  font-size:3.5rem;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.04em;
+  display:block;
+  color:#000;
+  margin-bottom:.25rem;
+}
+
+/*** avatar + brand ***/
+.avatar{
+  width:48px;height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.brand-logo{
+  width:24px;opacity:.7;
+}
+
+/*** button hover ***/
+.btn-outline-dark:hover i{
+  transform:translateX(4px);
+  transition:transform .25s;
+}
+
+/*** dark-card text-tone ***/
+.text-custom-white-80{color:rgba(255,255,255,.8);}
+
+/*** responsiveness ***/
+@media(max-width:991.98px){
+  .t-metric{font-size:2.8rem;}
+}
+@media(max-width:575.98px){
+  .results-testimonials .btn{width:100%;}
+  .line-tip{display:none;}
+}}
+</style>    <section class="faq-zigrow-section_3 section-padding" id="faq" data-section="faq">
+  <div class="container">
+
+    <div class="text-custom-start mb-custom-5">
+      <h2 class="main-heading">
+        <span>Explore Common Questions</span>
+      </h2>
+      <p class="font-subheading para-muted">
+        <span>Get instant answers to your common questions</span>
+      </p>
+    </div>
+
+    <div class="accordion" id="faqAccordion2">
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern0">
+          <button 
+            class="accordion-button "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern0"
+            aria-expanded="true"
+            aria-controls="collapseModern0"
+          >
+            <span>What is EduTech?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern0"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingModern0"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>EduTech is a platform providing essential study notes for students.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern1">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern1"
+            aria-expanded="false"
+            aria-controls="collapseModern1"
+          >
+            <span>Who can use EduTech?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern1"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern1"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Anyone seeking study materials, including students and educators, can benefit from EduTech.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern2">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern2"
+            aria-expanded="false"
+            aria-controls="collapseModern2"
+          >
+            <span>How do I access notes?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern2"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern2"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Simply sign up on our platform to access a wide range of notes.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern3">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern3"
+            aria-expanded="false"
+            aria-controls="collapseModern3"
+          >
+            <span>Are the notes free?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern3"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern3"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Some notes are free, while others may require a subscription or one-time payment.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern4">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern4"
+            aria-expanded="false"
+            aria-controls="collapseModern4"
+          >
+            <span>How often are notes updated?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern4"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern4"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>We regularly update our notes to ensure they reflect the latest curriculum changes.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingModern5">
+          <button 
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseModern5"
+            aria-expanded="false"
+            aria-controls="collapseModern5"
+          >
+            <span>Can I contribute notes?</span>
+          </button>
+        </h2>
+
+        <div
+          id="collapseModern5"
+          class="accordion-collapse collapse "
+          aria-labelledby="headingModern5"
+          data-bs-parent="#faqAccordion2"
+        >
+          <div class="accordion-body col-md-10">
+            <p>Yes! We welcome contributions from users to enrich our collection of study materials.</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-zigrow-section_3 {
+    background-color: #fff;
+  
+
+  .faq-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .faq-subtext {
+    color: var(--para-muted);
+    font-size: var(--fs-body);
+    margin-top: 0.3rem;
+  }
+
+  /* Accordion Clean Style */
+  .accordion-button {
+    font-size: 1.2rem ;
+    color: #45505e ;
+    font-weight: 400 ;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #45505e ;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0 ;
+  }
+
+  .accordion-button {
+    background-color: transparent ;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: none ;
+    padding: 1.25rem 0;
+  }
+
+  .accordion-body {
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+    padding: 0 0 1rem;
+  }
+
+  .accordion-button::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #666;
+    font-size: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E"); /* same gray icon */
+    border: 1px solid #666;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.5rem ;
+    }
+
+    .accordion-button {
+      font-size: 0.95rem ;
+      }}
+  }
+</style>
+    <section class="contact-zigrow-section_6 section-padding"id="contact" data-section="contact">
+  <div class="container">
+    <div class="row align-custom-center gx-5">
+      
+      <!-- Left: Image -->
+      <div class="col-lg-6 mb-custom-4 mb-lg-0 img-wrapper-center">
+        <img src="https://i.postimg.cc/XJCcgx1h/3.png"
+             alt="Team Discussion"
+             class="img-fluid  contact-img" />
+      </div>
+
+      <!-- Right: Text + Info -->
+      <div class="col-lg-6">
+        <h2 class="main-heading mb-custom-4">Let's start a<br>conversation</h2>
+        
+        <div class="row gy-4 mb-custom-5 contact-grid">
+          <div class="col-sm-6">
+            <h6 class="label">Phone</h6>
+            <p class="value">+91 00000 00000</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Email</h6>
+            <p class="value">contact@example.com</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Address</h6>
+            <p class="value">123 Business St, City</p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="label">Social Media</h6>
+            <p class="value">@reallygreatsite</p>
+          </div>
+        </div>
+
+        <a href="#" class="primary-btn">Click here for location</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .contact-zigrow-section_6 {
+  background-color: #ffffff;
+  color: #333;
+
+
+.contact-img{
+   box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+}
+
+.contact-grid .label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.contact-grid .value {
+  margin: 0;
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+}
+
+
+
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-grid {
+    text-align: center;
+  }
+}}
+
+</style>   
+<footer class="footer-zigrow-section_4 text-custom-white pt-custom-5" data-section="footer" id="footer">
+  <div class="container pb-custom-4">
+    <div class="row gy-5">
+      <!-- Left Section -->
+      <div class="col-md-4">
+        <div class="d-flex align-custom-center mb-custom-3">
+         
+          <div data-logo="footer">
+            <h5 class="mb-custom-0  fw-custom-bold footer-main_title">EduTech</h5>
+          </div>
+        </div>
+        <p class="para-muted  mb-custom-3">
+         Unlock Your Learning Potential with EduTech
+        </p>
+
+        <!-- Status Badge -->
+        <div class="system-status mt-custom-2 ">
+          <span class=" bg-custom-success"></span>
+        <p>Connect with us</p>
+        </div>
+        <!-- Social Icons -->
+        <div class="d-flex gap-3 mt-custom-2 ">
+          <a href="#" class="footer-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-md-8">
+        <div class="row">
+      <!-- Product -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Product</h6>
+  <ul class="footer-links">
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Integrations</a></li>
+    <li><a href="#">Updates</a></li>
+  </ul>
+</div>
+        <!-- Company -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Company</h6>
+  <ul class="footer-links">
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+          <!-- Resources -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Resources</h6>
+  <ul class="footer-links">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Help Center</a></li>
+    <li><a href="#">Tutorials</a></li>
+    <li><a href="#">Case Studies</a></li>
+  </ul>
+</div>
+
+<!-- Legal -->
+<div class="col-6 col-md-3">
+  <h6 class="footer-title">Legal</h6>
+  <ul class="footer-links">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Cookie Policy</a></li>
+    <li><a href="#">Security</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar with Dark Background -->
+  <div class="footer-bottom py-custom-4">
+    <div
+      class="container d-flex flex-column flex-md-row justify-custom-between align-custom-center small-custom para-muted"
+    >
+      <div>   <span> &copy; 2025. All rights reserved.</span></div>
+      <div class="mt-custom-2  mt-md-0">
+        <a href="#" class="para-muted me-custom-3">Privacy Policy</a>
+        <a href="#" class="para-muted me-custom-3">Terms</a>
+        <a href="#" class="para-muted">Code of conduct</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+
+  .footer-zigrow-section_4 {
+    background-color: var(--theme-4);
+    border-top: 1px solid var(--border-muted);
+    .footer-main_title{
+      color: var(--theme-3);
+    }
+  
+
+  .footer-bottom {
+    background-color: var(--theme-4);
+    border-top: 1px solid var(--border-muted);
+    color: var(--theme-3) ;
+
+    a {
+      color: var(--theme-3) ;
+      text-decoration: none;
+    }
+  }
+
+  .para-muted{
+  color: var(--theme-3) ;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+     color: var(--theme-3) ;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+   color: var(--theme-3) ;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+  color: var(--theme-3) ;
+  }
+
+  .footer-icon {
+  color: var(--theme-3) ;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-icon:hover {
+     color: var(--theme-3) ;
+  }
+
+  .system-status {
+    font-size: 1.05rem;
+  color: var(--theme-3) ;
+    background-color: transparent;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+ 
+
+  @media (max-width: 768px) {
+    .footer-links {
+      padding-left: 0;
+    }
+  }}
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>

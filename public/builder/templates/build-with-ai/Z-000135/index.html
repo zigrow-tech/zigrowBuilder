@@ -1,0 +1,3069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nextgen.media - Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@700&family=Source+Sans+Pro:wght@400&family=Source+Sans+3:wght@400&family=Anton&family=Archivo:wght@600&family=Oswald:wght@700&family=Poppins:wght@400;700;800&family=Inter:wght@300;400;500&family=Montserrat:wght@600&family=Nunito:wght@900&family=Quicksand:wght@500&family=Open+Sans:wght@400&family=Pacifico&family=Raleway:wght@300;700&family=Lato:wght@400&family=Work+Sans:wght@300&family=DM+Sans:wght@400&family=Lora:wght@700&family=Merriweather:wght@700&family=IBM+Plex+Sans:wght@500&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <style>
+    :root {
+      --para-muted: #2a324a;
+      --border-radius-btn: 28px 36px 12px 24px / 18px 28px 12px 24px;
+      --box-radius: 5% 8% 5% 8% / 8% 5% 8% 5%;
+      --lead-color-mute: #474747;
+      --border-muted: #e0e0e0;
+      --primary-colors: #00BFA6;
+      --secondary-colors: #121212;
+      --territory-colors: #00C9FF;
+      --theme-3: #000000;
+      --theme-4: #fff;
+      --theme-bg: #fff;
+
+      /* global btn style */
+      --btn-padding: 14px 28px;
+      --btn-padding-sm: "0.78rem 2rem";
+      --btn-font-size: 14px;
+      --btn-font-size-sm:  "0.84rem";
+      --btn-font-weight: 500;
+      --btn-box-shadow: 0 8px 18px rgba(17,24,39,.12);
+      --btn-box-shadow-hover: 0 12px 26px rgba(17,24,39,.16);
+      --btn-transition: all 0.3s ease;
+      --btn-backdrop-filter: blur(6px) saturate(140%);
+      --btn-letter-spacing: 0.5px;
+      --btn-bg-color: #fff;
+
+      /* global box shadow */
+
+
+      --shadow-section: 0 1px 1px rgba(17,24,39,.05), 0 8px 18px rgba(17,24,39,.10), 0 0 0 6px color-mix(in srgb, var(--primary-colors) 18%, transparent), 0 0 48px 12px color-mix(in srgb, var(--tertiary-color) 22%, transparent);
+      --shadow-section-hover: 0 2px 2px rgba(17,24,39,.06), 0 12px 26px rgba(17,24,39,.12), 0 0 0 8px color-mix(in srgb, var(--primary-colors) 22%, transparent), 0 0 64px 16px color-mix(in srgb, var(--tertiary-color) 28%, transparent);
+      --shadow-section-primary:
+        0 14px 36px color-mix(in srgb, var(--primary-colors) 28%, transparent),
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+      /* global text scale for responsiveness */
+      --text-scale: 1;
+      /* Font size */
+      --fs-body-base: 18px;
+      --fs-body-base-sm: '14px';
+      --fs-sub-base: 20px;
+      --fs-h3-base: 54px;
+      --fs-h2-base: clamp(1.6rem, 1.15rem + 1.8vw, 2.4rem);
+      --fs-h1-base: 54px;
+
+      /* computed sizes (global scale apply hota hai) */
+      --fs-body: calc(var(--fs-body-base) * var(--text-scale));
+      --fs-body-sm: calc(var(--fs-body-base-sm) * var(--text-scale));
+      --fs-sub: calc(var(--fs-sub-base) * var(--text-scale));
+      --fs-h3: calc(var(--fs-h3-base) * var(--text-scale));
+      --fs-h2: calc(var(--fs-h2-base) * var(--text-scale));
+      --fs-h1: calc(var(--fs-h1-base) * var(--text-scale));
+
+      /* line-heights */
+      --lh-body: 1.75;
+      --lh-head: 1.2;
+
+
+
+
+    }
+
+    /* breakpoints  (sab blocks auto adjust) */
+    @media (max-width: 768px) {
+      :root {
+        --text-scale: 0.97;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --text-scale: 0.95;
+      }
+    }
+
+
+
+    body {
+      background-color: #fff;
+      color: #121212 ;
+      font-family: Inter;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--secondary-colors);
+    }
+
+    /* Base font sizes for default (desktop) */
+    .font-body {
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+
+    .font-body-sm {
+      font-size: var(--fs-body-sm);
+      line-height: var(--lh-body);
+    }
+
+    .font-subheading {
+      font-size: var(--fs-sub);
+    }
+
+    .font-heading {
+      font-size: var(--fs-h2);
+    }
+
+
+
+
+    .primary-btn {
+      padding: var(--btn-padding);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      border: none;
+      text-transform: capitalize ;
+      border-radius: var(--border-radius-btn);
+      background: var(--primary-colors);
+      color: var(--btn-bg-color, #fff);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      text-decoration: none;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary-colors);
+      box-shadow: var(--btn-box-shadow-hover);
+        color: var(--btn-bg-color, #fff);
+    }
+
+    .white-btn {
+      background-color: #fff;
+      color: black;
+      border: 2px solid #fff ;
+      text-decoration: none ;
+      border: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      backdrop-filter: var(--btn-backdrop-filter);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-btn:hover {
+      background-color: #f1f1f1;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* Second button: outlined white */
+    .white-outline-btn {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border: 2px solid #fff;
+      text-decoration: none;
+      border-radius: var(--border-radius-btn);
+      font-size: var(--btn-font-size);
+      font-weight: var(--btn-font-weight);
+      box-shadow: var(--btn-box-shadow);
+      transition: var(--btn-transition);
+      letter-spacing: var(--btn-letter-spacing);
+      padding: var(--btn-padding);
+    }
+
+    .white-outline-btn:hover {
+      background-color: #fff;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+
+
+    .img-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: var(--box-radius);
+      box-shadow: var(--shadow-section);
+      overflow: hidden;
+    }
+
+    .img-credit {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .img-credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+
+    .py-6 {
+      padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Poppins ;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) ;
+      }
+    }
+
+
+
+    /* Added new */
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
+    .img-wrapper-center{
+      text-align: center;
+    }
+
+    .pointer-custom-none{
+      pointer-events: none;
+    }
+    .section-padding{
+        padding-block: 4.8rem;
+
+      @media (width <=768px) {
+        padding-block: 2.5rem;
+      }
+    }
+
+
+    .row-vcenter { align-items:center; }
+
+.text-custom-start  { text-align: left; }
+.text-custom-center { text-align: center; }
+.text-custom-end    { text-align: right; }
+
+
+@media (min-width: 992px) {
+  .text-custom-lg-left   { text-align: left; }
+  .text-custom-lg-center { text-align: center; }
+  .text-custom-lg-end  { text-align: right; }
+  .text-custom-lg-start  { text-align: start; }
+}
+
+@media (min-width: 768px) {
+  .text-custom-md-left   { text-align: left; }
+  .text-custom-md-center { text-align: center; }
+  .text-custom-md-end    { text-align: right; }
+  .text-custom-md-start  { text-align: start; }
+}
+
+.text-decoration-custom-none {
+  text-decoration: none;
+}
+
+.text-custom-secondary-emphasis {
+  color: #495057; /* same as Bootstrap's secondary emphasis color */
+}
+
+
+/* Custom Font Weight Utilities */
+.fw-custom-light   { font-weight: 300; }
+.fw-custom-lighter { font-weight: lighter; }
+.fw-custom-normal  { font-weight: 400; }
+.fw-custom-semibold  { font-weight: 600; } 
+.fw-custom-bold    { font-weight: 700; }
+.fw-custom-bolder  { font-weight: bolder; }
+
+
+.fst-custom-italic{
+  font-style: italic;
+}
+
+.text-custom-wrap    { white-space: normal; }
+.text-custom-nowrap  { white-space: nowrap; }
+.text-custom-break   { word-break: break-word; }
+
+
+.text-custom-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-opacity-custom-25  { opacity: 0.25; }
+.text-opacity-custom-50  { opacity: 0.50; }
+.text-opacity-custom-75  { opacity: 0.75; }
+.text-opacity-custom-100 { opacity: 1; }
+
+
+.lh-custom-1   { line-height: 1; }
+.lh-custom-sm  { line-height: 1.25; }
+.lh-custom-base{ line-height: 1.5; }
+.lh-custom-lg  { line-height: 2; }
+
+
+
+    .full-w   { width: 100%; }
+.full-h   { height: 100%; }
+.full-wh  { width: 100%; height: 100%; }
+
+.auto-w   { width: auto; }
+.auto-h   { height: auto; }
+
+
+
+
+
+.text-custom-white     { color: #ffffff; }
+.text-custom-light     { color: #f8f9fa; }
+.text-custom-dark      { color: #222222; }
+.text-custom-primary   { color: #007bff; }
+.text-custom-secondary { color: #6c757d; }
+.text-custom-success   { color: #28a745; }
+.text-custom-danger    { color: #dc3545; }
+.text-custom-warning   { color: #ffc107; }
+.text-custom-info      { color: #17a2b8; }
+.text-custom-muted     { color: #6c757d; }
+
+
+.bg-custom-white      { background-color: #ffffff; }
+.bg-custom-light      { background-color: #f8f9fa; }
+.bg-custom-dark       { background-color: #222222; }
+.bg-custom-primary    { background-color: #007bff; }
+.bg-custom-secondary  { background-color: #6c757d; }
+.bg-custom-success    { background-color: #28a745; }
+.bg-custom-danger     { background-color: #dc3545; }
+.bg-custom-warning    { background-color: #ffc107; }
+.bg-custom-info       { background-color: #17a2b8; }
+.bg-custom-muted      { background-color: #e9ecef; }
+
+
+
+
+/* JUSTIFY CONTENT */
+/* Horizontal Alignment */
+.justify-custom-start   { justify-content: flex-start; }
+.justify-custom-end     { justify-content: flex-end; }
+.justify-custom-center  { justify-content: center; }
+.justify-custom-between { justify-content: space-between; }
+
+
+@media (min-width: 768px) {
+  .justify-md-custom-start   { justify-content: flex-start; }
+  .justify-md-custom-end     { justify-content: flex-end; }
+  .justify-md-custom-center  { justify-content: center; }
+  .justify-md-custom-between { justify-content: space-between; }
+  .justify-md-custom-around  { justify-content: space-around; }
+  .justify-md-custom-evenly  { justify-content: space-evenly; }
+}
+
+@media (min-width: 992px) {
+  .justify-lg-custom-start   { justify-content: flex-start; }
+  .justify-lg-custom-end     { justify-content: flex-end; }
+  .justify-lg-custom-center  { justify-content: center; }
+  .justify-lg-custom-between { justify-content: space-between; }
+  .justify-lg-custom-around  { justify-content: space-around; }
+  .justify-lg-custom-evenly  { justify-content: space-evenly; }
+}
+
+
+
+/* Vertical Alignment */
+.align-custom-start    { align-items: flex-start; }
+.align-custom-end      { align-items: flex-end; }
+.align-custom-center   { align-items: center; }
+.align-custom-baseline { align-items: baseline; }
+.align-custom-stretch  { align-items: stretch; }
+
+
+@media (min-width: 768px) {
+  .align-md-custom-start    { align-items: flex-start; }
+  .align-md-custom-end      { align-items: flex-end; }
+  .align-md-custom-center   { align-items: center; }
+  .align-md-custom-baseline { align-items: baseline; }
+  .align-md-custom-stretch  { align-items: stretch; }
+}
+
+@media (min-width: 992px) {
+  .align-lg-custom-start    { align-items: flex-start; }
+  .align-lg-custom-end      { align-items: flex-end; }
+  .align-lg-custom-center   { align-items: center; }
+  .align-lg-custom-baseline { align-items: baseline; }
+  .align-lg-custom-stretch  { align-items: stretch; }
+}
+
+
+/* RESPONSIVE SUPPORT */
+@media (min-width: 992px) {
+  .items-lg-center { align-items: center; }
+  .justify-lg-center { justify-content: center; }
+}
+
+.text-custom-uppercase{ text-transform: uppercase;}
+
+
+.small-custom{font-size: 0.875rem;}
+
+.display-custom-1 { font-size: 3.5rem; font-weight: 300; line-height: 1.2; }
+
+.display-custom-3 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
+.display-custom-4 { font-size: 2rem;   font-weight: 300; line-height: 1.2; }
+.display-custom-5 { font-size: 1.75rem; font-weight: 300; line-height: 1.2; }
+.display-custom-6 { font-size: 1.5rem;  font-weight: 300; line-height: 1.2; }
+
+
+@media (min-width: 576px) {
+  .display-custom-1 { font-size: 4rem; }
+  .display-custom-2 { font-size: 3.5rem; }
+  .display-custom-3 { font-size: 3rem; }
+  .display-custom-4 { font-size: 2.25rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .display-custom-1 { font-size: 4.5rem; }
+  .display-custom-2 { font-size: 4rem; }
+  .display-custom-3 { font-size: 3.25rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .display-custom-1 { font-size: 5rem; }
+  .display-custom-2 { font-size: 4.25rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.75rem; }
+  .display-custom-5 { font-size: 2.25rem; }
+  .display-custom-6 { font-size: 1.75rem; }
+}
+
+@media (min-width: 1200px) {
+  .display-custom-1 { font-size: 5.5rem; }
+  .display-custom-2 { font-size: 4.5rem; }
+  .display-custom-3 { font-size: 3.5rem; }
+  .display-custom-4 { font-size: 2.5rem; }
+  .display-custom-5 { font-size: 2rem; }
+  .display-custom-6 { font-size: 1.5rem; }
+}
+
+/* margin */
+.m-custom-0 { margin: 0; }
+.m-custom-1 { margin: 0.25rem; }
+.m-custom-2 { margin: 0.5rem; }
+.m-custom-3 { margin: 1rem; }
+.m-custom-4 { margin: 1.5rem; }
+.m-custom-5 { margin: 3rem; }
+
+
+.mt-custom-0 { margin-top: 0; }
+.mt-custom-1 { margin-top: 0.25rem; }
+.mt-custom-2 { margin-top: 0.5rem; }
+.mt-custom-3 { margin-top: 1rem; }
+.mt-custom-4 { margin-top: 1.5rem; }
+.mt-custom-5 { margin-top: 3rem; }
+
+.mb-custom-0 { margin-bottom: 0; }
+.mb-custom-1 { margin-bottom: 0.25rem; }
+.mb-custom-2 { margin-bottom: 0.5rem; }
+.mb-custom-3 { margin-bottom: 1rem; }
+.mb-custom-4 { margin-bottom: 1.5rem; }
+.mb-custom-5 { margin-bottom: 3rem; }
+
+.ms-custom-0 { margin-left: 0; }
+.ms-custom-1 { margin-left: 0.25rem; }
+.ms-custom-2 { margin-left: 0.5rem; }
+.ms-custom-3 { margin-left: 1rem; }
+.ms-custom-4 { margin-left: 1.5rem; }
+.ms-custom-5 { margin-left: 3rem; }
+
+.me-custom-0 { margin-right: 0; }
+.me-custom-1 { margin-right: 0.25rem; }
+.me-custom-2 { margin-right: 0.5rem; }
+.me-custom-3 { margin-right: 1rem; }
+.me-custom-4 { margin-right: 1.5rem; }
+.me-custom-5 { margin-right: 3rem; }
+
+.mx-custom-0 { margin-left: 0; margin-right: 0; }
+.mx-custom-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+.mx-custom-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mx-custom-3 { margin-left: 1rem; margin-right: 1rem; }
+.mx-custom-4 { margin-left: 1.5rem; margin-right: 1.5rem; }
+.mx-custom-5 { margin-left: 3rem; margin-right: 3rem; }
+
+.my-custom-0 { margin-top: 0; margin-bottom: 0; }
+.my-custom-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-custom-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-custom-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-custom-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-custom-5 { margin-top: 3rem; margin-bottom: 3rem; }
+
+.m-custom-auto  { margin: auto; }
+.mt-custom-auto { margin-top: auto; }
+.mb-custom-auto { margin-bottom: auto; }
+.ms-custom-auto { margin-left: auto; }
+.me-custom-auto { margin-right: auto; }
+.mx-custom-auto { margin-left: auto; margin-right: auto; }
+.my-custom-auto { margin-top: auto;  margin-bottom: auto; }
+
+
+@media (min-width: 768px) {
+  .m-md-custom-auto  { margin: auto; }
+  .mt-md-custom-auto { margin-top: auto; }
+  .mb-md-custom-auto { margin-bottom: auto; }
+  .ms-md-custom-auto { margin-left: auto; }
+  .me-md-custom-auto { margin-right: auto; }
+  .mx-md-custom-auto { margin-left: auto; margin-right: auto; }
+  .my-md-custom-auto { margin-top: auto;  margin-bottom: auto; }
+}
+
+
+@media (min-width: 992px) {
+  .ms-lg-custom-auto { margin-left: auto; }
+
+}
+
+/* padding */
+
+.p-custom-0 { padding: 0; }
+.p-custom-1 { padding: 0.25rem; }
+.p-custom-2 { padding: 0.5rem; }
+.p-custom-3 { padding: 1rem; }
+.p-custom-4 { padding: 1.5rem; }
+.p-custom-5 { padding: 3rem; }
+
+.pt-custom-0 { padding-top: 0; }
+.pt-custom-1 { padding-top: 0.25rem; }
+.pt-custom-2 { padding-top: 0.5rem; }
+.pt-custom-3 { padding-top: 1rem; }
+.pt-custom-4 { padding-top: 1.5rem; }
+.pt-custom-5 { padding-top: 3rem; }
+
+
+.pb-custom-0 { padding-bottom: 0; }
+.pb-custom-1 { padding-bottom: 0.25rem; }
+.pb-custom-2 { padding-bottom: 0.5rem; }
+.pb-custom-3 { padding-bottom: 1rem; }
+.pb-custom-4 { padding-bottom: 1.5rem; }
+.pb-custom-5 { padding-bottom: 3rem; }
+
+.ps-custom-0 { padding-left: 0; }
+.ps-custom-1 { padding-left: 0.25rem; }
+.ps-custom-2 { padding-left: 0.5rem; }
+.ps-custom-3 { padding-left: 1rem; }
+.ps-custom-4 { padding-left: 1.5rem; }
+.ps-custom-5 { padding-left: 3rem; }
+
+
+.pe-custom-0 { padding-right: 0; }
+.pe-custom-1 { padding-right: 0.25rem; }
+.pe-custom-2 { padding-right: 0.5rem; }
+.pe-custom-3 { padding-right: 1rem; }
+.pe-custom-4 { padding-right: 1.5rem; }
+.pe-custom-5 { padding-right: 3rem; }
+
+.px-custom-0 { padding-left: 0; padding-right: 0; }
+.px-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-custom-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-custom-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-custom-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-custom-5 { padding-left: 3rem; padding-right: 3rem; }
+
+
+.py-custom-0 { padding-top: 0; padding-bottom: 0; }
+.py-custom-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-custom-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-custom-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-custom-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-custom-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+
+@media (min-width: 768px) {
+ 
+  .p-md-custom-5 { padding: 3rem; }
+}
+
+
+@media (min-width: 992px) {
+  
+  .p-lg-custom-5 { padding: 3rem; }
+}
+
+@media (min-width: 992px) {
+ 
+  .ps-lg-custom-4 { padding-left: 1.5rem; }
+}
+
+
+@media (min-width: 768px) {
+  .px-md-custom-0 { padding-left: 0;       padding-right: 0; }
+  .px-md-custom-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+  .px-md-custom-2 { padding-left: 0.5rem;  padding-right: 0.5rem; }
+  .px-md-custom-3 { padding-left: 1rem;    padding-right: 1rem; }
+  .px-md-custom-4 { padding-left: 1.5rem;  padding-right: 1.5rem; }
+  .px-md-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+@media (min-width: 992px) {
+  
+  .px-lg-custom-5 { padding-left: 3rem;    padding-right: 3rem; }
+}
+
+
+.w-custom-100 { width: 100%; }
+.w-custom-auto { width: auto; }
+.h-custom-100 { height: 100%; }
+.h-custom-auto { height: auto; }
+
+
+
+    /* Added new ends*/
+    .main-heading {
+      font-weight: 700;
+      color: #121212;
+      font-size: var(--fs-h1);
+
+      @media (width <=768px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .muted-bg {
+      background: #fafafa;
+    }
+
+    .para-muted {
+      color: var(--para-muted);
+    }
+
+    /* Back to top styling */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      font-size: 2.5rem;
+      background-color: transparent;
+      border: none;
+      color: var(--secondary-colors);
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      color: var(--primary-colors);
+      transform: translateY(-6px);
+    }
+
+    /* Whatsapp Icon */
+    #whatsappBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 999;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 8px 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    #whatsappBtn:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      #whatsappBtn {
+        font-size: 1.6rem;
+        padding: 6px 10px;
+        bottom: 90px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/911234567890" target="_blank" id="whatsappBtn" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <!-- Back to top btn -->
+  <button id="backToTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Main content -->
+
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom-white shadow-sm sticky-top custom-navbar">
+    <div class="container">
+      <div data-logo="navbar">
+        <a class="navbar-brand fw-custom-bold" href="#">
+          Nextgen.media
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-custom-end" id="navbarNav">
+        <ul class="navbar-nav align-lg-custom-center -center">
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#about">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#portfolio">Portfolio</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#services">Services</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#team">Team</a>
+            </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="#contact" class="primary-btn">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+    .custom-navbar {
+  padding: 0.8rem 0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 1.2rem;
+  color: var(--para-muted);
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Hover underline animation */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-colors);
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--primary-colors);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Sticky navbar small-custom shadow on scroll */
+.sticky-top.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+</style>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".sticky-top");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+   <!-- Creative -->
+
+<section class=" hero-zigrow-section_7 d-flex align-custom-center" data-section="hero" id="hero">
+  <div class="hero-gradient-circle"></div>
+
+  <div class="container">
+    <div class="row align-custom-center">
+      <!-- Left Content -->
+      <div class="col-lg-6 text-content position-relative">
+        <span class="agency-badge"><span class="me-custom-1"><i class="bi bi-star-fill"></i></span> Nextgen.media</span>
+
+      <h1 class="main-heading">
+  
+  Transforming Brands Into <span class=" gradient-text">Unforgettable Experiences</span>
+</h1>
+
+
+   
+
+        <p class="desc mt-custom-3 ">
+         Attract clients effortlessly with our cutting-edge marketing strategies. Experience growth that’s measurable and impactful.
+        </p>
+
+        <div class="d-flex align-custom-center gap-3 mt-custom-4 ">
+          <a href="#" class="btn primary-btn  fw-custom-semibold d-inline-flex align-custom-center">
+            <span class="me-custom-2"><i class="bi bi-box-arrow-up-right"></i></span> Read More
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Image Grid -->
+      <div class="col-lg-6 position-relative">
+    <div class="image-grid">
+  <div class="position-relative img-wrapper-center">
+    <img src="https://images.unsplash.com/photo-1519217651866-847339e674d4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdvcmtzcGFjZXxlbnwwfHx8fDE3Njc0NTcyNDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-tall" />
+    <span class="img-credit">
+      Photo by <a 
+        href="https://unsplash.com/@dmjdenise?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Denise Jans
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="position-relative img-wrapper-center">
+    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njc0NTcyNDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-square" />
+    <span class="img-credit">
+      Photo by  <a 
+        href="https://unsplash.com/@sunday_digital?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nastuh Abootalebi
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="position-relative img-wrapper-center">
+    <img src="https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwYnJhaW5zdG9ybWluZ3xlbnwwfHx8fDE3Njc1MDU4MTd8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-square" />
+    <span class="img-credit">
+      Photo by <a 
+        href="https://unsplash.com/@heymemento?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Memento Media
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+
+  <div class="position-relative img-wrapper-center">
+    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwc3RyYXRlZ3l8ZW58MHx8fHwxNzY3NDI0NDcyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" class="img-tall" />
+    <span class="img-credit">
+      Photo by <a 
+        href="https://unsplash.com/@campaign_creators?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Campaign Creators
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-zigrow-section_7 {
+  background: #fefefe;
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+
+
+.hero-gradient-circle {
+  position: absolute;
+  top: -100px;
+  right: -180px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle,  var(--primary-colors) ,var(--territory-colors)); /* replace with your colors */
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.8; /* optional: for a subtle effect */
+  pointer-events: none;
+}
+
+.agency-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.main-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-line {
+  margin-top: 0.5rem;
+}
+
+.gradient-text {
+  font-size: 4.1rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary-colors) ,var(--territory-colors));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.curved-arrow {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.img-wrapper-center{
+  text-align: center;
+}
+.desc {
+  margin-top: 20px;
+  color: #444;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  margin-top: 20px;
+}
+
+.img-tall {
+  /* height: 320px; */
+  aspect-ratio: 11/14;
+  width: 100%;
+    border-radius: var(--box-radius);
+  object-fit: cover;
+}
+
+.img-square {
+  /* height: 180px; */
+  aspect-ratio: 11/14;
+  width: 100%;
+    border-radius: var(--box-radius);
+  object-fit: cover;
+}
+.image-grid img:nth-child(2),
+.image-grid img:nth-child(4) {
+  margin-top: -90px; /* Adjust this value as needed */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .gradient-text {
+    font-size: 2.2rem;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 2rem;
+  }
+
+  .image-grid img:nth-child(2),
+.image-grid img:nth-child(4) {
+  margin-top: 0px; /* Adjust this value as needed */
+}
+
+.hero-gradient-circle{
+  display: none;
+}
+}}
+
+</style>   <!-- CREATIVE -->
+
+<section class="about-zigrow-section_6 section-padding" id="about" data-section="about">
+  <div class="container">
+    <div class="row align-custom-center g-5">
+      <!-- ◀ Image -->
+      <div class="col-12 col-lg-5">
+     <div class="survey-image  position-relative img-wrapper-center">
+  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwyfHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3Njc0NTAwMDZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Woman filling form" />
+
+  <div class="img-credit">
+    Photo by 
+    <a 
+        href="https://unsplash.com/@anniespratt?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Annie Spratt
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+  </div>
+
+</div>
+
+      </div>
+
+      <!-- ▶ Text Content -->
+      <div class="col-12 col-lg-7">
+        <div class="survey-text ps-lg-custom-4">
+          <!-- ✅ Heading -->
+          <h2 class="survey-heading main-heading mb-custom-3">
+            Your Growth Partner
+          </h2>
+
+          <!-- ✅ Paragraph under heading -->
+          <p class="survey-intro para-muted font-body mb-custom-4">
+            At NextGen Media, we don’t just market — we craft compelling stories that resonate. Our approach is rooted in strategy, originality, and a commitment to driving results.
+          </p>
+
+          <!-- ✅ Points list -->
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Strategic Storytelling</h6>
+                <p class="mb-custom-0  para-muted font-body">We create narratives that engage and inspire, making your brand&#39;s message clear and impactful.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Results-Driven</h6>
+                <p class="mb-custom-0  para-muted font-body">Our focus is on measurable outcomes, ensuring your marketing efforts translate into real growth.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Innovative Solutions</h6>
+                <p class="mb-custom-0  para-muted font-body">We leverage the latest trends and technologies to keep your brand ahead of the competition.</p>
+              </div>
+            </div>
+          
+            <div class="survey-item d-flex mb-custom-4">
+             <div class="check-icon flex-shrink-0">
+  <i class="bi bi-check-lg"></i>
+</div>
+
+              <div>
+                <h6 class="mb-custom-1 fw-custom-semibold">Tailored Strategies</h6>
+                <p class="mb-custom-0  para-muted font-body">Every business is unique. We customize our approach to fit your specific needs and goals.</p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ░░░ Section Base ░░░ */
+.about-zigrow-section_6 {
+  background: #ffffff;
+  color: var(--theme-4);
+
+
+/* ░░░ Intro Paragraph under heading ░░░ */
+.survey-intro {
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ░░░ Image Styling ░░░ */
+.survey-image {
+  border-radius: var(--box-radius) ;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-section);
+  transition: transform 0.4s ease;
+}
+.survey-image:hover{
+  box-shadow: var(--shadow-section-hover);
+}
+.survey-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+.survey-image:hover {
+  transform: scale(1.02);
+}
+
+/* ░░░ Heading ░░░ */
+.survey-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* ░░░ Points Layout ░░░ */
+.survey-item {
+  align-items: flex-start;
+  gap: 1rem;
+}
+.survey-item h6 {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.survey-item p {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ░░░ Custom Check Icon ░░░ */
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--secondary-colors);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.check-icon::before {
+  content: none;
+}
+
+
+/* ░░░ Responsive ░░░ */
+@media (max-width: 991.98px) {
+  .survey-image {
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+  }
+  .survey-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .check-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .survey-item h6 {
+    font-size: 1rem;
+  }
+}}
+
+</style>   <!-- ========== Services List (service-zigrow-section_12) ========== -->
+<section class="service-zigrow-section_12 section-padding" id="services" data-section="services">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-custom-center mb-custom-4 mb-lg-5">
+      <h2 class="main-heading mb-custom-2">
+        <span class="d-block "
+          >Our Premium Services</span
+        >
+      </h2>
+      <p class=" svc12-sub mx-custom-auto mb-custom-0 ">
+        Tailored solutions for startups, personal brands, and growing businesses looking to elevate their marketing game.
+      </p>
+    </div>
+    <!-- Rows (click to feature) -->
+    <div class="svc12-list">
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-0" checked />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-0">
+        <!-- number -->
+        <div class="svc12-no">01</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Creative Visual Branding</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Transform your brand identity with stunning visuals that resonate. We craft logos and designs that capture attention and tell your story.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NzUwNTgxNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Creative Visual Branding"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-1"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-1">
+        <!-- number -->
+        <div class="svc12-no">02</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Social Media Marketing</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Engage your audience with strategic social media campaigns. We leverage trends to boost your presence on platforms like Instagram.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBzdHJhdGVneXxlbnwwfHx8fDE3Njc0NTcyNTl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Social Media Marketing"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-2"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-2">
+        <!-- number -->
+        <div class="svc12-no">03</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Influencer Campaigns</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Amplify your reach through authentic influencer partnerships. We connect your brand with voices that matter to your target audience.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1620479589423-0abc990883cb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMHNlc3Npb258ZW58MHx8fHwxNzY3NTI3NzQ2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Influencer Campaigns"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-3"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-3">
+        <!-- number -->
+        <div class="svc12-no">04</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">AI Ad Optimization</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Maximize your ad performance with AI-driven strategies. We analyze data to ensure your campaigns deliver real results and ROI.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1759592702611-fad93578c689?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHw0fHxzZXJ2aWNlJTIwb2ZmZXJpbmd8ZW58MHx8fHwxNzY3NTI3NzQ2fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="AI Ad Optimization"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-4"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-4">
+        <!-- number -->
+        <div class="svc12-no">05</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Conversion Funnels</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Turn visitors into customers with expertly designed funnels. We create landing pages that drive action and boost conversions.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1765020553734-2c050ddb9494?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjb25zdWx0YXRpb24lMjBtZWV0aW5nfGVufDB8fHx8MTc2NzUxNzI3MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Conversion Funnels"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+      <!-- controller -->
+      <input class="svc12-radio" type="radio" name="svc12-active"
+      id="svc12-row-5"  />
+      <!-- row (label so whole row is clickable) -->
+      <label class="svc12-item" for="svc12-row-5">
+        <!-- number -->
+        <div class="svc12-no">06</div>
+
+        <!-- title + text -->
+        <div class="svc12-main">
+          <h3 class="svc12-item-title">Reputation Management</h3>
+          <p class="svc12-item-desc mb-custom-0 ">Build trust and credibility with proactive reputation management. We help you monitor and enhance your online presence effectively.</p>
+        </div>
+
+        <!-- floating image (shown when this row is active) -->
+        <figure class="svc12-photo img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNlcnZpY2VzfGVufDB8fHx8MTc2NzUwNTgxNnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Reputation Management"
+          />
+        </figure>
+
+        <!-- arrow -->
+        <span class="svc12-go" aria-hidden="true">
+          <span class="svc12-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </span>
+      </label>
+      
+    </div>
+
+    
+  </div>
+</section>
+<style>
+  /* ===== service-zigrow-section_12 (scoped) ===== */
+  .service-zigrow-section_12 {
+    background: #fff;
+    color: #0f0f0f;
+  }
+  .service-zigrow-section_12 .svc12-title {
+    line-height: 1.1;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.6rem);
+  }
+  .service-zigrow-section_12 .svc12-title-italic {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .service-zigrow-section_12 .svc12-sub {
+    max-width: 820px;
+    color: var(--para-muted);
+    line-height: var(--lh-body);
+    font-size: var(--fs-sub);
+  } /* List wrapper */
+  .service-zigrow-section_12 .svc12-list {
+    margin-top: 1.25rem;
+    position: relative;
+  } /* Radios off-screen */
+  .service-zigrow-section_12 .svc12-radio {
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  } /* Row */
+  .service-zigrow-section_12 .svc12-item {
+    position: relative;
+    display: flex;
+    align-items: xcenter;
+    gap: 1.25rem;
+    padding: 24px 28px;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: var(--box-radius);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    background: #fff;
+    color: var(--secondary-colors);
+
+    @media (max-width: 435px) {
+      flex-direction: column;
+    }
+  }
+  .service-zigrow-section_12 .svc12-item:first-of-type {
+    margin-top: 0.25rem;
+  }
+  .service-zigrow-section_12 .svc12-item:hover {
+    transform: translateY(-2px);
+  } /* Number */
+  .service-zigrow-section_12 .svc12-no {
+    min-width: 56px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #9aa0a6;
+    font-size: 1.05rem;
+  } /* Main content */
+  .service-zigrow-section_12 .svc12-main {
+    flex: 1 1 auto;
+    max-width: 820px;
+  }
+  .service-zigrow-section_12 .svc12-item-title {
+    margin: 0 0 0.35rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    font-size: clamp(1.15rem, 1.04rem + 0.6vw, 1.6rem);
+    text-transform: capitalize;
+  }
+  .service-zigrow-section_12 .svc12-item-desc {
+    color: var(--para-muted);
+    line-height: 1.75;
+    font-size: var(--fs-body);
+  } /* Arrow circle */
+  .service-zigrow-section_12 .svc12-go {
+    margin-left: auto;
+
+    @media (max-width: 435px) {
+        margin: auto;
+    }
+  }
+  .service-zigrow-section_12 .svc12-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 2px solid #1d1f23;
+    color: #1d1f23;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .service-zigrow-section_12 .svc12-circle .bi {
+    font-size: 1.25rem;
+  }
+  .service-zigrow-section_12 .svc12-item:hover .svc12-circle {
+    transform: translateX(2px);
+  }
+  .service-zigrow-section_12 .svc12-item:not(.is-active):hover .svc12-circle {
+    background: #0f0f0f;
+    color: #fff;
+    border-color: #0f0f0f;
+  } /* Floating image (hidden by default) */
+  .service-zigrow-section_12 .svc12-photo {
+    position: absolute;
+    right: 110px;
+    top: -22px;
+    width: 180px;
+    height: 130px;
+  border-radius: var(--box-radius);
+    overflow: hidden;
+    transform: rotate(-6deg);
+    box-shadow: var(--shadow-section-hover);
+    display: none;
+  }
+  .service-zigrow-section_12 .svc12-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  
+  /* 1) image taps ko block na kare */
+.service-zigrow-section_12 .svc12-photo {
+  pointer-events: none;          /* image par tap/click pass-through */
+}
+
+/* 2) kabhi-kabhi absolute image se horizontal scroll aata hai */
+.service-zigrow-section_12 .container {
+  overflow-x: clip;              /* or hidden; clip is safer for iOS bounce */
+}
+
+/* 3) predictable sizing (CLS kam) */
+.service-zigrow-section_12 .svc12-photo {
+  aspect-ratio: 18 / 13;         /* 180x130 ka ratio maintain */
+}
+.service-zigrow-section_12 .svc12-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4) tablet range (<=1200) par image ko zyada right na dhakelna */
+@media (max-width: 1199.98px) {
+  .service-zigrow-section_12 .svc12-photo {
+    right: 48px;                 /* pehle 84px tha; thoda safe margin */
+  }
+}
+
+/* 5) mobile par waise bhi hide hi rakhna (aapke code mein already hai) */
+@media (max-width: 991.98px) {
+  .service-zigrow-section_12 .svc12-photo {
+    display: none ;    /* ensure specificity wins */
+  }
+}
+/* ====== ACTIVE STATE (when its radio is checked) ====== */
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item {
+    background: #0f0f0f;
+    color: #fff;
+    border: none;
+     box-shadow: var(--shadow-section);
+
+    margin: 18px 0;
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-no {
+    color: #dfe3ea;
+  }
+  .service-zigrow-section_12
+    .svc12-radio:checked
+    + .svc12-item
+    .svc12-item-desc {
+    color: #cfd3da;
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-circle {
+    background: #fff;
+    border-color: #fff;
+    color: #0f0f0f;
+     box-shadow: var(--shadow-section);
+
+  }
+  .service-zigrow-section_12 .svc12-radio:checked + .svc12-item .svc12-photo {
+    display: block;
+  } /* Divider line after featured */
+  .service-zigrow-section_12
+    .svc12-radio:checked
+    + .svc12-item
+    + .svc12-radio
+    + .svc12-item {
+    border-top: 1px solid #eee;
+  } /* CTA */
+
+</style>
+   <section class="logo-zigrow-section_6 section-padding" id="logos" data-section="logos">
+  <div class="container text-custom-center">
+
+    <div class="row">
+      <div class="col-12">
+        <h2 class="main-heading lh-custom-sm mb-custom-3">
+          Meet the teams using <br class="d-none d-md-block">
+          QuickBites to grow smarter
+        </h2>
+        <p class="lead-custom para-muted font-subheading mb-custom-5">
+          Trusted by teams obsessed with building better products.
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-custom-center g-4">
+
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="logo-wrap">
+            <img src="https://dstal.com.au/wp-content/uploads/2021/09/logoipsum.png" alt="logo">
+          </div>
+        </div>
+      
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 🎨 Styles -->
+<style>
+.logo-zigrow-section_6{
+ background: #fafafa;
+
+
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.25rem;
+  min-width:120px;
+}
+.logo-wrap img{
+  height:78px;
+  object-fit:cover;
+}
+.logo-wrap span{
+  margin-top:.15rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  font-size:1rem;
+  color:#000;
+  white-space:nowrap;
+}
+
+@media(max-width:575.98px){
+  .logo-wrap{min-width:100px;}
+  .logo-wrap span{font-size:.9rem;}
+}}
+</style>
+    <section class="why-choose-section whyChooseUs-zigrow-section_2"id="whyChooseUs" data-section="whyChooseUs">
+  <div class="container">
+    <div class="text-custom-center col-md-8 m-custom-auto">
+      <div class="section-tag">★ Why Choose Us</div>
+      <h2 class="section-title main-heading">Why Choose Us</h2>
+      <p class="section-desc">
+        Experience the difference with our unique blend of creativity and strategy.<br>
+      </p>
+    </div>
+
+    <div class="row align-custom-center mt-custom-5  gx-5">
+      <div class="col-md-10 col-lg-6 mx-custom-auto mb-lg-0 mb-custom-5">
+        <div class="image-box">
+         
+<div class="image-box position-relative img-wrapper-center">
+  <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njc0NTcyNDN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Happy Collaboration" class="img-fluid ">
+
+  
+    <span class="img-credit">
+      Photo by
+    <a 
+        href="https://unsplash.com/@sunday_digital?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nastuh Abootalebi
+      </a> on 
+      <a 
+        href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </span>
+  
+</div>
+
+        </div>
+      </div>
+
+      <div class="col-md-10 col-lg-6 m-custom-auto">
+        <div class="text-custom-start">
+          
+            <div class="why-point mb-custom-4">
+              <h5 class="fw-custom-semibold mb-custom-1"><span class="me-custom-2"><i class="bi bi-graph-up "></i></span> Guaranteed Growth</h5>
+              <p class="mb-custom-0  section-text">Our proven strategies are designed to drive measurable growth, ensuring your business reaches its full potential in a competitive landscape.</p>
+            </div>
+          
+            <div class="why-point mb-custom-4">
+              <h5 class="fw-custom-semibold mb-custom-1"><span class="me-custom-2"><i class="bi bi-currency-dollar "></i></span> ROI-Driven Campaigns</h5>
+              <p class="mb-custom-0  section-text">We prioritize return on investment, crafting campaigns that not only attract attention but also convert leads into loyal customers.</p>
+            </div>
+          
+            <div class="why-point mb-custom-4">
+              <h5 class="fw-custom-semibold mb-custom-1"><span class="me-custom-2"><i class="bi bi-tools "></i></span> Affordable Solutions</h5>
+              <p class="mb-custom-0  section-text">Our services are tailored to fit your budget, offering scalable solutions that grow alongside your business without compromising quality.</p>
+            </div>
+          
+            <div class="why-point mb-custom-4">
+              <h5 class="fw-custom-semibold mb-custom-1"><span class="me-custom-2"><i class="bi bi-lightbulb "></i></span> Data + Creativity</h5>
+              <p class="mb-custom-0  section-text">We combine analytics with innovative thinking, ensuring your marketing efforts are both creative and backed by solid data for maximum impact.</p>
+            </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+
+
+.whyChooseUs-zigrow-section_2 {
+  padding: 80px 20px;
+  background: #fff;
+ 
+  /* margin: 50px auto; */
+  /* max-width: 1200px; */
+  /* box-shadow: var(--shadow-section); */
+
+
+.section-tag {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-colors);
+  background: #eff2f7;
+  display: inline-block;
+  padding: 6px 14px;
+border-radius: var(--box-radius);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+   color: var(--para-muted);
+  font-size: var(--fs-sub);
+  margin-bottom: 30px;
+}
+
+.image-box {
+ border-radius: var(--box-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  aspect-ratio: 2/2;
+}
+.image-box img{
+  height: 100%;
+}
+
+.image-box:hover {
+  transform: scale(1.015);
+}
+
+.section-text {
+  font-size: var(--fs-body-sm);
+  color: var(--para-muted);
+  line-height: 1.7;
+}
+
+.why-point h5 {
+  color: #222;
+  font-size: 1.05rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .section-desc, .section-text, .why-point h5 {
+    text-align: center;
+  }
+
+  .btn-custom {
+    display: block;
+    margin: 20px auto 0;
+  }
+  }}
+
+</style>   <!-- ▰ Marketing Team Showcase -->
+<section class="section-padding team-zigrow-section_7" id="team" data-section="team">
+  <div class="container text-custom-center">
+    <span class="staff-label d-inline-block mb-custom-2">MEET OUR TEAM</span>
+
+    <h2 class="staff-head fw-custom-bold mb-custom-5 main-heading">Meet Our Team</h2>
+
+    <!-- responsive grid: xs:1, sm:2, md:3, lg:5 -->
+    <div class="row g-4 justify-custom-center">
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <div
+            class="staff-card img-wrapper-center position-relative h-custom-100"
+            style="">
+            <img
+              src="https://i.postimg.cc/Kv4g4kN0/1.png"
+              alt="Alex Johnson — Creative Director"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Alex Johnson</h6>
+              <span class="font-body-sm para-muted">Creative Director</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <div
+            class="staff-card img-wrapper-center position-relative h-custom-100"
+            style="transform: translateY(35px)">
+            <img
+              src="https://i.postimg.cc/fWqV4WNm/10.png"
+              alt="Emily Smith — Marketing Strategist"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Emily Smith</h6>
+              <span class="font-body-sm para-muted">Marketing Strategist</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <div
+            class="staff-card img-wrapper-center position-relative h-custom-100"
+            style="">
+            <img
+              src="https://i.postimg.cc/gk5Lhztm/2.png"
+              alt="Michael Lee — Social Media Manager"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Michael Lee</h6>
+              <span class="font-body-sm para-muted">Social Media Manager</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <div
+            class="staff-card img-wrapper-center position-relative h-custom-100"
+            style="transform: translateY(35px)">
+            <img
+              src="https://i.postimg.cc/TPjKBrd3/3.png"
+              alt="Sophia Brown — Content Specialist"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Sophia Brown</h6>
+              <span class="font-body-sm para-muted">Content Specialist</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-20">
+          <div
+            class="staff-card img-wrapper-center position-relative h-custom-100"
+            style="">
+            <img
+              src="https://i.postimg.cc/JhCyTTWF/4.png"
+              alt="Alex Johnson — Creative Director"
+              loading="lazy">
+            <div class="info-tile">
+              <h6 class="m-0">Alex Johnson</h6>
+              <span class="font-body-sm para-muted">Creative Director</span>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ——— Section background gradient ——— */
+  .team-zigrow-section_7 {
+    --tile-w: 80%;
+    background: linear-gradient(to bottom, #fafbfd 0%, #f1f3f7 100%);
+    color: #0f1a46;
+  }
+
+  @media (min-width: 992px) {
+    /* Bootstrap lg breakpoint: custom 5-col */
+    .col-lg-20 { flex: 0 0 20%; max-width: 20%; }
+  }
+
+  /* eyebrow */
+  .team-zigrow-section_7 .staff-label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    color: var(--primary-colors);
+  }
+
+  /* heading */
+  .team-zigrow-section_7 .staff-head {
+    font-size: clamp(1.8rem, 3vw + 1rem, 2.6rem);
+    line-height: 1.25;
+  }
+
+  /* ——— card shell ——— */
+  .team-zigrow-section_7 .staff-card {
+    border-radius: var(--box-radius);
+    overflow: hidden; position: relative;
+    box-shadow: var(--shadow-section);
+    transition: transform .4s ease, box-shadow .4s ease;
+    will-change: transform;
+  }
+  .team-zigrow-section_7 .staff-card:hover,
+  .team-zigrow-section_7 .staff-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-section-hover);
+  }
+
+  .team-zigrow-section_7 .staff-card img {
+    /* display:block; */
+     width:100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4; /* keeps uniform height */
+  }
+
+  /* bottom info tile */
+  .team-zigrow-section_7 .info-tile {
+    position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%);
+    background: #fff; width: var(--tile-w);
+    padding: .9rem 1.1rem;
+    border-radius: var(--box-radius);
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  }
+
+  /* responsive tweaks */
+  @media (max-width: 991.98px) {
+    /* kill the stagger from inline style on small-custom/medium screens */
+    .team-zigrow-section_7 .staff-card { transform: none ; }
+    .team-zigrow-section_7 .staff-card:hover,
+    .team-zigrow-section_7 .staff-card:focus-within { transform: translateY(-6px) ; }
+  }
+
+  @media (max-width: 575.98px) {
+    .team-zigrow-section_7 .info-tile { width: 85%; }
+  }
+
+  /* motion safety */
+  @media (prefers-reduced-motion: reduce){
+    .team-zigrow-section_7 .staff-card,
+    .team-zigrow-section_7 .staff-card img { transition: none ; }
+  }
+</style>
+   <section class="portfolio-zigrow-section_2 section-padding" id="portfolio" data-section="portfolio">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="section-title main-heading">
+        Our Impactful Work
+      </h2>
+    </div>
+
+    <div class="row justify-custom-center g-3">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1668606144076-8478f318a346?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwc2hvd2Nhc2V8ZW58MHx8fHwxNzY3NTE3MzE0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Storage & Seating"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            <span>
+              Brand Elevation <br />
+              Creative Branding
+            </span>
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@flipsnack?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Flipsnack
+          </a>
+          on
+          <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1712293176507-deee4f255380?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzY3NTI3NzQ1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Tables & Desks"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Social Buzz <br />
+            Social Media
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+          <a
+            href="https://unsplash.com/@jakubzerdzicki?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Jakub Żerdzicki
+          </a>
+          on
+      <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a>
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-top-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1636275133457-b57780aeeab0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjbGllbnQlMjB3b3JrJTIwZGlzcGxheXxlbnwwfHx8fDE3Njc1Mjc3NDV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Lighting & Decor"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            Influencer Impact <br />
+            UGC Campaign
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+           <a
+            href="https://unsplash.com/@thequietmarketer?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            The Quiet Marketer
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="offer-card rounded-bottom-only img-wrapper-center">
+          <img
+            src="https://images.unsplash.com/photo-1532072918578-b5583b5b585e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODMzOTV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHByb2plY3RzfGVufDB8fHx8MTc2NzUyNzc0NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            alt="Office Accessories"
+            class="img-fluid"
+          />
+
+          <div class="offer-label">
+            AI Ad Mastery <br />
+            Ad Optimization
+          </div>
+        </div>
+        <p
+          class="unsplash-credit small-custom text-custom-muted  mb-custom-0 "
+          style="font-size: 0.65rem"
+        >
+          Photo by
+            <a
+            href="https://unsplash.com/@esteejanssens?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+          >
+            Estée Janssens
+          </a>
+          on
+         <a
+            href="https://unsplash.com/?utm_source=zigrow&utm_medium=referral"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-custom-muted  text-decoration-underline"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-zigrow-section_2 {
+    background-color: #fff;
+
+    .offer-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .offer-card img {
+      width: 100%;
+      height: auto;
+      /* display: block; */
+      transition: transform 0.3s ease;
+      aspect-ratio: 3/4;
+    }
+
+    /* On hover, zoom the image */
+    .offer-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Rounded shapes */
+    .rounded-top-only img {
+      border-top-left-radius: 50% 30%;
+      border-top-right-radius: 50% 30%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .rounded-bottom-only img {
+      border-bottom-left-radius: 50% 30%;
+      border-bottom-right-radius: 50% 30%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .offer-label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1.5rem 1.95rem;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 1.9);
+    }
+
+    /* Overlay background for bottom label */
+    .rounded-top-only .offer-label {
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    /* Overlay background for top label */
+    .rounded-bottom-only .offer-label {
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+    }
+  }
+</style>
+   <section class="testimonial-zigrow-section_5 section-padding"id="testimonials"  data-section="testimonials">
+  <div class="container">
+    <div class="text-custom-center mb-custom-5">
+      <h2 class="main-heading mb-custom-2">What Our Clients Say</h2>
+      <p class="section-subtitle">Hear from those who transformed their brands with NextGen Media.</p>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=40" alt="Emily Carter"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Emily Carter</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Startup Founder</small>
+          <p class="testimonial-text mb-custom-0 ">"NextGen Media took our brand to new heights. Their strategies are innovative and results-driven."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=41" alt="Michael Lee"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Michael Lee</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">E-commerce Manager</small>
+          <p class="testimonial-text mb-custom-0 ">"The team’s creativity and attention to detail made a significant impact on our sales."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=42" alt="Sophia Turner"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Sophia Turner</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Social Media Influencer</small>
+          <p class="testimonial-text mb-custom-0 ">"Working with NextGen Media was a game changer. They truly understand how to engage audiences."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=43" alt="David Kim"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">David Kim</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Marketing Director</small>
+          <p class="testimonial-text mb-custom-0 ">"Their approach is refreshing. We saw measurable growth in just a few months."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=44" alt="Ava Johnson"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Ava Johnson</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Brand Strategist</small>
+          <p class="testimonial-text mb-custom-0 ">"NextGen Media’s insights and execution are top-notch. They helped us stand out in a crowded market."</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card p-custom-4 text-custom-center h-custom-100">
+          <div class="testimonial-avatar mb-custom-3 mx-custom-auto ">
+            <div class="img-wrapper-center"><img src="https://i.pravatar.cc/100?img=45" alt="Liam Brown"></div>
+          </div>
+          <h5 class="lead-custom-para-muted mb-custom-1">Liam Brown</h5>
+          <small class="para-muted d-block mb-custom-2 font-body-sm">Business Owner</small>
+          <p class="testimonial-text mb-custom-0 ">"I can’t recommend NextGen Media enough. They deliver real results that matter to our business."</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-zigrow-section_5 {
+  background: #fff;
+  position: relative;
+
+
+.section-subtitle {
+  font-size: var(--fs-sub);
+  color: var(--para-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+border-radius: var(--box-radius);
+  backdrop-filter: blur(20px);
+   box-shadow: var(--shadow-section);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-section-hover);
+}
+
+.testimonial-avatar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+   box-shadow: var(--shadow-section-primary);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar img {
+  transform: scale(1.05);
+}
+
+.testimonial-text {
+  font-size: var(--fs-body-sm);
+    color: var(--para-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .testimonial-avatar img {
+    width: 56px;
+    height: 56px;
+  }
+}}
+
+</style>      <!-- ✨ Collaboration / Contact CTA (Modern) -->
+<section class="contact-zigrow-section_3 section-padding" id="contact" data-section="contact">
+  <div class="container-xl">
+
+    <div class="cta-grid overflow-hidden">
+      <div class="row g-0">
+        <!-- ◼︎ Left: Contact Info -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="cta-info p-custom-5 h-custom-100">
+            <h2 class="fw-custom-bold mb-custom-4" style="color: var(--secondary-colors);">Get in touch</h2>
+
+            <ul class="contact-list list-unstyled mb-custom-0 ">
+              <li>
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h6>Address</h6>
+                  <p>Instagram @nextgen._media</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <h6>Email</h6>
+                  <p>maurya.amitt2011@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h6>Phone</h6>
+                  <p>+91 00000 00000</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ◼︎ Right: Hero / CTA -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="cta-hero d-flex flex-column justify-custom-center align-custom-center text-custom-center h-custom-100">
+            <div class="content px-custom-4 px-lg-custom-5">
+              <h3 class="fw-custom-bold mb-custom-4 col-md-8 mx-custom-auto">Feel Free to Contact Us Anytime</h3>
+              <a href="#" class="primary-btn text-custom-truncate">Click here for location</a>
+
+              <!-- socials -->
+              <div class="social-wrap d-flex justify-custom-center gap-3 mt-custom-5  mx-custom-auto">
+                <a aria-label="Facebook"  href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a aria-label="Instagram" href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a aria-label="Twitter"   href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                <a aria-label="LinkedIn"  href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /row -->
+    </div><!-- /cta-grid -->
+
+  </div>
+</section>
+<style>
+  /* ===================  TOKENS  =================== */
+  :root {
+    --primary-colors-txt: var(--theme-3);
+    --surface: #ffffff;
+    --surface-dark: #111;
+    --stroke: rgba(0,0,0,.06);
+    --bg-section: #f8f9fa;
+  }
+
+  /* ===================  SECTION  =================== */
+  .contact-zigrow-section_3 {
+    background: var(--bg-section);
+  
+
+  /* ---------- grid wrapper ---------- */
+  .cta-grid {
+    background: var(--surface);
+    box-shadow: var(--shadow-section);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+  }
+
+  /* ---------- left panel ---------- */
+  .cta-info {
+    background: var(--surface);
+  }
+
+  .cta-info h2 {
+    font-size: 2.1rem;
+  }
+
+  .contact-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-list .icon {
+    color: var(--accent);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-list h6 {
+    font-size: .8rem;
+    letter-spacing: .05em;
+    font-weight: 700;
+    margin-bottom: .25rem;
+    color: var(--accent);
+  }
+
+  .contact-list p {
+    margin: 0;
+    font-size: var(--fs-body);
+    color: var(--para-muted);
+  }
+
+  /* ---------- hero panel ---------- */
+  .cta-hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80')
+      center / cover no-repeat;
+    min-height: 420px;
+    overflow: hidden;
+  }
+
+  .cta-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,.45);
+  }
+
+  .cta-hero .content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .cta-hero h3 {
+    font-size: 1.9rem;
+    line-height: 1.35;
+  }
+
+  /* ---------- socials ---------- */
+  .social-btn {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.4);
+    transition: background .3s ease, transform .3s ease;
+    text-decoration: none;
+  }
+
+  .social-btn:hover {
+    background: rgba(255,255,255,.15);
+    transform: translateY(-3px);
+    color: #fff;
+  }
+
+  /* ===================  RESPONSIVE TWEAKS  =================== */
+  @media (max-width: 575.98px) {
+    .cta-info h2 {
+      font-size: 1.8rem;
+    }
+
+    .cta-hero h3 {
+      font-size: 1.6rem;
+    }
+
+    .btn-cta {
+      width: 100%;
+    }
+  }}
+</style>
+   
+<footer class="footer-zigrow-section_3 section-padding" data-section="footer" id="footer">
+  <div class="container">
+    <!-- Logo & Tagline Top Row -->
+    <div class="row mb-custom-4 align-custom-center justify-custom-between">
+      <div class="col-md-6 mb-custom-3 mb-md-0">
+      <div data-logo="footer">
+        <h4>Nextgen.media</h4>
+      </div>
+   
+      </div>
+      <div class="col-md-6 text-custom-md-end">
+        <p class="footer-tagline mb-custom-0 ">
+           <p class="footer-tagline">Transforming Brands Into Unforgettable Experiences</p>
+      </div>
+    </div>
+
+    <hr class="my-custom-4" />
+
+    <!-- Middle Content Grid -->
+    <div class="row gy-4 justify-custom-between">
+      <!-- Company -->
+      <div class="col-6 col-md-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3">
+        <h6 class="footer-heading">Navigation</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Why Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="footer-heading">Contact</h6>
+        <ul class="list-unstyled contact-info">
+          <li><i class="bi bi-envelope"></i> maurya.amitt2011@gmail.com</li>
+          <li><i class="bi bi-telephone"></i> +91 00000 00000</li>
+          <li><i class="bi bi-geo-alt"></i> Instagram @nextgen._media</li>
+        </ul>
+      </div>
+
+      <!-- Language + Social -->
+      <div
+        class="col-md-3 d-flex flex-column align-md-custom-end -end align-custom-start gap-3"
+      >
+        <div class="social-icons d-flex gap-2">
+          <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-custom-4" />
+
+    <!-- Bottom Bar -->
+    <div class="row align-custom-center justify-custom-between">
+      <div class="col-md-6 small-custom para-muted">
+        &copy; 2025. All rights reserved.
+      </div>
+      <div class="col-md-6 text-custom-md-end small-custom bottom-bar-links">
+        <a href="#" class="me-custom-3 text-decoration-custom-none">Terms & Conditions</a>
+        <a href="#" class="me-custom-3 text-decoration-custom-none">Privacy Policy</a>
+        <a href="#" class="text-decoration-custom-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-zigrow-section_3 {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    border-radius: 5%;
+  
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .footer-heading {
+    font-weight: 600;
+    color: var(--secondary-colors);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+ hr{
+  border: 0;                     /* remove default border */
+  height: 1px;                   /* uniform thin line */
+  background-color: var(--border-muted); /* base light color */
+  opacity: .55;                  /* make it lighter/softer */
+  margin: 1.25rem 0;             /* consistent spacing */
+  width: 100%;
+}
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--para-muted);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover , .bottom-bar-links a:hover {
+    color: var(--primary-colors);
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+    color: var(--para-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info i {
+    color: var(--primary-colors);
+    margin-right: 0.5rem;
+  }
+
+  .language-select select {
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .social-icons .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .social-icons .social-btn:hover {
+    background-color: var(--primary-colors);
+    color: #fff;
+    border-color: var(--primary-colors);
+  }
+
+  @media (max-width: 767px) {
+    .footer-tagline,
+    .custom-footer .text-custom-md-end {
+      text-align: left ;
+    }
+
+    .language-select {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }}
+  }
+</style>
+ 
+</body>
+
+<script>
+  function importAndOpenBuilder(userId) {
+    fetch("https://api-uat.zigrow.com/api/import-template", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          // window.location.href = `https://api.zigrow.com/builder/editor.html?template=templates/build-with-ai/${userId}/index.html&mode=new`;
+          window.location.href = `https://api.zigrow.com/builder/editor.html?template=ai:${userId}&mode=new`;
+
+        } else {
+          alert(
+            "Failed to import template to builder: " +
+            (data.error || "Unknown error")
+          );
+        }
+      })
+      .catch(() => {
+        alert("Failed to communicate with builder server.");
+      });
+  }
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- <script>
+  // Check if the page is accessed from 'dashboard.zigrow.com'
+  const isFromDashboard = document.referrer.includes("dashboard.zigrow.com");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from dashboard.zigrow.com
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+<!-- <script>
+  // Check if the page is accessed from 'http://127.0.0.1:5173'
+  const isFromDashboard = document.referrer.includes("http://127.0.0.1:5173");
+
+  if (!isFromDashboard) {
+    // Disable right-click on the page if not from http://127.0.0.1:5173
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Disable right-click context menu
+    });
+
+    // Disable text selection
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault(); // Disable text selection
+    });
+
+    // Disable inspect element using keyboard shortcuts (F12, Ctrl + Shift + I)
+    document.addEventListener("keydown", function(event) {
+      if (
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key === "I")
+      ) {
+        event.preventDefault(); // Block F12 or Ctrl+Shift+I
+      }
+    });
+  }
+</script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // REMOVE all pre-existing AOS classes
+  document.querySelectorAll(".aos-init, .aos-animate").forEach(el => {
+    el.classList.remove("aos-init", "aos-animate");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  
+  /* ---------------------------------------------------
+    1) Define animation rules per section type
+  --------------------------------------------------- */
+  const sectionAnimations = {
+    hero: "fade-up-big",
+    about: ["fade-left", "fade-right"],
+    services: "fade-up",
+    service: "fade-up",
+    portfolio: "zoom-in",
+    team: "fade-up-small",
+    pricing: "zoom-in",
+    contact: "fade-up",
+    faq: "fade-right",
+    reviews: "fade-up",
+    testimonial: "fade-up",
+    product: "fade-up",
+    logos: "fade-in-slow",
+    cta: "zoom-in-big",
+    default: ["fade-up", "fade-down"]
+  };
+
+  /* ---------------------------------------------------
+    2) Utility: pick animation type
+  --------------------------------------------------- */
+  const pickAnimation = (type, index) => {
+    const anim = sectionAnimations[type] || sectionAnimations.default;
+    return Array.isArray(anim) ? anim[index % anim.length] : anim;
+  };
+
+  /* ---------------------------------------------------
+    3) Utility: stagger delays
+  --------------------------------------------------- */
+  const stagger = (elList, base = 80) => {
+    elList.forEach((el, i) => {
+      el.setAttribute("data-aos-delay", i * base);
+    });
+  };
+
+  /* ---------------------------------------------------
+    4) Apply to ALL sections automatically
+  --------------------------------------------------- */
+  document.querySelectorAll("[data-section]").forEach((section, secIndex) => {
+    const type = (section.dataset.section || "default").toLowerCase();
+    const anim = pickAnimation(type, secIndex);
+
+    // SECTION LEVEL ANIMATION
+    section.setAttribute("data-aos", anim);
+
+    // CHILDREN: Cards / Columns / Items
+    const children = section.querySelectorAll(`
+      .col,
+      .col-md-6,
+      .col-lg-6,
+      .col-lg-4,
+      .row > div,
+      .card,
+      .item,
+      .service-card,
+      .feature-box,
+      .team-card,
+      .pricing-card,
+      .faq-item,
+      .testimonial-card,
+      .portfolio-card
+    `);
+
+    children.forEach((child, i) => {
+      child.setAttribute("data-aos", anim);
+      child.setAttribute("data-aos-delay", i * 70);
+    });
+
+    // ELEMENT LEVEL: Headings, paragraphs, buttons
+    const elements = section.querySelectorAll("h1, h2, h3, p, img, button, a, li");
+
+    elements.forEach((el, i) => {
+      el.setAttribute("data-aos", anim);
+      el.setAttribute("data-aos-delay", i * 25);
+    });
+
+  });
+
+  /* ---------------------------------------------------
+     5) MOBILE OPTIMIZED — Disable heavy animations
+  --------------------------------------------------- */
+  if (window.innerWidth < 576) {
+    document.querySelectorAll("[data-aos]").forEach(el => {
+      if (["zoom-in-big", "fade-up-big"].includes(el.dataset.aos)) {
+        el.setAttribute("data-aos", "fade-up");
+      }
+    });
+  }
+
+  /* ---------------------------------------------------
+     6) INIT AOS
+  --------------------------------------------------- */
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 90,
+
+      // 🚫 Disable animation on mobile
+  disable: function () {
+    return window.innerWidth < 768; // 768px se chhota = Mobile
+  }
+  });
+
+});
+</script>
+
+</html>
