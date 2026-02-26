@@ -5766,6 +5766,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
           container: "body", // scroll/overflow safe
           placement: el.getAttribute("data-bs-placement") || "bottom",
           boundary: el.getAttribute("data-bs-boundary") || "window",
+          trigger: "hover",
         });
       });
     }
@@ -5784,7 +5785,52 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         if (media) initBuilderTooltips(media);
       });
     });
+
+
+ (function fixBootstrapTooltipStuckOnScroll() {
+  const hideAllTooltips = () => {
+    document.querySelectorAll(".tooltip.show").forEach((tipEl) => {
+      const id = tipEl.getAttribute("id");
+      if (!id) return;
+
+      const trigger = document.querySelector(`[aria-describedby="${id}"]`);
+      if (!trigger) return;
+
+      const instance = bootstrap.Tooltip.getInstance(trigger);
+      if (instance) instance.hide();
+
+      if (typeof trigger.blur === "function") trigger.blur();
+    });
+  };
+
+  const bindHideEvents = (target) => {
+    if (!target || !target.addEventListener) return;
+    ["scroll", "wheel", "touchmove", "mousedown", "click", "pointerdown"].forEach((evt) => {
+      target.addEventListener(evt, hideAllTooltips, true);
+    });
+  };
+
+  // main document
+  bindHideEvents(document);
+
+  const iframe = document.getElementById("iframe1");
+  if (iframe) {
+    const bindIframe = () => {
+      try {
+        if (iframe.contentWindow) bindHideEvents(iframe.contentWindow);
+        if (iframe.contentDocument) bindHideEvents(iframe.contentDocument);
+      } catch (e) {
+      }
+    };
+
+    iframe.addEventListener("load", bindIframe);
+    bindIframe(); 
+  }
+})();
+
   </script>
+
+
 
   <!-- // Text editing Toolbar expand (Amit has added this) -->
   <script>
