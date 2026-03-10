@@ -81,12 +81,12 @@ Vvveb.Blocks.add("bootstrap4/zigrow-cta-1", {
     name: "Cta",
     category: "cta",
     image: "https://i.postimg.cc/Ss47Vz3q/Screenshot-2025-11-13-182413.png",
-  html:` <section id="zigrow-cta-1" data-section="zigrow-cta-1" class="zigrow-cta-1 py-6">
+    html: ` <section id="zigrow-cta-1" data-section="zigrow-cta-1" class="zigrow-cta-1 py-6">
       <div class="help-box">
         <h1 class="mb-5">
           Let Me Help You Overshoot Your Goals in the Right Ways.
         </h1>
-        <a href="#" class="rounded-0 btn-cta">Start Now</a>
+        <a href="#" class="rounded-0 btn-cta" data-btn="cta">Start Now</a>
       </div>
        <style>
       .py-6 {
@@ -118,14 +118,14 @@ Vvveb.Blocks.add("bootstrap4/zigrow-cta-1", {
         color: var(--primary-colors, #76b86b);
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-cta-2", {
     name: "Cta",
     category: "cta",
     image: "https://i.postimg.cc/8CSyrXRv/Screenshot-2025-11-13-183415.png",
-  html:`   <section id="zigrow-cta-2" data-section="zigrow-cta-2" class="zigrow-cta-2  py-6">
+    html: `   <section id="zigrow-cta-2" data-section="zigrow-cta-2" class="zigrow-cta-2  py-6">
       <div class="bg-img"></div>
       <div class="overlay"></div>
 
@@ -234,13 +234,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-cta-2", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-cta-3", {
     name: "Cta",
     category: "cta",
     image: "https://i.postimg.cc/d3kX9kDz/Screenshot-2025-11-13-184057.png",
-  html:` <section class="zigrow-cta-3 " data-section="zigrow-cta-3" id="zigrow-cta-3">
+    html: ` <section class="zigrow-cta-3 " data-section="zigrow-cta-3" id="zigrow-cta-3">
       <div class="zigrow-cta-3-overlay">
         <div class="container">
           <div class="footer-container-cta-3 py-6">
@@ -249,7 +249,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-cta-3", {
               We’re here to support you with reliable solutions crafted for your
               goals.
             </p>
-            <a href="#contact" class="zigrow-cta-3-button">Contact Us</a>
+            <a href="#contact" class="zigrow-cta-3-button" data-btn="cta">Contact Us</a>
           </div>
         </div>
       </div>
@@ -315,7 +315,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-cta-3", {
         box-shadow: 0 0 20px var(--primary-colors, #ff7f32);
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 // Contact Form
@@ -323,240 +323,245 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-1", {
     name: "Contact-1",
     category: "contact",
     image: "https://i.postimg.cc/762jKSJ4/Screenshot-2025-11-15-161322.png",
- html:`  <section
-      id="zigrow-contact-1"
-      data-section="zigrow-contact-1"
-      class="zigrow-contact-1 py-6"
-    >
-      <div class="container">
-        <!-- Newsletter Row -->
-        <div class="row g-4 newsletter-row">
-          <div class="newsletter-left col-12 col-lg-6">
-            <div class="icon-circle">
-              <i class="bi bi-envelope-fill" data-icon="envelope"></i>
-            </div>
-            <div class="text">
-              <h3>Subscribe To Our Newsletter</h3>
-              <p>
-                Stay in touch with us to get latest news and special offers.
-              </p>
-            </div>
-          </div>
 
-          <div class="newsletter-right col-12 col-lg-6">
-            <form class="newsletter-form">
-              <input type="email" placeholder="Your email address" required />
-            </form>
-            <button type="submit" class="subscribe-btn">Subscribe</button>
-          </div>
+    html: `
+<section
+  class="zigrow-contact-1 py-6"
+  id="zigrow-contact-1"
+  data-section="zigrow-contact-1"
+>
+  <div class="container">
+    <div class="newsletter-wrap text-center">
+      <p class="newsletter-subtitle">LET'S KEEP IN TOUCH</p>
+      <h2 class="newsletter-title">Subscribe to our newsletter</h2>
+      <p class="newsletter-text">
+        Stay updated with our latest news, offers, and helpful insights.
+      </p>
+
+      <form
+        action="https://api.zigrow.com/api/forms/submit"
+        method="post"
+        data-zigrow-form
+        class="newsletter-form"
+      >
+        <input type="hidden" name="domain" value="" />
+        <input type="hidden" name="form_key" value="newsletter" />
+        <input type="hidden" name="page_url" value="" />
+        <input type="hidden" name="_company" value="" />
+
+        <div form-question-zigrow>
+          <label>Email Address</label>
+          <input
+            type="email"
+            name="newsletter_email"
+            placeholder="Enter your email address"
+            required
+          />
         </div>
 
-        <!-- Contact Row -->
-        <div class="row g-4 contact-row">
-          <div class="contact-item col-12 col-lg-4">
-            <div class="icon-circle"><i class="bi bi-geo-alt-fill" data-icon="location"></i></div>
-            <div>
-              <h4>Address</h4>
-              <p>E-123, ABC Plaza, XYZ Street, New Delhi - 110077</p>
-            </div>
-          </div>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
 
-          <div class="contact-item col-12 col-lg-4">
-            <div class="icon-circle"><i class="bi bi-telephone-fill" data-icon="phone"></i></div>
-            <div>
-              <h4>Call Us</h4>
-              <p>+91-9123456789</p>
-            </div>
-          </div>
+  <style>
+    .zigrow-contact-1 {
+      background: #f8f8f8;
+    }
 
-          <div class="contact-item col-12 col-lg-4">
-            <div class="icon-circle"><i class="bi bi-envelope-fill" data-icon="envelope"></i></div>
-            <div>
-              <h4>Email Us</h4>
-              <p>yourname@domainname.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        <style>
-      .py-6 {
-        padding: 3rem 0;
-      }
-      .zigrow-contact-1 {
-        background-color: var(--primary-colors, #1a73e8);
-        color: #fff;
-      }
-      .zigrow-contact-1 .newsletter-row {
-        align-items: center;
-        margin-bottom: 2.5rem;
-        /* display: flex; */
-        /* flex-wrap: wrap; */
-        /* gap: 2.5rem; */
-      }
-      .zigrow-contact-1 .newsletter-row .newsletter-left {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1rem;
-      }
-      @media (max-width: 992px) {
-        .zigrow-contact-1 .newsletter-row .newsletter-left {
-          flex-wrap: wrap;
+    .py-6 {
+      padding: 3rem 0;
+    }
+
+    .zigrow-contact-1 .newsletter-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .zigrow-contact-1 .newsletter-subtitle {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--primary-colors, #111111);
+      margin-bottom: 0.5rem;
+    }
+
+    .zigrow-contact-1 .newsletter-title {
+      font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
+      line-height: 1.2;
+      color: #111111;
+      margin-bottom: 0.75rem;
+    }
+
+    .zigrow-contact-1 .newsletter-text {
+      color: var(--secondary-colors, #666666);
+      margin-bottom: 1.5rem;
+    }
+
+    .zigrow-contact-1 .newsletter-form {
+      display: grid;
+      gap: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .zigrow-contact-1 .newsletter-form div[form-question-zigrow] {
+      display: grid;
+      gap: 0.35rem;
+      text-align: left;
+    }
+
+    .zigrow-contact-1 .newsletter-form label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #222222;
+      margin: 0;
+    }
+
+    .zigrow-contact-1 .newsletter-form input {
+      width: 100%;
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      outline: none;
+      background: #ffffff;
+    }
+
+    .zigrow-contact-1 .newsletter-form input:focus {
+      border-color: #999999;
+    }
+
+    .zigrow-contact-1 .newsletter-form button {
+      width: fit-content;
+      justify-self: center;
+      border: 0;
+      padding: 0.8rem 1.5rem;
+      border-radius: 999px;
+      background: var(--primary-colors, #111111);
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    (function () {
+      const forms = Array.from(document.querySelectorAll("[data-zigrow-form]"));
+      if (!forms.length) return;
+
+      function serializeForm(form) {
+        const fd = new FormData(form);
+        const raw = {};
+        for (const [name, value] of fd.entries()) {
+          const el = form.elements[name];
+          const isGroup = el && el.length && el[0] && el[0].type === "checkbox";
+          if (isGroup) {
+            if (!raw[name]) raw[name] = [];
+            raw[name].push(value === "" ? true : value);
+          } else {
+            raw[name] = value;
+          }
         }
+        return raw;
       }
-      .zigrow-contact-1 .newsletter-row .newsletter-left .icon-circle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: var(--territory-colors, #06d58d);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-      }
-      .zigrow-contact-1 .newsletter-row .newsletter-left h3 {
-        margin: 0;
-        font-size: 1.4rem;
-        font-weight: 600;
-      }
-      .zigrow-contact-1 .newsletter-row .newsletter-left p {
-        margin: 0.3rem 0 0;
-        font-size: 1rem;
-        opacity: 0.9;
-      }
-      .zigrow-contact-1 .newsletter-row .newsletter-right {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        flex: 1;
-      }
-      .zigrow-contact-1 .newsletter-row .newsletter-right .newsletter-form {
-        display: flex;
-        flex: 1;
-      }
-      .zigrow-contact-1
-        .newsletter-row
-        .newsletter-right
-        .newsletter-form
-        input {
-        flex: 1;
-        padding: 0.7rem 1rem;
-        border: none;
-        min-width: 0;
-        margin-left: 2.5rem;
-        font-size: 1rem;
-      }
-      @media (max-width: 768px) {
-        .zigrow-contact-1
-          .newsletter-row
-          .newsletter-right
-          .newsletter-form
-          input {
-          margin-left: 0;
+
+      function pickPrimaryValue(raw) {
+        if (raw.newsletter_email && String(raw.newsletter_email).trim()) {
+          return String(raw.newsletter_email).trim();
         }
-      }
-      .zigrow-contact-1 .newsletter-row .newsletter-right .subscribe-btn {
-        padding: 0.7rem 1.2rem;
-        border: none;
-        border-radius: 4px;
-        background: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-      .zigrow-contact-1
-        .newsletter-row
-        .newsletter-right
-        .subscribe-btn:hover {
-        background: #fff;
-        color: #1a73e8;
-      }
-      .zigrow-contact-1 .contact-row {
-        padding-top: 2.5rem;
-        justify-content: space-between;
-        /* display: flex; */
-        /* flex-wrap: wrap; */
-        /* gap: 1.5rem; */
-        /* vertical rule (divider) */
-      }
-      .zigrow-contact-1 .contact-row .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex: 1;
-        min-width: 220px;
-        padding: 0 1rem;
-        text-align: left;
-      }
-      .zigrow-contact-1 .contact-row .contact-item .icon-circle {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #06d58d;
-      }
-      .zigrow-contact-1 .contact-row .contact-item h4 {
-        margin: 0;
-        font-size: 1.1rem;
-        font-weight: 600;
-      }
-      .zigrow-contact-1 .contact-row .contact-item p {
-        margin: 0.2rem 0 0;
-        font-size: 0.95rem;
-        opacity: 0.9;
-      }
-      .zigrow-contact-1 .contact-row .contact-item:not(:last-child) {
-        border-right: 2px solid rgba(255, 255, 255, 0.3);
-      }
-      @media (max-width: 768px) {
-        .zigrow-contact-1 .newsletter-row {
-          flex-direction: column;
-          align-items: flex-start;
+        if (raw.email && String(raw.email).trim()) {
+          return String(raw.email).trim();
         }
-        .zigrow-contact-1 .newsletter-row .newsletter-right {
-          flex-direction: column;
-          align-items: stretch;
-          width: 100%;
-        }
-        .zigrow-contact-1 .newsletter-row .newsletter-right .newsletter-form {
-          width: 100%;
-        }
-        .zigrow-contact-1
-          .newsletter-row
-          .newsletter-right
-          .newsletter-form
-          input {
-          border-radius: 4px;
-          margin-bottom: 0.5rem;
-          width: 100%;
-        }
-        .zigrow-contact-1 .newsletter-row .newsletter-right .subscribe-btn {
-          width: 100%;
-        }
-        .zigrow-contact-1 .contact-row {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .zigrow-contact-1 .contact-row .contact-item {
-          width: 100%;
-          border-right: none !important;
-          padding: 0;
-        }
+        return "";
       }
-    </style>
-    </section>`
+
+      forms.forEach((form) => {
+        const domainInput = form.querySelector('input[name="domain"]');
+        const pageUrlInput = form.querySelector('input[name="page_url"]');
+        if (domainInput) domainInput.value = location.host;
+        if (pageUrlInput) pageUrlInput.value = location.href;
+
+        let msgContainer = form.querySelector(".form-submit-message");
+        if (!msgContainer) {
+          msgContainer = document.createElement("div");
+          msgContainer.className = "form-submit-message mt-2 text-sm";
+          form.appendChild(msgContainer);
+        }
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const submitBtn = form.querySelector('[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.dataset._oldText = submitBtn.innerText;
+            submitBtn.innerText = "Submitting...";
+          }
+
+          msgContainer.innerText = "";
+          msgContainer.style.color = "";
+
+          try {
+            const raw = serializeForm(form);
+            const body = new URLSearchParams();
+            body.set(
+              "domain",
+              form.querySelector('input[name="domain"]')?.value || location.host
+            );
+            body.set(
+              "form_key",
+              form.querySelector('input[name="form_key"]')?.value || "newsletter"
+            );
+            body.set(
+              "page_url",
+              form.querySelector('input[name="page_url"]')?.value || location.href
+            );
+            body.set("payload", JSON.stringify(raw));
+
+            const primary = pickPrimaryValue(raw);
+            if (primary) body.set("value", primary);
+
+            if (raw._company) body.set("_company", raw._company);
+
+            const res = await fetch(form.action, {
+              method: "POST",
+              headers: { Accept: "application/json" },
+              body,
+            });
+
+            const data = await res.json().catch(() => ({}));
+            if (res.ok && (data.ok ?? true)) {
+              form.reset();
+              msgContainer.innerText = "✅ Thanks! Your request has been submitted.";
+              msgContainer.style.color = "#28a745";
+            } else {
+              msgContainer.innerText =
+                "❌ " + (data.message || ("Failed (HTTP " + res.status + ")"));
+              msgContainer.style.color = "#dc3545";
+            }
+          } catch (err) {
+            console.error(err);
+            msgContainer.innerText = "❌ Something went wrong. Please try again.";
+            msgContainer.style.color = "#dc3545";
+          } finally {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerText = submitBtn.dataset._oldText || "Subscribe";
+            }
+          }
+        });
+      });
+    })();
+  </script>
+</section>
+`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-2", {
     name: "Contact-2",
     category: "contact",
     image: "https://i.postimg.cc/SNfRZMcW/Screenshot-2025-11-15-162121.png",
- html:`    <section id="zigrow-contact-2" data-section="zigrow-contact-2" class="zigrow-contact-2 py-6">
+    html: `    <section id="zigrow-contact-2" data-section="zigrow-contact-2" class="zigrow-contact-2 py-6">
       <div class="container">
         <!-- Heading Section -->
         <div class="row g-4 zigrow-contact-2-head">
@@ -584,7 +589,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-2", {
                 E-123, ABC Plaza, XYZ Street, New Delhi - 110077
               </p>
               <a href="#" class="direction">
-                Direction <i class="bi bi-arrow-right"></i>
+                Direction <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
               </a>
             </div>
           </div>
@@ -594,7 +599,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-2", {
               <h4>Bengaluru</h4>
               <p class="address">E-123, ABC Plaza, 110077</p>
               <a href="#" class="direction">
-                Direction <i class="bi bi-arrow-right"></i>
+                Direction <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
               </a>
             </div>
           </div>
@@ -604,7 +609,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-2", {
               <h4>Haryana</h4>
               <p class="address">E-123, XYZ Street, New Delhi - 110077</p>
               <a href="#" class="direction">
-                Direction <i class="bi bi-arrow-right"></i>
+                Direction <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
               </a>
             </div>
           </div>
@@ -612,7 +617,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-2", {
 
         <!-- CTA Button -->
         <div class="cta-wrap">
-          <a href="#" class="cta-btn">View Our Offices</a>
+          <a href="#" class="cta-btn" data-btn="cta">View Our Offices</a>
         </div>
       </div>
         <style>
@@ -735,15 +740,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-2", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-3", {
-  name: "Contact-3",
-  category: "contact",
-  image: "https://i.postimg.cc/nLTDSSjw/Screenshot-2025-11-20-155027.png", 
-  
-  html: `  <section id="zigrow-contact-3" data-section="zigrow-contact-3" class="zigrow-contact-3 py-6">
+    name: "Contact-3",
+    category: "contact",
+    image: "https://i.postimg.cc/nLTDSSjw/Screenshot-2025-11-20-155027.png",
+
+    html: `  <section id="zigrow-contact-3" data-section="zigrow-contact-3" class="zigrow-contact-3 py-6">
       <div class="container">
         <div class="row g-4 grid">
           <!-- Left: Quote Form -->
@@ -756,66 +761,56 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-3", {
                 action="https://api.zigrow.com/api/forms/submit"
                 method="post"
                 data-zigrow-form
+                class="contact-form"
               >
                 <input type="hidden" name="domain" value="" />
-                <input
-                  type="hidden"
-                  name="form_key"
-                  value="contact"
-                /><!-- change per form -->
+                <input type="hidden" name="form_key" value="contact" />
                 <input type="hidden" name="page_url" value="" />
-                <input
-                  type="text"
-                  name="_company"
-                  style="display: none !important"
-                />
+                <input type="hidden" name="_company" value="" />
 
-                <label class="field">
-                  <span class="visually-hidden">Your name</span>
+                <div form-question-zigrow>
+                  <label>Name</label>
                   <input
                     type="text"
-                    placeholder="Enter your name"
                     name="name"
-                    id="name"
+                    placeholder="Enter your name"
                     required
                   />
-                </label>
+                </div>
 
-                <label class="field">
-                  <span class="visually-hidden">Email address</span>
+                <div form-question-zigrow>
+                  <label>Email</label>
                   <input
                     type="email"
-                    placeholder="Enter your email address"
                     name="email"
-                    id="email"
+                    placeholder="Enter your email address"
                     required
                   />
-                </label>
+                </div>
 
-                <label class="field">
-                  <span class="visually-hidden">Subject</span>
+                <div form-question-zigrow>
+                  <label>Subject</label>
                   <input
                     type="text"
-                    placeholder="Subject"
-                    name="Subject"
-                    id="Subject"
+                    name="subject"
+                    placeholder="Enter the subject"
                   />
-                </label>
+                </div>
 
-                <label class="field">
-                  <span class="visually-hidden">Message</span>
+                <div form-question-zigrow>
+                  <label>Message</label>
                   <textarea
-                    rows="5"
-                    placeholder="Message"
                     name="message"
-                    id="message"
+                    placeholder="Enter your message"
+                    rows="5"
                   ></textarea>
-                </label>
+                </div>
 
-                <button type="submit" class="send-btn">Send Message</button>
+                <button type="submit">Send Message</button>
               </form>
             </div>
           </div>
+
           <!-- Right: FAQ -->
           <div class="faq-right col-12 col-lg-6">
             <div class="faq-section">
@@ -848,8 +843,9 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-3", {
                   leo.
                 </p>
               </div>
+
               <div class="faq-item">
-                <h6>3. How to create cities and communities that solve?</h6>
+                <h6>4. How to create cities and communities that solve?</h6>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
@@ -860,151 +856,175 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-3", {
           </div>
         </div>
       </div>
-     <style>
-      .zigrow-contact-3 {
-        background-color: #f0eeee;
-        margin-top: 5rem;
-        /* Left column */
-        /* Right column */
-        /* Small screens */
-      }
-      .py-6 {
-        padding: 3rem 0;
-      }
-      @media (min-width: 768px) {
-        .zigrow-contact-3 .grid {
-          align-items: center;
-        }
-      }
-      .zigrow-contact-3 .faq-left {
-        position: relative;
-      }
-      .zigrow-contact-3 .quote-form {
-        background-color: var(--territory-colors, #1c2b45);
-        color: var(--text-light, #ffffff);
-        padding: 2rem 1.5rem;
-        border-radius: 6px;
-        width: 100%;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      }
-      @media (min-width: 768px) {
-        .zigrow-contact-3 .quote-form {
-          padding: 3rem 2.5rem;
-          width: 95%;
-          position: relative;
-          top: -5rem;
-        }
-      }
-      .zigrow-contact-3 .quote-form h3 {
-        font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
-        margin-bottom: 0.5rem;
-      }
-      .zigrow-contact-3 .quote-form p {
-        opacity: 0.9;
-        margin-bottom: 1.25rem;
-      }
-      .zigrow-contact-3 .quote-form form {
-        display: grid;
-        gap: 1rem;
-      }
-      .zigrow-contact-3 .quote-form .field {
-        display: block;
-      }
-      .zigrow-contact-3 .quote-form .field input,
-      .zigrow-contact-3 .quote-form .field textarea {
-        width: 100%;
-        background-color: #fff;
-        border: 0;
-        border-radius: 4px;
-        padding: 0.9rem 1rem;
-        font-size: 0.95rem;
-        color: #111827;
-        outline: none;
-        transition: box-shadow 0.15s ease, transform 0.02s ease;
-      }
-      .zigrow-contact-3 .quote-form .field input:focus,
-      .zigrow-contact-3 .quote-form .field textarea:focus {
-        box-shadow: 0 0 0 3px rgba(254, 185, 9, 0.35);
-      }
-      .zigrow-contact-3 .quote-form .field textarea {
-        resize: vertical;
-        min-height: 80px;
-      }
-      .zigrow-contact-3 .quote-form .send-btn {
-        display: inline-block;
-        width: -moz-fit-content;
-        width: fit-content;
-        background-color: var(--primary-colors, #feb909);
-        color: var(--territory-colors, #1c2b45);
-        border: 0;
-        border-radius: 0.2rem;
-        padding: 0.7rem 2rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: filter 0.15s ease, transform 0.05s ease;
-      }
-      .zigrow-contact-3 .quote-form .send-btn:hover {
-        filter: brightness(0.95);
-      }
-      .zigrow-contact-3 .quote-form .send-btn:active {
-        transform: translateY(1px);
-      }
-      .zigrow-contact-3 .faq-right .faq-section {
-        padding-inline: 0;
-      }
-      .zigrow-contact-3 .faq-right .faq-section .sub-title {
-        color: var(--primary-colors, #feb909);
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        margin-bottom: 0.25rem;
-      }
-      .zigrow-contact-3 .faq-right .faq-section h3 {
-        font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
-        font-weight: 800;
-        margin-bottom: 1.25rem;
-        color: #0f172a;
-      }
-      .zigrow-contact-3 .faq-right .faq-section .faq-item {
-        margin-bottom: 1.25rem;
-      }
-      .zigrow-contact-3 .faq-right .faq-section .faq-item h6 {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #111827;
-        margin-bottom: 0.35rem;
-      }
-      .zigrow-contact-3 .faq-right .faq-section .faq-item p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: var(--secondary-colors, #595f6b);
-      }
-      @media (max-width: 768px) {
-        .zigrow-contact-3 {
-          margin-top: 0;
-          padding: 0;
-        }
-        .zigrow-contact-3 .quote-form {
-          position: static;
-          top: 0;
-          border-radius: 0;
-          box-shadow: none;
-        }
-      }
-    </style>
 
-     
+      <style>
+        .zigrow-contact-3 {
+          background-color: #f0eeee;
+          margin-top: 5rem;
+        }
+
+        .py-6 {
+          padding: 3rem 0;
+        }
+
+        @media (min-width: 768px) {
+          .zigrow-contact-3 .grid {
+            align-items: center;
+          }
+        }
+
+        .zigrow-contact-3 .faq-left {
+          position: relative;
+        }
+
+        .zigrow-contact-3 .quote-form {
+          background-color: var(--territory-colors, #1c2b45);
+          color: var(--text-light, #ffffff);
+          padding: 2rem 1.5rem;
+          border-radius: 6px;
+          width: 100%;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (min-width: 768px) {
+          .zigrow-contact-3 .quote-form {
+            padding: 3rem 2.5rem;
+            width: 95%;
+            position: relative;
+            top: -5rem;
+          }
+        }
+
+        .zigrow-contact-3 .quote-form h3 {
+          font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+          margin-bottom: 0.5rem;
+        }
+
+        .zigrow-contact-3 .quote-form p {
+          opacity: 0.9;
+          margin-bottom: 1.25rem;
+        }
+
+        .zigrow-contact-3 .quote-form form {
+          display: grid;
+          gap: 1rem;
+        }
+
+        .zigrow-contact-3 .quote-form div[form-question-zigrow] {
+          display: grid;
+          gap: 0.45rem;
+        }
+
+        .zigrow-contact-3 .quote-form form label {
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: #ffffff;
+          margin: 0;
+        }
+
+        .zigrow-contact-3 .quote-form form input,
+        .zigrow-contact-3 .quote-form form textarea {
+          width: 100%;
+          background-color: #fff;
+          border: 0;
+          border-radius: 4px;
+          padding: 0.9rem 1rem;
+          font-size: 0.95rem;
+          color: #111827;
+          outline: none;
+          transition: box-shadow 0.15s ease, transform 0.02s ease;
+        }
+
+        .zigrow-contact-3 .quote-form form input:focus,
+        .zigrow-contact-3 .quote-form form textarea:focus {
+          box-shadow: 0 0 0 3px rgba(254, 185, 9, 0.35);
+        }
+
+        .zigrow-contact-3 .quote-form form textarea {
+          resize: vertical;
+          min-height: 80px;
+        }
+
+        .zigrow-contact-3 .quote-form form button {
+          display: inline-block;
+          width: fit-content;
+          background-color: var(--primary-colors, #feb909);
+          color: var(--territory-colors, #1c2b45);
+          border: 0;
+          border-radius: 0.2rem;
+          padding: 0.7rem 2rem;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: filter 0.15s ease, transform 0.05s ease;
+        }
+
+        .zigrow-contact-3 .quote-form form button:hover {
+          filter: brightness(0.95);
+        }
+
+        .zigrow-contact-3 .quote-form form button:active {
+          transform: translateY(1px);
+        }
+
+        .zigrow-contact-3 .faq-right .faq-section {
+          padding-inline: 0;
+        }
+
+        .zigrow-contact-3 .faq-right .faq-section .sub-title {
+          color: var(--primary-colors, #feb909);
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          margin-bottom: 0.25rem;
+        }
+
+        .zigrow-contact-3 .faq-right .faq-section h3 {
+          font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
+          font-weight: 800;
+          margin-bottom: 1.25rem;
+          color: #0f172a;
+        }
+
+        .zigrow-contact-3 .faq-right .faq-section .faq-item {
+          margin-bottom: 1.25rem;
+        }
+
+        .zigrow-contact-3 .faq-right .faq-section .faq-item h6 {
+          font-size: 1rem;
+          font-weight: 700;
+          color: #111827;
+          margin-bottom: 0.35rem;
+        }
+
+        .zigrow-contact-3 .faq-right .faq-section .faq-item p {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: var(--secondary-colors, #595f6b);
+        }
+
+        @media (max-width: 768px) {
+          .zigrow-contact-3 {
+            margin-top: 0;
+            padding: 0;
+          }
+
+          .zigrow-contact-3 .quote-form {
+            position: static;
+            top: 0;
+            border-radius: 0;
+            box-shadow: none;
+          }
+        }
+      </style>
 
       <script>
         (function () {
-          // Find ALL Zigrow forms
           const forms = Array.from(
             document.querySelectorAll("[data-zigrow-form]")
           );
           if (!forms.length) return;
 
-          // Helper: turn FormData into a plain object
           function serializeForm(form) {
             const fd = new FormData(form);
             const raw = {};
@@ -1022,121 +1042,102 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-3", {
             return raw;
           }
 
-          // Helper: pick primary value for quick list view
           function pickPrimaryValue(raw) {
             if (raw.email && String(raw.email).trim())
               return String(raw.email).trim();
             if (raw.phone && String(raw.phone).trim())
               return String(raw.phone).trim();
-            const nameCombo = [raw.firstName, raw.lastName]
-              .filter(Boolean)
-              .join(" ")
-              .trim();
             if (raw.name && String(raw.name).trim())
               return String(raw.name).trim();
-            if (nameCombo) return nameCombo;
             if (raw.message && String(raw.message).trim())
               return String(raw.message).trim();
             return "";
           }
 
           forms.forEach((form) => {
-            // Ensure hidden fields are filled
             const domainInput = form.querySelector('input[name="domain"]');
             const pageUrlInput = form.querySelector('input[name="page_url"]');
             if (domainInput) domainInput.value = location.host;
             if (pageUrlInput) pageUrlInput.value = location.href;
 
-            // Create a container for messages if not already exists
             let msgContainer = form.querySelector(".form-submit-message");
             if (!msgContainer) {
               msgContainer = document.createElement("div");
-              msgContainer.className = "form-submit-message mt-2 text-sm";
+              msgContainer.className = "form-submit-message";
+              msgContainer.style.marginTop = "10px";
               form.appendChild(msgContainer);
             }
 
             form.addEventListener("submit", async (e) => {
               e.preventDefault();
 
-              const submitBtn = form.querySelector('[type="submit"]');
+              const submitBtn = form.querySelector('button[type="submit"]');
+              const originalBtnText = submitBtn ? submitBtn.textContent : "";
               if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.dataset._oldText = submitBtn.innerText;
-                submitBtn.innerText = "Submitting...";
+                submitBtn.textContent = "Submitting...";
               }
 
-              // Clear previous message
-              msgContainer.innerText = "";
+              msgContainer.textContent = "";
               msgContainer.style.color = "";
 
+              const raw = serializeForm(form);
+              const primaryValue = pickPrimaryValue(raw);
+
+              const payload = {
+                domain: raw.domain || location.host,
+                form_key: raw.form_key || "contact",
+                page_url: raw.page_url || location.href,
+                primary_value: primaryValue,
+                form_data: raw,
+              };
+
               try {
-                const raw = serializeForm(form);
-                const body = new URLSearchParams();
-                body.set(
-                  "domain",
-                  form.querySelector('input[name="domain"]')?.value ||
-                    location.host
-                );
-                body.set(
-                  "form_key",
-                  form.querySelector('input[name="form_key"]')?.value || "contact"
-                );
-                body.set(
-                  "page_url",
-                  form.querySelector('input[name="page_url"]')?.value ||
-                    location.href
-                );
-                body.set("payload", JSON.stringify(raw));
-
-                const primary = pickPrimaryValue(raw);
-                if (primary) body.set("value", primary);
-
-                if (raw._company) body.set("_company", raw._company);
-
                 const res = await fetch(form.action, {
-                  method: "POST",
-                  headers: { Accept: "application/json" },
-                  body,
+                  method: form.method || "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(payload),
                 });
 
                 const data = await res.json().catch(() => ({}));
-                if (res.ok && (data.ok ?? true)) {
-                  form.reset();
-                  msgContainer.innerText =
-                    "✅ Thanks! Your request has been submitted.";
-                  msgContainer.style.color = "#28a745";
-                } else {
-                  msgContainer.innerText =
-                    "❌ " +
-                    (data.message || ("Failed (HTTP " + res.status + ")"));
-                  msgContainer.style.color = "#dc3545";
+
+                if (!res.ok) {
+                  throw new Error(
+                    data.message || "Something went wrong while submitting."
+                  );
                 }
+
+                msgContainer.textContent =
+                  data.message || "Form submitted successfully!";
+                msgContainer.style.color = "green";
+                form.reset();
+
+                const d = form.querySelector('input[name="domain"]');
+                const p = form.querySelector('input[name="page_url"]');
+                if (d) d.value = location.host;
+                if (p) p.value = location.href;
               } catch (err) {
-                console.error(err);
-                msgContainer.innerText =
-                  "❌ Something went wrong. Please try again.";
-                msgContainer.style.color = "#dc3545";
+                msgContainer.textContent =
+                  err.message || "Failed to submit form.";
+                msgContainer.style.color = "red";
               } finally {
                 if (submitBtn) {
                   submitBtn.disabled = false;
-                  submitBtn.innerText =
-                    submitBtn.dataset._oldText || "Send";
+                  submitBtn.textContent = originalBtnText;
                 }
               }
             });
           });
         })();
       </script>
-    </section>
-  `,
+    </section>`,
 });
-
 
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-4", {
     name: "Contact-4",
     category: "contact",
     image: "https://i.postimg.cc/ht9Rc9pR/contact-4.png",
-   html:`  <section
+    html: `  <section
       id="zigrow-contact-4"
       data-section="zigrow-contact-4"
       class="zigrow-contact-4 py-6"
@@ -1158,9 +1159,9 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-4", {
             <a
               href="https://www.google.com/maps/search/?api=1&query=12.894370090902344%2C77.6343217148211"
               target="_blank"
-              class="btn btn-directions mb-3"
+              class="btn btn-directions mb-3" data-btn="directions"
             >
-              GET DIRECTIONS <i class="bi bi-arrow-right-short"></i>
+              GET DIRECTIONS <i class="bi bi-arrow-right-short" data-icon="arrow-right-short"></i>
             </a>
 
             <div data-component-maps style="width: 100%; height: 350px">
@@ -1234,15 +1235,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-contact-4", {
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
       }
     </style>
-    </section>`
+    </section>`,
 });
-
 
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-5", {
     name: "Contact-5",
     category: "contact",
     image: "https://i.postimg.cc/9XgmBcfQ/contact-1.png",
-html: `<section
+
+    html: `<section
   class="zigrow-contact-5 py-6"
   data-section="zigrow-contact-5"
   id="zigrow-contact-5"
@@ -1304,113 +1305,84 @@ html: `<section
               action="https://api.zigrow.com/api/forms/submit"
               method="post"
               data-zigrow-form
+              class="contact-form"
             >
-              <!-- Recommended hidden fields (Zigrow style) -->
               <input type="hidden" name="domain" value="" />
               <input type="hidden" name="form_key" value="contact" />
               <input type="hidden" name="page_url" value="" />
-              <input type="text" name="_company" style="display: none !important" />
+              <input type="hidden" name="_company" value="" />
 
-              <div class="row mb-3">
-                <div class="col-12 col-md-6">
-                  <label for="first-name" class="form-label-custom"
-                    >First Name</label
-                  >
-                  <input
-                    id="first-name"
-                    name="first_name"
-                    type="text"
-                    class="form-control input-underline"
-                    required
-                  />
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="last-name" class="form-label-custom"
-                    >Last Name</label
-                  >
-                  <input
-                    id="last-name"
-                    name="last_name"
-                    type="text"
-                    class="form-control input-underline"
-                    required
-                  />
-                </div>
+              <div form-question-zigrow>
+                <label>First Name</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  placeholder="Enter your first name"
+                  required
+                />
               </div>
 
-              <div class="row mb-3">
-                <div class="col-12 col-md-6">
-                  <label for="email" class="form-label-custom">Email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    class="form-control input-underline"
-                    required
-                  />
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="phone" class="form-label-custom"
-                    >Phone Number</label
-                  >
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    class="form-control input-underline"
-                    required
-                    inputmode="tel"
-                    pattern="[0-9+\\s\\-()]{8,20}"
-                    title="Please enter a valid phone number"
-                  />
-                </div>
+              <div form-question-zigrow>
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  placeholder="Enter your last name"
+                  required
+                />
               </div>
 
-              <!-- Meeting Booking Section -->
-              <div class="row mb-3">
-                <div class="col-12 col-md-6">
-                  <label for="meeting-date" class="form-label-custom"
-                    >Meeting Date</label
-                  >
-                  <input
-                    id="meeting-date"
-                    name="meeting_date"
-                    type="date"
-                    class="form-control input-underline"
-                    required
-                  />
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="meeting-time" class="form-label-custom"
-                    >Meeting Time</label
-                  >
-                  <input
-                    id="meeting-time"
-                    name="meeting_time"
-                    type="time"
-                    class="form-control input-underline"
-                    required
-                  />
-                </div>
+              <div form-question-zigrow>
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                />
               </div>
 
-              <div class="contact-message mb-3">
-                <label for="message" class="form-label-custom">Message</label>
+              <div form-question-zigrow>
+                <label>Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  inputmode="tel"
+                  pattern="^\\+?[0-9\\s\\-]{7,15}$"
+                  placeholder="Enter your phone number here"
+                  required
+                />
+              </div>
+
+              <div form-question-zigrow>
+                <label>Meeting Date</label>
+                <input
+                  type="date"
+                  name="meeting_date"
+                  required
+                />
+              </div>
+
+              <div form-question-zigrow>
+                <label>Meeting Time</label>
+                <input
+                  type="time"
+                  name="meeting_time"
+                  required
+                />
+              </div>
+
+              <div form-question-zigrow>
+                <label>Message</label>
                 <textarea
-                  id="message"
                   name="message"
                   rows="3"
-                  class="form-control input-underline"
+                  placeholder="Enter your message"
                   required
                 ></textarea>
               </div>
 
-              <div class="contact-actions">
-                <button type="submit" class="contact-btn">Book a Call</button>
-              </div>
+              <button type="submit">Book a Call</button>
             </form>
           </div>
         </div>
@@ -1419,12 +1391,12 @@ html: `<section
   </div>
 
   <style>
-    /* ====== SECTION WRAPPER ====== */
     .zigrow-contact-5 {
       background-color: #f5f5f5;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
     }
+
     .py-6 {
       padding: 3rem 0;
     }
@@ -1445,7 +1417,6 @@ html: `<section
       font-size: 0.95rem;
     }
 
-    /* ====== CARD (outer box) ====== */
     .zigrow-contact-5 .contact-card {
       background-color: #ffffff;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
@@ -1453,7 +1424,6 @@ html: `<section
       overflow: hidden;
     }
 
-    /* ====== LEFT PANEL ====== */
     .zigrow-contact-5 .contact-left {
       background-color: var(--primary-colors, #111111);
       color: #ffffff;
@@ -1461,7 +1431,6 @@ html: `<section
       min-height: 320px;
     }
 
-    /* use table/table-cell for vertical centering (no flex) */
     .zigrow-contact-5 .contact-left-inner {
       display: table;
       width: 100%;
@@ -1505,45 +1474,56 @@ html: `<section
       color: #bbbbbb;
     }
 
-    /* ====== RIGHT PANEL – FORM ====== */
     .zigrow-contact-5 .contact-right {
       padding: 2.5rem 2.75rem;
       background-color: #ffffff;
     }
 
-    .zigrow-contact-5 .form-label-custom {
+    .zigrow-contact-5 .contact-right form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .zigrow-contact-5 .contact-right div[form-question-zigrow] {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .zigrow-contact-5 .contact-right form label {
       display: block;
       font-size: 0.9rem;
       color: #999999;
-      margin-bottom: 0.3rem;
+      margin: 0;
     }
 
-    .zigrow-contact-5 .input-underline {
+    .zigrow-contact-5 .contact-right form input,
+    .zigrow-contact-5 .contact-right form textarea {
+      width: 100%;
       border: none;
       border-bottom: 1px solid #d3d3d3;
       border-radius: 0;
-      padding: 0.4rem 0;
+      padding: 0.55rem 0;
       font-size: 0.9rem;
       box-shadow: none;
-    }
-
-    .zigrow-contact-5 .input-underline:focus {
-      border-bottom-color: #000000;
+      background: transparent;
       outline: none;
+    }
+
+    .zigrow-contact-5 .contact-right form input:focus,
+    .zigrow-contact-5 .contact-right form textarea:focus {
+      border-bottom-color: #000000;
       box-shadow: none;
+      outline: none;
     }
 
-    .zigrow-contact-5 .contact-message {
-      margin-top: 1rem;
+    .zigrow-contact-5 .contact-right form textarea {
+      resize: vertical;
+      min-height: 90px;
     }
 
-    .zigrow-contact-5 .contact-actions {
-      margin-top: 2.5rem;
-      text-align: right;
-    }
-
-    .zigrow-contact-5 .contact-btn {
+    .zigrow-contact-5 .contact-right form button {
       display: inline-block;
+      justify-self: end;
       padding: 0.7rem 2.5rem;
       background: var(
         --primary-colors,
@@ -1553,18 +1533,17 @@ html: `<section
       border: none;
       font-size: 0.9rem;
       text-transform: none;
- box-shadow: 0 6px 16px var(--primary-colors, rgba(0, 0, 0, 0.3));
+      box-shadow: 0 6px 16px var(--primary-colors, rgba(0, 0, 0, 0.3));
       cursor: pointer;
     }
 
-    .zigrow-contact-5 .contact-btn:hover {
+    .zigrow-contact-5 .contact-right form button:hover {
       background: var(
-          --primary-colors,
-          linear-gradient(135deg, #111111, #444444)
-        );
+        --primary-colors,
+        linear-gradient(135deg, #111111, #444444)
+      );
     }
 
-    /* ====== RESPONSIVE ====== */
     @media (max-width: 991.98px) {
       .zigrow-contact-5 .contact-right {
         padding: 2rem 1.75rem;
@@ -1575,19 +1554,21 @@ html: `<section
       .zigrow-contact-5 .contact-left-inner {
         padding: 2rem 1.5rem;
       }
+
       .zigrow-contact-5 .contact-right {
         padding: 2rem 1.25rem 2.25rem;
       }
-      .zigrow-contact-5 .contact-actions {
-        text-align: center;
+
+      .zigrow-contact-5 .contact-right form button {
+        justify-self: start;
       }
+
       .zigrow-contact-5 .contact-title {
         font-size: 1.8rem;
       }
     }
   </style>
 
-  <!-- NOTE: Bootstrap Icons link should be loaded globally in <head>. -->
   <script>
     (function () {
       const forms = Array.from(document.querySelectorAll("[data-zigrow-form]"));
@@ -1610,19 +1591,25 @@ html: `<section
       }
 
       function pickPrimaryValue(raw) {
-        if (raw.email && String(raw.email).trim())
+        if (raw.email && String(raw.email).trim()) {
           return String(raw.email).trim();
-        if (raw.phone && String(raw.phone).trim())
+        }
+        if (raw.phone && String(raw.phone).trim()) {
           return String(raw.phone).trim();
-        const nameCombo = [raw.firstName, raw.lastName]
+        }
+        const nameCombo = [raw.first_name, raw.last_name]
           .filter(Boolean)
           .join(" ")
           .trim();
-        if (raw.name && String(raw.name).trim())
+        if (raw.name && String(raw.name).trim()) {
           return String(raw.name).trim();
-        if (nameCombo) return nameCombo;
-        if (raw.message && String(raw.message).trim())
+        }
+        if (nameCombo) {
+          return nameCombo;
+        }
+        if (raw.message && String(raw.message).trim()) {
           return String(raw.message).trim();
+        }
         return "";
       }
 
@@ -1705,15 +1692,15 @@ html: `<section
     })();
   </script>
 </section>
-`
-
+`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-6", {
     name: "Contact-6",
     category: "contact",
     image: "https://i.postimg.cc/qMtkbWtp/contact-2.png",
-html: `
+
+    html: `
 <section
   class="zigrow-contact-6 py-6"
   id="zigrow-contact-6"
@@ -1721,7 +1708,6 @@ html: `
 >
   <div class="container">
     <div class="row inner-row">
-      <!-- LEFT COLUMN -->
       <div class="col-12 col-lg-6">
         <div class="contact-left">
           <p class="eyebrow">+ CONTACT US</p>
@@ -1734,7 +1720,6 @@ html: `
           </p>
 
           <div class="info-list">
-            <!-- phone -->
             <div class="row info-item">
               <div class="col-auto">
                 <i
@@ -1745,7 +1730,6 @@ html: `
               <div class="col info-item-text"><p>+91 12345 67859</p></div>
             </div>
 
-            <!-- email -->
             <div class="row info-item">
               <div class="col-auto">
                 <i
@@ -1758,7 +1742,6 @@ html: `
               </div>
             </div>
 
-            <!-- address -->
             <div class="row info-item">
               <div class="col-auto">
                 <i
@@ -1767,14 +1750,13 @@ html: `
                 ></i>
               </div>
               <div class="col info-item-text">
-                <p>E-123, ABC Plaza, XYZ Street, New Delhi – 110077</p>
+                <p>E-123, ABC Plaza, XYZ Street, New Delhi - 110077</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN -->
       <div class="col-12 col-lg-6">
         <div class="contact-form-wrapper">
           <form
@@ -1783,87 +1765,63 @@ html: `
             method="post"
             data-zigrow-form
           >
-            <!-- Recommended hidden fields (Zigrow style) -->
             <input type="hidden" name="domain" value="" />
             <input type="hidden" name="form_key" value="contact" />
             <input type="hidden" name="page_url" value="" />
-            <input type="text" name="_company" style="display: none !important" />
+            <input type="hidden" name="_company" value="" />
 
-            <!-- Name -->
-            <div class="mb-3">
-              <label for="name" class="form-label-custom">Name</label>
+            <div form-question-zigrow>
+              <label>Name</label>
               <input
-                id="name"
-                name="name"
                 type="text"
-                class="form-control form-control-custom"
-                placeholder="Your name"
+                name="name"
+                placeholder="Enter your name"
                 required
               />
             </div>
 
-            <!-- Email -->
-            <div class="mb-3">
-              <label for="email" class="form-label-custom">Email</label>
+            <div form-question-zigrow>
+              <label>Email</label>
               <input
-                id="email"
-                name="email"
                 type="email"
-                class="form-control form-control-custom"
-                placeholder="you@company.com"
+                name="email"
+                placeholder="Enter your email address"
                 required
               />
             </div>
 
-            <!-- Phone (country + number) -->
-            <div class="mb-3">
-              <label class="form-label-custom" for="phone">Phone number</label>
-              <div class="row">
-                <div class="col-4">
-                  <select
-                    id="country-code"
-                    name="country_code"
-                    class="country-select"
-                    aria-label="Country code"
-                    required
-                  >
-                    <option value="IN" selected>IN</option>
-                    <option value="US">US</option>
-                    <option value="UK">UK</option>
-                    <option value="AU">AU</option>
-                  </select>
-                </div>
-                <div class="col-8">
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    class="form-control form-control-custom"
-                    placeholder="+91 9123456789"
-                    required
-                  />
-                </div>
-              </div>
+            <div form-question-zigrow>
+              <label>Country Code</label>
+              <select name="country_code" required>
+                <option value="IN" selected>IN</option>
+                <option value="US">US</option>
+                <option value="UK">UK</option>
+                <option value="AU">AU</option>
+              </select>
             </div>
 
-            <!-- Message -->
-            <div class="mb-3">
-              <label for="message" class="form-label-custom"
-                >How can we help?</label
-              >
+            <div form-question-zigrow>
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                inputmode="tel"
+                pattern="^\\+?[0-9\\s\\-]{7,15}$"
+                placeholder="Enter your phone number here"
+                required
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>How can we help?</label>
               <textarea
-                id="message"
                 name="message"
-                class="form-control form-control-custom textarea-custom"
                 placeholder="Tell us a little about the project..."
                 required
               ></textarea>
             </div>
 
-            <!-- Button -->
-            <div class="submit-row">
-              <button type="submit" class="submit-btn">Get In Touch</button>
-            </div>
+            <button type="submit">Get In Touch</button>
           </form>
         </div>
       </div>
@@ -1871,14 +1829,12 @@ html: `
   </div>
 
   <style>
-    /* ===============================
-       SECTION WRAPPER
-    ================================ */
     .zigrow-contact-6 {
       background-color: #f6f6f6;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
     }
+
     .py-6 {
       padding: 3rem 0;
     }
@@ -1887,9 +1843,6 @@ html: `
       background-color: #f6f6f6;
     }
 
-    /* ===============================
-       LEFT COLUMN
-    ================================ */
     .zigrow-contact-6 .contact-left {
       padding-right: 2.5rem;
     }
@@ -1936,9 +1889,6 @@ html: `
       padding-left: 0.5rem;
     }
 
-    /* ===============================
-       RIGHT COLUMN – FORM
-    ================================ */
     .zigrow-contact-6 .contact-form-wrapper {
       background-color: #f6f6f6;
     }
@@ -1946,69 +1896,64 @@ html: `
     .zigrow-contact-6 .contact-form {
       background-color: #f6f6f6;
       padding-left: 1.5rem;
+      display: grid;
+      gap: 1rem;
     }
 
-    .zigrow-contact-6 .form-label-custom {
+    .zigrow-contact-6 .contact-form div[form-question-zigrow] {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .zigrow-contact-6 .contact-form label {
       display: block;
       font-size: 0.86rem;
       color: #868a93;
-      margin-bottom: 0.3rem;
+      margin: 0;
     }
 
-    .zigrow-contact-6 .form-control-custom {
+    .zigrow-contact-6 .contact-form input,
+    .zigrow-contact-6 .contact-form textarea,
+    .zigrow-contact-6 .contact-form select {
+      width: 100%;
       border-radius: 0;
       border: 1px solid #e0e0e0;
       padding: 0.55rem 0.7rem;
       font-size: 0.9rem;
       box-shadow: none;
       background-color: #ffffff;
+      outline: none;
     }
 
-    .zigrow-contact-6 .form-control-custom:focus {
-      outline: none;
+    .zigrow-contact-6 .contact-form input:focus,
+    .zigrow-contact-6 .contact-form textarea:focus,
+    .zigrow-contact-6 .contact-form select:focus {
       box-shadow: none;
       border-color: #1b7b55;
     }
 
-    .zigrow-contact-6 .textarea-custom {
-      min-height: 130px;
+    .zigrow-contact-6 .contact-form textarea {
+      min-height: 120px;
       resize: vertical;
     }
 
-    .zigrow-contact-6 .country-select {
-      width: 100%;
-      border-radius: 0;
-      border: 1px solid #e0e0e0;
-      padding: 0.55rem 0.7rem;
-      font-size: 0.9rem;
-      background-color: #ffffff;
-    }
-
-    .zigrow-contact-6 .submit-row {
-      margin-top: 1.8rem;
-    }
-
-    .zigrow-contact-6 .submit-btn {
-      width: 100%;
-      border: none;
-      background-color: var(--primary-colors, #1b6042);
+    .zigrow-contact-6 .contact-form button {
+      width: fit-content;
+      padding: 0.75rem 1.5rem;
+      border: 0;
+      border-radius: 999px;
+      background-color: var(--primary-colors, #17163a);
       color: #ffffff;
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: opacity 0.2s ease;
     }
 
-    .zigrow-contact-6 .submit-btn:hover {
-      background-color: var(--primary-colors, #174e35);
-      box-shadow: 0 4px 20px var(--primary-colors, #174e35);
+    .zigrow-contact-6 .contact-form button:hover {
+      opacity: 0.92;
     }
 
-    /* ===============================
-       RESPONSIVE
-    ================================ */
     @media (max-width: 991.98px) {
       .zigrow-contact-6 .contact-left {
         padding-right: 0;
@@ -2027,7 +1972,6 @@ html: `
     }
   </style>
 
-  <!-- NOTE: Bootstrap Icons link should be loaded globally in <head>. -->
   <script>
     (function () {
       const forms = Array.from(document.querySelectorAll("[data-zigrow-form]"));
@@ -2050,19 +1994,18 @@ html: `
       }
 
       function pickPrimaryValue(raw) {
-        if (raw.email && String(raw.email).trim())
+        if (raw.email && String(raw.email).trim()) {
           return String(raw.email).trim();
-        if (raw.phone && String(raw.phone).trim())
+        }
+        if (raw.phone && String(raw.phone).trim()) {
           return String(raw.phone).trim();
-        const nameCombo = [raw.firstName, raw.lastName]
-          .filter(Boolean)
-          .join(" ")
-          .trim();
-        if (raw.name && String(raw.name).trim())
+        }
+        if (raw.name && String(raw.name).trim()) {
           return String(raw.name).trim();
-        if (nameCombo) return nameCombo;
-        if (raw.message && String(raw.message).trim())
+        }
+        if (raw.message && String(raw.message).trim()) {
           return String(raw.message).trim();
+        }
         return "";
       }
 
@@ -2145,279 +2088,266 @@ html: `
     })();
   </script>
 </section>
-`
-
+`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-7", {
     name: "Contact-7",
     category: "contact",
     image: "https://i.postimg.cc/28qzcgqL/contact-3.png",
-html:`
-    <section
-      id="zigrow-contact-7"
-      data-section="zigrow-contact-7"
-      class="zigrow-contact-7"
-    >
-      <div class="container-fluid">
-        <div class="row g-0">
-          <!-- LEFT PANEL : FULL WIDTH -->
-          <div class="col-12 col-lg-6">
-            <div class="contact-left-panel">
-              <div class="row">
-                <div class="col-12">
-                  <h3 class="contact-info-title">Contact Information</h3>
 
-                  <p class="contact-info-item">
-                    <i class="bi bi-telephone-fill" data-icon="phone"></i>
-                    <span>+91-9123456789</span>
-                  </p>
+    html: `
+<section id="zigrow-contact-7" data-section="zigrow-contact-7" class="zigrow-contact-7 py-6">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <!-- LEFT CONTENT -->
+      <div class="col-12 col-lg-6">
+        <div class="contact-copy">
+          <p class="contact-eyebrow">GET IN TOUCH</p>
+          <h2 class="contact-title">We’d love to hear from you</h2>
+          <p class="contact-text">
+            Have a question, project idea, or just want to say hello? Fill out the form and our team will get back to you.
+          </p>
 
-                  <p class="contact-info-item">
-                    <i class="bi bi-envelope-fill" data-icon="email"></i>
-                    <span>yourname@domainname.com</span>
-                  </p>
-
-                  <p class="contact-info-item">
-                    <i class="bi bi-geo-alt-fill" data-icon="location"></i>
-                    <span
-                      >E-123, ABC Plaza, XYZ Street, New Delhi – 110077</span
-                    >
-                  </p>
-
-                  <div class="contact-social">
-                    <a href="#">
-                      <i class="bi bi-twitter-x" data-icon="twitter"></i>
-                    </a>
-                    <a href="#">
-                      <i class="bi bi-facebook" data-icon="facebook"></i>
-                    </a>
-                    <a href="#">
-                      <i class="bi bi-instagram" data-icon="instagram"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- FORM -->
-                <div class="col-12">
-                  <div class="contact-form-wrapper">
-                    <form
-                      action="https://api.zigrow.com/api/forms/submit"
-                      method="post"
-                      data-zigrow-form
-                    >
-                      <input type="hidden" name="domain" />
-                      <input type="hidden" name="page_url" />
-                      <input type="hidden" name="form_key" value="contact" />
-
-                      <div class="mb-3">
-                        <input
-                          type="text"
-                          class="contact-input"
-                          name="name"
-                          placeholder="Name"
-                          required
-                        />
-                      </div>
-
-                      <div class="mb-3">
-                        <input
-                          type="email"
-                          class="contact-input"
-                          name="email"
-                          placeholder="Email"
-                          required
-                        />
-                      </div>
-
-                      <div class="mb-3">
-                        <input
-                          type="tel"
-                          class="contact-input"
-                          name="phone"
-                          placeholder="Phone Number"
-                          required
-                        />
-                      </div>
-
-                      <div class="mb-2">
-                        <textarea
-                          class="contact-textarea"
-                          name="message"
-                          placeholder="Write your message..."
-                          required
-                        ></textarea>
-                      </div>
-
-                      <div class="contact-btn-wrap">
-                        <button type="submit" class="contact-btn">
-                          <i
-                            class="bi bi-telephone"
-                            data-icon="call-button"
-                          ></i>
-                          <span>Contact Me</span>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- MAP -->
-          <div class="col-12 col-lg-6">
-            <div class="contact-map-panel">
-              <iframe
-                class="contact-map-iframe"
-                src="https://maps.google.com/maps?q=12.894370090902344%2C77.6343217148211&z=14&t=q&output=embed"
-                loading="lazy"
-                allowfullscreen
-              ></iframe>
-            </div>
+          <div class="contact-info-list">
+            <p class="contact-info-item">
+              <i class="bi bi-telephone-fill" data-icon="phone"></i>
+              +91 91234 56789
+            </p>
+            <p class="contact-info-item">
+              <i class="bi bi-envelope-fill" data-icon="email"></i>
+              yourname@domainname.com
+            </p>
+            <p class="contact-info-item">
+              <i class="bi bi-geo-alt-fill" data-icon="location"></i>
+              E-123, ABC Plaza, XYZ Street, New Delhi - 110077
+            </p>
           </div>
         </div>
       </div>
-          <style>
-      /* SECTION */
-      .zigrow-contact-7 {
-        background: #ffffff;
-      }
 
-      /* LEFT PANEL */
-      .contact-left-panel {
-        /* background: var(--primary-colors, #f7ebd4); */
-        background-color: color-mix(
-          in srgb,
-          var(--primary-colors, #f7ebd4) 25%,
-          white
-        );
-        padding: 2.5rem;
-        height: 100%;
-      }
-      .contact-map-panel {
-        display: inline-block;
-        max-width: 100%;
-      }
-      /* TEXT */
-      .contact-info-title {
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-bottom: 1.5rem;
-        color: #222;
-      }
+      <!-- RIGHT FORM -->
+      <div class="col-12 col-lg-6">
+        <div class="contact-form-panel">
+          <form
+            action="https://api.zigrow.com/api/forms/submit"
+            method="post"
+            data-zigrow-form
+            class="contact-form"
+          >
+            <input type="hidden" name="domain" value="" />
+            <input type="hidden" name="form_key" value="contact" />
+            <input type="hidden" name="page_url" value="" />
+            <input type="hidden" name="_company" value="" />
 
-      .contact-info-item {
-        display: flex;
-        gap: 0.6rem;
-        font-size: 0.95rem;
-        color: #333;
-        margin-bottom: 0.75rem;
-        align-items: flex-start;
+            <div form-question-zigrow>
+              <label>Full Name</label>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                inputmode="tel"
+                pattern="^\\+?[0-9\\s\\-]{7,15}$"
+                placeholder="Enter your phone number here"
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>Subject</label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Enter the subject"
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>Message</label>
+              <textarea
+                name="message"
+                placeholder="Enter your message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="map-container text-center location-map">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=12.894370090902344%2C77.6343217148211"
+            target="_blank"
+            class="btn btn-directions mb-3"
+            data-btn="directions"
+          >
+            GET DIRECTIONS <i class="bi bi-arrow-right-short" data-icon="arrow-right-short"></i>
+          </a>
+
+          <div data-component-maps style="width:100%; height:350px;">
+            <iframe
+              frameborder="0"
+              src="https://maps.google.com/maps?q=12.894370090902344%2C77.6343217148211&z=14&t=q&output=embed"
+              width="100%"
+              height="100%"
+              style="width:100%; height:100%; left:0"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .zigrow-contact-7 {
+      background: #f7f7f7;
+    }
+
+    .zigrow-contact-7 .contact-copy {
+      padding-right: 1rem;
+    }
+
+    .zigrow-contact-7 .contact-eyebrow {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--primary-colors, #111111);
+      margin-bottom: 0.5rem;
+    }
+
+    .zigrow-contact-7 .contact-title {
+      font-size: clamp(1.9rem, 1.5rem + 1vw, 2.7rem);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: #111111;
+    }
+
+    .zigrow-contact-7 .contact-text {
+      color: var(--secondary-colors, #666666);
+      margin-bottom: 1.25rem;
+      max-width: 540px;
+    }
+
+    .zigrow-contact-7 .contact-info-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .zigrow-contact-7 .contact-info-item {
+      margin: 0;
+      color: #222222;
+      font-size: 0.98rem;
+    }
+
+    .zigrow-contact-7 .contact-info-item i {
+      margin-right: 0.6rem;
+    }
+
+    .zigrow-contact-7 .contact-form-panel {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .zigrow-contact-7 .contact-form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .zigrow-contact-7 .contact-form div[form-question-zigrow] {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .zigrow-contact-7 .contact-form label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #222222;
+      margin: 0;
+    }
+
+    .zigrow-contact-7 .contact-form input,
+    .zigrow-contact-7 .contact-form textarea {
+      width: 100%;
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      outline: none;
+      background: #ffffff;
+    }
+
+    .zigrow-contact-7 .contact-form input:focus,
+    .zigrow-contact-7 .contact-form textarea:focus {
+      border-color: #999999;
+    }
+
+    .zigrow-contact-7 .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .zigrow-contact-7 .contact-form button {
+      width: fit-content;
+      border: 0;
+      padding: 0.8rem 1.5rem;
+      border-radius: 999px;
+      background: var(--primary-colors, #111111);
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .zigrow-contact-7 .map-container {
+      width: 100%;
+    }
+
+    .zigrow-contact-7 .btn-directions {
+      color: inherit;
+    }
+
+    .zigrow-contact-7 .location-map iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 8px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      display: block;
+    }
+
+    @media (max-width: 991.98px) {
+      .zigrow-contact-7 .contact-copy {
+        padding-right: 0;
       }
+    }
+  </style>
 
-      .contact-info-item i {
-        margin-top: 2px;
-      }
-
-      /* SOCIAL */
-      .contact-social {
-        margin-top: 1.5rem;
-      }
-
-      .contact-social a {
-        color: #000;
-        font-size: 1.1rem;
-        margin-right: 1rem;
-        text-decoration: none;
-      }
-
-      /* FORM */
-      .contact-form-wrapper {
-        margin-top: 2rem;
-        max-width: 100%;
-      }
-
-      .contact-input,
-      .contact-textarea {
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid #cbb9a1;
-        background: transparent;
-        padding: 0.5rem 0;
-        font-size: 0.95rem;
-      }
-
-      .contact-input:focus,
-      .contact-textarea:focus {
-        outline: none;
-        border-bottom-color: #000;
-      }
-
-      .contact-textarea {
-        min-height: 80px;
-        resize: vertical;
-      }
-
-      .contact-btn-wrap {
-        margin-top: 1.5rem;
-      }
-
-      .contact-btn {
-        padding: 0.75rem 3rem;
-        border-radius: 999px;
-        border: none;
-        background: var(--primary-colors, #d4b46f);
-        color: #fff;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        cursor: pointer;
-      }
-
-      /* MAP */
-      .contact-map-panel {
-        width: 100%;
-        height: 100%;
-        min-height: 450px;
-      }
-
-      .contact-map-iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        display: block;
-      }
-
-      /* ======================
-         RESPONSIVE FIX
-      ====================== */
-
-      /* Tablet & Mobile */
-      @media (max-width: 991.98px) {
-        .contact-left-panel {
-          padding: 2rem 1.5rem;
-        }
-
-        .contact-map-panel {
-          min-height: 300px;
-        }
-      }
-
-      /* Mobile */
-      @media (max-width: 575.98px) {
-        .contact-left-panel {
-          padding: 2rem 1.25rem;
-        }
-
-        .contact-btn {
-          width: 100%;
-          justify-content: center;
-        }
-      }
-    </style>
-      <!-- NOTE: Bootstrap Icons link should be loaded globally in <head>. -->
   <script>
     (function () {
       const forms = Array.from(document.querySelectorAll("[data-zigrow-form]"));
@@ -2440,19 +2370,18 @@ html:`
       }
 
       function pickPrimaryValue(raw) {
-        if (raw.email && String(raw.email).trim())
+        if (raw.email && String(raw.email).trim()) {
           return String(raw.email).trim();
-        if (raw.phone && String(raw.phone).trim())
+        }
+        if (raw.phone && String(raw.phone).trim()) {
           return String(raw.phone).trim();
-        const nameCombo = [raw.firstName, raw.lastName]
-          .filter(Boolean)
-          .join(" ")
-          .trim();
-        if (raw.name && String(raw.name).trim())
-          return String(raw.name).trim();
-        if (nameCombo) return nameCombo;
-        if (raw.message && String(raw.message).trim())
+        }
+        if (raw.full_name && String(raw.full_name).trim()) {
+          return String(raw.full_name).trim();
+        }
+        if (raw.message && String(raw.message).trim()) {
           return String(raw.message).trim();
+        }
         return "";
       }
 
@@ -2527,23 +2456,23 @@ html:`
           } finally {
             if (submitBtn) {
               submitBtn.disabled = false;
-              submitBtn.innerText = submitBtn.dataset._oldText || "Contact Me";
+              submitBtn.innerText = submitBtn.dataset._oldText || "Send Message";
             }
           }
         });
       });
     })();
   </script>
-    </section>
-`
-
+</section>
+`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-contact-8", {
     name: "Contact-8",
     category: "contact",
     image: "https://i.postimg.cc/0268Wh6s/contact-4.png",
-html: `
+
+    html: `
 <section
   class="zigrow-contact-8 py-6"
   data-section="zigrow-contact-8"
@@ -2570,52 +2499,52 @@ html: `
             method="post"
             data-zigrow-form
           >
-            <!-- Recommended hidden fields (Zigrow style) -->
             <input type="hidden" name="domain" value="" />
             <input type="hidden" name="page_url" value="" />
             <input type="hidden" name="form_key" value="unsure-choice" />
-            <input type="text" name="_company" style="display: none !important" />
+            <input type="hidden" name="_company" value="" />
 
-            <input
-              type="text"
-              class="unsure-input"
-              id="unsure-name"
-              name="name"
-              placeholder="Your name"
-              required
-            />
-            <input
-              type="email"
-              class="unsure-input"
-              id="unsure-email"
-              name="email"
-              placeholder="Email address"
-              required
-            />
-            <input
-              type="tel"
-              class="unsure-input"
-              id="unsure-phone"
-              name="phone"
-              placeholder="Phone number"
-              required
-            />
-
-            <div class="unsure-consent-row">
+            <div form-question-zigrow>
+              <label>Name</label>
               <input
-                type="checkbox"
-                id="unsure-terms"
-                class="unsure-checkbox"
-                name="terms"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
                 required
               />
-              <label for="unsure-terms" class="unsure-consent-text">
-                I agree to <a href="#">Terms of use</a> and
-                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div form-question-zigrow>
+              <label>Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                inputmode="tel"
+                pattern="^\\+?[0-9\\s\\-]{7,15}$"
+                placeholder="Enter your phone number here"
+                required
+              />
+            </div>
+
+            <div form-question-zigrow>
+              <label>Consent</label>
+              <label>
+                <input type="checkbox" name="consent_terms" required />
+                I agree to Terms of Use and Privacy Policy
               </label>
             </div>
 
-            <button type="submit" class="unsure-btn">Send request</button>
+            <button type="submit">Send request</button>
           </form>
         </div>
       </div>
@@ -2623,33 +2552,23 @@ html: `
   </div>
 
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background-color: #ffffff;
-      color: #111111;
-    }
-
-    /* SECTION WRAPPER */
     .zigrow-contact-8 {
       background-color: #fbfbfb;
     }
+
     .py-6 {
       padding: 3rem 0;
     }
 
-    /* Wrapper so columns align nicely */
-    .unsure-row {
+    .zigrow-contact-8 .unsure-row {
       align-items: center;
     }
 
-    /* LEFT SIDE (TEXT) */
-    .unsure-text-block {
+    .zigrow-contact-8 .unsure-text-block {
       max-width: 480px;
     }
 
-    .unsure-heading {
+    .zigrow-contact-8 .unsure-heading {
       font-size: 2.2rem;
       line-height: 1.25;
       font-weight: 600;
@@ -2657,27 +2576,36 @@ html: `
       color: #111111;
     }
 
-    .unsure-subtext {
+    .zigrow-contact-8 .unsure-subtext {
       font-size: 0.98rem;
       line-height: 1.6;
       color: #666666;
     }
 
-    /* RIGHT SIDE (FORM) */
-    .unsure-form-block {
+    .zigrow-contact-8 .unsure-form-block {
       max-width: 420px;
-      margin-left: auto; /* push towards right on desktop */
+      margin-left: auto;
     }
 
-    .unsure-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem; /* more space between fields */
+    .zigrow-contact-8 .unsure-form {
+      display: grid;
+      gap: 1rem;
     }
 
-    .unsure-input {
+    .zigrow-contact-8 .unsure-form div[form-question-zigrow] {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .zigrow-contact-8 .unsure-form label {
+      font-size: 0.92rem;
+      color: #222222;
+      margin: 0;
+    }
+
+    .zigrow-contact-8 .unsure-form input {
       width: 100%;
-      padding: 0.65rem 0.75rem;
+      padding: 0.7rem 0.85rem;
       border-radius: 0;
       border: 1px solid #e0e0e0;
       background-color: #ffffff;
@@ -2686,48 +2614,29 @@ html: `
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .unsure-input::placeholder {
+    .zigrow-contact-8 .unsure-form input::placeholder {
       color: #9a9a9a;
     }
 
-    .unsure-input:focus {
+    .zigrow-contact-8 .unsure-form input:focus {
       border-color: #333333;
       box-shadow: 0 0 0 1px rgba(51, 51, 51, 0.06);
     }
 
-    /* Checkbox row */
-    .unsure-consent-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.4rem;
-      font-size: 0.82rem;
-      color: #666666;
-      margin-top: 0.25rem;
+    .zigrow-contact-8 .unsure-form input[type="checkbox"] {
+      width: auto;
+      padding: 0;
+      margin-right: 0.5rem;
+      vertical-align: middle;
     }
 
-    .unsure-checkbox {
-      margin-top: 2px;
-      cursor: pointer;
-    }
-
-    .unsure-consent-text a {
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .unsure-consent-text a:hover {
-      text-decoration-thickness: 2px;
-    }
-
-    /* Button */
-    .unsure-btn {
+    .zigrow-contact-8 .unsure-form button {
       margin-top: 0.25rem;
       width: 100%;
       padding: 0.75rem 1rem;
       border-radius: 0;
       border: none;
-     background-color: var(--primary-colors, #202326);
+      background-color: var(--primary-colors, #202326);
       color: #ffffff;
       font-size: 0.95rem;
       font-weight: 500;
@@ -2737,30 +2646,29 @@ html: `
       transition: background-color 0.15s ease, transform 0.1s ease;
     }
 
-   
-      .unsure-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 14px var(--primary-colors, #202326);
-      }
-    .unsure-btn:active {
+    .zigrow-contact-8 .unsure-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px var(--primary-colors, #202326);
+    }
+
+    .zigrow-contact-8 .unsure-form button:active {
       transform: translateY(1px);
     }
 
-    /* RESPONSIVE */
     @media (max-width: 991.98px) {
       .zigrow-contact-8 {
         padding: 3rem 0;
       }
 
-      .unsure-text-block {
+      .zigrow-contact-8 .unsure-text-block {
         margin-bottom: 1.75rem;
       }
 
-      .unsure-heading {
+      .zigrow-contact-8 .unsure-heading {
         font-size: 1.9rem;
       }
 
-      .unsure-form-block {
+      .zigrow-contact-8 .unsure-form-block {
         margin-left: 0;
       }
     }
@@ -2770,7 +2678,7 @@ html: `
         padding: 2.5rem 0;
       }
 
-      .unsure-heading {
+      .zigrow-contact-8 .unsure-heading {
         font-size: 1.7rem;
       }
     }
@@ -2798,19 +2706,15 @@ html: `
       }
 
       function pickPrimaryValue(raw) {
-        if (raw.email && String(raw.email).trim())
+        if (raw.email && String(raw.email).trim()) {
           return String(raw.email).trim();
-        if (raw.phone && String(raw.phone).trim())
+        }
+        if (raw.phone && String(raw.phone).trim()) {
           return String(raw.phone).trim();
-        const nameCombo = [raw.firstName, raw.lastName]
-          .filter(Boolean)
-          .join(" ")
-          .trim();
-        if (raw.name && String(raw.name).trim())
+        }
+        if (raw.name && String(raw.name).trim()) {
           return String(raw.name).trim();
-        if (nameCombo) return nameCombo;
-        if (raw.message && String(raw.message).trim())
-          return String(raw.message).trim();
+        }
         return "";
       }
 
@@ -2893,8 +2797,7 @@ html: `
     })();
   </script>
 </section>
-`
-
+`,
 });
 
 // Portfolio Blocks
@@ -2902,7 +2805,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-1", {
     name: "Portfolio-1",
     category: "portfolio",
     image: "https://i.postimg.cc/tTzRr0xp/Screenshot-2025-11-15-163043.png",
-  html:`  <section id="zigrow-portfolio-1" data-section="zigrow-portfolio-1" class="zigrow-portfolio-1 py-6">
+    html: `  <section id="zigrow-portfolio-1" data-section="zigrow-portfolio-1" class="zigrow-portfolio-1 py-6">
       <div class="container">
         <div class="zigrow-portfolio-1__inner">
           <!-- HEADER USING BOOTSTRAP GRID -->
@@ -2914,7 +2817,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-1", {
               </div>
             </div>
             <div class="col-12 col-lg-4 text-lg-end mt-3 mt-lg-0">
-              <a href="#" class="zigrow-portfolio-1__btn"> View Projects </a>
+              <a href="#" class="zigrow-portfolio-1__btn" data-btn="portfolio"> View Projects </a>
             </div>
           </div>
 
@@ -3129,13 +3032,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-1", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-2", {
     name: "Portfolio-2",
     category: "portfolio",
     image: "https://i.postimg.cc/pXBWRMGT/Screenshot-2025-11-15-163941.png",
-  html:` <section class="zigrow-portfolio-2 py-6" data-section="zigrow-portfolio-2" id="zigrow-portfolio-2">
+    html: ` <section class="zigrow-portfolio-2 py-6" data-section="zigrow-portfolio-2" id="zigrow-portfolio-2">
       <div class="container">
         <div class="row g-3">
           <!-- Image 1 (span 2 cols like grid-column:span 2) -->
@@ -3225,30 +3128,30 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-2", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-3", {
     name: "Portfolio-3",
     category: "portfolio",
     image: "https://i.postimg.cc/DzTtxx3n/Screenshot-2025-11-15-165122.png",
-   html:`  <section id="zigrow-portfolio-3" data-section="zigrow-portfolio-3" class="zigrow-portfolio-3 py-6">
+    html: `  <section id="zigrow-portfolio-3" data-section="zigrow-portfolio-3" class="zigrow-portfolio-3 py-6">
       <div class="container">
         <!-- Bootstrap grid instead of CSS grid -->
         <div class="zigrow-portfolio-3-grid">
           <div class="row g-md-3">
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 clonable-card">
               <div class="zigrow-portfolio-3-item">
                 <img  src="../../img/zigrow-portfolio-images/11.jpg"  alt="Fine Dining" />
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 clonable-card">
               <div class="zigrow-portfolio-3-item">
                 <img  src="../../img/zigrow-portfolio-images/12.jpg"  alt="Group Eating" />
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 clonable-card">
               <div class="zigrow-portfolio-3-item">
               <img
               src="../../img/zigrow-portfolio-images/13.jpg"
@@ -3257,7 +3160,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-3", {
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 clonable-card">
               <div class="zigrow-portfolio-3-item">
                  <img
               src="../../img/zigrow-portfolio-images/14.jpg"
@@ -3266,13 +3169,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-3", {
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 clonable-card">
               <div class="zigrow-portfolio-3-item">
                 <img src="../../img/zigrow-portfolio-images/15.jpg" alt="Korean Food" />
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 clonable-card">
               <div class="zigrow-portfolio-3-item">
               <img
               src="../../img/zigrow-portfolio-images/16.jpg"
@@ -3309,13 +3212,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-3", {
         transform: scale(1.05);
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
     name: "Portfolio-4",
     category: "portfolio",
     image: "https://i.postimg.cc/Mptt7HGG/portfolio-4.png",
-  html:`  <section id="zigrow-portfolio-4" data-sections="zigrow-portfolio-4" class="zigrow-portfolio-4 py-6">
+    html: `  <section id="zigrow-portfolio-4" data-section="zigrow-portfolio-4" class="zigrow-portfolio-4 py-6">
       <div class="container">
         <!-- Header -->
         <div class="zigrow-portfolio-4-header">
@@ -3328,7 +3231,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
         <!-- Grid using Bootstrap -->
         <div class="row g-3">
           <!-- Item 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="zigrow-portfolio-4-wrapper">
               <img
                  src="../../img/zigrow-portfolio-images/17.webp"
@@ -3346,7 +3249,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
           </div>
 
           <!-- Item 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="zigrow-portfolio-4-wrapper">
               <img
                 src="../../img/zigrow-portfolio-images/18.webp"
@@ -3364,7 +3267,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
           </div>
 
           <!-- Item 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="zigrow-portfolio-4-wrapper">
              <img
               src="../../img/zigrow-portfolio-images/19.webp"
@@ -3382,7 +3285,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
           </div>
 
           <!-- Item 4 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="zigrow-portfolio-4-wrapper">
              <img
              src="../../img/zigrow-portfolio-images/20.webp"
@@ -3400,7 +3303,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
           </div>
 
           <!-- Item 5 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="zigrow-portfolio-4-wrapper">
                 <img
                   src="../../img/zigrow-portfolio-images/21.webp"
@@ -3418,7 +3321,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
           </div>
 
           <!-- Item 6 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="zigrow-portfolio-4-wrapper">
               <img
               src="../../img/zigrow-portfolio-images/22.webp"
@@ -3499,13 +3402,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-4", {
         transform: scale(1.08);
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-5", {
     name: "Portfolio-5",
     category: "portfolio",
     image: "https://i.postimg.cc/q7Rwjrhf/portfolio-5.png",
-    html:` <section id="zigrow-portfolio-5" data-section="zigrow-portfolio-5" class="zigrow-portfolio-5 py-6">
+    html: ` <section id="zigrow-portfolio-5" data-section="zigrow-portfolio-5" class="zigrow-portfolio-5 py-6">
       <div class="container">
         <div class="row g-2">
           <div class="col-lg-4 col-md-6 col-sm-12">
@@ -3586,16 +3489,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-portfolio-5", {
         transform: scale(1.05);
       }
     </style>
-    </section>`
+    </section>`,
 });
-
 
 // About Section Blocks
 Vvveb.Blocks.add("bootstrap4/zigrow-about-1", {
     name: "About-1",
     category: "about-us",
     image: "https://i.postimg.cc/rprcdB8v/about1.png",
-    html:`    <section id="zigrow-about-1" data-section="zigrow-about-1" class=" zigrow-about-1 py-6">
+    html: `    <section id="zigrow-about-1" data-section="zigrow-about-1" class=" zigrow-about-1 py-6">
       <div class="container">
         <!-- About Me Button -->
         <p class="section-top-btn zigrow-about-1-badge">About me</p>
@@ -3761,13 +3663,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-about-1", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-about-2", {
     name: "About-2",
     category: "about-us",
     image: "https://i.postimg.cc/Pxbjy1vp/about2.png",
-   html:`   <section  id="zigrow-about-2" data-section="zigrow-about-2" class="zigrow-about-2 py-6">
+    html: `   <section  id="zigrow-about-2" data-section="zigrow-about-2" class="zigrow-about-2 py-6">
       <div class="container">
         <!-- Background grid image -->
         <div class="bg-img-box">
@@ -3807,7 +3709,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-about-2", {
                 habits that fit their lifestyle.
               </p>
 
-              <a href="#" class="primary-btn">Learn More</a>
+              <a href="#" class="primary-btn" data-btn="about-2">Learn More</a>
 
               <div class="arrow-img-box">
                 <img
@@ -3994,13 +3896,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-about-2", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-about-3", {
     name: "About-3",
     category: "about-us",
     image: "https://i.postimg.cc/ZRzm6wnp/about3.png",
-  html:` <section class="zigrow-about-3 py-6" data-section="zigrow-about-3" id="zigrow-about-3">
+    html: ` <section class="zigrow-about-3 py-6" data-section="zigrow-about-3" id="zigrow-about-3">
       <div class="container">
         <div class="row about-inner g-4">
           <!-- Left: Text -->
@@ -4103,7 +4005,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-about-3", {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #6a0dad;
+        background-color: var(--primary-colors);
         border-radius: 6px;
         z-index: 1;
         transform: rotate(-5deg);
@@ -4117,7 +4019,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-about-3", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 // client Section Blocks
@@ -4125,7 +4027,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
     name: "Client-1",
     category: "client",
     image: "https://i.postimg.cc/Pxbjy1vJ/client1.png",
-   html:`    <section id="zigrow-client-1" data-section="zigrow-client-1" aria-label="Boost Social Reach" class="zigrow-client-1 py-6">
+    html: `    <section id="zigrow-client-1" data-section="zigrow-client-1" aria-label="Boost Social Reach" class="zigrow-client-1 py-6">
       <div class="container">
         <!-- Header -->
         <div class="zigrow-client-1-head">
@@ -4144,9 +4046,8 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
             for your client
           </h2>
 
-          <p class="sub">
-            Vestibulum dignissim magna sit amet libero aliquet, sit amet luctus
-            orci venenatis sit amet.
+           <p class="sub">
+            Help your brand stay active, relevant, and memorable with content that connects better with your audience.
           </p>
         </div>
 
@@ -4159,10 +4060,10 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
               </div>
               <div class="description">
                 <h3 class="f-title">Stay Ahead With Ideas</h3>
-                <p class="f-desc">
-                  Etiam pulvinar lacus a justo aliquam, ut tristique risus
-                  eleifend. Integer feugiat sapien.
+               <p class="f-desc">
+                  Keep your content pipeline active with fresh ideas that help your brand stay visible and relevant.
                 </p>
+              </div>
               </div>
               <span class="badge-pill">Trusted By Many</span>
             </div>
@@ -4174,10 +4075,9 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
                 <i class="fa-regular fa-square-check" data-icon="check"></i>
               </div>
               <div class="description">
-                <h3 class="f-title">Design Posts That Stand Out</h3>
+                 <h3 class="f-title">Create Posts That Get Noticed</h3>
                 <p class="f-desc">
-                  Mauris cursus quam id tortor tempus, nec convallis justo
-                  dictum vitae porta tellus.
+                  Design content that looks polished, feels consistent, and stands out across every platform.
                 </p>
               </div>
             </div>
@@ -4189,10 +4089,9 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
                 <i class="fa-regular fa-message" data-icon="message"></i>
               </div>
               <div class="description">
-                <h3 class="f-title">Fast &amp; Friendly Support</h3>
+                 <h3 class="f-title">Responsive Support When Needed</h3>
                 <p class="f-desc">
-                  Nunc posuere odio ut sapien convallis, vel mattis augue
-                  maximus. Donec commodo urna nec.
+                  Get dependable guidance and quick help whenever you need support with your content workflow.
                 </p>
               </div>
             </div>
@@ -4204,10 +4103,9 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
                 <i class="fa-regular fa-square-check" data-icon="check"></i>
               </div>
               <div class="description">
-                <h3 class="f-title">Consistent Brand Styling</h3>
+                <h3 class="f-title">Keep Your Brand Consistent</h3>
                 <p class="f-desc">
-                  Cras feugiat sem sit amet nibh volutpat, sed volutpat enim
-                  aliquet. Nam tincidunt varius.
+                  Maintain a unified look and voice across your content so your brand feels clear and professional.
                 </p>
               </div>
             </div>
@@ -4253,10 +4151,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
                   alt="Marketing professional smiling"
                 />
                 <span class="social-icon ig">
-                  <i class="fa-brands fa-instagram" data-icon="instagram"></i>
+                <a href="#">
+
+                  <i class="fa-brands fa-instagram" data-icon="instagram"></i></a>
                 </span>
                 <span class="social-icon fb">
-                  <i class="fa-brands fa-facebook-f" data-icon="facebook"></i>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f" data-icon="facebook"></i> </a>
                 </span>
               </div>
             </div>
@@ -4627,13 +4528,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-1", {
         text-align: left;
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-client-2", {
     name: "Client-2",
     category: "client",
     image: "https://i.postimg.cc/cHGWfFCf/Clients-2.png",
-   html:`    <section
+    html: `    <section
       class="zigrow-client-2 py-6"
       id="zigrow-client-2"
       data-section="zigrow-client-2"
@@ -4675,14 +4576,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-2", {
         padding: clamp(3rem, 6vw, 6rem) 0;
         color: #fff;
       }
-      .zigrow-client-2 .zigrow-client-2-bg {
-        position: absolute;
-        inset: 0;
-        background-image: url(https://i.postimg.cc/5NQ0V3F7/Screenshot-2025-11-29-155907.png);
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.5);
-      }
+     .zigrow-client-2 {
+  position: relative;
+  text-align: center;
+  padding: clamp(3rem, 6vw, 6rem) 0;
+  color: #fff;
+  background-image: url(https://i.postimg.cc/5NQ0V3F7/Screenshot-2025-11-29-155907.png);
+  background-size: cover;
+  background-position: center;
+}
       .zigrow-client-2 .zigrow-client-2-overlay {
         position: absolute;
         inset: 0;
@@ -4714,14 +4616,14 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-2", {
         color: #fbbf24;
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-client-3", {
     name: "Client-3",
     category: "client",
     image: "https://i.postimg.cc/cH7Shftn/Clients-3-(2).png",
-  html:` <section id="zigrow-client-3" data-section="zigrow-client-3" class="zigrow-client-3 py-6">
+    html: ` <section id="zigrow-client-3" data-section="zigrow-client-3" class="zigrow-client-3 py-6">
       <div class="container">
         <div class="row zigrow-client-3-wraper">
           <div class="col-12">
@@ -4731,10 +4633,8 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-3", {
           </div>
 
           <div class="col-12">
-            <p class="zigrow-client-3-text">
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+             <p class="zigrow-client-3-text">
+              Working with this team made the entire process feel simple and well managed. Their attention to detail, timely communication, and thoughtful approach helped bring my ideas to life with much more confidence.
             </p>
           </div>
 
@@ -4844,7 +4744,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-client-3", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 // Faq Section Blocks
@@ -4852,16 +4752,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-faq-1", {
     name: "Faq-1",
     category: "faq",
     image: "https://i.postimg.cc/FRb4p0k3/faq.png",
-  html:`    <section id="zigrow-faq-1" data-section="zigrow-faq-1" class="zigrow-faq-1 py-6">
+    html: `    <section id="zigrow-faq-1" data-section="zigrow-faq-1" class="zigrow-faq-1 py-6">
       <div class="container">
         <div class="row align-items-start g-5">
-          <!-- LEFT TEXT COLUMN -->
           <div class="col-lg-5">
             <div class="faq-label">
               <span class="faq-label-dot"></span>
               <span>+ FAQ</span>
             </div>
-
+ 
             <h2 class="faq-title">
               Frequently Asked
               <span>Questions</span>
@@ -4873,120 +4772,90 @@ Vvveb.Blocks.add("bootstrap4/zigrow-faq-1", {
             </p>
           </div>
 
-          <!-- RIGHT ACCORDION COLUMN -->
           <div class="col-lg-7">
             <div class="faq-panel">
-              <div class="faq-list">
-                <!-- Item 1 (open by default) -->
-                <div class="faq-item active">
-                  <button class="faq-header" type="button">
-                    <span class="faq-question">
+              <div class="accordion faq-accordion" id="faqAccordion1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading1-1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-1" aria-expanded="true" aria-controls="faq1-1">
                       Do I Need Any Technical Skills To Use The Platform?
-                    </span>
-                    <span class="faq-icon">−</span>
-                  </button>
-                  <div class="faq-body">
-                    <p>
-                      Not at all. Everything is designed to be
-                      beginner-friendly. You can set up your workspace, launch
-                      projects, and manage your clients without any coding
-                      experience.
-                    </p>
+                    </button>
+                  </h2>
+                  <div id="faq1-1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1-1" data-bs-parent="#faqAccordion1">
+                    <div class="accordion-body">
+                      Not at all. Everything is designed to be beginner-friendly. You can set up your workspace, launch
+                      projects, and manage your clients without any coding experience.
+                    </div>
                   </div>
                 </div>
 
-                <!-- Item 2 -->
-                <div class="faq-item">
-                  <button class="faq-header" type="button">
-                    <span class="faq-question">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading1-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-2" aria-expanded="false" aria-controls="faq1-2">
                       How Many Projects Can I Create?
-                    </span>
-                    <span class="faq-icon">+</span>
-                  </button>
-                  <div class="faq-body">
-                    <p>
-                      You can create multiple projects based on your plan. Each
-                      project can have its own settings, assets, and analytics.
-                    </p>
+                    </button>
+                  </h2>
+                  <div id="faq1-2" class="accordion-collapse collapse" aria-labelledby="faqHeading1-2" data-bs-parent="#faqAccordion1">
+                    <div class="accordion-body">
+                      You can create multiple projects based on your plan. Each project can have its own settings, assets, and analytics.
+                    </div>
                   </div>
                 </div>
 
-                <!-- Item 3 -->
-                <div class="faq-item">
-                  <button class="faq-header" type="button">
-                    <span class="faq-question">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading1-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-3" aria-expanded="false" aria-controls="faq1-3">
                       What Happens If I Exceed My Usage Limits?
-                    </span>
-                    <span class="faq-icon">+</span>
-                  </button>
-                  <div class="faq-body">
-                    <p>
-                      We’ll notify you before you reach your limit and offer a
-                      smooth upgrade path, so your projects continue running
-                      without interruption.
-                    </p>
+                    </button>
+                  </h2>
+                  <div id="faq1-3" class="accordion-collapse collapse" aria-labelledby="faqHeading1-3" data-bs-parent="#faqAccordion1">
+                    <div class="accordion-body">
+                      We’ll notify you before you reach your limit and offer a smooth upgrade path, so your projects continue running without interruption.
+                    </div>
                   </div>
                 </div>
 
-                <!-- Item 4 -->
-                <div class="faq-item">
-                  <button class="faq-header" type="button">
-                    <span class="faq-question">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading1-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-4" aria-expanded="false" aria-controls="faq1-4">
                       Can I Collaborate With My Team?
-                    </span>
-                    <span class="faq-icon">+</span>
-                  </button>
-                  <div class="faq-body">
-                    <p>
-                      Yes. Invite teammates, assign roles, and collaborate on
-                      projects in real time with clear permissions.
-                    </p>
+                    </button>
+                  </h2>
+                  <div id="faq1-4" class="accordion-collapse collapse" aria-labelledby="faqHeading1-4" data-bs-parent="#faqAccordion1">
+                    <div class="accordion-body">
+                      Yes. Invite teammates, assign roles, and collaborate on projects in real time with clear permissions.
+                    </div>
                   </div>
                 </div>
 
-                <!-- Item 5 -->
-                <div class="faq-item">
-                  <button class="faq-header" type="button">
-                    <span class="faq-question">Is My Data Secure?</span>
-                    <span class="faq-icon">+</span>
-                  </button>
-                  <div class="faq-body">
-                    <p>
-                      We use industry-standard encryption and regular backups to
-                      keep your data safe and secure at all times.
-                    </p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="faqHeading1-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-5" aria-expanded="false" aria-controls="faq1-5">
+                      Is My Data Secure?
+                    </button>
+                  </h2>
+                  <div id="faq1-5" class="accordion-collapse collapse" aria-labelledby="faqHeading1-5" data-bs-parent="#faqAccordion1">
+                    <div class="accordion-body">
+                      We use industry-standard encryption and regular backups to keep your data safe and secure at all times.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- /RIGHT -->
         </div>
       </div>
          <style>
       .py-6{
         padding: 3rem 0;
       }
-      /* :root {
-        --primary-colors: #22c55e; 
-        --secondary-colors: #6b7280; 
-        --territory-colors: #020617; 
-      } */
 
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
-        background: #ffffff;
-      }
-
-      /* SECTION WRAPPER */
-      #faq {
+      .zigrow-faq-1 {
         padding-block: 4rem;
         background: radial-gradient(circle at top left, #f9fafb 0, #ffffff 50%);
       }
 
-      /* LEFT SIDE */
-      .faq-label {
+      .zigrow-faq-1 .faq-label {
         display: inline-flex;
         align-items: center;
         gap: 0.45rem;
@@ -4999,7 +4868,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-faq-1", {
         margin-bottom: 1.75rem;
       }
 
-      .faq-label-dot {
+      .zigrow-faq-1 .faq-label-dot {
         width: 10px;
         height: 10px;
         border-radius: 999px;
@@ -5007,11 +4876,11 @@ Vvveb.Blocks.add("bootstrap4/zigrow-faq-1", {
         box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
       }
 
-      .faq-label span:last-child {
+      .zigrow-faq-1 .faq-label span:last-child {
         color: #020617;
       }
 
-      .faq-title {
+      .zigrow-faq-1 .faq-title {
         font-size: clamp(2rem, 4vw, 2.8rem);
         font-weight: 900;
         color: #020617;
@@ -5019,152 +4888,89 @@ Vvveb.Blocks.add("bootstrap4/zigrow-faq-1", {
         margin-bottom: 1rem;
       }
 
-      .faq-title span {
+      .zigrow-faq-1 .faq-title span {
         display: block;
         color: var(--secondary-colors, #6b7280);
         font-weight: 800;
       }
 
-      .faq-text {
+      .zigrow-faq-1 .faq-text {
         max-width: 380px;
         font-size: 0.96rem;
         color: var(--secondary-colors, #6b7280);
         line-height: 1.7;
       }
 
-      /* RIGHT SIDE ACCORDION WRAPPER */
-      .faq-panel {
+      .zigrow-faq-1 .faq-panel {
         max-width: 640px;
         margin-left: auto;
       }
 
-      .faq-list {
+      .zigrow-faq-1 .faq-accordion {
         display: flex;
         flex-direction: column;
         gap: 0.9rem;
       }
 
-      /* SINGLE ITEM */
-      .faq-item {
+      .zigrow-faq-1 .accordion-item {
         border-radius: 22px;
         border: 1px solid #eef1f4;
         background: #ffffff;
         box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
-        padding: 0.75rem 1.4rem;
-        transition: box-shadow 0.2s ease, transform 0.2s ease,
-          background-color 0.2s ease, border-color 0.2s ease;
+        overflow: hidden;
       }
 
-      .faq-item.active {
-        background: #e9f9ee;
-        border-color: var(--primary-colors, rgba(34, 197, 94, 0.4));
-        box-shadow: 0 5px 20px var(--primary-colors, rgba(34, 197, 94, 0.25));
-        transform: translateY(-2px);
-      }
-
-      .faq-header {
-        width: 100%;
-        border: 0;
-        outline: 0;
-        background: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 0.4rem 0;
-        cursor: pointer;
-      }
-
-      .faq-question {
+      .zigrow-faq-1 .accordion-button {
+        background: #ffffff;
+        color: #020617;
         font-size: 1.02rem;
         font-weight: 800;
-        color: #020617;
-        text-align: left;
+        padding: 1.1rem 1.4rem;
+        box-shadow: none;
       }
 
-      .faq-icon {
-        flex-shrink: 0;
+      .zigrow-faq-1 .accordion-button:not(.collapsed) {
+        background: #e9f9ee;
+        color: #020617;
+      }
+
+      .zigrow-faq-1 .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(34, 197, 94, 0.4);
+      }
+
+      .zigrow-faq-1 .accordion-button::after {
         width: 34px;
         height: 34px;
         border-radius: 999px;
+        background-color: #ffffff;
+        background-position: center;
         border: 2px solid rgba(34, 197, 94, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-colors, #22c55e);
-        font-size: 1.2rem;
-        font-weight: 700;
-        background: #ffffff;
-        box-shadow: 0 2px 10px var(--primary-colors, rgba(34, 197, 94, 0.25));
+        box-shadow: 0 2px 10px rgba(34, 197, 94, 0.25);
       }
 
-      .faq-item.active .faq-icon {
-        background: rgba(34, 197, 94, 0.12);
-      }
-
-      .faq-body {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        padding-right: 3.1rem;
-        transition: max-height 0.25s ease, opacity 0.25s ease,
-          margin-top 0.25s ease;
-      }
-
-      .faq-body p {
+      .zigrow-faq-1 .accordion-body {
+        padding: 0 1.4rem 1.2rem;
         font-size: 0.94rem;
         color: var(--secondary-colors, #6b7280);
-        margin: 0;
         line-height: 1.7;
       }
 
-      .faq-item.active .faq-body {
-        margin-top: 0.4rem;
-        max-height: 200px; /* enough for 2–3 lines */
-        opacity: 1;
-      }
-
       @media (max-width: 991.98px) {
-        .faq-panel {
+        .zigrow-faq-1 .faq-panel {
           margin-top: 2.5rem;
           margin-left: 0;
         }
-
-        .faq-title {
-          text-align: left;
-        }
       }
     </style>
-      <script>
-      // Simple accordion behavior
-      document.querySelectorAll(".faq-item .faq-header").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const item = btn.closest(".faq-item");
-          const isActive = item.classList.contains("active");
-
-          // Close all
-          document.querySelectorAll(".faq-item").forEach((i) => {
-            i.classList.remove("active");
-            const icon = i.querySelector(".faq-icon");
-            if (icon) icon.textContent = "+";
-          });
-
-          // Re-open clicked if it was not active
-          if (!isActive) {
-            item.classList.add("active");
-            const icon = item.querySelector(".faq-icon");
-            if (icon) icon.textContent = "−";
-          }
-        });
-      });
-    </script>
-    </section>`
+    </section>`,
 });
+
 Vvveb.Blocks.add("bootstrap4/zigrow-faq-2", {
     name: "Faq-2",
     category: "faq",
     image: "https://i.postimg.cc/MKcWPgc7/faq1.png",
-html: `
+    html: `
 <section
   class="zigrow-faq-2 py-6"
   id="zigrow-faq-2"
@@ -5173,7 +4979,6 @@ html: `
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <!-- HEADER -->
         <header class="zigrow-faq-2__header">
           <h2 class="zigrow-faq-2__title">Commonly Asked Questions</h2>
           <p class="zigrow-faq-2__subtitle">I am here to help!</p>
@@ -5183,101 +4988,59 @@ html: `
 
     <div class="row">
       <div class="col-12">
-        <!-- FAQ LIST -->
-        <div class="zigrow-faq-2__list">
-          <!-- Q1 -->
-          <a href="#" class="zigrow-faq-2__item">
-            <h3 class="zigrow-faq-2__item-text">
-              How often should I exercise?
-            </h3>
-            <span class="zigrow-faq-2__item-icon">
-              <i
-                class="bi bi-plus-lg"
-                data-icon="faq-plus"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-2__answer">
-            <div class="zigrow-faq-2__answer-inner">
-              <p class="zigrow-faq-2__answer-text">
-                Most people do well with some form of movement every day and
-                3–5 focused workouts per week. Always adjust based on your
-                energy, schedule, and recovery.
-              </p>
+        <div class="accordion zigrow-faq-2__list" id="faqAccordion2">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-1" aria-expanded="false" aria-controls="faq2-1">
+                How often should I exercise?
+              </button>
+            </h2>
+            <div id="faq2-1" class="accordion-collapse collapse" aria-labelledby="faqHeading2-1" data-bs-parent="#faqAccordion2">
+              <div class="accordion-body">
+                Most people do well with some form of movement every day and 3–5 focused workouts per week. Always adjust based on your energy, schedule, and recovery.
+              </div>
             </div>
           </div>
 
-          <!-- Q2 -->
-          <a href="#" class="zigrow-faq-2__item">
-            <h3 class="zigrow-faq-2__item-text">
-              What's the best workout routine for weight loss?
-            </h3>
-            <span class="zigrow-faq-2__item-icon">
-              <i
-                class="bi bi-plus-lg"
-                data-icon="faq-plus"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-2__answer">
-            <div class="zigrow-faq-2__answer-inner">
-              <p class="zigrow-faq-2__answer-text">
-                A mix of strength training and light-to-moderate cardio is
-                ideal. Strength work keeps muscle while cardio increases
-                calorie burn and heart health.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-2" aria-expanded="false" aria-controls="faq2-2">
+                What's the best workout routine for weight loss?
+              </button>
+            </h2>
+            <div id="faq2-2" class="accordion-collapse collapse" aria-labelledby="faqHeading2-2" data-bs-parent="#faqAccordion2">
+              <div class="accordion-body">
+                A mix of strength training and light-to-moderate cardio is ideal. Strength work keeps muscle while cardio increases calorie burn and heart health.
+              </div>
             </div>
           </div>
 
-          <!-- Q3 -->
-          <a href="#" class="zigrow-faq-2__item">
-            <h3 class="zigrow-faq-2__item-text">
-              What should I eat before and after a workout?
-            </h3>
-            <span class="zigrow-faq-2__item-icon">
-              <i
-                class="bi bi-plus-lg"
-                data-icon="faq-plus"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-2__answer">
-            <div class="zigrow-faq-2__answer-inner">
-              <p class="zigrow-faq-2__answer-text">
-                Before training, focus on light carbs and a little protein.
-                Afterward, combine protein with carbs to support recovery
-                and refill your energy stores.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-3" aria-expanded="false" aria-controls="faq2-3">
+                What should I eat before and after a workout?
+              </button>
+            </h2>
+            <div id="faq2-3" class="accordion-collapse collapse" aria-labelledby="faqHeading2-3" data-bs-parent="#faqAccordion2">
+              <div class="accordion-body">
+                Before training, focus on light carbs and a little protein. Afterward, combine protein with carbs to support recovery and refill your energy stores.
+              </div>
             </div>
           </div>
 
-          <!-- Q4 -->
-          <a href="#" class="zigrow-faq-2__item">
-            <h3 class="zigrow-faq-2__item-text">
-              How can I build muscle effectively?
-            </h3>
-            <span class="zigrow-faq-2__item-icon">
-              <i
-                class="bi bi-plus-lg"
-                data-icon="faq-plus"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-2__answer">
-            <div class="zigrow-faq-2__answer-inner">
-              <p class="zigrow-faq-2__answer-text">
-                Aim for progressive overload (gradually lifting heavier or
-                doing more reps), eat enough protein, and allow time for
-                rest and sleep.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2-4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-4" aria-expanded="false" aria-controls="faq2-4">
+                How can I build muscle effectively?
+              </button>
+            </h2>
+            <div id="faq2-4" class="accordion-collapse collapse" aria-labelledby="faqHeading2-4" data-bs-parent="#faqAccordion2">
+              <div class="accordion-body">
+                Aim for progressive overload (gradually lifting heavier or doing more reps), eat enough protein, and allow time for rest and sleep.
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -5315,63 +5078,39 @@ html: `
       border-top: 1px solid #e5e7eb;
     }
 
-    .zigrow-faq-2 .zigrow-faq-2__item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-decoration: none;
-      padding: 0.9rem 0;
+    .zigrow-faq-2 .accordion-item {
+      border: 0;
       border-bottom: 1px solid #e5e7eb;
+      border-radius: 0;
+      background: transparent;
     }
 
-    .zigrow-faq-2 .zigrow-faq-2__item-text {
-      margin: 0;
+    .zigrow-faq-2 .accordion-button {
+      background: transparent;
+      color: #111827;
+      padding: 0.9rem 0;
       font-size: 0.95rem;
       font-weight: 600;
+      box-shadow: none;
+    }
+
+    .zigrow-faq-2 .accordion-button:not(.collapsed) {
+      background: transparent;
       color: #111827;
     }
 
-    .zigrow-faq-2 .zigrow-faq-2__item-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding-left: 0.75rem;
+    .zigrow-faq-2 .accordion-button:focus {
+      box-shadow: none;
     }
 
-    .zigrow-faq-2 .zigrow-faq-2__item-icon i {
-      font-size: 0.9rem;
-      color: #111827;
-      transition: transform 0.2s ease;
+    .zigrow-faq-2 .accordion-button::after {
+      transform-origin: center;
     }
 
-    .zigrow-faq-2 .zigrow-faq-2__answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.25s ease;
-    }
-
-    .zigrow-faq-2 .zigrow-faq-2__answer-inner {
+    .zigrow-faq-2 .accordion-body {
       padding: 0 0 0.85rem;
-    }
-
-    .zigrow-faq-2 .zigrow-faq-2__answer-text {
-      margin: 0;
       font-size: 0.9rem;
       color: #4b5563;
-    }
-
-    .zigrow-faq-2 .zigrow-faq-2__item--open .zigrow-faq-2__item-icon i {
-      transform: rotate(45deg);
-    }
-
-    .zigrow-faq-2 .zigrow-faq-2__item--open + .zigrow-faq-2__answer {
-      max-height: 200px;
-    }
-
-    .zigrow-faq-2 .zigrow-faq-2__helper {
-      margin-top: 0.9rem;
-      font-size: 0.85rem;
-      color: #6b7280;
     }
 
     @media (max-width: 767.98px) {
@@ -5383,51 +5122,26 @@ html: `
         font-size: 1.35rem;
       }
 
-      .zigrow-faq-2 .zigrow-faq-2__item-text {
+      .zigrow-faq-2 .accordion-button {
         font-size: 0.9rem;
       }
     }
   </style>
-
-  <script>
-    (function () {
-      const items = document.querySelectorAll(
-        ".zigrow-faq-2 .zigrow-faq-2__item"
-      );
-
-      items.forEach(function (item) {
-        item.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          const isOpen = item.classList.contains("zigrow-faq-2__item--open");
-
-          items.forEach(function (other) {
-            other.classList.remove("zigrow-faq-2__item--open");
-          });
-
-          if (!isOpen) {
-            item.classList.add("zigrow-faq-2__item--open");
-          }
-        });
-      });
-    })();
-  </script>
 </section>
-`
-
+`,
 });
+
 Vvveb.Blocks.add("bootstrap4/zigrow-faq-3", {
     name: "Faq-3",
     category: "faq",
     image: "https://i.postimg.cc/BQ8qYR8c/faq2.png",
-html: `
+    html: `
 <section
   class="zigrow-faq-3 py-6"
   data-section="zigrow-faq-3"
   id="zigrow-faq-3"
 >
   <div class="container">
-    <!-- HEADING -->
     <div class="row">
       <div class="col-12">
         <header class="zigrow-faq-3__header">
@@ -5438,197 +5152,114 @@ html: `
       </div>
     </div>
 
-    <!-- 2-COLUMN FAQ GRID -->
     <div class="row">
-      <!-- LEFT COLUMN -->
       <div class="col-12 col-md-6">
-        <!-- Item 1 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">How do I book a photoshoot?</p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                You can book by filling out our online form with your preferred
-                date, location, and style. We will confirm availability and send
-                you a brief to finalize the booking.
-              </p>
+        <div class="accordion zigrow-faq-3__accordion" id="faqAccordion3-left">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-1" aria-expanded="false" aria-controls="faq3-1">
+                How do I book a photoshoot?
+              </button>
+            </h2>
+            <div id="faq3-1" class="accordion-collapse collapse" aria-labelledby="faqHeading3-1" data-bs-parent="#faqAccordion3-left">
+              <div class="accordion-body">
+                You can book by filling out our online form with your preferred date, location, and style. We will confirm availability and send you a brief to finalize the booking.
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Item 2 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">
-              What photography do you specialize in?
-            </p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                We focus on portraits, lifestyle, events, and brand storytelling,
-                with lighting and editing tailored to your visual style.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-2" aria-expanded="false" aria-controls="faq3-2">
+                Do you travel for destination sessions?
+              </button>
+            </h2>
+            <div id="faq3-2" class="accordion-collapse collapse" aria-labelledby="faqHeading3-2" data-bs-parent="#faqAccordion3-left">
+              <div class="accordion-body">
+                Yes, we are available for destination shoots. Travel and stay requirements may apply depending on the location and schedule.
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Item 3 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">
-              Do you offer destination shoots?
-            </p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                Yes, we travel for shoots. Travel and accommodation costs are
-                discussed and added to your package in advance.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-3" aria-expanded="false" aria-controls="faq3-3">
+                How long does it take to receive the final photos?
+              </button>
+            </h2>
+            <div id="faq3-3" class="accordion-collapse collapse" aria-labelledby="faqHeading3-3" data-bs-parent="#faqAccordion3-left">
+              <div class="accordion-body">
+                Delivery timelines depend on the project, but most galleries are shared within 1 to 3 weeks after the shoot.
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Item 4 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">When will I get my photos?</p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                Typically within 7–14 days, depending on the size of your
-                session and editing requirements. Rush delivery is also
-                available.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-4" aria-expanded="false" aria-controls="faq3-4">
+                Can I choose the style or mood of the shoot?
+              </button>
+            </h2>
+            <div id="faq3-4" class="accordion-collapse collapse" aria-labelledby="faqHeading3-4" data-bs-parent="#faqAccordion3-left">
+              <div class="accordion-body">
+                Absolutely. We align the styling, references, and mood with your vision before the shoot so the output matches your expectations.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN -->
       <div class="col-12 col-md-6">
-        <!-- Item 5 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">Do you provide raw images?</p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                We deliver fully edited, high-resolution images. Raw files are
-                not part of our standard packages but can be discussed if
-                needed.
-              </p>
+        <div class="accordion zigrow-faq-3__accordion" id="faqAccordion3-right">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-5" aria-expanded="false" aria-controls="faq3-5">
+                Do you provide raw photos as well?
+              </button>
+            </h2>
+            <div id="faq3-5" class="accordion-collapse collapse" aria-labelledby="faqHeading3-5" data-bs-parent="#faqAccordion3-right">
+              <div class="accordion-body">
+                We deliver fully edited, high-resolution images. Raw files are not part of our standard packages but can be discussed if needed.
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Item 6 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">
-              What are your prices and packages?
-            </p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                We offer flexible packages based on duration, location, and
-                deliverables. Share your requirements and we will send a custom
-                quote.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-6" aria-expanded="false" aria-controls="faq3-6">
+                What are your prices and packages?
+              </button>
+            </h2>
+            <div id="faq3-6" class="accordion-collapse collapse" aria-labelledby="faqHeading3-6" data-bs-parent="#faqAccordion3-right">
+              <div class="accordion-body">
+                We offer flexible packages based on duration, location, and deliverables. Share your requirements and we will send a custom quote.
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Item 7 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">Is a deposit required?</p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                Yes, a non-refundable deposit secures your date. The remaining
-                balance is due on or before the day of the shoot.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-7" aria-expanded="false" aria-controls="faq3-7">
+                Is a deposit required?
+              </button>
+            </h2>
+            <div id="faq3-7" class="accordion-collapse collapse" aria-labelledby="faqHeading3-7" data-bs-parent="#faqAccordion3-right">
+              <div class="accordion-body">
+                Yes, a non-refundable deposit secures your date. The remaining balance is due on or before the day of the shoot.
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Item 8 -->
-        <div class="zigrow-faq-3__item">
-          <a href="#" class="zigrow-faq-3__item-link">
-            <p class="zigrow-faq-3__item-text">
-              How can I contact you quickly?
-            </p>
-            <span class="zigrow-faq-3__item-icon">
-              <i
-                class="bi bi-chevron-down"
-                data-icon="chevron-down"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
-          <div class="zigrow-faq-3__answer">
-            <div class="zigrow-faq-3__answer-inner">
-              <p class="zigrow-faq-3__answer-text">
-                You can reach us via WhatsApp, email, or the contact form on our
-                website. We usually respond within one business day.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3-8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-8" aria-expanded="false" aria-controls="faq3-8">
+                How can I contact you quickly?
+              </button>
+            </h2>
+            <div id="faq3-8" class="accordion-collapse collapse" aria-labelledby="faqHeading3-8" data-bs-parent="#faqAccordion3-right">
+              <div class="accordion-body">
+                You can reach us via WhatsApp, email, or the contact form on our website. We usually respond within one business day.
+              </div>
             </div>
           </div>
         </div>
@@ -5657,68 +5288,50 @@ html: `
       font-weight: 600;
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__item {
-      margin-bottom: 1rem;
+    .zigrow-faq-3 .zigrow-faq-3__accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__item-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0.95rem 1.4rem;
-      border-radius: 999px;
-      background-color: #1f1f23;
-      text-decoration: none;
+    .zigrow-faq-3 .accordion-item {
+      margin-bottom: 0;
+      border: 0;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #1f1f23;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__item-text {
-      margin: 0;
+    .zigrow-faq-3 .accordion-button {
+      width: 100%;
+      padding: 0.95rem 1.4rem;
+      border-radius: 22px;
+      background-color: #1f1f23;
+      color: #f9fafb;
       font-size: 0.95rem;
       font-weight: 500;
-      color: #f9fafb;
+      box-shadow: none;
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__item-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 1rem;
-    }
-
-    .zigrow-faq-3 .zigrow-faq-3__item-icon i {
-      font-size: 0.9rem;
-      color: var(--primary-colors, #ff5b2e);
-      transition: transform 0.2s ease;
-    }
-
-    .zigrow-faq-3 .zigrow-faq-3__item-link:hover .zigrow-faq-3__item-text {
+    .zigrow-faq-3 .accordion-button:not(.collapsed) {
+      background-color: #1f1f23;
       color: #ffffff;
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.25s ease;
+    .zigrow-faq-3 .accordion-button:focus {
+      box-shadow: none;
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__answer-inner {
-      padding: 0.6rem 1.4rem 0.9rem;
+    .zigrow-faq-3 .accordion-button::after {
+      filter: brightness(0) saturate(100%) invert(53%) sepia(89%) saturate(3704%) hue-rotate(347deg) brightness(101%) contrast(102%);
     }
 
-    .zigrow-faq-3 .zigrow-faq-3__answer-text {
-      margin: 0;
+    .zigrow-faq-3 .accordion-body {
+      padding: 0 1.4rem 1rem;
       font-size: 0.9rem;
       color: #d1d5db;
-    }
-
-    .zigrow-faq-3 .zigrow-faq-3__item--open .zigrow-faq-3__answer {
-      max-height: 200px;
-    }
-
-    .zigrow-faq-3 .zigrow-faq-3__item--open .zigrow-faq-3__item-icon i {
-      transform: rotate(180deg);
+      background: #1f1f23;
     }
 
     @media (max-width: 991.98px) {
@@ -5736,49 +5349,17 @@ html: `
         font-size: 1.8rem;
       }
 
-      .zigrow-faq-3 .zigrow-faq-3__item-link {
+      .zigrow-faq-3 .accordion-button {
         padding: 0.9rem 1.1rem;
       }
 
-      .zigrow-faq-3 .zigrow-faq-3__answer-inner {
-        padding: 0.55rem 1.1rem 0.85rem;
-      }
-
-      .zigrow-faq-3 .zigrow-faq-3__item-text {
-        font-size: 0.9rem;
+      .zigrow-faq-3 .accordion-body {
+        padding: 0 1.1rem 0.85rem;
       }
     }
   </style>
-
-  <script>
-    (function () {
-      const itemLinks = document.querySelectorAll(
-        ".zigrow-faq-3 .zigrow-faq-3__item-link"
-      );
-
-      itemLinks.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          const item = link.parentElement;
-          const isOpen = item.classList.contains("zigrow-faq-3__item--open");
-
-          document
-            .querySelectorAll(".zigrow-faq-3 .zigrow-faq-3__item")
-            .forEach(function (otherItem) {
-              otherItem.classList.remove("zigrow-faq-3__item--open");
-            });
-
-          if (!isOpen) {
-            item.classList.add("zigrow-faq-3__item--open");
-          }
-        });
-      });
-    })();
-  </script>
 </section>
-`
-
+`,
 });
 
 // Hero Sections Blocks
@@ -5786,7 +5367,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
     name: "Hero-1",
     category: "hero",
     image: "https://i.postimg.cc/h4CvTqLZ/hero1.png",
-  html:`  <section id="zigorw-hero-1" data-section="zigorw-hero-1" class="zigrow-hero-1 py-6">
+    html: `  <section id="zigorw-hero-1" data-section="zigorw-hero-1" class="zigrow-hero-1 py-6">
       <!-- Background Image -->
       <div class="bg-image"></div>
 
@@ -5804,7 +5385,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
               and tailored lesson plans, inspiring a love for learning in all my
               students.
             </p>
-            <a href="#contact" class="call-now-btn">
+            <a href="#contact" class="call-now-btn" data-btn="contact">
               <i class="bi bi-telephone" data-icon="phone"></i> Contact Me
             </a>
           </div>
@@ -5821,7 +5402,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
             <!-- Tutor Image -->
            <img
               src="../../img/zigrow-team-images/zigrow-hero-1-hero-2.webp"
-              class="hero-img img-fluid"
+              class="hero-img "
               alt="Richard Smith"
             />
             </div>
@@ -5840,15 +5421,12 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
       }
 
       /* Background image behind everything */
-      .zigrow-hero-1 .bg-image {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        background: url("./images/hero-bg.png") repeat center center;
-        background-size: contain;
-        z-index: -2;
-      }
+      .zigrow-hero-1 {
+  position: relative;
+  overflow: hidden;
+  background: url("./images/hero-bg.png") repeat center center;
+  background-size: contain;
+}
 
       .zigrow-hero-1 .hero-container{
         align-items: center;
@@ -5931,6 +5509,8 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
         max-height: 100%;
         width: 400px;
         object-fit: cover;
+        zindex: 999;
+        position: relative;
       }
 
       /* DECORATIVE ICONS */
@@ -5998,7 +5578,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
 
       @media (max-width: 768px) {
         .zigrow-hero-1 {
-          height: auto !important;
+          height: auto ;
         }
 
         .zigrow-hero-1 .hero-head {
@@ -6019,21 +5599,21 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-1", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-hero-2", {
     name: "Hero-2",
     category: "hero",
     image: "https://i.postimg.cc/RVZRLfWK/Screenshot-2025-11-20-162300.png",
-  html:`   <section id="zigrow-hero-2" data-section="zigrow-hero-2" class="zigrow-hero-2 py-6">
+    html: `   <section id="zigrow-hero-2" data-section="zigrow-hero-2" class="zigrow-hero-2 py-6">
       <div class="container">
         <!-- Bootstrap grid instead of flex -->
         <div class="row zigrow-hero-2-wraper">
           <!-- Image Right on desktop, on top on mobile -->
           <div class="col-12 col-md-6 order-1 order-md-2 zigrow-hero-2-right">
             <div class="zigrow-hero-2-image-wrapper">
-              <img src="../../img/zigrow-team-images/zigrow-hero-2-hero-2.webp" alt="Doctor" class="hero-image" />
+              <img src="../../img/zigrow-team-images/zigrow-hero-2-hero-2.webp" alt="Doctor" class="zigrow-hero-2-image" />
             </div>
           </div>
 
@@ -6047,7 +5627,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-2", {
             <p class="zigrow-hero-2-text">
               Personalized diet plans to help you achieve your wellness goals.
             </p>
-            <a href="#" class="zigrow-hero-2-btn">Book Now</a>
+            <a href="#" class="zigrow-hero-2-btn" data-btn="hero-2">Book Now</a>
           </div>
         </div>
       </div>
@@ -6152,13 +5732,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-2", {
       }
     </style>
     </section>
-  `
+  `,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-hero-3", {
     name: "Hero-3",
     category: "hero",
     image: "https://i.postimg.cc/bN0451gj/Screenshot-2025-11-20-153809.png",
- html:` <section id="zigorw-hero-3" data-section="zigorw-hero-3" class="zigrow-hero-3 py-6">
+    html: ` <section id="zigorw-hero-3" data-section="zigorw-hero-3" class="zigrow-hero-3 py-6">
       <div class="container">
         <!-- Bootstrap grid instead of flex -->
         <div class="row zigrow-hero-3-inner">
@@ -6195,7 +5775,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-3", {
                <img
                 src="../../img/zigrow-team-images/zigrow-hero-3-portfolio template hero.webp"
                 alt="Profile"
-                class="hero-image"
+                class="zigrow-hero-3-image"
               />
             </div>
 
@@ -6326,13 +5906,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-3", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-hero-4", {
     name: "Hero-4",
     category: "hero",
     image: "https://i.postimg.cc/ZK5cx3Wc/Screenshot-2025-11-20-162324.png",
-   html:` <section id="zigrow-hero-4" data-section="zigrow-hero-4" class="zigrow-hero-4 py-6">
+    html: ` <section id="zigrow-hero-4" data-section="zigrow-hero-4" class="zigrow-hero-4 py-6">
       <div class="container">
         <!-- Bootstrap grid instead of flex -->
         <div class="row zigrow-hero-4-inner g-4">
@@ -6360,10 +5940,10 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-4", {
 
             <!-- Buttons -->
             <div class="zigrow-hero-4-actions">
-              <a class="primary-btn" href="tel:+91-9123456789">
+              <a class="primary-btn" href="tel:+91-9123456789" data-btn="hero-4">
                 Book a FREE Consultation
               </a>
-              <a class="secondary-btn" href="#our-services"> Learn More </a>
+              <a class="secondary-btn" href="#our-services" data-btn="hero-4"> Learn More </a>
             </div>
           </div>
 
@@ -6704,13 +6284,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-4", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-hero-5", {
     name: "Hero-5",
     category: "hero",
     image: "https://i.postimg.cc/WbC4Y6fn/hero5.png",
-    html:`  <section id="zigrow-hero-5" data-section="zigrow-hero-5" class="zigrow-hero-5 py-6" aria-label="Hero">
+    html: `  <section id="zigrow-hero-5" data-section="zigrow-hero-5" class="zigrow-hero-5 py-6" aria-label="Hero">
       <div class="container">
         <!-- TOP: COPY AREA USING BOOTSTRAP GRID -->
         <div class="row copy-row">
@@ -6726,14 +6306,14 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-5", {
           <div class="col-12 col-lg-6 copy-right">
             <p class="intro">
               <span class="ping" aria-hidden="true"></span>
-              <em>A Freelance UI/UX Designer</em> based in Germany. I strive to
+              <span class="designer">A Freelance UI/UX Designer</span> based in Germany. I strive to
               build immersive and beautiful web applications through carefully
               crafted user-centric design.
             </p>
-            <a href="#" class="cta">
+            <a href="#" class="cta" data-btn="hero-5">
               Contact Me
               <span aria-hidden="true"
-                ><i class="fa-solid fa-arrow-right"></i
+                ><i class="fa-solid fa-arrow-right" data-icon="arrow-right"></i
               ></span>
             </a>
           </div>
@@ -6744,7 +6324,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-5", {
           <div class="scroll-indicator" aria-hidden="true">
             <span>Scroll Down</span>
             <a class="dot" type="button" tabindex="-1">
-              <i class="fa-solid fa-arrow-down"></i>
+              <i class="fa-solid fa-arrow-down" data-icon="arrow-down"></i>
             </a>
           </div>
 
@@ -7039,7 +6619,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-hero-5", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 // Pricing Blocks
@@ -7047,7 +6627,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-pricing-1", {
     name: "Pricing-1",
     category: "pricing",
     image: "https://i.postimg.cc/3xnV87PM/Screenshot-2025-11-20-153914.png",
-   html:` <section id="zigrow-pricing-1" data-section="zigrow-pricing-1" class="zigrow-pricing-1 py-6">
+    html: ` <section id="zigrow-pricing-1" data-section="zigrow-pricing-1" class="zigrow-pricing-1 py-6">
       <div class="container">
         <div class="section-heading mb-5">
           <p>Choose One Of Our</p>
@@ -7057,7 +6637,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-pricing-1", {
 
         <div class="row g-4">
           <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 clonable-card">
             <div class="zigrow-pricing-1-card">
               <h4>Desk</h4>
               <h3>
@@ -7072,12 +6652,12 @@ Vvveb.Blocks.add("bootstrap4/zigrow-pricing-1", {
                   <i class="bi bi-check-lg" data-icon="check"></i> Free WiFi
                 </li>
               </ul>
-              <a href="#" class="btn-join">Join Now</a>
+              <a href="#" class="btn-join" data-btn="pricing-1">Join Now</a>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 clonable-card">
             <div class="zigrow-pricing-1-card featured">
               <h4>Virtual</h4>
               <h3>
@@ -7099,12 +6679,12 @@ Vvveb.Blocks.add("bootstrap4/zigrow-pricing-1", {
                   Access
                 </li>
               </ul>
-              <a href="#" class="btn-join">Join Now</a>
+              <a href="#" class="btn-join" data-btn="pricing-1">Join Now</a>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 clonable-card">
             <div class="zigrow-pricing-1-card">
               <h4>Office</h4>
               <h3>
@@ -7126,7 +6706,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-pricing-1", {
                   Access
                 </li>
               </ul>
-              <a href="#" class="btn-join">Join Now</a>
+              <a href="#" class="btn-join" data-btn="pricing-1">Join Now</a>
             </div>
           </div>
         </div>
@@ -7257,14 +6837,14 @@ Vvveb.Blocks.add("bootstrap4/zigrow-pricing-1", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-pricing-2", {
     name: "Pricing-2",
     category: "pricing",
     image: "https://i.postimg.cc/fT6M65XB/pricing-1.png",
-html:`
+    html: `
   <section
       class="zigrow-pricing-2 py-6"
       data-section="zigrow-pricing-2"
@@ -7279,17 +6859,17 @@ html:`
           </div>
 
           <div class="billing-toggle" aria-label="Billing period toggle">
-            <a href="#" class="billing-btn active" data-billing="monthly">
+            <a href="#" class="billing-btn active" data-billing="monthly" data-btn="pricing-2">
               Monthly
             </a>
-            <a href="#" class="billing-btn" data-billing="yearly">Yearly</a>
+            <a href="#" class="billing-btn" data-billing="yearly" data-btn="pricing-2">Yearly</a>
           </div>
         </div>
 
         <!-- CARDS -->
         <div class="row pricing-row">
           <!-- Card 1 -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 clonable-card">
             <div class="pricing-card">
               <p class="pricing-label">Beginner Plan</p>
 
@@ -7330,12 +6910,12 @@ html:`
                 </li>
               </ul>
 
-              <a href="#" class="pricing-cta">Choose Plan</a>
+              <a href="#" class="pricing-cta" data-btn="pricing-2">Choose Plan</a>
             </div>
           </div>
 
           <!-- Card 2 (Featured) -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 clonable-card">
             <div class="pricing-card pricing-card--featured">
               <p class="pricing-label">Premium Plan</p>
 
@@ -7378,12 +6958,12 @@ html:`
                 </li>
               </ul>
 
-              <a href="#" class="pricing-cta">Choose Plan</a>
+              <a href="#" class="pricing-cta" data-btn="pricing-2">Choose Plan</a>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 clonable-card">
             <div class="pricing-card">
               <p class="pricing-label">Expert Plan</p>
 
@@ -7424,7 +7004,7 @@ html:`
                 </li>
               </ul>
 
-              <a href="#" class="pricing-cta">Choose Plan</a>
+              <a href="#" class="pricing-cta" data-btn="pricing-2">Choose Plan</a>
             </div>
           </div>
         </div>
@@ -7690,15 +7270,14 @@ html:`
     </script>
     </section>
 
-`
-
+`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-pricing-3", {
     name: "Pricing-3",
     category: "pricing",
     image: "https://i.postimg.cc/7YpqpX7s/pricing-2.png",
-html:`   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3">
+    html: `   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3" data-section="zigrow-pricing-3">
       <div class="container">
         <div class="zigrow-pricing-3__heading">
           <p class="zigrow-pricing-3__kicker">PRICING TABLE</p>
@@ -7712,7 +7291,7 @@ html:`   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3">
 
         <div class="row g-4 zigrow-pricing-3__grid">
           <!-- Card 1 -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 clonable-card">
             <div class="zigrow-pricing-3__card" tabindex="0">
               <p class="zigrow-pricing-3__plan">1 Bag</p>
               <p class="zigrow-pricing-3__price-row">
@@ -7723,12 +7302,12 @@ html:`   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3">
                 Ideal for small families or light usage. Fresh supply delivered
                 monthly with assured quality and easy renewals.
               </p>
-              <a href="#book-now" class="zigrow-pricing-3__cta">Book Now</a>
+              <a href="#book-now" class="zigrow-pricing-3__cta" data-btn="pricing-3">Book Now</a>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 clonable-card">
             <div
               class="zigrow-pricing-3__card zigrow-pricing-3__card--featured is-active"
               tabindex="0"
@@ -7742,12 +7321,12 @@ html:`   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3">
                 Our most popular plan. Perfect balance of value and quantity for
                 growing households with regular monthly needs.
               </p>
-              <a href="#book-now" class="zigrow-pricing-3__cta">Book Now</a>
+              <a href="#book-now" class="zigrow-pricing-3__cta" data-btn="pricing-3">Book Now</a>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 clonable-card">
             <div class="zigrow-pricing-3__card" tabindex="0">
               <p class="zigrow-pricing-3__plan">8 Bag</p>
               <p class="zigrow-pricing-3__price-row">
@@ -7758,7 +7337,7 @@ html:`   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3">
                 Best suited for large families or bulk usage. Maximum savings
                 with uninterrupted supply and priority support.
               </p>
-              <a href="#book-now" class="zigrow-pricing-3__cta">Book Now</a>
+              <a href="#book-now" class="zigrow-pricing-3__cta" data-btn="pricing-3">Book Now</a>
             </div>
           </div>
         </div>
@@ -7958,16 +7537,14 @@ html:`   <section class="zigrow-pricing-3 py-6" id="zigrow-pricing-3">
         });
       })();
     </script>
-    </section>`
-
-
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-pricing-4", {
     name: "Pricing-4",
     category: "pricing",
     image: "https://i.postimg.cc/zX9q9pW2/pricing-3.png",
-html: `
+  html: `
 <section
   class="zigrow-pricing-4 py-6"
   data-section="zigrow-pricing-4"
@@ -7975,16 +7552,15 @@ html: `
 >
   <div class="container">
     <div class="zigrow-pricing-4__heading">
-      <h2 class="zigrow-pricing-4__title">Choose Your Cleaning Plan</h2>
+      <h2 class="zigrow-pricing-4__title">Choose the Cleaning Plan That Fits Your Space</h2>
       <p class="zigrow-pricing-4__subtext">
-        Faucibus commodo a aenean et sit quisque ipsum. Consequat eu id ut dolor
-        felis quis. Sagittis a sapien pulvinar etiam.
+        Pick a service package based on the size of your home and the level of cleaning support you need.
       </p>
     </div>
 
     <div class="row g-4">
       <!-- BASIC -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div
           class="zigrow-pricing-4__card is-active"
           data-plan="basic"
@@ -8003,8 +7579,7 @@ html: `
           <p class="zigrow-pricing-4__per">/service</p>
 
           <p class="zigrow-pricing-4__desc">
-            Faucibus commodo a aenean et sit quisque ipsum. Consequat eu id ut
-            dolor felis quis.
+            A simple and affordable cleaning plan for routine upkeep in smaller homes.
           </p>
 
           <div class="zigrow-pricing-4__divider" aria-hidden="true"></div>
@@ -8016,7 +7591,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>60 Minutes Consultation</p>
+              <p>Quick home assessment</p>
             </li>
             <li>
               <i
@@ -8024,7 +7599,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>2 Bedroom Cleaning</p>
+              <p>2 bedroom cleaning</p>
             </li>
             <li>
               <i
@@ -8032,7 +7607,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>3 Bathroom Cleaning</p>
+              <p>2 bathroom cleaning</p>
             </li>
             <li>
               <i
@@ -8040,7 +7615,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>1 Living Room Cleaning</p>
+              <p>Living room dusting and mopping</p>
             </li>
             <li>
               <i
@@ -8048,16 +7623,16 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>7 Days Guarantee</p>
+              <p>Service quality assurance</p>
             </li>
           </ul>
 
-          <button class="zigrow-pricing-4__btn" type="button">Book Now</button>
+          <a class="zigrow-pricing-4__btn" type="button" href="#" data-btn="pricing-4">Book Now</a>
         </div>
       </div>
 
       <!-- PRO (FEATURED) -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div
           class="zigrow-pricing-4__card zigrow-pricing-4__card--featured"
           data-plan="pro"
@@ -8076,8 +7651,7 @@ html: `
           <p class="zigrow-pricing-4__per">/service</p>
 
           <p class="zigrow-pricing-4__desc">
-            Faucibus commodo a aenean et sit quisque ipsum. Consequat eu id ut
-            dolor felis quis.
+            A more complete cleaning package designed for medium to large homes that need extra care.
           </p>
 
           <div class="zigrow-pricing-4__divider" aria-hidden="true"></div>
@@ -8089,7 +7663,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>120 Minutes Consultation</p>
+              <p>Detailed home assessment</p>
             </li>
             <li>
               <i
@@ -8097,7 +7671,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>4 Bedroom Cleaning</p>
+              <p>4 bedroom cleaning</p>
             </li>
             <li>
               <i
@@ -8105,7 +7679,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>5 Bathroom Cleaning</p>
+              <p>4 bathroom cleaning</p>
             </li>
             <li>
               <i
@@ -8113,7 +7687,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>1 Living Room Cleaning</p>
+              <p>Kitchen and living area deep cleaning</p>
             </li>
             <li>
               <i
@@ -8121,16 +7695,16 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>7 Days Guarantee</p>
+              <p>7 day service support</p>
             </li>
           </ul>
 
-          <button class="zigrow-pricing-4__btn" type="button">Book Now</button>
+          <a class="zigrow-pricing-4__btn" type="button" href="#" data-btn="pricing-4">Book Now</a>
         </div>
       </div>
 
       <!-- DELUXE -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="zigrow-pricing-4__card" data-plan="deluxe" tabindex="0">
           <p class="zigrow-pricing-4__plan">
             <i
@@ -8145,8 +7719,7 @@ html: `
           <p class="zigrow-pricing-4__per">/service</p>
 
           <p class="zigrow-pricing-4__desc">
-            Faucibus commodo a aenean et sit quisque ipsum. Consequat eu id ut
-            dolor felis quis.
+            Our most complete plan for larger homes that need a more detailed and polished cleaning experience.
           </p>
 
           <div class="zigrow-pricing-4__divider" aria-hidden="true"></div>
@@ -8158,7 +7731,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>60 Minutes Consultation</p>
+              <p>Priority home assessment</p>
             </li>
             <li>
               <i
@@ -8166,7 +7739,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>2 Bedroom Cleaning</p>
+              <p>5 bedroom cleaning</p>
             </li>
             <li>
               <i
@@ -8174,7 +7747,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>3 Bathroom Cleaning</p>
+              <p>5 bathroom cleaning</p>
             </li>
             <li>
               <i
@@ -8182,7 +7755,7 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>1 Living Room Cleaning</p>
+              <p>Full kitchen, living room, and hallway cleaning</p>
             </li>
             <li>
               <i
@@ -8190,11 +7763,11 @@ html: `
                 data-icon="check"
                 aria-hidden="true"
               ></i>
-              <p>7 Days Guarantee</p>
+              <p>7 day service guarantee</p>
             </li>
           </ul>
 
-          <button class="zigrow-pricing-4__btn" type="button">Book Now</button>
+          <a class="zigrow-pricing-4__btn" type="button" href="#" data-btn="pricing-4">Book Now</a>
         </div>
       </div>
     </div>
@@ -8442,18 +8015,15 @@ html: `
     })();
   </script>
 </section>
-`
-
-
+`,
 });
-  
 
 // Team Blocks
 Vvveb.Blocks.add("bootstrap4/zigrow-team-1", {
     name: "Team-1",
     category: "team",
     image: "https://i.postimg.cc/4Nvj0pPz/Screenshot-2025-11-20-153848.png",
-   html:`  <section
+    html: `  <section
       id="zigrow-team-1"
       data-section="zigrow-team-1"
       class="zigrow-team-1 py-6"
@@ -8468,7 +8038,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-team-1", {
         <!-- Testimonials Grid -->
         <div class="zigrow-team-1-grid py-4">
           <div class="row g-3">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 clonable-card">
               <div class="testimonial-card">
                 <div class="testimonial-icon">
                   <i class="bi bi-quote" data-icon="quote"></i>
@@ -8483,7 +8053,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-team-1", {
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 clonable-card">
               <div class="testimonial-card">
                 <div class="testimonial-icon">
                   <i class="bi bi-quote" data-icon="quote"></i>
@@ -8498,7 +8068,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-team-1", {
               </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 clonable-card">
               <div class="testimonial-card">
                 <div class="testimonial-icon">
                   <i class="bi bi-quote" data-icon="quote"></i>
@@ -8576,14 +8146,14 @@ Vvveb.Blocks.add("bootstrap4/zigrow-team-1", {
         font-size: 0.9rem;
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-team-2", {
     name: "Team-2",
     category: "team",
     image: "https://i.postimg.cc/xC3RtdfP/team-2.png",
-html:`    <section
+    html: `    <section
       class="zigrow-team-2 py-6"
       data-section="zigrow-team-2"
       id="zigrow-team-2"
@@ -8608,11 +8178,8 @@ html:`    <section
             <div class="col-12 col-md-8">
               <div class="testimonial-content">
                 <span class="quote-mark">“</span>
-                <p class="testimonial-text">
-                  Faucibus nulla tincidunt sagittis faucibus proin habitasse
-                  nunc erat sed nisi non pulvinar at ante diam nulla tincidunt
-                  lectus maecenas penatibus nam suspendisse cursus risus, ac
-                  nibh suspendisse
+               <p class="testimonial-text">
+                  Working with this team was a smooth and reassuring experience from start to finish. They understood exactly what we needed, communicated clearly at every step, and delivered results that truly made a difference for our business.
                 </p>
                 <p class="testimonial-author">Ramita jain</p>
               </div>
@@ -8656,7 +8223,7 @@ html:`    <section
 
       .zigrow-team-2 .testimonial-image img {
         max-width: 100%;
-        /* max-height: 100%; */
+         max-height: 100%; 
         height: calc(100% + 50px);
         object-fit: cover;
         position: relative;
@@ -8695,14 +8262,14 @@ html:`    <section
         margin: 0;
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-team-3", {
     name: "Team-3",
     category: "team",
     image: "https://i.postimg.cc/k4vcf5Jx/team-3.png",
-html:`   <section
+    html: `   <section
       id="zigrow-team-3"
       data-section="zigrow-team-3"
       class="zigrow-team-3 py-6"
@@ -8716,7 +8283,7 @@ html:`   <section
 
           <!-- Bootstrap grid instead of CSS grid -->
           <div class="row g-3">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 clonable-card">
               <div class="zigrow-team-3-card">
                 <div class="client-img-box">
                   <div class="client-img">
@@ -8735,7 +8302,7 @@ html:`   <section
               </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 clonable-card">
               <div class="zigrow-team-3-card">
                 <div class="client-img-box">
                   <div class="client-img">
@@ -8754,7 +8321,7 @@ html:`   <section
               </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 clonable-card">
               <div class="zigrow-team-3-card">
                 <div class="client-img-box">
                   <div class="client-img">
@@ -8773,7 +8340,7 @@ html:`   <section
               </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 clonable-card">
               <div class="zigrow-team-3-card">
                 <div class="client-img-box">
                   <div class="client-img">
@@ -8903,14 +8470,14 @@ html:`   <section
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-team-4", {
     name: "Team-4",
     category: "team",
     image: "https://i.postimg.cc/hj1rpGDm/team-4.png",
-  html:`    <section id="zigrow-team-4" data-section="zigrow-team-4" class="zigrow-team-4 py-6">
+    html: `    <section id="zigrow-team-4" data-section="zigrow-team-4" class="zigrow-team-4 py-6">
       <div class="container">
         <div class="brand-text row g-4">
           <div class="brand-heading col-12 col-md-7">
@@ -8998,14 +8565,14 @@ Vvveb.Blocks.add("bootstrap4/zigrow-team-4", {
         /* display: inline-block; */
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-team-5", {
     name: "Team-5",
     category: "team",
     image: "https://i.postimg.cc/Jz1SCtYB/Screenshot-2025-11-20-153903.png",
-html:` <section
+    html: ` <section
       id="zigrow-team-5"
       data-section="zigrow-team-5"
       class="zigrow-team-5 py-6"
@@ -9015,7 +8582,7 @@ html:` <section
           <!-- ⭐ Bootstrap row with spacing -->
           <div class="row g-4">
             <!-- Testimonial 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 clonable-card">
               <div class="testimonial-card">
                 <div class="testimonial-header">
                   <div class="stars">
@@ -9046,7 +8613,7 @@ html:` <section
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 clonable-card">
               <div class="testimonial-card">
                 <div class="testimonial-header">
                   <div class="stars">
@@ -9077,7 +8644,7 @@ html:` <section
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 clonable-card">
               <div class="testimonial-card">
                 <div class="testimonial-header">
                   <div class="stars">
@@ -9179,16 +8746,15 @@ html:` <section
         color: var(--secondary-colors, 0.777);
       }
     </style>
-    </section>`
+    </section>`,
 });
-
 
 // Products
 Vvveb.Blocks.add("bootstrap4/zigrow-product-1", {
     name: "Product-1",
     category: "product",
     image: "https://i.postimg.cc/hPHKHMx6/product1.png",
-  html:`  <section
+    html: `  <section
       class="zigrow-product-1 py-6"
       id="zigrow-product-1"
       data-section="zigrow-product-1"
@@ -9206,7 +8772,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-1", {
 
         <div class="row g-3">
           <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="product-card">
               <!-- Wrapped image -->
               <div class="product-img-wrapper">
@@ -9214,8 +8780,8 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-1", {
               </div>
 
               <div class="product-overlay">
-                <div class="product-title">Products name</div>
-                <a href="#" class="product-btn">
+                <span class="product-title">Products name</span>
+                <a href="#" class="product-btn" data-btn="product-1">
                   See all
                   <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
                 </a>
@@ -9224,15 +8790,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-1", {
           </div>
 
           <!-- Card 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="product-card">
               <div class="product-img-wrapper">
                 <img src="../../img/zigrow-product-images/zigrow-product-1-2.webp" alt="Activewear" />
               </div>
 
               <div class="product-overlay">
-                <div class="product-title">Products name</div>
-                <a href="#" class="product-btn">
+                <span class="product-title">Products name</span>
+                <a href="#" class="product-btn" data-btn="product-2">
                   See all
                   <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
                 </a>
@@ -9241,15 +8807,15 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-1", {
           </div>
 
           <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="product-card">
               <div class="product-img-wrapper">
                 <img src="../../img/zigrow-product-images/zigrow-product-1-3.webp" alt="Formal Attire" />
               </div>
 
               <div class="product-overlay">
-                <div class="product-title">Products name</div>
-                <a href="#" class="product-btn">
+                <span class="product-title">Products name</span>
+                <a href="#" class="product-btn" data-btn="product-3">
                   See all
                   <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
                 </a>
@@ -9360,13 +8926,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-1", {
       }
     </style>
     </section>
-  `
+  `,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-product-2", {
     name: "Product-2",
     category: "product",
     image: "https://i.postimg.cc/t4W9yPtB/product2.png",
- html:` <section
+    html: ` <section
       class="zigrow-product-2 py-6"
       id="zigrow-product-2"
       data-section="zigrow-product-2"
@@ -9385,7 +8951,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-2", {
         <!-- Cards -->
         <div class="row gy-4 gx-0 gx-md-3">
           <!-- Card 1 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 clonable-card">
             <div class="gear-card gear-card-first">
               <div class="gear-img-wrapper">
                 <img src="../../img/zigrow-product-images/zigrow-product-2-1.webp" alt="item-1" />
@@ -9395,7 +8961,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-2", {
           </div>
 
           <!-- Card 2 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 clonable-card">
             <div class="gear-card">
               <p class="gear-label-top">Category-2</p>
               <div class="gear-img-wrapper">
@@ -9405,7 +8971,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-2", {
           </div>
 
           <!-- Card 3 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 clonable-card">
             <div class="gear-card">
               <div class="gear-img-wrapper">
                 <img src="../../img/zigrow-product-images/zigrow-product-2-3.webp"  alt="item-3" />
@@ -9415,7 +8981,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-2", {
           </div>
 
           <!-- Card 4 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 clonable-card">
             <div class="gear-card gear-card-last">
               <p class="gear-label-top">Category-4</p>
               <div class="gear-img-wrapper">
@@ -9507,13 +9073,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-2", {
         border-top: 2px solid #dcdcdc;
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-product-3", {
     name: "Product-3",
     category: "product",
     image: "https://i.postimg.cc/GhZbZzGw/product3.png",
-  html:`   <section
+    html: `   <section
       class="zigrow-product-3 py-6"
       id="zigrow-product-3"
       data-section="zigrow-product-3"
@@ -9532,7 +9098,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-3", {
         <!-- Cards Row -->
         <div class="row gy-4">
           <!-- Card 1: Living Room -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 clonable-card">
             <div class="room-card room-card-light">
               <div class="room-img">
                 <img src="../../img/zigrow-product-images/zigrow-product-3-1.webp" alt="Living Room" />
@@ -9551,7 +9117,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-3", {
           </div>
 
           <!-- Card 2: Bedroom -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 clonable-card">
             <div class="room-card room-card-dark">
               <h3 class="room-title">Bedroom</h3>
               <p class="room-text">
@@ -9570,7 +9136,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-3", {
           </div>
 
           <!-- Card 3: Dining Room -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 clonable-card">
             <div class="room-card room-card-brown">
               <h3 class="room-title">Dining Room</h3>
               <p class="room-text">
@@ -9589,7 +9155,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-3", {
           </div>
 
           <!-- Card 4: Home Office -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 clonable-card">
             <div class="room-card room-card-light">
               <div class="room-img">
                 <img src="../../img/zigrow-product-images/zigrow-product-3-4.webp" alt="Home Office" />
@@ -9726,13 +9292,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-3", {
       }
     </style>
     </section>
-    `
+    `,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
     name: "Product-4",
     category: "product",
     image: "https://i.postimg.cc/P5YdhZz0/product4.png",
- html:`  <section
+    html: `  <section
       class="zigrow-product-4 py-6"
       data-section="zigrow-product-4"
       id="zigrow-product-4"
@@ -9747,7 +9313,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
 
         <div class="row gy-4">
           <!-- PRODUCT 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="product-card">
               <div class="product-img-box">
                 <img src="../../img/zigrow-product-images/zigrow-product-4-1.webp" alt="Skincare Application" />
@@ -9770,10 +9336,10 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
               </div>
 
               <div class="product-actions">
-                <a href="#" class="product-btn product-btn-dark">
+                <a href="#" class="product-btn product-btn-dark" data-btn="product-1">
                   BUY NOW <i class="bi bi-arrow-right" data-icon="arrow"></i>
                 </a>
-                <a href="#" class="product-btn">
+                <a href="#" class="product-btn" data-btn="product-1">
                   QUICK VIEW <i class="bi bi-arrow-right" data-icon="arrow"></i>
                 </a>
               </div>
@@ -9781,7 +9347,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
           </div>
 
           <!-- PRODUCT 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="product-card">
               <div class="product-img-box">
                 <img src="../../img/zigrow-product-images/zigrow-product-4-2.webp" alt="Skin Hydration" />
@@ -9804,10 +9370,10 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
               </div>
 
               <div class="product-actions">
-                <a href="#" class="product-btn product-btn-dark">
+                <a href="#" class="product-btn product-btn-dark" data-btn="product-2">
                   BUY NOW <i class="bi bi-arrow-right" data-icon="arrow"></i>
                 </a>
-                <a href="#" class="product-btn">
+                <a href="#" class="product-btn" data-btn="product-2">
                   QUICK VIEW <i class="bi bi-arrow-right" data-icon="arrow"></i>
                 </a>
               </div>
@@ -9815,7 +9381,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
           </div>
 
           <!-- PRODUCT 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="product-card">
               <div class="product-img-box">
                 <img src="../../img/zigrow-product-images/zigrow-product-4-3.webp" alt="Face Cream" />
@@ -9838,10 +9404,10 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
               </div>
 
               <div class="product-actions">
-                <a href="#" class="product-btn product-btn-dark">
+                <a href="#" class="product-btn product-btn-dark" data-btn="product-3">
                   BUY NOW <i class="bi bi-arrow-right" data-icon="arrow"></i>
                 </a>
-                <a href="#" class="product-btn">
+                <a href="#" class="product-btn" data-btn="product-3">
                   QUICK VIEW <i class="bi bi-arrow-right" data-icon="arrow"></i>
                 </a>
               </div>
@@ -10017,7 +9583,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-product-4", {
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 // Footer
@@ -10025,13 +9591,13 @@ Vvveb.Blocks.add("bootstrap4/zigrow-footer-1", {
     name: "footer-1",
     category: "footer",
     image: "https://i.postimg.cc/gkfGf4Rw/footer-1.png",
-html:`   <footer class="zigrow-footer-1 py-6" data-section="zigrow-footer-1" id="zigrow-footer-1">
+    html: `   <footer class="zigrow-footer-1 py-6" data-section="zigrow-footer-1" id="zigrow-footer-1">
       <div class="container">
         <!-- Top: Brand & Description -->
         <div class="row">
           <div class="col-12">
             <div class="zigrow-footer-1__top">
-              <h2 class="zigrow-footer-1__brand">Willso.</h2>
+              <h2 class="zigrow-footer-1__brand" data-logo="footer">Willso.</h2>
               <p class="zigrow-footer-1__desc">
                We focus on the details so you don’t have to. Every visit includes a thorough clean, careful handling of your space, and consistent results you can count on. If something isn’t right, we’ll make it right.
               </p>
@@ -10313,14 +9879,14 @@ html:`   <footer class="zigrow-footer-1 py-6" data-section="zigrow-footer-1" id=
         }
       }
     </style>
-    </footer>`
+    </footer>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-footer-2", {
     name: "footer-2",
     category: "footer",
     image: "https://i.postimg.cc/KvdmdQLg/footer-2.png",
-html:`  <footer
+    html: `  <footer
       class="zigrow-footer-2-evnty py-6"
       data-section="zigrow-footer-2-evnty"
       id="zigrow-footer-2-evnty"
@@ -10333,7 +9899,7 @@ html:`  <footer
             <div class="zigrow-footer-2-evnty__brand">
               <div class="zigrow-footer-2-evnty__logo"><p>N</p></div>
               <div class="zigrow-footer-2-evnty__brand-text">
-                <h2 class="zigrow-footer-2-evnty__brand-name">Evnty</h2>
+                <h2 class="zigrow-footer-2-evnty__brand-name" data-logo="footer">Evnty</h2>
                 <p class="zigrow-footer-2-evnty__brand-desc">
                   Curated events, creative studios, and stories that turn
                   everyday moments into experiences.
@@ -10554,14 +10120,14 @@ html:`  <footer
         }
       }
     </style>
-    </footer>`
+    </footer>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-footer-3", {
     name: "footer-3",
     category: "footer",
     image: "https://i.postimg.cc/QxRjRS57/footer-3.png",
-html:`   <footer class="zigrow-footer-3 py-6">
+    html: `   <footer class="zigrow-footer-3 py-6">
       <div class="container">
         <!-- TOP HERO ROW -->
         <div class="row zigrow-footer-3__top-row">
@@ -10604,7 +10170,7 @@ html:`   <footer class="zigrow-footer-3 py-6">
                 use, the use of renewable resources is very profitable for all
                 industrial services.
               </p>
-              <a href="#" class="zigrow-footer-3__cta-button">
+              <a href="#" class="zigrow-footer-3__cta-button" data-btn="footer-3">
                 <p>Get in touch</p>
                 <span class="zigrow-footer-3__cta-icon">
                   <i
@@ -11005,7 +10571,7 @@ html:`   <footer class="zigrow-footer-3 py-6">
         }
       }
     </style>
-    </footer>`
+    </footer>`,
 });
 
 // Parallax
@@ -11013,7 +10579,7 @@ Vvveb.Blocks.add("bootstrap4/zigrow-parallax-1", {
     name: "parallax-1",
     category: "parallax",
     image: "https://i.postimg.cc/MKhzhtR1/parallax-1.png",
-html:`  <section
+    html: `  <section
       class="zigrow-parallax-1"
       id="zigrow-parallax-1"
       data-section="zigrow-parallax-1"
@@ -11268,14 +10834,14 @@ html:`  <section
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 Vvveb.Blocks.add("bootstrap4/zigrow-parallax-2", {
     name: "parallax-2",
     category: "parallax",
     image: "https://i.postimg.cc/c4VdVTYQ/parallax-2.png",
-html:`    <section
+    html: `    <section
       class="zigrow-parallax-2 py-6"
       id="zigrow-parallax-2"
       data-section="zigrow-parallax-2"
@@ -11418,16 +10984,16 @@ html:`    <section
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 
 // Design
 Vvveb.Blocks.add("bootstrap4/zigrow-design-3", {
     name: "design-1",
     category: "design",
-     image: "https://i.postimg.cc/vH1QqC1V/design-1.png",
+    image: "https://i.postimg.cc/vH1QqC1V/design-1.png",
 
-html:`  <section class="zigrow-design-3 py-6" id="zigrow-design-3">
+    html: `  <section class="zigrow-design-3 py-6" id="zigrow-design-3" data-section="zigrow-design-3">
       <!-- floating stars with icons -->
       <span class="zigrow-design-3__star zigrow-design-3__star--left">
         <i class="bi bi-star-fill" data-icon="star-left"></i>
@@ -11783,13 +11349,13 @@ html:`  <section class="zigrow-design-3 py-6" id="zigrow-design-3">
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-design-2", {
     name: "design-2",
     category: "design",
     image: "https://i.postimg.cc/0268Wh67/design-2.png",
-html:` <section class="zigrow-design-2 py-6" data-section="zigrow-design-2" id="zigrow-design-2">
+    html: ` <section class="zigrow-design-2 py-6" data-section="zigrow-design-2" id="zigrow-design-2">
       <!-- doodle icons -->
       <span class="zigrow-design-2__doodle zigrow-design-2__doodle--tl">
         <i class="bi bi-stars" data-icon="stars-tl"></i>
@@ -11853,7 +11419,7 @@ html:` <section class="zigrow-design-2 py-6" data-section="zigrow-design-2" id="
                 </div>
 
                 <div class="zigrow-design-2__ticket-cta">
-                  <a href="#" class="zigrow-design-2__cta-link">
+                  <a href="#" class="zigrow-design-2__cta-link" data-btn="design-2">
                     <p>Get a Ticket</p>
                     <span>
                       <i class="bi bi-arrow-right" data-icon="arrow-right"></i>
@@ -12156,15 +11722,15 @@ html:` <section class="zigrow-design-2 py-6" data-section="zigrow-design-2" id="
         }
       }
     </style>
-    </section>`
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-design-1", {
     name: "design-3",
     category: "design",
 
-       image: "https://i.postimg.cc/bNGzC4Gk/design-3.png",
- 
-html: `
+    image: "https://i.postimg.cc/bNGzC4Gk/design-3.png",
+
+    html: `
 <section
   class="zigrow-design-1 py-6"
   data-section="zigrow-design-1"
@@ -12868,17 +12434,15 @@ html: `
     })();
   </script>
 </section>
-`
-
+`,
 });
-
 
 // Service
 Vvveb.Blocks.add("bootstrap4/zigrow-service-1", {
     name: "service-1",
     category: "service",
     image: "https://i.postimg.cc/GmGbrYJW/service-1.png",
-html:`   <section
+    html: `   <section
       id="zigrow-service-1"
       data-section="zigrow-service-1"
       class="zigrow-service-1-section py-6"
@@ -13146,14 +12710,13 @@ html:`   <section
         }
       }
     </style>
-    </section>`
-
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-service-2", {
     name: "service-2",
     category: "service",
     image: "https://i.postimg.cc/K8BmFLDS/service-2.png",
-html:`  <section
+    html: `  <section
       id="zigrow-service-2"
       data-section="zigrow-service-2"
       class="zigrow-service-2 py-6"
@@ -13176,13 +12739,11 @@ html:`  <section
         <!-- Cards -->
         <div class="row g-md-3 programs-row">
           <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="program-card">
-              <div class="icon">
-                <i class="material-symbols-outlined" data-icon="restaurant">
-                  restaurant
-                </i>
-              </div>
+               <div class="icon">
+            <i class="bi bi-fork-knife" aria-hidden="true"></i>
+          </div>
               <h5>Personalized Meal Plans</h5>
               <p>
                 Custom diet plans based on your goals, health conditions &
@@ -13192,26 +12753,22 @@ html:`  <section
           </div>
 
           <!-- Card 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="program-card">
               <div class="icon">
-                <i class="material-symbols-outlined" data-icon="heart">
-                  heart_check
-                </i>
-              </div>
+            <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+          </div>
               <h5>Lifestyle Coaching</h5>
               <p>Habit-building strategies for long-term success.</p>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="program-card">
-              <div class="icon">
-                <i class="material-symbols-outlined" data-icon="medication">
-                  medication
-                </i>
-              </div>
+             <div class="icon">
+            <i class="bi bi-capsule-pill" aria-hidden="true"></i>
+          </div>
               <h5>Supplement Guidance</h5>
               <p>Safe, research-backed supplement recommendations.</p>
             </div>
@@ -13222,7 +12779,7 @@ html:`  <section
         <div class="row">
           <div class="col-12">
             <div class="programs-cta">
-              <a href="#" class="programs-btn">Start Your Journey</a>
+              <a href="#" class="programs-btn" data-btn="service-2">Start Your Journey</a>
             </div>
           </div>
         </div>
@@ -13435,14 +12992,13 @@ html:`  <section
         }
       }
     </style>
-    </section>`
-
+    </section>`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-service-3", {
     name: "service-3",
     category: "service",
     image: "https://i.postimg.cc/zGKq5WFr/service-3.png",
-html: `
+    html: `
 <section
   id="zigrow-service-3"
   data-section="zigrow-service-3"
@@ -13462,7 +13018,7 @@ html: `
     <!-- Cards grid -->
     <div class="row service-row">
       <!-- Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="service-card">
           <span class="left-border"></span>
 
@@ -13496,7 +13052,7 @@ html: `
       </div>
 
       <!-- Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="service-card">
           <span class="left-border"></span>
 
@@ -13530,7 +13086,7 @@ html: `
       </div>
 
       <!-- Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="service-card">
           <span class="left-border"></span>
 
@@ -13564,7 +13120,7 @@ html: `
       </div>
 
       <!-- Card 4 -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="service-card">
           <span class="left-border"></span>
 
@@ -13598,7 +13154,7 @@ html: `
       </div>
 
       <!-- Card 5 -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="service-card">
           <span class="left-border"></span>
 
@@ -13632,7 +13188,7 @@ html: `
       </div>
 
       <!-- Card 6 -->
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 clonable-card">
         <div class="service-card">
           <span class="left-border"></span>
 
@@ -13816,21 +13372,19 @@ html: `
     }
   </script>
 </section>
-`
-
-
+`,
 });
 Vvveb.Blocks.add("bootstrap4/zigrow-service-4", {
     name: "service-4",
     category: "service",
     image: "https://i.postimg.cc/htTKgx1K/service-4.png",
-html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
+    html: `   <section id="zigrow-service-4" class="zigrow-service-4 py-6" data-section="zigrow-service-4">
       <div class="container">
         <h2 class="top-title">Tailored Tours for Every <br />Traveler</h2>
 
         <div class="row g-4 g-md-5">
           <!-- CARD 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="tour-card">
               <span class="tour-label">Royal Heritage Walk</span>
 
@@ -13849,7 +13403,7 @@ html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
           </div>
 
           <!-- CARD 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="tour-card">
               <span class="tour-label">Mountain Escape</span>
 
@@ -13868,7 +13422,7 @@ html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
           </div>
 
           <!-- CARD 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="tour-card">
               <span class="tour-label">Hidden City Gems</span>
 
@@ -13887,7 +13441,7 @@ html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
           </div>
 
           <!-- CARD 4 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="tour-card">
               <span class="tour-label">Coastal Serenity</span>
 
@@ -13906,7 +13460,7 @@ html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
           </div>
 
           <!-- CARD 5 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="tour-card">
               <span class="tour-label">Wildlife Safari</span>
 
@@ -13925,7 +13479,7 @@ html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
           </div>
 
           <!-- CARD 6 -->
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 clonable-card">
             <div class="tour-card">
               <span class="tour-label">Culinary &amp; Wine Tour</span>
 
@@ -14201,6 +13755,5 @@ html:`   <section id="zigrow-service-4" class="zigrow-service-4 py-6">
         }
       }
     </style>
-    </section>`
-
+    </section>`,
 });

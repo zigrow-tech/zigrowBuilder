@@ -3886,7 +3886,6 @@ Vvveb.Builder = {
         // fallback to tag name if not found
         const tagName = elementType[1].toUpperCase();
         const readableName = friendlyNames[tagName] || tagName;
-        
 
         document.querySelector("#highlight-name .type").innerHTML = "";
         // document.querySelector("#highlight-name .name").innerHTML = readableName;
@@ -9038,126 +9037,223 @@ Vvveb.Breadcrumb = {
     },
 };
 
+// Vvveb.FontsManager = {
+//     activeFonts: [],
+//     providers: {}, //{"google":GoogleFontsManager};
+
+//     addFontList: function (provider, groupName, fontList) {
+//         let fonts = {};
+//         let fontNames = [];
+
+//         let fontSelect = generateElements(
+//             "<optgroup label='" + groupName + "'></optgroup>",
+//         )[0];
+//         for (const font in fontList) {
+//             fontNames.push({
+//                 text: font,
+//                 value: font,
+//                 "data-provider": provider,
+//             });
+//             let option = new Option(font, font);
+//             option.dataset.provider = provider;
+//             //option.style.setProperty("font-family", font);//font preview if the fonts are loaded in editor
+//             fontSelect.append(option);
+//         }
+//         document.getElementById("font-family").append(fontSelect);
+
+//         let list = Vvveb.Components.getProperty("_base", "font-family");
+//         if (list) {
+//             list.onChange = function (node, value, input, component) {
+//                 let option = input.options[input.selectedIndex];
+//                 Vvveb.FontsManager.addFont(
+//                     option.dataset.provider,
+//                     value,
+//                     node,
+//                 );
+//                 return node;
+//             };
+
+//             list.data.options.push({ optgroup: groupName });
+//             list.data.options = list.data.options.concat(fontNames);
+
+//             Vvveb.Components.updateProperty("_base", "font-family", {
+//                 data: list.data,
+//             });
+
+//             //update default font list
+//             fontList = list.data.options;
+//         }
+//     },
+
+//     addProvider: function (provider, Obj) {
+//         this.providers[provider] = Obj;
+//     },
+
+//     //add also element so we can keep track of the used fonts to remove unused ones
+//     addFont: function (provider, fontFamily, element = false) {
+//         if (!provider) return;
+//         // console.log("element: ", element);
+//         let providerObj = this.providers[provider];
+//         if (providerObj) {
+//             providerObj.addFont(fontFamily);
+//             this.activeFonts.push({ provider, fontFamily, element });
+//         }
+//     },
+
+//     removeFont: function (provider, fontFamily) {
+//         if (!provider) return;
+
+//         let providerObj = this.providers[provider];
+//         if (provider != "default" && providerObj) {
+//             providerObj.removeFont(fontFamily);
+//         }
+//     },
+
+//     //check if the added fonts are still used for the elements they were set and remove unused ones
+//     cleanUnusedFonts: function () {
+//         for (i in this.activeFonts) {
+//             let elementFont = this.activeFonts[i];
+//             if (elementFont.element) {
+//                 if (
+//                     Vvveb.StyleManager.getStyle(
+//                         elementFont.element,
+//                         "font-family",
+//                     ).replaceAll('"', "") != elementFont.fontFamily
+//                 ) {
+//                     this.removeFont(
+//                         elementFont.provider,
+//                         elementFont.fontFamily,
+//                     );
+//                 }
+//             }
+//         }
+//     },
+// };
+
+//Custom Modification - Jayanti - 07-10-25
+// ---- Register Google Fonts provider  ----
+
 Vvveb.FontsManager = {
     activeFonts: [],
-    providers: {}, //{"google":GoogleFontsManager};
+    providers: {},
 
-    addFontList: function (provider, groupName, fontList) {
-        let fonts = {};
-        let fontNames = [];
-
-        let fontSelect = generateElements(
-            "<optgroup label='" + groupName + "'></optgroup>",
-        )[0];
-        for (const font in fontList) {
-            fontNames.push({
-                text: font,
-                value: font,
-                "data-provider": provider,
-            });
-            let option = new Option(font, font);
-            option.dataset.provider = provider;
-            //option.style.setProperty("font-family", font);//font preview if the fonts are loaded in editor
-            fontSelect.append(option);
-        }
-        document.getElementById("font-family").append(fontSelect);
-
-        let list = Vvveb.Components.getProperty("_base", "font-family");
-        if (list) {
-            list.onChange = function (node, value, input, component) {
-                let option = input.options[input.selectedIndex];
-                Vvveb.FontsManager.addFont(
-                    option.dataset.provider,
-                    value,
-                    node,
-                );
-                return node;
-            };
-
-            list.data.options.push({ optgroup: groupName });
-            list.data.options = list.data.options.concat(fontNames);
-
-            Vvveb.Components.updateProperty("_base", "font-family", {
-                data: list.data,
-            });
-
-            //update default font list
-            fontList = list.data.options;
-        }
+    addProvider(provider, obj) {
+        this.providers[provider] = obj;
     },
 
-    addProvider: function (provider, Obj) {
-        this.providers[provider] = Obj;
-    },
-
-    //add also element so we can keep track of the used fonts to remove unused ones
-    addFont: function (provider, fontFamily, element = false) {
+    addFont(provider, fontFamily, element = false, doc = null) {
         if (!provider) return;
-        // console.log("element: ", element);
-        let providerObj = this.providers[provider];
+
+        const providerObj = this.providers[provider];
         if (providerObj) {
-            providerObj.addFont(fontFamily);
-            this.activeFonts.push({ provider, fontFamily, element });
+            providerObj.addFont(
+                fontFamily,
+                doc ||
+                    element?.ownerDocument ||
+                    window.FrameDocument ||
+                    document,
+            );
+            this.activeFonts.push({
+                provider,
+                fontFamily,
+                element,
+                doc:
+                    doc ||
+                    element?.ownerDocument ||
+                    window.FrameDocument ||
+                    document,
+            });
         }
     },
 
-    removeFont: function (provider, fontFamily) {
+    removeFont(provider, fontFamily, doc = null) {
         if (!provider) return;
 
-        let providerObj = this.providers[provider];
-        if (provider != "default" && providerObj) {
-            providerObj.removeFont(fontFamily);
+        const providerObj = this.providers[provider];
+        if (provider !== "default" && providerObj) {
+            providerObj.removeFont(
+                fontFamily,
+                doc || window.FrameDocument || document,
+            );
         }
     },
 
-    //check if the added fonts are still used for the elements they were set and remove unused ones
-    cleanUnusedFonts: function () {
-        for (i in this.activeFonts) {
-            let elementFont = this.activeFonts[i];
-            if (elementFont.element) {
-                if (
-                    Vvveb.StyleManager.getStyle(
-                        elementFont.element,
-                        "font-family",
-                    ).replaceAll('"', "") != elementFont.fontFamily
-                ) {
-                    this.removeFont(
-                        elementFont.provider,
-                        elementFont.fontFamily,
-                    );
-                }
+    cleanUnusedFonts() {
+        for (const item of this.activeFonts) {
+            if (!item.element) continue;
+
+            const currentFont = (
+                Vvveb.StyleManager.getStyle(item.element, "font-family") || ""
+            ).replaceAll('"', "");
+
+            if (currentFont !== item.fontFamily) {
+                this.removeFont(item.provider, item.fontFamily, item.doc);
             }
         }
     },
 };
 
-//Custom Modification - Jayanti - 07-10-25
-// ---- Register Google Fonts provider  ----
+// Vvveb.FontsManager.addProvider("google", {
+//     _fonts: [],
+
+//     addFont: function (fontName) {
+//         this._fonts.push(fontName);
+//         const href = buildGoogleFontsLink(this._fonts);
+
+//         let link = document.getElementById("google-fonts-link");
+//         if (!link) {
+//             link = document.createElement("link");
+//             link.id = "google-fonts-link";
+//             link.rel = "stylesheet";
+//             document.head.appendChild(link);
+//         }
+//         link.href = href;
+//     },
+
+//     removeFont: function (fontName) {
+//         this._fonts = this._fonts.filter((f) => f !== fontName);
+//         const href = buildGoogleFontsLink(this._fonts);
+//         let link = document.getElementById("google-fonts-link");
+//         if (link) link.href = href;
+//     },
+// });
+
 Vvveb.FontsManager.addProvider("google", {
-    _fonts: [],
+    _fontsByDoc: new WeakMap(),
 
-    addFont: function (fontName) {
-        this._fonts.push(fontName);
-        const href = buildGoogleFontsLink(this._fonts);
+    addFont(fontName, targetDoc) {
+        const doc = targetDoc || window.FrameDocument || document;
+        const head = doc.head;
+        if (!head) return;
 
-        let link = document.getElementById("google-fonts-link");
+        let fonts = this._fontsByDoc.get(doc) || [];
+        if (!fonts.includes(fontName)) fonts.push(fontName);
+        this._fontsByDoc.set(doc, fonts);
+
+        const href = buildGoogleFontsLink(fonts);
+
+        let link = doc.getElementById("google-fonts-link");
         if (!link) {
-            link = document.createElement("link");
+            link = doc.createElement("link");
             link.id = "google-fonts-link";
             link.rel = "stylesheet";
-            document.head.appendChild(link);
+            head.appendChild(link);
         }
+
         link.href = href;
     },
 
-    removeFont: function (fontName) {
-        this._fonts = this._fonts.filter((f) => f !== fontName);
-        const href = buildGoogleFontsLink(this._fonts);
-        let link = document.getElementById("google-fonts-link");
+    removeFont(fontName, targetDoc) {
+        const doc = targetDoc || window.FrameDocument || document;
+        let fonts = this._fontsByDoc.get(doc) || [];
+        fonts = fonts.filter((f) => f !== fontName);
+        this._fontsByDoc.set(doc, fonts);
+
+        const href = buildGoogleFontsLink(fonts);
+        const link = doc.getElementById("google-fonts-link");
         if (link) link.href = href;
     },
 });
-
 // === helper: build clean Google Fonts URL ===
 function buildGoogleFontsLink(familiesWithWeights) {
     const seen = new Set();
@@ -12779,19 +12875,27 @@ Vvveb.LinkEditor = {
 
         const linkEditorHeading = this.modal.querySelector("#link-popup-title");
         if (linkEditorHeading) {
-            linkEditorHeading.textContent = show ? "Button Settings" : "Link Settings";
+            linkEditorHeading.textContent = show
+                ? "Button Settings"
+                : "Link Settings";
         }
 
-        const linkEditortextHeading = this.modal.querySelector("#vvv-link-heading-text");
+        const linkEditortextHeading = this.modal.querySelector(
+            "#vvv-link-heading-text",
+        );
         if (linkEditortextHeading) {
             linkEditortextHeading.textContent = show
-                ? "Button text" 
+                ? "Button text"
                 : "Link text";
         }
 
-        const linkEditorActionHeading = this.modal.querySelector("#vvv-link-heading-action")
-        if(linkEditorActionHeading) {
-          linkEditorActionHeading.textContent = show ? "What do you want this button to do?" : "What do you want this link to do?"
+        const linkEditorActionHeading = this.modal.querySelector(
+            "#vvv-link-heading-action",
+        );
+        if (linkEditorActionHeading) {
+            linkEditorActionHeading.textContent = show
+                ? "What do you want this button to do?"
+                : "What do you want this link to do?";
         }
 
         wrap.style.display = show ? "" : "none";
@@ -14128,20 +14232,21 @@ Vvveb.GlobalCustomVariable = {
                 const pair = fontPairs.find((p) => p.key === key);
                 if (!pair) return;
 
-                try {
-                    if (pair.heading.provider)
-                        Vvveb.FontsManager.addFont(
-                            pair.heading.provider,
-                            pair.heading.name,
-                            document.body,
-                        );
-                    if (pair.body.provider)
-                        Vvveb.FontsManager.addFont(
-                            pair.body.provider,
-                            pair.body.name,
-                            document.body,
-                        );
-                } catch (e) {}
+                // try {
+                //     if (pair.heading.provider)
+                //         Vvveb.FontsManager.addFont(
+                //             pair.heading.provider,
+                //             pair.heading.name,
+                //             document.body,
+                //         );
+                //     if (pair.body.provider)
+                //         Vvveb.FontsManager.addFont(
+                //             pair.body.provider,
+                //             pair.body.name,
+                //             document.body,
+                //         );
+                // } catch (e) {}
+
                 // Apply fonts
                 this._applyFontPair(pair);
 
@@ -14228,38 +14333,38 @@ Vvveb.GlobalCustomVariable = {
     _applyFontPair(pair) {
         if (!this.doc || !pair) return;
 
-        // 0) old values capture (for undo)
         const root = this.doc.documentElement;
         const body = this.doc.body;
         const oldRootStyle = root.getAttribute("style") || "";
         const oldBodyClass = body.className;
 
-        // 1) load webfonts (as you already do)
         try {
-            if (pair.heading.provider)
+            if (pair.heading.provider) {
                 Vvveb.FontsManager.addFont(
                     pair.heading.provider,
                     pair.heading.name,
                     body,
+                    this.doc,
                 );
-            if (pair.body.provider)
+            }
+
+            if (pair.body.provider) {
                 Vvveb.FontsManager.addFont(
                     pair.body.provider,
                     pair.body.name,
                     body,
+                    this.doc,
                 );
+            }
         } catch (e) {
-            console.log("Error while pairing fonts ", e);
+            console.log("Error while pairing fonts", e);
         }
 
-        // 2) write CSS variables
-        root.style.setProperty("--vvv-font-h", pair.heading.name);
-        root.style.setProperty("--vvv-font-b", pair.body.name);
+        root.style.setProperty("--vvv-font-h", `'${pair.heading.name}'`);
+        root.style.setProperty("--vvv-font-b", `'${pair.body.name}'`);
 
-        // 3) make sure body class is present
         this._ensureBodyClass();
 
-        // 4) push undo mutations (style on :root + class on body)
         if (Vvveb?.Undo?.addMutation) {
             Vvveb.Undo.addMutation({
                 type: "attributes",
@@ -15495,6 +15600,7 @@ Vvveb.IconSettings = {
 
     stagedColor: null,
     stagedSize: null,
+    stagedIconClass : null,
 
     _originalClass: null,
     _originalStyle: null,
@@ -16777,8 +16883,6 @@ window.addEventListener("vvveb.iframe.loaded", function () {
         },
     });
 
- 
- 
     // 3) Buttons -> open Link editor on button
     CanvasInteractions.register({
         selector: "a[data-btn]",
