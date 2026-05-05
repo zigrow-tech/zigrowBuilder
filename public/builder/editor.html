@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <!-- http://127.0.0.1:5173/ -->
-
   <meta name="description" content="" />
   <meta name="author" content="" />
   <!-- <link rel="icon" href="favicon.ico">-->
@@ -19,13 +17,24 @@
   <link href="css/editor.css" rel="stylesheet" />
   <link href="css/editornew.css" rel="stylesheet" />
   <link href="css/global.variable.css" rel="stylesheet" />
+  <link href="css/custom.media.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.js.iife.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css" />
 
   <!-- Custom modification - style and script added-->
   <script>
     window.hasSaved = false; // ✅ define in global scope
   </script>
+
+  <!-- Zigrow Shared Analytics Runtime.
+       Config (key, env, enable flag) lives in /shared/analytics.js only.
+       editor.html does NOT own any analytics config — change /shared/analytics.js
+       to toggle tracking or promote to production. -->
+  <script src="/shared/analytics.js"></script>
+
   <!-- //Custom Modification - Jayanti - 11-09-2025 - Add Font awesome Iconz cdn -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -541,7 +550,7 @@
       gap: 0;
       /* Remove gap in vertical stack */
 
-      width: 200px;
+      width: 220px;
       /* Set a fixed width for the menu */
       margin-top: 8px;
       /* Space below the topbar */
@@ -629,76 +638,15 @@
       }
     }
   </style>
+
+  <!-- Phase 2B: Navbar Page Management CSS (extracted to external file) -->
+  <link href="css/zigrow-multipager.css" rel="stylesheet" />
 </head>
 
 <body>
   <div id="vvveb-builder" class="loading">
     <!-- //Custom Modification - Jayanti - 10-09-2025 - Original top-panel I modified it with different id and display none to hide it then after that I created -->
-    <div id="top-panel-1" style="display: none">
-      <!--<img src="img/logo.png" alt="Vvveb" class="float-start" id="logo">-->
 
-      <!-- Custom modification - logo changed -->
-      <img src="img/4.svg" alt="Zigrow" class="float-start" id="logo" />
-
-      <div class="btn-group float-start" role="group">
-
-      </div>
-
-      <div class="btn-group me-3" role="group">
-
-        <button class="btn btn-light" title="Fullscreen (F11)" id="fullscreen-btn" data-bs-toggle="button" aria-pressed="false" data-vvveb-action="fullscreen">
-          <i class="icon-expand-outline"></i>
-        </button>
-      </div>
-
-      <div class="btn-group me-2 float-end" role="group">
-        <button class="btn btn-sm btn-icon save-btn-zigrow save-btn" title="" id="save-btn-legacy" data-v-vvveb-shortcut="ctrl+e">
-          <span class="loading d-none">
-            <i class="icon-save-outline"></i>
-            <span class="spinner-border spinner-border-sm align-middle" role="status" aria-hidden="true">
-            </span>
-            <span>Saving </span> ...
-          </span>
-          <span class="button-text">
-            <i class="icon-save-outline"></i> <span></span>
-          </span>
-
-          <!--Html changes for domain based text swap "Ends Here"-->
-        </button>
-      </div>
-
-
-
-
-      <div class="float-end me-3">
-        <button class="btn btn-light border-0 btn-sm btn-dark-mode" data-vvveb-action="darkMode">
-          <!-- i class="la la-adjust la-lg"></i -->
-          <i class="la la-sun"></i>
-        </button>
-
-        <!-- <a href="#" class="btn btn-light btn-sm btn-preview-url" target="blank" title="View page">
-					<i class="la la-external-link-alt"></i>
-				</a> -->
-
-        <div class="btn-group responsive-btns" role="group">
-          <button id="mobile-view" data-view="mobile" class="btn btn-light" title="Mobile view" data-vvveb-action="viewport">
-            <i class="la la-mobile"></i>
-          </button>
-
-          <button id="tablet-view" data-view="tablet" class="btn btn-light" title="Tablet view" data-vvveb-action="viewport">
-            <i class="la la-tablet"></i>
-          </button>
-
-          <button id="desktop-view" data-view="" class="btn btn-light" title="Desktop view" data-vvveb-action="viewport">
-            <i class="la la-laptop"></i>
-          </button>
-
-          <div class="percent">
-            <input type="number" id="zoom" value="100" step="10" min="10" max="100" class="form-control" data-vvveb-action="zoomChange" data-vvveb-on="change" />
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="top-panel" class="topbar topbar-skeleton-loader">
       <!-- LEFT : brand -->
       <div class="topbar-left">
@@ -709,44 +657,89 @@
 
       <!-- CENTER : editor tools (undo/redo, fullscreen, preview, dark mode) -->
       <div class="topbar-center topbar-center-navbar" id="topbar-center-navbar" role="toolbar" aria-label="Editor tools">
-        <div class="btn-group" role="group" aria-label="Undo/Redo">
-          <button class="btn btn-light" title="Undo" id="undo-btn" data-vvveb-action="undo" data-vvveb-shortcut="ctrl+z" onclick="event.preventDefault();">
-            <i class="la la-undo"></i>
-          </button>
-          <button class="btn btn-light" title="Redo" id="redo-btn" data-vvveb-action="redo" data-vvveb-shortcut="ctrl+shift+z" onclick="event.preventDefault();">
-            <i class="la la-undo la-flip-horizontal"></i>
-          </button>
+        <div class="topbar-center-navbar-box">
+          <div class="btn-group" role="group" aria-label="Undo/Redo">
+            <button class="btn btn-light" title="Undo" id="undo-btn" data-vvveb-action="undo" data-vvveb-shortcut="ctrl+z" onclick="event.preventDefault();">
+              <i class="la la-undo"></i>
+            </button>
+            <button class="btn btn-light" title="Redo" id="redo-btn" data-vvveb-action="redo" data-vvveb-shortcut="ctrl+shift+z" onclick="event.preventDefault();">
+              <i class="la la-undo la-flip-horizontal"></i>
+            </button>
+            <span class="divider" aria-hidden="true"></span>
+          </div>
+
+          <div class="btn-group responsive-btns screen-size-toggle-btn initial-hide" role="group">
+            <button id="mobile-view" data-view="mobile" class="btn btn-light" title="Mobile view" data-vvveb-action="viewport">
+              <i class="la la-mobile"></i>
+            </button>
+
+            <button id="tablet-view" data-view="tablet" class="btn btn-light" title="Tablet view" data-vvveb-action="viewport">
+              <i class="la la-tablet"></i>
+            </button>
+
+            <button id="desktop-view" data-view="" class="btn btn-light" title="Desktop view" data-vvveb-action="viewport">
+              <i class="la la-laptop"></i>
+            </button>
+          </div>
+
+          <!-- <span class="divider" aria-hidden="true"></span> -->
+
+          <div class="btn-group" role="group" aria-label="View">
+            <button class="btn btn-light fullscreen-btn-toggle" title="Fullscreen" id="fullscreen-btn" data-bs-toggle="button" aria-pressed="false" data-vvveb-action="fullscreen">
+              <i class="icon-expand-outline"></i>
+            </button>
+
+
+
+            <!-- Dark mode -->
+            <button class="btn btn-light border-0 btn-sm btn-dark-mode" id="darkmode-btn" data-vvveb-action="darkMode" title="Dark/ Light mode">
+              <i class="la la-sun fs-5"></i>
+            </button>
+            <button class="btn btn-light border-0 btn-sm btn-preview-mode" id="preview-btn" data-vvveb-action="preview" title="Preview on">
+              <i class="fa-regular fa-eye fs-5"></i>
+            </button>
+          </div>
         </div>
 
-        <span class="divider" aria-hidden="true"></span>
-
-        <div class="btn-group" role="group" aria-label="View">
-          <button class="btn btn-light" title="Fullscreen" id="fullscreen-btn" data-bs-toggle="button" aria-pressed="false" data-vvveb-action="fullscreen">
-            <i class="icon-expand-outline"></i>
+        <!-- ═══ Phase 2B: Pages Dropdown (integrated in top navbar) ═══ -->
+        <div class="zp-navbar-pages" id="zp-navbar-pages">
+          <span class="zp-divider-v" aria-hidden="true"></span>
+          <button class="zp-selector" id="zp-selector" title="Switch page">
+            <i class="la la-copy zp-pages-icon"></i>
+            <span class="zp-selector-label" id="zp-selector-label">Home</span>
+            <i class="la la-angle-down zp-chevron"></i>
           </button>
-
-
-
-          <!-- Dark mode -->
-          <button class="btn btn-light border-0 btn-sm btn-dark-mode" data-vvveb-action="darkMode" title="Dark/ Light mode">
-            <i class="la la-sun fs-5"></i>
-          </button>
+          <div class="zp-dropdown" id="zp-dropdown">
+            <div class="zp-dropdown-header">
+              <span class="zp-dropdown-title">Pages</span>
+            </div>
+            <div class="zp-dropdown-divider"></div>
+            <div id="zp-dropdown-list"></div>
+            <div class="zp-dropdown-divider"></div>
+            <button class="zp-add-new" id="zp-add-btn" title="Add new page">
+              <i class="la la-plus"></i> Add New Page
+            </button>
+          </div>
         </div>
+        <!-- ═══ end navbar pages ═══ -->
+
       </div>
 
       <div class="topbar-right">
-        <a class="btn btn-sm btn-icon save-btn-zigrow save-btn" title="" id="save-btn" data-v-vvveb-shortcut="ctrl+e">
-          <span class="loading d-none">
-            <!-- <i class="icon-save-outline"></i> -->
-            <i class="la la-ban icon-disabled" aria-hidden="true" style="display: none"></i>
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            <span class="saving-button-dot-dot">Saving... </span>
-          </span>
-          <span class="button-text">
-            <i class="icon-save-outline"></i>
-            <span style="padding-left: 4px;">Save</span>
-          </span>
-        </a>
+        <div class="save-btn-an-preview-btn d-flex" style="gap: 10px;">
+          <a class="btn btn-sm btn-icon save-btn-zigrow save-btn" title="" id="save-btn" data-v-vvveb-shortcut="ctrl+e">
+            <span class="loading d-none">
+              <!-- <i class="icon-save-outline"></i> -->
+              <i class="la la-ban icon-disabled" aria-hidden="true" style="display: none"></i>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <span class="saving-button-dot-dot">Saving... </span>
+            </span>
+            <span class="button-text">
+              <i class="icon-save-outline"></i>
+              <span style="padding-left: 4px;">Save</span>
+            </span>
+          </a>
+        </div>
 
         <button id="topbar-menu-btn" class="btn btn-light me-0" type="button" aria-label="Toggle actions menu">
           <span class="overflow-hidden">
@@ -763,7 +756,7 @@
           <a href="#" class="btn btn-sm dashboard-btn-zigrow" onclick="handleSafeRedirect({
             event,
             button: this,
-            redirectUrl: 'http://127.0.0.1:5173/user',
+            redirectUrl: 'https://dashboard.zigrow.com/user',
             showSpinner: true
           })">
             <i class="la la-tachometer-alt" aria-hidden="true"></i>
@@ -774,10 +767,10 @@
           <a href="#" class="btn btn-sm" onclick="handleSafeRedirect({
             event,
             button: this,
-            redirectUrl: 'http://127.0.0.1:5173/user/profile',
+            redirectUrl: 'https://dashboard.zigrow.com/user/profile',
             // showSpinner: true
           })">
-            <i class="fa-regular fa-user" id="fa-user-icon-builder"></i>
+            <i class="fa-solid fa-circle-user" id="fa-user-icon-builder"></i>
             My Profile
           </a>
 
@@ -786,10 +779,10 @@
           <a href="#" class="btn btn-sm" onclick="handleSafeRedirect({
             event,
             button: this,
-            redirectUrl: 'http://127.0.0.1:5173/user/support',
+            redirectUrl: 'https://dashboard.zigrow.com/user/support',
             // showSpinner: true
           })">
-            <i class="fa-regular fa-circle-question"></i>
+            <i class="fa-solid fa-circle-question"></i>
             Support
           </a>
 
@@ -822,6 +815,9 @@
     </div>
 
     <!-- //Custom Modification Ends Here - Jayanti - 09-09-2025  -->
+
+    <!-- ═══ Phase 2B: Old standalone pages bar removed — now in top navbar ═══ -->
+
     <div id="left-panel">
       <div>
 
@@ -851,6 +847,12 @@
               <li class="nav-item component-configuration-tab">
                 <a class="nav-link" id="configuration-tab" data-bs-toggle="tab" href="#configuration" role="tab" aria-controls="configuration" aria-selected="false" title="Styles">
                   <i class="icon-color-wand-outline"></i>
+
+                </a>
+              </li>
+              <li class="nav-item zigrow-pages-tab">
+                <a class="nav-link" id="pages-tab" data-bs-toggle="tab" href="#zigrow-pages-panel" role="tab" aria-controls="zigrow-pages-panel" aria-selected="false" title="Pages">
+                  <i class="la la-copy"></i>
 
                 </a>
               </li>
@@ -1107,6 +1109,19 @@
                 </div>
               </div>
               <!-- end configuration tab -->
+
+              <!-- Phase 2B: Pages panel -->
+              <div class="tab-pane" id="zigrow-pages-panel" role="tabpanel" aria-labelledby="pages-tab">
+                <div class="zigrow-page-toolbar">
+                  <button class="btn btn-sm btn-outline-primary zigrow-add-page-btn" title="Add new page"><i class="la la-plus"></i> Add Page</button>
+                </div>
+                <div class="drag-elements-sidepane sidepane">
+                  <div>
+                    <ol class="zigrow-pages-list" id="zigrow-pages-list"></ol>
+                  </div>
+                </div>
+              </div>
+              <!-- end pages panel -->
             </div>
           </div>
         </div>
@@ -1142,15 +1157,19 @@
           </div>
 
           <div id="section-edit-options">
-            <!-- Section edit pencil button -->
-            <button id="section-edit-pencil" type="button" aria-label="Edit section" title="Edit Section" style="display: block; position: absolute; z-index: 1000000; top: 0; right: 0;" class="vvv-fab">
-              <i class="fa-solid fa-pencil" aria-hidden="true"></i>
-            </button>
+            <div class="padding-top-button"></div>
+            <div class="padding-bottom-button"></div>
+            <div class="section-replace-an-edit" style="display: block; position: absolute; z-index: 1000000; top: 0; right: 0; width: 90px; height: 45px;">
+              <!-- Section edit pencil button -->
+              <button id="section-edit-pencil" type="button" aria-label="Edit section" title="Edit Section" style="display: block; position: absolute; z-index: 1000000; top: 0; right: 0;" class="vvv-fab">
+                <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+              </button>
 
-            <!-- Section replace button -->
-            <button id="section-replace-btn" type="button" aria-label="Replace section" title="Replace Section" style="display: block; z-index: 1000000; position: absolute; top: 0; right: 45px;" class="vvv-fab">
-              <i class="fa-solid fa-rotate" aria-hidden="true"></i>
-            </button>
+              <!-- Section replace button -->
+              <button id="section-replace-btn" type="button" aria-label="Replace section" title="Replace Section" style="display: block; z-index: 1000000; position: absolute; top: 0; right: 45px;" class="vvv-fab">
+                <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+              </button>
+            </div>
 
             <div id="section-actions">
               <a id="add-section-btn" href="" title="Add element"><i class="la la-plus"></i></a>
@@ -1158,7 +1177,8 @@
           </div>
 
           <div id="hovering-options">
-            <a id="hovered-delete-btn" href="javascript:void(0);" aria-label="Delete" data-bs-original-title="Delete" style=""><i class="icon-trash-outline"></i></a>
+            <!-- <a id="hovered-delete-btn" href="javascript:void(0);" aria-label="Delete" data-bs-original-title="Delete"><i class="icon-trash-outline"></i></a> -->
+            <a id="hovered-delete-btn" href="javascript:void(0);" aria-label="Delete" data-bs-original-title="Delete"></a>
           </div>
 
           <!-- Form Edit Options -->
@@ -1219,7 +1239,7 @@
               <div class="separator"></div>
 
               <a id="link-btn" class="" href="" title="Create link" aria-label="Create link">
-                <i class="la la-link"> </i></a>
+                <i class="la la-link fw-semibold"> </i></a>
 
               <div class="separator"></div>
 
@@ -1241,7 +1261,9 @@
 
               <!-- Amit has made ends changes here -->
 
-              <div class="separator"></div>
+              <!-- <div class="separator"></div> -->
+
+              <br>
               <select id="font-size" class="form-select" aria-label="Font size" title="Font Size">
                 <!-- <option value="">- Font size -</option> -->
                 <option value="8px">8 px</option>
@@ -1307,10 +1329,10 @@
               <div class="separator"></div>
 
               <!-- <div class="menu-icon">⋮</div> -->
-              <div class="menu-icon" id="menu-icon" aria-label="Expand" title="Expand">
+              <!-- <div class="menu-icon" id="menu-icon" aria-label="Expand" title="Expand">
 
                 <i class="fa-solid fa-chevron-right" id="menu-arrow-btn"></i>
-              </div>
+              </div> -->
 
 
               <!-- AI Text writer code Starts from Here -->
@@ -1329,7 +1351,7 @@
 
 
               <!-- Ai actions btn options  -->
-              <div id="ai-writer-menu" class="ai-writer-menu is-hidden" role="menu" aria-label="AI Writer menu">
+              <div id="ai-writer-menu" class="ai-writer-menu is-hidden" style="height: 482px;" role="menu" aria-label="AI Writer menu">
 
                 <div class="ai-menu-topbar">
                   <span class="ai-tone-chip" id="ai-tone-chip">
@@ -1780,296 +1802,10 @@
             </button> -->
 
             <!-- //Custom Modification Ends Here - Jayanti - 25-09-2025     -->
-            <!-- Global Styles Editor -->
-            <div id="global-style-panel" class="card shadow" style="display: none">
-              <div class="card-header d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center gap-2">
-
-                  <span>Global Styles</span>
-                </div>
-                <button id="global-style-close" class="btn btn-sm btn-outline-danger">
-                  ×
-                </button>
-              </div>
-
-              <div class="card-body" style="padding: 12px">
-                <p style="font-size: 12px; color: #666; margin-bottom: 10px">
-                  Apply Changes on whole website in a single click.
-                </p>
-                <!-- STEP 1: category list -->
-                <div id="global-step-1">
-                  <div class="vvv-global-list">
-                    <button class="vvv-global-item" id="open-global-text">
-                      <i class="fa-solid fa-font"></i>
-                      <div class="text-start">
-                        <div class="title">Fonts</div>
-                        <div class="note">Headings & Body font</div>
-                      </div>
-                    </button>
-                    <!-- ✅ Fix: unique id for Logo -->
-                    <button class="vvv-global-item" id="open-global-logo">
-                      <i class="fa-solid fa-image"></i>
-                      <div class="text-start">
-                        <div class="title">Add/Update Logo</div>
-                        <div class="note">Brand mark / wordmark</div>
-                      </div>
-                    </button>
-                    <button class="vvv-global-item" id="open-global-colors">
-                      <i class="fa-solid fa-palette"></i>
-                      <div class="text-start">
-                        <div class="title">Change Site Colors</div>
-                        <div class="note">Brand palette & accents</div>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- STEP 2: Text (fonts) -->
-                <div id="global-step-text" style="display: none">
-                  <div class="vvv-step-header">
-                    <button id="global-back-text" class="btn btn-light btn-sm" style="display: none">
-                      ←
-                    </button>
-                    <span class="vvv-step-title">Text</span>
-                  </div>
-
-                  <label class="form-label mb-1">Font pairing (Heading + Body)</label>
-                  <div class="vvv-font-pair-box">
-                    <ul id="font-pair-list" class="vvv-font-pair-list">
-                      <!-- items will be injected by JS -->
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- STEP 2: Logo -->
-                <div id="global-step-logo" style="display: none">
-                  <div class="vvv-step-header d-flex align-items-center gap-2">
-                    <button id="global-back-logo" class="btn btn-light btn-sm">
-                      ←
-                    </button>
-                    <span class="vvv-step-title">Logo</span>
-                  </div>
-
-                  <!-- 1) Source switch -->
-                  <div class="global-logo-segment">
-                    <input type="radio" name="logo-source" id="logo-src-image" checked />
-                    <label for="logo-src-image">Display Image Logo</label>
-                    <input type="radio" name="logo-source" id="logo-src-text" />
-                    <label for="logo-src-text">Display Text Logo</label>
-                  </div>
-
-                  <!-- 2A) Image controls -->
-                  <div id="logo-image-panel" class="global-logo-card">
-                    <label class="form-label">Upload or pick</label>
-
-                    <div class="vvv-upload">
-                      <button type="button" id="open-logo-gallery" class="btn btn-primary btn-sm">
-                        <i class="la la-image"></i>
-                        Choose from Media Gallery
-                      </button>
-
-
-                    </div>
-
-
-
-                    <div class="small text-muted mt-1" id="logo-selected-info">
-                      No image selected.
-                    </div>
-                    <div class="mt-3">
-                      <label class="form-label d-flex justify-content-between">
-                        <span>Logo size</span>
-                        <small class="text-muted">
-                          <span id="logo-size-value">48</span>px
-                        </small>
-                      </label>
-
-                      <input type="range" id="logo-size-slider" class="form-range" min="24" max="120" step="1" value="48" />
-                    </div>
-
-                  </div>
-
-                  <!-- 2B) Text controls -->
-                  <div id="logo-text-panel" class="global-logo-card" style="display: none">
-                    <label class="form-label">Wordmark text</label>
-                    <input type="text" id="global-logo-text" class="form-control form-control-sm" placeholder="e.g., Zigrow" />
-                    <!-- Text Logo Size Control -->
-                    <div class="mt-3">
-                      <label class="form-label d-flex justify-content-between">
-                        <span>Text size</span>
-                        <small class="text-muted">
-                          <span id="logo-text-size-value">24</span>px
-                        </small>
-                      </label>
-
-                      <input type="range" id="logo-text-size-slider" class="form-range" min="12" max="64" step="1" value="24" />
-                    </div>
-
-                  </div>
-
-
-
-                  <!-- 3) Preview -->
-                  <div class="global-logo-card">
-                    <label class="form-label">Preview</label>
-                    <div id="global-logo-preview" class="global-logo-preview">
-                      <img id="global-logo-img" alt="Logo preview" />
-                      <strong id="global-logo-fallback" class="logo-text" style="display: none"></strong>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- STEP 2: Colors -->
-                <div id="global-step-colors" style="display: none">
-                  <div class="vvv-step-header">
-                    <button id="global-back-colors" class="btn btn-light btn-sm" style="display: none">
-                      ←
-                    </button>
-                    <span class="vvv-step-title">Colors</span>
-                  </div>
-
-                  <div class="mb-2" id="global-brand-colors">
-                    <label class="form-label mb-2">Choose a palette</label>
-
-                    <div class="d-grid gap-2" id="vvv-color-palettes">
-                      <div class="color-palette-container">
-                        <div class="palette-grid">
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #ff0033"></div>
-                            <div class="color-swatch" style="background: #0d0d0d"></div>
-                            <div class="color-swatch" style="background: #ff6f00"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #ffb703"></div>
-                            <!-- 2nd color from array -->
-                            <div class="color-swatch" style="background: #121212"></div>
-                            <!-- 3rd color from array -->
-                            <div class="color-swatch" style="background: #fb5607"></div>
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #8338ec"></div>
-                            <!-- 2nd color from array -->
-                            <div class="color-swatch" style="background: #000000"></div>
-                            <!-- 3rd color from array -->
-                            <div class="color-swatch" style="background: #ff006e"></div>
-                            <!-- last color from array -->
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #3a86ff"></div>
-                            <!-- 2nd color from array -->
-                            <div class="color-swatch" style="background: #1a1a1a"></div>
-                            <!-- 3rd color from array -->
-                            <div class="color-swatch" style="background: #ffbe0b"></div>
-                            <!-- last color from array -->
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #06ff00"></div>
-                            <div class="color-swatch" style="background: #111111"></div>
-                            <div class="color-swatch" style="background: #00f5d4"></div>
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #ff6b6b"></div>
-                            <div class="color-swatch" style="background: #1a1a1a"></div>
-                            <div class="color-swatch" style="background: #ffd93d"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #6c63ff"></div>
-                            <div class="color-swatch" style="background: #000000"></div>
-                            <div class="color-swatch" style="background: #ff6584"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #00bfa6"></div>
-                            <div class="color-swatch" style="background: #121212"></div>
-                            <div class="color-swatch" style="background: #00c9ff"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #ff914d"></div>
-                            <div class="color-swatch" style="background: #2b2b2b"></div>
-                            <div class="color-swatch" style="background: #ff4d6d"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #06d6a0"></div>
-                            <div class="color-swatch" style="background: #111111"></div>
-                            <div class="color-swatch" style="background: #ffd166"></div>
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #f5f5f5"></div>
-                            <div class="color-swatch" style="background: #1a1a1a"></div>
-                            <div class="color-swatch" style="background: #d6d6d6"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #eaeaea"></div>
-                            <div class="color-swatch" style="background: #111111"></div>
-                            <div class="color-swatch" style="background: #a6a6a6"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #e5d9b6"></div>
-                            <div class="color-swatch" style="background: #222222"></div>
-                            <div class="color-swatch" style="background: #9caea9"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #a9b4c2"></div>
-                            <div class="color-swatch" style="background: #2c2c2c"></div>
-                            <div class="color-swatch" style="background: #d9dbf1"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #ececec"></div>
-                            <div class="color-swatch" style="background: #121212"></div>
-                            <div class="color-swatch" style="background: #c7b198"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #0d47a1"></div>
-                            <div class="color-swatch" style="background: #1c1c1c"></div>
-                            <div class="color-swatch" style="background: #42a5f5"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #1b998b"></div>
-                            <div class="color-swatch" style="background: #2e2e2e"></div>
-                            <div class="color-swatch" style="background: #56cfe1"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #7b2c3b"></div>
-                            <div class="color-swatch" style="background: #0f0f0f"></div>
-                            <div class="color-swatch" style="background: #f2c94c"></div>
-                          </div>
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #3d5a80"></div>
-                            <div class="color-swatch" style="background: #111111"></div>
-                            <div class="color-swatch" style="background: #98c1d9"></div>
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #5f0f40"></div>
-                            <div class="color-swatch" style="background: #1a1a1a"></div>
-                            <div class="color-swatch" style="background: #e36414"></div>
-                          </div>
-
-                          <div class="palette-card">
-                            <div class="color-swatch" style="background: #ff5733"></div>
-                            <div class="color-swatch" style="background: #33c1ff"></div>
-                            <div class="color-swatch" style="background: #8e44ad"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <small class="text-grey d-block mt-2" style="font-size: 0.8rem">
-                      <span class="fw-bold">Note:</span>
-                      Works best with AI designs.
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <!-- //Custom Modification Ends Here - Jayanti - 09-09-2025     -->
 
-            <div class="resize">
+            <div class="resize" id="resize-div">
               <div class="top-left"></div>
               <!-- Amit's(doing commenting) code starts here for the image resizing -->
               <div class="top-center"></div>
@@ -2086,6 +1822,293 @@
               <div class="bottom-center"></div>
               <!-- Amit's code ends here for the image resizing -->
               <div class="bottom-right"></div>
+            </div>
+          </div>
+
+          <!-- Global Styles Editor -->
+          <div id="global-style-panel" class="card shadow" style="display: none">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center gap-2">
+
+                <span>Global Styles</span>
+              </div>
+              <button id="global-style-close" class="btn btn-sm btn-outline-danger">
+                ×
+              </button>
+            </div>
+
+            <div class="card-body" style="padding: 12px">
+              <p style="font-size: 12px; color: #666; margin-bottom: 10px">
+                Apply Changes on whole website in a single click.
+              </p>
+              <!-- STEP 1: category list -->
+              <div id="global-step-1">
+                <div class="vvv-global-list">
+                  <button class="vvv-global-item" id="open-global-text">
+                    <i class="fa-solid fa-font"></i>
+                    <div class="text-start">
+                      <div class="title">Fonts</div>
+                      <div class="note">Headings & Body font</div>
+                    </div>
+                  </button>
+                  <!-- ✅ Fix: unique id for Logo -->
+                  <button class="vvv-global-item" id="open-global-logo">
+                    <i class="fa-solid fa-image"></i>
+                    <div class="text-start">
+                      <div class="title">Add/Update Logo</div>
+                      <div class="note">Brand mark / wordmark</div>
+                    </div>
+                  </button>
+                  <button class="vvv-global-item" id="open-global-colors">
+                    <i class="fa-solid fa-palette"></i>
+                    <div class="text-start">
+                      <div class="title">Change Site Colors</div>
+                      <div class="note">Brand palette & accents</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 2: Text (fonts) -->
+              <div id="global-step-text" style="display: none">
+                <div class="vvv-step-header">
+                  <button id="global-back-text" class="btn btn-light btn-sm" style="display: none">
+                    ←
+                  </button>
+                  <span class="vvv-step-title">Text</span>
+                </div>
+
+                <label class="form-label mb-1">Font pairing (Heading + Body)</label>
+                <div class="vvv-font-pair-box">
+                  <ul id="font-pair-list" class="vvv-font-pair-list">
+                    <!-- items will be injected by JS -->
+                  </ul>
+                </div>
+              </div>
+
+              <!-- STEP 2: Logo -->
+              <div id="global-step-logo" style="display: none">
+                <div class="vvv-step-header d-flex align-items-center gap-2">
+                  <button id="global-back-logo" class="btn btn-light btn-sm">
+                    ←
+                  </button>
+                  <span class="vvv-step-title">Logo</span>
+                </div>
+
+                <!-- 1) Source switch -->
+                <div class="global-logo-segment">
+                  <input type="radio" name="logo-source" id="logo-src-image" checked />
+                  <label for="logo-src-image">Display Image Logo</label>
+                  <input type="radio" name="logo-source" id="logo-src-text" />
+                  <label for="logo-src-text">Display Text Logo</label>
+                </div>
+
+                <!-- 2A) Image controls -->
+                <div id="logo-image-panel" class="global-logo-card">
+                  <label class="form-label">Upload or pick</label>
+
+                  <div class="vvv-upload">
+                    <button type="button" id="open-logo-gallery" class="btn btn-primary btn-sm">
+                      <i class="la la-image"></i>
+                      Choose from Media Gallery
+                    </button>
+
+
+                  </div>
+
+
+
+                   <div class="small text-muted mt-1" id="logo-selected-info" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                    No image selected.
+                  </div>
+                  <div class="mt-3">
+                    <label class="form-label d-flex justify-content-between">
+                      <span>Logo size</span>
+                      <small class="text-muted">
+                        <span id="logo-size-value">48</span>px
+                      </small>
+                    </label>
+
+                    <input type="range" id="logo-size-slider" class="form-range" min="24" max="120" step="1" value="48" />
+                  </div>
+
+                </div>
+
+                <!-- 2B) Text controls -->
+                <div id="logo-text-panel" class="global-logo-card" style="display: none">
+                  <label class="form-label">Wordmark text</label>
+                  <input type="text" id="global-logo-text" class="form-control form-control-sm" placeholder="e.g., Zigrow" />
+                  <!-- Text Logo Size Control -->
+                  <div class="mt-3">
+                    <label class="form-label d-flex justify-content-between">
+                      <span>Text size</span>
+                      <small class="text-muted">
+                        <span id="logo-text-size-value">24</span>px
+                      </small>
+                    </label>
+
+                    <input type="range" id="logo-text-size-slider" class="form-range" min="12" max="64" step="1" value="24" />
+                  </div>
+
+                </div>
+
+
+
+                <!-- 3) Preview -->
+                <div class="global-logo-card">
+                  <label class="form-label">Preview</label>
+                  <div id="global-logo-preview" class="global-logo-preview">
+                    <img id="global-logo-img" alt="Logo preview" />
+                   <strong id="global-logo-fallback" class="logo-text" style="display: none; overflow: auto;"></strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2: Colors -->
+              <div id="global-step-colors" style="display: none">
+                <div class="vvv-step-header">
+                  <button id="global-back-colors" class="btn btn-light btn-sm" style="display: none">
+                    ←
+                  </button>
+                  <span class="vvv-step-title">Colors</span>
+                </div>
+
+                <div class="mb-2" id="global-brand-colors">
+                  <label class="form-label mb-2">Choose a palette</label>
+
+                  <div class="d-grid gap-2" id="vvv-color-palettes">
+                    <div class="color-palette-container">
+                      <div class="palette-grid">
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #ff0033"></div>
+                          <div class="color-swatch" style="background: #0d0d0d"></div>
+                          <div class="color-swatch" style="background: #ff6f00"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #ffb703"></div>
+                          <!-- 2nd color from array -->
+                          <div class="color-swatch" style="background: #121212"></div>
+                          <!-- 3rd color from array -->
+                          <div class="color-swatch" style="background: #fb5607"></div>
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #8338ec"></div>
+                          <!-- 2nd color from array -->
+                          <div class="color-swatch" style="background: #000000"></div>
+                          <!-- 3rd color from array -->
+                          <div class="color-swatch" style="background: #ff006e"></div>
+                          <!-- last color from array -->
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #3a86ff"></div>
+                          <!-- 2nd color from array -->
+                          <div class="color-swatch" style="background: #1a1a1a"></div>
+                          <!-- 3rd color from array -->
+                          <div class="color-swatch" style="background: #ffbe0b"></div>
+                          <!-- last color from array -->
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #06ff00"></div>
+                          <div class="color-swatch" style="background: #111111"></div>
+                          <div class="color-swatch" style="background: #00f5d4"></div>
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #ff6b6b"></div>
+                          <div class="color-swatch" style="background: #1a1a1a"></div>
+                          <div class="color-swatch" style="background: #ffd93d"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #6c63ff"></div>
+                          <div class="color-swatch" style="background: #000000"></div>
+                          <div class="color-swatch" style="background: #ff6584"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #00bfa6"></div>
+                          <div class="color-swatch" style="background: #121212"></div>
+                          <div class="color-swatch" style="background: #00c9ff"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #ff914d"></div>
+                          <div class="color-swatch" style="background: #2b2b2b"></div>
+                          <div class="color-swatch" style="background: #ff4d6d"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #06d6a0"></div>
+                          <div class="color-swatch" style="background: #111111"></div>
+                          <div class="color-swatch" style="background: #ffd166"></div>
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #f5f5f5"></div>
+                          <div class="color-swatch" style="background: #1a1a1a"></div>
+                          <div class="color-swatch" style="background: #d6d6d6"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #eaeaea"></div>
+                          <div class="color-swatch" style="background: #111111"></div>
+                          <div class="color-swatch" style="background: #a6a6a6"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #e5d9b6"></div>
+                          <div class="color-swatch" style="background: #222222"></div>
+                          <div class="color-swatch" style="background: #9caea9"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #a9b4c2"></div>
+                          <div class="color-swatch" style="background: #2c2c2c"></div>
+                          <div class="color-swatch" style="background: #d9dbf1"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #ececec"></div>
+                          <div class="color-swatch" style="background: #121212"></div>
+                          <div class="color-swatch" style="background: #c7b198"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #0d47a1"></div>
+                          <div class="color-swatch" style="background: #1c1c1c"></div>
+                          <div class="color-swatch" style="background: #42a5f5"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #1b998b"></div>
+                          <div class="color-swatch" style="background: #2e2e2e"></div>
+                          <div class="color-swatch" style="background: #56cfe1"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #7b2c3b"></div>
+                          <div class="color-swatch" style="background: #0f0f0f"></div>
+                          <div class="color-swatch" style="background: #f2c94c"></div>
+                        </div>
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #3d5a80"></div>
+                          <div class="color-swatch" style="background: #111111"></div>
+                          <div class="color-swatch" style="background: #98c1d9"></div>
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #5f0f40"></div>
+                          <div class="color-swatch" style="background: #1a1a1a"></div>
+                          <div class="color-swatch" style="background: #e36414"></div>
+                        </div>
+
+                        <div class="palette-card">
+                          <div class="color-swatch" style="background: #ff5733"></div>
+                          <div class="color-swatch" style="background: #33c1ff"></div>
+                          <div class="color-swatch" style="background: #8e44ad"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <small class="text-grey d-block mt-2" style="font-size: 0.8rem">
+                    <span class="fw-bold">Note:</span>
+                    Works best with AI designs.
+                  </small>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -2180,13 +2203,16 @@
 
           <div id="insert-modal" class="builder-modal is-hidden" role="dialog" aria-modal="true" aria-labelledby="insert-modal-title">
             <div class="builder-modal__header">
-              <div class="insert-modal-title-left">
-                <strong id="insert-modal-title">Insert</strong>
+              <div class="insert-modal-title-left" style="width: fit-content;">
+                <strong id="insert-modal-title" style="margin-block: auto;">Insert</strong>
+                <div class="mobile-builder-modal__sidebar d-md-none d-flex" style="padding: 16px;height: fit-content;margin-block: auto;" id="mobile-builder-modal__sidebar">
+                  <i class="fa-solid fa-sliders"></i>
+                </div>
               </div>
 
               <!-- GRID SIZE TOGGLE (static HTML) -->
 
-              <div class="insert-modal-header-right">
+              <div class="insert-modal-header-right" style="width: fit-content;">
                 <span class="insert-grid-toggle d-none" role="toolbar" aria-label="Toggle blocks grid">
                   <button class="grid-btn" data-cols="3" title="Smaller grid (3 cols)" aria-pressed="true">
                     <!-- Small Grid Icon -->
@@ -2448,35 +2474,11 @@
           </div>
         </div>
       </div>
-
-      <!-- CENTER : editor tools (undo/redo, fullscreen, preview, dark mode) -->
-      <div class="topbar-center topbar-center-footer" id="topbar-center-footer" role="toolbar" aria-label="Editor tools">
-        <div class="btn-group" role="group" aria-label="Undo/Redo">
-          <button class="btn btn-light" title="Undo" id="undo-btn" data-vvveb-action="undo" data-vvveb-shortcut="ctrl+z" onclick="event.preventDefault();">
-            <i class="la la-undo"></i>
-          </button>
-          <button class="btn btn-light" title="Redo" id="redo-btn" data-vvveb-action="redo" data-vvveb-shortcut="ctrl+shift+z" onclick="event.preventDefault();">
-            <i class="la la-undo la-flip-horizontal"></i>
-          </button>
-
-          <span class="divider" aria-hidden="true"></span>
-
-          <button class="btn btn-light" title="Fullscreen" id="fullscreen-btn" data-bs-toggle="button" aria-pressed="false" data-vvveb-action="fullscreen">
-            <i class="icon-expand-outline"></i>
-          </button>
-          <!-- Dark mode -->
-          <button class="btn btn-light border-0 btn-sm btn-dark-mode" data-vvveb-action="darkMode" title="Dark/ Light mode">
-            <i class="la la-sun fs-5"></i>
-          </button>
-
-        </div>
-
-      </div>
     </div>
   </div>
 
   <!-- //Custom Modification Ends Here - Jayanti - 09-09-2025  -->
-  </div>
+  <!-- </div> -->
 
 
 
@@ -2510,6 +2512,7 @@
             <option value="scroll">Scroll to a section</option>
             <option value="whatsapp">Link to WhatsApp</option>
             <option value="pdf">Link to PDF file</option>
+            <option value="page">Lands to a page</option>
           </select>
         </div>
 
@@ -2673,12 +2676,33 @@
       </div>
 
       <div class="vvv-link-modal__footer">
-        <button id="link-cancel" type="button" class="zg-btn-cancel">
-          Cancel
-        </button>
-        <button id="link-apply" type="button" class="zg-btn-primary">
-          Apply
-        </button>
+
+        <div class="link-modal_footer-checkbox">
+
+           <div class="form-check link-mode-toggle">
+    <label class="vvv-link-toggle" for="link-as-button-toggle">
+      <input type="checkbox" id="link-as-button-toggle" class="vvv-link-toggle__input">
+      
+      <span class="vvv-link-toggle__switch" aria-hidden="true">
+        <span class="vvv-link-toggle__knob"></span>
+      </span>
+
+      <span class="vvv-link-toggle__content">
+        <span class="vvv-link-toggle__title">Change link into button</span>
+        <span class="vvv-link-toggle__desc">Apply button styling and customization options</span>
+      </span>
+    </label>
+  </div>
+        </div>
+        <div class="link-modal_footer-buttons">
+
+          <button id="link-cancel" type="button" class="zg-btn-cancel">
+            Cancel
+          </button>
+          <button id="link-apply" type="button" class="zg-btn-primary">
+            Apply
+          </button>
+        </div>
       </div>
     </div>
 
@@ -2704,17 +2728,17 @@
           <button id="form-add-field" class="zg-btn-secondary" aria-label="Add Question" data-bs-toggle="" data-bs-placement="right" title="Add Question">
             + Add New Question
           </button>
-          <a href="http://127.0.0.1:5173/user/analytics-performance" class="zg-btn-secondary ff-manage-leads-button" onclick="handleSafeRedirect({
+          <a href="https://dashboard.zigrow.com/user/analytics-performance" class="zg-btn-secondary ff-manage-leads-button" onclick="handleSafeRedirect({
             event,
             button: this,
-            redirectUrl: 'http://127.0.0.1:5173/user/analytics-performance',
+            redirectUrl: 'https://dashboard.zigrow.com/user/analytics-performance',
           })">View Leads</a>
         </div>
       </div>
 
       <div class="vvv-form-modal__footer">
         <div class="d-inline-flex ms-0 me-auto">
-          <a href="#" target="_blank" title="Learn more" class="d-inline-flex align-items-center justify-content-start learn-more-button">
+          <a href="https://youtu.be/t4mMuAmI5v8" target="_blank" title="Learn more" class="d-inline-flex align-items-center justify-content-start learn-more-button">
             <i class="fa-solid fa-lightbulb align-items-center justify-content-start me-1"></i>Learn form
           </a>
         </div>
@@ -2785,16 +2809,26 @@
   <!-- Icon Picker Popup -->
   <div id="icon-popup" class="iconpicker" role="dialog" aria-modal="true" aria-labelledby="iconpicker-title" style="display: none">
     <header class="iconpicker__header">
-      <div class="iconpicker__title">
-        <h3 id="iconpicker-title">Change icon</h3>
-        <span id="icon-pack-chip" class="iconpicker__chip" title="Icon library">
-          <i class="fa-brands fa-font-awesome"></i>
-          <span class="chip-text">Font Awesome • Solid</span>
-        </span>
-        <span id="icon-count" class="iconpicker__count">—</span>
+      <div class="iconpicker__title d-flex justify-content-between align-items-start">
+        <div class="d-md-flex w-100 justify-content-between">
+          <h3 id="iconpicker-title">Change icon</h3>
+          <span>
+            <span id="icon-pack-chip" class="iconpicker__chip" title="Icon library">
+              <i class="fa-brands fa-font-awesome"></i>
+              <span class="chip-text">Font Awesome • Solid</span>
+            </span>
+            <span id="icon-count" class="iconpicker__count">—</span>
+          </span>
+        </div>
+        <button id="icon-close-btn" class="iconpicker__close zg-close" aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
       </div>
 
-      <div class="iconpicker__controls">
+      <div class="iconpicker__controls d-flex flex-sm-row flex-column">
         <!-- FA style segmented control -->
         <div id="fa-style-tabs" class="iconpicker__segmented" role="tablist" aria-label="Font Awesome style">
           <button class="segbtn active" data-style="solid" role="tab" aria-selected="true">
@@ -2808,17 +2842,10 @@
           </button>
         </div>
 
-        <label class="iconpicker__search">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <label class="iconpicker__search w-100">
+          <i class="fa-solid fa-magnifying-glass" style="color: #212529;" aria-hidden="true"></i>
           <input id="icon-search" type="search" placeholder="Search 6,000+ icons…" autocomplete="off" />
         </label>
-
-        <button id="icon-close-btn" class="iconpicker__close zg-close" aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
       </div>
     </header>
 
@@ -2879,14 +2906,14 @@
         <div class="vvv-field vvv-icon-field">
           <span class="vvv-icon-label">Change size</span>
           <div id="icon-settings-size-group" class="icon-settings-size-group" role="group" aria-label="Icon size">
-            <button type="button" class="icon-size-btn is-active" data-size="1x">
-              1x
+            <button type="button" class="icon-size-btn is-active" data-size="smaller">
+              Small
             </button>
-            <button type="button" class="icon-size-btn" data-size="2x">
-              2x
+            <button type="button" class="icon-size-btn" data-size="original">
+              Original
             </button>
-            <button type="button" class="icon-size-btn" data-size="3x">
-              3x
+            <button type="button" class="icon-size-btn" data-size="larger">
+              Large
             </button>
           </div>
         </div>
@@ -2916,7 +2943,7 @@
 
   <!-- Custom Modification - Jayanti - 2-09-25 - Add Help Icon with its popup-->
   <!-- Floating Global Styles Button  -->
-  <button id="global-fab" type="button" aria-label="Global styles" title="Global styles" onclick="try{ Vvveb.GlobalCustomSteps && Vvveb.GlobalCustomSteps.open(); }catch(e){ console.warn(e); }">
+  <button id="global-fab" type="button" aria-label="Global styles" title="Global styles">
     <i class="fa-solid fa-earth-asia"></i>
   </button>
   <!-- Floating Help Button (left) -->
@@ -2944,7 +2971,7 @@
         <div class="modal-body">
           <!-- 16:9 responsive embed -->
           <div class="ratio ratio-21x9">
-            <iframe src="https://www.youtube.com/embed/lyZPPQzOFQ0?si=DZ__2e0eUXGV76iH" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+            <iframe src="https://www.youtube.com/embed/LPWzexEeCdE?si=-W9iiLqL96zcfcz3"  title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
           </div>
         </div>
@@ -2961,14 +2988,18 @@
   } catch (error) {}
 
   // open dashboard in a new tab
-  window.open('http://127.0.0.1:5173/user?open=hire', '_blank', 'noopener');
+  window.open('https://dashboard.zigrow.com/user?open=hire', '_blank', 'noopener');
 ">
 
 
               Hire a Professional
             </button>  -->
+            <!-- <div class="d-sm-inline-flex gap-2"> -->
 
-            <a href="#" class="hire-pro-btn" onclick="event.preventDefault();
+                  <div class="help-modal-btn-wrapper">
+
+              
+              <a href="#" class="hire-pro-btn" onclick="event.preventDefault();
                 const btn = this;
                  spinnerHtml = '&lt;span class=&quot;spinner-border spinner-border-sm me-1&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Redirecting...';
                  originalHtml = btn.innerHTML;
@@ -2983,7 +3014,7 @@
                   showDynamicModal({
                     message: 'Make sure to save your template before leaving to avoid losing any data or progress.',
                     type: 'info',
-                    redirectUrl: 'http://127.0.0.1:5173/user?open=hire',
+                    redirectUrl: 'https://dashboard.zigrow.com/user?open=hire',
                   });
                   return;
                 }
@@ -2996,17 +3027,33 @@
                 if (typeof Vvveb !== 'undefined' && Vvveb.Builder && 'dirty' in Vvveb.Builder) Vvveb.Builder.dirty = false;
                 
                 setTimeout(() => {
-                  window.location.href = 'http://127.0.0.1:5173/user?open=hire';
+                  window.location.href = 'https://dashboard.zigrow.com/user?open=hire';
                 }, 400);">
 
-              <i class="la la-tachometer-alt" aria-hidden="true"></i>
+                <i class="la la-tachometer-alt" aria-hidden="true"></i>
 
-              Hire a Professional
-            </a>
-
-
-
-
+                Hire a Professional
+              </a>
+                <a
+    href="#"
+    class="help-center-link-btn"
+    onclick="handleSafeRedirect({
+      event,
+      button: this,
+      redirectUrl: 'https://zigrow.com/documentation'
+    })"
+  >
+    <i class="fa-solid fa-book-open"></i>
+    Visit Help Center
+  </a>
+              <!-- <a href="#" id="show-demoguide-btn" class="show-demo-guide" onclick="event.preventDefault();
+            const closehelppopup = document.querySelector('.help-modal .zg-close');
+            if(closehelppopup) {
+              closehelppopup.click();
+            }
+          ">Show Demo Guide</a> -->
+    </div>
+            </div>
 
           </div>
 
@@ -3464,14 +3511,14 @@
   <script id="vvveb-filemanager-page" type="text/html">
     <li data-url="{%=url%}" data-file="{%=file%}" data-page="{%=name%}" class="file{% if (typeof className !== 'undefined') { %} {%=className%}{% } %}">
       <label for="{%=name%}" {% if (typeof description !== 'undefined') { %} title="{%=description%}" {% } %}>
+        <!-- drag handle and set-home temporarily hidden until public nav reflects these actions -->
         <span>{%=title%}</span>
-        <div class="file-actions">
-          <button href="#" class="delete btn btn-outline-danger" title="Delete"><i class="la la-trash"></i></button>
-          <a href="{%=url%}" target="_blank" class="view btn btn-outline-primary" title="View page"><i class="la la la-external-link-alt"></i></a>
-          <button href="#" class="rename btn btn-outline-primary" title="Rename"><i class="la la-pen"></i></button>
-        </div>
+        {% if (typeof _isHome !== 'undefined' && _isHome) { %}<span class="zigrow-home-badge">Home</span>{% } %}
+        <span class="zigrow-page-actions">
+          <button class="btn zigrow-rename-btn" title="Rename"><i class="la la-pen"></i></button>
+          {% if (typeof _isHome === 'undefined' || !_isHome) { %}<button class="btn zigrow-delete-btn" title="Delete"><i class="la la-trash"></i></button>{% } %}
+        </span>
       </label> <input type="checkbox" id="{%=name%}" />
-
     </li>
   </script>
 
@@ -3772,6 +3819,296 @@
 
   <!-- Custom modification - Modal container -->
   <div id="modal-container"></div>
+
+    <!-- Added by Jayanti -->
+  <!-- Custom Media Popup -->
+<!-- Custom Media Popup -->
+
+<div id="custom-media-popup" class="zg-custom-media-popup">
+
+
+<div class="zg-custom-media-overlay"></div>
+
+<!-- Media Modal -->
+<div class="zg-custom-media-modal">
+  <div class="zg-custom-media-header">
+    <div class="zg-custom-media-header-left">
+      <div class="zg-custom-media-header-icon">
+        <i class="fa-solid fa-sliders"></i>
+      </div>
+      <div class="zg-custom-media-header-copy">
+        <h3>Media Settings</h3>
+        <p>Configure and customize your media</p>
+      </div>
+    </div>
+
+    <button id="custom-media-close" type="button" class="zg-custom-media-close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <!-- Media Tabs -->
+ <div class="zg-custom-media-tab-shell">
+      <button type="button" class="zg-custom-media-tab active" data-media-tab="image">
+        <i class="fa-regular fa-image"></i>
+        <span>Image</span>
+      </button>
+
+      <button type="button" class="zg-custom-media-tab" data-media-tab="video">
+        <i class="fa-regular fa-circle-play"></i>
+        <span>Video</span>
+      </button>
+
+      <button type="button" class="zg-custom-media-tab" data-media-tab="gif">
+        <i class="fa-regular fa-file-image"></i>
+        <span>GIF</span>
+      </button>
+    </div>
+  <div class="zg-custom-media-content">
+   
+
+    <!-- Source Grid -->
+    <div class="zg-custom-media-source-grid">
+      <button type="button" class="zg-custom-media-source-card is-active" data-source-mode="upload">
+        <div class="zg-custom-media-source-icon">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+        <span>Upload File</span>
+      </button>
+
+      <button type="button" class="zg-custom-media-source-card" data-source-mode="url">
+        <div class="zg-custom-media-source-icon">
+          <i class="fa-solid fa-link"></i>
+        </div>
+        <span>From URL</span>
+      </button>
+    </div>
+
+    <!-- Source Panels -->
+    <div class="zg-custom-media-source-panels">
+      <div class="zg-custom-media-source-panel is-active" data-source-panel="upload">
+        <div class="zg-custom-media-library-box">
+          <div class="zg-custom-media-library-inner">
+            <div class="zg-custom-media-library-icon">
+              <i class="fa-regular fa-image"></i>
+            </div>
+
+            <h4>Open Media Gallery</h4>
+<p>Browse your uploads, stock images, and AI images in one place.</p>
+
+          <div class="zg-custom-media-library-actions">
+  <button
+    type="button"
+    id="custom-media-open-gallery"
+    class="zg-custom-media-chip"
+  >
+    Open My Files
+  </button>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- URL Source Panel -->
+      <div class="zg-custom-media-source-panel" data-source-panel="url" style="display:none;">
+        <div class="zg-custom-media-url-box">
+          <label class="zg-custom-media-url-label">Media URL</label>
+          <input type="text" class="zg-custom-media-url-input" placeholder="Paste media URL here...">
+          <div id="custom-media-url-error" class="zg-custom-media-url-error" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conversion Notice -->
+<div id="custom-media-conversion-notice" class="zg-custom-media-conversion-notice" style="display:none;">
+  <div class="zg-custom-media-conversion-notice-inner">
+    <strong id="custom-media-conversion-title">Conversion required</strong>
+    <p id="custom-media-conversion-text">
+      Choose a compatible media source to continue.
+    </p>
+  </div>
+</div>
+
+<!-- Image Properties Panel -->
+ <div class="zg-custom-media-panel-wrap" data-media-panel="image">
+  <div class="zg-custom-media-panel is-active" data-media-panel="image">
+    <div class="zg-custom-media-section-title">• Image Properties</div>
+
+    <!-- *!Comment out the down code because these properties are not necessary for my image setting build popup.  -->
+    <!-- <div class="zg-custom-media-grid two-col">
+      <div class="zg-custom-media-field-card">
+        <div class="zg-custom-media-field-top">
+          <label for="custom-media-image-width">Width</label>
+          <span id="custom-media-image-width-value">100%</span>
+        </div>
+        <input
+          id="custom-media-image-width"
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+        >
+      </div>
+
+      <div class="zg-custom-media-field-card">
+        <div class="zg-custom-media-field-top">
+          <label for="custom-media-image-height">Height</label>
+          <span id="custom-media-image-height-value">100%</span>
+        </div>
+        <input
+          id="custom-media-image-height"
+          type="range"
+          min="0"
+          max="100"
+          value="100"
+        >
+      </div>
+    </div> -->
+
+    <!-- <div class="zg-custom-media-field-card">
+      <div class="zg-custom-media-field-top">
+        <label>Object Fit</label>
+      </div>
+
+      <div class="zg-custom-media-segmented four" id="custom-media-object-fit-group">
+        <button type="button" class="is-active" data-object-fit="cover">Cover</button>
+        <button type="button" data-object-fit="contain">Contain</button>
+        <button type="button" data-object-fit="fill">Fill</button>
+        <button type="button" data-object-fit="none">None</button>
+      </div>
+    </div> -->
+
+    <!-- <div class="zg-custom-media-field-card">
+      <div class="zg-custom-media-field-top">
+        <label>Alignment</label>
+      </div>
+
+      <div class="zg-custom-media-segmented three" id="custom-media-image-align-group">
+        <button type="button" class="is-active" data-image-align="left">Left</button>
+        <button type="button" data-image-align="center">Center</button>
+        <button type="button" data-image-align="right">Right</button>
+      </div>
+    </div> -->
+
+     <!-- *!Comment out the code because these properties are not necessary for my image setting build popup ends here  -->
+
+     <div class="zg-custom-media-field-card">
+      <div class="zg-custom-media-field-top">
+        <label>Alt Text</label>
+      </div>
+
+      <input id="custom-media-image-alt" type="text" placeholder="Describe this image...">
+    </div>
+
+
+    <div class="zg-custom-media-toggle-card">
+  <div class="zg-custom-media-toggle-copy">
+    <strong>Lazy Loading</strong>
+    <span>Load image when visible</span>
+  </div>
+
+  <button
+    id="custom-media-image-lazy-toggle"
+    type="button"
+    class="zg-custom-media-toggle-btn is-active"
+    aria-pressed="true"
+  ></button>
+</div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <!-- Video Properties Panel -->
+<div class="zg-custom-media-panel" data-media-panel="video" style="display:none;">
+  <div class="zg-custom-media-section-title">• Video Properties</div>
+
+  <div class="zg-custom-media-toggle-card">
+    <div class="zg-custom-media-toggle-copy">
+      <strong>Autoplay</strong>
+      <span>Play video automatically when loaded</span>
+    </div>
+    <button
+      id="custom-media-video-autoplay-toggle"
+      type="button"
+      class="zg-custom-media-toggle-btn"
+      aria-pressed="false"
+    ></button>
+  </div>
+
+  <div class="zg-custom-media-toggle-card">
+    <div class="zg-custom-media-toggle-copy">
+      <strong>Controls</strong>
+      <span>Show play, pause, volume and timeline controls</span>
+    </div>
+    <button
+      id="custom-media-video-controls-toggle"
+      type="button"
+      class="zg-custom-media-toggle-btn is-active"
+      aria-pressed="true"
+    ></button>
+  </div>
+
+  <div class="zg-custom-media-toggle-card">
+    <div class="zg-custom-media-toggle-copy">
+      <strong>Loop</strong>
+      <span>Replay video continuously</span>
+    </div>
+    <button
+      id="custom-media-video-loop-toggle"
+      type="button"
+      class="zg-custom-media-toggle-btn"
+      aria-pressed="false"
+    ></button>
+  </div>
+
+  <div class="zg-custom-media-toggle-card">
+    <div class="zg-custom-media-toggle-copy">
+      <strong>Muted</strong>
+      <span>Mute audio by default</span>
+    </div>
+    <button
+      id="custom-media-video-muted-toggle"
+      type="button"
+      class="zg-custom-media-toggle-btn"
+      aria-pressed="false"
+    ></button>
+  </div>
+
+  <div class="zg-custom-media-field-card">
+    <div class="zg-custom-media-field-top">
+      <label for="custom-media-video-poster">Poster URL</label>
+    </div>
+    <input
+      id="custom-media-video-poster"
+      type="text"
+      placeholder="Optional thumbnail image URL"
+    >
+  </div>
+</div>
+
+<!-- GIF Properties Panel -->
+<div class="zg-custom-media-panel" data-media-panel="gif" style="display:none;">
+  <div class="zg-custom-media-section-title">• GIF</div>
+  <p class="zg-custom-media-help-text">
+    GIFs will play automatically after applying.
+  </p>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="zg-custom-media-footer">
+    <button id="custom-media-cancel" type="button" class="zg-btn-cancel">Cancel</button>
+    <button id="custom-media-apply" type="button" class="zg-btn-primary">Apply Changes</button>
+  </div>
+  </div>
+
+  
+</div>
   <!-- bootstrap-->
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -3794,6 +4131,9 @@
   <script src="libs/media/media.js"></script>
 
   <script src="libs/builder/plugin-media.js"></script>
+    <!-- Custom Media js  -->
+   <!-- Added by Jayanti -->
+    <script src="libs/builder/custom.media.js"></script>
 
   <script>
     window.chatgptOptions = {
@@ -3856,7 +4196,7 @@
             label: "Go to Login",
             primary: true,
             onClick: () =>
-              (window.location.href = "http://127.0.0.1:5173/login"),
+              (window.location.href = "https://dashboard.zigrow.com/login"),
           }, ],
         });
       } else if (status === 403) {
@@ -3868,7 +4208,7 @@
             label: "Back to Dashboard",
             primary: true,
             onClick: () =>
-              (window.location.href = "http://127.0.0.1:5173/user"),
+              (window.location.href = "https://dashboard.zigrow.com/user"),
           }, ],
         });
       } else if (status === 404) {
@@ -3880,7 +4220,7 @@
             label: "Back to Dashboard",
             primary: true,
             onClick: () =>
-              (window.location.href = "http://127.0.0.1:5173/user"),
+              (window.location.href = "https://dashboard.zigrow.com/user"),
           }, ],
         });
       } else {
@@ -3896,7 +4236,7 @@
             {
               label: "Back to Dashboard",
               onClick: () =>
-                (window.location.href = "http://127.0.0.1:5173/user"),
+                (window.location.href = "https://dashboard.zigrow.com/user"),
             },
           ],
         });
@@ -3909,7 +4249,6 @@
       const params = new URLSearchParams(window.location.search);
       const mode = params.get("mode");
       // ✅ true ONLY when user is opening a brand-new template (no saved row yet)
-      window.isNewTemplate = (mode === "new");
       window.isNewTemplate = (mode !== "edit");
 
     })();
@@ -4099,7 +4438,7 @@
     async function waitForFinalRender(doc, opts = {
       timeoutMs: 10000
     }) {
-      console.log("I am running for 10000ms!");
+      // console.log("I am running for 10000ms!");
 
       const withTimeout = (p, ms) =>
         Promise.race([p, new Promise((r) => setTimeout(r, ms))]);
@@ -4110,7 +4449,7 @@
         Math.max(1500, Math.floor(opts.timeoutMs / 2))
       );
       await withTimeout(waitForImages(doc), opts.timeoutMs);
-      await waitForIdleLayout(doc, 300); // small quiet window
+      await withTimeout(waitForIdleLayout(doc, 300), 3000); // cap idle-layout wait at 3s
     }
   </script>
   <!-- Script responsible for skeleton loader for "Edit Template" - Ends -->
@@ -4166,15 +4505,22 @@
         const parentLi = el.closest("li");
         const parentForm = el.closest("form");
 
+
         const CLASS_RULES = {
           "swiper-button-next": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "swiper-button-prev": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "vvveb-add-slide-helper": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "vvveb-add-btn-text": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
+          "vvveb-add-btn": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "vvveb-add-btn-plus": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "swiper-wrapper": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "vvveb-add-link-plus": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
           "vvveb-add-link-text": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
+          "hamburger": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
+          "hamburger-box": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
+          "hamburger-inner": ["up-btn", "down-btn", "clone-btn", "delete-btn"],
+          "swiper-slide": ["clone-btn", "delete-btn"],
+          "clonable-card": ["clone-btn", "delete-btn"],
         };
         for (const cls in CLASS_RULES) {
           if (el.classList.contains(cls)) {
@@ -4184,7 +4530,6 @@
 
         const PARENT_RULES = {
           // "hero-section": ["up-btn", "down-btn", "clone-btn"],
-          // "locked-section": ["up-btn", "down-btn", "clone-btn"]
         };
         for (const cls in PARENT_RULES) {
           if (el.closest(`.${cls}`)) {
@@ -4201,6 +4546,7 @@
         if (el.tagName.toLowerCase() === "span" && el.closest(".swiper-pagination")) {
           return ["up-btn", "down-btn", "clone-btn", "delete-btn"];
         }
+
 
         if (parentForm && el.tagName.toLowerCase() !== "form") {
           return ["up-btn", "down-btn", "clone-btn", "delete-btn"];
@@ -4251,7 +4597,6 @@
           // Otherwise hide for normal divs
           return ["up-btn", "down-btn", "clone-btn"];
         }
-
 
         return [];
       }
@@ -4362,7 +4707,9 @@ code added by - Kasim (15-12-25) -->
 
   <script>
     // Global unload protection — triggers leave prompt only if builder is dirty
+    // Suppressed during internal multipager actions (page switch, page delete)
     window.addEventListener("beforeunload", function(e) {
+      if (window.__zpInternalAction) return;
       if (Vvveb?.Builder?.dirty) {
         const msg = "Changes you made may not be saved.";
         (e || window.event).returnValue = msg;
@@ -4512,13 +4859,20 @@ code added by - Kasim (15-12-25) -->
       const oldBuilderInit = Vvveb.Builder.init;
       Vvveb.Builder.init = function(...args) {
         let userCallback = args[1];
+        let callbackFired = false; // Guard: only run userCallback once
         args[1] = function(...cbArgs) {
           builderReady = true;
           tryHideLoader();
-          if (userCallback) userCallback.apply(this, cbArgs);
+          if (userCallback && !callbackFired) {
+            callbackFired = true;
+            userCallback.apply(this, cbArgs);
+          }
         };
         return oldBuilderInit.apply(this, args);
       };
+
+      // Safety fallback: force-hide loading overlay after 15 seconds
+      setTimeout(hideLoader, 15000);
 
       // ---- rest of your logic stays the same (template setup, etc) ----
     });
@@ -4586,6 +4940,15 @@ code added by - Kasim (15-12-25) -->
     const templatePath = templateParam;
     const templateFolder = templatePath.replace(/\/index\.html$/, "");
 
+    // Canonical template identifier for ALL backend/API calls (save, load, pages, page CRUD).
+    // For AI templates this is the ai:USER_ID string; for normal templates the folder name.
+    // Never derive backend template_name from baseHref or aiBaseHref.
+    const canonicalTemplateName = templateName;
+
+    // Expose for Phase 2B page-management script (separate <script> block)
+    window.__zigrowTemplateName = canonicalTemplateName;
+    window.__zigrowTemplateFolder = templateFolder;
+
     // console.log("🌐 Mode:", mode);
     // console.log("🌐 Template path:", templatePath);
 
@@ -4605,6 +4968,8 @@ code added by - Kasim (15-12-25) -->
       );
     };
     const wrapIfFragment = (html, baseHref) => {
+      // Strip template-sourced favicon links to prevent overriding builder/site favicon
+      html = html.replace(/<link[^>]*rel=["'](?:icon|shortcut icon)["'][^>]*>/gi, '');
       if (/<html[\s>]/i.test(html) || /<!doctype/i.test(html)) {
         return ensureBase(html, baseHref);
       }
@@ -4635,7 +5000,20 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         // mode === "edit" ? "about:blank" : templatePath,
         (mode === "edit" || isAi) ? "about:blank" : templatePath,
         async function() {
-          // console.log("✅ Builder initialized");
+          // Boot analytics early so PostHog has maximum time to load
+          // before builder_entered fires. Events are queued if SDK not ready yet.
+          if (window.ZigrowAnalytics && typeof window.ZigrowAnalytics.initAnalytics === 'function') {
+            window.ZigrowAnalytics.initAnalytics();
+          }
+
+          // Wrap entire body so any uncaught sync/async error is logged, not silently swallowed.
+          try {
+
+          // ── builder_entered: confirmed when the template is actually loaded.
+          // Standard templates (mode=new, non-AI) are loaded by Builder.init itself
+          // so entry is confirmed the moment the callback fires.
+          // AI (mode=new) and edit paths load async; they set this to true on success.
+          var _entryConfirmed = !(isAiNew || mode === 'edit');
 
           if (isAiNew) {
             if (window.__zigrowOnce.aiLoad) {
@@ -4677,6 +5055,9 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                 iframe.removeAttribute("src");
                 iframe.srcdoc = finalHtml;
 
+                // AI template is in the iframe — builder entry is confirmed from here.
+                _entryConfirmed = true;
+
                 // optional: wait a bit for render before hiding skeleton
                 await new Promise((r) => setTimeout(r, 250));
                 const doc = iframe.contentDocument || iframe.contentWindow?.document;
@@ -4685,6 +5066,48 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                     timeoutMs: 10000
                   });
                 }
+
+                // Fix: when sections are added into the AI iframe, root-relative paths
+                // like /builder/img/ get resolved against the AI preview origin instead
+                // of the editor origin (dashboard.zigrow.com). Watch for newly inserted nodes
+                // and rewrite any builder-asset URLs that landed on the wrong origin.
+                if (doc && doc.body && AI_PREVIEW_ORIGIN) {
+                  const wrongBase = AI_PREVIEW_ORIGIN + '/builder/';
+                  const rightBase = window.location.origin + '/builder/';
+                  const fixBuilderAssets = function(root) {
+                    root.querySelectorAll('img[src], source[src], video[src], video[poster]').forEach(function(el) {
+                      if (el.src && el.src.startsWith(wrongBase)) {
+                        el.src = rightBase + el.src.slice(wrongBase.length);
+                      }
+                      if (el.poster && el.poster.startsWith(wrongBase)) {
+                        el.poster = rightBase + el.poster.slice(wrongBase.length);
+                      }
+                    });
+                  };
+                  // Fix any already-resolved paths on initial load
+                  fixBuilderAssets(doc.body);
+                  // Watch for new sections/blocks added by the builder
+                  const aiAssetObserver = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                      mutation.addedNodes.forEach(function(node) {
+                        if (node.nodeType !== 1) return;
+                        if (['IMG', 'SOURCE', 'VIDEO'].includes(node.tagName)) {
+                          if (node.src && node.src.startsWith(wrongBase)) node.src = rightBase + node.src.slice(wrongBase.length);
+                          if (node.poster && node.poster.startsWith(wrongBase)) node.poster = rightBase + node.poster.slice(wrongBase.length);
+                        }
+                        fixBuilderAssets(node);
+                      });
+                    });
+                  });
+                  aiAssetObserver.observe(doc.body, {
+                    childList: true,
+                    subtree: true
+                  });
+                  // Store so it can be disconnected on page unload if needed
+                  window.__zigrowAiAssetObserver = aiAssetObserver;
+                }
+                // AI template loaded successfully — confirm builder entry
+                // (already set above; kept as a no-op sentinel comment)
               } catch (err) {
                 console.error("❌ Error loading AI template:", err);
                 showBuilderError({
@@ -4697,7 +5120,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                     },
                     {
                       label: "Back to Dashboard",
-                      onClick: () => (window.location.href = "http://127.0.0.1:5173/user")
+                      onClick: () => (window.location.href = "https://dashboard.zigrow.com/user")
                     },
                   ],
                 });
@@ -4707,18 +5130,15 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
             }
           }
 
-
-
           if (mode === "edit") {
             if (window.__zigrowOnce.editLoad) {
-              // console.log("↩️ Edit load skipped (already ran once)");
             } else {
               window.__zigrowOnce.editLoad = true;
               try {
                 showSkeleton();
 
-                // use the folder name extracted from baseHrefForEdit
-                const tName = baseHrefForEdit.split("/").slice(-2, -1)[0];
+                // use canonical template name for backend lookup
+                const tName = canonicalTemplateName;
 
                 const res = await fetch(
                   `/template/load?template_name=${encodeURIComponent(tName)}`, {
@@ -4755,10 +5175,12 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                     throw new Error(
                       "No HTML in JSON payload (template.html)."
                     );
-                  finalHtml = wrapIfFragment(savedHtml, baseHrefForEdit);
+                  // Saved pages have root-relative paths; use app origin, not AI preview
+                  const editBaseHref = isAi ? '/' : baseHrefForEdit;
+                  finalHtml = wrapIfFragment(savedHtml, editBaseHref);
                 } else {
                   const txt = await res.text();
-                  finalHtml = wrapIfFragment(txt, baseHrefForEdit);
+                  finalHtml = wrapIfFragment(txt, isAi ? '/' : baseHrefForEdit);
                 }
 
                 const iframe = getIframe();
@@ -4775,6 +5197,9 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                   iframe.__onEditLoad = null;
                 }
                 iframe.srcdoc = finalHtml;
+
+                // Edit template is in the iframe — builder entry is confirmed from here.
+                _entryConfirmed = true;
 
                 await new Promise((resolve) => {
                   iframe.__onEditLoad = () => {
@@ -4794,7 +5219,8 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                     timeoutMs: 10000
                   });
                 }
-
+                // Edit template loaded successfully — confirm builder entry
+                // (already set above; kept as a no-op sentinel comment)
 
                 // console.log("🧩 Edit iframe loaded with srcdoc + base href");
               } catch (err) {
@@ -4813,22 +5239,156 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
             }
           }
 
-          // --- Page registry (kept) ---
-          const dynamicPages = {
-            "index.html": {
-              name: "Home",
-              filename: "index.html",
-              file: `${templateFolder}/index.html`,
-              url: `${templateFolder}/index.html`,
-              title: "Home",
-              folder: null,
-            },
-          };
+          // ── Analytics: builder_entered ────────────────────────────────────
+          // Placed before the page registry so any registry error cannot block this event.
+          // _entryConfirmed is true immediately for standard templates; set after
+          // iframe.srcdoc assignment for AI/edit paths.
+          // window.__zigrowBuilderEnteredFired guards against duplicate firing.
+          if (_entryConfirmed && !window.__zigrowBuilderEnteredFired) {
+            window.__zigrowBuilderEnteredFired = true;
+            var _builderMode = new URLSearchParams(window.location.search).get('mode') || 'new';
+            if (window.ZigrowAnalytics && typeof window.ZigrowAnalytics.trackEvent === 'function') {
+              window.ZigrowAnalytics.trackEvent('builder_entered', {
+                builder_entry_point: isAi
+                  ? 'ai_preview_edit'
+                  : (_builderMode === 'edit' ? 'saved_template_edit' : 'template_picker'),
+                template_type:  isAi ? 'ai' : 'standard',
+                template_name:  canonicalTemplateName || '',
+                mode:           _builderMode,
+                source_page:    document.referrer || '',
+                entry_flow:     isAi ? 'ai' : (_builderMode === 'edit' ? 'saved_template' : 'template'),
+                environment:    'production',
+                current_path:   window.location.pathname,
+              });
+            }
+          }
+
+          // --- Page registry (Phase 2A: runtime page loading) ---
+          // Wrapped in its own try/catch so any registry error never bubbles up
+          // to exit the outer async function and skip zigrow.pages.ready.
+          // Store page metadata for save context
+          window.__zigrowPages = window.__zigrowPages || {};
+
+          async function fetchAndRegisterPages(tName) {
+            try {
+              const res = await fetch(
+                `/template/pages?template_name=${encodeURIComponent(tName)}`, {
+                  credentials: "include"
+                }
+              );
+              if (!res.ok) return null;
+              return await res.json();
+            } catch (e) {
+              return null;
+            }
+          }
+
+          function registerPagesInFileManager(pageList, folder) {
+            if (!Vvveb.FileManager || !Vvveb.FileManager.addPage) return;
+            // Clear existing pages
+            Vvveb.FileManager.pages = {};
+            if (Vvveb.FileManager.tree) Vvveb.FileManager.tree.replaceChildren();
+
+            pageList.forEach(function(p) {
+              const fname = p.filename || (p.is_home ? 'index.html' : (p.page_key + '.html'));
+              const pageData = {
+                name: fname,
+                filename: fname,
+                file: folder + '/' + fname,
+                url: folder + '/' + fname,
+                title: p.page_name,
+                folder: null,
+                // Phase 2A metadata for save
+                _pageKey: p.page_key,
+                _pageName: p.page_name,
+                _pageSlug: p.page_slug,
+                _isHome: p.is_home,
+                _sortOrder: p.sort_order,
+              };
+              window.__zigrowPages[fname] = pageData;
+              // Store page in FileManager.pages (addPage may crash if tree is absent)
+              try {
+                Vvveb.FileManager.addPage(fname, pageData);
+              } catch (e) {
+                Vvveb.FileManager.pages[fname] = pageData;
+              }
+            });
+
+            // Set home as current page
+            const homeFname = 'index.html';
+            if (Vvveb.FileManager.pages[homeFname]) {
+              Vvveb.FileManager.currentPage = homeFname;
+              const activeEl = Vvveb.FileManager.tree?.querySelector('[data-page="' + homeFname + '"]');
+              if (activeEl) activeEl.classList.add('active');
+            }
+          }
+
+          try {
+            if (mode === 'edit') {
+              // Edit mode (including AI templates): fetch saved pages from backend
+              const tName = canonicalTemplateName;
+              const pageList = await fetchAndRegisterPages(tName);
+              if (pageList && pageList.length) {
+                registerPagesInFileManager(pageList, templateFolder);
+              } else {
+                // Fallback: single Home page
+                registerPagesInFileManager([{
+                  page_key: 'home',
+                  page_name: 'Home',
+                  page_slug: '/',
+                  is_home: true,
+                  sort_order: 0,
+                  filename: 'index.html'
+                }], templateFolder);
+              }
+            } else {
+              // New / AI mode: detect multipager first, then register pages
+              let multipagerPages = null;
+              if (mode === 'new' && !isAi) {
+                try {
+                  // Fetch pages.json directly as a static file — no auth needed, instant
+                  const manifestRes = await fetch(templateFolder + '/pages.json');
+                  if (manifestRes.ok) {
+                    const manifest = await manifestRes.json();
+                    if (Array.isArray(manifest) && manifest.length > 1) {
+                      multipagerPages = manifest;
+                    }
+                  }
+                } catch (e) {
+                  // No manifest or parse error — treat as single-page
+                }
+              }
+
+              if (multipagerPages) {
+                window.__zigrowIsMultipager = true;
+                registerPagesInFileManager(multipagerPages, templateFolder);
+              } else {
+                // Single-page template: register Home only
+                registerPagesInFileManager([{
+                  page_key: 'home',
+                  page_name: 'Home',
+                  page_slug: '/',
+                  is_home: true,
+                  sort_order: 0,
+                  filename: 'index.html'
+                }], templateFolder);
+              }
+            }
+          } catch (pageRegErr) {
+            console.error('Page registry error:', pageRegErr);
+          }
+
+          // Notify Phase 2B that page data is ready
+          window.dispatchEvent(new CustomEvent('zigrow.pages.ready'));
 
           // Builder/UI flags (kept)
           setTimeout(() => {
             Vvveb.Builder.pageLoaded = true;
           }, 500);
+
+          } catch (fatalErr) {
+            console.error('Builder.init callback error:', fatalErr);
+          }
         }
       );
 
@@ -4840,10 +5400,160 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         Vvveb.CssEditor.init();
         Vvveb.Gui.toggleRightColumn(false);
         Vvveb.Gui.toggleLeftColumn(true);
-        // console.log("🛠️ GUI fully initialized");
       }, 0);
+
+      // Phase 2A: Intercept page switching to load page HTML from backend
+      window.addEventListener('vvveb.FileManager.loadPage', async function(e) {
+        const pageData = e.detail;
+        if (!pageData || !pageData._pageKey) {
+          if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+          return; // not a Phase 2A page, let default handle it
+        }
+
+        // Only intercept in edit mode (saved templates with backend pages)
+        // Read mode dynamically from URL — the closure variable `mode` is stale
+        // after the first save transitions new → edit via history.replaceState
+        const liveMode = new URLSearchParams(window.location.search).get('mode') || 'new';
+        // Also allow page switching for multipager source templates in mode=new
+        const isMultipagerNew = (liveMode === 'new' && window.__zigrowIsMultipager && !window.hasSaved);
+        if (liveMode !== 'edit' && !window.hasSaved && !isMultipagerNew) {
+          if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+          return;
+        }
+
+        // Cancel default file-based loadUrl by setting url to false
+        const savedUrl = pageData.url;
+        pageData.url = false;
+
+        try {
+          let finalHtml;
+
+          if (isMultipagerNew) {
+            // Multipager mode=new: load HTML from source template file directly
+            const sourceFile = pageData.filename || pageData.name ||
+              (pageData._isHome ? 'index.html' : (pageData._pageKey + '.html'));
+            const res = await fetch(templateFolder + '/' + sourceFile);
+            if (!res.ok) {
+              if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+              window.__zpInternalAction = false;
+              return;
+            }
+            const rawHtml = await res.text();
+            // Inject <base href> so relative CSS/JS/image paths resolve correctly
+            // (srcdoc sets base URL to about:srcdoc, breaking all relative paths)
+            finalHtml = wrapIfFragment(rawHtml, templateFolder + '/');
+          } else {
+            // Edit mode / after save: load from backend API
+            const tName = canonicalTemplateName;
+            if (!tName) {
+              if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+              window.__zpInternalAction = false;
+              return;
+            }
+
+            const res = await fetch(
+              `/template/load?template_name=${encodeURIComponent(tName)}&page_key=${encodeURIComponent(pageData._pageKey)}`, {
+                credentials: "include",
+                headers: {
+                  Accept: "application/json"
+                }
+              }
+            );
+            if (!res.ok) {
+              if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+              window.__zpInternalAction = false;
+              return;
+            }
+
+            const data = await res.json();
+            const pageHtml = data?.template?.html || '';
+            if (!pageHtml) {
+              if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+              window.__zpInternalAction = false;
+              return;
+            }
+
+            // For saved AI pages, assets are root-relative (/builder/..., /zigrow-assets/...).
+            // Use the app origin base so they resolve correctly, NOT the AI preview origin.
+            const pageBaseHref = isAi ? '/' : baseHrefForEdit;
+            finalHtml = wrapIfFragment(pageHtml, pageBaseHref);
+          }
+
+          const iframe = getIframe();
+          if (!iframe) {
+            if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+            window.__zpInternalAction = false;
+            return;
+          }
+
+          iframe.removeAttribute('src');
+          iframe.srcdoc = finalHtml;
+
+          await new Promise(function(resolve) {
+            const onLoad = function() {
+              iframe.removeEventListener('load', onLoad);
+              resolve();
+            };
+            iframe.addEventListener('load', onLoad);
+          });
+
+          // Re-init builder components after page switch
+          // Restore url for future reference
+          pageData.url = savedUrl;
+          // Update FrameDocument so builder uses new content
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+          if (iframeDoc) window.FrameDocument = iframeDoc;
+          if (iframe.contentWindow) window.FrameWindow = iframe.contentWindow;
+
+          if (Vvveb.SectionList) Vvveb.SectionList.loadSections();
+          if (Vvveb.TreeList) Vvveb.TreeList.loadComponents();
+          if (Vvveb.StyleManager) Vvveb.StyleManager.init();
+
+          // Notify listeners that iframe content has been replaced (page switch)
+          // This allows preview link interception to re-attach to the new document
+          window.dispatchEvent(new CustomEvent('vvveb.iframe.loaded', {
+            detail: window.FrameDocument
+          }));
+
+          // Deterministic helper rebind: apply correct mode state to new iframe content
+          if (Vvveb.Builder && Vvveb.Builder.isPreview) {
+            if (typeof window._zpApplyPreviewCleanup === 'function') {
+              window._zpApplyPreviewCleanup(window.FrameDocument);
+            }
+          } else {
+            if (typeof window._zpRestoreEditorHelpers === 'function') {
+              window._zpRestoreEditorHelpers(window.FrameDocument);
+            }
+          }
+
+          // After loading fresh page content from backend, mark builder clean
+          if (Vvveb.Builder) {
+            if (typeof Vvveb.Builder.setDirty === 'function') Vvveb.Builder.setDirty(false);
+            else Vvveb.Builder.dirty = false;
+          }
+          // Reset undo history so mutations don't carry across pages
+          if (Vvveb.Undo) Vvveb.Undo.reset();
+
+          // Hide page-switch loader on success
+          if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+          // Reset internal action flag after page switch completes
+          window.__zpInternalAction = false;
+        } catch (err) {
+          console.error('Page switch error:', err);
+          // Hide page-switch loader on failure too
+          if (typeof window._zpHidePageLoader === 'function') window._zpHidePageLoader();
+          window.__zpInternalAction = false;
+        }
+      });
     });
   </script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       Phase 2B: Navbar Page Management (extracted to external file)
+       Self-contained — renders into .zp-navbar-pages / #zp-dropdown-list
+       Loaded after all builder deps are available; boots via polling + event.
+       ═══════════════════════════════════════════════════════════ -->
+  <script src="libs/builder/zigrow-multipager.js"></script>
 
   <!--Script to swap button text based on the live (published) domain.
  Status: Final update
@@ -4853,12 +5563,12 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
     async function getPublishedStatus() {
       try {
         // ensure session + csrf cookie; no-op if already set
-        await fetch("http://127.0.0.1:5173/sanctum/csrf-cookie", {
+        await fetch("https://api.zigrow.com/sanctum/csrf-cookie", {
           credentials: "include",
         });
 
         // this should be your existing GET that returns user's linked subdomain/custom domain
-        const res = await fetch("http://127.0.0.1:5173/user/domain", {
+        const res = await fetch("https://api.zigrow.com/user/domain", {
           credentials: "include",
           headers: {
             Accept: "application/json"
@@ -4913,13 +5623,13 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         publishBtn.setAttribute("data-bs-placement", "bottom");
         publishBtn.setAttribute("data-bs-boundary", "window");
         publishBtn.innerHTML =
-          '<span class="label"><i class="la la-share-square d-none d-sm-block"></i><span>Publish</span></span>' +
+          '<span class="label"><i class="la la-share-square d-none d-sm-block"></i><span class="publish-label-text">Publish</span></span>' +
           '<span class="spinner-border spinner-border-sm align-middle me-1 d-none" role="status" aria-hidden="true"></span>' +
           '<span class="redirect-text d-none">Redirecting...</span>';
-        saveButton.parentElement?.insertBefore(
-          publishBtn,
-          saveButton
-        );
+        // saveButton.parentElement?.insertBefore(
+        //   publishBtn,
+        //   saveButton
+        // );
       }
 
       // --- Save button label (keep fixed as "Save") + skeleton off ---
@@ -4938,7 +5648,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
 
       // --- Initialize CSRF session ---
       try {
-        await fetch("http://127.0.0.1:5173/sanctum/csrf-cookie", {
+        await fetch("https://api.zigrow.com/sanctum/csrf-cookie", {
           credentials: "include",
         });
       } catch {}
@@ -4946,7 +5656,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
       // --- Plan status (sets isFreeUser) ---
       try {
         const res = await fetch(
-          "http://127.0.0.1:5173/user/plan-status", {
+          "https://api.zigrow.com/user/plan-status", {
             credentials: "include",
             headers: {
               Accept: "application/json"
@@ -4955,16 +5665,18 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         );
         const data = await res.json();
         isFreeUser = !data?.paid;
+        window.isFreeUser = isFreeUser;
       } catch {
         // fail closed: treat as free so Publish -> pricing (safer)
         isFreeUser = true;
+        window.isFreeUser = isFreeUser;
       }
 
       // --- Helper: ONLY published-flag (optional endpoint)
       async function fetchIsPublished() {
         try {
           const r = await fetch(
-            "http://127.0.0.1:5173/user/publish-status", {
+            "https://api.zigrow.com/user/publish-status", {
               credentials: "include",
               headers: {
                 Accept: "application/json"
@@ -4998,10 +5710,34 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
           publishBtn.classList.add("d-none");
           publishBtn.onclick = null;
           return;
+        } else {
+          saveButton.parentElement?.insertBefore(
+            publishBtn,
+            saveButton
+          );
         }
 
         // Otherwise show and wire click
         publishBtn.classList.remove("d-none");
+
+        // Update button text: "Connect Domain" for paid users, "Publish" for free
+        var labelTextEl = publishBtn.querySelector(".publish-label-text");
+        var newTooltipText = (isFreeUser === false) ? "Connect your domain" : "Publish your page live";
+        if (labelTextEl) {
+          labelTextEl.textContent = (isFreeUser === false) ? "Connect Domain" : "Publish";
+        }
+        // Update Bootstrap tooltip without re-adding native title (which causes the white tooltip)
+        var bsTooltip = bootstrap.Tooltip.getInstance(publishBtn);
+        if (bsTooltip) {
+          bsTooltip.setContent({
+            '.tooltip-inner': newTooltipText
+          });
+        } else {
+          // Tooltip not yet initialized — set title so initBuilderTooltips picks it up
+          publishBtn.setAttribute("title", newTooltipText);
+        }
+        // Always remove native title to prevent white browser tooltip
+        publishBtn.removeAttribute("title");
 
         function setPublishButtonLoading(isLoading) {
           const label = publishBtn.querySelector(".label");
@@ -5041,20 +5777,45 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
             return;
           }
 
-          setPublishButtonLoading(true);
-          window.onbeforeunload = null; // suppress unsaved warning
+          // ── Analytics: publish_attempted ──────────────────────────────
+          // Fires after the hasSaved guard (real intent confirmed), before
+          // routing. Fires for both free users (→ pricing) and paid users
+          // (→ domain setup). publish_entry_point identifies the source.
+          // console.log('[Builder] publish_attempted: analytics call-site reached.',
+          //   '| ZigrowAnalytics present:', !!window.ZigrowAnalytics,
+          //   '| hasSaved:', window.hasSaved);
+          if (window.ZigrowAnalytics && typeof window.ZigrowAnalytics.trackEvent === "function") {
+            var _pubMode = new URLSearchParams(window.location.search).get("mode") || "new";
+            window.ZigrowAnalytics.trackEvent("publish_attempted", {
+              publish_entry_point: "builder",
+              template_name:  window.__zigrowTemplateName || "",
+              template_type:  (typeof window.__zigrowTemplateName === "string" && window.__zigrowTemplateName.startsWith("ai:")) ? "ai" : "standard",
+              mode:           _pubMode,
+              has_saved_design: !!window.hasSaved,
+              has_plan:       isFreeUser === false,
+              has_domain:     publishState.hasDomain,
+              current_path:   window.location.pathname,
+              environment:    "production",
+              attempt_status: "started",
+            });
+            // console.log('[Builder] publish_attempted event dispatched.');
+          } else {
+            console.warn('[Builder] publish_attempted SKIPPED - window.ZigrowAnalytics not available.');
+          }
+          // ── End publish_attempted ─────────────────────────────────────────
 
-          setTimeout(() => {
-            if (isFreeUser === true) {
-              // Free plan -> Pricing page
+          if (isFreeUser === true) {
+            // Free plan -> show pricing modal inside builder
+            openZigrowPricingModal();
+          } else {
+            // Paid plan -> redirect to domain setup
+            setPublishButtonLoading(true);
+            window.onbeforeunload = null;
+            setTimeout(() => {
               window.location.href =
-                "http://127.0.0.1:5173/user?showPricing=true";
-            } else {
-              // Paid plan -> Open Publish Domain modal in dashboard
-              window.location.href =
-                "http://127.0.0.1:5173/user?showDomain=true";
-            }
-          }, 400); // match the dashboard delay
+                "https://dashboard.zigrow.com/user?showDomain=true";
+            }, 400);
+          }
         };
       }
 
@@ -5064,7 +5825,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
           showDynamicModal({
             message: "Make sure to save your template before leaving to avoid losing any data or progress.",
             type: "info",
-            redirectUrl: "http://127.0.0.1:5173/user",
+            redirectUrl: "https://dashboard.zigrow.com/user",
           });
           return true;
         }
@@ -5274,21 +6035,76 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
           // --- FINAL HTML (this is where errors were killing the button) ---
           const htmlContentRaw = Vvveb.Builder.getHtml();
 
+            const cleanedHtmlRaw = stripBuilderOnlyIframeArtifacts(htmlContentRaw);
+
           // 🚫 Builder ke liye jo <base> lagaya tha, DB mein save nahi karna chahiye
-          let htmlContent = htmlContentRaw.replace(/<base[^>]*>/gi, "");
+           let htmlContent = cleanedHtmlRaw.replace(/<base[^>]*>/gi, "");
 
           // ✅ Convert absolute URLs back to relative paths to preserve correct structure
           // This prevents misplaced elements after reload when base tag is re-added
           const normalizeUrls = (html) => {
+            const escapeRegex = (value) =>
+              value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+            const origin = window.location.origin || "";
+
+            if (origin) {
+              const escapedOrigin = escapeRegex(origin);
+
+              // Keep app-owned assets root-relative so they survive base href changes.
+              html = html.replace(
+                new RegExp(
+                  `((?:src|href|poster|data-[^=]*)\\s*=\\s*['"])${escapedOrigin}((?:/builder|/zigrow-assets)/[^'"]+)(['"])`,
+                  "gi"
+                ),
+                "$1$2$3"
+              );
+
+              html = html.replace(
+                new RegExp(
+                  `(url\\s*\\(\\s*['"]?)${escapedOrigin}((?:/builder|/zigrow-assets)/[^'")]+)(['"]?\\s*\\))`,
+                  "gi"
+                ),
+                "$1$2$3"
+              );
+            }
+
+            // Builder library sections/blocks ship with ../../img and ../../media paths.
+            // Those work only inside the editor folder structure, so persist them as stable root-relative URLs.
+            html = html.replace(
+              /\b(src|poster)\s*=\s*(['"])(?:\.\/)?(?:\.\.\/)+(img|media)\//gi,
+              '$1=$2/builder/$3/'
+            );
+
+            html = html.replace(
+              /url\((['"]?)(?:\.\/)?(?:\.\.\/)+(img|media)\//gi,
+              'url($1/builder/$2/'
+            );
+
             // Get the base URL that needs to be stripped
             // For AI templates, use aiBaseHref; for regular templates, use baseHrefForEdit
             const baseUrl = isAi ? aiBaseHref : (baseHrefForEdit || (templateFolder + "/"));
+
+            // For AI templates, also strip the AI preview origin from any absolute URLs
+            // that may have been resolved via the <base> tag during editing.
+            // e.g. https://build-with-ai.zigrow.com/builder/img/foo.jpg → /builder/img/foo.jpg
+            if (isAi && AI_PREVIEW_ORIGIN) {
+              const escapedAiOrigin = escapeRegex(AI_PREVIEW_ORIGIN);
+              html = html.replace(
+                new RegExp(`((?:src|href|poster|data-[^=]*)\\s*=\\s*['"])${escapedAiOrigin}(/[^'"]+)(['"])`, 'gi'),
+                '$1$2$3'
+              );
+              html = html.replace(
+                new RegExp(`(url\\s*\\(\\s*['"]?)${escapedAiOrigin}(/[^'")]+)(['"]?\\s*\\))`, 'gi'),
+                '$1$2$3'
+              );
+            }
 
             // Skip normalization if no valid base URL
             if (!baseUrl || baseUrl === "/") return html;
 
             // Escape special regex characters in the base URL
-            const escapedBase = baseUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const escapedBase = escapeRegex(baseUrl);
 
             // Replace absolute URLs in src attributes
             html = html.replace(
@@ -5319,7 +6135,38 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
 
           htmlContent = normalizeUrls(htmlContent);
 
+          // Jayanti add below code to save aos animations after save template
+
+          htmlContent = enrichSavedHtmlWithAosAttributes(htmlContent);
+          htmlContent = ensureSavedHtmlHasAosRuntime(htmlContent);
+
           // --- Actual save call ---
+          // Phase 2A: derive page metadata from current page
+          const currentPageName = (Vvveb.FileManager && Vvveb.FileManager.currentPage) || 'index.html';
+          const currentPageData = (window.__zigrowPages && window.__zigrowPages[currentPageName]) || {};
+
+          // Safety: if __zigrowPages has entries but the current page isn't among
+          // them, something is out of sync.  Refuse to save rather than silently
+          // defaulting to home — that would overwrite the home page with the
+          // currently displayed (non-home) page content.
+          if (window.__zigrowPages && Object.keys(window.__zigrowPages).length > 0 && !window.__zigrowPages[currentPageName]) {
+            console.error('[zigrow] Save aborted: currentPage "' + currentPageName + '" not found in page store.');
+            if (typeof showDynamicModal === 'function') {
+              showDynamicModal({
+                message: '⚠️ Page data out of sync. Please switch pages or reload before saving.',
+                type: 'error',
+                autoCloseDelay: 4000
+              });
+            }
+            return;
+          }
+
+          const savePageKey = currentPageData._pageKey || 'home';
+          const savePageName = currentPageData._pageName || 'Home';
+          const savePageSlug = currentPageData._pageSlug || '/';
+          const saveIsHome = currentPageData._isHome !== undefined ? currentPageData._isHome : true;
+          const saveSortOrder = currentPageData._sortOrder !== undefined ? currentPageData._sortOrder : 0;
+
           const response = await fetch("/template/save", {
             method: "POST",
             credentials: "include",
@@ -5330,6 +6177,11 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
             body: JSON.stringify({
               html: htmlContent,
               template_name: templateName,
+              page_key: savePageKey,
+              page_name: savePageName,
+              page_slug: savePageSlug,
+              is_home: saveIsHome,
+              sort_order: saveSortOrder,
             }),
           });
 
@@ -5347,7 +6199,75 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
                 autoCloseDelay: 3000,
               });
             }
+
+            // ── Analytics: design_saved ──────────────────────────────────────
+            // Fires exactly once per confirmed backend success (response.ok).
+            // Never fires on click, on validation failure, or on save error.
+            // console.log('[Builder] design_saved: analytics call-site reached.',
+            //   '| ZigrowAnalytics present:', !!window.ZigrowAnalytics);
+            if (window.ZigrowAnalytics && typeof window.ZigrowAnalytics.trackEvent === "function") {
+              var _saveMode = new URLSearchParams(window.location.search).get("mode") || "new";
+              window.ZigrowAnalytics.trackEvent("design_saved", {
+                template_name:  templateName,
+                template_type:  (typeof templateName === "string" && templateName.startsWith("ai:")) ? "ai" : "standard",
+                mode:           _saveMode,
+                page_key:       savePageKey,
+                page_slug:      savePageSlug,
+                page_name:      savePageName,
+                is_home:        saveIsHome,
+                sort_order:     saveSortOrder,
+                save_source:    "builder_save_button",
+                environment:    "production",
+                save_status:    "success",
+                html_size_bytes: (typeof htmlContent === "string") ? new Blob([htmlContent]).size : 0,
+                current_path:   window.location.pathname,
+              });
+              // console.log('[Builder] design_saved event dispatched.');
+            } else {
+              console.warn('[Builder] design_saved SKIPPED - window.ZigrowAnalytics not available.');
+            }
+            // ── End design_saved ─────────────────────────────────────────────
+
             window.hasSaved = true; // mark clean after successful save
+
+            // Mark current undo position as clean baseline (moved here from click handler
+            // so it only fires on actual success, not prematurely)
+            try {
+              if (typeof Vvveb.Undo.undoIndex === "number" && typeof BASELINE_INDEX !== "undefined") {
+                BASELINE_INDEX = Vvveb.Undo.undoIndex;
+              }
+            } catch(e) {}
+
+            // Sync header/footer to sibling pages (fire-and-forget)
+            if (window.__zigrowPages && Object.keys(window.__zigrowPages).length > 1) {
+              try {
+                var syncParser = new DOMParser();
+                var syncDoc = syncParser.parseFromString(htmlContent, 'text/html');
+                var syncHeader = syncDoc.querySelector('[data-section="header"], [data-section="navbar"], #header, #navbar, header, body > nav');
+                var syncFooter = syncDoc.querySelector('[data-section="footer"], [data-section="footer-section"], #footer, #footer-section, footer');
+
+                if (syncHeader || syncFooter) {
+                  fetch('/template/page/sync-header-footer', {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'X-XSRF-TOKEN': getCookie('XSRF-TOKEN'),
+                    },
+                    body: JSON.stringify({
+                      template_name: templateName,
+                      current_page_key: savePageKey,
+                      header_html: syncHeader ? syncHeader.outerHTML : null,
+                      footer_html: syncFooter ? syncFooter.outerHTML : null,
+                    }),
+                  }).catch(function(e) {
+                    console.warn('[zigrow] Header/footer sync failed:', e);
+                  });
+                }
+              } catch (syncErr) {
+                console.warn('[zigrow] Header/footer sync extraction failed:', syncErr);
+              }
+            }
           } else {
             // ❌ Error from backend – use builder error prompt
             const errorMessage =
@@ -5391,12 +6311,14 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         } finally {
           loadingSpan?.classList.add("d-none");
           buttonTextSpan?.classList.remove("d-none");
-          this.dataset.saving = "0";
+          delete this.dataset.saving;
           while (revertFns.length) {
             try {
               revertFns.pop()();
             } catch {}
           }
+          // Re-evaluate undo/redo/save button state after save completes
+          try { if (typeof updateUndoRedoButtons === 'function') updateUndoRedoButtons(); } catch(e) {}
         }
         // ✅ This session now has at least one save
         window.hasSaved = true;
@@ -5579,8 +6501,8 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
 
   <script>
     function getToolbarBtns() {
-      const allUndoBtns = document.querySelectorAll("#topbar-center-navbar #undo-btn, #topbar-center-footer #undo-btn");
-      const allRedoBtns = document.querySelectorAll("#topbar-center-navbar #redo-btn, #topbar-center-footer #redo-btn");
+      const allUndoBtns = document.querySelectorAll("#undo-btn");
+      const allRedoBtns = document.querySelectorAll("#redo-btn");
       const saveBtn = document.querySelector("#save-btn");
 
       return {
@@ -5722,10 +6644,8 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
       } = getToolbarBtns();
       if (saveBtn) {
         saveBtn.addEventListener("click", () => {
-          // After successful save, mark current state as baseline
-          if (typeof Vvveb.Undo.undoIndex === "number") {
-            BASELINE_INDEX = Vvveb.Undo.undoIndex;
-          }
+          // Note: BASELINE_INDEX is now updated only on successful save
+          // (inside the main save handler) to avoid marking unsaved state as clean
           updateUndoRedoButtons();
         });
       }
@@ -5787,50 +6707,46 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
     });
 
 
- (function fixBootstrapTooltipStuckOnScroll() {
-  const hideAllTooltips = () => {
-    document.querySelectorAll(".tooltip.show").forEach((tipEl) => {
-      const id = tipEl.getAttribute("id");
-      if (!id) return;
+    (function fixBootstrapTooltipStuckOnScroll() {
+      const hideAllTooltips = () => {
+        document.querySelectorAll(".tooltip.show").forEach((tipEl) => {
+          const id = tipEl.getAttribute("id");
+          if (!id) return;
 
-      const trigger = document.querySelector(`[aria-describedby="${id}"]`);
-      if (!trigger) return;
+          const trigger = document.querySelector(`[aria-describedby="${id}"]`);
+          if (!trigger) return;
 
-      const instance = bootstrap.Tooltip.getInstance(trigger);
-      if (instance) instance.hide();
+          const instance = bootstrap.Tooltip.getInstance(trigger);
+          if (instance) instance.hide();
 
-      if (typeof trigger.blur === "function") trigger.blur();
-    });
-  };
+          if (typeof trigger.blur === "function") trigger.blur();
+        });
+      };
 
-  const bindHideEvents = (target) => {
-    if (!target || !target.addEventListener) return;
-    ["scroll", "wheel", "touchmove", "mousedown", "click", "pointerdown"].forEach((evt) => {
-      target.addEventListener(evt, hideAllTooltips, true);
-    });
-  };
+      const bindHideEvents = (target) => {
+        if (!target || !target.addEventListener) return;
+        ["scroll", "wheel", "touchmove", "mousedown", "click", "pointerdown"].forEach((evt) => {
+          target.addEventListener(evt, hideAllTooltips, true);
+        });
+      };
 
-  // main document
-  bindHideEvents(document);
+      // main document
+      bindHideEvents(document);
 
-  const iframe = document.getElementById("iframe1");
-  if (iframe) {
-    const bindIframe = () => {
-      try {
-        if (iframe.contentWindow) bindHideEvents(iframe.contentWindow);
-        if (iframe.contentDocument) bindHideEvents(iframe.contentDocument);
-      } catch (e) {
+      const iframe = document.getElementById("iframe1");
+      if (iframe) {
+        const bindIframe = () => {
+          try {
+            if (iframe.contentWindow) bindHideEvents(iframe.contentWindow);
+            if (iframe.contentDocument) bindHideEvents(iframe.contentDocument);
+          } catch (e) {}
+        };
+
+        iframe.addEventListener("load", bindIframe);
+        bindIframe();
       }
-    };
-
-    iframe.addEventListener("load", bindIframe);
-    bindIframe(); 
-  }
-})();
-
+    })();
   </script>
-
-
 
   <!-- // Text editing Toolbar expand (Amit has added this) -->
   <script>
@@ -6074,6 +6990,8 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         document.getElementById("ai-writer-menu"),
         document.getElementById("ai-prompt-panel"),
         document.getElementById("ai-quick-panel"),
+        document.getElementById("section-edit-options"),
+        document.getElementById("wysiwyg-editor"),
       ].filter(Boolean);
 
       const win = () => iframe.contentWindow;
@@ -6093,6 +7011,9 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
 
         restoreTimers.set(el, t);
       }
+
+
+
 
       function canScroll(el, deltaY) {
         if (!el) return false;
@@ -6115,10 +7036,18 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         return null;
       }
 
+        function isAiArea (target){
+        return !!target.closest("#ai-writer-menu, #ai-prompt-panel, #ai-quick-panel");
+      }
+
       scrollTargets.forEach((panel) => {
         panel.addEventListener("wheel", function(e) {
           if (e.ctrlKey) return;
 
+           if(panel.id === "wysiwyg-editor" && isAiArea(e.target)){
+             // allow natural scroll in AI panels even when editor is hovered
+             return;
+          }
 
           const scrollable = findScrollable(e.target, e.deltaY, panel);
           if (scrollable) {
@@ -6137,7 +7066,12 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
             behavior: "auto",
           });
 
-          temporarilyPassThrough(panel);
+        
+          if(panel.id !== "wysiwyg-editor"){
+
+            
+            temporarilyPassThrough(panel);
+          }
 
           try {
             iframeWin.focus();
@@ -6149,6 +7083,213 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
       });
     });
   </script>
+
+
+  <!-- Jayanti added below code for aos animation -->
+
+  <script>
+    const zigrowSavedSectionAnimations = {
+      hero: "fade-up-big",
+      about: "fade-right",
+      services: "fade-up",
+      portfolio: "zoom-in",
+      team: "fade-left",
+      pricing: "fade-up",
+      contact: "fade-up",
+      faq: "fade-right",
+      reviews: "fade-up",
+      testimonial: "fade-up",
+      product: "fade-up",
+      logos: "fade-in-slow",
+      cta: "zoom-in-big",
+      default: ["fade-up", "fade-down"],
+    };
+
+    function getSavedAosBaseType(rawType) {
+      const t = (rawType || "").toLowerCase();
+      if (t.includes("hero")) return "hero";
+      if (t.includes("cta")) return "cta";
+      if (t.includes("about")) return "about";
+      if (t.includes("service")) return "services";
+      if (t.includes("pricing")) return "pricing";
+      if (t.includes("faq")) return "faq";
+      if (t.includes("review") || t.includes("testimonial")) return "reviews";
+      if (t.includes("portfolio")) return "portfolio";
+      if (t.includes("team")) return "team";
+      if (t.includes("product")) return "product";
+      if (t.includes("logo")) return "logos";
+      return "default";
+    }
+
+    function pickSavedAosAnimation(type, index) {
+      const anim = zigrowSavedSectionAnimations[type] || zigrowSavedSectionAnimations.default;
+      return Array.isArray(anim) ? anim[index % anim.length] : anim;
+    }
+
+    function enrichSavedHtmlWithAosAttributes(html) {
+      if (!html) return html;
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+
+      doc.querySelectorAll("#aos-style, #aos-script, #aos-builder-safe-style, [data-zigrow-aos-css='true'], [data-zigrow-aos-js='true'], [data-zigrow-aos-init='true']").forEach(function(node) {
+        node.remove();
+      });
+
+      doc.querySelectorAll(".aos-init, .aos-animate").forEach(function(el) {
+        el.classList.remove("aos-init", "aos-animate");
+      });
+
+      const sections = doc.querySelectorAll("[data-section^='zigrow']");
+      const heavySel =
+        ".col, .col-12, .col-sm-6, .col-md-4, .col-md-6, .col-lg-4, .col-lg-6," +
+        " .row > div, .card, .item, .service-card, .feature-box, .team-card," +
+        " .pricing-card, .faq-item, .testimonial-card, .portfolio-card";
+
+      sections.forEach(function(section, secIndex) {
+        const rawType = section.getAttribute("data-section") || "default";
+        const type = getSavedAosBaseType(rawType);
+        const anim = pickSavedAosAnimation(type, secIndex);
+
+        section.setAttribute("data-aos", anim);
+        section.removeAttribute("data-aos-delay");
+        section.style.opacity = "";
+        section.style.transform = "";
+        section.style.visibility = "";
+
+        section.querySelectorAll(heavySel).forEach(function(child, i) {
+          child.setAttribute("data-aos", anim);
+          child.setAttribute("data-aos-delay", String(Math.min(i * 70, 600)));
+          child.style.opacity = "";
+          child.style.transform = "";
+          child.style.visibility = "";
+        });
+
+        section.querySelectorAll("h1,h2,h3,h4,h5,h6,p,img,button,a,li").forEach(function(el, i) {
+          el.setAttribute("data-aos", anim);
+          el.setAttribute("data-aos-delay", String(Math.min(i * 25, 400)));
+          el.style.opacity = "";
+          el.style.transform = "";
+          el.style.visibility = "";
+        });
+      });
+
+      if (window.innerWidth < 576) {
+        doc.querySelectorAll("[data-aos]").forEach(function(el) {
+          const val = el.getAttribute("data-aos");
+          if (val === "zoom-in-big" || val === "fade-up-big") {
+            el.setAttribute("data-aos", "fade-up");
+          }
+        });
+      }
+
+      return "<!DOCTYPE html>\n" + doc.documentElement.outerHTML;
+    }
+
+
+    function ensureSavedHtmlHasAosRuntime(html) {
+      if (!html || !/data-aos(?:=|\s|>)/i.test(html)) {
+        return html;
+      }
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+
+      doc.querySelectorAll("#aos-style, #aos-script, #aos-builder-safe-style").forEach(function(node) {
+        node.remove();
+      });
+
+      if (!doc.head) {
+        const head = doc.createElement("head");
+        doc.documentElement.insertBefore(head, doc.body || null);
+      }
+
+      if (!doc.getElementById("aos-style")) {
+        const link = doc.createElement("link");
+        link.id = "aos-style";
+        link.rel = "stylesheet";
+        link.href = "https://unpkg.com/aos@2.3.4/dist/aos.css";
+        link.setAttribute("data-zigrow-aos-css", "true");
+        doc.head.appendChild(link);
+      }
+
+      if (!doc.querySelector("script[data-zigrow-aos-js='true']")) {
+        const script = doc.createElement("script");
+        script.src = "https://unpkg.com/aos@2.3.4/dist/aos.js";
+        script.defer = true;
+        script.setAttribute("data-zigrow-aos-js", "true");
+        doc.head.appendChild(script);
+      }
+
+      if (!doc.querySelector("script[data-zigrow-aos-init='true']")) {
+        const init = doc.createElement("script");
+        init.setAttribute("data-zigrow-aos-init", "true");
+        init.textContent = `
+      window.addEventListener("load", function () {
+        function runAOS() {
+          if (!window.AOS) return false;
+          try {
+            AOS.init({
+              duration: 900,
+              easing: "ease-out-cubic",
+              once: true,
+              offset: 90,
+              disable: window.innerWidth < 768
+            });
+            return true;
+          } catch (e) {
+            return false;
+          }
+        }
+
+        if (!runAOS()) {
+          let tries = 0;
+          const timer = setInterval(function () {
+            tries++;
+            if (runAOS() || tries > 20) clearInterval(timer);
+          }, 250);
+        }
+
+        setTimeout(function () {
+          document.querySelectorAll("[data-aos]").forEach(function(el) {
+            const style = window.getComputedStyle(el);
+            if (style.opacity === "0" || style.visibility === "hidden") {
+              el.style.opacity = "1";
+              el.style.visibility = "visible";
+              el.style.transform = "none";
+            }
+          });
+        }, 1800);
+      });
+    `;
+        doc.body.appendChild(init);
+      }
+
+      return "<!DOCTYPE html>\n" + doc.documentElement.outerHTML;
+    }
+  </script>
+
+
+<script>
+  function stripBuilderOnlyIframeArtifacts(html) {
+    if (!html) return html;
+
+    // remove builder-only iframe overlays
+    html = html.replace(
+      /<div[^>]*class=["'][^"']*\bzigrow-embed-edit-overlay\b[^"']*["'][^>]*>[\s\S]*?<\/div>/gi,
+      ""
+    );
+
+    // remove builder-only iframe edit style tag if it got serialized
+    html = html.replace(
+      /<style[^>]*id=["']zigrow-iframe-edit-style["'][^>]*>[\s\S]*?<\/style>/gi,
+      ""
+    );
+
+    return html;
+  }
+</script>
+  <!-- Jayanti code ends here for Aos runtime -->
 
   <script>
     const usedEl = document.getElementById("credit-used-builder");
@@ -6215,28 +7356,30 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
 
       event.preventDefault();
 
-      try {
-        if (window.Vvveb?.Undo?.undoIndex === -1 && window.isNewTemplate !== true) {
-          window.hasSaved = true;
-        }
-      } catch (e) {}
+      // try {
+      //   if (window.Vvveb?.Undo?.undoIndex === -1 && window.isNewTemplate !== true) {
+      //     window.hasSaved = true;
+      //   }
+      // } catch (e) {}
 
-      if (!window.hasSaved) {
-        showDynamicModal({
-          message: "Make sure to save your template before leaving to avoid losing any data or progress.",
-          type: "info",
-          redirectUrl
-        });
-        return;
-      }
+      // if (!window.hasSaved) {
+      //   showDynamicModal({
+      //     message: "Make sure to save your template before leaving to avoid losing any data or progress.",
+      //     type: "info",
+      //     redirectUrl
+      //   });
+      //   return;
+      // }
+
+      let originalHtml = null;
 
       if (showSpinner && button) {
-        const originalHtml = button.innerHTML;
-        button.dataset.originalHtml = originalHtml;
+        originalHtml = button.innerHTML;
+        // button.dataset.originalHtml = originalHtml;
         button.innerHTML = `
-      <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
-      ${spinnerText}
-    `;
+    <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+    ${spinnerText}
+  `;
         button.style.pointerEvents = "none";
       }
 
@@ -6251,9 +7394,14 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         }
       }
 
-      setTimeout(() => {
-        window.location.href = redirectUrl;
-      }, 400);
+      const newTab = window.open(redirectUrl, "_blank");
+
+      if (showSpinner && button) {
+        setTimeout(() => {
+          button.innerHTML = originalHtml;
+          button.style.pointerEvents = "auto";
+        }, 800);
+      }
     }
   </script>
 
@@ -6282,7 +7430,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         showDynamicModal({
           message: "Make sure to save your template before leaving to avoid losing any data or progress.",
           type: "info",
-          redirectUrl: "http://127.0.0.1:5173/signin"
+          redirectUrl: "https://dashboard.zigrow.com/signin"
         });
         return;
       }
@@ -6309,7 +7457,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
 
       try {
         // 1) get CSRF cookie (sets XSRF-TOKEN)
-        const csrfRes = await fetch("http://127.0.0.1:5173/sanctum/csrf-cookie", {
+        const csrfRes = await fetch("https://api.zigrow.com/sanctum/csrf-cookie", {
           credentials: "include",
           headers: {
             Accept: "application/json"
@@ -6323,7 +7471,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         }
 
         // 3) logout
-        const logoutRes = await fetch("http://127.0.0.1:5173/logout", {
+        const logoutRes = await fetch("https://api.zigrow.com/logout", {
           method: "POST",
           credentials: "include",
           headers: {
@@ -6339,7 +7487,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         }
 
         // 4) redirect only after success
-        window.location.href = "http://127.0.0.1:5173/signin";
+        window.location.href = "https://dashboard.zigrow.com/signin";
       } catch (err) {
         console.error("Logout error:", err);
 
@@ -6358,7 +7506,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
     async function populateEditorUserProfile() {
       try {
         // 1. Get CSRF cookie
-        await fetch("http://127.0.0.1:5173/sanctum/csrf-cookie", {
+        await fetch("https://api.zigrow.com/sanctum/csrf-cookie", {
           credentials: "include",
           headers: {
             Accept: "application/json"
@@ -6366,7 +7514,7 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
         });
 
         // 2. Fetch profile
-        const res = await fetch("http://127.0.0.1:5173/profile", {
+        const res = await fetch("https://api.zigrow.com/profile", {
           credentials: "include",
           headers: {
             Accept: "application/json",
@@ -6395,8 +7543,1760 @@ ${baseHref ? `<base href="${baseHref}">` : ""}
     document.addEventListener("DOMContentLoaded", populateEditorUserProfile);
   </script>
 
+  <!-- ========== Zigrow Pricing Modal (inline, for Publish button) ========== -->
+  <div id="zigrow-pricing-overlay" style="display:none;">
+    <div id="zigrow-pricing-backdrop"></div>
+
+    <div id="zigrow-pricing-modal" role="dialog" aria-modal="true" aria-labelledby="zpmPublishTitle">
+      <div class="zpm-close-bar">
+        <button id="zigrow-pricing-close" type="button" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="zpm-scroll-area">
+      <div class="zpm-inner">
+        <section class="zpm-publish-header" aria-labelledby="zpmPublishTitle">
+          <div class="zpm-publish-copy">
+            <span class="zpm-ready-badge">Your website design is ready</span>
+            <h4 class="zpm-title" id="zpmPublishTitle">Publish Your Website</h4>
+          </div>
+        </section>
+
+        <section class="zpm-steps" aria-label="Publishing steps">
+          <article class="zpm-step-card">
+            <span class="zpm-here-badge" aria-label="You are on this step">
+              <span class="zpm-here-dot"></span>
+              You're here
+              <span class="zpm-here-tip">Select a plan below to continue</span>
+            </span>
+            <span class="zpm-step-number">1</span>
+            <div>
+              <h5>Choose a plan</h5>
+              <p>Unlock website publishing</p>
+            </div>
+          </article>
+
+          <article class="zpm-step-card">
+            <span class="zpm-step-number">2</span>
+            <div>
+              <h5>Set up your domain</h5>
+              <p>Use a free Zigrow subdomain or connect your own domain</p>
+            </div>
+          </article>
+
+          <article class="zpm-step-card">
+            <span class="zpm-step-number">3</span>
+            <div>
+              <h5>Publish your website live</h5>
+              <p>Launch your website with hosting and SSL included</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="zpm-pricing-section" aria-label="Select plan duration">
+          <h5 class="zpm-section-title">Select Your Plan Duration</h5>
+
+          <div class="zpm-tabs" id="zpmTabs" role="tablist" aria-label="Plan duration options"></div>
+
+          <div class="zpm-detail" id="zpmDetail">
+            <div class="zpm-plan-summary">
+              <h5 class="zpm-plan-name" id="zpmPlanName"></h5>
+              <p class="zpm-discount" id="zpmDiscount"></p>
+              <div class="zpm-price-row">
+                <h3 class="zpm-price" id="zpmPrice"></h3>
+                <span class="zpm-per-month" id="zpmPerMonth"></span>
+              </div>
+              <p class="zpm-text" id="zpmText"></p>
+            </div>
+
+            <div class="zpm-detail-divider" aria-hidden="true"></div>
+
+            <ul class="zpm-features" id="zpmFeatures"></ul>
+
+            <button class="zpm-cta" id="zpmCta">Choose Plan &amp; Continue to Domain Setup</button>
+            <p class="zpm-gst">(Inclusive GST)</p>
+          </div>
+        </section>
+
+        <section class="zpm-domain-box" aria-label="Domain setup options">
+          <p>After payment, you will be taken to domain setup to choose one of these options:</p>
+          <div class="zpm-domain-options">
+            <div class="zpm-domain-option">
+              <strong>Free Zigrow subdomain</strong>
+              <span>Use your free yourname.zigrow.com subdomain</span>
+            </div>
+            <div class="zpm-domain-option">
+              <strong>Custom domain</strong>
+              <span>Connect your own custom domain in the next step</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="zpm-legacy-controls" aria-hidden="true">
+          <button id="zpmSeeMore" class="zpm-link-btn" type="button">See more</button>
+          <button id="zpmGoBack" class="zpm-link-btn" type="button">Go back</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* --- Zigrow Pricing Modal scoped styles --- */
+    #zigrow-pricing-overlay,
+    #zigrow-pricing-overlay * {
+      box-sizing: border-box;
+    }
+
+    #zigrow-pricing-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      overflow: hidden;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #333333;
+    }
+
+    #zigrow-pricing-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(34, 36, 38, 0.58);
+      backdrop-filter: blur(16px);
+    }
+
+    #zigrow-pricing-modal {
+      position: relative;
+      z-index: 1;
+      width: min(820px, calc(100vw - 40px));
+      max-height: calc(100vh - 40px);
+      max-height: calc(100svh - 40px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border: 1px solid #d9d6ff;
+      border-radius: 24px;
+      box-shadow: 0 28px 90px rgba(15, 23, 42, 0.24);
+    }
+
+    #zigrow-pricing-modal::-webkit-scrollbar {
+      display: none;
+    }
+
+    .zpm-close-bar {
+      flex-shrink: 0;
+      height: 52px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #ede9fe;
+      border-radius: 24px 24px 0 0;
+    }
+
+    #zigrow-pricing-close {
+      width: 34px;
+      height: 34px;
+      border: 1px solid #d9d6ff;
+      border-radius: 999px;
+      background: #f9f8ff;
+      color: #667085;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      line-height: 1;
+      box-shadow: none;
+      transition: all 0.2s ease;
+    }
+
+    #zigrow-pricing-close:hover {
+      color: #333333;
+      border-color: #c4b5fd;
+      background: #ede9fe;
+    }
+
+    .zpm-inner {
+      width: 100%;
+    }
+
+    .zpm-scroll-area {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .zpm-scroll-area::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .zpm-scroll-area::-webkit-scrollbar-thumb {
+      background: #d9d6ff;
+      border-radius: 999px;
+    }
+
+    .zpm-scroll-area::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .zpm-publish-header {
+      display: flex;
+      justify-content: center;
+      padding: 30px 30px 24px;
+      background: linear-gradient(110deg, #ffffff 0%, #ffffff 58%, #fbfdff 100%);
+    }
+
+    .zpm-publish-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .zpm-ready-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #f1efff;
+      color: #5b3df2;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .zpm-title {
+      margin: 0;
+      color: #333333;
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+    }
+
+    .zpm-here-badge {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px 4px 6px;
+      border-radius: 999px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+      font-size: 11.5px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: default;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .zpm-here-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
+      flex-shrink: 0;
+      animation: zpmHerePulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes zpmHerePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.45); }
+      55% { box-shadow: 0 0 0 5px rgba(22, 163, 74, 0); }
+    }
+
+    .zpm-here-tip {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 190px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #1e1b4b;
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 500;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.18s ease, visibility 0.18s ease;
+      white-space: normal;
+      text-align: center;
+      z-index: 10;
+      box-shadow: 0 6px 20px rgba(30, 27, 75, 0.22);
+    }
+
+    .zpm-here-tip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: #1e1b4b;
+    }
+
+    .zpm-here-badge:hover .zpm-here-tip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .zpm-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      padding: 12px 30px;
+      border-top: 1px solid #d9d6ff;
+      border-bottom: 1px solid #d9d6ff;
+      background: #ffffff;
+    }
+
+    .zpm-step-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      min-height: 70px;
+      padding: 12px 16px;
+      border: 1px solid #d9d6ff;
+      border-radius: 16px;
+      background: #faf9ff;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .zpm-step-card:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      color: #cbd5e1;
+      font-size: 32px;
+      font-weight: 300;
+      z-index: 1;
+    }
+
+   .zpm-step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: #333333;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+      .zpm-step-card h5 {
+      margin: 0 0 3px;
+      color: #333333;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .zpm-step-card p {
+      margin: 0;
+      color: #555555;
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .zpm-pricing-section {
+      padding: 26px 30px 0;
+      background: #ffffff;
+    }
+
+    .zpm-section-title {
+      margin: 0 0 24px;
+      color: #333333;
+      font-size: 24px;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .zpm-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: 0 auto 32px;
+      padding: 0;
+    }
+
+    .zpm-tab {
+      position: relative;
+      min-height: 124px;
+      padding: 20px 16px 18px;
+      border: 2px solid #d9d6ff;
+      border-radius: 14px;
+      background: #ffffff;
+      color: #333333;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .zpm-tab:hover {
+      border-color: #5b3df2;
+      box-shadow: 0 12px 28px rgba(91, 61, 242, 0.09);
+      transform: translateY(-1px);
+    }
+
+    .zpm-tab.active {
+      border-color: #5b3df2;
+      background: #f1efff;
+      box-shadow: 0 12px 28px rgba(91, 61, 242, 0.14);
+    }
+
+    .zpm-tab .zpm-badge {
+      position: absolute;
+      left: 50%;
+      top: -11px;
+      transform: translateX(-50%);
+      min-width: max-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #16a34a;
+      color: #ffffff;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(247, 144, 9, 0.22);
+    }
+
+    .zpm-tab-duration {
+      display: block;
+      margin: 0 0 9px;
+      color: #333333;
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .zpm-tab-price {
+      display: block;
+      margin: 0 0 8px;
+      color: #5b3df2;
+      font-size: 20px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .zpm-tab-per-month {
+      display: block;
+      color: #666666;
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 600;
+    }
+
+    .zpm-detail {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 36px 24px;
+      border: 2px solid #5b3df2;
+      border-radius: 13px;
+      background: #ffffff;
+      box-shadow: 0 22px 45px rgba(91, 61, 242, 0.08);
+    }
+
+    .zpm-plan-summary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .zpm-plan-name {
+      margin: 0 0 6px;
+      color: #333333;
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .zpm-discount {
+      min-height: 16px;
+      margin: 0 0 4px;
+      color: #16a34a;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .zpm-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      margin: 2px 0 10px;
+    }
+
+    .zpm-price {
+      margin: 0;
+      color: #333333;
+      font-size: clamp(42px, 5vw, 52px);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .zpm-per-month {
+      color: #555555;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .zpm-text {
+      max-width: 680px;
+      margin: 0;
+      color: #555555;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .zpm-detail-divider {
+      width: 100%;
+      height: 1px;
+      margin: 26px 0;
+      background: #d9d6ff;
+    }
+
+    .zpm-features {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 70px;
+      row-gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 26px;
+    }
+
+    .zpm-features li {
+      position: relative;
+      padding-left: 31px;
+      color: #333333;
+      font-size: 15px;
+      line-height: 1.35;
+      font-weight: 500;
+      word-break: normal;
+    }
+
+    .zpm-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #12b76a;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .zpm-cta {
+      width: 100%;
+      min-height: 50px;
+      border: 0;
+      border-radius: 7px;
+      background: #5b3df2;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-align: center;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .zpm-cta:hover {
+      background: #2f0ddb;
+      box-shadow: 0 10px 22px rgba(91, 61, 242, 0.2);
+    }
+
+    .zpm-cta:active {
+      transform: translateY(1px);
+    }
+
+    .zpm-cta:disabled {
+      opacity: 0.68;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .zpm-cta-loading {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .zpm-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: inline-block;
+      animation: zpmBounce 1s ease-in-out infinite;
+    }
+
+    @keyframes zpmBounce {
+      0%,
+      100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+    }
+
+    .zpm-gst {
+      margin: 11px 0 0;
+      text-align: center;
+      color: #666666;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .zpm-domain-box {
+      margin: 36px 30px 38px;
+      padding: 20px 20px 16px;
+      border: 1px solid #d9d6ff;
+      border-radius: 20px;
+      background: #f4f0fc;
+    }
+
+    .zpm-domain-box > p {
+      margin: 0 0 15px;
+      color: #333333;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .zpm-domain-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .zpm-domain-option {
+      padding: 13px 16px 14px;
+      border: 1px solid #d9d6ff;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .zpm-domain-option strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #333333;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .zpm-domain-option span {
+      display: block;
+      color: #555555;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .zpm-legacy-controls {
+      display: none !important;
+    }
+
+    .zpm-link-btn {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      #zigrow-pricing-overlay {
+        padding: 18px;
+      }
+
+      #zigrow-pricing-modal {
+        width: min(760px, calc(100vw - 36px));
+        max-height: calc(100vh - 36px);
+      }
+
+        .zpm-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 10px 24px;
+      }
+
+      .zpm-step-card {
+        min-height: 64px;
+        padding: 10px 12px;
+      }
+      .zpm-step-card:not(:last-child)::after {
+        font-size: 24px;
+        right: -12px;
+      }
+
+
+      .zpm-tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      #zigrow-pricing-overlay {
+        align-items: center;
+        padding: 10px;
+      }
+
+      #zigrow-pricing-modal {
+        width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+        max-height: calc(100svh - 20px);
+        border-radius: 18px;
+      }
+
+      .zpm-close-bar {
+        height: 44px;
+        padding: 0 12px;
+      }
+
+      #zigrow-pricing-close {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+
+      .zpm-publish-header {
+        padding: 14px 16px 12px;
+      }
+
+      .zpm-ready-badge {
+        font-size: 11px;
+        padding: 4px 10px;
+        margin-bottom: 6px;
+      }
+
+      .zpm-title {
+        font-size: 22px;
+      }
+
+      .zpm-steps {
+        padding: 10px 14px;
+        gap: 8px;
+        grid-template-columns: 1fr;
+      }
+
+      .zpm-step-card:not(:last-child)::after {
+        display: none;
+      }
+
+      .zpm-step-card {
+        min-height: auto;
+        grid-template-columns: 32px 1fr;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 12px;
+      }
+
+      .zpm-step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+      }
+
+      .zpm-step-card h5 {
+        font-size: 13px;
+        margin-bottom: 3px;
+      }
+
+      .zpm-step-card p {
+        font-size: 12px;
+      }
+
+      .zpm-here-badge {
+        font-size: 10px;
+        padding: 3px 7px 3px 5px;
+        top: 7px;
+        right: 8px;
+      }
+
+      .zpm-pricing-section {
+        padding: 14px 14px 0;
+      }
+
+      .zpm-section-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+
+      .zpm-tabs {
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .zpm-tab {
+        min-height: 88px;
+        padding: 12px 10px 10px;
+        border-radius: 10px;
+      }
+
+      .zpm-tab-duration {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .zpm-tab-price {
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      .zpm-tab-per-month {
+        font-size: 11px;
+      }
+
+      .zpm-detail {
+        padding: 16px 14px 14px;
+      }
+
+      .zpm-plan-name {
+        font-size: 18px;
+      }
+
+      .zpm-price {
+        font-size: 36px;
+      }
+
+      .zpm-price-row {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 6px;
+        margin: 2px 0 6px;
+      }
+
+      .zpm-detail-divider {
+        margin: 14px 0;
+      }
+
+      .zpm-features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .zpm-features li {
+        font-size: 13px;
+      }
+
+      .zpm-cta {
+        min-height: 44px;
+        font-size: 14px;
+        padding: 10px 14px;
+      }
+
+      .zpm-gst {
+        margin-top: 7px;
+      }
+
+      .zpm-domain-box {
+        margin: 16px 14px 20px;
+        padding: 14px;
+        border-radius: 14px;
+      }
+
+      .zpm-domain-box > p {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .zpm-domain-options {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .zpm-domain-option {
+        padding: 10px 12px 10px;
+      }
+
+      .zpm-domain-option strong {
+        font-size: 13px;
+      }
+
+      .zpm-domain-option span {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #zigrow-pricing-overlay {
+        padding: 8px;
+      }
+
+      #zigrow-pricing-modal {
+        width: calc(100vw - 16px);
+        max-height: calc(100vh - 16px);
+        max-height: calc(100svh - 16px);
+        border-radius: 16px;
+      }
+
+      .zpm-tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .zpm-tab {
+        min-height: 80px;
+        padding: 10px 8px 8px;
+      }
+
+      .zpm-tab-duration {
+        font-size: 14px;
+      }
+
+      .zpm-tab-price {
+        font-size: 13px;
+      }
+
+      .zpm-price {
+        font-size: 32px;
+      }
+    }
+  </style>
+
+  <script>
+    /* --- Zigrow Pricing Modal logic --- */
+    (function() {
+      var plans = [{
+          duration: "1 Year",
+          planName: "Starter",
+          discountNote: "",
+          price: "2,999",
+          perMonth: "250 per month",
+          text: "Perfect for individuals taking their first step towards building their business."
+        },
+        {
+          duration: "2 Year",
+          planName: "Professional",
+          discountNote: "(Save up to 33%)",
+          price: "3,999",
+          perMonth: "167 per month",
+          text: "Tailored for professionals or marketers expanding their new ventures.."
+        },
+        {
+          duration: "3 Year",
+          planName: "Elite",
+          discountNote: "(Save up to 44%)",
+          price: "4,999",
+          perMonth: "139 per month",
+          text: "Designed for established businesses aiming to scale and achieve greater growth."
+        },
+        {
+          duration: "Lifetime",
+          planName: "Lifetime",
+          discountNote: "(Limited Slot)",
+          price: "11,999",
+          perMonth: "One time payment",
+          text: "Lock in Zigrow\u2019s full power, AI builder, templates, hosting & future upgrades for a one-time payment. No subscriptions. No recurring bills. Just lifetime freedom."
+        }
+      ];
+
+      var features = [
+        "50+ Modern Templates", "No-Code Platform", "Free Domain", "Connect Your Own Domain",
+        "Free Hosting + SSL Included", "Create Unlimited Pages", "Mobile & Tablet Friendly Design",
+        "AI Website Builder", "Built-in SEO", "Easy to use Drag/ Drop Builder",
+        "One Click Lead Forms With Automated Email Replies", "Social Media Connect Feature",
+        "Google Maps Integration", "Easy Whatsapp Connect", "Built In Free Image Library",
+        "AI Content Writer", "Dashboard Access For Performance Tracking", "Leads View & Export Feature",
+        "Website Analytics & Visitor Counter", "Growth Trends Via Live Progress Chart"
+      ];
+
+      var selectedIndex = 0;
+      var featurePage = 0;
+      var isPaying = false;
+      var ctaDefaultText = "Choose Plan & Continue to Domain Setup";
+
+      function getCookie(name) {
+        var m = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+        return m ? decodeURIComponent(m[2]) : null;
+      }
+
+      function cleanBadgeText(text) {
+        return String(text || "").replace(/^\(|\)$/g, "");
+      }
+
+      function renderTabs() {
+        var tabs = document.getElementById("zpmTabs");
+        if (!tabs) return;
+        tabs.innerHTML = "";
+        plans.forEach(function(p, i) {
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "zpm-tab" + (i === selectedIndex ? " active" : "");
+          btn.setAttribute("role", "tab");
+          btn.setAttribute("aria-selected", i === selectedIndex ? "true" : "false");
+
+          var badge = p.discountNote ? '<span class="zpm-badge">' + cleanBadgeText(p.discountNote) + '</span>' : '';
+          btn.innerHTML = badge +
+            '<span class="zpm-tab-duration">' + p.duration + '</span>' +
+            '<span class="zpm-tab-price">₹' + p.price + '</span>' +
+            '<span class="zpm-tab-per-month">' + p.perMonth + '</span>';
+
+          btn.onclick = function() {
+            selectedIndex = i;
+            featurePage = 0;
+            render();
+          };
+          tabs.appendChild(btn);
+        });
+      }
+
+      function renderDetail() {
+        var p = plans[selectedIndex];
+        var planName = document.getElementById("zpmPlanName");
+        var discount = document.getElementById("zpmDiscount");
+        var price = document.getElementById("zpmPrice");
+        var perMonth = document.getElementById("zpmPerMonth");
+        var text = document.getElementById("zpmText");
+        var list = document.getElementById("zpmFeatures");
+
+        if (planName) planName.textContent = p.planName + " Plan";
+        if (discount) discount.textContent = p.discountNote || "";
+        if (price) price.textContent = "₹" + p.price + "/-";
+        if (perMonth) perMonth.textContent = "/ " + p.duration;
+        if (text) text.textContent = p.text;
+
+        if (list) {
+          list.innerHTML = "";
+          features.forEach(function(f) {
+            var li = document.createElement("li");
+            li.textContent = f;
+            list.appendChild(li);
+          });
+        }
+
+        var seeMore = document.getElementById("zpmSeeMore");
+        var goBack = document.getElementById("zpmGoBack");
+        if (seeMore) seeMore.style.display = "none";
+        if (goBack) goBack.style.display = "none";
+      }
+
+      function render() {
+        renderTabs();
+        renderDetail();
+      }
+
+      // Payment handler — mirrors PricingModal.tsx handlePlanPayment exactly
+      async function handlePayment() {
+        if (isPaying) return;
+        
+        // ── Analytics: pricing_cta_clicked ────────────────────────────────
+        // Fires on the first real CTA click (isPaying guard above ensures no duplicate).
+        // source + modal_location identify this as the builder editor (not dashboard).
+        try {
+          if (window.ZigrowAnalytics && typeof window.ZigrowAnalytics.trackEvent === "function") {
+            var _ctaTName = window.__zigrowTemplateName || "";
+            var _ctaPlan  = plans[selectedIndex];
+            window.ZigrowAnalytics.trackEvent("pricing_cta_clicked", {
+              source:          "builder",
+              modal_location:  "builder_editor",
+              plan_name:       _ctaPlan.planName,
+              plan_duration:   _ctaPlan.duration,
+              plan_price:      _ctaPlan.price,
+              template_name:   _ctaTName,
+              template_type:   (_ctaTName.startsWith("ai:") ? "ai" : "standard"),
+              environment:     "production",
+              current_path:    window.location.pathname,
+            });
+          }
+        } catch (e) {
+          console.warn("[Builder] pricing_cta_clicked analytics failed silently:", e);
+        }
+        // ── End pricing_cta_clicked ───────────────────────────────────────
+        isPaying = true;
+        var cta = document.getElementById("zpmCta");
+        cta.disabled = true;
+        cta.innerHTML = '<span class="zpm-cta-loading"><span>Processing</span>' +
+          '<span class="zpm-dot" style="animation-delay:0s"></span>' +
+          '<span class="zpm-dot" style="animation-delay:.15s"></span>' +
+          '<span class="zpm-dot" style="animation-delay:.3s"></span></span>';
+        try {
+          await fetch("https://api.zigrow.com/sanctum/csrf-cookie", {
+            credentials: "include"
+          });
+          var csrfToken = getCookie("XSRF-TOKEN");
+          await new Promise(function(r) {
+            setTimeout(r, 100);
+          });
+          var plan = plans[selectedIndex];
+          var res = await fetch("https://api.zigrow.com/payu/plan/initiate", {
+            method: "POST",
+            credentials: "include",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+              "X-XSRF-TOKEN": csrfToken || ""
+            },
+            body: JSON.stringify({
+              plan_name: plan.planName,
+              price: parseFloat(plan.price.replace(",", "")),
+              duration: plan.duration,
+              source: "builder",
+              builder_template: templateName
+            })
+          });
+          var paymentData = await res.json();
+          // Build and submit hidden PayU form (same as React PricingModal)
+          var form = document.createElement("form");
+          form.method = "POST";
+          form.action = paymentData.action;
+          Object.keys(paymentData).forEach(function(key) {
+            var inp = document.createElement("input");
+            inp.type = "hidden";
+            inp.name = key;
+            inp.value = String(paymentData[key]);
+            form.appendChild(inp);
+          });
+          document.body.appendChild(form);
+          form.submit();
+        } catch (err) {
+          console.error("Payment initiation failed:", err);
+          alert("Unable to start payment. Please try again.");
+          isPaying = false;
+          cta.disabled = false;
+          cta.innerHTML = ctaDefaultText;
+        }
+      }
+
+      // Hidden legacy controls are guarded so removing visible See more UI cannot break the modal
+      var seeMoreBtn = document.getElementById("zpmSeeMore");
+      if (seeMoreBtn) {
+        seeMoreBtn.onclick = function() {
+          featurePage = 1;
+          renderDetail();
+        };
+      }
+
+      var goBackBtn = document.getElementById("zpmGoBack");
+      if (goBackBtn) {
+        goBackBtn.onclick = function() {
+          featurePage = 0;
+          renderDetail();
+        };
+      }
+
+      // CTA button
+      document.getElementById("zpmCta").onclick = handlePayment;
+
+      // Close logic: button, backdrop, escape
+      function closeModal() {
+        document.getElementById("zigrow-pricing-overlay").style.display = "none";
+        document.body.style.overflow = "";
+      }
+      document.getElementById("zigrow-pricing-close").onclick = closeModal;
+      document.getElementById("zigrow-pricing-backdrop").onclick = closeModal;
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && document.getElementById("zigrow-pricing-overlay").style.display !== "none") {
+          closeModal();
+        }
+      });
+
+      // Global open function — called by Publish button
+      window.openZigrowPricingModal = function() {
+        selectedIndex = 0;
+        featurePage = 0;
+        isPaying = false;
+        var cta = document.getElementById("zpmCta");
+        cta.disabled = false;
+        cta.innerHTML = ctaDefaultText;
+        render();
+        document.getElementById("zigrow-pricing-overlay").style.display = "flex";
+        document.body.style.overflow = "hidden";
+        
+        // ── Analytics: pricing_modal_opened ───────────────────────────────
+        // Fires when the builder pricing modal becomes visible.
+        // source + modal_location identify this as the builder editor (not dashboard).
+        try {
+          if (window.ZigrowAnalytics && typeof window.ZigrowAnalytics.trackEvent === "function") {
+            var _tName = window.__zigrowTemplateName || "";
+            window.ZigrowAnalytics.trackEvent("pricing_modal_opened", {
+              source:          "builder",
+              modal_location:  "builder_editor",
+              template_name:   _tName,
+              template_type:   (_tName.startsWith("ai:") ? "ai" : "standard"),
+              environment:     "production",
+              current_path:    window.location.pathname,
+            });
+          }
+        } catch (e) {
+          console.warn("[Builder] pricing_modal_opened analytics failed silently:", e);
+        }
+        // ── End pricing_modal_opened ──────────────────────────────────────
+      };
+
+      // Initial render (hidden)
+      render();
+    })();
+  </script>
+  <!-- ========== /Zigrow Pricing Modal ========== -->
+
+  <!-- ========== Payment-success info toast (auto-dismiss) ========== -->
+  <style>
+    .zigrow-payment-toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translate(-50%, -14px) scale(0.96);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8f5ff 100%);
+      color: #2d1f5d;
+      border: 1px solid #d9ceff;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.45;
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(45, 31, 93, .16), 0 2px 8px rgba(91, 61, 242, .10);
+      padding: 12px 16px;
+      z-index: 2147483000;
+      width: max-content;
+      max-width: min(680px, calc(100vw - 24px));
+      opacity: 0;
+      transition: opacity .35s ease, transform .35s ease;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+
+    .zigrow-payment-toast::before {
+      content: "ℹ️";
+      font-size: 16px;
+      line-height: 1.2;
+      margin-top: 1px;
+      flex: 0 0 auto;
+    }
+
+    .zigrow-payment-toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0) scale(1);
+    }
+
+    @media (max-width: 768px) {
+      .zigrow-payment-toast {
+        top: 16px;
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+  <script>
+    // Expose toast logic for console-based testing
+    showPaymentSuccessToast = function() {
+      /* create toast element */
+      var toastEl = document.createElement('div');
+      toastEl.className = 'zigrow-payment-toast';
+      toastEl.textContent = 'All set! You\u2019re just one step closer to going live \u2013 click the \"Connect Domain\" button next.';
+      document.body.appendChild(toastEl);
+
+      toastEl.classList.add('show');
+
+      /* auto-dismiss after 7s with fade */
+      setTimeout(function() {
+        toastEl.classList.remove('show');
+      }, 7000);
+      setTimeout(function() {
+        toastEl.remove();
+      }, 7700);
+    }
+
+    // Auto-trigger on payment success
+    ;
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('payment') !== 'success') return;
+
+      /* show only once – guard via sessionStorage */
+      if (sessionStorage.getItem('zigrow_payment_toast_shown') === '1') return;
+
+      /* strip the payment param from the URL so refreshes won't re-trigger */
+      params.delete('payment');
+      var cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+      window.history.replaceState(null, '', cleanUrl);
+
+      /**
+       * Robust builder-ready detection:
+       * The toast must NOT appear while the full-screen loading overlay is visible.
+       * We require ALL of these conditions to be true:
+       *   1. DOM is fully loaded (DOMContentLoaded has fired)
+       *   2. #vvveb-builder no longer has the "loading" class
+       *   3. The .loading-message overlay is no longer active
+       *   4. Vvveb.Builder exists and its pageLoaded flag is true
+       *   5. The iframe has a contentDocument (template rendered)
+       */
+      var domReady = false;
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          domReady = true;
+        });
+      } else {
+        domReady = true;
+      }
+
+      function isBuilderFullyReady() {
+        if (!domReady) return false;
+        var builderEl = document.getElementById('vvveb-builder');
+        if (!builderEl || builderEl.classList.contains('loading')) return false;
+        var loaderMsg = builderEl.querySelector('.loading-message');
+        if (loaderMsg && loaderMsg.classList.contains('active')) return false;
+        if (typeof Vvveb === 'undefined' || !Vvveb.Builder || Vvveb.Builder.pageLoaded !== true) return false;
+        var iframe = document.getElementById('iframe1');
+        if (!iframe || !iframe.contentDocument) return false;
+        return true;
+      }
+
+      function showToastWhenReady() {
+        if (!isBuilderFullyReady()) {
+          requestAnimationFrame(showToastWhenReady);
+          return;
+        }
+        /* Extra 500ms buffer after builder is ready so UI is fully painted */
+        setTimeout(function() {
+          sessionStorage.setItem('zigrow_payment_toast_shown', '1');
+          showPaymentSuccessToast();
+        }, 500);
+      }
+
+      // Start checking for builder readiness
+      showToastWhenReady();
+    })();
+  </script>
+  <!-- ========== /Payment-success info toast ========== -->
+
   <!-- Add Bootstrap script file -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+  <!-- tour guide starting from here -->
+  <script>
+    const BUILDER_GUIDE_KEY = "builder_demo_guide";
+    let currentGuideStepCount = 0;
+    let isGuideStartInProgress = false;
+    let guideCompletionRequest = null;
+    let guideAutoStartDone = false;
+
+    function getGuideCookie(name) {
+      const value = "; " + document.cookie;
+      const parts = value.split("; " + name + "=");
+      if (parts.length === 2) return decodeURIComponent(parts.pop().split(";").shift());
+      return "";
+    }
+
+    async function fetchBuilderGuideStatus() {
+      try {
+        const response = await fetch(`/user/builder-guide/status?guide_key=${encodeURIComponent(BUILDER_GUIDE_KEY)}`, {
+          credentials: "include",
+          headers: {
+            "X-Requested-With": "XMLHttpRequest"
+          }
+        });
+
+        if (!response.ok) return null;
+        return await response.json();
+      } catch (error) {
+        console.warn("Guide status check failed", error);
+        return null;
+      }
+    }
+
+    async function markBuilderGuideComplete(lastStep) {
+      if (guideCompletionRequest) return guideCompletionRequest;
+
+      try {
+        guideCompletionRequest = fetch("/user/builder-guide/complete", {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Requested-With": "XMLHttpRequest",
+            "X-XSRF-TOKEN": getGuideCookie("XSRF-TOKEN")
+          },
+          body: JSON.stringify({
+            guide_key: BUILDER_GUIDE_KEY,
+            last_step: lastStep
+          })
+        });
+
+        const response = await guideCompletionRequest;
+        if (!response.ok) {
+          throw new Error(`Guide completion request failed with status ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data?.success === true;
+      } catch (error) {
+        console.warn("Guide completion sync failed", error);
+        return false;
+      } finally {
+        guideCompletionRequest = null;
+      }
+    }
+
+    function getValidGuideSteps() {
+      return driverObj.getConfig().steps.filter(step => {
+        if (!step.element) return true;
+        const el = typeof step.element === 'function' ? step.element(true) : document.querySelector(step.element);
+        return !!el;
+      });
+    }
+
+    async function startGuideWithValidSteps() {
+      if (isGuideStartInProgress) return;
+      isGuideStartInProgress = true;
+
+      await finalizeIframeGSAP("iframe1", 1);
+
+      const isMobile = window.innerWidth < 992;
+
+      const validSteps = driverObj.getConfig().steps.filter(step => {
+        if (isMobile && step.desktopOnly) return false;
+
+        if (!step.element) return true;
+        const el = typeof step.element === 'function' ?
+          step.element(true) :
+          document.querySelector(step.element);
+        return !!el;
+      });
+
+      currentGuideStepCount = validSteps.length;
+
+      if (validSteps.length > 0) {
+        driverObj.setSteps(validSteps);
+        setTimeout(() => {
+          if (!driverObj.getState().isInitialized) {
+            driverObj.drive();
+          }
+          isGuideStartInProgress = false;
+        }, 1000);
+        return;
+      }
+
+      isGuideStartInProgress = false;
+    }
+
+    function highlightIframeElement(selector) {
+      return (isCheckingExistence = false) => {
+        const iframe = document.querySelector("iframe");
+        if (!iframe) return null;
+
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const target = innerDoc?.querySelector(selector);
+        if (!target) return null;
+
+        if (isCheckingExistence === true) return target;
+
+        target.scrollIntoView({
+          behavior: "instant",
+          block: "center"
+        });
+
+        const iframeRect = iframe.getBoundingClientRect();
+        const rect = target.getBoundingClientRect();
+
+        let proxy = document.getElementById("tour-proxy");
+        if (!proxy) {
+          proxy = document.createElement("div");
+          proxy.id = "tour-proxy";
+          proxy.style.position = "fixed";
+          proxy.style.pointerEvents = "none";
+          proxy.style.zIndex = "999999";
+          document.body.appendChild(proxy);
+        }
+
+        proxy.style.top = iframeRect.top + rect.top + "px";
+        proxy.style.left = iframeRect.left + rect.left + "px";
+        proxy.style.width = rect.width + "px";
+        proxy.style.height = rect.height + "px";
+        console.log("running amit");
+
+        return proxy;
+      };
+    }
+
+    async function finalizeIframeGSAP(iframeId, progress = 1) {
+      const iframe = document.getElementById(iframeId) || document.querySelector("iframe");
+      if (!iframe?.contentWindow) return;
+
+      const targetWin = iframe.contentWindow;
+      const gsapLocal = targetWin.gsap;
+      const ScrollTriggerLocal = targetWin.ScrollTrigger;
+
+      if (!gsapLocal) return;
+
+      // Force all ScrollTriggers to the desired progress (1 = end state)
+      if (ScrollTriggerLocal?.getAll) {
+        ScrollTriggerLocal.getAll().forEach((t) => {
+          if (t.animation?.progress) t.animation.progress(progress);
+        });
+      }
+
+      // Force all global tweens (not attached to scroll) to progress
+      if (gsapLocal.globalTimeline) {
+        gsapLocal.globalTimeline.getChildren(true, true, true).forEach(anim => {
+          if (anim.progress) anim.progress(progress);
+        });
+      }
+
+      ScrollTriggerLocal?.refresh();
+    }
+
+    const driverObj = window.driver.js.driver({
+      showProgress: true,
+      allowClose: false,
+      smoothScroll: false,
+      disableActiveInteraction: false,
+      autoScrollIntoView: false,
+      stagePadding: 5,
+      popoverClass: "popover-design-zigrow",
+      doneBtnText: 'Finish Tutorial',
+      nextBtnText: 'Next Step',
+      prevBtnText: 'Go Back',
+
+      onHighlightStarted: (element, step) => {
+        finalizeIframeGSAP("iframe1", 1);
+
+        const hiddenEl = document.querySelector("#section-edit-options");
+        if (hiddenEl) hiddenEl.classList.add("force-tour-visibility");
+      },
+      onDestroyed: () => {
+        const hiddenEl = document.querySelector("#section-edit-options");
+        if (hiddenEl) {
+          hiddenEl.classList.remove("force-tour-visibility");
+        }
+        const proxy = document.getElementById("tour-proxy");
+        if (proxy) {
+          proxy.style.display = "none";
+        }
+      },
+      onCloseClick: () => {
+        const proxy = document.getElementById("tour-proxy");
+        if (proxy) proxy.remove();
+        driverObj.destroy();
+      },
+
+      steps: [{
+          popover: {
+            title: "Welcome to Zigrow Starter guide",
+            description: "Here’s a quick walkthrough to help you edit your website faster and make the most of every ",
+          }
+        },
+        {
+          element: highlightIframeElement("section p"),
+          popover: {
+            title: "Edit Text",
+            description: `
+            <h6>Start with your content</h6>
+            <p>Double click text to edit it, style it, add links, or use undo and redo while writing.</p>
+            `,
+            side: "bottom",
+            align: "end"
+          }
+        },
+        {
+          element: highlightIframeElement("section img"),
+          popover: {
+            title: "Edit Image",
+            description: `
+            <h6>Swap visuals easily</h6>
+            <p>Double click images to upload your own or replace them with better-fit visuals.</p>
+            `,
+            side: "bottom",
+            align: "center"
+          }
+        },
+        {
+          element: highlightIframeElement("a[data-btn]:first-child"),
+          desktopOnly: true,
+          popover: {
+            title: "Action Button Edit",
+            description: `
+            <h6>Guide visitors to act</h6>
+            <p>Double click action buttons to change text, style, and actions like call, WhatsApp, email, map, PDF, or scroll.</p>
+            `,
+            side: "bottom",
+            align: "center"
+          }
+        },
+        {
+          element: highlightIframeElement("nav ul li:first-child"),
+          desktopOnly: true,
+          popover: {
+            title: "Edit Menu",
+            description: `
+            <h6>Update your navigation</h6>
+            <p>Open the menu settings to edit links and manage your website menu structure.</p>
+            `,
+            side: "bottom",
+            align: "center"
+          }
+        },
+        {
+          element: "#add-section-btn",
+          popover: {
+            title: "Add New Section",
+            description: `
+            <h6>Grow the page layout</h6>
+            <p>Hover between any two sections and click Add Section to insert a new one.</p>
+            <img src="./img/gif2.gif" height="180" style="width: 100%;" />
+            `,
+            side: "top",
+            align: "start"
+          }
+        },
+        {
+          element: ".section-replace-an-edit",
+          popover: {
+            title: "Customise Section Background ",
+            description: `
+            <h6>Edit or replace a section</h6>
+            <p>Hover over a section to use the pencil tool for edits or the replace tool to switch the design. Add image or change color or add gradient. Get Creative!</p>
+            <img src="./img/gif1.gif" height="180" style="width: 100%;" />
+            `,
+            side: "right",
+            align: 'center'
+          }
+        },
+        {
+          element: "#global-fab",
+          popover: {
+            title: "Global FAB",
+            description: `
+            <h6>Style the whole website together</h6>
+            <p>Use the Global button to update color theme, fonts, and logo across the full site.</p>
+            <img src="./img/gif3.gif" height="180" style="width: 100%;" />
+            `,
+            side: "top",
+            align: 'end'
+          }
+        },
+        {
+          element: ".btn-preview-mode",
+          popover: {
+            title: "Preview button",
+            description: `
+              <h6>See preview</h6>
+              <p>Click here to see the preview of your website.</p>
+            `,
+            side: "bottom",
+            align: "center"
+          }
+        },
+        {
+          element: ".save-btn-an-preview-btn",
+          popover: {
+            title: "Save & Publish",
+            description: `
+              <h6>Wrap up and go live</h6>
+              <p>Save your changes anytime, and publish when you are ready.</p>
+            `,
+            side: "right",
+            align: 'center'
+          }
+        },
+        {
+          popover: {
+            title: "You’re ready to build",
+            description: "Now you know the basics. Start editing, try things freely, and make the website feel truly yours.",
+          }
+        },
+      ]
+    });
+
+    // Iframe Initialization Logic — auto-start guide once per page load
+    window.addEventListener('vvveb.iframe.loaded', () => {
+      if (guideAutoStartDone) return;
+
+      const iframe = document.querySelector('iframe');
+      if (iframe?.contentDocument) {
+        guideAutoStartDone = true;
+
+        iframe.contentDocument.addEventListener('mousemove', async function start() {
+          if (isGuideStartInProgress) return;
+
+          const status = await fetchBuilderGuideStatus();
+          const shouldAutoShow = status?.success === true && status?.should_show === true;
+
+          if (!driverObj.getState().isInitialized && shouldAutoShow) {
+            await startGuideWithValidSteps();
+          }
+        }, {
+          once: true
+        });
+      }
+    });
+
+    document.getElementById("show-demoguide-btn").addEventListener("click", async () => {
+      if (!driverObj.getState().isInitialized) {
+        await finalizeIframeGSAP("iframe1", 1);
+
+        const isMobile = window.innerWidth < 992;
+
+        const validSteps = driverObj.getConfig().steps.filter(step => {
+          if (isMobile && step.desktopOnly) return false;
+
+          if (!step.element) return true;
+          const el = typeof step.element === 'function' ?
+            step.element(true) :
+            document.querySelector(step.element);
+          return !!el;
+        });
+
+        if (validSteps.length > 0) {
+          driverObj.setSteps(validSteps);
+          setTimeout(() => driverObj.drive(), 1000);
+        }
+      }
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
